@@ -1,0 +1,39 @@
+<b><center>Connman System Tray (CMST)</center></b>
+<b><center>Change Log</center></b>
+<br>
+<br><b>2014.03.13 - </b>Revised per input from Arch Linux Forums
+<ul>
+<li>Command line options to show help, version, disable the system tray and start the program minimized.</li>
+<li>Added SSID field to the agent request information dialog.</li>
+<li>Added check to make sure a system tray exists before we try to use it.</li>
+<li>Added option to log the input request from the connman daemon.</li>
+</ul>
+<br><b>2014.01.18 - </b>Revised
+<ul>
+<li>Improved error dialog in Agent and ask for retry on bad password.</li>
+</ul>
+<br><b>2014.01.14 - </b>Revised
+<ul>
+<li>Fixed up tooltip popup on system tray icon</li>
+</ul>
+<br><b>2014.01.11 - </b>Posted to Arch Linux Forum
+<ul>
+<li>Added the counters and the Counters tab</li>
+<li>Fixed a SEGFAULT when connecting a Wifi service after the service order had changed.</li>
+<li>Added message dialogs in the logerrors function to show errors to the user (errors are still logged to the journal).</li>
+<li>Fixed SEGFAULTS if the program fails to find or connect to DBUS</li>
+<li>Added a button on the WiFi page to remove a Wifi service</li><
+/ul>
+<br>
+<b>2014.01.05 - </b>Initial Version
+<ul>
+<li>View and set global connection properties</li>
+<li>List known technologies and services</li>
+<li>View detailed information about services</li>
+<li>Basic WiFi service management</li>
+</ul>
+
+<b>To Do</b>
+<ul>
+<li>Work on Command line options (if we decide we need them)</li>
+</ul> 

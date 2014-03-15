@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="text">
+    <file>text/changelog.txt</file>
+    <file>text/license.txt</file>
+  </qresource>
+  <qresource prefix="icons16x16">
+    <file>images/16x16/help.png</file>
+    <file>images/16x16/connect_established.png</file>
+    <file>images/16x16/bookmark.png</file>
+    <file>images/16x16/ledgreen.png</file>
+    <file>images/16x16/ledred.png</file>
+    <file>images/16x16/connect_creating.png</file>
+    <file>images/16x16/connect_no.png</file>
+    <file>images/16x16/cancel.png</file>
+  </qresource>
+</RCC>

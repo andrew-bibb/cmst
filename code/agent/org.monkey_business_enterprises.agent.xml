@@ -1,0 +1,24 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="net.connman.Agent">
+    <method name="Release">
+    </method>
+    <method name="ReportError">
+      <arg type="o" direction="in"/>
+      <arg type="s" direction="in"/>
+    </method>
+    <method name="RequestBrowser">
+      <arg type="o" direction="in"/>
+      <arg type="s" direction="in"/>
+    </method>
+    <method name="RequestInput">
+      <arg type="a{sv}" direction="out"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVariantMap"/>
+      <arg type="o" direction="in"/>
+      <arg type="a{sv}" direction="in"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="QVariantMap"/>
+    </method>
+    <method name="Cancel">
+    </method>
+  </interface>
+</node>
