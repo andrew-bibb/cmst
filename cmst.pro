@@ -5,7 +5,9 @@ CONFIG += qt warn_off release
 QT += widgets
 QT += dbus
 
-target.path = /usr/bin
+TARGET = cmst
+TEMPLATE = app
+target.path = /usr/bin/
 INSTALLS += target
 
 # dbus
