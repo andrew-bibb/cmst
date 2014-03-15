@@ -1,10 +1,12 @@
 #  We need the qt libraries, we want compiler warnings off, and this is a release version of the program  
 CONFIG += qt warn_off release 
-#CONFIG += qt warn_on release
 
 #  Widgets needed for QT5, 
 QT += widgets
 QT += dbus
+
+target.path = /usr/bin
+INSTALLS += target
 
 # dbus
 DBUS_ADAPTORS 	+= ./code/agent/org.monkey_business_enterprises.agent.xml
@@ -33,12 +35,6 @@ SOURCES += ./code/counter/counter.cpp
 #	resource files
 RESOURCES 	+= cmst.qrc
 
-# following 4 lines if we want the source the QT dynamic libraries
-# with our exec file (or exepath/lib or exepath/libs)
-#QMAKE_LFLAGS += -Wl,-rpath=\\\$\$ORIGIN
-#QMAKE_LFLAGS += -Wl,-rpath=\\\$\$ORIGIN/lib
-#QMAKE_LFLAGS += -Wl,-rpath=\\\$\$ORIGIN/libs
-#QMAKE_RPATH=
 
 ##  Place all object files in their own directory and moc files in their own directory
 ##  This is not necessary but keeps things cleaner.
