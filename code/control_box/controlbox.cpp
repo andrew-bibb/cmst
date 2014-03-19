@@ -151,7 +151,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   trayicon = 0;
   if (parser.isSet("disable-tray-icon")) {
 		ui.checkBox_hideIcon->setDisabled(true);
-		this->showMaximized(); // no place to minimize too, so showMaximized
+		this->showMaximized(); // no place to minimize to, so showMaximized
 	}	// if
 	else {
 		bool ok;
