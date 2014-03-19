@@ -137,8 +137,8 @@ class ControlBox : public QDialog
 		void minMaxWindow(QAction* = 0);
 		void getServiceDetails(int);
 		void showWhatsThis();
-		inline void startSystemTrayMinimized() {createSystemTrayIcon(false);}
-		inline void startSystemTrayNormal() {createSystemTrayIcon(true);}
+		inline void startSystemTrayMinimized() {createSystemTrayIcon(true);}
+		inline void startSystemTrayNormal() {createSystemTrayIcon(false);}
 };
 
 #endif

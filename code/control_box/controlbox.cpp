@@ -146,13 +146,12 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));	
 
   // tray icon - disable it if we specifiy that option on the commandline
-  // otherwise set a singleshot timer to create the tray icon and show minimized
-  // or show normal.
+  // otherwise set a singleshot timer to create the tray icon and showMinimized
+  // or showMaximized.
   trayicon = 0;
   if (parser.isSet("disable-tray-icon")) {
 		ui.checkBox_hideIcon->setDisabled(true);
-		if (parser.isSet("minimized")) this->showMinimized();
-		else this->showNormal();
+		this->showMaximized(); // no place to minimize too, so showMaximized
 	}	// if
 	else {
 		bool ok;
@@ -162,10 +161,11 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 			QTimer::singleShot(timeout * 1000, this, SLOT(startSystemTrayMinimized()));
 		}
 		else {
+			this->showMaximized();
 			QTimer::singleShot(timeout * 1000, this, SLOT(startSystemTrayNormal()));
 		}
 		}	// else
-
+	
 	//// turn network cards on or off globally based on checkbox
 	toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
 	
@@ -838,7 +838,7 @@ void ControlBox::assembleTrayIcon()
 // and called by a single shot QTimer (actually via a slot between the timer
 // and here).  Used in situations where CMST is created before the system tray.
 // The default time is zero seconds
-void ControlBox::createSystemTrayIcon(bool b_startnormal)
+void ControlBox::createSystemTrayIcon(bool b_startminimized)
 {	
 	// We still need to make sure there is a tray available	
 	if (QSystemTrayIcon::isSystemTrayAvailable() ) {
@@ -853,9 +853,10 @@ void ControlBox::createSystemTrayIcon(bool b_startnormal)
 		ui.checkBox_hideIcon->setEnabled(true);
 		this->assembleTrayIcon();
 		trayicon->setVisible(true);
-		
-		// now show or hide the dialog based on the argument sent
-		if (b_startnormal) this->showNormal();
+	
+		// start minimized, no reason to do anything as we're minimized until
+		// we tell it otherwise
+
 	}	// if
 	else {
 		ui.checkBox_hideIcon->setDisabled(true);
@@ -865,8 +866,10 @@ void ControlBox::createSystemTrayIcon(bool b_startnormal)
 			tr("<center><b>Unable to find a systemtray on this machine.</b>"                       
 				 "<center><br>The program may still be used to manage your connections, but the tray icon will be disabled"
 					) );
-					
-		this->show();			
+		
+		// Even if we want to be minimized we can't there is no place to minimize to.
+		this->showMaximized();
+							
 	}	// else
 		
 	
