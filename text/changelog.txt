@@ -1,6 +1,10 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
 <br>
+<br><b>IN PROGRESS - </b>Revised per input from Arch Linux Forums
+<ul>
+<li>Added command line option to wait a specified time to create the system tray</li>
+</ul>
 <br><b>2014.03.13 - </b>Revised per input from Arch Linux Forums
 <ul>
 <li>Command line options to show help, version, disable the system tray and start the program minimized.</li>
@@ -35,5 +39,6 @@
 
 <b>To Do</b>
 <ul>
-<li>Work on Command line options (if we decide we need them)</li>
+<li>Continue working on command line options (next up are the timer intervals)</li>
+<li>Look at possibly using system icons as an option to our hard coded icons</li>
 </ul> 

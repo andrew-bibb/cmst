@@ -57,8 +57,11 @@ int main(int argc, char *argv[])
 	QCommandLineOption startMinimized(QStringList() << "m" << "minimized", QCoreApplication::translate("main.cpp", "Start the GUI minimized in the system tray") );
 	parser.addOption(startMinimized);		
 	
-	parser.addVersionOption();
-   
+	parser.addVersionOption();	
+	
+	QCommandLineOption waitTime(QStringList() << "w" << "wait-time", QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon (default is 0 seconds)."), QCoreApplication::translate("main.cpp", "wait-time"), "0" );
+	parser.addOption(waitTime); 	
+	   
 	#ifdef USE_TRANSLATIONS
    QTranslator qtTranslator;
    qtTranslator.load("qt_" + QLocale::system().name(),
@@ -73,9 +76,8 @@ int main(int argc, char *argv[])
   parser.process(app);   
 	QStringList sl = parser.unknownOptionNames();
 	if (sl.size() > 0 ) parser.showHelp(1);
-   
+	
 	ControlBox ctlbox(parser);
-	if (! parser.isSet("minimized")) ctlbox.show();
 	return app.exec();
 }
 

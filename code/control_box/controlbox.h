@@ -114,6 +114,7 @@ class ControlBox : public QDialog
 		void assemblePage3();
 		void assemblePage4();
 		void assembleTrayIcon();
+		void createSystemTrayIcon(bool);
 		bool getProperties();
 		bool getTechnologies();		
 		bool getServices();
@@ -136,7 +137,8 @@ class ControlBox : public QDialog
 		void minMaxWindow(QAction* = 0);
 		void getServiceDetails(int);
 		void showWhatsThis();
-	
+		inline void startSystemTrayMinimized() {createSystemTrayIcon(false);}
+		inline void startSystemTrayNormal() {createSystemTrayIcon(true);}
 };
 
 #endif

@@ -59,7 +59,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 {
 	// set the Locale
 	QLocale::setDefault(QLocale(QLocale::L_LANG, QLocale::L_COUNTRY));	
-	
   // setup the user interface
   ui.setupUi(this);
   
@@ -86,7 +85,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
 	// connect counter signal to  the counterUpdated slot before we register the counter
 	connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
-	  
   // setup the dbus interface to connman.manager
 	if (! QDBusConnection::systemBus().isConnected() ) logErrors(CMST::Err_No_DBus);
   else {
@@ -147,34 +145,27 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	connect(ui.pushButton_license, SIGNAL(clicked()), this, SLOT(showLicense()));
 	connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));	
 
-  // tray icon - disable it if we specifiy that option  on the commandline
-  // or if we can't find a systemtray.
+  // tray icon - disable it if we specifiy that option on the commandline
+  // otherwise set a singleshot timer to create the tray icon and show minimized
+  // or show normal.
+  trayicon = 0;
   if (parser.isSet("disable-tray-icon")) {
 		ui.checkBox_hideIcon->setDisabled(true);
-		trayicon = 0;
-	}	// if 
-	else {		
-	  if (QSystemTrayIcon::isSystemTrayAvailable() ) {
-			QMenu* trayIconMenu = new QMenu(this);
-			trayIconMenu->addAction(maximizeAction);
-			trayIconMenu->addAction(minimizeAction);
-			trayIconMenu->addSeparator();
-			trayIconMenu->addAction(exitAction);
-		
-			trayicon = new QSystemTrayIcon(this);
-			trayicon->setContextMenu(trayIconMenu);   
-		}	// if
+		if (parser.isSet("minimized")) this->showMinimized();
+		else this->showNormal();
+	}	// if
+	else {
+		bool ok;
+		int timeout = parser.value("wait-time").toInt(&ok, 10);
+		if (! ok) timeout = 0;
+		if (parser.isSet("minimized")) {
+			QTimer::singleShot(timeout * 1000, this, SLOT(startSystemTrayMinimized()));
+		}
 		else {
-			ui.checkBox_hideIcon->setDisabled(true);
-			trayicon = 0;
-	
-			QMessageBox::warning(this, tr("CMST Warning"),
-				tr("<center><b>Unable to find a systemtray on this machine.</b>"                       
-	         "<center><br>The program may still be used to manage your connections, but the tray icon will be disabled"
-	          ) );
+			QTimer::singleShot(timeout * 1000, this, SLOT(startSystemTrayNormal()));
+		}
 		}	// else
-	}	// else
-	
+
 	//// turn network cards on or off globally based on checkbox
 	toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
 	
@@ -838,6 +829,46 @@ void ControlBox::assembleTrayIcon()
 	
 	// show or hide depending on checkbox
 	toggleTrayIcon(ui.checkBox_hideIcon->isChecked() );
+	
+	return;
+}
+
+//
+// Function to create the systemtray icon.  Really part of the constructor
+// and called by a single shot QTimer (actually via a slot between the timer
+// and here).  Used in situations where CMST is created before the system tray.
+// The default time is zero seconds
+void ControlBox::createSystemTrayIcon(bool b_startnormal)
+{	
+	// We still need to make sure there is a tray available	
+	if (QSystemTrayIcon::isSystemTrayAvailable() ) {
+		QMenu* trayIconMenu = new QMenu(this);
+		trayIconMenu->addAction(maximizeAction);
+		trayIconMenu->addAction(minimizeAction);
+		trayIconMenu->addSeparator();
+		trayIconMenu->addAction(exitAction);
+	
+		trayicon = new QSystemTrayIcon(this);
+		trayicon->setContextMenu(trayIconMenu);
+		ui.checkBox_hideIcon->setEnabled(true);
+		this->assembleTrayIcon();
+		trayicon->setVisible(true);
+		
+		// now show or hide the dialog based on the argument sent
+		if (b_startnormal) this->showNormal();
+	}	// if
+	else {
+		ui.checkBox_hideIcon->setDisabled(true);
+		trayicon = 0;
+		
+		QMessageBox::warning(this, tr("CMST Warning"),
+			tr("<center><b>Unable to find a systemtray on this machine.</b>"                       
+				 "<center><br>The program may still be used to manage your connections, but the tray icon will be disabled"
+					) );
+					
+		this->show();			
+	}	// else
+		
 	
 	return;
 }
