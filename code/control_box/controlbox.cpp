@@ -851,7 +851,7 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 		trayicon = new QSystemTrayIcon(this);
 		trayicon->setContextMenu(trayIconMenu);
 		ui.checkBox_hideIcon->setEnabled(true);
-		this->assembleTrayIcon();
+		this->updateDisplayWidgets();
 		trayicon->setVisible(true);
 	
 		// start minimized, no reason to do anything as we're minimized until
