@@ -50,13 +50,16 @@ int main(int argc, char *argv[])
 	
 	parser.setApplicationDescription(QApplication::translate("main.cpp", "Connman System Tray.") );
 	parser.addHelpOption();
-
-	QCommandLineOption logInputRequest(QStringList() << "l" << "log-input-request", QCoreApplication::translate("main.cpp", "Log the connman inputRequest for debugging purposes") );
+	
+	QCommandLineOption useIconTheme(QStringList() << "i" << "icon-theme", QCoreApplication::translate("main.cpp", "Use the icon theme from your system if one is defined.") );
+	parser.addOption(useIconTheme);	
+	
+	QCommandLineOption logInputRequest(QStringList() << "l" << "log-input-request", QCoreApplication::translate("main.cpp", "Log the connman inputRequest for debugging purposes.") );
 	parser.addOption(logInputRequest);
 
-	QCommandLineOption startMinimized(QStringList() << "m" << "minimized", QCoreApplication::translate("main.cpp", "Start the GUI minimized in the system tray") );
-	parser.addOption(startMinimized);		
-	
+	QCommandLineOption startMinimized(QStringList() << "m" << "minimized", QCoreApplication::translate("main.cpp", "Start the GUI minimized in the system tray.") );
+	parser.addOption(startMinimized);
+		
 	parser.addVersionOption();	
 	
 	QCommandLineOption waitTime(QStringList() << "w" << "wait-time", QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon (default is 0 seconds)."), QCoreApplication::translate("main.cpp", "wait-time"), "0" );

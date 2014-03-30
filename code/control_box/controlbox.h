@@ -106,6 +106,7 @@ class ControlBox : public QDialog
 		QAction* minimizeAction;
 		QAction* maximizeAction;
 		QAction* exitAction;
+		bool b_useicontheme;
 	
 	// functions
 		void	updateDisplayWidgets();

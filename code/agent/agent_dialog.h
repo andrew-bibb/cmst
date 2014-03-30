@@ -50,7 +50,7 @@ class AgentDialog : public QDialog
 	// functions
 		int showPage0(const QMap<QString,QString>&);
 		int showPage1(const QString&);		
-		void createDict(QMap<QString,QVariant>&);			
+		void createDict(QMap<QString,QVariant>&);
   
   private:  
   // members
@@ -65,7 +65,10 @@ class AgentDialog : public QDialog
 		void useWPSPushButton(bool);		
 		void showWhatsThis();
 		void useOtherBrowser(bool);
-		void launchBrowser(); 
+		void launchBrowser();
+		
+	public:
+		inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
 };
 
 

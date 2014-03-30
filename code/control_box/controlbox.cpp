@@ -49,6 +49,16 @@ DEALINGS IN THE SOFTWARE.
 # include <unistd.h>
 # include <syslog.h>
 
+// icon substitutions 
+//	system theme										hard coded
+//	emblem-favorite									bookmark.png
+//	network-transmit-receive				connect_established
+//	network-idle										connect_creating
+//	network-offline									connect_no
+//																	ledgreen
+//																	ledred
+//	network-error										cancel
+//	system-help											help
 
 #define DBUS_SERVICE "net.connman"
 #define DBUS_PATH "/"
@@ -76,7 +86,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   service_online = QDBusObjectPath();
   
   // set a flag if we sent a commandline option to log the connman inputrequest
-	agent->setLogInputRequest(parser.isSet("log-input-request"));  
+	agent->setLogInputRequest(parser.isSet("log-input-request")); 
+	
+	// set a flag if we want to use the local system icon theme and set the whatsthis button
+	b_useicontheme = parser.isSet("icon-theme"); 
+	if (b_useicontheme) {
+		ui.toolButton_whatsthis->setIcon(QIcon::fromTheme("system-help", QIcon(":/icons16x16/images/16x16/help.png")) );
+		agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons16x16/images/16x16/help.png")) );
+	}
   
   // my plan is to eventually have these as options called from the command line.  
   wifi_interval = 60;				// number of seconds between wifi scans
@@ -564,13 +581,23 @@ void ControlBox::assemblePage1()
 	if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {	
 		QString s1 = properties_map.value("State").toString();
 		s1 = s1.replace(0, 1, s1.left(1).toUpper() );
-		if (s1.contains("online", Qt::CaseInsensitive))
-			ui.label_state_pix->setPixmap(QPixmap (":/icons16x16/images/16x16/connect_established.png"));
+		if (s1.contains("online", Qt::CaseInsensitive)) {
+			b_useicontheme ?
+				ui.label_state_pix->setPixmap(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons16x16/images/16x16/connect_established.png")).pixmap(QSize(16,16)) ) :
+				ui.label_state_pix->setPixmap(QPixmap (":/icons16x16/images/16x16/connect_established.png"));
+		}	// if online
 		else {
-			if (s1.contains("ready", Qt::CaseInsensitive)) 
-				ui.label_state_pix->setPixmap(QPixmap (":/icons16x16/images/16x16/connect_creating.png"));
-				else ui.label_state_pix->setPixmap(QPixmap (":/icons16x16/images/16x16/connect_no.png"));
-		}	//	else any other state	
+			if (s1.contains("ready", Qt::CaseInsensitive)) {
+				b_useicontheme ?
+					ui.label_state_pix->setPixmap(QIcon::fromTheme("network-idle", QIcon(":/icons16x16/images/16x16/connect_creating.png")).pixmap(QSize(16,16)) )	:
+					ui.label_state_pix->setPixmap(QPixmap (":/icons16x16/images/16x16/connect_creating.png"));
+			}	// if ready
+			else {
+				b_useicontheme ?
+					ui.label_state_pix->setPixmap(QIcon::fromTheme("network-offline", QIcon(":/icons16x16/images/16x16/connect_no.png")).pixmap(QSize(16,16)) )	:
+					ui.label_state_pix->setPixmap(QPixmap (":/icons16x16/images/16x16/connect_no.png"));
+			}	// else any other state
+		}	//	else ready or any other state	
 		s1.prepend(tr("State: ") );
 		ui.label_state->setText(s1);
 		
@@ -729,16 +756,33 @@ void ControlBox::assemblePage3()
 			qtwi00->setTextAlignment(Qt::AlignCenter);
 			ui.tableWidget_wifi->setItem(rowcount, 0, qtwi00);	
 			
-			QLabel* ql01 = new QLabel(ui.tableWidget_wifi);
-			if (map.value("Favorite").toBool() ) ql01->setPixmap(QPixmap(":/icons16x16/images/16x16/bookmark.png") );			
+			QLabel* ql01 = new QLabel(ui.tableWidget_wifi);			
+			if (map.value("Favorite").toBool() ) {
+				b_useicontheme ?
+					ql01->setPixmap(QIcon::fromTheme("emblem-favorite", QIcon(":/icons16x16/images/16x16/bookmark.png")).pixmap(QSize(16,16)) ) :
+					ql01->setPixmap(QPixmap(":/icons16x16/images/16x16/bookmark.png"));
+			}
 			ql01->setAlignment(Qt::AlignCenter);
 			ui.tableWidget_wifi->setCellWidget(rowcount, 1, ql01);
 			
 			QLabel* ql02 = new QLabel(ui.tableWidget_wifi);
-			if (map.value("State").toString().contains("online", Qt::CaseInsensitive) ) ql02->setPixmap(QPixmap(":/icons16x16/images/16x16/connect_established.png") );
-			else 
-				if (map.value("State").toString().contains("ready", Qt::CaseInsensitive) ) ql02->setPixmap(QPixmap(":/icons16x16/images/16x16/connect_creating.png") );
-				else ql02->setPixmap(QPixmap(":/icons16x16/images/16x16/connect_no.png") );
+			if (map.value("State").toString().contains("online", Qt::CaseInsensitive) ) {
+				b_useicontheme ?
+					ql02->setPixmap(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons16x16/images/16x16/connect_established.png")).pixmap(QSize(16,16)) ) :
+					ql02->setPixmap(QPixmap(":/icons16x16/images/16x16/connect_established.png"));
+			}	// if online
+			else { 
+				if (map.value("State").toString().contains("ready", Qt::CaseInsensitive) ) {
+					b_useicontheme ?
+						ql02->setPixmap(QIcon::fromTheme("network-idle", QIcon(":/icons16x16/images/16x16/connect_creating.png")).pixmap(QSize(16,16)) )	:
+						ql02->setPixmap(QPixmap(":/icons16x16/images/16x16/connect_creating.png") );
+				}	// if ready
+				else {
+					b_useicontheme ?
+						ql02->setPixmap(QIcon::fromTheme("network-offline", QIcon(":/icons16x16/images/16x16/connect_no.png")).pixmap(QSize(16,16)) )	:
+						ql02->setPixmap(QPixmap(":/icons16x16/images/16x16/connect_no.png"));
+				}	// else any other state
+			}	// else ready or any other state
 			ql02->setAlignment(Qt::AlignCenter);
 			QString s2 = map.value("State").toString();
 			ql02->setToolTip(s2.replace(0, 1, s2.left(1).toUpper()) );
@@ -786,7 +830,9 @@ void ControlBox::assembleTrayIcon()
   
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
 		if (properties_map.value("State").toString().contains("online", Qt::CaseInsensitive) ) {
-			trayicon->setIcon(QIcon(":/icons16x16/images/16x16/connect_established.png") );
+			b_useicontheme ?
+				trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons16x16/images/16x16/connect_established.png")) )	:
+				trayicon->setIcon(QIcon(":/icons16x16/images/16x16/connect_established.png") );
 			if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
 				QMap<QString,QVariant> submap;
 				for (int i =0; i < services_list.size(); ++i) {
@@ -812,14 +858,18 @@ void ControlBox::assembleTrayIcon()
 			}	//	services if no error
 		}	//	if online	
 		else {
-			trayicon->setIcon(QIcon(":/icons16x16/images/16x16/connect_no.png") );
+			b_useicontheme ?
+				trayicon->setIcon(QIcon::fromTheme("network-offline", QIcon(":/icons16x16/images/16x16/connect_no.png")) )	:
+				trayicon->setIcon(QIcon(":/icons16x16/images/16x16/connect_no.png") );
 			stt.append(tr("Not Connected", "icon_tool_tip"));
 		}	// else not connected
 	}	// properties if no error
 	
 	// could not get any properties 
 	else {
-		trayicon->setIcon(QIcon(":/icons16x16/images/16x16/cancel.png") );
+		b_useicontheme ?
+			trayicon->setIcon(QIcon::fromTheme("network-error", QIcon(":/icons16x16/images/16x16/cancel.png")) )	:
+			trayicon->setIcon(QIcon(":/icons16x16/images/16x16/cancel.png") );
 		stt.append(tr("Error retrieving properties via Dbus"));
 		stt.append(tr("Connection status is unknown"));
 	}

@@ -1,6 +1,10 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
 <br>
+<br><b>In Progress</b>
+<ul>
+<li>Option to use system icon theme if available</li>
+</ul>
 <br><b>2014.03.29 - </b>Revised per input from Arch Linux Forums
 <ul>
 <li>Added command line option to wait a specified time to create the system tray</li>

@@ -63,6 +63,9 @@ class ConnmanAgent : public QObject, protected QDBusContext
 	    bool b_loginputrequest;
 	    
 	    void createInputMap(const QMap<QString,QVariant>&); 
+	    
+	  public:
+			inline void setWhatsThisIcon(QIcon icon) {uiDialog->setWhatsThisIcon(icon);}  
 };    
 
 #endif
