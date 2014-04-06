@@ -84,6 +84,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   agent = new ConnmanAgent(this);
   counter = new ConnmanCounter(this);
   service_online = QDBusObjectPath();
+  mvsrv_menu = new QMenu(this);
   
   // set a flag if we sent a commandline option to log the connman inputrequest
 	agent->setLogInputRequest(parser.isSet("log-input-request")); 
@@ -141,9 +142,15 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   minMaxGroup->addAction(maximizeAction);
   exitAction = new QAction(tr("&Exit"), this);
   
+  moveGroup = new QActionGroup(this);
+  moveGroup->addAction(ui.actionMove_Before);
+  moveGroup->addAction(ui.actionMove_After);
+  
 	//  connect signals and slots - actions and action groups 	
 	connect(minMaxGroup, SIGNAL(triggered(QAction*)), this, SLOT(minMaxWindow(QAction*)));
 	connect(exitAction, SIGNAL(triggered()), this, SLOT(close()));
+	connect(moveGroup, SIGNAL(triggered(QAction*)), this, SLOT(moveButtonPressed(QAction*)));
+	connect(mvsrv_menu, SIGNAL(triggered(QAction*)), this, SLOT(moveService(QAction*)));
 	
 	//  connect signals and slots - ui elements
 	connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
@@ -161,6 +168,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	connect(ui.pushButton_aboutQT, SIGNAL(clicked()), qApp, SLOT(aboutQt()));
 	connect(ui.pushButton_license, SIGNAL(clicked()), this, SLOT(showLicense()));
 	connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));	
+	connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
 
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
@@ -251,6 +259,83 @@ void ControlBox::showChangeLog()
 
 ////////////////////////////////////////////Private Slots ////////////////////////////////////////////
 //
+// Slot to move the selected service before or after another service.  
+// Called when an item in mvsrv_menu is selected.  QAction act is the
+// action selected.
+void ControlBox::moveService(QAction* act)
+{
+	// See if act belongs to a service
+	QString ss;
+	QDBusObjectPath targetobj;
+	for (int i = 0; i < services_list.size(); ++i) {
+		ss = services_list.at(i).objmap.value("Name").toString();
+		ss = ss.replace(0, 1, ss.left(1).toUpper() );
+		// the items in mvsrv_menu are in the same order as services_list
+		if (ss == act->text() ) {
+			targetobj = QDBusObjectPath(services_list.at(i).objpath.path());
+			break;
+		}	// if
+	}	// for
+	
+	// make sure we got a targetobject, if not most likely cancel pressed
+	if (targetobj.path().isEmpty()) return;
+	
+	// get enough information from tableWidget_services to identify the source object
+	QList<QTableWidgetItem*> list;
+	list.clear();
+	list = ui.tableWidget_services->selectedItems();
+	if (list.isEmpty() ) return;
+	
+	// apply the movebefore or moveafter message to the source object
+	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);	
+	if (mvsrv_menu->title() == ui.actionMove_Before->text())
+		iface_serv->call(QDBus::NoBlock, "MoveBefore", QVariant::fromValue(targetobj) );
+	else
+		iface_serv->call(QDBus::NoBlock, "MoveAfter", QVariant::fromValue(targetobj) );
+	delete iface_serv;
+
+	// update the widgets
+	this->propertyChanged();	
+	
+	return;
+}
+
+//
+//	Slot called if the movebefore or moveafter button was pressed
+void ControlBox::moveButtonPressed(QAction* act)
+{
+	mvsrv_menu->setTitle(act->text());
+	mvsrv_menu->popup(QCursor::pos());
+	
+	return;
+}
+
+//
+//	Slot to enable the movebefore and moveafter buttons, and to prepare the poupup menu
+void ControlBox::enableMoveButtons(int row, int col)
+{
+	// enable the buttons
+	ui.pushButton_movebefore->setEnabled(true);
+	ui.pushButton_moveafter->setEnabled(true);
+
+	// create the menu to show if a user selects one of the buttons
+	mvsrv_menu->clear();
+	QString ss;
+	for (int i = 0; i < services_list.size(); ++i) {
+		ss = services_list.at(i).objmap.value("Name").toString();
+		ss = ss.replace(0, 1, ss.left(1).toUpper() );
+		QAction* act = mvsrv_menu->addAction(ss);
+		if (i == row) act->setDisabled(true);
+		}
+		
+	// add a cancel option
+	mvsrv_menu->addSeparator();
+	QAction* act = mvsrv_menu->addAction(tr("Cancel"));
+		
+	return;
+}
+
+//
 //	Slot to update the service label when this->counter is updated.  Other labels in page 4 receive signals directly
 void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QString& home_label, const QString& roam_label)
 {
@@ -296,6 +381,7 @@ void ControlBox::connectPressed()
 	iface_serv->call(QDBus::NoBlock, "Connect");
 	delete iface_serv;
 	
+	// update the widgets
 	this->propertyChanged();
 	
 	return;		

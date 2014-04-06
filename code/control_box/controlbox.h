@@ -42,6 +42,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QTimer>
 # include <QActionGroup>
 # include <QCommandLineParser>
+# include <QMenu>
 
 # include "ui_controlbox.h"
 # include "./code/agent/agent.h"
@@ -103,10 +104,12 @@ class ControlBox : public QDialog
 		QTimer* wifi_timer;
 		QSystemTrayIcon*	trayicon; 
 		QActionGroup* minMaxGroup;
+		QActionGroup* moveGroup;
 		QAction* minimizeAction;
 		QAction* maximizeAction;
 		QAction* exitAction;
 		bool b_useicontheme;
+		QMenu* mvsrv_menu;
 	
 	// functions
 		void	updateDisplayWidgets();
@@ -126,6 +129,9 @@ class ControlBox : public QDialog
 		QString readResourceText(const char*);  
 
   private slots:
+		void moveService(QAction*);
+		void moveButtonPressed(QAction*);
+		void enableMoveButtons(int,int);
 		void counterUpdated(const QDBusObjectPath&, const QString&, const QString&);
 		void connectPressed();
 		void disconnectPressed();
