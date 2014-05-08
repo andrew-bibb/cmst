@@ -972,19 +972,19 @@ void ControlBox::assembleTrayIcon()
 //Handler for left click on tray icon
 void ControlBox::iconActivated(QSystemTrayIcon::ActivationReason reason)
 {
-    //Only handling left click case
+	//Only handling left click case
 	if(reason == QSystemTrayIcon::Trigger)
 	{
-        //Show the window if it is currently hidden/minimized
-        if(this->isHidden() || this->isMinimized())
-        {
-            minMaxWindow(maximizeAction);
-        }
-        //Otherwise hide the window
-        else
-        {
-            minMaxWindow(minimizeAction);
-        }
+		//Show the window if it is currently hidden/minimized
+		if(this->isHidden() || this->isMinimized())
+		{
+			minMaxWindow(maximizeAction);
+		}
+		//Otherwise hide the window
+		else
+		{
+			minMaxWindow(minimizeAction);
+		}
 	}
 }
 
