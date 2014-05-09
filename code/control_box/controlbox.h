@@ -146,6 +146,7 @@ class ControlBox : public QDialog
 		void showWhatsThis();
 		inline void startSystemTrayMinimized() {createSystemTrayIcon(true);}
 		inline void startSystemTrayNormal() {createSystemTrayIcon(false);}
+		void iconActivated(QSystemTrayIcon::ActivationReason reason);
 };
 
 #endif
