@@ -972,6 +972,25 @@ void ControlBox::assembleTrayIcon()
 	return;
 }
 
+//Handler for left click on tray icon
+void ControlBox::iconActivated(QSystemTrayIcon::ActivationReason reason)
+{
+	//Only handling left click case
+	if(reason == QSystemTrayIcon::Trigger)
+	{
+		//Show the window if it is currently hidden/minimized
+		if(this->isHidden() || this->isMinimized())
+		{
+			minMaxWindow(maximizeAction);
+		}
+		//Otherwise hide the window
+		else
+		{
+			minMaxWindow(minimizeAction);
+		}
+	}
+}
+
 //
 // Function to create the systemtray icon.  Really part of the constructor
 // and called by a single shot QTimer (actually via a slot between the timer
@@ -989,6 +1008,7 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 	
 		trayicon = new QSystemTrayIcon(this);
 		trayicon->setContextMenu(trayIconMenu);
+		connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
 		ui.checkBox_hideIcon->setEnabled(true);
 		this->updateDisplayWidgets();
 		trayicon->setVisible(true);
