@@ -461,6 +461,9 @@ void ControlBox::scanWifi()
 		}	// if
 	}	// for
 	
+	// force an update of the display widgets
+	updateDisplayWidgets();
+	
 	return;
 }
 
