@@ -1,8 +1,9 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
 <br>
-<br><b>In Progress</b>
+<br><b>2014.05.10</b>
 <ul>
+<li>Left mouse click in system tray will toggle the interface up and down (coded by: Brett Dutro)
 <li>Option to use system icon theme if available</li>
 <li>Added MoveBefore and MoveAfter buttons to services on first page</li>
 </ul>

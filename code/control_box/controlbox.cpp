@@ -220,7 +220,9 @@ void ControlBox::aboutCMST()
                   "<center>Release date: %3"                        
                   "<center>Copyright c %4\n<center>by\n"
                   "<center>Andrew J. Bibb\n"
-                  "<center>Vermont, USA").arg(PROGRAM_NAME).arg(VERSION).arg(RELEASE_DATE).arg(COPYRIGHT_DATE) );
+                  "<center>Vermont, USA\n"
+                  "<br><center><b>Contributors:</b>\n"
+                  "<center>Brett Dutro").arg(PROGRAM_NAME).arg(VERSION).arg(RELEASE_DATE).arg(COPYRIGHT_DATE) );
 }
 
 //
