@@ -368,6 +368,12 @@
               <property name="enabled">
                <bool>false</bool>
               </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Change service order&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Move the selected service before another in the list.&lt;/p&gt;&lt;p&gt;The button will only become active once a service is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
               <property name="text">
                <string>Move Before</string>
               </property>
@@ -377,6 +383,12 @@
              <widget class="QPushButton" name="pushButton_moveafter">
               <property name="enabled">
                <bool>false</bool>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Change service order&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Move the selected service after another in the list.&lt;/p&gt;&lt;p&gt;The button will only become active once a service is selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="text">
                <string>Move After</string>

@@ -193,14 +193,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	
 	//// turn network cards on or off globally based on checkbox
 	toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
-	
-	// start the timer
-	wifi_timer->start();
-	
+		
 	// connect some dbus signals to our slots
 	QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PropertyChanged", this, SLOT(propertyChanged()));
 	QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(propertyChanged()));
 
+	// start the timer
+	wifi_timer->start();
+	
 	// set up and fill in the display widgets
 	this->updateDisplayWidgets();	
 				
@@ -462,9 +462,6 @@ void ControlBox::scanWifi()
 		delete iface_tech;
 		}	// if
 	}	// for
-	
-	// force an update of the display widgets
-	updateDisplayWidgets();
 	
 	return;
 }

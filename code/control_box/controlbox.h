@@ -53,12 +53,12 @@ namespace CMST
 {
   enum {
     // errors
-    No_Errors	= 0x00,
-    Err_No_DBus	= 0x01, 			// Can't find DBus 
-    Err_Invalid_Iface	= 0x02, // Invalid interface
-    Err_Properties	= 0x04,		// There was an error reading connman.Manager.GetProperties
-    Err_Technologies= 0x08,		// There was an error reading connman.Manager.GetTechnologies       
-    Err_Services		= 0x10,		// There was an error reading connman.Manager.GetServices  
+    No_Errors					= 0x00,
+    Err_No_DBus				= (1 << 0),	// Can't find DBus 
+    Err_Invalid_Iface	= (1 << 1),	// Invalid interface
+    Err_Properties		=	(1 << 2),	// There was an error reading connman.Manager.GetProperties
+    Err_Technologies	=	(1 << 3),	// There was an error reading connman.Manager.GetTechnologies       
+    Err_Services			=	(1 << 4),	// There was an error reading connman.Manager.GetServices  
   };
 } // namespace CMST
 
