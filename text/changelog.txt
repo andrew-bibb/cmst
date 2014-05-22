@@ -1,6 +1,13 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
 <br>
+<br><b>In Progress</b>
+<ul>
+<li>Selecting "Maximize" from the tray icon will show the dialog "normal" instead of "maxamized".</li>
+<li>Enabled display of size grip in corner of dialog</li>
+<li>Added option to show fewer details in the Services box on page 1</li>
+</ul>
+<br>
 <br><b>2014.05.10</b>
 <ul>
 <li>Left mouse click in system tray will toggle the interface up and down (coded by: Brett Dutro)

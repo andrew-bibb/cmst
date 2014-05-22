@@ -169,6 +169,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	connect(ui.pushButton_license, SIGNAL(clicked()), this, SLOT(showLicense()));
 	connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));	
 	connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
+	connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(propertyChanged()));
 
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
@@ -186,7 +187,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 			QTimer::singleShot(timeout * 1000, this, SLOT(startSystemTrayMinimized()));
 		}
 		else {
-			this->showMaximized();
+			this->showNormal();
 			QTimer::singleShot(timeout * 1000, this, SLOT(startSystemTrayNormal()));
 		}
 		}	// else
@@ -535,7 +536,7 @@ void ControlBox::minMaxWindow(QAction* act)
 	}	// if minimizeAction
 	
 	else
-		this->showMaximized();
+		this->showNormal();
 	
 	return;
 }
@@ -772,10 +773,20 @@ void ControlBox::assemblePage1()
 			qtwi02->setText(fi.baseName() );
 			qtwi02->setTextAlignment(Qt::AlignVCenter|Qt::AlignLeft);
 			ui.tableWidget_services->setItem(row, 2, qtwi02);
+			
+			if (ui.checkBox_hidecnxn->isChecked() ) {
+				ui.tableWidget_services->hideColumn(2);
+			}
+			else {
+				ui.tableWidget_services->showColumn(2);
+				ui.tableWidget_services->horizontalHeader()->resizeSection(1, ui.tableWidget_services->horizontalHeader()->defaultSectionSize());
+			}
+			
 		}	// services for loop
 		
 		// resize the services column 0 to contents
 		ui.tableWidget_services->resizeColumnToContents(0);			
+			
 	}	// services if no error
 	
 	return;
@@ -1026,7 +1037,7 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 					) );
 		
 		// Even if we want to be minimized we can't there is no place to minimize to.
-		this->showMaximized();
+		this->showNormal();
 							
 	}	// else
 		
