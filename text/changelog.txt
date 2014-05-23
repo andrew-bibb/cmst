@@ -6,8 +6,9 @@
 <li>Selecting "Maximize" from the tray icon will show the dialog "normal" instead of "maxamized".</li>
 <li>Enabled display of size grip in corner of dialog</li>
 <li>Added option to show fewer details in the Services box on page 1</li>
+<li>Fixed wordwrap in the Counters tab</li>
+<li>Added an entry for the Counters tab in the Help tab.</li>
 </ul>
-<br>
 <br><b>2014.05.10</b>
 <ul>
 <li>Left mouse click in system tray will toggle the interface up and down (coded by: Brett Dutro)
@@ -39,7 +40,7 @@
 <li>Fixed a SEGFAULT when connecting a Wifi service after the service order had changed.</li>
 <li>Added message dialogs in the logerrors function to show errors to the user (errors are still logged to the journal).</li>
 <li>Fixed SEGFAULTS if the program fails to find or connect to DBUS</li>
-<li>Added a button on the WiFi page to remove a Wifi service</li><
+<li>Added a button on the WiFi page to remove a Wifi service</li>
 /ul>
 <br>
 <b>2014.01.05 - </b>Initial Version
