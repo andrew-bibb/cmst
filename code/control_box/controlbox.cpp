@@ -524,7 +524,18 @@ void ControlBox::togglePowered(int row, int col)
 	vlist.clear();
 	vlist << QVariant("Powered") << QVariant::fromValue(QDBusVariant(technologies_list.at(row).objmap.value("Powered").toBool() ? false : true) );
 
-	iface_tech->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
+	QDBusMessage reply = iface_tech->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
+	if (reply.type() == QDBusMessage::ReplyMessage)
+		this ->propertyChanged();
+	else 
+		QMessageBox::warning(this, tr("CMST Warning"),
+		tr("<center><b>We received a DBUS reply message indicating an error while trying to send the toggle power request to connman.</b></center>"                       
+			 "<p>The powered state of the technology will not be changed."
+			 "<br>The error name is: %1<br>The error message is:%2").arg(reply.errorName()).arg(reply.errorMessage())
+		);
+		
+
+	
 	delete iface_tech;
 	return;
 } 
