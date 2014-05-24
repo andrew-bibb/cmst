@@ -43,6 +43,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QActionGroup>
 # include <QCommandLineParser>
 # include <QMenu>
+# include <QSettings>
 
 # include "ui_controlbox.h"
 # include "./code/agent/agent.h"
@@ -86,6 +87,9 @@ class ControlBox : public QDialog
 		void showLicense();
 		void showChangeLog();
 		
+	protected:
+		void closeEvent(QCloseEvent*);
+		
   private:
   // members 
     Ui::ControlBox ui;
@@ -110,6 +114,7 @@ class ControlBox : public QDialog
 		QAction* exitAction;
 		bool b_useicontheme;
 		QMenu* mvsrv_menu;
+		QSettings* settings;
 	
 	// functions
 		void	updateDisplayWidgets();
@@ -147,6 +152,8 @@ class ControlBox : public QDialog
 		inline void startSystemTrayMinimized() {createSystemTrayIcon(true);}
 		inline void startSystemTrayNormal() {createSystemTrayIcon(false);}
 		void iconActivated(QSystemTrayIcon::ActivationReason reason);
+		void writeSettings();
+		void readSettings();
 };
 
 #endif

@@ -40,6 +40,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QProgressBar>
 # include <QMessageBox>
 # include <QLocale>
+# include <QCloseEvent>
 
 # include "./code/control_box/controlbox.h"
 # include "./code/resource.h"	
@@ -85,6 +86,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   counter = new ConnmanCounter(this);
   service_online = QDBusObjectPath();
   mvsrv_menu = new QMenu(this);
+  QString s_org = ORG;
+  QString s_app = PROGRAM_NAME; 
+  settings = new QSettings(s_org.toLower(), s_app.toLower(), this);
   
   // set a flag if we sent a commandline option to log the connman inputrequest
 	agent->setLogInputRequest(parser.isSet("log-input-request")); 
@@ -201,6 +205,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
 	// start the timer
 	wifi_timer->start();
+	
+	// restore GUI settings
+	this->readSettings();
 	
 	// set up and fill in the display widgets
 	this->updateDisplayWidgets();	
@@ -618,6 +625,15 @@ void ControlBox::showWhatsThis()
 }
 
 //////////////////////////////////////////// Protected Functions //////////////////////////////////
+//
+// Close event.  Save GUI settings on close events
+void ControlBox::closeEvent(QCloseEvent* e)
+{
+	this->writeSettings();
+	e->accept();
+	
+	return;
+}
 
 //////////////////////////////////////////// Private Functions ////////////////////////////////////
 //
@@ -999,6 +1015,45 @@ void ControlBox::iconActivated(QSystemTrayIcon::ActivationReason reason)
 			minMaxWindow(minimizeAction);
 		}
 	}
+}
+
+// Slot to save GUI settings to disk
+void ControlBox::writeSettings()
+{
+	settings->beginGroup("MainWindow");
+	settings->setValue("size", size() );
+	settings->setValue("pos", pos() );
+	settings->endGroup();	
+	
+	settings->beginGroup("CheckBoxes");
+	settings->setValue("hide_tray_icon", ui.checkBox_hideIcon->isChecked() );
+	settings->setValue("devices_off", ui.checkBox_devicesoff->isChecked() );
+	settings->setValue("retain_settings", ui.checkBox_retainsettings->isChecked() );
+	settings->setValue("services_less", ui.checkBox_hidecnxn->isChecked() );
+	settings->endGroup(); 
+	
+	return;
+}
+
+// Slot to read GUI settings to disk
+void ControlBox::readSettings()
+{
+	// only restore settings if retain_settings is checked
+	if (! settings->value("CheckBoxes/retain_settings").toBool() ) return;
+	
+	settings->beginGroup("MainWindow");
+	resize(settings->value("size", QSize(700, 550)).toSize() );
+	move(settings->value("pos", QPoint(200, 200)).toPoint() );
+	settings->endGroup();
+	
+	settings->beginGroup("CheckBoxes");
+	ui.checkBox_hideIcon->setChecked(settings->value("hide_tray_icon").toBool() );
+	ui.checkBox_devicesoff->setChecked(settings->value("devices_off").toBool() );
+	ui.checkBox_retainsettings->setChecked(settings->value("retain_settings").toBool() );
+	ui.checkBox_hidecnxn->setChecked(settings->value("services_less").toBool() );
+	settings->endGroup();
+	
+	return;
 }
 
 //

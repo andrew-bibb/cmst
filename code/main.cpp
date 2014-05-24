@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
 	QApplication app(argc, argv);
 	QApplication::setApplicationName(LONG_NAME);
 	QApplication::setApplicationVersion(VERSION);
+	QApplication::setOrganizationName(ORG);
    
 	// setup the command line parser
 	QCommandLineParser parser;
