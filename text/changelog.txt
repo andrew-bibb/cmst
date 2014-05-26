@@ -10,6 +10,7 @@
 <li>Added an entry for the Counters tab in the Help tab, and added scroll bars to the help field.</li>
 <li>GUI settings can be saved and restored between sessions.</li>
 <li>Improved response when toggling the power state of a technology.</li>
+<li>Added Preferences tab, tooltips are now disabled by default, added checkbox in Preferences to enable them.</li> 
 </ul>
 <br><b>2014.05.10</b>
 <ul>

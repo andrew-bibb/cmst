@@ -41,6 +41,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QMessageBox>
 # include <QLocale>
 # include <QCloseEvent>
+# include <QToolTip>
 
 # include "./code/control_box/controlbox.h"
 # include "./code/resource.h"	
@@ -72,6 +73,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	QLocale::setDefault(QLocale(QLocale::L_LANG, QLocale::L_COUNTRY));	
   // setup the user interface
   ui.setupUi(this);
+  
+  // install global event filter (used to disable showing tooltips)
+  qApp->installEventFilter(this);
   
 	// set the window title 
   setWindowTitle(tr(WINDOW_TITLE));    
@@ -210,8 +214,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	this->readSettings();
 	
 	// set up and fill in the display widgets
-	this->updateDisplayWidgets();	
-				
+	this->updateDisplayWidgets();				
 }  
 
 ////////////////////////////////////////////////// Public Functions //////////////////////////////////
@@ -549,6 +552,7 @@ void ControlBox::togglePowered(int row, int col)
 void ControlBox::minMaxWindow(QAction* act)
 {
 	if (act == minimizeAction ) {
+		this->writeSettings();
 		if (trayicon != 0 ) trayicon->isVisible() ? this->hide() : this->showMinimized();
 		else this->showMinimized();
 	}	// if minimizeAction
@@ -644,6 +648,20 @@ void ControlBox::closeEvent(QCloseEvent* e)
 	e->accept();
 	
 	return;
+}
+
+//
+// Event filter used to filter out tooltip events if we don't want to see them
+bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
+{
+	if (evn->type() == QEvent::ToolTip) {
+		if (ui.checkBox_enabletooltips->isChecked())
+			return false;
+		else
+			return true;
+	}
+
+	return false;
 }
 
 //////////////////////////////////////////// Private Functions ////////////////////////////////////
@@ -1041,6 +1059,7 @@ void ControlBox::writeSettings()
 	settings->setValue("devices_off", ui.checkBox_devicesoff->isChecked() );
 	settings->setValue("retain_settings", ui.checkBox_retainsettings->isChecked() );
 	settings->setValue("services_less", ui.checkBox_hidecnxn->isChecked() );
+	settings->setValue("enable_tooltips", ui.checkBox_enabletooltips->isChecked() );
 	settings->endGroup(); 
 	
 	return;
@@ -1062,6 +1081,7 @@ void ControlBox::readSettings()
 	ui.checkBox_devicesoff->setChecked(settings->value("devices_off").toBool() );
 	ui.checkBox_retainsettings->setChecked(settings->value("retain_settings").toBool() );
 	ui.checkBox_hidecnxn->setChecked(settings->value("services_less").toBool() );
+	ui.checkBox_enabletooltips->setChecked(settings->value("enable_tooltips").toBool() );
 	settings->endGroup();
 	
 	return;

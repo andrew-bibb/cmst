@@ -89,6 +89,7 @@ class ControlBox : public QDialog
 		
 	protected:
 		void closeEvent(QCloseEvent*);
+		bool eventFilter(QObject*, QEvent*); 
 		
   private:
   // members 
