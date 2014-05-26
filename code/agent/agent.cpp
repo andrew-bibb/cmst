@@ -86,7 +86,7 @@ void ConnmanAgent::ReportError(QDBusObjectPath path, QString s_error)
 }
 
 //ff
-// Called when it is required to ask the user to open qa website to proceed
+// Called when it is required to ask the user to open a website to proceed
 // with login handling
 void ConnmanAgent::RequestBrowser(QDBusObjectPath path, QString url)
 {
@@ -133,7 +133,6 @@ void ConnmanAgent::Cancel()
 //	generally blank but can be used for informational text.
 //
 //	If we asked to log the input request create the log file in /tmp/cmst/input_request.log
-
 void ConnmanAgent::createInputMap(const QMap<QString,QVariant>& r_map)
 {
 	// Initialize our data map

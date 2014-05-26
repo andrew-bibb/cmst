@@ -1263,6 +1263,11 @@ bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r
 //	Function to log errors to the system log
 void ControlBox::logErrors(const quint8& err)
 {
+	//// TESTING ONLY //////
+	//// REMOVE WHEN DONE
+	return;
+	//// END TESTING BLOCK
+	
 	//	store the error in a data element
 	q8_errors |= err;
 	
