@@ -1,10 +1,7 @@
-/**************************** resource.h *******************************
+/**************************** scrollbox.cpp ***************************
 
-Header file that contains program #defines.  It used to be that we kept
-all program update and version information in this single file.  Now
-we've moved a lot of that to txt files inside the /text directory which
-are compiled in as a resource.  This seems to result in a faster 
-compile, but we now have manage information in two locations.
+Dialog to display text to the user.  Kind of like a neutered QMessageBox
+except it has scroll bars built in. 
 
 Copyright (C) 2013-2014
 by: Andrew J. Bibb
@@ -29,26 +26,36 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/ 
 
-#ifndef RESOURCE_H
-#define RESOURCE_H
 
-///////////////////////////////// Program Values ///////////////////////
-// Program Info 
-#define VERSION "14.05.26-3"
-#define RELEASE_DATE "10 May 2014"
-#define COPYRIGHT_DATE "2013-2014"
+# include <QtCore/QDebug>
+# include <QDBusArgument>
 
-// Program Values
-#define WINDOW_TITLE "Connman System Tray"
-#define PROGRAM_NAME "CMST"
-#define LONG_NAME "CMST - Connman System Tray"
-#define ORG "Monkey Business Enterprises"
+# include "./code/scrollbox/scrollbox.h"
 
 
-///////////////////////////////// Locale ///////////////////////////////
-// Change lines below as needed. 
-# define L_LANG  English
-# define L_COUNTRY UnitedStates
+ScrollBox::ScrollBox(QWidget *parent)
+    : QDialog(parent)
+{
+			
+}  
 
-#endif
+////////////////////////////////////////////////// Public Functions //////////////////////////////////
+
+////////////////////////////////////////////////// Public Slots //////////////////////////////////////
+//
+//	Slot to set the display text
+void ScrollBox::setDisplayText(QString text)
+{
+	//ui.label_displaytext->setText(text);
+	ui.label_displaytext->setText("hi andy");
+	return;
+}
+////////////////////////////////////////////Private Slots ////////////////////////////////////////////
+
+//////////////////////////////////////////// Protected Functions //////////////////////////////////
+
+//////////////////////////////////////////// Private Functions ////////////////////////////////////
+
+
+
 

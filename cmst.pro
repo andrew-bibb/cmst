@@ -22,10 +22,12 @@ HEADERS 	+= ./code/control_box/controlbox.h
 HEADERS		+= ./code/agent/agent.h
 HEADERS		+= ./code/agent/agent_dialog.h
 HEADERS		+= ./code/counter/counter.h
+#HEADERS		+= ./code/scrollbox/scrollbox.h
 
 #	forms
 FORMS		+= ./code/control_box/ui/controlbox.ui
 FORMS		+= ./code/agent/ui/agent.ui
+#FORMS		+= ./code/scrollbox/ui/scrollbox.ui
 
 #	sources
 SOURCES	+= ./code/main.cpp
@@ -33,6 +35,7 @@ SOURCES	+= ./code/control_box/controlbox.cpp
 SOURCES += ./code/agent/agent.cpp
 SOURCES += ./code/agent/agent_dialog.cpp
 SOURCES += ./code/counter/counter.cpp
+#SOURCES += ./code/scrollbox/scrollbox.cpp
 
 #	resource files
 RESOURCES 	+= cmst.qrc
