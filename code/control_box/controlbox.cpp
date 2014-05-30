@@ -71,6 +71,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 {
 	// set the Locale
 	QLocale::setDefault(QLocale(QLocale::L_LANG, QLocale::L_COUNTRY));	
+  
   // setup the user interface
   ui.setupUi(this);
   
@@ -90,9 +91,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   counter = new ConnmanCounter(this);
   service_online = QDBusObjectPath();
   mvsrv_menu = new QMenu(this);
-  QString s_org = ORG;
   QString s_app = PROGRAM_NAME; 
-  settings = new QSettings(s_org.toLower(), s_app.toLower(), this);
+  settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
   
   // set a flag if we sent a commandline option to log the connman inputrequest
 	agent->setLogInputRequest(parser.isSet("log-input-request")); 
@@ -189,14 +189,17 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	}	// if
 	else {
 		bool ok;
+		const short mintrigger = 500;	// minimum time (milliseconds) to wait before starting the tray icon
 		int timeout = parser.value("wait-time").toInt(&ok, 10);
 		if (! ok) timeout = 0;
+		timeout *= 1000;
+		if (timeout < mintrigger) timeout = mintrigger;
 		if (parser.isSet("minimized")) {
-			QTimer::singleShot(timeout * 1000, this, SLOT(startSystemTrayMinimized()));
+			QTimer::singleShot(timeout, this, SLOT(startSystemTrayMinimized()));
 		}
 		else {
 			this->showNormal();
-			QTimer::singleShot(timeout * 1000, this, SLOT(startSystemTrayNormal()));
+			QTimer::singleShot(timeout, this, SLOT(startSystemTrayNormal()));
 		}
 		}	// else
 	
@@ -218,7 +221,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 }  
 
 ////////////////////////////////////////////////// Public Functions //////////////////////////////////
-
 
 ////////////////////////////////////////////////// Public Slots //////////////////////////////////////
 //
@@ -652,14 +654,25 @@ void ControlBox::closeEvent(QCloseEvent* e)
 
 //
 // Event filter used to filter out tooltip events if we don't want to see them
+// in eventFilters return true eats the event, false passes on it.
 bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
-{
+{	
 	if (evn->type() == QEvent::ToolTip) {
-		if (ui.checkBox_enabletooltips->isChecked())
+		// first check if the object is the system tray icon
+		QString objname = obj->metaObject()->className();
+		if (objname.contains("QSystemTrayIconSys")) {
+			if (ui.checkBox_enablesystemtraytooltips->isChecked())
+				return false;
+			else
+				return true;
+		}	// if obj is QSystemTrayIconSys
+		
+		// now check all the other interface widgets
+		if (ui.checkBox_enableinterfacetooltips->isChecked())
 			return false;
 		else
 			return true;
-	}
+	}	// event is a tooltip
 
 	return false;
 }
@@ -1059,7 +1072,8 @@ void ControlBox::writeSettings()
 	settings->setValue("devices_off", ui.checkBox_devicesoff->isChecked() );
 	settings->setValue("retain_settings", ui.checkBox_retainsettings->isChecked() );
 	settings->setValue("services_less", ui.checkBox_hidecnxn->isChecked() );
-	settings->setValue("enable_tooltips", ui.checkBox_enabletooltips->isChecked() );
+	settings->setValue("enable_interface_tooltips", ui.checkBox_enableinterfacetooltips->isChecked() );
+	settings->setValue("enable_systemtray_tooltips", ui.checkBox_enablesystemtraytooltips->isChecked() );
 	settings->endGroup(); 
 	
 	return;
@@ -1081,7 +1095,8 @@ void ControlBox::readSettings()
 	ui.checkBox_devicesoff->setChecked(settings->value("devices_off").toBool() );
 	ui.checkBox_retainsettings->setChecked(settings->value("retain_settings").toBool() );
 	ui.checkBox_hidecnxn->setChecked(settings->value("services_less").toBool() );
-	ui.checkBox_enabletooltips->setChecked(settings->value("enable_tooltips").toBool() );
+	ui.checkBox_enableinterfacetooltips->setChecked(settings->value("enable_interface_tooltips").toBool() );
+	ui.checkBox_enablesystemtraytooltips->setChecked(settings->value("enable_systemtray_tooltips").toBool() );
 	settings->endGroup();
 	
 	return;
@@ -1283,11 +1298,6 @@ bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r
 //	Function to log errors to the system log
 void ControlBox::logErrors(const quint8& err)
 {
-	//// TESTING ONLY //////
-	//// REMOVE WHEN DONE
-	return;
-	//// END TESTING BLOCK
-	
 	//	store the error in a data element
 	q8_errors |= err;
 	

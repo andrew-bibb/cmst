@@ -11,7 +11,8 @@
 <li>GUI settings can be saved and restored between sessions.</li>
 <li>Improved response when toggling the power state of a technology.</li>
 <li>Added Preferences tab, tooltips are now disabled by default, added checkbox in Preferences to enable them.</li> 
-<li>Set a minimum size on the dialog.</li>
+<li>Forced small delay in starting the system tray icon</li>
+<li>Limit the amount the dialog can shrink</li>
 </ul>
 <br><b>2014.05.10</b>
 <ul>
