@@ -13,6 +13,7 @@
 <li>Added Preferences tab, tooltips are now disabled by default, added checkbox in Preferences to enable them.</li> 
 <li>Forced small delay in starting the system tray icon</li>
 <li>Limit the amount the dialog can shrink</li>
+<li>Replaced Nuvola icons with AwOken icons</li>
 </ul>
 <br><b>2014.05.10</b>
 <ul>

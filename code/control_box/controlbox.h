@@ -83,7 +83,7 @@ class ControlBox : public QDialog
 
   public slots:  
 		void aboutCMST();
-		void aboutNuvola();
+		void aboutIconSet();
 		void showLicense();
 		void showChangeLog();
 		
