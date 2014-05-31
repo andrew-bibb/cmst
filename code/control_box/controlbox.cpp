@@ -109,8 +109,10 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   counter_accuracy = 1024;	// number of kb for counter updates
   counter_period = 10;			// number of seconds for counter updates
 
-	// connect counter signal to  the counterUpdated slot before we register the counter
-	connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
+	// connect counter signal to  the counterUpdated slot before we register the counter, assuming counters are not disabled
+	if (! parser.isSet("disable-counters"))
+		connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
+  
   // setup the dbus interface to connman.manager
 	if (! QDBusConnection::systemBus().isConnected() ) logErrors(CMST::Err_No_DBus);
   else {
@@ -128,11 +130,13 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 			vlist_agent << QVariant::fromValue(QDBusObjectPath("/org/monkeybusiness/Agent")); 
 			iface_manager->callWithArgumentList(QDBus::NoBlock, "RegisterAgent", vlist_agent);
 			
-			// register the counter
-			QList<QVariant> vlist_counter;
-			vlist_counter.clear();
-			vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/monkeybusiness/Counter")) << counter_accuracy << counter_period;;
-			iface_manager->callWithArgumentList(QDBus::NoBlock, "RegisterCounter", vlist_counter);			
+			// if counters are enabled register the counter
+			if (! parser.isSet("disable-counters")) {
+				QList<QVariant> vlist_counter;
+				vlist_counter.clear();
+				vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/monkeybusiness/Counter")) << counter_accuracy << counter_period;;
+				iface_manager->callWithArgumentList(QDBus::NoBlock, "RegisterCounter", vlist_counter);			
+			}
 		}	// else have valid connection
 	}	// else have connected sessionBus
 	

@@ -7,6 +7,9 @@ Usage: ./cmst [options]
 A QT5 based GUI front end for the Connman network daemon
 .SH OPTIONS
 .TP
+\fB-c, --disable-counters\fP
+Disable the counters.  May be used to minimize load on your system.
+.TP
 \fB-d, --disable-tray-icon\fP
 Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.
 .TP

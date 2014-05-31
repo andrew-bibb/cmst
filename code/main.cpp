@@ -46,6 +46,9 @@ int main(int argc, char *argv[])
    
 	// setup the command line parser
 	QCommandLineParser parser;
+	QCommandLineOption disableCounters(QStringList() << "c" << "disable-counters", QCoreApplication::translate("main.cpp", "Disable data counters.  May be used to minimize load on your system.") );
+	parser.addOption(disableCounters);	
+	
 	QCommandLineOption disableTrayIcon(QStringList() << "d" << "disable-tray-icon", QCoreApplication::translate("main.cpp", "Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.") );
 	parser.addOption(disableTrayIcon);	
 	
