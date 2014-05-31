@@ -3,24 +3,14 @@
     <file>text/changelog.txt</file>
     <file>text/license.txt</file>
   </qresource>
-  <qresource prefix="icons16x16">
-    <file>images/16x16/help.png</file>
-    <file>images/16x16/connect_established.png</file>
-    <file>images/16x16/bookmark.png</file>
-    <file>images/16x16/ledgreen.png</file>
-    <file>images/16x16/ledred.png</file>
-    <file>images/16x16/connect_creating.png</file>
-    <file>images/16x16/connect_no.png</file>
-    <file>images/16x16/cancel.png</file>
-  </qresource>
   <qresource prefix="icons">
-    <file>images/local/favorite.png</file>
-    <file>images/local/cancel.png</file>
-    <file>images/local/connect_established.png</file>
-    <file>images/local/connect_creating.png</file>
-    <file>images/local/connect_no.png</file>
-    <file>images/local/whatsthis.png</file>
-    <file>images/local/offlinemode_disabled.png</file>
-    <file>images/local/offlinemode_enabled.png</file>
+    <file>images/interface/cancel.png</file>
+    <file>images/interface/connect_creating.png</file>
+    <file>images/interface/connect_established.png</file>
+    <file>images/interface/connect_no.png</file>
+    <file>images/interface/favorite.png</file>
+    <file>images/interface/offlinemode_disabled.png</file>
+    <file>images/interface/offlinemode_enabled.png</file>
+    <file>images/interface/whatsthis.png</file>
   </qresource>
 </RCC>

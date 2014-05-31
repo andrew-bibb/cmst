@@ -1009,7 +1009,7 @@
        </property>
        <property name="icon">
         <iconset resource="../../../cmst.qrc">
-         <normaloff>:/icons/images/local/whatsthis.png</normaloff>:/icons/images/local/whatsthis.png</iconset>
+         <normaloff>:/icons/images/interface/whatsthis.png</normaloff>:/icons/images/interface/whatsthis.png</iconset>
        </property>
       </widget>
      </item>
