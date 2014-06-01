@@ -7,8 +7,12 @@ QT += dbus
 
 TARGET = cmst
 TEMPLATE = app
+documentation.path = /usr/share/man/man1
+documentation.files = ./text/cmst.*.gz
+documentation.extra = gzip --keep ./text/cmst.1
 target.path = /usr/bin/
 INSTALLS += target
+INSTALLS += documentation
 
 # dbus
 DBUS_ADAPTORS 	+= ./code/agent/org.monkey_business_enterprises.agent.xml
