@@ -45,6 +45,7 @@ DEALINGS IN THE SOFTWARE.
 
 # include "./code/control_box/controlbox.h"
 # include "./code/resource.h"	
+# include "./code/scrollbox/scrollbox.h"
 
 //	headers for system logging
 # include <stdio.h>
@@ -265,13 +266,16 @@ void ControlBox::showLicense()
 }
 
 //
-//	slot to display the change log of theprogram
+//	slot to display the change log of the program
 void ControlBox::showChangeLog()
 {
 	QString s = readResourceText(":/text/text/changelog.txt");
   if ( s.isEmpty() ) s.append(tr("%1 change log is not available.").arg(PROGRAM_NAME));
 	
-	QMessageBox::about(this, tr("Change Log"), s);
+	ScrollBox* sb = new ScrollBox(this);
+	sb->setDisplayText(s);
+	sb->show();
+	
 }
 
 

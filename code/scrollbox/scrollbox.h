@@ -31,7 +31,6 @@ DEALINGS IN THE SOFTWARE.
 
 # include <QDialog>
 
-
 # include "ui_scrollbox.h"
 
 
@@ -44,7 +43,7 @@ class ScrollBox : public QDialog
     ScrollBox(QWidget*);
     
   public slots:
-		void setDisplayText(QString);
+		void setDisplayText(const QString&);
     
   private:
   // members 

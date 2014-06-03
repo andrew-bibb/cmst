@@ -28,34 +28,31 @@ DEALINGS IN THE SOFTWARE.
 
 
 # include <QtCore/QDebug>
-# include <QDBusArgument>
 
 # include "./code/scrollbox/scrollbox.h"
 
-
+// constructor
+// Most of the interface is defined in the ui
 ScrollBox::ScrollBox(QWidget *parent)
     : QDialog(parent)
 {
-			
+	
+  // setup the user interface
+  ui.setupUi(this);	
+  
+  // initialize the display text
+  ui.label_displaytext->clear();
+	
 }  
-
-////////////////////////////////////////////////// Public Functions //////////////////////////////////
 
 ////////////////////////////////////////////////// Public Slots //////////////////////////////////////
 //
 //	Slot to set the display text
-void ScrollBox::setDisplayText(QString text)
+void ScrollBox::setDisplayText(const QString& s)
 {
-	//ui.label_displaytext->setText(text);
-	ui.label_displaytext->setText("hi andy");
+	ui.label_displaytext->setText(s);
+	
 	return;
 }
-////////////////////////////////////////////Private Slots ////////////////////////////////////////////
-
-//////////////////////////////////////////// Protected Functions //////////////////////////////////
-
-//////////////////////////////////////////// Private Functions ////////////////////////////////////
-
-
 
 
