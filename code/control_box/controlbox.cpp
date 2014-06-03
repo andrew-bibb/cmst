@@ -272,10 +272,7 @@ void ControlBox::showChangeLog()
 	QString s = readResourceText(":/text/text/changelog.txt");
   if ( s.isEmpty() ) s.append(tr("%1 change log is not available.").arg(PROGRAM_NAME));
 	
-	ScrollBox* sb = new ScrollBox(this);
-	sb->setDisplayText(s);
-	sb->show();
-	
+	ScrollBox::showScrollBox(tr("ChangeLog"), s, this);
 }
 
 

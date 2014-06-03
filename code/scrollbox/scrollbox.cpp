@@ -45,6 +45,17 @@ ScrollBox::ScrollBox(QWidget *parent)
 	
 }  
 
+////////////////////////////////////////////// Public Functions //////////////////////////////////////
+//
+void ScrollBox::showScrollBox(QString title, QString text, QWidget* parent)
+{
+	ScrollBox scrollBox (parent);
+	scrollBox.setDisplayText(text);
+	scrollBox.setWindowTitle(title);
+	
+	scrollBox.exec();
+}
+
 ////////////////////////////////////////////////// Public Slots //////////////////////////////////////
 //
 //	Slot to set the display text
