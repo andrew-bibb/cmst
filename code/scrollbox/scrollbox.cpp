@@ -47,7 +47,7 @@ ScrollBox::ScrollBox(QWidget *parent)
 
 ////////////////////////////////////////////// Public Functions //////////////////////////////////////
 //
-void ScrollBox::showScrollBox(QString title, QString text, QWidget* parent)
+void ScrollBox::execScrollBox(QString title, QString text, QWidget* parent)
 {
 	ScrollBox scrollBox (parent);
 	scrollBox.setDisplayText(text);

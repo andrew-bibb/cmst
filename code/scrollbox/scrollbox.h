@@ -41,7 +41,7 @@ class ScrollBox : public QDialog
 
   public:
     ScrollBox(QWidget*);
-    static void showScrollBox(QString, QString, QWidget*);
+    static void execScrollBox(QString, QString, QWidget*);
     
   public slots:
 		void setDisplayText(const QString&);

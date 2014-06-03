@@ -48,7 +48,7 @@
 <li>Added message dialogs in the logerrors function to show errors to the user (errors are still logged to the journal).</li>
 <li>Fixed SEGFAULTS if the program fails to find or connect to DBUS</li>
 <li>Added a button on the WiFi page to remove a Wifi service</li>
-/ul>
+</ul>
 <br>
 <b>2014.01.05 - </b>Initial Version
 <ul>
