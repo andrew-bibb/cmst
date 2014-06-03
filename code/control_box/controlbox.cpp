@@ -796,7 +796,7 @@ void ControlBox::assemblePage1()
 			//ui.tableWidget_technologies->setItem(row, 2, qtwi02);			
 			QLabel* ql02 = new QLabel(bt ? tr("On", "powered") : tr("Off", "powered") );
 			//qw02->
-			ui.tableWidget_technologies->setCellWidget(row, 2, qw02);
+			ui.tableWidget_technologies->setCellWidget(row, 2, ql02);
 			
 			QTableWidgetItem* qtwi03 = new QTableWidgetItem();
 			bt = technologies_list.at(row).objmap.value("Connected").toBool();
