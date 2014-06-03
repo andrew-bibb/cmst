@@ -523,7 +523,7 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 //	Slot to toggle the powered state of a technology
 //	Called when the powered cell in the page 1 technology tableWidget is double clicked
 void ControlBox::togglePowered(int row, int col)
-{
+{qDebug() << "toggle in colum " << col;
 	//	column 2 is power
 	if ( col != 2 ) return;
 	
@@ -791,9 +791,12 @@ void ControlBox::assemblePage1()
 			
 			QTableWidgetItem* qtwi02 = new QTableWidgetItem();
 			bt = technologies_list.at(row).objmap.value("Powered").toBool();	
-			qtwi02->setText( bt ? tr("On", "powered") : tr("Off", "powered") );
-			qtwi02->setTextAlignment(Qt::AlignCenter);			
-			ui.tableWidget_technologies->setItem(row, 2, qtwi02);			
+			//qtwi02->setText( bt ? tr("On", "powered") : tr("Off", "powered") );
+			//qtwi02->setTextAlignment(Qt::AlignCenter);			
+			//ui.tableWidget_technologies->setItem(row, 2, qtwi02);			
+			QLabel* ql02 = new QLabel(bt ? tr("On", "powered") : tr("Off", "powered") );
+			//qw02->
+			ui.tableWidget_technologies->setCellWidget(row, 2, qw02);
 			
 			QTableWidgetItem* qtwi03 = new QTableWidgetItem();
 			bt = technologies_list.at(row).objmap.value("Connected").toBool();
