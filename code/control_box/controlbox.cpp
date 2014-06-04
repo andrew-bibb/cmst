@@ -175,7 +175,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	connect(ui.pushButton_connect,SIGNAL(clicked()),this, SLOT(connectPressed()));
 	connect(ui.pushButton_disconnect,SIGNAL(clicked()),this, SLOT(disconnectPressed()));	
 	connect(ui.pushButton_remove,SIGNAL(clicked()),this, SLOT(removePressed()));		
-	connect(ui.tableWidget_technologies,SIGNAL(cellDoubleClicked(int, int)), this, SLOT(togglePowered(int, int)));
+	connect(ui.tableWidget_technologies,SIGNAL(cellPressed(int, int)), this, SLOT(togglePowered(int, int)));
   connect(ui.pushButton_aboutCMST, SIGNAL(clicked()), this, SLOT(aboutCMST()));  
   connect(ui.pushButton_aboutIconSet, SIGNAL(clicked()), this, SLOT(aboutIconSet()));	
 	connect(ui.pushButton_aboutQT, SIGNAL(clicked()), qApp, SLOT(aboutQt()));
