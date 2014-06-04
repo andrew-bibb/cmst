@@ -790,15 +790,12 @@ void ControlBox::assemblePage1()
 			ui.tableWidget_technologies->setItem(row, 1, qtwi01);
 			
 			QTableWidgetItem* qtwi02 = new QTableWidgetItem();
-			bt = technologies_list.at(row).objmap.value("Powered").toBool();	
-			//qtwi02->setText( bt ? tr("On", "powered") : tr("Off", "powered") );
-			//qtwi02->setTextAlignment(Qt::AlignCenter);			
-			//ui.tableWidget_technologies->setItem(row, 2, qtwi02);		
+			bt = technologies_list.at(row).objmap.value("Powered").toBool();			
 			st  = "<center>";
 			QLabel* ql02 = new QLabel();
 			ql02->setBackgroundRole(QPalette::Button);
 			ql02->setAutoFillBackground(true);
-			ql02->setLineWidth(3);
+			ql02->setLineWidth(1);
 			if (bt ) {
 				st.append(tr("On", "powered"));
 				ql02->setFrameStyle(QFrame::Panel | QFrame::Sunken);
