@@ -795,7 +795,7 @@ void ControlBox::assemblePage1()
 			QLabel* ql02 = new QLabel();
 			ql02->setBackgroundRole(QPalette::Button);
 			ql02->setAutoFillBackground(true);
-			ql02->setLineWidth(1);
+			ql02->setLineWidth(2);
 			if (bt ) {
 				st.append(tr("On", "powered"));
 				ql02->setFrameStyle(QFrame::Panel | QFrame::Sunken);
