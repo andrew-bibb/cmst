@@ -5,13 +5,13 @@ CONFIG += qt warn_off release
 QT += widgets
 QT += dbus
 
-TARGET = cmst
 TEMPLATE = app
-documentation.path = /usr/share/man/man1
-documentation.files = ./text/cmst.*.gz
-documentation.extra = gzip --keep ./text/cmst.1
+TARGET = cmst
 target.path = /usr/bin/
 INSTALLS += target
+
+documentation.path = /usr/share/man/man1
+documentation.files = ./text/cmst.1.gz
 INSTALLS += documentation
 
 # dbus

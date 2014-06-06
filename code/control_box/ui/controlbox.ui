@@ -886,7 +886,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display a dialog box containing information about this program. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>&amp;CMST</string>
+             <string>C&amp;MST</string>
             </property>
            </widget>
           </item>
@@ -968,8 +968,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>550</width>
-            <height>449</height>
+            <width>536</width>
+            <height>458</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">

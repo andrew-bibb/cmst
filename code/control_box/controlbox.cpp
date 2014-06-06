@@ -798,11 +798,11 @@ void ControlBox::assemblePage1()
 			ql02->setLineWidth(2);
 			if (bt ) {
 				st.append(tr("On", "powered"));
-				ql02->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+				ql02->setFrameStyle(QFrame::WinPanel | QFrame::Sunken);
 			}
 			else {
 				st.append(tr("Off", "powered"));
-				ql02->setFrameStyle(QFrame::Panel | QFrame::Raised);
+				ql02->setFrameStyle(QFrame::WinPanel | QFrame::Raised);
 			}	
 			ql02->setText(st);
 			ui.tableWidget_technologies->setCellWidget(row, 2, ql02);
