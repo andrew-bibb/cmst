@@ -67,6 +67,17 @@ DEALINGS IN THE SOFTWARE.
 #define DBUS_PATH "/"
 #define DBUS_MANAGER "net.connman.Manager"
 
+// custom push button, used in the technology box for powered on/off
+idButton::idButton(QWidget* parent, const int& i) :
+		QPushButton(parent)
+{
+	id = i;
+	setCheckable(true);
+	
+	connect (this, SIGNAL(clicked()), this, SLOT(buttonClicked()));
+}
+		
+// main GUI element
 ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     : QDialog(parent)
 {
@@ -175,7 +186,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	connect(ui.pushButton_connect,SIGNAL(clicked()),this, SLOT(connectPressed()));
 	connect(ui.pushButton_disconnect,SIGNAL(clicked()),this, SLOT(disconnectPressed()));	
 	connect(ui.pushButton_remove,SIGNAL(clicked()),this, SLOT(removePressed()));		
-	connect(ui.tableWidget_technologies,SIGNAL(cellPressed(int, int)), this, SLOT(togglePowered(int, int)));
   connect(ui.pushButton_aboutCMST, SIGNAL(clicked()), this, SLOT(aboutCMST()));  
   connect(ui.pushButton_aboutIconSet, SIGNAL(clicked()), this, SLOT(aboutIconSet()));	
 	connect(ui.pushButton_aboutQT, SIGNAL(clicked()), qApp, SLOT(aboutQt()));
@@ -521,12 +531,9 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 
 //
 //	Slot to toggle the powered state of a technology
-//	Called when the powered cell in the page 1 technology tableWidget is double clicked
-void ControlBox::togglePowered(int row, int col)
-{
-	//	column 2 is power
-	if ( col != 2 ) return;
-	
+//	Called when our custom idButton in the powered cell in the page 1 technology tableWidget is clicked
+void ControlBox::togglePowered(int row)
+{	
 	QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
 
 	QList<QVariant> vlist;
@@ -542,8 +549,6 @@ void ControlBox::togglePowered(int row, int col)
 			 "<p>The powered state of the technology will not be changed."
 			 "<br>The error name is: %1<br>The error message is:%2").arg(reply.errorName()).arg(reply.errorMessage())
 		);
-		
-
 	
 	delete iface_tech;
 	return;
@@ -677,7 +682,7 @@ bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
 		else
 			return true;
 	}	// event is a tooltip
-
+	
 	return false;
 }
 
@@ -791,21 +796,19 @@ void ControlBox::assemblePage1()
 			
 			QTableWidgetItem* qtwi02 = new QTableWidgetItem();
 			bt = technologies_list.at(row).objmap.value("Powered").toBool();			
-			st  = "<center>";
-			QLabel* ql02 = new QLabel();
-			ql02->setBackgroundRole(QPalette::Button);
-			ql02->setAutoFillBackground(true);
-			ql02->setLineWidth(2);
+			idButton* qpb02 = new idButton(this, row);
+			connect (qpb02, SIGNAL(clickedID(int)), this, SLOT(togglePowered(int)));
 			if (bt ) {
-				st.append(tr("On", "powered"));
-				ql02->setFrameStyle(QFrame::WinPanel | QFrame::Sunken);
+				qpb02->setText(tr("     On", "powered"));
+				qpb02->setIcon(QPixmap(":/icons/images/interface/offlinemode_enabled.png"));
+				qpb02->setDown(true);
 			}
 			else {
-				st.append(tr("Off", "powered"));
-				ql02->setFrameStyle(QFrame::WinPanel | QFrame::Raised);
+				qpb02->setText(tr("     Off", "powered"));
+				qpb02->setIcon(QPixmap(":/icons/images/interface/offlinemode_disabled.png"));
+				qpb02->setDown(false);
 			}	
-			ql02->setText(st);
-			ui.tableWidget_technologies->setCellWidget(row, 2, ql02);
+			ui.tableWidget_technologies->setCellWidget(row, 2, qpb02);
 			
 			QTableWidgetItem* qtwi03 = new QTableWidgetItem();
 			bt = technologies_list.at(row).objmap.value("Connected").toBool();

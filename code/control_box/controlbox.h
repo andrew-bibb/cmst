@@ -72,7 +72,27 @@ struct arrayElement
 	QMap<QString,QVariant> objmap;
 };
 
+//
+// custom QPushButton that will emit a button id
+class idButton : public QPushButton
+{
+	Q_OBJECT
+	
+	public:
+		idButton (QWidget*, const int&);
+		
+	signals:
+		void clickedID(int);
+	
+	private:
+		int id;
+		
+	private slots:
+		inline void buttonClicked() {emit clickedID(id);}
+};
 
+
+//
 //	The main program class based on a QDialog
 class ControlBox : public QDialog
 {
@@ -146,7 +166,8 @@ class ControlBox : public QDialog
 		void scanWifi();
 		void toggleOfflineMode(bool);
 		void toggleTrayIcon(bool);
-		void togglePowered(int, int);
+		//void togglePowered(int, int);
+		void togglePowered(int);
 		void minMaxWindow(QAction* = 0);
 		void getServiceDetails(int);
 		void showWhatsThis();
