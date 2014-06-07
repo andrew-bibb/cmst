@@ -25,25 +25,28 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/ 
 
-#include <QApplication>
-#include <QLocale>
-#include <QCommandLineOption>
-#include <QCommandLineParser>
-#include <QStringList>
+# include <QtCore/QDebug>
+# include <QApplication>
+# include <QLocale>
+# include <QCommandLineOption>
+# include <QCommandLineParser>
+# include <QStringList>
+# include <QStyleFactory>
 
-#include "./code/control_box/controlbox.h"
-#include "./code/resource.h"	
+# include "./code/control_box/controlbox.h"
+# include "./code/resource.h"	
 
 // uncomment to install translation code
 //#define USE_TRANSLATIONS
 
 int main(int argc, char *argv[])
-{
-	QApplication app(argc, argv);
+{  
 	QApplication::setApplicationName(LONG_NAME);
 	QApplication::setApplicationVersion(VERSION);
-	QApplication::setOrganizationName(ORG);
-   
+	QApplication::setOrganizationName(ORG);	
+	QApplication::setDesktopSettingsAware(true);
+	QApplication app(argc, argv);		
+	
 	// setup the command line parser
 	QCommandLineParser parser;
 	QCommandLineOption disableCounters(QStringList() << "c" << "disable-counters", QCoreApplication::translate("main.cpp", "Disable data counters.  May be used to minimize load on your system.") );
@@ -83,7 +86,7 @@ int main(int argc, char *argv[])
   parser.process(app);   
 	QStringList sl = parser.unknownOptionNames();
 	if (sl.size() > 0 ) parser.showHelp(1);
-	
+								
 	ControlBox ctlbox(parser);
 	return app.exec();
 }

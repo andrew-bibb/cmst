@@ -26,7 +26,6 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/ 
 
-
 # include <QtCore/QDebug>
 # include <QDBusArgument>
 
@@ -761,12 +760,12 @@ void ControlBox::assemblePage1()
 		QString s2 = QString();
 		if (b1 ) {
 			s2 = tr("Engaged");
-			ui.label_offlinemode_pix->setPixmap(QPixmap (":/icons/images/interface/offlinemode_enabled.png"));
+			ui.label_offlinemode_pix->setPixmap(QPixmap (":/icons/images/interface/golfball_green.png"));
 		}	// if offline mode is engaged
 			
 		else {
 			s2 = tr("Disabled");
-			ui.label_offlinemode_pix->setPixmap(QPixmap (":/icons/images/interface/offlinemode_disabled.png"));
+			ui.label_offlinemode_pix->setPixmap(QPixmap (":/icons/images/interface/golfball_red.png"));
 		} //	else offlinemode disabled 
 		s2.prepend(tr("Offline Mode "));
 		ui.label_offlinemode->setText(s2);	
@@ -800,12 +799,12 @@ void ControlBox::assemblePage1()
 			connect (qpb02, SIGNAL(clickedID(int)), this, SLOT(togglePowered(int)));
 			if (bt ) {
 				qpb02->setText(tr("     On", "powered"));
-				qpb02->setIcon(QPixmap(":/icons/images/interface/offlinemode_enabled.png"));
+				qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
 				qpb02->setDown(true);
 			}
 			else {
 				qpb02->setText(tr("     Off", "powered"));
-				qpb02->setIcon(QPixmap(":/icons/images/interface/offlinemode_disabled.png"));
+				qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
 				qpb02->setDown(false);
 			}	
 			ui.tableWidget_technologies->setCellWidget(row, 2, qpb02);
@@ -1006,18 +1005,18 @@ void ControlBox::assembleTrayIcon()
   
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
 		if (properties_map.value("State").toString().contains("online", Qt::CaseInsensitive) ) {
-			b_useicontheme ?
-				trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/interface/connect_established.png")) )	:
-				trayicon->setIcon(QIcon(":/icons/images/interface/connect_established.png") );
 			if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
 				QMap<QString,QVariant> submap;
 				for (int i =0; i < services_list.size(); ++i) {
-					if (services_list.at(i).objpath == service_online) {	
+					if (services_list.at(i).objpath == service_online) {
 						if (services_list.at(i).objmap.value("Type").toString().contains("ethernet", Qt::CaseInsensitive) ) {
 							extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );
 							stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
 							stt.append(tr("Service: %1<br>").arg(services_list.at(i).objmap.value("Name").toString()) );
-							stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );							
+							stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );		
+							b_useicontheme ?
+								trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wired_established.png")) )	:
+								trayicon->setIcon(QIcon(":/icons/images/systemtray/wired_established.png") );					
 						}	//	if wired connection
 						
 						if (services_list.at(i).objmap.value("Type").toString().contains("wifi", Qt::CaseInsensitive) ) {
@@ -1027,6 +1026,15 @@ void ControlBox::assembleTrayIcon()
 							stt.append(tr("Security: %1<br>").arg(services_list.at(i).objmap.value("Security").toStringList().join(',')) );
 							stt.append(tr("Strength: %1%<br>").arg(services_list.at(i).objmap.value("Strength").value<quint8>()) );
 							stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
+							quint8 str = services_list.at(i).objmap.value("Strength").value<quint8>();
+							if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl00.png")) );
+							else {
+							if (str > 80 ) trayicon->setIcon(QIcon(":/icons/images/systemtray/wl00.png"));
+							else if (str > 60 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl075.png"));
+								else if (str > 40 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl050.png"));
+									else if (str > 20 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl025.png"));
+										else trayicon->setIcon(QIcon(":/icons/images/systemtray/wl00.png"));
+							}	// else			
 						}	//	if wifi connection
 						break;
 					}	// if service online
@@ -1035,8 +1043,8 @@ void ControlBox::assembleTrayIcon()
 		}	//	if online	
 		else {
 			b_useicontheme ?
-				trayicon->setIcon(QIcon::fromTheme("network-offline", QIcon(":/icons/images/interface/connect_no.png")) )	:
-				trayicon->setIcon(QIcon(":/icons/images/interface/connect_no.png") );
+				trayicon->setIcon(QIcon::fromTheme("network-offline", QIcon(":/icons/images/systemtray/connect_no.png")) )	:
+				trayicon->setIcon(QIcon(":/icons/images/systemtray/connect_no.png") );
 			stt.append(tr("Not Connected", "icon_tool_tip"));
 		}	// else not connected
 	}	// properties if no error
