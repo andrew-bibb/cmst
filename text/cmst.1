@@ -31,7 +31,11 @@ Displays version information.
 \fB-w, --wait-time <wait-time>\fP
 Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).
 .SH BUGS
-For the tray icon to display is it required that the system tray be compliant with the Freedesktop.org systemtray specification.  The tray icon is known to not work in the DWM system tray which appears to be a noncompliant tray.
+For the tray icon to display is it required that the system tray be compliant with the Freedesktop.org systemtray specification.  
+
+The tray icon is known to not work in the DWM system tray which appears to be a noncompliant tray.
+
+Tray icons will display with a black background, this is particularly noticable when you have a light colored tray.  This is a QT5 bug. 
 .SH Author
 Andrew J. Bibb.  Project web page: https://github.com/andrew-bibb/cmst
 

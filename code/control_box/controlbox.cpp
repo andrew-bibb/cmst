@@ -148,9 +148,13 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 				vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/monkeybusiness/Counter")) << counter_accuracy << counter_period;;
 				iface_manager->callWithArgumentList(QDBus::NoBlock, "RegisterCounter", vlist_counter);			
 			}
+			
+			// connect some dbus signals to our slots
+			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
+			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged()));
 		}	// else have valid connection
-	}	// else have connected sessionBus
-	
+	}	// else have connected systemBus
+		
 	//	setup the dialog  
   //	timer to scan for wifi services now and again
   wifi_timer = new QTimer(this);
@@ -191,7 +195,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	connect(ui.pushButton_license, SIGNAL(clicked()), this, SLOT(showLicense()));
 	connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));	
 	connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
-	connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(propertyChanged()));
+	connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(dbsServicesChanged()));
 
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
@@ -199,11 +203,11 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   trayicon = 0;
   if (parser.isSet("disable-tray-icon")) {
 		ui.checkBox_hideIcon->setDisabled(true);
-		this->showMaximized(); // no place to minimize to, so showMaximized
+		this->showNormal(); // no place to minimize to, so showMaximized
 	}	// if
 	else {
 		bool ok;
-		const short mintrigger = 500;	// minimum time (milliseconds) to wait before starting the tray icon
+		const short mintrigger = 100;	// minimum time (milliseconds) to wait before starting the tray icon
 		int timeout = parser.value("wait-time").toInt(&ok, 10);
 		if (! ok) timeout = 0;
 		timeout *= 1000;
@@ -220,10 +224,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	//// turn network cards on or off globally based on checkbox
 	toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
 		
-	// connect some dbus signals to our slots
-	QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PropertyChanged", this, SLOT(propertyChanged()));
-	QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(propertyChanged()));
-
 	// start the timer
 	wifi_timer->start();
 	
@@ -321,9 +321,6 @@ void ControlBox::moveService(QAction* act)
 	else
 		iface_serv->call(QDBus::NoBlock, "MoveAfter", QVariant::fromValue(targetobj) );
 	delete iface_serv;
-
-	// update the widgets
-	this->propertyChanged();	
 	
 	return;
 }
@@ -409,9 +406,6 @@ void ControlBox::connectPressed()
 	iface_serv->call(QDBus::NoBlock, "Connect");
 	delete iface_serv;
 	
-	// update the widgets
-	this->propertyChanged();
-	
 	return;		
 }
 
@@ -433,8 +427,6 @@ void ControlBox::disconnectPressed()
 	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
 	iface_serv->call(QDBus::NoBlock, "Disconnect");
 	delete iface_serv;
-	
-	this->propertyChanged();
 	
 	return;	
 }
@@ -458,18 +450,117 @@ void ControlBox::removePressed()
 	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
 	iface_serv->call(QDBus::NoBlock, "Remove");
 	delete iface_serv;
-	
-	this->propertyChanged();
-	
+
 	return;
 }	
 
-		
+//	dbs slots are slots to receive DBus Signals		
 //
-//	Slot called whenever a the DBUS issues a PropertyChanged signal
-void ControlBox::propertyChanged()
+//	Slot called whenever DBUS issues a PropertyChanged signal
+void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
+{
+	// refresh properties from connman and update display widgets
+	updateDisplayWidgets();
+	
+	QVariant value = dbvalue.variant();
+		
+	// offlinemode property
+	if (name.contains("OfflineMode", Qt::CaseInsensitive)) {
+		if (value.toBool()) sendNotifications(
+			QString(tr("Offline Mode Engaged")),
+			QIcon(":/icons/images/interface/golfball_green.png"),
+			QSystemTrayIcon::Information );						
+		else sendNotifications(
+			QString(tr("Offline Mode Disabled")),
+			QIcon(":/icons/images/interface/golfball_red.png"),
+			QSystemTrayIcon::Information );	
+	}	// if contains offlinemode
+		
+	// state property
+	else if (name.contains("State", Qt::CaseInsensitive)) {
+		if (value.toString().contains("online", Qt::CaseInsensitive)) {
+			QString type = "";	
+			QString name = "";
+			
+			// find the online service
+			if (properties_map.value("State").toString().contains("online", Qt::CaseInsensitive) ) {
+				for (int i =0; i < services_list.size(); ++i) {
+					if (services_list.at(i).objmap.value("State").toString().contains("online", Qt::CaseInsensitive)) {
+						type = services_list.at(i).objmap.value("Type").toString();
+						type = type.replace(0, 1, type.left(1).toUpper() );
+						name = services_list.at(i).objmap.value("Name").toString();
+						name = name.replace (0, 1, name.left(1).toUpper() );
+						break;
+					}	// if
+				}	// for
+			}	// if state contains online	
+			
+			// notification text and icons if online
+			if (type.contains("wifi", Qt::CaseInsensitive))   {
+				sendNotifications(
+				QString(tr("%1 (%2) Online")).arg(type).arg(name),
+				b_useicontheme ? 
+					QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl000.png")).pixmap(QSize(16,16)) :
+					QIcon(":/icons/images/systemtray/wl000.png"),
+				QSystemTrayIcon::Information );
+			}	// if wifi
+			else {
+				sendNotifications(
+					QString(tr("%1 (%2) Online")).arg(type).arg(name),
+					b_useicontheme ? 
+						QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wired_established.png")).pixmap(QSize(16,16)) :
+						QIcon(":/icons/images/systemtray/wired_established.png"),
+					QSystemTrayIcon::Information );
+			}	// else (probably ethernet)			
+		}	//	if value online
+		
+		// ready state
+		else if (value.toString().contains("ready", Qt::CaseInsensitive)) {
+			sendNotifications(
+				QString(tr("Connection Ready")),
+				b_useicontheme ?
+					QIcon::fromTheme("network-idle", QIcon(":/icons/images/interface/connect_creating.png")).pixmap(QSize(16,16))	:
+					QIcon(":/icons/images/interface/connect_creating.png"),
+				QSystemTrayIcon::Information );							
+		}	// if ready
+		
+		// anyother state, report as offline
+		else {
+			sendNotifications(
+				QString(tr("Offline")),
+				b_useicontheme ?
+					QIcon::fromTheme("network-offline", QIcon(":/icons/images/interface/connect_no.png")).pixmap(QSize(16,16))	:
+					QIcon (":/icons/images/interface/connect_no.png"),
+				QSystemTrayIcon::Information );		
+		} // else offline
+	}	// else state
+	  		
+	return;
+}
+
+//
+//	Slot called whenever DBUS issues a ServicesChanged signal
+void ControlBox::dbsServicesChanged()
 {
 	updateDisplayWidgets();
+	
+	return;
+}
+
+//
+//	Slot called whenever the online service object issues a PropertyChanged signal on DBUS
+void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalue)
+{
+	QVariant value = dbvalue.variant();
+	
+	// process errrors
+	if (property.contains("Error", Qt::CaseInsensitive) ) {
+		sendNotifications(
+			QString(tr("Service Error: %1")).arg(value.toString()),
+			QIcon(":/icons/images/interface/cancel.png"),
+			QSystemTrayIcon::Critical);			
+	}
+	
 	return;
 }
 
@@ -541,7 +632,7 @@ void ControlBox::togglePowered(int row)
 
 	QDBusMessage reply = iface_tech->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
 	if (reply.type() == QDBusMessage::ReplyMessage)
-		this ->propertyChanged();
+		this->updateDisplayWidgets();
 	else 
 		QMessageBox::warning(this, tr("CMST Warning"),
 		tr("<center><b>We received a DBUS reply message indicating an error while trying to send the toggle power request to connman.</b></center>"                       
@@ -710,11 +801,13 @@ void ControlBox::updateDisplayWidgets()
 		// Find the service marked "online"
 		if (properties_map.value("State").toString().contains("online", Qt::CaseInsensitive) ) {
 			for (int i =0; i < services_list.size(); ++i) {
-				if (services_list.at(i).objmap.value("State").toString().contains("online", Qt::CaseInsensitive))
-				service_online = services_list.at(i).objpath; 
-				break;
+				if (services_list.at(i).objmap.value("State").toString().contains("online", Qt::CaseInsensitive)) {
+					service_online = services_list.at(i).objpath; 					
 				}	// if
+				QDBusConnection::systemBus().disconnect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
+				QDBusConnection::systemBus().connect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
 			}	// for
+		}	// if state contains onlinew
 		else service_online = QDBusObjectPath();
 				
 		//	rebuild our pages	
@@ -797,13 +890,14 @@ void ControlBox::assemblePage1()
 			bt = technologies_list.at(row).objmap.value("Powered").toBool();			
 			idButton* qpb02 = new idButton(this, row);
 			connect (qpb02, SIGNAL(clickedID(int)), this, SLOT(togglePowered(int)));
+			QString padding = "     ";
 			if (bt ) {
-				qpb02->setText(tr("     On", "powered"));
+				qpb02->setText(tr("%1On", "powered").arg(padding));
 				qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
 				qpb02->setDown(true);
 			}
 			else {
-				qpb02->setText(tr("     Off", "powered"));
+				qpb02->setText(tr("%1Off", "powered").arg(padding));
 				qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
 				qpb02->setDown(false);
 			}	
@@ -856,8 +950,7 @@ void ControlBox::assemblePage1()
 			else {
 				ui.tableWidget_services->showColumn(2);
 				ui.tableWidget_services->horizontalHeader()->resizeSection(1, ui.tableWidget_services->horizontalHeader()->defaultSectionSize());
-			}
-			
+			}			
 		}	// services for loop
 		
 		// resize the services column 0 to contents
@@ -1033,14 +1126,14 @@ void ControlBox::assembleTrayIcon()
 							else if (str > 60 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl075.png"));
 								else if (str > 40 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl050.png"));
 									else if (str > 20 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl025.png"));
-										else trayicon->setIcon(QIcon(":/icons/images/systemtray/wl00.png"));
-							}	// else			
+										else trayicon->setIcon(QIcon(":/icons/images/systemtray/wl000.png"));
+							}	// else use our built in icons			
 						}	//	if wifi connection
 						break;
-					}	// if service online
+					}	// if the service is online
 				}	// for
 			}	//	services if no error
-		}	//	if online	
+		}	//	if the state is online	
 		else {
 			b_useicontheme ?
 				trayicon->setIcon(QIcon::fromTheme("network-offline", QIcon(":/icons/images/systemtray/connect_no.png")) )	:
@@ -1067,7 +1160,7 @@ void ControlBox::assembleTrayIcon()
 	return;
 }
 
-//Handler for left click on tray icon
+// Handler for left click on tray icon
 void ControlBox::iconActivated(QSystemTrayIcon::ActivationReason reason)
 {
 	//Only handling left click case
@@ -1101,6 +1194,7 @@ void ControlBox::writeSettings()
 	settings->setValue("services_less", ui.checkBox_hidecnxn->isChecked() );
 	settings->setValue("enable_interface_tooltips", ui.checkBox_enableinterfacetooltips->isChecked() );
 	settings->setValue("enable_systemtray_tooltips", ui.checkBox_enablesystemtraytooltips->isChecked() );
+	settings->setValue("enable_systemtray_notications", ui.checkBox_enablesystemtraynotification->isChecked() );
 	settings->endGroup(); 
 	
 	return;
@@ -1124,6 +1218,7 @@ void ControlBox::readSettings()
 	ui.checkBox_hidecnxn->setChecked(settings->value("services_less").toBool() );
 	ui.checkBox_enableinterfacetooltips->setChecked(settings->value("enable_interface_tooltips").toBool() );
 	ui.checkBox_enablesystemtraytooltips->setChecked(settings->value("enable_systemtray_tooltips").toBool() );
+	ui.checkBox_enablesystemtraynotification->setChecked(settings->value("enable_systemtray_notications").toBool() );
 	settings->endGroup();
 	
 	return;
@@ -1169,6 +1264,20 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 							
 	}	// else
 		
+	
+	return;
+}
+
+//
+// Function to show notifications (if desired by the user).  Called from
+// Called from the functions we connect dbus signals to, for instance
+// dbsPropertyChanged(), stateChanged();
+void ControlBox::sendNotifications(const QString& text, QIcon icon, QSystemTrayIcon::MessageIcon sticon)
+{
+	// if we want system tray notifications
+	if (ui.checkBox_enablesystemtraynotification->isChecked() && QSystemTrayIcon::isSystemTrayAvailable() ) { 
+		trayicon->showMessage(PROGRAM_NAME, text, sticon);
+	}
 	
 	return;
 }

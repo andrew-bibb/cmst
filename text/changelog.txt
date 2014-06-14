@@ -15,6 +15,7 @@
 <li>Limit the amount the dialog can shrink.</li>
 <li>Replaced Nuvola icons with AwOken icons.</li>
 <li>A manpage is now provided and installed.</li>
+<li>The system tray icon can optionally show notify messages in popups.</li>
 </ul>
 <br><b>2014.05.10</b>
 <ul>

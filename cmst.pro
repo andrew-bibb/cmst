@@ -12,6 +12,7 @@ INSTALLS += target
 
 documentation.path = /usr/share/man/man1
 documentation.files = ./text/cmst.1.gz
+documentation.extra = gzip --keep --force ./text/cmst.1
 INSTALLS += documentation
 
 # dbus

@@ -145,6 +145,7 @@ class ControlBox : public QDialog
 		void assemblePage4();
 		void assembleTrayIcon();
 		void createSystemTrayIcon(bool);
+		void sendNotifications(const QString&, QIcon = QIcon(), QSystemTrayIcon::MessageIcon = QSystemTrayIcon::Information);
 		bool getProperties();
 		bool getTechnologies();		
 		bool getServices();
@@ -162,11 +163,12 @@ class ControlBox : public QDialog
 		void connectPressed();
 		void disconnectPressed();
 		void removePressed();
-		void propertyChanged();
+		void dbsPropertyChanged(QString,QDBusVariant);
+		void dbsServicesChanged();
+		void dbsServicePropertyChanged(QString, QDBusVariant);
 		void scanWifi();
 		void toggleOfflineMode(bool);
 		void toggleTrayIcon(bool);
-		//void togglePowered(int, int);
 		void togglePowered(int);
 		void minMaxWindow(QAction* = 0);
 		void getServiceDetails(int);
