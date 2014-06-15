@@ -1,7 +1,7 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
 <br>
-<br><b>In Progress</b>
+<br><b>2014.06.14</b>
 <ul>
 <li>Selecting "Maximize" from the tray icon will show the dialog "normal" instead of "maximized".</li>
 <li>Enabled display of size grip in corner of dialog</li>
