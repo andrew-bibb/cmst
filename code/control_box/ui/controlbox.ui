@@ -637,8 +637,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>636</width>
-               <height>137</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -696,8 +696,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>636</width>
-               <height>136</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -784,7 +784,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked restore GUI to previous state&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="whatsThis">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the GUI will be restored from settings saved on disk. Settings include the geometry of the dialog and the state of various check boxes, such as this one. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the GUI will be restored from settings saved on disk. Settings include the geometry of the dialog and the state of various check boxes, such as this one. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p style='white-space:pre'&gt;The settings file is: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/cmst/cmst.conf  &lt;/span&gt;&lt;br&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
              <string>&amp;Retain Settings</string>
@@ -984,8 +984,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>536</width>
-            <height>458</height>
+            <width>103</width>
+            <height>1774</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
