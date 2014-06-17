@@ -459,10 +459,11 @@ void ControlBox::removePressed()
 //	Slot called whenever DBUS issues a PropertyChanged signal
 void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 {
+	QVariant value = dbvalue.variant();
+	
 	// refresh properties from connman and update display widgets
 	updateDisplayWidgets();
-	
-	QVariant value = dbvalue.variant();
+
 		
 	// offlinemode property
 	if (name.contains("OfflineMode", Qt::CaseInsensitive)) {
@@ -802,8 +803,9 @@ void ControlBox::updateDisplayWidgets()
 				if (services_list.at(i).objmap.value("State").toString().contains("online", Qt::CaseInsensitive)) {
 					service_online = services_list.at(i).objpath; 					
 				}	// if
-				QDBusConnection::systemBus().disconnect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
-				QDBusConnection::systemBus().connect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
+	//////////// FIXME - lines below crash if uncommented - WHY????			
+//				QDBusConnection::systemBus().disconnect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
+//				QDBusConnection::systemBus().connect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
 			}	// for
 		}	// if state contains onlinew
 		else service_online = QDBusObjectPath();
@@ -1254,7 +1256,10 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 		
 		QMessageBox::warning(this, tr("CMST Warning"),
 			tr("<center><b>Unable to find a systemtray on this machine.</b>"                       
-				 "<center><br>The program may still be used to manage your connections, but the tray icon will be disabled"
+				 "<center><br>The program may still be used to manage your connections, but the tray icon will be disabled."
+				 "<center><br><br>If you are seeing this message at system start up and you know a system tray exists once the "
+				 "system is up, try starting with the <b>-w</b> switch and set a delay as necessary.  The exact wait time will vary "
+				 "from system to system." 
 					) );
 		
 		// Even if we want to be minimized we can't there is no place to minimize to.
