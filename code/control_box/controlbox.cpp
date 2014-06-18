@@ -233,6 +233,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	this->readSettings();
 	
 	// set up and fill in the display widgets
+	this->managerRescan();
 	this->updateDisplayWidgets();				
 }  
 
@@ -408,6 +409,9 @@ void ControlBox::connectPressed()
 	iface_serv->call(QDBus::NoBlock, "Connect");
 	delete iface_serv;
 	
+	// disable further input until we process the function
+	this->enableInput(false);
+	
 	return;		
 }
 
@@ -429,6 +433,9 @@ void ControlBox::disconnectPressed()
 	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
 	iface_serv->call(QDBus::NoBlock, "Disconnect");
 	delete iface_serv;
+	
+	// disable further input until we process the function
+	this->enableInput(false);	
 	
 	return;	
 }
@@ -452,6 +459,9 @@ void ControlBox::removePressed()
 	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
 	iface_serv->call(QDBus::NoBlock, "Remove");
 	delete iface_serv;
+
+	// disable further input until we process the function
+	this->enableInput(false);
 
 	return;
 }	
@@ -625,6 +635,9 @@ void ControlBox::toggleOfflineMode(bool checked)
 	
 	if (! checked ) this->scanWifi();
 	
+	// disable further input until we process the function
+	this->enableInput(false);
+	
 	return;
 }
 
@@ -663,10 +676,15 @@ void ControlBox::togglePowered(int row)
 		QMessageBox::warning(this, tr("CMST Warning"),
 		tr("<center><b>We received a DBUS reply message indicating an error while trying to send the toggle power request to connman.</b></center>"                       
 			 "<p>The powered state of the technology will not be changed."
-			 "<br>The error name is: %1<br>The error message is:%2").arg(reply.errorName()).arg(reply.errorMessage())
+			 "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage())
 		);
 	
+	// disable further input until we process the function
+	this->enableInput(false);
+	
+	// cleanup
 	delete iface_tech;
+	
 	return;
 } 
 
@@ -859,6 +877,10 @@ void ControlBox::updateDisplayWidgets()
 		this->assemblePage3();
 		this->assemblePage4();
 		if (trayicon != 0 ) this->assembleTrayIcon();
+	
+	// reenable input widgets 
+	this->enableInput(true);	
+	
 	}	// if there were no major errors
 	
 	return;
@@ -1544,5 +1566,26 @@ QString ControlBox::readResourceText(const char* textfile)
 	return rtnstring;
 } 
 
+//
+// Function to enable or disable the input controls.  Set to disabled when we do something like
+// connect or toggle power.  Set to enabled once dbus has sent a signal and we've run updateDisplayWidgets
+// If b_enable is true (the default) enable input widgets, if false disable
+void ControlBox::enableInput(bool b_enable)
+{
+	ui.tableWidget_technologies->setEnabled(b_enable);
+	ui.tableWidget_services->setEnabled(b_enable);
+	if (ui.tableWidget_services->currentRow() >= 0 ) {
+		ui.pushButton_movebefore->setEnabled(b_enable);
+		ui.pushButton_moveafter->setEnabled(b_enable);
+	}
+	ui.checkBox_hidecnxn->setEnabled(b_enable);
+	ui.pushButton_connect->setEnabled(b_enable);
+	ui.pushButton_disconnect->setEnabled(b_enable);
+	ui.pushButton_remove->setEnabled(b_enable);
+	ui.checkBox_devicesoff->setEnabled(b_enable);
+	
+	return;
+}
+ 
 
 
