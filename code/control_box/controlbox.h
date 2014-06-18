@@ -60,6 +60,12 @@ namespace CMST
     Err_Properties		=	(1 << 2),	// There was an error reading connman.Manager.GetProperties
     Err_Technologies	=	(1 << 3),	// There was an error reading connman.Manager.GetTechnologies       
     Err_Services			=	(1 << 4),	// There was an error reading connman.Manager.GetServices  
+    
+    // methods
+    Manager_Properties		= (1 << 1),	// scan for properties
+    Manager_Technologies	= (1 << 2),	// scan for technologies  
+    Manager_Services	 		=	(1 << 3),	// scan for services
+    Manager_All						= (CMST::Manager_Properties | CMST::Manager_Technologies | CMST::Manager_Services),
   };
 } // namespace CMST
 
@@ -138,6 +144,7 @@ class ControlBox : public QDialog
 		QSettings* settings;
 	
 	// functions
+		int managerRescan(const int& srv = 0);
 		void	updateDisplayWidgets();
 		void assemblePage1();
 		void assemblePage2();
@@ -166,6 +173,8 @@ class ControlBox : public QDialog
 		void dbsPropertyChanged(QString,QDBusVariant);
 		void dbsServicesChanged();
 		void dbsServicePropertyChanged(QString, QDBusVariant);
+		void dbsTechnologyAdded();
+		void dbsTechnologyRemoved();
 		void scanWifi();
 		void toggleOfflineMode(bool);
 		void toggleTrayIcon(bool);

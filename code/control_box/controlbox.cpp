@@ -152,6 +152,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 			// connect some dbus signals to our slots
 			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
 			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged()));
+			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded()));
+			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved()));
 		}	// else have valid connection
 	}	// else have connected systemBus
 		
@@ -461,9 +463,11 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 {
 	QVariant value = dbvalue.variant();
 	
+	// update propertiesMap
+	properties_map.insert(name, value);
+	
 	// refresh properties from connman and update display widgets
 	updateDisplayWidgets();
-
 		
 	// offlinemode property
 	if (name.contains("OfflineMode", Qt::CaseInsensitive)) {
@@ -525,7 +529,7 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 				QSystemTrayIcon::Information );							
 		}	// if ready
 		
-		// anyother state, report as offline
+		// any other state, report as offline
 		else {
 			sendNotifications(
 				QString(tr("Offline")),
@@ -543,10 +547,33 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 //	Slot called whenever DBUS issues a ServicesChanged signal
 void ControlBox::dbsServicesChanged()
 {
+	managerRescan(CMST::Manager_All);
 	updateDisplayWidgets();
 	
 	return;
 }
+
+//
+//	Slot called whenever DBUS issues a TechonlogyAdded signal
+void ControlBox::dbsTechnologyAdded()
+{
+	managerRescan(CMST::Manager_Technologies);
+	updateDisplayWidgets();
+	
+	return;
+}
+
+//
+//	Slot called whenever DBUS issues a TechonlogyAdded signal
+void ControlBox::dbsTechnologyRemoved()
+{
+	managerRescan(CMST::Manager_Technologies);
+	updateDisplayWidgets();
+	
+	return;
+}
+
+
 
 //
 //	Slot called whenever the online service object issues a PropertyChanged signal on DBUS
@@ -777,13 +804,10 @@ bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
 
 //////////////////////////////////////////// Private Functions ////////////////////////////////////
 //
-//	Function to update all of our display widgets
-void ControlBox::updateDisplayWidgets()
+//	Function to rescan connman properties, technologies and services
+//	Int return value is the errors encountered
+int ControlBox::managerRescan(const int& srv)
 {
-	// each assemble function will check q8_errors to make sure it can
-	// get the information it needs.  Only check for major errors since we
-	// can't run the assemble functions if there are. 
-
 	if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) == 0x00 ) {
 
 		// Reset the getXX errors, always a chance we could read them after
@@ -793,19 +817,38 @@ void ControlBox::updateDisplayWidgets()
 		q8_errors &= ~CMST::Err_Services;
 	
 		// Access connman.manager to retrieve the data
-		if (! getProperties() ) logErrors(CMST::Err_Properties);
-		if (! getTechnologies() ) logErrors(CMST::Err_Technologies);			
-		if (! getServices() ) logErrors(CMST::Err_Services);
+		if (srv & CMST::Manager_Properties) {
+			if (! getProperties() ) logErrors(CMST::Err_Properties);
+		}
 		
+		if (srv & CMST::Manager_Technologies) {
+			if (! getTechnologies() ) logErrors(CMST::Err_Technologies);			
+		}
+		
+		if (srv & CMST::Manager_Services) {
+			if (! getServices() ) logErrors(CMST::Err_Services);
+		}
+	}	// if
+	
+	return (q8_errors & CMST::Err_Properties) | (q8_errors & CMST::Err_Technologies) | (q8_errors & CMST::Err_Services);
+}		
+		
+//	Function to update all of our display widgets
+void ControlBox::updateDisplayWidgets()
+{
+	// each assemble function will check q8_errors to make sure it can
+	// get the information it needs.  Only check for major errors since we
+	// can't run the assemble functions if there are. 
+
+	if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) == 0x00 ) {	
 		// Find the service marked "online"
 		if (properties_map.value("State").toString().contains("online", Qt::CaseInsensitive) ) {
 			for (int i =0; i < services_list.size(); ++i) {
 				if (services_list.at(i).objmap.value("State").toString().contains("online", Qt::CaseInsensitive)) {
 					service_online = services_list.at(i).objpath; 					
-				}	// if
-	//////////// FIXME - lines below crash if uncommented - WHY????			
-//				QDBusConnection::systemBus().disconnect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
-//				QDBusConnection::systemBus().connect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
+				}	// if		
+				QDBusConnection::systemBus().disconnect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
+				QDBusConnection::systemBus().connect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
 			}	// for
 		}	// if state contains onlinew
 		else service_online = QDBusObjectPath();
