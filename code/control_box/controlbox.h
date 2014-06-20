@@ -161,7 +161,6 @@ class ControlBox : public QDialog
 		bool extractMapData(QMap<QString,QVariant>&,const QVariant&);
 		void logErrors(const quint8&);
 		QString readResourceText(const char*);  
-		void enableInput(bool b_enable = true);
 
   private slots:
 		void moveService(QAction*);
@@ -173,7 +172,9 @@ class ControlBox : public QDialog
 		void removePressed();
 		void dbsPropertyChanged(QString,QDBusVariant);
 		void dbsServicesChanged();
+		//void dbsServicesChanged(QDBusMessage);
 		void dbsServicePropertyChanged(QString, QDBusVariant);
+		void dbsTechnologyPropertyChanged(QString, QDBusVariant);
 		void dbsTechnologyAdded();
 		void dbsTechnologyRemoved();
 		void scanWifi();

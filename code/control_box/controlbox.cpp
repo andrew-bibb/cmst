@@ -152,6 +152,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 			// connect some dbus signals to our slots
 			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
 			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged()));
+			//QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QDBusMessage, QList<QDBusObjectPath>)));
 			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded()));
 			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved()));
 		}	// else have valid connection
@@ -407,10 +408,8 @@ void ControlBox::connectPressed()
 	//	send the connect message to the service
 	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);	
 	iface_serv->call(QDBus::NoBlock, "Connect");
-	delete iface_serv;
 	
-	// disable further input until we process the function
-	this->enableInput(false);
+	delete iface_serv;
 	
 	return;		
 }
@@ -434,9 +433,6 @@ void ControlBox::disconnectPressed()
 	iface_serv->call(QDBus::NoBlock, "Disconnect");
 	delete iface_serv;
 	
-	// disable further input until we process the function
-	this->enableInput(false);	
-	
 	return;	
 }
 
@@ -459,9 +455,6 @@ void ControlBox::removePressed()
 	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
 	iface_serv->call(QDBus::NoBlock, "Remove");
 	delete iface_serv;
-
-	// disable further input until we process the function
-	this->enableInput(false);
 
 	return;
 }	
@@ -556,8 +549,9 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 //
 //	Slot called whenever DBUS issues a ServicesChanged signal
 void ControlBox::dbsServicesChanged()
+//void ControlBox::dbsServicesChanged(QDBusMessage l2)
 {
-	managerRescan(CMST::Manager_All);
+	managerRescan(CMST::Manager_Services);
 	updateDisplayWidgets();
 	
 	return;
@@ -583,20 +577,38 @@ void ControlBox::dbsTechnologyRemoved()
 	return;
 }
 
-
-
 //
-//	Slot called whenever the online service object issues a PropertyChanged signal on DBUS
-void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalue)
+//	Slot called whenever a service object issues a PropertyChanged signal on DBUS
+void ControlBox::dbsServicePropertyChanged(QString name, QDBusVariant dbvalue)
 {
 	QVariant value = dbvalue.variant();
 	
 	// process errrors
-	if (property.contains("Error", Qt::CaseInsensitive) ) {
+	if (name.contains("Error", Qt::CaseInsensitive) ) {
 		sendNotifications(
 			QString(tr("Service Error: %1")).arg(value.toString()),
 			QIcon(":/icons/images/interface/cancel.png"),
 			QSystemTrayIcon::Critical);			
+	}
+	
+	if (name.contains("State", Qt::CaseInsensitive) ){
+		managerRescan(CMST::Manager_Services);
+		updateDisplayWidgets();
+	}
+	
+	return;
+}
+
+//
+//	Slot called whenever a technology object issues a PropertyChanged signal on DBUS
+void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue)
+{
+	QVariant value = dbvalue.variant();
+	
+	// if powered changed
+	if (name.contains("Powered", Qt::CaseInsensitive) ) {
+		managerRescan(CMST::Manager_Technologies);
+		updateDisplayWidgets();
 	}
 	
 	return;
@@ -634,10 +646,7 @@ void ControlBox::toggleOfflineMode(bool checked)
 	iface_manager->callWithArgumentList(QDBus::NoBlock, "SetProperty", vlist);
 	
 	if (! checked ) this->scanWifi();
-	
-	// disable further input until we process the function
-	this->enableInput(false);
-	
+		
 	return;
 }
 
@@ -678,10 +687,7 @@ void ControlBox::togglePowered(int row)
 			 "<p>The powered state of the technology will not be changed."
 			 "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage())
 		);
-	
-	// disable further input until we process the function
-	this->enableInput(false);
-	
+		
 	// cleanup
 	delete iface_tech;
 	
@@ -859,28 +865,30 @@ void ControlBox::updateDisplayWidgets()
 	// can't run the assemble functions if there are. 
 
 	if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) == 0x00 ) {	
-		// Find the service marked "online"
-		if (properties_map.value("State").toString().contains("online", Qt::CaseInsensitive) ) {
-			for (int i =0; i < services_list.size(); ++i) {
-				if (services_list.at(i).objmap.value("State").toString().contains("online", Qt::CaseInsensitive)) {
-					service_online = services_list.at(i).objpath; 					
-				}	// if		
-				QDBusConnection::systemBus().disconnect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
-				QDBusConnection::systemBus().connect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
-			}	// for
-		}	// if state contains onlinew
-		else service_online = QDBusObjectPath();
-				
+		
+		// Find the service marked "online" and connect service signals to slots
+		service_online = QDBusObjectPath();	
+		for (int i =0; i < services_list.size(); ++i) {
+			if (services_list.at(i).objmap.value("State").toString().contains("online", Qt::CaseInsensitive)) {
+				service_online = services_list.at(i).objpath; 					
+			}	// if		
+			QDBusConnection::systemBus().disconnect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
+			QDBusConnection::systemBus().connect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
+		}	// services for
+		
+		// connect technolgoy signals to slots
+		for (int i =0; i < technologies_list.size(); ++i) {	
+			QDBusConnection::systemBus().disconnect(DBUS_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant)));
+			QDBusConnection::systemBus().connect(DBUS_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant)));
+		}	// services for			
+	
 		//	rebuild our pages	
 		this->assemblePage1();
 		this->assemblePage2();
 		this->assemblePage3();
 		this->assemblePage4();
 		if (trayicon != 0 ) this->assembleTrayIcon();
-	
-	// reenable input widgets 
-	this->enableInput(true);	
-	
+		
 	}	// if there were no major errors
 	
 	return;
@@ -1565,27 +1573,3 @@ QString ControlBox::readResourceText(const char* textfile)
 	
 	return rtnstring;
 } 
-
-//
-// Function to enable or disable the input controls.  Set to disabled when we do something like
-// connect or toggle power.  Set to enabled once dbus has sent a signal and we've run updateDisplayWidgets
-// If b_enable is true (the default) enable input widgets, if false disable
-void ControlBox::enableInput(bool b_enable)
-{
-	ui.tableWidget_technologies->setEnabled(b_enable);
-	ui.tableWidget_services->setEnabled(b_enable);
-	if (ui.tableWidget_services->currentRow() >= 0 ) {
-		ui.pushButton_movebefore->setEnabled(b_enable);
-		ui.pushButton_moveafter->setEnabled(b_enable);
-	}
-	ui.checkBox_hidecnxn->setEnabled(b_enable);
-	ui.pushButton_connect->setEnabled(b_enable);
-	ui.pushButton_disconnect->setEnabled(b_enable);
-	ui.pushButton_remove->setEnabled(b_enable);
-	ui.checkBox_devicesoff->setEnabled(b_enable);
-	
-	return;
-}
- 
-
-
