@@ -1,7 +1,8 @@
-#  We need the qt libraries, we want compiler warnings off, and this is a release version of the program  
-CONFIG += qt warn_off release 
+#  We need the qt libraries, we want compiler warnings off, and this is a release version of the program
+CONFIG += qt warn_off release link_pkgconfig
+PKGCONFIG += libnotify
 
-#  Widgets needed for QT5, 
+#  Widgets needed for QT5,
 QT += widgets
 QT += dbus
 
