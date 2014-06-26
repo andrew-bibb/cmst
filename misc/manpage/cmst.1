@@ -1,0 +1,45 @@
+.TH	CMST 1 "10 May 2014" "Version: 20014.05.10"
+.SH NAME
+CMST - Connman System Tray
+.SH SYNOPSIS
+Usage: ./cmst [options]
+.SH DESCRIPTION
+A QT5 based GUI front end for the Connman network daemon
+.SH OPTIONS
+.TP
+\fB-c, --disable-counters\fP
+Disable the counters.  May be used to minimize load on your system.
+.TP
+\fB-d, --disable-tray-icon\fP
+Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.
+.TP
+\fB-h, --help\fP
+Displays this help.
+.TP
+\fB-i, --icon-theme\fP
+Use the icon theme from your system if one is defined.
+.TP
+\fB-l, --log-input-request\fP
+Log the connman inputRequest for debugging purposes.
+.TP
+\fB-m, --minimized\fP
+Start the GUI minimized in the system tray.
+.TP
+\fB-v, --version\fP
+Displays version information.
+.TP
+\fB-w, --wait-time <wait-time>\fP
+Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).  If CMST is started and tries to
+create a tray icon before the system tray itself is created a dialog will be displayed explaining that.  This sometimes happens when the 
+program is started automatically.  If you know the tray will exist once the system is up you may specify a wait time and CMST 
+will wait that number of seconds before trying to create the tray icon.  This is to give the window manager or panel time to create 
+the tray before we try to place the icon there.   
+.SH BUGS
+For the tray icon to display is it required that the system tray be compliant with the Freedesktop.org systemtray specification.  
+
+The tray icon is known to not work in the DWM system tray which appears to be a noncompliant tray.
+
+Tray icons will display with a black background, this is particularly noticable when you have a light colored tray.  This is a QT5 bug. 
+.SH Author
+Andrew J. Bibb.  Project web page: https://github.com/andrew-bibb/cmst
+
