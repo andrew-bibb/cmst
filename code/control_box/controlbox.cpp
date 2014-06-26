@@ -74,6 +74,7 @@ idButton::idButton(QWidget* parent, const int& i) :
 	setCheckable(true);
 	
 	connect (this, SIGNAL(clicked()), this, SLOT(buttonClicked()));
+	
 }
 		
 // main GUI element
@@ -100,7 +101,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   wifi_list.clear();
   agent = new ConnmanAgent(this);
   counter = new ConnmanCounter(this);
-  service_online = QDBusObjectPath();
   mvsrv_menu = new QMenu(this);
   QString s_app = PROGRAM_NAME; 
   settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
@@ -126,14 +126,12 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   
   // setup the dbus interface to connman.manager
 	if (! QDBusConnection::systemBus().isConnected() ) logErrors(CMST::Err_No_DBus);
-  else {
+  else {	
 		iface_manager = new QDBusInterface(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, QDBusConnection::systemBus(), this); 
 		if (! iface_manager->isValid() ) logErrors(CMST::Err_Invalid_Iface);
 		else {
-			// Access connman.manager to retrieve the data
-			if (! getProperties() ) logErrors(CMST::Err_Properties);
-			if (! getTechnologies() ) logErrors(CMST::Err_Technologies);			
-			if (! getServices() ) logErrors(CMST::Err_Services);
+		// Access connman.manager to retrieve the data
+			this->managerRescan(CMST::Manager_All);
 			
 			// register the agent
 			QList<QVariant> vlist_agent;
@@ -148,22 +146,21 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 				vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/monkeybusiness/Counter")) << counter_accuracy << counter_period;;
 				iface_manager->callWithArgumentList(QDBus::NoBlock, "RegisterCounter", vlist_counter);			
 			}
-			
-			// connect some dbus signals to our slots
+		
+		// connect some dbus signals to our slots
 			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
-			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged()));
-			//QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QDBusMessage, QList<QDBusObjectPath>)));
-			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded()));
-			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved()));
+			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
+			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
+			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
 		}	// else have valid connection
 	}	// else have connected systemBus
-		
+	
 	//	setup the dialog  
   //	timer to scan for wifi services now and again
   wifi_timer = new QTimer(this);
   wifi_timer->setInterval(wifi_interval * 1000); 
   connect(wifi_timer, SIGNAL(timeout()), this, SLOT(scanWifi()));
-     
+      
   //  add actions 
   minMaxGroup = new QActionGroup(this);
   minimizeAction = new QAction(tr("Mi&nimize"), this);
@@ -198,7 +195,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	connect(ui.pushButton_license, SIGNAL(clicked()), this, SLOT(showLicense()));
 	connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));	
 	connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
-	connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(dbsServicesChanged()));
+	connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(updateDisplayWidgets()));
 
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
@@ -234,7 +231,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	this->readSettings();
 	
 	// set up and fill in the display widgets
-	this->managerRescan();
 	this->updateDisplayWidgets();				
 }  
 
@@ -290,6 +286,26 @@ void ControlBox::showChangeLog()
 
 
 ////////////////////////////////////////////Private Slots ////////////////////////////////////////////
+//	Slot to update all of our display widgets
+void ControlBox::updateDisplayWidgets()
+{
+	// each assemble function will check q8_errors to make sure it can
+	// get the information it needs.  Only check for major errors since we
+	// can't run the assemble functions if there are. 
+
+	if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) == 0x00 ) {	
+			
+		//	rebuild our pages	
+		this->assemblePage1();
+		this->assemblePage2();
+		this->assemblePage3();
+		this->assemblePage4();
+		if (trayicon != 0 ) this->assembleTrayIcon();
+		
+	}	// if there were no major errors
+	
+	return;
+}
 //
 // Slot to move the selected service before or after another service.  
 // Called when an item in mvsrv_menu is selected.  QAction act is the
@@ -369,7 +385,7 @@ void ControlBox::enableMoveButtons(int row, int col)
 void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QString& home_label, const QString& roam_label)
 {
 	// Don't update the counter if qdb_objpath is not the online service
-	if (qdb_objpath != service_online) return;
+	if (qdb_objpath != serviceOnline() ) return;
 	
 	// Set the labels in page 4
 	if (! qdb_objpath.path().isEmpty() ) {
@@ -542,36 +558,102 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 				QSystemTrayIcon::Information );		
 		} // else offline
 	}	// else state
-	  		
+	
 	return;
 }
 
 //
 //	Slot called whenever DBUS issues a ServicesChanged signal
-void ControlBox::dbsServicesChanged()
-//void ControlBox::dbsServicesChanged(QDBusMessage l2)
+void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {
-	managerRescan(CMST::Manager_Services);
+	// process changed services
+	if (! vmap.isEmpty() ) {	
+		QList<arrayElement> revised_list;
+		if (! getArray(revised_list, msg)) return;
+		
+		// merge the existing services_list into the revised_list
+		// first find the original element that matches the revised
+		for (int i = 0; i < revised_list.size(); ++i) {
+			arrayElement revised_element = revised_list.at(i);
+			arrayElement original_element = {QDBusObjectPath(), QMap<QString,QVariant>()};
+			for (int j = 0; j < services_list.size(); ++j) {
+				if (revised_element.objpath == services_list.at(j).objpath) {
+					original_element = services_list.at(j);
+					break;
+				}	// if
+			}	// j for
+			
+			// merge the new elementArray into the existing
+			if (! original_element.objpath.path().isEmpty()) {
+				QMapIterator<QString, QVariant> itr(revised_element.objmap);
+				while (itr.hasNext()) {
+					itr.next();
+					original_element.objmap.insert(itr.key(), itr.value());
+				}	// while
+				
+				// now insert the element into the revised list
+				revised_list.replace(i, original_element);
+			}	// if original element exists
+		}	// i for
+		
+		// now copy the revised list to services_list
+		services_list = revised_list;
+	}	// vmap not empty
+
+	// process removed services
+	if (! removed.isEmpty() ) {
+		for (int i = 0; i < services_list.count(); ++i) {
+			if (removed.contains(services_list.at(i).objpath) )
+				services_list.removeAt(i);
+			}	// for
+		}	// if we needed to remove something
+
 	updateDisplayWidgets();
 	
 	return;
 }
 
 //
-//	Slot called whenever DBUS issues a TechonlogyAdded signal
-void ControlBox::dbsTechnologyAdded()
+// Slot called whenever DBUS issues a TechonlogyAdded signal
+// There must be an internal counter for technologies, first time a 
+// technology is changed we get a signal even if we've already run
+// getTechnologies.  After that first time we never get this signal.
+// Use this this to catch real additions, which we defined as something
+// we don't already have from getTechnologies.
+void ControlBox::dbsTechnologyAdded(QDBusObjectPath path, QVariantMap properties)
 {
-	managerRescan(CMST::Manager_Technologies);
-	updateDisplayWidgets();
+	arrayElement ae = {path, properties};
+	bool newelem = true;
+
+	// first see if the element exists, if so replace it
+	for (int i = 0; i < technologies_list.count(); ++i) {
+		if (path == technologies_list.at(i).objpath) {
+			technologies_list.replace(i, ae);
+			newelem = false;
+			break;
+		}	// if
+	}	// for
+	
+	// if it is a new element add it
+	if (newelem) {
+		technologies_list.append(ae);
+		updateDisplayWidgets();
+	}
 	
 	return;
 }
 
 //
 //	Slot called whenever DBUS issues a TechonlogyAdded signal
-void ControlBox::dbsTechnologyRemoved()
+void ControlBox::dbsTechnologyRemoved(QDBusObjectPath removed)
 {
-	managerRescan(CMST::Manager_Technologies);
+	for (int i = 0; i < technologies_list.count(); ++i) {
+		if ( removed == technologies_list.at(i).objpath ) {
+			technologies_list.removeAt(i);
+			break;
+		}	// if
+	}	// for
+	
 	updateDisplayWidgets();
 	
 	return;
@@ -579,37 +661,53 @@ void ControlBox::dbsTechnologyRemoved()
 
 //
 //	Slot called whenever a service object issues a PropertyChanged signal on DBUS
-void ControlBox::dbsServicePropertyChanged(QString name, QDBusVariant dbvalue)
+void ControlBox::dbsServicePropertyChanged(QString name, QDBusVariant dbvalue, QDBusMessage msg)
 {
+	QString s_path = msg.path();
 	QVariant value = dbvalue.variant();
-	
+
+	// replace the old values with the changed ones.
+	for (int i = 0; i < services_list.count(); ++i) {
+		if (s_path.contains(services_list.at(i).objpath.path(), Qt::CaseSensitive) ) {
+			QMap<QString,QVariant> map = services_list.at(i).objmap;
+			map.remove(name);
+			map.insert(name, value );
+			arrayElement ae = {services_list.at(i).objpath, map};
+			services_list.replace(i, ae);
+			break;
+		}	// if
+	}	// for
+		
 	// process errrors
 	if (name.contains("Error", Qt::CaseInsensitive) ) {
 		sendNotifications(
-			QString(tr("Service Error: %1")).arg(value.toString()),
+			QString(tr("Service Error: %1/nObject Path: %2")).arg(value.toString()).arg(s_path),
 			QIcon(":/icons/images/interface/cancel.png"),
 			QSystemTrayIcon::Critical);			
 	}
-	
-	if (name.contains("State", Qt::CaseInsensitive) ){
-		managerRescan(CMST::Manager_Services);
-		updateDisplayWidgets();
-	}
-	
+
 	return;
 }
 
 //
 //	Slot called whenever a technology object issues a PropertyChanged signal on DBUS
-void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue)
+void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue, QDBusMessage msg)
 {
-	QVariant value = dbvalue.variant();
+	QString s_path = msg.path();
 	
-	// if powered changed
-	if (name.contains("Powered", Qt::CaseInsensitive) ) {
-		managerRescan(CMST::Manager_Technologies);
-		updateDisplayWidgets();
-	}
+	// replace the old values with the changed ones.
+	for (int i = 0; i < technologies_list.count(); ++i) {
+		if (s_path.contains(technologies_list.at(i).objpath.path(), Qt::CaseSensitive) ) {
+			QMap<QString,QVariant> map = technologies_list.at(i).objmap;
+			map.remove(name);
+			map.insert(name, dbvalue.variant() );
+			arrayElement ae = {technologies_list.at(i).objpath, map};
+			technologies_list.replace(i, ae);
+			break;
+		}	// if
+	}	// for
+	
+	updateDisplayWidgets();
 	
 	return;
 }
@@ -841,61 +939,44 @@ int ControlBox::managerRescan(const int& srv)
 		q8_errors &= ~CMST::Err_Services;
 	
 		// Access connman.manager to retrieve the data
+		if (srv & CMST::Manager_Technologies) {
+			if (! getTechnologies() ) {
+				logErrors(CMST::Err_Technologies);
+			}	// if
+			else {	
+				// connect technology signals to slots
+				for (int i = 0; i < technologies_list.size(); ++i) {	
+					QDBusConnection::systemBus().disconnect(DBUS_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
+					QDBusConnection::systemBus().connect(DBUS_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
+				}	// for	
+			}	//else			
+		}	// if technolgies
+		
+		if (srv & CMST::Manager_Services) {
+			if (! getServices() ) {
+				logErrors(CMST::Err_Services);
+			}	// if
+			// connect service signals to slots
+			else {	
+				for (int i = 0; i < services_list.size(); ++i) {
+					QDBusConnection::systemBus().disconnect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+					QDBusConnection::systemBus().connect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+				}	// for
+			}	// else
+		}	// if services
+		
 		if (srv & CMST::Manager_Properties) {
 			if (! getProperties() ) logErrors(CMST::Err_Properties);
 		}
-		
-		if (srv & CMST::Manager_Technologies) {
-			if (! getTechnologies() ) logErrors(CMST::Err_Technologies);			
-		}
-		
-		if (srv & CMST::Manager_Services) {
-			if (! getServices() ) logErrors(CMST::Err_Services);
-		}
+				
 	}	// if
 	
 	return (q8_errors & CMST::Err_Properties) | (q8_errors & CMST::Err_Technologies) | (q8_errors & CMST::Err_Services);
 }		
 		
-//	Function to update all of our display widgets
-void ControlBox::updateDisplayWidgets()
-{
-	// each assemble function will check q8_errors to make sure it can
-	// get the information it needs.  Only check for major errors since we
-	// can't run the assemble functions if there are. 
-
-	if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) == 0x00 ) {	
-		
-		// Find the service marked "online" and connect service signals to slots
-		service_online = QDBusObjectPath();	
-		for (int i =0; i < services_list.size(); ++i) {
-			if (services_list.at(i).objmap.value("State").toString().contains("online", Qt::CaseInsensitive)) {
-				service_online = services_list.at(i).objpath; 					
-			}	// if		
-			QDBusConnection::systemBus().disconnect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
-			QDBusConnection::systemBus().connect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant)));
-		}	// services for
-		
-		// connect technolgoy signals to slots
-		for (int i =0; i < technologies_list.size(); ++i) {	
-			QDBusConnection::systemBus().disconnect(DBUS_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant)));
-			QDBusConnection::systemBus().connect(DBUS_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant)));
-		}	// services for			
-	
-		//	rebuild our pages	
-		this->assemblePage1();
-		this->assemblePage2();
-		this->assemblePage3();
-		this->assemblePage4();
-		if (trayicon != 0 ) this->assembleTrayIcon();
-		
-	}	// if there were no major errors
-	
-	return;
-}
-
 //
 //	Function to assemble page 1 of the dialog
+
 void ControlBox::assemblePage1()
 {
 	// Global Properties
@@ -967,12 +1048,12 @@ void ControlBox::assemblePage1()
 			if (bt ) {
 				qpb02->setText(tr("%1On", "powered").arg(padding));
 				qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
-				qpb02->setDown(true);
+				qpb02->setChecked(true);
 			}
 			else {
 				qpb02->setText(tr("%1Off", "powered").arg(padding));
 				qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
-				qpb02->setDown(false);
+				qpb02->setChecked(false);
 			}	
 			ui.tableWidget_technologies->setCellWidget(row, 2, qpb02);
 			
@@ -1174,7 +1255,7 @@ void ControlBox::assembleTrayIcon()
 			if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
 				QMap<QString,QVariant> submap;
 				for (int i =0; i < services_list.size(); ++i) {
-					if (services_list.at(i).objpath == service_online) {
+					if (services_list.at(i).objpath == serviceOnline() ) {
 						if (services_list.at(i).objmap.value("Type").toString().contains("ethernet", Qt::CaseInsensitive) ) {
 							extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );
 							stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
@@ -1422,8 +1503,7 @@ bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg
 	qdb_arg.beginArray();
 	r_list.clear();
 		
-	while ( ! qdb_arg.atEnd() ) {
-		
+	while ( ! qdb_arg.atEnd() ) {	
 		// make sure the argument is a structure type
 		if (! qdb_arg.currentType() == QDBusArgument::StructureType ) return false;
 		
@@ -1519,7 +1599,7 @@ void ControlBox::logErrors(const quint8& err)
 	//	LOG_USER	User Level Message
 	//	LOG_ERR		Error condition
 	//	LOG_WARNING		Warning contition
-	//	PROGRAM_NAME	Defined in resource.h	 
+	//		Defined in resource.h	 
 	openlog(PROGRAM_NAME, LOG_PID|LOG_CONS, LOG_USER);
 	switch (err)
 	{ 
@@ -1573,3 +1653,19 @@ QString ControlBox::readResourceText(const char* textfile)
 	
 	return rtnstring;
 } 
+
+//
+// Function to return the object path of the service currently online
+QDBusObjectPath ControlBox::serviceOnline()
+{
+	QDBusObjectPath service_online = QDBusObjectPath();	
+	
+	for (int i = 0; i < services_list.size(); ++i) {
+		if (services_list.at(i).objmap.value("State").toString().contains("online", Qt::CaseInsensitive)) {
+			service_online = services_list.at(i).objpath; 					
+			break;
+		}	// if
+	}	// for	
+		
+	return service_online;
+}

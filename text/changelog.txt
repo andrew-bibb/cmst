@@ -1,6 +1,12 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
 <br>
+<br><b>2014.06.22	</b>
+<ul>
+<li>Check to make sure only a single instance of the program can be run.</li>
+<li>Shipped with a .desktop file and icon.</li>
+<li>Internal changes to catching dbus signals.</li>
+</ul>
 <br><b>2014.06.14</b>
 <ul>
 <li>Selecting "Maximize" from the tray icon will show the dialog "normal" instead of "maximized".</li>

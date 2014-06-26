@@ -32,6 +32,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QCommandLineParser>
 # include <QStringList>
 # include <QStyleFactory>
+# include <QSharedMemory>
 
 # include "./code/control_box/controlbox.h"
 # include "./code/resource.h"	
@@ -47,6 +48,12 @@ int main(int argc, char *argv[])
 	QApplication::setDesktopSettingsAware(true);
 	QApplication app(argc, argv);		
 	
+	// make sure only one instance of the program is run at a time
+	QSharedMemory sharedMemory;
+	sharedMemory.setKey(LONG_NAME);
+	if(sharedMemory.attach()) return 1;
+	else sharedMemory.create(1);
+
 	// setup the command line parser
 	QCommandLineParser parser;
 	QCommandLineOption disableCounters(QStringList() << "c" << "disable-counters", QCoreApplication::translate("main.cpp", "Disable data counters.  May be used to minimize load on your system.") );

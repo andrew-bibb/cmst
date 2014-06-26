@@ -11,9 +11,17 @@ target.path = /usr/bin/
 INSTALLS += target
 
 documentation.path = /usr/share/man/man1
-documentation.files = ./text/cmst.1.gz
-documentation.extra = gzip --keep --force ./text/cmst.1
+documentation.files = ./misc/manpage/cmst.1.gz
+documentation.extra = gzip --keep --force ./misc/manpage/cmst.1
 INSTALLS += documentation
+
+desktop.path = /usr/share/applications
+desktop.files = ./misc/desktop/cmst.desktop
+INSTALLS += desktop
+
+icon.path = /usr/share/icons/hicolor/24x24/apps
+icon.files = ./misc/desktop/cmst.png
+INSTALLS += icon
 
 # dbus
 DBUS_ADAPTORS 	+= ./code/agent/org.monkey_business_enterprises.agent.xml

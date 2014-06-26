@@ -127,7 +127,6 @@ class ControlBox : public QDialog
 		QList<arrayElement>		wifi_list;
 		ConnmanAgent* agent;
 		ConnmanCounter* counter;		
-		QDBusObjectPath service_online;
 		short wifi_interval;		
 		quint32 counter_accuracy;	
 		quint32 counter_period;				
@@ -145,7 +144,6 @@ class ControlBox : public QDialog
 	
 	// functions
 		int managerRescan(const int& srv = 0);
-		void	updateDisplayWidgets();
 		void assemblePage1();
 		void assemblePage2();
 		void assemblePage3();
@@ -160,9 +158,11 @@ class ControlBox : public QDialog
 		bool getMap(QMap<QString,QVariant>&, const QDBusMessage&); 
 		bool extractMapData(QMap<QString,QVariant>&,const QVariant&);
 		void logErrors(const quint8&);
-		QString readResourceText(const char*);  
+		QString readResourceText(const char*);
+		QDBusObjectPath serviceOnline();  
 
   private slots:
+  	void	updateDisplayWidgets();
 		void moveService(QAction*);
 		void moveButtonPressed(QAction*);
 		void enableMoveButtons(int,int);
@@ -171,12 +171,11 @@ class ControlBox : public QDialog
 		void disconnectPressed();
 		void removePressed();
 		void dbsPropertyChanged(QString,QDBusVariant);
-		void dbsServicesChanged();
-		//void dbsServicesChanged(QDBusMessage);
-		void dbsServicePropertyChanged(QString, QDBusVariant);
-		void dbsTechnologyPropertyChanged(QString, QDBusVariant);
-		void dbsTechnologyAdded();
-		void dbsTechnologyRemoved();
+		void dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage);
+		void dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage);
+		void dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage);
+		void dbsTechnologyAdded(QDBusObjectPath, QVariantMap);
+		void dbsTechnologyRemoved(QDBusObjectPath);
 		void scanWifi();
 		void toggleOfflineMode(bool);
 		void toggleTrayIcon(bool);
