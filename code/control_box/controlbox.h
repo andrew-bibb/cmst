@@ -85,16 +85,16 @@ class idButton : public QPushButton
 	Q_OBJECT
 	
 	public:
-		idButton (QWidget*, const int&);
+		idButton (QWidget*, const QDBusObjectPath&);
 		
 	signals:
-		void clickedID(int);
+		void clickedID(QString, bool);
 	
 	private:
-		int id;
+		QDBusObjectPath obj_id;
 		
 	private slots:
-		inline void buttonClicked() {emit clickedID(id);}
+		inline void buttonClicked(bool checked) {emit clickedID (obj_id.path(), checked);}
 };
 
 
@@ -179,7 +179,7 @@ class ControlBox : public QDialog
 		void scanWifi();
 		void toggleOfflineMode(bool);
 		void toggleTrayIcon(bool);
-		void togglePowered(int);
+		void togglePowered(QString, bool);
 		void minMaxWindow(QAction* = 0);
 		void getServiceDetails(int);
 		void showWhatsThis();

@@ -1,4 +1,5 @@
 /**************************** controlbox.cpp ***************************
+/**************************** controlbox.cpp ***************************
 
 Code to manage the primary user interface to include the QDialog the
 user interfaces with and the system tray icon.  
@@ -67,15 +68,16 @@ DEALINGS IN THE SOFTWARE.
 #define DBUS_MANAGER "net.connman.Manager"
 
 // custom push button, used in the technology box for powered on/off
-idButton::idButton(QWidget* parent, const int& i) :
+idButton::idButton(QWidget* parent, const QDBusObjectPath& id) :
 		QPushButton(parent)
 {
-	id = i;
+	obj_id = id;
 	setCheckable(true);
 	
-	connect (this, SIGNAL(clicked()), this, SLOT(buttonClicked()));
+	connect (this, SIGNAL(clicked(bool)), this, SLOT(buttonClicked(bool)));
 	
 }
+
 		
 // main GUI element
 ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
@@ -340,7 +342,8 @@ void ControlBox::moveService(QAction* act)
 		iface_serv->call(QDBus::NoBlock, "MoveBefore", QVariant::fromValue(targetobj) );
 	else
 		iface_serv->call(QDBus::NoBlock, "MoveAfter", QVariant::fromValue(targetobj) );
-	delete iface_serv;
+	
+	iface_serv->deleteLater();
 	
 	return;
 }
@@ -425,7 +428,7 @@ void ControlBox::connectPressed()
 	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);	
 	iface_serv->call(QDBus::NoBlock, "Connect");
 	
-	delete iface_serv;
+	iface_serv->deleteLater();
 	
 	return;		
 }
@@ -447,7 +450,7 @@ void ControlBox::disconnectPressed()
 	//	send the disconnect message to the service
 	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
 	iface_serv->call(QDBus::NoBlock, "Disconnect");
-	delete iface_serv;
+	iface_serv->deleteLater();
 	
 	return;	
 }
@@ -470,7 +473,7 @@ void ControlBox::removePressed()
 	//	send the Remove message to the service
 	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
 	iface_serv->call(QDBus::NoBlock, "Remove");
-	delete iface_serv;
+	iface_serv->deleteLater();
 
 	return;
 }	
@@ -724,7 +727,7 @@ void ControlBox::scanWifi()
 		if (technologies_list.at(row).objmap.value("Type").toString().contains("wifi", Qt::CaseInsensitive) ) {
 		QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
 		iface_tech->call(QDBus::AutoDetect, "Scan");
-		delete iface_tech;
+		iface_tech->deleteLater();
 		}	// if
 	}	// for
 	
@@ -770,13 +773,13 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 //
 //	Slot to toggle the powered state of a technology
 //	Called when our custom idButton in the powered cell in the page 1 technology tableWidget is clicked
-void ControlBox::togglePowered(int row)
+void ControlBox::togglePowered(QString object_id, bool checkstate)
 {	
-	QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
+	QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
 
 	QList<QVariant> vlist;
 	vlist.clear();
-	vlist << QVariant("Powered") << QVariant::fromValue(QDBusVariant(technologies_list.at(row).objmap.value("Powered").toBool() ? false : true) );
+	vlist << QVariant("Powered") << QVariant::fromValue(QDBusVariant(checkstate) );
 
 	QDBusMessage reply = iface_tech->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
 	if (reply.type() != QDBusMessage::ReplyMessage)
@@ -787,7 +790,7 @@ void ControlBox::togglePowered(int row)
 		);
 		
 	// cleanup
-	delete iface_tech;
+	iface_tech->deleteLater();
 	
 	return;
 } 
@@ -1042,8 +1045,8 @@ void ControlBox::assemblePage1()
 			
 			QTableWidgetItem* qtwi02 = new QTableWidgetItem();
 			bt = technologies_list.at(row).objmap.value("Powered").toBool();			
-			idButton* qpb02 = new idButton(this, row);
-			connect (qpb02, SIGNAL(clickedID(int)), this, SLOT(togglePowered(int)));
+			idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
+			connect (qpb02, SIGNAL(clickedID(QString, bool)), this, SLOT(togglePowered(QString, bool)));
 			QString padding = "     ";
 			if (bt ) {
 				qpb02->setText(tr("%1On", "powered").arg(padding));
