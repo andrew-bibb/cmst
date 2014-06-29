@@ -1,5 +1,8 @@
 #  We need the qt libraries, we want compiler warnings off, and this is a release version of the program  
-CONFIG += qt warn_off release 
+CONFIG += qt
+CONFIG +=warn_off
+CONFIG +=release
+CONFIG +=nostrip 
 
 #  Widgets needed for QT5, 
 QT += widgets
