@@ -650,8 +650,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
-               <height>46</height>
+               <width>636</width>
+               <height>137</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -709,8 +709,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
-               <height>46</height>
+               <width>636</width>
+               <height>136</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -820,13 +820,13 @@
           <item>
            <widget class="QCheckBox" name="checkBox_resetcounters">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="toolTip">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset counters when a new service is selected&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="whatsThis">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cummulative and will retain the counts between boots.  When this box is checked the counters will reset to zero every time a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cummulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
              <string>Reset C&amp;ounters</string>
@@ -1013,8 +1013,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>104</width>
-            <height>1922</height>
+            <width>536</width>
+            <height>550</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">

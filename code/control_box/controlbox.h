@@ -159,7 +159,8 @@ class ControlBox : public QDialog
 		bool extractMapData(QMap<QString,QVariant>&,const QVariant&);
 		void logErrors(const quint8&);
 		QString readResourceText(const char*);
-		QDBusObjectPath serviceOnline();  
+		QDBusObjectPath serviceOnline();
+		void clearCounters();  
 
   private slots:
   	void	updateDisplayWidgets();

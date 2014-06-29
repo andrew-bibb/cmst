@@ -138,6 +138,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	if (! parser.isSet("disable-counters"))
 		connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
   
+	// restore GUI settings
+	this->readSettings();  
+  
   // setup the dbus interface to connman.manager
 	if (! QDBusConnection::systemBus().isConnected() ) logErrors(CMST::Err_No_DBus);
   else {	
@@ -166,6 +169,10 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
 			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
 			QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
+		
+		// clear the counters if selected
+		this->clearCounters();
+		
 		}	// else have valid connection
 	}	// else have connected systemBus
 	
@@ -241,10 +248,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 		
 	// start the timer
 	wifi_timer->start();
-	
-	// restore GUI settings
-	this->readSettings();
-	
+		
 	// set up and fill in the display widgets
 	this->updateDisplayWidgets();				
 }  
@@ -624,14 +628,8 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
 			}	// for
 		}	// if we needed to remove something
 
-////////////////WORKING NOT CORRECT YET
-	// reset the counters if we chose to
-	//if (ui.checkBox_resetcounters->isChecked() ) {		
-		//QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, serviceOnline().path(), "net.connman.Service", QDBusConnection::systemBus(), this);	
-		//iface_serv->call(QDBus::NoBlock, "ResetCounters");
-		//iface_serv->deleteLater();
-	//}
-
+	// clear the counters (if selected) and update the widgets'
+	clearCounters();
 	updateDisplayWidgets();
 	
 	return;
@@ -1697,4 +1695,18 @@ QDBusObjectPath ControlBox::serviceOnline()
 	}	// for	
 		
 	return service_online;
+}
+
+//
+// Function to clear the counters if selected in the ui.  Called from the constructor
+// and from dbsServicesChanged
+void ControlBox::clearCounters()
+{	
+	if (ui.checkBox_resetcounters->isChecked() ) {			
+		QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, serviceOnline().path(), "net.connman.Service", QDBusConnection::systemBus(), this);	
+		iface_serv->call(QDBus::NoBlock, "ResetCounters");
+		iface_serv->deleteLater();
+	}	
+	
+	return;
 }
