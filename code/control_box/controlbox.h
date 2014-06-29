@@ -94,7 +94,7 @@ class idButton : public QPushButton
 		QDBusObjectPath obj_id;
 		
 	private slots:
-		inline void buttonClicked(bool checked) {emit clickedID (obj_id.path(), checked);}
+		void buttonClicked(bool);
 };
 
 

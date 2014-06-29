@@ -67,7 +67,9 @@ DEALINGS IN THE SOFTWARE.
 #define DBUS_PATH "/"
 #define DBUS_MANAGER "net.connman.Manager"
 
-// custom push button, used in the technology box for powered on/off
+// Custom push button, used in the technology box for powered on/off
+// This is really a single use button, after it is clicked all idButtons
+// are deleted and recreated.  Once is is clicked disable the button.
 idButton::idButton(QWidget* parent, const QDBusObjectPath& id) :
 		QPushButton(parent)
 {
@@ -78,7 +80,17 @@ idButton::idButton(QWidget* parent, const QDBusObjectPath& id) :
 	
 }
 
-		
+
+void idButton::buttonClicked(bool checked)
+{
+	this->setDisabled(true);
+	
+	emit clickedID (obj_id.path(), checked);
+	
+	return;
+}
+	
+	
 // main GUI element
 ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     : QDialog(parent)
@@ -198,6 +210,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));	
 	connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
 	connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(updateDisplayWidgets()));
+	connect(ui.pushButton_scanWifi, SIGNAL (clicked()), this, SLOT(scanWifi()));
 
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
@@ -295,7 +308,7 @@ void ControlBox::updateDisplayWidgets()
 	// get the information it needs.  Only check for major errors since we
 	// can't run the assemble functions if there are. 
 
-	if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) == 0x00 ) {	
+	if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) == 0x00 ) {		
 			
 		//	rebuild our pages	
 		this->assemblePage1();
@@ -427,7 +440,6 @@ void ControlBox::connectPressed()
 	//	send the connect message to the service
 	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);	
 	iface_serv->call(QDBus::NoBlock, "Connect");
-	
 	iface_serv->deleteLater();
 	
 	return;		
@@ -569,7 +581,7 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 //	Slot called whenever DBUS issues a ServicesChanged signal
 void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {
-	// process changed services
+	// process changed services. Demarshall the raw QDBusMessage instead of vmap as it is easier.
 	if (! vmap.isEmpty() ) {	
 		QList<arrayElement> revised_list;
 		if (! getArray(revised_list, msg)) return;
@@ -600,6 +612,7 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
 		}	// i for
 		
 		// now copy the revised list to services_list
+		services_list.clear();
 		services_list = revised_list;
 	}	// vmap not empty
 
@@ -610,6 +623,14 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
 				services_list.removeAt(i);
 			}	// for
 		}	// if we needed to remove something
+
+////////////////WORKING NOT CORRECT YET
+	// reset the counters if we chose to
+	//if (ui.checkBox_resetcounters->isChecked() ) {		
+		//QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, serviceOnline().path(), "net.connman.Service", QDBusConnection::systemBus(), this);	
+		//iface_serv->call(QDBus::NoBlock, "ResetCounters");
+		//iface_serv->deleteLater();
+	//}
 
 	updateDisplayWidgets();
 	
@@ -663,6 +684,8 @@ void ControlBox::dbsTechnologyRemoved(QDBusObjectPath removed)
 }
 
 //
+//	Slots called from objects previous slots were called from Manager)	
+//
 //	Slot called whenever a service object issues a PropertyChanged signal on DBUS
 void ControlBox::dbsServicePropertyChanged(QString name, QDBusVariant dbvalue, QDBusMessage msg)
 {
@@ -684,11 +707,11 @@ void ControlBox::dbsServicePropertyChanged(QString name, QDBusVariant dbvalue, Q
 	// process errrors
 	if (name.contains("Error", Qt::CaseInsensitive) ) {
 		sendNotifications(
-			QString(tr("Service Error: %1/nObject Path: %2")).arg(value.toString()).arg(s_path),
+			QString(tr("Service Error: %1\nObject Path: %2")).arg(value.toString()).arg(s_path),
 			QIcon(":/icons/images/interface/cancel.png"),
 			QSystemTrayIcon::Critical);			
 	}
-
+	
 	return;
 }
 
@@ -1243,7 +1266,7 @@ void ControlBox::assemblePage4()
 	ui.label_counter_settings->setText(tr("Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.") 	\
 			.arg(counter_accuracy)	\
 			.arg(counter_period) );
-	
+				
 	return;
 }
 
@@ -1352,11 +1375,13 @@ void ControlBox::writeSettings()
 	settings->setValue("enable_interface_tooltips", ui.checkBox_enableinterfacetooltips->isChecked() );
 	settings->setValue("enable_systemtray_tooltips", ui.checkBox_enablesystemtraytooltips->isChecked() );
 	settings->setValue("enable_systemtray_notications", ui.checkBox_enablesystemtraynotification->isChecked() );
+	settings->setValue("reset_counters", ui.checkBox_resetcounters->isChecked() );
 	settings->endGroup(); 
 	
 	return;
 }
 
+//
 // Slot to read GUI settings to disk
 void ControlBox::readSettings()
 {
@@ -1376,6 +1401,7 @@ void ControlBox::readSettings()
 	ui.checkBox_enableinterfacetooltips->setChecked(settings->value("enable_interface_tooltips").toBool() );
 	ui.checkBox_enablesystemtraytooltips->setChecked(settings->value("enable_systemtray_tooltips").toBool() );
 	ui.checkBox_enablesystemtraynotification->setChecked(settings->value("enable_systemtray_notications").toBool() );
+	ui.checkBox_resetcounters->setChecked(settings->value("reset_counters").toBool() );
 	settings->endGroup();
 	
 	return;

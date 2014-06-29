@@ -12,6 +12,7 @@ INSTALLS += target
 
 documentation.path = /usr/share/man/man1
 documentation.files = ./misc/manpage/cmst.1.gz
+documentation.CONFIG = no_check_exist
 documentation.extra = gzip --keep --force ./misc/manpage/cmst.1
 INSTALLS += documentation
 

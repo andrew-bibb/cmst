@@ -378,6 +378,19 @@
               </property>
              </widget>
             </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_scanWifi">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rescan services&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of WiFi services.  Wifi services are scanned automatically once every 60 seconds.  This button will force a recan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Sc&amp;an WiFi</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </item>
          </layout>
@@ -804,10 +817,26 @@
             </property>
            </widget>
           </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_resetcounters">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset counters when a new service is selected&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cummulative and will retain the counts between boots.  When this box is checked the counters will reset to zero every time a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Reset C&amp;ounters</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
-       <item row="2" column="0">
+       <item row="4" column="0">
         <spacer name="verticalSpacer_4">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -820,7 +849,7 @@
          </property>
         </spacer>
        </item>
-       <item row="1" column="0">
+       <item row="3" column="0">
         <widget class="QGroupBox" name="groupBox_systemtray">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;System tray preferences&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -984,8 +1013,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>536</width>
-            <height>550</height>
+            <width>104</width>
+            <height>1922</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
