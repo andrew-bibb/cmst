@@ -800,7 +800,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the GUI will be restored from settings saved on disk. Settings include the geometry of the dialog and the state of various check boxes, such as this one. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p style='white-space:pre'&gt;The settings file is: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/cmst/cmst.conf  &lt;/span&gt;&lt;br&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>&amp;Retain Settings</string>
+             <string>Retain Settings</string>
             </property>
            </widget>
           </item>
@@ -813,7 +813,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the display of tooltips will be enabled for the interface widgets.&lt;/p&gt;&lt;p&gt;Tooltips are the small popups that appear when you hover the mouse pointer over an area of the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Enable ToolTips (&amp;Interface)</string>
+             <string>Enable ToolTips (Interface)</string>
             </property>
            </widget>
           </item>
@@ -829,14 +829,14 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cummulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Reset C&amp;ounters</string>
+             <string>Reset Counters</string>
             </property>
            </widget>
           </item>
          </layout>
         </widget>
        </item>
-       <item row="4" column="0">
+       <item row="5" column="0">
         <spacer name="verticalSpacer_4">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -870,7 +870,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked an icon will not be displayed in the system tray.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Hide &amp;Tray Icon</string>
+             <string>Hide Tray Icon</string>
             </property>
            </widget>
           </item>
@@ -883,7 +883,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray icon will popup a status message when you hover the mouse over it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>&amp;Enable System Tray Popups</string>
+             <string>Enable System Tray Popups</string>
             </property>
             <property name="checked">
              <bool>true</bool>
@@ -899,10 +899,35 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable notifications from the systemtray&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="whatsThis">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Enable System Tray &amp;Notifications</string>
+             <string>Enable System Tray Notifications</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QGroupBox" name="groupBox_notfications">
+         <property name="title">
+          <string>Notifications</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <item>
+           <widget class="QCheckBox" name="checkBox_notifydaemon">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable notifications from the notify system daemon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system notify daemon will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Notification Daemon</string>
             </property>
            </widget>
           </item>
@@ -1111,6 +1136,39 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>checkBox_devicesoff</tabstop>
+  <tabstop>tableWidget_technologies</tabstop>
+  <tabstop>tableWidget_services</tabstop>
+  <tabstop>pushButton_movebefore</tabstop>
+  <tabstop>pushButton_moveafter</tabstop>
+  <tabstop>checkBox_hidecnxn</tabstop>
+  <tabstop>pushButton_scanWifi</tabstop>
+  <tabstop>comboBox_service</tabstop>
+  <tabstop>pushButton_connect</tabstop>
+  <tabstop>pushButton_disconnect</tabstop>
+  <tabstop>pushButton_remove</tabstop>
+  <tabstop>tableWidget_wifi</tabstop>
+  <tabstop>scrollArea_home_counter</tabstop>
+  <tabstop>checkBox_notifydaemon</tabstop>
+  <tabstop>scrollArea_roaming_counter</tabstop>
+  <tabstop>checkBox_retainsettings</tabstop>
+  <tabstop>checkBox_enableinterfacetooltips</tabstop>
+  <tabstop>checkBox_resetcounters</tabstop>
+  <tabstop>checkBox_hideIcon</tabstop>
+  <tabstop>checkBox_enablesystemtraytooltips</tabstop>
+  <tabstop>checkBox_enablesystemtraynotification</tabstop>
+  <tabstop>pushButton_aboutCMST</tabstop>
+  <tabstop>pushButton_aboutIconSet</tabstop>
+  <tabstop>pushButton_aboutQT</tabstop>
+  <tabstop>pushButton_license</tabstop>
+  <tabstop>pushButton_change_log</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>toolButton_whatsthis</tabstop>
+  <tabstop>pushButton_exit</tabstop>
+  <tabstop>pushButton_minimize</tabstop>
+  <tabstop>tabWidget</tabstop>
+ </tabstops>
  <resources>
   <include location="../../../cmst.qrc"/>
  </resources>
@@ -1154,12 +1212,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>102</x>
-     <y>181</y>
+     <x>125</x>
+     <y>211</y>
     </hint>
     <hint type="destinationlabel">
-     <x>105</x>
-     <y>203</y>
+     <x>128</x>
+     <y>237</y>
     </hint>
    </hints>
   </connection>
