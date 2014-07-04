@@ -55,22 +55,24 @@ class NotifyClient : public QObject
  
     public:
 			NotifyClient(QObject*);
-			inline bool isValid() {return validconnection;}
+			inline bool isValid() {return b_validconnection;}
 			inline QString getServerName() {return s_name;}
 			inline QString getServerVendor() {return s_vendor;}
 			inline QString getServerVersion() {return s_version;}
 			inline QString getServerSpecVersion() {return s_spec_version;}
-			inline quint32 getCurrentID() {return current_id;}
-			void sendNotification (QString app_name, 
-																quint32,
-																QString,
-																QString,
-																QString,
-																QStringList,
-																QVariantMap hint,
-																qint32 expire_timeout = -1);
-			void sendNotification (QString, qint32 expire_timeout = -1);
-			void sendNotification (QString, int, qint32 expire_timeyou = -1);														
+			inline QStringList getServerCapabilities() {return sl_capabilities;}
+			
+			void notify	(QString app_name, 
+									quint32,
+									QString,
+									QString,
+									QString,
+									QStringList,
+									QVariantMap hint,
+									qint32 expire_timeout = -1);
+			void sendNotification (QString, int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);
+			void sendNotification (QString, QString, int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);
+			void sendNotification (QString, QString, QString, int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);																
 
     private:
 			// members
@@ -80,7 +82,7 @@ class NotifyClient : public QObject
 			QString s_version;
 			QString s_spec_version;
 			QStringList sl_capabilities;
-			bool validconnection;
+			bool b_validconnection;
 			quint32 current_id;
 			
 			// functions

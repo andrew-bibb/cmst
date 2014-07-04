@@ -118,7 +118,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   QString s_app = PROGRAM_NAME; 
   settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
 	notifyclient = new NotifyClient(this);
-	
+
   // set a flag if we sent a commandline option to log the connman inputrequest
 	agent->setLogInputRequest(parser.isSet("log-input-request")); 
 	
@@ -1469,7 +1469,7 @@ void ControlBox::sendNotifications(const QString& text, QIcon icon, QSystemTrayI
 	
 	// if we want notify daemon notifications
 	if (ui.checkBox_notifydaemon->isChecked() && notifyclient->isValid() ) {
-		notifyclient->sendNotification(text);
+		notifyclient->sendNotification(text, LONG_NAME);
 	}
 	
 	return;

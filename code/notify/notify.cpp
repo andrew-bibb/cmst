@@ -30,9 +30,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QtCore/QDebug>
 # include <QtDBus/QDBusConnection>
 #	include "./code/notify/notify.h"
-
-
-
+# include <QTextDocument>
                      
 #define DBUS_SERVICE "org.freedesktop.Notifications"
 #define DBUS_PATH "/org/freedesktop/Notifications"
@@ -49,7 +47,7 @@ NotifyClient::NotifyClient(QObject* parent)
 	s_version.clear();
 	s_spec_version.clear();
 	sl_capabilities.clear();
-	validconnection = false;
+	b_validconnection = false;
 	current_id = 0;
 
 	// Create our client and connect to the notify server 	
@@ -61,7 +59,7 @@ NotifyClient::NotifyClient(QObject* parent)
 			getCapabilities();	
 			QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "NotificationClosed", this, SLOT(notificationClosed(quint32, quint32)));
 			QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "ActionInvoked", this, SLOT(actionInvoked(quint32, QString)));
-			validconnection = true;
+			b_validconnection = true;
 		}	// if connection is valid
 	}	// else could connect to the sessionBus
 		
@@ -71,10 +69,16 @@ NotifyClient::NotifyClient(QObject* parent)
 
 /////////////////////////////////////// PUBLIC FUNCTIONS ////////////////////////////////
 //
-//	Function to send a notification to the server
-void NotifyClient::sendNotification (QString app_name, quint32 replaces_id, QString app_icon, QString summary, QString body, QStringList actions, QVariantMap hints, qint32 expire_timeout)
+// Function to send a notification to the server.  This is basically a one to one correspondence
+// of arguments to the org.freedesktop.Notifications.Notify method.  The arguments are mandatory
+// and must be arranged from outside this class. The getxxx functions may be used to obtain server
+// information for this purpose.
+void NotifyClient::notify (QString app_name, quint32 replaces_id, QString app_icon, QString summary, QString body, QStringList actions, QVariantMap hints, qint32 expire_timeout)
 {
-	QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"),app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
+	// make sure we have a connection we can send the notification to.
+	if (! b_validconnection) return;
+	
+	QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
 	
 	if (reply.isValid() )
 		current_id = reply.value();
@@ -84,18 +88,37 @@ void NotifyClient::sendNotification (QString app_name, quint32 replaces_id, QStr
 	return;
 }		
 
+// Convienence functions to send notifications.  These functions so some processing
+// of the arguments.  In these functions:
+//		expire_timeout: The amount of time in milliseconds the message is shown.
+//										A value of -1 means timeout is based on server's settings.
+//		overwrite			: Will overwrite the previous message sent from this function.
+//										It will not overwrite notifications sent by other programs. 
 //
-//	Overloaded function to send a notification summary to the server. 
-void NotifyClient::sendNotification (QString summary, qint32 expire_timeout)
+//	
+//
+//	Show notification with summary string
+void NotifyClient::sendNotification (QString arg_summary, int urgency, bool overwrite,  qint32 expire_timeout)
 {
+	// make sure we have a connection we can send the notification to.
+	if (! b_validconnection) return;	
+	
+	// variables
 	QString app_name = "";
 	quint32 replaces_id = 0;
 	QString app_icon = "";
+	QString summary = arg_summary;
 	QString body = "";
 	QStringList actions = QStringList();
-	QVariantMap hints = QVariantMap();
+	QVariantMap hints;
 	
-	QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"),app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
+	// set replaces_id
+	if (overwrite) replaces_id = current_id;
+	
+	// assemble the hints
+	hints.insert("urgency", QVariant::fromValue(static_cast<uchar>(urgency)) );
+	
+	QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
 	
 	if (reply.isValid() )
 		current_id = reply.value();
@@ -106,18 +129,28 @@ void NotifyClient::sendNotification (QString summary, qint32 expire_timeout)
 }	
 
 //
-// Overloaded function to send a notification summary with urgency hint to the server
-void NotifyClient::sendNotification(QString summary, int urgency, qint32 expire_timeout)
+// Show notification with summary and app_name
+void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, int urgency, bool overwrite,  qint32 expire_timeout)
 {
-	QString app_name = "";
+	// make sure we have a connection we can send the notification to.
+	if (! b_validconnection) return;	
+	
+	// variables
+	QString app_name = arg_app_name;
 	quint32 replaces_id = 0;
 	QString app_icon = "";
+	QString summary = arg_summary;
 	QString body = "";
 	QStringList actions = QStringList();
 	QVariantMap hints;
-	hints["urgency"] = urgency;	
 	
-	QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"),app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
+	// set replaces_id
+	if (overwrite) replaces_id = current_id;
+	
+	// assemble the hints
+	hints.insert("urgency", QVariant::fromValue(static_cast<uchar>(urgency)) );
+	
+	QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
 	
 	if (reply.isValid() )
 		current_id = reply.value();
@@ -125,7 +158,49 @@ void NotifyClient::sendNotification(QString summary, int urgency, qint32 expire_
 		qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
 	
 	return;
-}		
+}	
+
+//
+// Show notification with summary, app_name, and body text
+void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, QString arg_body, int urgency, bool overwrite,  qint32 expire_timeout)
+{
+	// make sure we have a connection we can send the notification to.
+	if (! b_validconnection) return;	
+	
+	// variables
+	QString app_name = arg_app_name;	
+	quint32 replaces_id = 0;
+	QString app_icon = "";
+	QString summary = arg_summary;
+	QString body = "";
+	QStringList actions = QStringList();
+	QVariantMap hints;
+	
+	// set replaces_id
+	if (overwrite) replaces_id = current_id;
+	
+	// assemble the hints
+	hints.insert("urgency", QVariant::fromValue(static_cast<uchar>(urgency)) );
+	
+	// make sure we can display the text on this server
+	if (sl_capabilities.contains("body", Qt::CaseInsensitive) ) {
+		body = arg_body; 
+		if (! sl_capabilities.contains ("body-markup", Qt::CaseInsensitive) ) {
+			QTextDocument td;
+			td.setHtml(body);
+			body = td.toPlainText();
+		}	// if server cannot display markup
+	}	// if capabilities contains body
+			
+	QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
+	
+	if (reply.isValid() )
+		current_id = reply.value();
+	else
+		qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
+	
+	return;
+}	
 	
 /////////////////////////////////////// PRIVATE FUNCTIONS////////////////////////////////
 //
@@ -190,7 +265,7 @@ void NotifyClient::closeNotification(quint32 id)
 void NotifyClient::notificationClosed(quint32 id, quint32 reason)
 {
 	
-	qDebug() << "Notification closed signal received" << id << reason; 
+	//qDebug() << "Notification closed signal received" << id << reason; 
 	
 	return;
 }
@@ -201,7 +276,7 @@ void NotifyClient::notificationClosed(quint32 id, quint32 reason)
 void NotifyClient::actionInvoked(quint32 id, QString action_key)
 {
 	
-	qDebug() << "Action invoked signal received" << id << action_key;
+	//qDebug() << "Action invoked signal received" << id << action_key;
 	
 	return;
 }
