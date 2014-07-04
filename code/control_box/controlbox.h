@@ -186,6 +186,8 @@ class ControlBox : public QDialog
 		void showWhatsThis();
 		inline void startSystemTrayMinimized() {createSystemTrayIcon(true);}
 		inline void startSystemTrayNormal() {createSystemTrayIcon(false);}
+		inline void trayNotifications(bool checked) {if (checked) ui.checkBox_notifydaemon->setChecked(false);}
+		inline void daemonNotifications(bool checked) {if (checked) ui.checkBox_systemtraynotifications->setChecked(false);}
 		void iconActivated(QSystemTrayIcon::ActivationReason reason);
 		void writeSettings();
 		void readSettings();

@@ -90,11 +90,16 @@ void idButton::buttonClicked(bool checked)
 	return;
 }
 	
+# include "./code/notify/notify.h"	
 	
 // main GUI element
 ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     : QDialog(parent)
 {
+	
+	//////////TESTING ///////////
+	NotifyClient* notify = new NotifyClient(this);
+	
 	// set the Locale
 	QLocale::setDefault(QLocale(QLocale::L_LANG, QLocale::L_COUNTRY));	
   
@@ -218,6 +223,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
 	connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(updateDisplayWidgets()));
 	connect(ui.pushButton_scanWifi, SIGNAL (clicked()), this, SLOT(scanWifi()));
+	connect(ui.checkBox_systemtraynotifications, SIGNAL (clicked(bool)), this, SLOT(trayNotifications(bool)));
+	connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
 
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
@@ -1372,7 +1379,8 @@ void ControlBox::writeSettings()
 	settings->setValue("services_less", ui.checkBox_hidecnxn->isChecked() );
 	settings->setValue("enable_interface_tooltips", ui.checkBox_enableinterfacetooltips->isChecked() );
 	settings->setValue("enable_systemtray_tooltips", ui.checkBox_enablesystemtraytooltips->isChecked() );
-	settings->setValue("enable_systemtray_notications", ui.checkBox_enablesystemtraynotification->isChecked() );
+	settings->setValue("enable_systemtray_notications", ui.checkBox_systemtraynotifications->isChecked() );
+	settings->setValue("enable_daemon_notifications", ui.checkBox_notifydaemon->isChecked() );
 	settings->setValue("reset_counters", ui.checkBox_resetcounters->isChecked() );
 	settings->endGroup(); 
 	
@@ -1398,7 +1406,8 @@ void ControlBox::readSettings()
 	ui.checkBox_hidecnxn->setChecked(settings->value("services_less").toBool() );
 	ui.checkBox_enableinterfacetooltips->setChecked(settings->value("enable_interface_tooltips").toBool() );
 	ui.checkBox_enablesystemtraytooltips->setChecked(settings->value("enable_systemtray_tooltips").toBool() );
-	ui.checkBox_enablesystemtraynotification->setChecked(settings->value("enable_systemtray_notications").toBool() );
+	ui.checkBox_systemtraynotifications->setChecked(settings->value("enable_systemtray_notications").toBool() );
+	ui.checkBox_notifydaemon->setChecked(settings->value("enable_daemon_notifications").toBool() );
 	ui.checkBox_resetcounters->setChecked(settings->value("reset_counters").toBool() );
 	settings->endGroup();
 	
@@ -1459,7 +1468,7 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 void ControlBox::sendNotifications(const QString& text, QIcon icon, QSystemTrayIcon::MessageIcon sticon)
 {
 	// if we want system tray notifications
-	if (ui.checkBox_enablesystemtraynotification->isChecked() && QSystemTrayIcon::isSystemTrayAvailable() ) { 
+	if (ui.checkBox_systemtraynotifications->isChecked() && QSystemTrayIcon::isSystemTrayAvailable() ) { 
 		trayicon->showMessage(PROGRAM_NAME, text, sticon);
 	}
 	

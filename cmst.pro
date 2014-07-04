@@ -32,6 +32,8 @@ DBUS_ADAPTORS 	+= ./code/agent/org.monkey_business_enterprises.agent.xml
 DBUS_INTERFACES	+= ./code/agent/org.monkey_business_enterprises.agent.xml
 DBUS_ADAPTORS 	+= ./code/counter/org.monkey_business_enterprises.counter.xml
 DBUS_INTERFACES	+= ./code/counter/org.monkey_business_enterprises.counter.xml
+DBUS_ADAPTORS 	+= ./code/notify/org.monkey_business_enterprises.notify.xml
+DBUS_INTERFACES	+= ./code/notify/org.monkey_business_enterprises.notify.xml
 
 #	header files
 HEADERS		+= ./code/resource.h
@@ -40,6 +42,7 @@ HEADERS		+= ./code/agent/agent.h
 HEADERS		+= ./code/agent/agent_dialog.h
 HEADERS		+= ./code/counter/counter.h
 HEADERS		+= ./code/scrollbox/scrollbox.h
+HEADERS		+= ./code/notify/notify.h
 
 #	forms
 FORMS		+= ./code/control_box/ui/controlbox.ui
@@ -53,6 +56,7 @@ SOURCES += ./code/agent/agent.cpp
 SOURCES += ./code/agent/agent_dialog.cpp
 SOURCES += ./code/counter/counter.cpp
 SOURCES += ./code/scrollbox/scrollbox.cpp
+SOURCES += ./code/notify/notify.cpp
 
 #	resource files
 RESOURCES 	+= cmst.qrc

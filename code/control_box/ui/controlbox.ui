@@ -891,7 +891,7 @@
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QCheckBox" name="checkBox_enablesystemtraynotification">
+           <widget class="QCheckBox" name="checkBox_systemtraynotifications">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -902,7 +902,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Enable System Tray Notifications</string>
+             <string>System Tray Notifications</string>
             </property>
            </widget>
           </item>
@@ -1157,7 +1157,7 @@
   <tabstop>checkBox_resetcounters</tabstop>
   <tabstop>checkBox_hideIcon</tabstop>
   <tabstop>checkBox_enablesystemtraytooltips</tabstop>
-  <tabstop>checkBox_enablesystemtraynotification</tabstop>
+  <tabstop>checkBox_systemtraynotifications</tabstop>
   <tabstop>pushButton_aboutCMST</tabstop>
   <tabstop>pushButton_aboutIconSet</tabstop>
   <tabstop>pushButton_aboutQT</tabstop>
@@ -1172,54 +1172,5 @@
  <resources>
   <include location="../../../cmst.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>pushButton_movebefore</sender>
-   <signal>clicked()</signal>
-   <receiver>actionMove_Before</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>75</x>
-     <y>472</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_moveafter</sender>
-   <signal>clicked()</signal>
-   <receiver>actionMove_After</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>163</x>
-     <y>472</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBox_hideIcon</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>checkBox_enablesystemtraytooltips</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>125</x>
-     <y>211</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>128</x>
-     <y>237</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
