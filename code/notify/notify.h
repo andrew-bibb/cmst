@@ -33,7 +33,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QObject>
 # include <QString>
 # include <QStringList>
-# include <QtDBus/QDBusObjectPath>
+# include <QtDBus/QtDBus>
+# include <QtDBus/QDBusInterface>
 
 
 class NotifyClient : public QObject
@@ -43,27 +44,36 @@ class NotifyClient : public QObject
  
     public:
 			NotifyClient(QObject*);
+			inline bool isValid() {return validconnection;}
+			void sendNotification (QString app_name, 
+																quint32,
+																QString,
+																QString,
+																QString,
+																QStringList,
+																QVariantMap hint,
+																qint32);
+			void sendNotification (QString);														
 
-		//signals:
-			//NotificationClosed();
-			//NotificationClosed(quint32, quint32);
- 
-    public Q_SLOTS:
-     
-    //private:
-    //QStringList GetCapabilities();
-    //quint32 Notify (QString, quint32, QString, QString, QString, QStringList, QVariantMap, qint32);
-    void CloseNotifications(quint32 id = 0);
-    void GetServerInformation (QString, QString, QString, QString);
-   // QStringList GetCapabilities()
-    
     private:
 			// members
+			QDBusInterface* notifyclient;
 			QString s_name;
 			QString s_vendor;
 			QString s_version;
 			QString s_spec_version;
 			QStringList sl_capabilities;
+			bool validconnection;
+			quint32 current_id;
+			
+			// functions
+			void getServerInformation();
+			void getCapabilities();
+			void closeNotification(quint32);
+			
+		private slots:
+			void notificationClosed(quint32, quint32);
+			void actionInvoked(quint32, QString);
 
 };    
 

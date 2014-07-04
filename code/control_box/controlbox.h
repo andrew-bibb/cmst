@@ -48,6 +48,7 @@ DEALINGS IN THE SOFTWARE.
 # include "ui_controlbox.h"
 # include "./code/agent/agent.h"
 # include "./code/counter/counter.h"
+# include "./code/notify/notify.h"
 
 //	Used for enum's local to this program
 namespace CMST 
@@ -126,7 +127,8 @@ class ControlBox : public QDialog
 		QList<arrayElement>		technologies_list;
 		QList<arrayElement>		wifi_list;
 		ConnmanAgent* agent;
-		ConnmanCounter* counter;		
+		ConnmanCounter* counter;	
+		NotifyClient* notifyclient;	
 		short wifi_interval;		
 		quint32 counter_accuracy;	
 		quint32 counter_period;				

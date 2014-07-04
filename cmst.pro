@@ -32,8 +32,6 @@ DBUS_ADAPTORS 	+= ./code/agent/org.monkey_business_enterprises.agent.xml
 DBUS_INTERFACES	+= ./code/agent/org.monkey_business_enterprises.agent.xml
 DBUS_ADAPTORS 	+= ./code/counter/org.monkey_business_enterprises.counter.xml
 DBUS_INTERFACES	+= ./code/counter/org.monkey_business_enterprises.counter.xml
-DBUS_ADAPTORS 	+= ./code/notify/org.monkey_business_enterprises.notify.xml
-DBUS_INTERFACES	+= ./code/notify/org.monkey_business_enterprises.notify.xml
 
 #	header files
 HEADERS		+= ./code/resource.h

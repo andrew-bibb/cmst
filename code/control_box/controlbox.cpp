@@ -46,7 +46,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/control_box/controlbox.h"
 # include "./code/resource.h"	
 # include "./code/scrollbox/scrollbox.h"
-
+	
 //	headers for system logging
 # include <stdio.h>
 # include <unistd.h>
@@ -89,17 +89,11 @@ void idButton::buttonClicked(bool checked)
 	
 	return;
 }
-	
-# include "./code/notify/notify.h"	
-	
+		
 // main GUI element
 ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     : QDialog(parent)
-{
-	
-	//////////TESTING ///////////
-	NotifyClient* notify = new NotifyClient(this);
-	
+{	
 	// set the Locale
 	QLocale::setDefault(QLocale(QLocale::L_LANG, QLocale::L_COUNTRY));	
   
@@ -123,7 +117,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   mvsrv_menu = new QMenu(this);
   QString s_app = PROGRAM_NAME; 
   settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
-  
+	notifyclient = new NotifyClient(this);
+	
   // set a flag if we sent a commandline option to log the connman inputrequest
 	agent->setLogInputRequest(parser.isSet("log-input-request")); 
 	
