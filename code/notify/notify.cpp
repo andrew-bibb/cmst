@@ -85,18 +85,15 @@ void NotifyClient::sendNotification (QString app_name, quint32 replaces_id, QStr
 }		
 
 //
-//	Overloaded function to send a notification to the server.  Display the summary only
-void NotifyClient::sendNotification (QString sum)
+//	Overloaded function to send a notification summary to the server. 
+void NotifyClient::sendNotification (QString summary, qint32 expire_timeout)
 {
 	QString app_name = "";
 	quint32 replaces_id = 0;
 	QString app_icon = "";
-	QString summary = sum;
 	QString body = "";
 	QStringList actions = QStringList();
 	QVariantMap hints = QVariantMap();
-	qint32 expire_timeout = -1;
-	
 	
 	QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"),app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
 	
@@ -107,6 +104,28 @@ void NotifyClient::sendNotification (QString sum)
 	
 	return;
 }	
+
+//
+// Overloaded function to send a notification summary with urgency hint to the server
+void NotifyClient::sendNotification(QString summary, int urgency, qint32 expire_timeout)
+{
+	QString app_name = "";
+	quint32 replaces_id = 0;
+	QString app_icon = "";
+	QString body = "";
+	QStringList actions = QStringList();
+	QVariantMap hints;
+	hints["urgency"] = urgency;	
+	
+	QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"),app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
+	
+	if (reply.isValid() )
+		current_id = reply.value();
+	else
+		qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
+	
+	return;
+}		
 	
 /////////////////////////////////////// PRIVATE FUNCTIONS////////////////////////////////
 //

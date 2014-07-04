@@ -1467,6 +1467,11 @@ void ControlBox::sendNotifications(const QString& text, QIcon icon, QSystemTrayI
 		trayicon->showMessage(PROGRAM_NAME, text, sticon);
 	}
 	
+	// if we want notify daemon notifications
+	if (ui.checkBox_notifydaemon->isChecked() && notifyclient->isValid() ) {
+		notifyclient->sendNotification(text);
+	}
+	
 	return;
 }
 

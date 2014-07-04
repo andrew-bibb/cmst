@@ -36,6 +36,17 @@ DEALINGS IN THE SOFTWARE.
 # include <QtDBus/QtDBus>
 # include <QtDBus/QDBusInterface>
 
+//	Used for enum's local to this program
+namespace NOTIFYCLIENT
+{
+  enum {
+		// urgency levels
+		UrgencyLow				= 0,
+		UrgencyNormal 		= 1,
+		UrgencyCritical		=	2
+  };	
+} // namespace		
+
 
 class NotifyClient : public QObject
 {
@@ -45,6 +56,11 @@ class NotifyClient : public QObject
     public:
 			NotifyClient(QObject*);
 			inline bool isValid() {return validconnection;}
+			inline QString getServerName() {return s_name;}
+			inline QString getServerVendor() {return s_vendor;}
+			inline QString getServerVersion() {return s_version;}
+			inline QString getServerSpecVersion() {return s_spec_version;}
+			inline quint32 getCurrentID() {return current_id;}
 			void sendNotification (QString app_name, 
 																quint32,
 																QString,
@@ -52,8 +68,9 @@ class NotifyClient : public QObject
 																QString,
 																QStringList,
 																QVariantMap hint,
-																qint32);
-			void sendNotification (QString);														
+																qint32 expire_timeout = -1);
+			void sendNotification (QString, qint32 expire_timeout = -1);
+			void sendNotification (QString, int, qint32 expire_timeyou = -1);														
 
     private:
 			// members

@@ -911,6 +911,9 @@
        </item>
        <item row="4" column="0">
         <widget class="QGroupBox" name="groupBox_notfications">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="title">
           <string>Notifications</string>
          </property>
@@ -918,7 +921,7 @@
           <item>
            <widget class="QCheckBox" name="checkBox_notifydaemon">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="toolTip">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable notifications from the notify system daemon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
