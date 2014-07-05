@@ -924,10 +924,10 @@
              <bool>true</bool>
             </property>
             <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable notifications from the notify system daemon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable notifications from the system desktop notification daemon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="whatsThis">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system notify daemon will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system desktop notification daemon will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notification daemon if one is installed. Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
              <string>Notification Daemon</string>
