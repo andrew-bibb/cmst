@@ -143,10 +143,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	
 	// setup the notify server label
 	if (notifyclient->isValid() ) {
+		QString name = notifyclient->getServerName().toLower();
+		name = name.replace(0, 1, name.left(1).toUpper() );
+		QString vendor = notifyclient->getServerVendor();
+		vendor = vendor.replace(0, 1, vendor.left(1).toUpper() );
 		QString lab = tr("Using the %1 notification server version %2 by %3.<br>Server supports Notification specification version %4")
-			.arg(notifyclient->getServerName() )
+			.arg(name)
 			.arg(notifyclient->getServerVersion() )
-			.arg(notifyclient->getServerVendor() )
+			.arg(vendor)
 			.arg(notifyclient->getServerSpecVersion() );
 		ui.label_serverstatus->setText(lab);		
 	}
