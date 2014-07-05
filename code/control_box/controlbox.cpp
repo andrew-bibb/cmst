@@ -139,7 +139,23 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 		connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
   
 	// restore GUI settings
-	this->readSettings();  
+	this->readSettings(); 
+	
+	// setup the notify server label
+	if (notifyclient->isValid() ) {
+		QString lab = tr("Using the %1 notification server version %2 by %3.<br>Server supports Notification specification version %4")
+			.arg(notifyclient->getServerName() )
+			.arg(notifyclient->getServerVersion() )
+			.arg(notifyclient->getServerVendor() )
+			.arg(notifyclient->getServerSpecVersion() );
+		ui.label_serverstatus->setText(lab);		
+	}
+	else {
+		ui.label_serverstatus->setText(tr("Unable to find or connect to a Notification server."));
+		ui.checkBox_notifydaemon->setChecked(false);
+		ui.checkBox_notifydaemon->setEnabled(false);
+	}
+			 
   
   // setup the dbus interface to connman.manager
 	if (! QDBusConnection::systemBus().isConnected() ) logErrors(CMST::Err_No_DBus);

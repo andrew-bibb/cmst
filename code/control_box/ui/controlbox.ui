@@ -917,7 +917,7 @@
          <property name="title">
           <string>Notifications</string>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_12">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
            <widget class="QCheckBox" name="checkBox_notifydaemon">
             <property name="enabled">
@@ -931,6 +931,13 @@
             </property>
             <property name="text">
              <string>Notification Daemon</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_serverstatus">
+            <property name="text">
+             <string>Server Status</string>
             </property>
            </widget>
           </item>
@@ -1153,7 +1160,6 @@
   <tabstop>pushButton_remove</tabstop>
   <tabstop>tableWidget_wifi</tabstop>
   <tabstop>scrollArea_home_counter</tabstop>
-  <tabstop>checkBox_notifydaemon</tabstop>
   <tabstop>scrollArea_roaming_counter</tabstop>
   <tabstop>checkBox_retainsettings</tabstop>
   <tabstop>checkBox_enableinterfacetooltips</tabstop>
