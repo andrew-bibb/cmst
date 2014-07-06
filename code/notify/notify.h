@@ -35,6 +35,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QStringList>
 # include <QtDBus/QtDBus>
 # include <QtDBus/QDBusInterface>
+# include <QTemporaryFile>
+# include <QIcon>
 
 //	Used for enum's local to this program
 namespace NOTIFYCLIENT
@@ -70,9 +72,9 @@ class NotifyClient : public QObject
 									QStringList,
 									QVariantMap hint,
 									qint32 expire_timeout = -1);
-			void sendNotification (QString, int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);
-			void sendNotification (QString, QString, int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);
-			void sendNotification (QString, QString, QString, int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);																
+			void sendNotification (QString, QIcon icon = QIcon(), int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);
+			void sendNotification (QString, QString, QIcon icon = QIcon(), int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);
+			void sendNotification (QString, QString, QString, QIcon icon = QIcon(), int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);																
 
     private:
 			// members
@@ -84,11 +86,13 @@ class NotifyClient : public QObject
 			QStringList sl_capabilities;
 			bool b_validconnection;
 			quint32 current_id;
+			QTemporaryFile tempfileicon;
 			
 			// functions
 			void getServerInformation();
 			void getCapabilities();
 			void closeNotification(quint32);
+			QString createTempIcon(QIcon);
 			
 		private slots:
 			void notificationClosed(quint32, quint32);

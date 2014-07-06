@@ -1,4 +1,3 @@
-
 /**************************** notify.cpp ******************************** 
 
 Code for a notify client to interface with a desktop notification 
@@ -29,8 +28,10 @@ DEALINGS IN THE SOFTWARE.
 
 # include <QtCore/QDebug>
 # include <QtDBus/QDBusConnection>
-#	include "./code/notify/notify.h"
 # include <QTextDocument>
+# include <QPixmap>
+
+#	include "./code/notify/notify.h"
                      
 #define DBUS_SERVICE "org.freedesktop.Notifications"
 #define DBUS_PATH "/org/freedesktop/Notifications"
@@ -98,7 +99,7 @@ void NotifyClient::notify (QString app_name, quint32 replaces_id, QString app_ic
 //	
 //
 //	Show notification with summary string
-void NotifyClient::sendNotification (QString arg_summary, int urgency, bool overwrite,  qint32 expire_timeout)
+void NotifyClient::sendNotification (QString arg_summary, QIcon icon, int urgency, bool overwrite,  qint32 expire_timeout)
 {
 	// make sure we have a connection we can send the notification to.
 	if (! b_validconnection) return;	
@@ -106,12 +107,12 @@ void NotifyClient::sendNotification (QString arg_summary, int urgency, bool over
 	// variables
 	QString app_name = "";
 	quint32 replaces_id = 0;
-	QString app_icon = "";
+	QString app_icon = createTempIcon(icon);
 	QString summary = arg_summary;
 	QString body = "";
 	QStringList actions = QStringList();
 	QVariantMap hints;
-	
+				
 	// set replaces_id
 	if (overwrite) replaces_id = current_id;
 	
@@ -130,7 +131,7 @@ void NotifyClient::sendNotification (QString arg_summary, int urgency, bool over
 
 //
 // Show notification with summary and app_name
-void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, int urgency, bool overwrite,  qint32 expire_timeout)
+void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, QIcon icon, int urgency, bool overwrite,  qint32 expire_timeout)
 {
 	// make sure we have a connection we can send the notification to.
 	if (! b_validconnection) return;	
@@ -138,7 +139,7 @@ void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, 
 	// variables
 	QString app_name = arg_app_name;
 	quint32 replaces_id = 0;
-	QString app_icon = "";
+	QString app_icon = createTempIcon(icon);
 	QString summary = arg_summary;
 	QString body = "";
 	QStringList actions = QStringList();
@@ -162,7 +163,7 @@ void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, 
 
 //
 // Show notification with summary, app_name, and body text
-void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, QString arg_body, int urgency, bool overwrite,  qint32 expire_timeout)
+void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, QString arg_body, QIcon icon, int urgency, bool overwrite,  qint32 expire_timeout)
 {
 	// make sure we have a connection we can send the notification to.
 	if (! b_validconnection) return;	
@@ -170,7 +171,7 @@ void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, 
 	// variables
 	QString app_name = arg_app_name;	
 	quint32 replaces_id = 0;
-	QString app_icon = "";
+	QString app_icon = createTempIcon(icon);
 	QString summary = arg_summary;
 	QString body = "";
 	QStringList actions = QStringList();
@@ -258,6 +259,27 @@ void NotifyClient::closeNotification(quint32 id)
 	return;
 }
 
+//
+// Function to create an icon in a temporary file
+QString NotifyClient::createTempIcon(QIcon icon)
+{
+	if (! icon.isNull() ) {
+		if (! sl_capabilities.contains ("icon-", Qt::CaseInsensitive) ) {
+			if (tempfileicon.exists() ) {
+				tempfileicon.close();
+				tempfileicon.remove();
+			}
+			if (tempfileicon.open() ) {
+				QPixmap px = icon.pixmap(QSize(16,16), QIcon::Normal, QIcon::On);
+				px.save(tempfileicon.fileName(),"PNG");
+				return QString("file://" + tempfileicon.fileName() );
+			}	// if tempfileicon could be opened
+		}	// if capabilities contains icon
+	}	// if icon is not null
+	
+	return QString("");
+} 
+
 /////////////////////////////// PRIVATE SLOTS /////////////////////////////////////
 //
 // Slot called when a notification was closed
@@ -265,7 +287,11 @@ void NotifyClient::closeNotification(quint32 id)
 void NotifyClient::notificationClosed(quint32 id, quint32 reason)
 {
 	
-	//qDebug() << "Notification closed signal received" << id << reason; 
+	// delete the tempfile icon if it ixists
+	if (tempfileicon.exists() ) {
+		tempfileicon.close();
+		tempfileicon.remove();
+	}	
 	
 	return;
 }
