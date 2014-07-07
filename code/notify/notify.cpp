@@ -1,3 +1,4 @@
+
 /**************************** notify.cpp ******************************** 
 
 Code for a notify client to interface with a desktop notification 
@@ -264,7 +265,7 @@ void NotifyClient::closeNotification(quint32 id)
 QString NotifyClient::createTempIcon(QIcon icon)
 {
 	if (! icon.isNull() ) {
-		if (! sl_capabilities.contains ("icon-", Qt::CaseInsensitive) ) {
+		if (sl_capabilities.contains ("icon-", Qt::CaseInsensitive) ) {
 			if (tempfileicon.exists() ) {
 				tempfileicon.close();
 				tempfileicon.remove();
