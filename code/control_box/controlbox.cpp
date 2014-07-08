@@ -1,3 +1,4 @@
+
 /**************************** controlbox.cpp ***************************
 /**************************** controlbox.cpp ***************************
 
@@ -147,7 +148,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     name = name.replace(0, 1, name.left(1).toUpper() );
     QString vendor = notifyclient->getServerVendor();
     vendor = vendor.replace(0, 1, vendor.left(1).toUpper() );
-    QString lab = tr("Using the %1 notification server version %2 by %3.<br>Server supports desktop Notification specification version %4")
+    QString lab = tr("%1 version %2 notification server by %3 detected on this system. This server supports desktop Notification specification version %4")
       .arg(name)
       .arg(notifyclient->getServerVersion() )
       .arg(vendor)
@@ -167,7 +168,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     iface_manager = new QDBusInterface(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, QDBusConnection::systemBus(), this); 
     if (! iface_manager->isValid() ) logErrors(CMST::Err_Invalid_Iface);
     else {
-    // Access connman.manager to retrieve the data
+			// Access connman.manager to retrieve the data
       this->managerRescan(CMST::Manager_All);
       
       // register the agent

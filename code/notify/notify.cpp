@@ -119,6 +119,7 @@ void NotifyClient::sendNotification (QString arg_summary, QIcon icon, int urgenc
   
   // assemble the hints
   hints.insert("urgency", QVariant::fromValue(static_cast<uchar>(urgency)) );
+  if (! app_icon.isEmpty() ) hints.insert("image-path", QVariant::fromValue(app_icon));
   
   QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
   
@@ -151,6 +152,7 @@ void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, 
   
   // assemble the hints
   hints.insert("urgency", QVariant::fromValue(static_cast<uchar>(urgency)) );
+  if (! app_icon.isEmpty() ) hints.insert("image-path", QVariant::fromValue(app_icon));
   
   QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
   
@@ -183,6 +185,7 @@ void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, 
   
   // assemble the hints
   hints.insert("urgency", QVariant::fromValue(static_cast<uchar>(urgency)) );
+  if (! app_icon.isEmpty() ) hints.insert("image-path", QVariant::fromValue(app_icon));
   
   // make sure we can display the text on this server
   if (sl_capabilities.contains("body", Qt::CaseInsensitive) ) {
