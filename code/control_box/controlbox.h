@@ -126,6 +126,7 @@ class ControlBox : public QDialog
 		QList<arrayElement>		services_list;
 		QList<arrayElement>		technologies_list;
 		QList<arrayElement>		wifi_list;
+		QList<arrayElement>		peer_list;
 		ConnmanAgent* agent;
 		ConnmanCounter* counter;	
 		NotifyClient* notifyclient;	
@@ -175,6 +176,7 @@ class ControlBox : public QDialog
 		void removePressed();
 		void dbsPropertyChanged(QString,QDBusVariant);
 		void dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage);
+		void dbsPeersChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage);
 		void dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage);
 		void dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage);
 		void dbsTechnologyAdded(QDBusObjectPath, QVariantMap);

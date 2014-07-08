@@ -113,6 +113,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   services_list.clear();
   technologies_list.clear();
   wifi_list.clear();
+  peer_list.clear();
   agent = new ConnmanAgent(this);
   counter = new ConnmanCounter(this);
   mvsrv_menu = new QMenu(this);
@@ -188,6 +189,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     // connect some dbus signals to our slots
       QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
       QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
+      QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PeersChanged", this, SLOT(dbsPeersChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
       QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
       QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
     
@@ -651,12 +653,65 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
       } // for
     } // if we needed to remove something
 
-  // clear the counters (if selected) and update the widgets'
+  // clear the counters (if selected) and update the widgets
   clearCounters();
   updateDisplayWidgets();
   
   return;
 }
+
+//
+// Slot called whenever DBUS issues a Peerschanged signal
+void ControlBox::dbsPeersChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
+{
+  // Process changed peers. Demarshall the raw QDBusMessage instead of vmap as it is easier.
+  if (! vmap.isEmpty() ) {  
+    QList<arrayElement> revised_list;
+    if (! getArray(revised_list, msg)) return;
+    
+    // merge the existing peers_list into the revised_list
+    // first find the original element that matches the revised
+    for (int i = 0; i < revised_list.size(); ++i) {
+      arrayElement revised_element = revised_list.at(i);
+      arrayElement original_element = {QDBusObjectPath(), QMap<QString,QVariant>()};
+      for (int j = 0; j < peer_list.size(); ++j) {
+        if (revised_element.objpath == peer_list.at(j).objpath) {
+          original_element = peer_list.at(j);
+          break;
+        } // if
+      } // j for
+      
+      // merge the new elementArray into the existing
+      if (! original_element.objpath.path().isEmpty()) {
+        QMapIterator<QString, QVariant> itr(revised_element.objmap);
+        while (itr.hasNext()) {
+          itr.next();
+          original_element.objmap.insert(itr.key(), itr.value());
+        } // while
+        
+        // now insert the element into the revised list
+        revised_list.replace(i, original_element);
+      } // if original element exists
+    } // i for
+    
+    // now copy the revised list to peer_list
+    peer_list.clear();
+    peer_list = revised_list;
+  } // vmap not empty    
+   
+  // process removed peers
+  if (! removed.isEmpty() ) {
+    for (int i = 0; i < peer_list.count(); ++i) {
+      if (removed.contains(peer_list.at(i).objpath) )
+        peer_list.removeAt(i);
+      } // for
+    } // if we needed to remove something
+
+  // update the widgets
+  updateDisplayWidgets();
+  
+  return;
+}    
 
 //
 // Slot called whenever DBUS issues a TechonlogyAdded signal
@@ -760,7 +815,8 @@ void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue
 }
 
 //  Slot to scan for wifi networks.  Called from a QTimer and it also
-//  can be called by functions as well.
+//  can be called by functions as well.  Results signaled by manager.ServicesChanged()
+//	except for P2P which will be signaled by manager.PeersChanged()
 void ControlBox::scanWifi()
 {
   // Make sure we got the technologies_list before we try to work with it.
