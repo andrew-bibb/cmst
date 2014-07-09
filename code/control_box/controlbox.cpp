@@ -1138,7 +1138,10 @@ void ControlBox::assemblePage1()
       
       QTableWidgetItem* qtwi01 = new QTableWidgetItem();
       st = technologies_list.at(row).objmap.value("Type").toString();
-      st = st.replace(0, 1, st.left(1).toUpper() );
+      if (st.contains("p2p", Qt::CaseInsensitive))
+				st = st.toUpper();
+			else
+				st = st.replace(0, 1, st.left(1).toUpper() );
       qtwi01->setText(st);
       qtwi01->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 1, qtwi01);
