@@ -153,7 +153,7 @@ class ControlBox : public QDialog
 		void assemblePage4();
 		void assembleTrayIcon();
 		void createSystemTrayIcon(bool);
-		void sendNotifications(const QString&, QIcon icon = QIcon(), QSystemTrayIcon::MessageIcon = QSystemTrayIcon::Information);
+		void sendNotifications(const QString&, const QString& body = QString(), const QString& iconpath = QString(), QSystemTrayIcon::MessageIcon = QSystemTrayIcon::Information);
 		bool getProperties();
 		bool getTechnologies();		
 		bool getServices();

@@ -30,7 +30,9 @@ DEALINGS IN THE SOFTWARE.
 # include <QtCore/QDebug>
 # include <QtDBus/QDBusConnection>
 # include <QTextDocument>
+# include <QIcon>
 # include <QPixmap>
+# include <QTemporaryFile>
 
 # include "./code/notify/notify.h"
                      
@@ -51,6 +53,7 @@ NotifyClient::NotifyClient(QObject* parent)
   sl_capabilities.clear();
   b_validconnection = false;
   current_id = 0;
+  this->init();
 
   // Create our client and connect to the notify server   
   if (! QDBusConnection::sessionBus().isConnected() ) qCritical("CMST - Cannot connect to the session bus.");
@@ -71,7 +74,24 @@ NotifyClient::NotifyClient(QObject* parent)
 
 /////////////////////////////////////// PUBLIC FUNCTIONS ////////////////////////////////
 //
-// Function to send a notification to the server.  This is basically a one to one correspondence
+// Function to initialize data members that are used to hold information sent to the server
+void NotifyClient::init()
+{
+	s_summary.clear();
+	s_app_name.clear();
+	s_body.clear();
+	s_icon.clear();
+	i_urgency = Nc::UrgencyNormal;
+	i_expire_timeout = -1;
+	b_overwrite = true;
+	
+	return;
+}
+	
+	
+	
+//
+// Function to send a notification to the server.  There is basically a one to one correspondence
 // of arguments to the org.freedesktop.Notifications.Notify method.  The arguments are mandatory
 // and must be arranged from outside this class. The getxxx functions may be used to obtain server
 // information for this purpose.
@@ -90,112 +110,62 @@ void NotifyClient::notify (QString app_name, quint32 replaces_id, QString app_ic
   return;
 }   
 
-// Convienence functions to send notifications.  These functions so some processing
+// Convienence function to send notifications.  This function does some processing
 // of the arguments.  In these functions:
 //    expire_timeout: The amount of time in milliseconds the message is shown.
 //                    A value of -1 means timeout is based on server's settings.
 //    overwrite     : Will overwrite the previous message sent from this function.
 //                    It will not overwrite notifications sent by other programs. 
 //
-//  
-//
-//  Show notification with summary string
-void NotifyClient::sendNotification (QString arg_summary, QIcon icon, int urgency, bool overwrite,  qint32 expire_timeout)
-{
-  // make sure we have a connection we can send the notification to.
-  if (! b_validconnection) return;  
-  
-  // variables
-  QString app_name = "";
-  quint32 replaces_id = 0;
-  QString app_icon = createTempIcon(icon);
-  QString summary = arg_summary;
-  QString body = "";
-  QStringList actions = QStringList();
-  QVariantMap hints;
-        
-  // set replaces_id
-  if (overwrite) replaces_id = current_id;
-  
-  // assemble the hints
-  hints.insert("urgency", QVariant::fromValue(static_cast<uchar>(urgency)) );
-  if (! app_icon.isEmpty() ) hints.insert("image-path", QVariant::fromValue(app_icon));
-  
-  QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
-  
-  if (reply.isValid() )
-    current_id = reply.value();
-  else
-    qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
-  
-  return;
-} 
-
-//
-// Show notification with summary and app_name
-void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, QIcon icon, int urgency, bool overwrite,  qint32 expire_timeout)
-{
-  // make sure we have a connection we can send the notification to.
-  if (! b_validconnection) return;  
-  
-  // variables
-  QString app_name = arg_app_name;
-  quint32 replaces_id = 0;
-  QString app_icon = createTempIcon(icon);
-  QString summary = arg_summary;
-  QString body = "";
-  QStringList actions = QStringList();
-  QVariantMap hints;
-  
-  // set replaces_id
-  if (overwrite) replaces_id = current_id;
-  
-  // assemble the hints
-  hints.insert("urgency", QVariant::fromValue(static_cast<uchar>(urgency)) );
-  if (! app_icon.isEmpty() ) hints.insert("image-path", QVariant::fromValue(app_icon));
-  
-  QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
-  
-  if (reply.isValid() )
-    current_id = reply.value();
-  else
-    qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
-  
-  return;
-} 
-
 //
 // Show notification with summary, app_name, and body text
-void NotifyClient::sendNotification (QString arg_summary, QString arg_app_name, QString arg_body, QIcon icon, int urgency, bool overwrite,  qint32 expire_timeout)
+void NotifyClient::sendNotification ()
 {
   // make sure we have a connection we can send the notification to.
   if (! b_validconnection) return;  
   
   // variables
-  QString app_name = arg_app_name;  
+  QString app_name = s_app_name;  
   quint32 replaces_id = 0;
-  QString app_icon = createTempIcon(icon);
-  QString summary = arg_summary;
-  QString body = "";
+  QString app_icon = "";
+  QString body = ""; 
+  QString summary = s_summary;
   QStringList actions = QStringList();
   QVariantMap hints;
+  int expire_timeout = i_expire_timeout;
   
   // set replaces_id
-  if (overwrite) replaces_id = current_id;
+  if (b_overwrite) replaces_id = current_id;
   
   // assemble the hints
-  hints.insert("urgency", QVariant::fromValue(static_cast<uchar>(urgency)) );
-  if (! app_icon.isEmpty() ) hints.insert("image-path", QVariant::fromValue(app_icon));
+  hints.clear();
+  hints.insert("urgency", QVariant::fromValue(static_cast<uchar>(i_urgency)) );
+  //if (! app_icon.isEmpty() ) hints.insert("image-path", QVariant::fromValue(app_icon));
   
   // make sure we can display the text on this server
   if (sl_capabilities.contains("body", Qt::CaseInsensitive) ) {
-    body = arg_body; 
+		body = s_body;
     if (! sl_capabilities.contains ("body-markup", Qt::CaseInsensitive) ) {
       QTextDocument td;
       td.setHtml(body);
       body = td.toPlainText();
     } // if server cannot display markup
   } // if capabilities contains body
+  
+  // process the icon, if we are using a fallback icon create a temporary file to hold it
+    QTemporaryFile tempfileicon;
+    if (! s_icon.isNull() ) {
+			if (sl_capabilities.contains ("icon-", Qt::CaseInsensitive) ) {
+				if ( QIcon::hasThemeIcon(s_icon) ) app_icon = s_icon;
+				else {
+					if (tempfileicon.open() ) {
+						QPixmap px = QPixmap(s_icon);
+						px.save(tempfileicon.fileName(),"PNG");
+						app_icon =  tempfileicon.fileName().prepend("file://");
+					} // if tempfileicon could be opened
+				} // else not a theme icon
+			} // if capabilities support icons
+		}	// if s_icon is not null
       
   QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
   
@@ -265,21 +235,21 @@ void NotifyClient::closeNotification(quint32 id)
 
 //
 // Function to create an icon in a temporary file
-QString NotifyClient::createTempIcon(QIcon icon)
+QString NotifyClient::createTempIcon(QString icon)
 {
-  if (! icon.isNull() ) {
-    if (sl_capabilities.contains ("icon-", Qt::CaseInsensitive) ) {
-      if (tempfileicon.exists() ) {
-        tempfileicon.close();
-        tempfileicon.remove();
-      }
-      if (tempfileicon.open() ) {
-        QPixmap px = icon.pixmap(QSize(16,16), QIcon::Normal, QIcon::On);
-        px.save(tempfileicon.fileName(),"PNG");
-        return QString("file://" + tempfileicon.fileName() );
-      } // if tempfileicon could be opened
-    } // if capabilities contains icon
-  } // if icon is not null
+  //if (! icon.isNull() ) {
+    //if (sl_capabilities.contains ("icon-", Qt::CaseInsensitive) ) {
+      //if (tempfileicon.exists() ) {
+        //tempfileicon.close();
+        //tempfileicon.remove();
+      //}
+      //if (tempfileicon.open() ) {
+        //QPixmap px = icon.pixmap(QSize(16,16), QIcon::Normal, QIcon::On);
+        //px.save(tempfileicon.fileName(),"PNG");
+        //return QString("file://" + tempfileicon.fileName() );
+      //} // if tempfileicon could be opened
+    //} // if capabilities contains icon
+  //} // if icon is not null
   
   return QString("");
 } 
@@ -290,13 +260,8 @@ QString NotifyClient::createTempIcon(QIcon icon)
 // Right now we don't do anything with the information
 void NotifyClient::notificationClosed(quint32 id, quint32 reason)
 {
-  
-  // delete the tempfile icon if it ixists
-  if (tempfileicon.exists() ) {
-    tempfileicon.close();
-    tempfileicon.remove();
-  } 
-  
+	// qDebug() << "notification closed signal received << id << reason;
+	
   return;
 }
 

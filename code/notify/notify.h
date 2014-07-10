@@ -35,11 +35,10 @@ DEALINGS IN THE SOFTWARE.
 # include <QStringList>
 # include <QtDBus/QtDBus>
 # include <QtDBus/QDBusInterface>
-# include <QTemporaryFile>
 # include <QIcon>
 
 //	Used for enum's local to this program
-namespace NOTIFYCLIENT
+namespace Nc
 {
   enum {
 		// urgency levels
@@ -63,8 +62,16 @@ class NotifyClient : public QObject
 			inline QString getServerVersion() {return s_version;}
 			inline QString getServerSpecVersion() {return s_spec_version;}
 			inline QStringList getServerCapabilities() {return sl_capabilities;}
+			inline void setSummary(QString s) {s_summary = s;}
+			inline void setAppName(QString s) {s_app_name = s;}
+			inline void setBody(QString s) {s_body = s;}
+			inline void setIcon(QString s) {s_icon = s;}
+			inline void setUrgency(int i) {i_urgency = i;}
+			inline void setExpireTimeout(int i) {i_expire_timeout = i;}
+			inline void setOverwrite(bool b) {b_overwrite = b;}
 			
-			void notify	(QString app_name, 
+			void init();
+			void notify	(QString, 
 									quint32,
 									QString,
 									QString,
@@ -72,9 +79,7 @@ class NotifyClient : public QObject
 									QStringList,
 									QVariantMap hint,
 									qint32 expire_timeout = -1);
-			void sendNotification (QString, QIcon icon = QIcon(), int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);
-			void sendNotification (QString, QString, QIcon icon = QIcon(), int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);
-			void sendNotification (QString, QString, QString, QIcon icon = QIcon(), int urgency = NOTIFYCLIENT::UrgencyNormal,  bool overwrite = true,  qint32 expire_timeout = -1);																
+			void sendNotification ();																
 
     private:
 			// members
@@ -86,13 +91,19 @@ class NotifyClient : public QObject
 			QStringList sl_capabilities;
 			bool b_validconnection;
 			quint32 current_id;
-			QTemporaryFile tempfileicon;
+			QString s_summary;
+			QString s_app_name;
+			QString s_body;
+			QString s_icon;
+			int i_urgency;
+			int i_expire_timeout;
+			bool b_overwrite;
 			
 			// functions
 			void getServerInformation();
 			void getCapabilities();
 			void closeNotification(quint32);
-			QString createTempIcon(QIcon);
+			QString createTempIcon(QString);
 			
 		private slots:
 			void notificationClosed(quint32, quint32);
