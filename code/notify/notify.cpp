@@ -1,4 +1,3 @@
-
 /**************************** notify.cpp ******************************** 
 
 Code for a notify client to interface with a desktop notification 
@@ -33,6 +32,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QIcon>
 # include <QPixmap>
 # include <QTemporaryFile>
+# include <QFile>
 
 # include "./code/notify/notify.h"
                      
@@ -154,18 +154,20 @@ void NotifyClient::sendNotification ()
   
   // process the icon, if we are using a fallback icon create a temporary file to hold it
     QTemporaryFile tempfileicon;
-    if (! s_icon.isNull() ) {
+    if (! s_icon.isEmpty() ) {
 			if (sl_capabilities.contains ("icon-", Qt::CaseInsensitive) ) {
 				if ( QIcon::hasThemeIcon(s_icon) ) app_icon = s_icon;
 				else {
-					if (tempfileicon.open() ) {
-						QPixmap px = QPixmap(s_icon);
-						px.save(tempfileicon.fileName(),"PNG");
-						app_icon =  tempfileicon.fileName().prepend("file://");
-					} // if tempfileicon could be opened
+					if (QFile::exists(s_icon) ) {
+						if (tempfileicon.open() ) {
+							QPixmap px = QPixmap(s_icon);
+							px.save(tempfileicon.fileName(),"PNG");
+							app_icon =  tempfileicon.fileName().prepend("file://");
+						} // if tempfileicon could be opened
+					}	// if s_icon exists as a disk file
 				} // else not a theme icon
 			} // if capabilities support icons
-		}	// if s_icon is not null
+		}	// if s_icon is not empty
       
   QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
   
@@ -232,27 +234,6 @@ void NotifyClient::closeNotification(quint32 id)
   
   return;
 }
-
-//
-// Function to create an icon in a temporary file
-QString NotifyClient::createTempIcon(QString icon)
-{
-  //if (! icon.isNull() ) {
-    //if (sl_capabilities.contains ("icon-", Qt::CaseInsensitive) ) {
-      //if (tempfileicon.exists() ) {
-        //tempfileicon.close();
-        //tempfileicon.remove();
-      //}
-      //if (tempfileicon.open() ) {
-        //QPixmap px = icon.pixmap(QSize(16,16), QIcon::Normal, QIcon::On);
-        //px.save(tempfileicon.fileName(),"PNG");
-        //return QString("file://" + tempfileicon.fileName() );
-      //} // if tempfileicon could be opened
-    //} // if capabilities contains icon
-  //} // if icon is not null
-  
-  return QString("");
-} 
 
 /////////////////////////////// PRIVATE SLOTS /////////////////////////////////////
 //

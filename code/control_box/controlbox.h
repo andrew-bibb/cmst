@@ -153,7 +153,7 @@ class ControlBox : public QDialog
 		void assemblePage4();
 		void assembleTrayIcon();
 		void createSystemTrayIcon(bool);
-		void sendNotifications(const QString&, const QString& body = QString(), const QString& iconpath = QString(), QSystemTrayIcon::MessageIcon = QSystemTrayIcon::Information);
+		void sendNotifications();
 		bool getProperties();
 		bool getTechnologies();		
 		bool getServices();
@@ -163,7 +163,8 @@ class ControlBox : public QDialog
 		void logErrors(const quint8&);
 		QString readResourceText(const char*);
 		QDBusObjectPath serviceOnline();
-		void clearCounters();  
+		void clearCounters();
+		void serviceChangedNotification(QString);  
 
   private slots:
   	void	updateDisplayWidgets();

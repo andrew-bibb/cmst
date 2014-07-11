@@ -1,5 +1,3 @@
-
-/**************************** controlbox.cpp ***************************
 /**************************** controlbox.cpp ***************************
 
 Code to manage the primary user interface to include the QDialog the
@@ -136,7 +134,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   counter_accuracy = 1024;  // number of kb for counter updates
   counter_period = 10;      // number of seconds for counter updates
 
-  // connect counter signal to  the counterUpdated slot before we register the counter, assuming counters are not disabled
+  // connect counter signal to the counterUpdated slot before we register the counter, assuming counters are not disabled
   if (! parser.isSet("disable-counters"))
     connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
   
@@ -534,16 +532,16 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
     
   // offlinemode property
   if (name.contains("OfflineMode", Qt::CaseInsensitive)) {
-    if (value.toBool()) sendNotifications(
-      QString(tr("Offline Mode Engaged")),
-      QString(),
-      QString(":/icons/images/interface/golfball_green.png"),
-      QSystemTrayIcon::Information );           
-    else sendNotifications(
-      QString(tr("Offline Mode Disabled")),
-      QString(),
-      QString(":/icons/images/interface/golfball_red.png"),
-      QSystemTrayIcon::Information ); 
+    notifyclient->init();
+    if (value.toBool()) {
+			notifyclient->setSummary(tr("Offline Mode Engaged"));
+      notifyclient->setIcon(":/icons/images/interface/golfball_green.png");
+		}
+    else {
+			notifyclient->setSummary(tr("Offline Mode Disabled"));
+      notifyclient->setIcon(":/icons/images/interface/golfball_red.png");
+		}
+		this->sendNotifications();
   } // if contains offlinemode
       
   return;
@@ -580,7 +578,7 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
         
         // now insert the element into the revised list
         revised_list.replace(i, original_element);
-      } // if original element exists
+      } // if original element is not empty
     } // i for
     
     // now copy the revised list to services_list
@@ -599,6 +597,8 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
   // clear the counters (if selected) and update the widgets
   clearCounters();
   updateDisplayWidgets();
+  managerRescan(CMST::Manager_Services);	// used to connect service object signals to dbsServicePropertyChanged() slot
+  if (services_list.count() > 0 ) serviceChangedNotification(services_list.at(0).objpath.path() ); 
   
   return;
 }
@@ -725,54 +725,18 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
     
   // process errrors
   if (property.contains("Error", Qt::CaseInsensitive) ) {
-    sendNotifications(
-      QString(tr("Service Error: %1")).arg(value.toString()),
-      QString(tr("Object Path: %1")).arg(s_path),
-      QString(":/icons/images/interface/cancel.png"),
-      QSystemTrayIcon::Critical);     
+    notifyclient->init();
+		notifyclient->setSummary(QString(tr("Service Error: %1")).arg(value.toString()) );
+    notifyclient->setBody(QString(tr("Object Path: %1")).arg(s_path) );
+    notifyclient->setIcon(":/icons/images/interface/cancel.png");
+    notifyclient->setUrgency(Nc::UrgencyCritical);
+    this->sendNotifications();
   }
 
   // Send notifications if state property changed
   if (property.contains("State", Qt::CaseInsensitive)) {
-		QString type;
-		QString name;
-		QString state;
-		QString iconpath;
-		
-		// get the map associated with the changed service
-		for (int i = 0; i < services_list.count(); ++i) {
-			if (s_path.contains(services_list.at(i).objpath.path(), Qt::CaseSensitive) ) {
-				QMap<QString,QVariant> map = services_list.at(i).objmap;
-		    type = services_list.at(i).objmap.value("Type").toString();
-        type = type.replace(0, 1, type.left(1).toUpper() );
-        name = services_list.at(i).objmap.value("Name").toString();
-        name = name.replace(0, 1, name.left(1).toUpper() );
-        state = services_list.at(i).objmap.value("State").toString();
-        state = state.replace(0, 1, state.left(1).toUpper() );
-        break;
-			}	// if
-		}	// for
-		
-		// notification text and icons
-		if (type.contains("wifi", Qt::CaseInsensitive)) {
-			if (b_useicontheme)
-				iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wl000.png");
-			else
-				iconpath = QString(":/icons/images/systemtray/wl000.png");
-		}	// if wifi
-		else { 
-			if (b_useicontheme) 
-				iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wired_established.png");
-			else
-				iconpath = QString(":/icons/images/systemtray/wired_established.png");
-		}	// else probably wired
-
-		sendNotifications(
-		QString(tr("%1 (%2) Network")).arg(type).arg(name),
-		QString(tr("Connection: %1")).arg(state),
-		iconpath,
-		QSystemTrayIcon::Information );
-	}	// name contains state
+		 serviceChangedNotification(s_path);
+	 }
 	   
   return;
 }
@@ -1524,22 +1488,23 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 
 //
 // Function to show notifications (if desired by the user). Called from
-// the functions we connect dbus signals to, for instance 
-// dbsPropertyChanged(). 
-void ControlBox::sendNotifications(const QString& summary, const QString& body, const QString& iconpath, QSystemTrayIcon::MessageIcon sticon)
+// the functions we connect dbus signals to, for instance dbsPropertyChanged().
+// The notifyclient class is used to store data for display from both
+// the systemtrayicon and the notification server.  
+void ControlBox::sendNotifications()
 {
   // if we want system tray notifications
   if (ui.checkBox_systemtraynotifications->isChecked() && QSystemTrayIcon::isSystemTrayAvailable() ) { 
-    trayicon->showMessage(PROGRAM_NAME, QString(summary + "\n" + body), sticon);
+    QSystemTrayIcon::MessageIcon sticon = QSystemTrayIcon::NoIcon;
+    if (notifyclient->getUrgency() == Nc::UrgencyCritical) sticon = QSystemTrayIcon::Warning;
+    else sticon = QSystemTrayIcon::Information;
+    
+    if (notifyclient->getBody().isEmpty() )  trayicon->showMessage(PROGRAM_NAME, notifyclient->getSummary(), sticon);
+    else trayicon->showMessage(PROGRAM_NAME,  QString(notifyclient->getSummary() + "\n" + notifyclient->getBody()), sticon);
   }
   
   // if we want notify daemon notifications
   if (ui.checkBox_notifydaemon->isChecked() && notifyclient->isValid() ) {
-    notifyclient->init();
-    notifyclient->setSummary(summary);
-    notifyclient->setBody(body);
-    notifyclient->setAppName(LONG_NAME);
-    notifyclient->setIcon(iconpath);
     notifyclient->sendNotification();
   }
   return;
@@ -1788,4 +1753,52 @@ void ControlBox::clearCounters()
   } 
   
   return;
+}
+
+//
+// Function to create a notification when a service changes.  Called from dbsServicesChanged()
+// and from dbsServicePropertyChanged()
+void ControlBox::serviceChangedNotification(QString objpath)
+{
+	// local variables
+	QString type;
+	QString name;
+	QString state;
+	QString iconpath;
+	
+	// get the map associated with the changed service
+	for (int i = 0; i < services_list.count(); ++i) {
+		if (objpath.contains(services_list.at(i).objpath.path(), Qt::CaseSensitive) ) {
+			QMap<QString,QVariant> map = services_list.at(i).objmap;
+	    type = services_list.at(i).objmap.value("Type").toString();
+			type = type.replace(0, 1, type.left(1).toUpper() );
+			name = services_list.at(i).objmap.value("Name").toString();
+			name = name.replace(0, 1, name.left(1).toUpper() );
+			state = services_list.at(i).objmap.value("State").toString();
+			state = state.replace(0, 1, state.left(1).toUpper() );
+			break;
+		}	// if
+	}	// for
+	
+	// notification text and icons
+	if (type.contains("wifi", Qt::CaseInsensitive)) {
+		if (b_useicontheme)
+			iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wl000.png");
+		else
+			iconpath = QString(":/icons/images/systemtray/wl000.png");
+	}	// if wifi
+	else { 
+		if (b_useicontheme) 
+			iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wired_established.png");
+		else
+			iconpath = QString(":/icons/images/systemtray/wired_established.png");
+	}	// else probably wired
+
+	notifyclient->init();
+	notifyclient->setSummary(QString(tr("%1 (%2) Network")).arg(type).arg(name) );
+	notifyclient->setBody(QString(tr("Connection: %1")).arg(state) );
+	notifyclient->setIcon(iconpath);
+	this->sendNotifications();
+
+	return;
 }

@@ -63,10 +63,15 @@ class NotifyClient : public QObject
 			inline QString getServerSpecVersion() {return s_spec_version;}
 			inline QStringList getServerCapabilities() {return sl_capabilities;}
 			inline void setSummary(QString s) {s_summary = s;}
+			inline QString getSummary() {return s_summary;}
 			inline void setAppName(QString s) {s_app_name = s;}
+			inline QString getAppName() {return s_app_name;}
 			inline void setBody(QString s) {s_body = s;}
+			inline QString getBody() {return s_body;}
 			inline void setIcon(QString s) {s_icon = s;}
+			inline QString getIcon() {return s_icon;}
 			inline void setUrgency(int i) {i_urgency = i;}
+			inline int getUrgency() {return i_urgency;}
 			inline void setExpireTimeout(int i) {i_expire_timeout = i;}
 			inline void setOverwrite(bool b) {b_overwrite = b;}
 			
@@ -79,7 +84,7 @@ class NotifyClient : public QObject
 									QStringList,
 									QVariantMap hint,
 									qint32 expire_timeout = -1);
-			void sendNotification ();																
+			void sendNotification();																
 
     private:
 			// members
@@ -103,7 +108,6 @@ class NotifyClient : public QObject
 			void getServerInformation();
 			void getCapabilities();
 			void closeNotification(quint32);
-			QString createTempIcon(QString);
 			
 		private slots:
 			void notificationClosed(quint32, quint32);
