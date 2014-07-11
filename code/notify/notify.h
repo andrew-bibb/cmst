@@ -28,7 +28,7 @@ DEALINGS IN THE SOFTWARE.
 
 
 # ifndef NOTIFY_CLIENT
-#	define NOTIFY_CLIENT
+# define NOTIFY_CLIENT
 
 # include <QObject>
 # include <QString>
@@ -37,16 +37,16 @@ DEALINGS IN THE SOFTWARE.
 # include <QtDBus/QDBusInterface>
 # include <QIcon>
 
-//	Used for enum's local to this program
+//  Used for enum's local to this program
 namespace Nc
 {
   enum {
-		// urgency levels
-		UrgencyLow				= 0,
-		UrgencyNormal 		= 1,
-		UrgencyCritical		=	2
-  };	
-} // namespace		
+    // urgency levels
+    UrgencyLow        = 0,
+    UrgencyNormal     = 1,
+    UrgencyCritical   = 2
+  };  
+} // namespace    
 
 
 class NotifyClient : public QObject
@@ -55,63 +55,63 @@ class NotifyClient : public QObject
     Q_CLASSINFO("D-Bus Interface", "org.freedesktop.Notifications")
  
     public:
-			NotifyClient(QObject*);
-			inline bool isValid() {return b_validconnection;}
-			inline QString getServerName() {return s_name;}
-			inline QString getServerVendor() {return s_vendor;}
-			inline QString getServerVersion() {return s_version;}
-			inline QString getServerSpecVersion() {return s_spec_version;}
-			inline QStringList getServerCapabilities() {return sl_capabilities;}
-			inline void setSummary(QString s) {s_summary = s;}
-			inline QString getSummary() {return s_summary;}
-			inline void setAppName(QString s) {s_app_name = s;}
-			inline QString getAppName() {return s_app_name;}
-			inline void setBody(QString s) {s_body = s;}
-			inline QString getBody() {return s_body;}
-			inline void setIcon(QString s) {s_icon = s;}
-			inline QString getIcon() {return s_icon;}
-			inline void setUrgency(int i) {i_urgency = i;}
-			inline int getUrgency() {return i_urgency;}
-			inline void setExpireTimeout(int i) {i_expire_timeout = i;}
-			inline void setOverwrite(bool b) {b_overwrite = b;}
-			
-			void init();
-			void notify	(QString, 
-									quint32,
-									QString,
-									QString,
-									QString,
-									QStringList,
-									QVariantMap hint,
-									qint32 expire_timeout = -1);
-			void sendNotification();																
+      NotifyClient(QObject*);
+      inline bool isValid() {return b_validconnection;}
+      inline QString getServerName() {return s_name;}
+      inline QString getServerVendor() {return s_vendor;}
+      inline QString getServerVersion() {return s_version;}
+      inline QString getServerSpecVersion() {return s_spec_version;}
+      inline QStringList getServerCapabilities() {return sl_capabilities;}
+      inline void setSummary(QString s) {s_summary = s;}
+      inline QString getSummary() {return s_summary;}
+      inline void setAppName(QString s) {s_app_name = s;}
+      inline QString getAppName() {return s_app_name;}
+      inline void setBody(QString s) {s_body = s;}
+      inline QString getBody() {return s_body;}
+      inline void setIcon(QString s) {s_icon = s;}
+      inline QString getIcon() {return s_icon;}
+      inline void setUrgency(int i) {i_urgency = i;}
+      inline int getUrgency() {return i_urgency;}
+      inline void setExpireTimeout(int i) {i_expire_timeout = i;}
+      inline void setOverwrite(bool b) {b_overwrite = b;}
+      
+      void init();
+      void notify (QString, 
+                  quint32,
+                  QString,
+                  QString,
+                  QString,
+                  QStringList,
+                  QVariantMap hint,
+                  qint32 expire_timeout = -1);
+      void sendNotification();                                
 
     private:
-			// members
-			QDBusInterface* notifyclient;
-			QString s_name;
-			QString s_vendor;
-			QString s_version;
-			QString s_spec_version;
-			QStringList sl_capabilities;
-			bool b_validconnection;
-			quint32 current_id;
-			QString s_summary;
-			QString s_app_name;
-			QString s_body;
-			QString s_icon;
-			int i_urgency;
-			int i_expire_timeout;
-			bool b_overwrite;
-			
-			// functions
-			void getServerInformation();
-			void getCapabilities();
-			void closeNotification(quint32);
-			
-		private slots:
-			void notificationClosed(quint32, quint32);
-			void actionInvoked(quint32, QString);
+      // members
+      QDBusInterface* notifyclient;
+      QString s_name;
+      QString s_vendor;
+      QString s_version;
+      QString s_spec_version;
+      QStringList sl_capabilities;
+      bool b_validconnection;
+      quint32 current_id;
+      QString s_summary;
+      QString s_app_name;
+      QString s_body;
+      QString s_icon;
+      int i_urgency;
+      int i_expire_timeout;
+      bool b_overwrite;
+      
+      // functions
+      void getServerInformation();
+      void getCapabilities();
+      void closeNotification(quint32);
+      
+    private slots:
+      void notificationClosed(quint32, quint32);
+      void actionInvoked(quint32, QString);
 
 };    
 
