@@ -155,16 +155,16 @@ void NotifyClient::sendNotification ()
   // process the icon, if we are using a fallback icon create a temporary file to hold it
     QTemporaryFile tempfileicon;
     if (! s_icon.isEmpty() ) {
-			if (sl_capabilities.contains ("icon-", Qt::CaseInsensitive) ) {
+			if (sl_capabilities.filter("icon-", Qt::CaseInsensitive).count() > 0 ) {
 				if ( QIcon::hasThemeIcon(s_icon) ) app_icon = s_icon;
 				else {
-					if (QFile::exists(s_icon) ) {
+					//if (QFile::exists(s_icon) ) {
 						if (tempfileicon.open() ) {
 							QPixmap px = QPixmap(s_icon);
 							px.save(tempfileicon.fileName(),"PNG");
 							app_icon =  tempfileicon.fileName().prepend("file://");
 						} // if tempfileicon could be opened
-					}	// if s_icon exists as a disk file
+					//}	// if s_icon exists as a disk file
 				} // else not a theme icon
 			} // if capabilities support icons
 		}	// if s_icon is not empty
