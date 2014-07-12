@@ -1,0 +1,17 @@
+cmst (2014.07.01-ppa1) trusty; urgency=low
+
+  * New release
+
+ -- Moritz Heiber <hello@heiber.im>  Wed, 09 Jul 2014 10:54:16 +0200
+
+cmst (2014.06.14-ppa2) trusty; urgency=low
+
+  * Corrected dependency issue
+
+ -- Moritz Heiber <hello@heiber.im>  Wed, 25 Jun 2014 14:10:29 +0200
+
+cmst (2014.06.14-ppa1) trusty; urgency=low
+
+  * Initial release
+
+ -- Moritz Heiber <hello@heiber.im>  Wed, 25 Jun 2014 13:55:27 +0200
