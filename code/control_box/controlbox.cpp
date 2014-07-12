@@ -723,7 +723,9 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
   if (property.contains("State", Qt::CaseInsensitive)) {
      serviceChangedNotification(s_path);
    }
-     
+  
+  updateDisplayWidgets();
+  
   return;
 }
 
@@ -811,23 +813,47 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 //  Called when our custom idButton in the powered cell in the page 1 technology tableWidget is clicked
 void ControlBox::togglePowered(QString object_id, bool checkstate)
 { 
-  
-  QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
+  // see if we have a peer object
+  bool b_peertoggled = false;
+  for (int i = 0; i < peer_list.count(); ++i) {
+		if (peer_list.at(i).objpath.path().contains(object_id, Qt::CaseInsensitive)) {
+			QDBusInterface* iface_peer = new QDBusInterface (DBUS_SERVICE, object_id, "net.connman.Peer", QDBusConnection::systemBus(), this);
 
-  QList<QVariant> vlist;
-  vlist.clear();
-  vlist << QVariant("Powered") << QVariant::fromValue(QDBusVariant(checkstate) );
+		  QDBusMessage reply = iface_peer->call(QDBus::AutoDetect, (checkstate ? "Connect" : "Disconnect") );
+		  if (reply.type() != QDBusMessage::ReplyMessage)
+		    QMessageBox::warning(this, tr("CMST Warning"),
+		    tr("<center><b>We received a DBUS reply message indicating an error while trying to %1 the Peer.</b></center>"                       
+		       "<p>The powered state of the technology will not be changed."
+		       "<br><br>Error Name: %2<br><br>Error Message: %3").arg(checkstate ? tr("Connect") : tr("Disconnect")).arg(reply.errorName()).arg(reply.errorMessage())
+		    );	// if reply was an error
+		    
+				b_peertoggled = true;
+				
+				// cleanup
+				iface_peer->deleteLater();
+				
+				break;
+			}	// if object id matched
+		}	//	for loop looking for objects		
 
-  QDBusMessage reply = iface_tech->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
-  if (reply.type() != QDBusMessage::ReplyMessage)
-    QMessageBox::warning(this, tr("CMST Warning"),
-    tr("<center><b>We received a DBUS reply message indicating an error while trying to send the toggle power request to connman.</b></center>"                       
-       "<p>The powered state of the technology will not be changed."
-       "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage())
-    );
-    
-  // cleanup
-  iface_tech->deleteLater();
+  if (! b_peertoggled) {
+	  QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
+	
+	  QList<QVariant> vlist;
+	  vlist.clear();
+	  vlist << QVariant("Powered") << QVariant::fromValue(QDBusVariant(checkstate) );
+	
+	  QDBusMessage reply = iface_tech->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
+	  if (reply.type() != QDBusMessage::ReplyMessage)
+	    QMessageBox::warning(this, tr("CMST Warning"),
+	    tr("<center><b>We received a DBUS reply message indicating an error while trying to send the toggle power request to connman.</b></center>"                       
+	       "<p>The powered state of the technology will not be changed."
+	       "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage())
+	    );
+	    
+	  // cleanup
+	  iface_tech->deleteLater();
+	}	// if peer not toggled
   
   return;
 } 
