@@ -1821,6 +1821,7 @@ void ControlBox::createNotifyClient()
   // not successful, try again or abandon if counter is at limit
   else { 
     if (count < 3) {
+			ui.label_serverstatus->setText(tr("Attempt %1 of 3 looking for notification server.").arg(count));
       notifyclient->deleteLater();
     } // delete and try again
     else {
