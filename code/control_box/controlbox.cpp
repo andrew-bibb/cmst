@@ -1796,17 +1796,21 @@ void ControlBox::serviceChangedNotification(QString objpath)
 // notification server, if we fail after all three figure we can't do it.
 void ControlBox::createNotifyClient()
 {
-  // if we have a valid notifyclient return now
-  if (notifyclient != 0) {
-    if (notifyclient->isValid() ) return;
-  }
+	// initialize the counter and a bool value. Can't use isValid() function
+	// because of the deleteLater() call so sometimes the object does not exist. 
+	 static short count = 0;
+	 static bool b_valid = false;
+	 ++count; 
 
-  // set up the counter and create a notifyclient 
-  static short count = 1;
+  // if we have a valid notifyclient return now
+  if (b_valid) return;
+
+  // create a notifyclient 
   notifyclient = new NotifyClient(this); 
   
   // setup the notify server label if we were successful in finding and connecting to a server
   if (notifyclient->isValid() ) {
+		b_valid = true;
     QString name = notifyclient->getServerName().toLower();
     name = name.replace(0, 1, name.left(1).toUpper() );
     QString vendor = notifyclient->getServerVendor();
@@ -1831,7 +1835,6 @@ void ControlBox::createNotifyClient()
     } // else last time
   } // else we don't have a valid client.
   
-  ++count; 
   return;
 }
    
