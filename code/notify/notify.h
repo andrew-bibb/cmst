@@ -26,6 +26,21 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/  
 
+/* Usage is very similar to notify-send. Create a notifyclient instance.
+ * During creation the constructor will try to connect to a notification
+ * server.  You can test if this was successful by calling the isValid()
+ * function.  If sussessful you may also use the getxxx functions to 
+ * return information about the server.
+ * 
+ * To send a notification initialize the client using the init() function.
+ * Set the items you wish to send using the setxxx functions.  To show
+ * the notification call sendNotification().  
+ * 
+ * This class may also be used to store the information you saved to be
+ * retrieved by the various getxxx functions.  This information can be used
+ * for instance to show a popup from the systemtray icon.
+ */
+   
 
 # ifndef NOTIFY_CLIENT
 # define NOTIFY_CLIENT
@@ -62,28 +77,31 @@ class NotifyClient : public QObject
       inline QString getServerVersion() {return s_version;}
       inline QString getServerSpecVersion() {return s_spec_version;}
       inline QStringList getServerCapabilities() {return sl_capabilities;}
+      
       inline void setSummary(QString s) {s_summary = s;}
-      inline QString getSummary() {return s_summary;}
       inline void setAppName(QString s) {s_app_name = s;}
-      inline QString getAppName() {return s_app_name;}
       inline void setBody(QString s) {s_body = s;}
-      inline QString getBody() {return s_body;}
       inline void setIcon(QString s) {s_icon = s;}
-      inline QString getIcon() {return s_icon;}
       inline void setUrgency(int i) {i_urgency = i;}
-      inline int getUrgency() {return i_urgency;}
       inline void setExpireTimeout(int i) {i_expire_timeout = i;}
       inline void setOverwrite(bool b) {b_overwrite = b;}
       
+      inline QString getSummary() {return s_summary;}
+      inline QString getAppName() {return s_app_name;}
+      inline QString getBody() {return s_body;}
+      inline QString getIcon() {return s_icon;}
+      inline int getUrgency() {return i_urgency;}
+      inline int getExpireTimeout() {return i_expire_timeout;}
+      
       void init();
-      void notify (QString, 
-                  quint32,
-                  QString,
-                  QString,
-                  QString,
-                  QStringList,
-                  QVariantMap hint,
-                  qint32 expire_timeout = -1);
+      //void notify (QString, 
+                  //quint32,
+                  //QString,
+                  //QString,
+                  //QString,
+                  //QStringList,
+                  //QVariantMap hint,
+                  //qint32 expire_timeout = -1);
       void sendNotification();                                
 
     private:

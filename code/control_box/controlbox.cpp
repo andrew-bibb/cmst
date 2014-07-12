@@ -117,7 +117,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   mvsrv_menu = new QMenu(this);
   QString s_app = PROGRAM_NAME; 
   settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
-  notifyclient = new NotifyClient(this);
+  notifyclient = 0;
+ 
 
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request")); 
@@ -141,33 +142,18 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // restore GUI settings
   this->readSettings(); 
   
-  // setup the notify server label
-  if (notifyclient->isValid() ) {
-    QString name = notifyclient->getServerName().toLower();
-    name = name.replace(0, 1, name.left(1).toUpper() );
-    QString vendor = notifyclient->getServerVendor();
-    vendor = vendor.replace(0, 1, vendor.left(1).toUpper() );
-    QString lab = tr("%1 version %2 notification server by %3 detected on this system. This server supports desktop Notification specification version %4")
-      .arg(name)
-      .arg(notifyclient->getServerVersion() )
-      .arg(vendor)
-      .arg(notifyclient->getServerSpecVersion() );
-    ui.label_serverstatus->setText(lab);    
-  }
-  else {
-    ui.label_serverstatus->setText(tr("Unable to find or connect to a Notification server."));
-    ui.checkBox_notifydaemon->setChecked(false);
-    ui.checkBox_notifydaemon->setEnabled(false);
-  }
-       
-  
+  // create the notifyclient, make three tries; at 1/10 second, 2 seconds and 8 seconds 
+  QTimer::singleShot(100, this, SLOT(createNotifyClient()));
+  QTimer::singleShot(2 * 1000, this, SLOT(createNotifyClient()));
+  QTimer::singleShot(8 * 1000, this, SLOT(createNotifyClient()));
+      
   // setup the dbus interface to connman.manager
   if (! QDBusConnection::systemBus().isConnected() ) logErrors(CMST::Err_No_DBus);
   else {  
     iface_manager = new QDBusInterface(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, QDBusConnection::systemBus(), this); 
     if (! iface_manager->isValid() ) logErrors(CMST::Err_Invalid_Iface);
     else {
-			// Access connman.manager to retrieve the data
+      // Access connman.manager to retrieve the data
       this->managerRescan(CMST::Manager_All);
       
       // register the agent
@@ -185,12 +171,12 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       }
     
     // connect some dbus signals to our slots
-      QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
-      QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
-      QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PeersChanged", this, SLOT(dbsPeersChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
-      QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
-      QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
-    
+    QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
+    QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
+    QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PeersChanged", this, SLOT(dbsPeersChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
+    QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
+    QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
+  
     // clear the counters if selected
     this->clearCounters();
     
@@ -534,14 +520,14 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
   if (name.contains("OfflineMode", Qt::CaseInsensitive)) {
     notifyclient->init();
     if (value.toBool()) {
-			notifyclient->setSummary(tr("Offline Mode Engaged"));
+      notifyclient->setSummary(tr("Offline Mode Engaged"));
       notifyclient->setIcon(":/icons/images/interface/golfball_green.png");
-		}
+    }
     else {
-			notifyclient->setSummary(tr("Offline Mode Disabled"));
+      notifyclient->setSummary(tr("Offline Mode Disabled"));
       notifyclient->setIcon(":/icons/images/interface/golfball_red.png");
-		}
-		this->sendNotifications();
+    }
+    this->sendNotifications();
   } // if contains offlinemode
       
   return;
@@ -597,7 +583,7 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
   // clear the counters (if selected) and update the widgets
   clearCounters();
   updateDisplayWidgets();
-  managerRescan(CMST::Manager_Services);	// used to connect service object signals to dbsServicePropertyChanged() slot
+  managerRescan(CMST::Manager_Services);  // used to connect service object signals to dbsServicePropertyChanged() slot
   if (services_list.count() > 0 ) serviceChangedNotification(services_list.at(0).objpath.path() ); 
   
   return;
@@ -726,7 +712,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
   // process errrors
   if (property.contains("Error", Qt::CaseInsensitive) ) {
     notifyclient->init();
-		notifyclient->setSummary(QString(tr("Service Error: %1")).arg(value.toString()) );
+    notifyclient->setSummary(QString(tr("Service Error: %1")).arg(value.toString()) );
     notifyclient->setBody(QString(tr("Object Path: %1")).arg(s_path) );
     notifyclient->setIcon(":/icons/images/interface/cancel.png");
     notifyclient->setUrgency(Nc::UrgencyCritical);
@@ -735,9 +721,9 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
 
   // Send notifications if state property changed
   if (property.contains("State", Qt::CaseInsensitive)) {
-		 serviceChangedNotification(s_path);
-	 }
-	   
+     serviceChangedNotification(s_path);
+   }
+     
   return;
 }
 
@@ -766,7 +752,7 @@ void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue
 
 //  Slot to scan for wifi networks.  Called from a QTimer and it also
 //  can be called by functions as well.  Results signaled by manager.ServicesChanged()
-//	except for P2P which will be signaled by manager.PeersChanged()
+//  except for P2P which will be signaled by manager.PeersChanged()
 void ControlBox::scanWifi()
 {
   // Make sure we got the technologies_list before we try to work with it.
@@ -825,6 +811,7 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 //  Called when our custom idButton in the powered cell in the page 1 technology tableWidget is clicked
 void ControlBox::togglePowered(QString object_id, bool checkstate)
 { 
+  
   QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
 
   QList<QVariant> vlist;
@@ -1089,9 +1076,9 @@ void ControlBox::assemblePage1()
       QTableWidgetItem* qtwi01 = new QTableWidgetItem();
       st = technologies_list.at(row).objmap.value("Type").toString();
       if (st.contains("p2p", Qt::CaseInsensitive))
-				st = st.toUpper();
-			else
-				st = st.replace(0, 1, st.left(1).toUpper() );
+        st = st.toUpper();
+      else
+        st = st.replace(0, 1, st.left(1).toUpper() );
       qtwi01->setText(st);
       qtwi01->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 1, qtwi01);
@@ -1760,45 +1747,91 @@ void ControlBox::clearCounters()
 // and from dbsServicePropertyChanged()
 void ControlBox::serviceChangedNotification(QString objpath)
 {
-	// local variables
-	QString type;
-	QString name;
-	QString state;
-	QString iconpath;
-	
-	// get the map associated with the changed service
-	for (int i = 0; i < services_list.count(); ++i) {
-		if (objpath.contains(services_list.at(i).objpath.path(), Qt::CaseSensitive) ) {
-			QMap<QString,QVariant> map = services_list.at(i).objmap;
-	    type = services_list.at(i).objmap.value("Type").toString();
-			type = type.replace(0, 1, type.left(1).toUpper() );
-			name = services_list.at(i).objmap.value("Name").toString();
-			name = name.replace(0, 1, name.left(1).toUpper() );
-			state = services_list.at(i).objmap.value("State").toString();
-			state = state.replace(0, 1, state.left(1).toUpper() );
-			break;
-		}	// if
-	}	// for
-	
-	// notification text and icons
-	if (type.contains("wifi", Qt::CaseInsensitive)) {
-		if (b_useicontheme)
-			iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wl000.png");
-		else
-			iconpath = QString(":/icons/images/systemtray/wl000.png");
-	}	// if wifi
-	else { 
-		if (b_useicontheme) 
-			iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wired_established.png");
-		else
-			iconpath = QString(":/icons/images/systemtray/wired_established.png");
-	}	// else probably wired
+  // local variables
+  QString type;
+  QString name;
+  QString state;
+  QString iconpath;
+  
+  // get the map associated with the changed service
+  for (int i = 0; i < services_list.count(); ++i) {
+    if (objpath.contains(services_list.at(i).objpath.path(), Qt::CaseSensitive) ) {
+      QMap<QString,QVariant> map = services_list.at(i).objmap;
+      type = services_list.at(i).objmap.value("Type").toString();
+      type = type.replace(0, 1, type.left(1).toUpper() );
+      name = services_list.at(i).objmap.value("Name").toString();
+      name = name.replace(0, 1, name.left(1).toUpper() );
+      state = services_list.at(i).objmap.value("State").toString();
+      state = state.replace(0, 1, state.left(1).toUpper() );
+      break;
+    } // if
+  } // for
+  
+  // notification text and icons
+  if (type.contains("wifi", Qt::CaseInsensitive)) {
+    if (b_useicontheme)
+      iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wl000.png");
+    else
+      iconpath = QString(":/icons/images/systemtray/wl000.png");
+  } // if wifi
+  else { 
+    if (b_useicontheme) 
+      iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wired_established.png");
+    else
+      iconpath = QString(":/icons/images/systemtray/wired_established.png");
+  } // else probably wired
 
-	notifyclient->init();
-	notifyclient->setSummary(QString(tr("%1 (%2) Network")).arg(type).arg(name) );
-	notifyclient->setBody(QString(tr("Connection: %1")).arg(state) );
-	notifyclient->setIcon(iconpath);
-	this->sendNotifications();
+  notifyclient->init();
+  notifyclient->setSummary(QString(tr("%1 (%2) Network")).arg(type).arg(name) );
+  notifyclient->setBody(QString(tr("Connection: %1")).arg(state) );
+  notifyclient->setIcon(iconpath);
+  this->sendNotifications();
 
-	return;
+  return;
 }
+
+//
+// Slot to create the notification client. Called from QTimers to give time for the notification server
+// to start up if this program is started automatically at boot.  We make three attempts at finding the
+// notification server, if we fail after all three figure we can't do it.
+void ControlBox::createNotifyClient()
+{
+  // if we have a valid notifyclient return now
+  if (notifyclient != 0) {
+    if (notifyclient->isValid() ) return;
+  }
+
+  // set up the counter and create a notifyclient 
+  static short count = 1;
+  notifyclient = new NotifyClient(this); 
+  
+  // setup the notify server label if we were successful in finding and connecting to a server
+  if (notifyclient->isValid() ) {
+    QString name = notifyclient->getServerName().toLower();
+    name = name.replace(0, 1, name.left(1).toUpper() );
+    QString vendor = notifyclient->getServerVendor();
+    vendor = vendor.replace(0, 1, vendor.left(1).toUpper() );
+    QString lab = tr("Detected %1 version %2 by %3 on this system. This server supports desktop Notification specification version %4")
+      .arg(name)
+      .arg(notifyclient->getServerVersion() )
+      .arg(vendor)
+      .arg(notifyclient->getServerSpecVersion() );
+    ui.label_serverstatus->setText(lab);    
+  }
+  // not successful, try again or abandon if counter is at limit
+  else { 
+    if (count < 3) {
+      notifyclient->deleteLater();
+    } // delete and try again
+    else {
+      ui.label_serverstatus->setText(tr("Unable to find or connect to a Notification server."));
+      ui.checkBox_notifydaemon->setChecked(false);
+      ui.checkBox_notifydaemon->setEnabled(false);
+    } // else last time
+  } // else we don't have a valid client.
+  
+  ++count; 
+  return;
+}
+   
+   

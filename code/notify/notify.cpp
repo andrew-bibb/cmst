@@ -88,27 +88,26 @@ void NotifyClient::init()
   return;
 }
   
-  
-  
 //
 // Function to send a notification to the server.  There is basically a one to one correspondence
 // of arguments to the org.freedesktop.Notifications.Notify method.  The arguments are mandatory
 // and must be arranged from outside this class. The getxxx functions may be used to obtain server
 // information for this purpose.
-void NotifyClient::notify (QString app_name, quint32 replaces_id, QString app_icon, QString summary, QString body, QStringList actions, QVariantMap hints, qint32 expire_timeout)
-{
-  // make sure we have a connection we can send the notification to.
-  if (! b_validconnection) return;
+/////////	COMMENTED OUT SINCE WE DON'T USE IT IN CMST /////////////////////
+//void NotifyClient::notify (QString app_name, quint32 replaces_id, QString app_icon, QString summary, QString body, QStringList actions, QVariantMap hints, qint32 expire_timeout)
+//{
+  //// make sure we have a connection we can send the notification to.
+  //if (! b_validconnection) return;
   
-  QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
+  //QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
   
-  if (reply.isValid() )
-    current_id = reply.value();
-  else
-    qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
+  //if (reply.isValid() )
+    //current_id = reply.value();
+  //else
+    //qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
   
-  return;
-}   
+  //return;
+//}   
 
 // Convienence function to send notifications.  This function does some processing
 // of the arguments.  In these functions:

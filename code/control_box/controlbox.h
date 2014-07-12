@@ -196,6 +196,7 @@ class ControlBox : public QDialog
 		void iconActivated(QSystemTrayIcon::ActivationReason reason);
 		void writeSettings();
 		void readSettings();
+		void createNotifyClient();
 };
 
 #endif
