@@ -142,10 +142,12 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // restore GUI settings
   this->readSettings(); 
   
+  //!!!!!!!! remove for now, may be causing crash at start up.  
   // create the notifyclient, make three tries; at 1/10 second, 2 seconds and 8 seconds 
-  QTimer::singleShot(100, this, SLOT(createNotifyClient()));
-  QTimer::singleShot(2 * 1000, this, SLOT(createNotifyClient()));
-  QTimer::singleShot(8 * 1000, this, SLOT(createNotifyClient()));
+  //QTimer::singleShot(100, this, SLOT(createNotifyClient()));
+  //QTimer::singleShot(2 * 1000, this, SLOT(createNotifyClient()));
+  //QTimer::singleShot(8 * 1000, this, SLOT(createNotifyClient()));
+  this->createNotifyClient();
       
   // setup the dbus interface to connman.manager
   if (! QDBusConnection::systemBus().isConnected() ) logErrors(CMST::Err_No_DBus);
@@ -1517,9 +1519,9 @@ void ControlBox::sendNotifications()
   }
   
   // if we want notify daemon notifications
-  if (ui.checkBox_notifydaemon->isChecked() && notifyclient->isValid() ) {
-    notifyclient->sendNotification();
-  }
+		if (ui.checkBox_notifydaemon->isChecked() && notifyclient->isValid() ) {
+			notifyclient->sendNotification();
+		}
   return;
 }
 
@@ -1816,6 +1818,7 @@ void ControlBox::serviceChangedNotification(QString objpath)
   return;
 }
 
+//!!!!!!!!!! remove multiple attempt code for now, may be causing crash at startup
 //
 // Slot to create the notification client. Called from QTimers to give time for the notification server
 // to start up if this program is started automatically at boot.  We make three attempts at finding the
@@ -1824,24 +1827,24 @@ void ControlBox::createNotifyClient()
 {
 	// initialize the counter and a bool value. Can't use isValid() function
 	// because of the deleteLater() call so sometimes the object does not exist. 
-	 static short count = 0;
-	 static bool b_valid = false;
-	 ++count; 
+	 //static short count = 0;
+	 //static bool b_valid = false;
+	 //++count; 
 
   // if we have a valid notifyclient return now
-  if (b_valid) return;
+  //if (b_valid) return;
 
   // create a notifyclient 
   notifyclient = new NotifyClient(this); 
   
   // setup the notify server label if we were successful in finding and connecting to a server
   if (notifyclient->isValid() ) {
-		b_valid = true;
+//		b_valid = true;
     QString name = notifyclient->getServerName().toLower();
     name = name.replace(0, 1, name.left(1).toUpper() );
     QString vendor = notifyclient->getServerVendor();
     vendor = vendor.replace(0, 1, vendor.left(1).toUpper() );
-    QString lab = tr("Detected %1 version %2 by %3 on this system. This server supports desktop Notification specification version %4")
+    QString lab = tr("Detected %1 version %2 by %3. This server supports desktop Notification specification version %4")
       .arg(name)
       .arg(notifyclient->getServerVersion() )
       .arg(vendor)
@@ -1850,15 +1853,15 @@ void ControlBox::createNotifyClient()
   }
   // not successful, try again or abandon if counter is at limit
   else { 
-    if (count < 3) {
-			ui.label_serverstatus->setText(tr("Attempt %1 of 3 looking for notification server.").arg(count));
-      notifyclient->deleteLater();
-    } // delete and try again
-    else {
+//    if (count < 3) {
+//			ui.label_serverstatus->setText(tr("Attempt %1 of 3 looking for notification server.").arg(count));
+//      notifyclient->deleteLater();
+//    } // delete and try again
+//    else {
       ui.label_serverstatus->setText(tr("Unable to find or connect to a Notification server."));
       ui.checkBox_notifydaemon->setChecked(false);
       ui.checkBox_notifydaemon->setEnabled(false);
-    } // else last time
+//    } // else last time
   } // else we don't have a valid client.
   
   return;
