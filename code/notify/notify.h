@@ -93,7 +93,7 @@ class NotifyClient : public QObject
       inline int getUrgency() {return i_urgency;}
       inline int getExpireTimeout() {return i_expire_timeout;}
       
-      bool connectToServer();
+      void connectToServer();
       void init();
       //void notify (QString, 
                   //quint32,

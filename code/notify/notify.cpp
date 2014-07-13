@@ -55,12 +55,14 @@ NotifyClient::NotifyClient(QObject* parent)
   current_id = 0;
   this->init();
 
-  // Create our client and connect to the notify server   
+  // Create our client and try to connect to the notify server
+  // if the connection to the server fails we can try again by calling 
+  // connectToServer()   
   if (! QDBusConnection::sessionBus().isConnected() )
-		qCritical("CMST - Cannot connect to the session bus.");
+    qCritical("CMST - Cannot connect to the session bus.");
   // else try to connect to a notification server
   else 
-		b_validconnection = connectToServer();
+		connectToServer();
     
   return;   
 }
@@ -68,21 +70,24 @@ NotifyClient::NotifyClient(QObject* parent)
 
 /////////////////////////////////////// PUBLIC FUNCTIONS ////////////////////////////////
 //
-// Function to connect to a notification server.  Return true if successful, false otherwise
-bool NotifyClient::connectToServer()
+// Function to connect to a notification server.
+void NotifyClient::connectToServer()
 {
+	// return now if we already have a valid connection
+  if (b_validconnection) return;
+    
   notifyclient = new QDBusInterface(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, QDBusConnection::sessionBus(), this); 
   if (notifyclient->isValid() ) {
     getServerInformation();
     getCapabilities();  
     QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "NotificationClosed", this, SLOT(notificationClosed(quint32, quint32)));
     QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "ActionInvoked", this, SLOT(actionInvoked(quint32, QString)));
-		return true;
-    } // if connection is valid	
+    b_validconnection = true;
+    } // if connection is valid 
   else {
-		notifyclient->deleteLater();
-		return false;
-	}
+    notifyclient->deleteLater();
+    b_validconnection = false;
+  }	// else connection not valid
 }
 //
 // Function to initialize data members that are used to hold information sent to the server
@@ -104,7 +109,7 @@ void NotifyClient::init()
 // of arguments to the org.freedesktop.Notifications.Notify method.  The arguments are mandatory
 // and must be arranged from outside this class. The getxxx functions may be used to obtain server
 // information for this purpose.
-/////////	COMMENTED OUT SINCE WE DON'T USE IT IN CMST /////////////////////
+///////// COMMENTED OUT SINCE WE DON'T USE IT IN CMST /////////////////////
 //void NotifyClient::notify (QString app_name, quint32 replaces_id, QString app_icon, QString summary, QString body, QStringList actions, QVariantMap hints, qint32 expire_timeout)
 //{
   //// make sure we have a connection we can send the notification to.
@@ -191,9 +196,13 @@ void NotifyClient::sendNotification ()
   
 /////////////////////////////////////// PRIVATE FUNCTIONS////////////////////////////////
 //
-//  Function to get information about the server
+//  Function to get information about the server and write results to data members
 void NotifyClient::getServerInformation()
 {
+  // return if we don't have valid connection
+  if (! b_validconnection) return; 
+  
+  // get the server information
   QDBusMessage reply = notifyclient->call(QLatin1String("GetServerInformation"));
   
   if (reply.type() == QDBusMessage::ReplyMessage) {
@@ -217,9 +226,13 @@ void NotifyClient::getServerInformation()
 }
 
 //
-// Function to get the capabilities of the server
+// Function to get the capabilities of the server and write to a qstringlist data member
 void NotifyClient::getCapabilities()
 {
+  // return if we don't have valid connection
+  if (! b_validconnection) return;  
+  
+  // get the server capabilities
   QDBusReply<QStringList> reply = notifyclient->call(QLatin1String("GetCapabilities") );
 
   if (reply.isValid()) 
@@ -234,6 +247,9 @@ void NotifyClient::getCapabilities()
 //  Function to force a close of a notification
 void NotifyClient::closeNotification(quint32 id)
 {
+  // return if we don't have valid connection
+  if (! b_validconnection) return; 
+  
   QDBusMessage reply = notifyclient->call(QLatin1String("CloseNotification", id));
   
   if (reply.type() == QDBusMessage::InvalidMessage)
