@@ -366,10 +366,14 @@ void ControlBox::moveService(QAction* act)
   
   // apply the movebefore or moveafter message to the source object
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this); 
-  if (mvsrv_menu->title() == ui.actionMove_Before->text())
-    iface_serv->call(QDBus::NoBlock, "MoveBefore", QVariant::fromValue(targetobj) );
-  else
-    iface_serv->call(QDBus::NoBlock, "MoveAfter", QVariant::fromValue(targetobj) );
+  if (iface_serv->isValid() ) {
+		if (mvsrv_menu->title() == ui.actionMove_Before->text()) {
+			QDBusMessage reply = iface_serv->call(QDBus::NoBlock, "MoveBefore", QVariant::fromValue(targetobj) );
+		}
+		else {
+			QDBusMessage reply = iface_serv->call(QDBus::NoBlock, "MoveAfter", QVariant::fromValue(targetobj) );
+		}
+	}	// iface_srv is valid
   
   iface_serv->deleteLater();
   
@@ -531,7 +535,60 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
     }
     this->sendNotifications();
   } // if contains offlinemode
-      
+  
+  if (name.contains("State", Qt::CaseInsensitive)) {
+		// local variables
+		QString type;
+		QString name;
+		QString state;
+		QString iconpath;
+	  
+	  // if there is at least 1 service
+	  if (services_list.count() > 0 ) {
+	      QMap<QString,QVariant> map = services_list.at(0).objmap;
+	      type = services_list.at(0).objmap.value("Type").toString();
+	      type = type.replace(0, 1, type.left(1).toUpper() );
+	      name = services_list.at(0).objmap.value("Name").toString();
+	      name = name.replace(0, 1, name.left(1).toUpper() );
+	      state = services_list.at(0).objmap.value("State").toString();
+	      state = state.replace(0, 1, state.left(1).toUpper() );
+	  
+		  // notification text and icons
+		  if (type.contains("wifi", Qt::CaseInsensitive)) {
+		    if (b_useicontheme)
+		      iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wl000.png");
+		    else
+		      iconpath = QString(":/icons/images/systemtray/wl000.png");
+		  } // if wifi
+		  else { 
+		    if (b_useicontheme) 
+		      iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wired_established.png");
+		    else
+		      iconpath = QString(":/icons/images/systemtray/wired_established.png");
+		  } // else probably wired
+		
+		  notifyclient->init();
+		  notifyclient->setSummary(tr("%1 (%2) Network").arg(type).arg(name) );
+		  notifyclient->setBody(tr("Connection: %1").arg(state) );
+		  notifyclient->setIcon(iconpath);
+		  this->sendNotifications();
+		}	// if services count > 
+		
+		// no services listed
+		else {
+			if (b_useicontheme)
+				iconpath = QIcon::hasThemeIcon("network-offline") ? QString("network-offline") : QString(":/icons/images/systemtray/connect_no.png") ;
+      else  
+        iconpath = QString(":/icons/images/systemtray/connect_no.png");
+        
+			notifyclient->init();
+			notifyclient->setSummary(tr("Connman State") );
+			notifyclient->setBody(tr("Connection: %1").arg(state) );   
+			notifyclient->setIcon(iconpath);
+			this->sendNotifications();
+		}	// else no services listed
+	}	// if state change
+        
   return;
 }
 
@@ -586,7 +643,6 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
   clearCounters();
   updateDisplayWidgets();
   managerRescan(CMST::Manager_Services);  // used to connect service object signals to dbsServicePropertyChanged() slot
-  if (services_list.count() > 0 ) serviceChangedNotification(services_list.at(0).objpath.path() ); 
   
   return;
 }
@@ -836,7 +892,6 @@ void ControlBox::togglePowered(QString object_id, bool checkstate)
     
   // cleanup
   iface_tech->deleteLater();
-//}	// if peer not toggled
   
   return;
 } 
@@ -1732,54 +1787,6 @@ void ControlBox::clearCounters()
     iface_serv->deleteLater();
   } 
   
-  return;
-}
-
-//
-// Function to create a notification when a service changes.  Called from dbsServicesChanged()
-// and from dbsServicePropertyChanged()
-void ControlBox::serviceChangedNotification(QString objpath)
-{
-  // local variables
-  QString type;
-  QString name;
-  QString state;
-  QString iconpath;
-  
-  // get the map associated with the changed service
-  for (int i = 0; i < services_list.count(); ++i) {
-    if (objpath.contains(services_list.at(i).objpath.path(), Qt::CaseSensitive) ) {
-      QMap<QString,QVariant> map = services_list.at(i).objmap;
-      type = services_list.at(i).objmap.value("Type").toString();
-      type = type.replace(0, 1, type.left(1).toUpper() );
-      name = services_list.at(i).objmap.value("Name").toString();
-      name = name.replace(0, 1, name.left(1).toUpper() );
-      state = services_list.at(i).objmap.value("State").toString();
-      state = state.replace(0, 1, state.left(1).toUpper() );
-      break;
-    } // if
-  } // for
-  
-  // notification text and icons
-  if (type.contains("wifi", Qt::CaseInsensitive)) {
-    if (b_useicontheme)
-      iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wl000.png");
-    else
-      iconpath = QString(":/icons/images/systemtray/wl000.png");
-  } // if wifi
-  else { 
-    if (b_useicontheme) 
-      iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wired_established.png");
-    else
-      iconpath = QString(":/icons/images/systemtray/wired_established.png");
-  } // else probably wired
-
-  notifyclient->init();
-  notifyclient->setSummary(QString(tr("%1 (%2) Network")).arg(type).arg(name) );
-  notifyclient->setBody(QString(tr("Connection: %1")).arg(state) );
-  notifyclient->setIcon(iconpath);
-  this->sendNotifications();
-
   return;
 }
 
