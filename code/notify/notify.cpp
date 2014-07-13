@@ -56,23 +56,34 @@ NotifyClient::NotifyClient(QObject* parent)
   this->init();
 
   // Create our client and connect to the notify server   
-  if (! QDBusConnection::sessionBus().isConnected() ) qCritical("CMST - Cannot connect to the session bus.");
-  else {  
-    notifyclient = new QDBusInterface(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, QDBusConnection::sessionBus(), this); 
-    if (notifyclient->isValid() ) {
-      getServerInformation();
-      getCapabilities();  
-      QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "NotificationClosed", this, SLOT(notificationClosed(quint32, quint32)));
-      QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "ActionInvoked", this, SLOT(actionInvoked(quint32, QString)));
-      b_validconnection = true;
-    } // if connection is valid
-  } // else could connect to the sessionBus
+  if (! QDBusConnection::sessionBus().isConnected() )
+		qCritical("CMST - Cannot connect to the session bus.");
+  // else try to connect to a notification server
+  else 
+		b_validconnection = connectToServer();
     
   return;   
 }
 
 
 /////////////////////////////////////// PUBLIC FUNCTIONS ////////////////////////////////
+//
+// Function to connect to a notification server.  Return true if successful, false otherwise
+bool NotifyClient::connectToServer()
+{
+  notifyclient = new QDBusInterface(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, QDBusConnection::sessionBus(), this); 
+  if (notifyclient->isValid() ) {
+    getServerInformation();
+    getCapabilities();  
+    QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "NotificationClosed", this, SLOT(notificationClosed(quint32, quint32)));
+    QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "ActionInvoked", this, SLOT(actionInvoked(quint32, QString)));
+		return true;
+    } // if connection is valid	
+  else {
+		notifyclient->deleteLater();
+		return false;
+	}
+}
 //
 // Function to initialize data members that are used to hold information sent to the server
 void NotifyClient::init()

@@ -70,7 +70,7 @@ class NotifyClient : public QObject
     Q_CLASSINFO("D-Bus Interface", "org.freedesktop.Notifications")
  
     public:
-      NotifyClient(QObject*);
+      NotifyClient(QObject*);   
       inline bool isValid() {return b_validconnection;}
       inline QString getServerName() {return s_name;}
       inline QString getServerVendor() {return s_vendor;}
@@ -93,6 +93,7 @@ class NotifyClient : public QObject
       inline int getUrgency() {return i_urgency;}
       inline int getExpireTimeout() {return i_expire_timeout;}
       
+      bool connectToServer();
       void init();
       //void notify (QString, 
                   //quint32,
