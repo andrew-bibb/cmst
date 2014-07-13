@@ -144,6 +144,7 @@ class ControlBox : public QDialog
 		bool b_useicontheme;
 		QMenu* mvsrv_menu;
 		QSettings* settings;
+		QString onlineobjectpath;
 	
 	// functions
 		int managerRescan(const int& srv = 0);
@@ -162,7 +163,6 @@ class ControlBox : public QDialog
 		bool extractMapData(QMap<QString,QVariant>&,const QVariant&);
 		void logErrors(const quint8&);
 		QString readResourceText(const char*);
-		QDBusObjectPath serviceOnline();
 		void clearCounters();
 		void serviceChangedNotification(QString);  
 

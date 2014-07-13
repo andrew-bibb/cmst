@@ -118,7 +118,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   QString s_app = PROGRAM_NAME; 
   settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
   notifyclient = 0;
- 
+	onlineobjectpath.clear();
 
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request")); 
@@ -341,7 +341,7 @@ void ControlBox::updateDisplayWidgets()
 // Called when an item in mvsrv_menu is selected.  QAction act is the
 // action selected.
 void ControlBox::moveService(QAction* act)
-{qDebug() << "in move service";
+{
   // See if act belongs to a service
   QString ss;
   QDBusObjectPath targetobj;
@@ -416,7 +416,7 @@ void ControlBox::enableMoveButtons(int row, int col)
 void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QString& home_label, const QString& roam_label)
 {
   // Don't update the counter if qdb_objpath is not the online service
-  if (qdb_objpath != serviceOnline() ) return;
+  if (! qdb_objpath.path().contains(onlineobjectpath, Qt::CaseInsensitive) ) return;
   
   // Set the labels in page 4
   if (! qdb_objpath.path().isEmpty() ) {
@@ -721,10 +721,15 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
     this->sendNotifications();
   }
 
-  // Send notifications if state property changed
+  // if state property changed sync the online data members
   if (property.contains("State", Qt::CaseInsensitive)) {
-     serviceChangedNotification(s_path);
-   }
+		if (value.toString().contains("Online", Qt::CaseInsensitive)) {
+			onlineobjectpath = s_path;
+		}	// 
+		else if (s_path.contains(onlineobjectpath, Qt::CaseInsensitive)) {
+			onlineobjectpath.clear();
+		}	// else if this service just went offline
+	}	// if property contains State
   
   updateDisplayWidgets();
   
@@ -1302,7 +1307,7 @@ void ControlBox::assembleTrayIcon()
       if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
         QMap<QString,QVariant> submap;
         for (int i =0; i < services_list.size(); ++i) {
-          if (services_list.at(i).objpath == serviceOnline() ) {
+          if (services_list.at(i).objpath.path().contains(onlineobjectpath, Qt::CaseInsensitive) ) {
             if (services_list.at(i).objmap.value("Type").toString().contains("ethernet", Qt::CaseInsensitive) ) {
               extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );
               stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
@@ -1717,28 +1722,12 @@ QString ControlBox::readResourceText(const char* textfile)
 } 
 
 //
-// Function to return the object path of the service currently online
-QDBusObjectPath ControlBox::serviceOnline()
-{
-  QDBusObjectPath service_online = QDBusObjectPath(); 
-  
-  for (int i = 0; i < services_list.size(); ++i) {
-    if (services_list.at(i).objmap.value("State").toString().contains("online", Qt::CaseInsensitive)) {
-      service_online = services_list.at(i).objpath;           
-      break;
-    } // if
-  } // for  
-    
-  return service_online;
-}
-
-//
 // Function to clear the counters if selected in the ui.  Called from the constructor
 // and from dbsServicesChanged
 void ControlBox::clearCounters()
 { 
-  if (ui.checkBox_resetcounters->isChecked() ) {      
-    QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, serviceOnline().path(), "net.connman.Service", QDBusConnection::systemBus(), this); 
+  if (ui.checkBox_resetcounters->isChecked() && ! onlineobjectpath.isEmpty() ) {      
+    QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, onlineobjectpath, "net.connman.Service", QDBusConnection::systemBus(), this); 
     iface_serv->call(QDBus::NoBlock, "ResetCounters");
     iface_serv->deleteLater();
   } 
