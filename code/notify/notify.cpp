@@ -78,11 +78,11 @@ void NotifyClient::connectToServer()
     
   notifyclient = new QDBusInterface(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, QDBusConnection::sessionBus(), this); 
   if (notifyclient->isValid() ) {
+    b_validconnection = true;
     getServerInformation();
     getCapabilities();  
     QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "NotificationClosed", this, SLOT(notificationClosed(quint32, quint32)));
     QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "ActionInvoked", this, SLOT(actionInvoked(quint32, QString)));
-    b_validconnection = true;
     } // if connection is valid 
   else {
     notifyclient->deleteLater();

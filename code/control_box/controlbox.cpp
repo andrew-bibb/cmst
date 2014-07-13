@@ -142,10 +142,11 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // restore GUI settings
   this->readSettings(); 
   
-  // Create the notifyclient, make three tries; first immediately in constructor, then
-  // at 2 seconds and finally at 8 seconds 
+  // Create the notifyclient, make four tries; first immediately in constructor, then
+  // at 1/2 second, 2 seconds and finally at 8 seconds 
   notifyclient = new NotifyClient(this);
   this->connectNotifyClient();
+  QTimer::singleShot(500, this, SLOT(connectNotifyClient()));  
   QTimer::singleShot(2 * 1000, this, SLOT(connectNotifyClient()));
   QTimer::singleShot(8 * 1000, this, SLOT(connectNotifyClient()));
       
@@ -1792,8 +1793,8 @@ void ControlBox::clearCounters()
 
 //
 // Slot to connect to the notification client. Called from QTimers to give time for the notification server
-// to start up if this program is started automatically at boot.  We make three attempts at finding the
-// notification server.  First is in the constructor of NotifyClient, second and third we call the connectToServer()
+// to start up if this program is started automatically at boot.  We make four attempts at finding the
+// notification server.  First is in the constructor of NotifyClient, following we call the connectToServer()
 // function.
 void ControlBox::connectNotifyClient()
 {
@@ -1801,11 +1802,14 @@ void ControlBox::connectNotifyClient()
 	 static short count = 0;
 	 ++count;	 
   
-  // if we have a valid notifyclient return now
-  if (notifyclient->isValid() ) return;
-  
-  // try to connect again 
-  notifyclient->connectToServer(); 
+  if (count > 1 ) {
+		// if we have a valid notifyclient return now
+		if (notifyclient->isValid() )
+			return;
+		// else try to connect again 			
+		else
+			notifyclient->connectToServer(); 
+	}	// if count > 1
   
   // setup the notify server label if we were successful in finding and connecting to a server
   if (notifyclient->isValid() ) {
@@ -1822,8 +1826,8 @@ void ControlBox::connectNotifyClient()
   }
   // not successful, try again or abandon if counter is at limit
   else { 
-    if (count < 3) {
-			ui.label_serverstatus->setText(tr("Attempt %1 of 3 looking for notification server.").arg(count));
+    if (count < 4) {
+			ui.label_serverstatus->setText(tr("Attempt %1 of 4 looking for notification server.").arg(count));
     } // try again
     else {
       ui.label_serverstatus->setText(tr("Unable to find or connect to a Notification server."));
