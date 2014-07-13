@@ -814,29 +814,29 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 void ControlBox::togglePowered(QString object_id, bool checkstate)
 { 
   // see if we have a peer object
-  bool b_peertoggled = false;
-  for (int i = 0; i < peer_list.count(); ++i) {
-		if (peer_list.at(i).objpath.path().contains(object_id, Qt::CaseInsensitive)) {
-			QDBusInterface* iface_peer = new QDBusInterface (DBUS_SERVICE, object_id, "net.connman.Peer", QDBusConnection::systemBus(), this);
+  //bool b_peertoggled = false;
+  //for (int i = 0; i < peer_list.count(); ++i) {
+		//if (peer_list.at(i).objpath.path().contains(object_id, Qt::CaseInsensitive)) {
+			//QDBusInterface* iface_peer = new QDBusInterface (DBUS_SERVICE, object_id, "net.connman.Peer", QDBusConnection::systemBus(), this);
 
-		  QDBusMessage reply = iface_peer->call(QDBus::AutoDetect, (checkstate ? "Connect" : "Disconnect") );
-		  if (reply.type() != QDBusMessage::ReplyMessage)
-		    QMessageBox::warning(this, tr("CMST Warning"),
-		    tr("<center><b>We received a DBUS reply message indicating an error while trying to %1 the Peer.</b></center>"                       
-		       "<p>The powered state of the technology will not be changed."
-		       "<br><br>Error Name: %2<br><br>Error Message: %3").arg(checkstate ? tr("Connect") : tr("Disconnect")).arg(reply.errorName()).arg(reply.errorMessage())
-		    );	// if reply was an error
+		  //QDBusMessage reply = iface_peer->call(QDBus::AutoDetect, (checkstate ? "Connect" : "Disconnect") );
+		  //if (reply.type() != QDBusMessage::ReplyMessage)
+		    //QMessageBox::warning(this, tr("CMST Warning"),
+		    //tr("<center><b>We received a DBUS reply message indicating an error while trying to %1 the Peer.</b></center>"                       
+		       //"<p>The powered state of the technology will not be changed."
+		       //"<br><br>Error Name: %2<br><br>Error Message: %3").arg(checkstate ? tr("Connect") : tr("Disconnect")).arg(reply.errorName()).arg(reply.errorMessage())
+		    //);	// if reply was an error
 		    
-				b_peertoggled = true;
+				//b_peertoggled = true;
 				
-				// cleanup
-				iface_peer->deleteLater();
+				//// cleanup
+				//iface_peer->deleteLater();
 				
-				break;
-			}	// if object id matched
-		}	//	for loop looking for objects		
+				//break;
+			//}	// if object id matched
+		//}	//	for loop looking for objects		
 
-  if (! b_peertoggled) {
+  //if (! b_peertoggled) {
 	  QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
 	
 	  QList<QVariant> vlist;
@@ -853,7 +853,7 @@ void ControlBox::togglePowered(QString object_id, bool checkstate)
 	    
 	  // cleanup
 	  iface_tech->deleteLater();
-	}	// if peer not toggled
+	//}	// if peer not toggled
   
   return;
 } 
