@@ -181,7 +181,7 @@ class ControlBox : public QDialog
 		void dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage);
 		void dbsTechnologyAdded(QDBusObjectPath, QVariantMap);
 		void dbsTechnologyRemoved(QDBusObjectPath);
-		void scanWifi();
+		void scanTechnologies();
 		void toggleOfflineMode(bool);
 		void toggleTrayIcon(bool);
 		void togglePowered(QString, bool);

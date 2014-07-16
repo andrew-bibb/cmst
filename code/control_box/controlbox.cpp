@@ -190,7 +190,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   //  timer to scan for wifi services now and again
   wifi_timer = new QTimer(this);
   wifi_timer->setInterval(wifi_interval * 1000); 
-  connect(wifi_timer, SIGNAL(timeout()), this, SLOT(scanWifi()));
+  connect(wifi_timer, SIGNAL(timeout()), this, SLOT(scanTechnologies()));
       
   //  add actions 
   minMaxGroup = new QActionGroup(this);
@@ -227,7 +227,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));  
   connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
   connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(updateDisplayWidgets()));
-  connect(ui.pushButton_scanWifi, SIGNAL (clicked()), this, SLOT(scanWifi()));
+  connect(ui.pushButton_rescan, SIGNAL (clicked()), this, SLOT(scanTechnologies()));
   connect(ui.checkBox_systemtraynotifications, SIGNAL (clicked(bool)), this, SLOT(trayNotifications(bool)));
   connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
 
@@ -816,10 +816,11 @@ void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue
   return;
 }
 
-//  Slot to scan for wifi networks.  Called from a QTimer and it also
-//  can be called by functions as well.  Results signaled by manager.ServicesChanged()
-//  except for P2P which will be signaled by manager.PeersChanged()
-void ControlBox::scanWifi()
+//  Slot to rescan all technologies.  Called periodically from a QTimer,
+//  and it also can be called by functions as well.  Results signaled by
+//  manager.ServicesChanged()//  except for P2P which will be signaled by
+//  manager.PeersChanged()
+void ControlBox::scanTechnologies()
 {
   // Make sure we got the technologies_list before we try to work with it.
   if ( (q8_errors & CMST::Err_Technologies) != 0x00 ) return; 
@@ -848,7 +849,7 @@ void ControlBox::toggleOfflineMode(bool checked)
   vlist << QVariant("OfflineMode") << QVariant::fromValue(QDBusVariant(checked ? true : false)); 
   iface_manager->callWithArgumentList(QDBus::NoBlock, "SetProperty", vlist);
   
-  if (! checked ) this->scanWifi();
+  if (! checked ) this->scanTechnologies();
     
   return;
 }
