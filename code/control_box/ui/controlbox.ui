@@ -266,7 +266,7 @@
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rescan all technologies&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="whatsThis">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all technologies to look for services associated with each technology.  Technologies are automatically scanned periodically, this button will force a scan to occur immediately.&lt;/p&gt;&lt;p&gt;This is similar to issuing the command 'connmanctl scan wifi' from the command line, except all technologies will be scanned, not just WiFi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all technologies to look for services associated with each. Technologies are automatically scanned periodically, this button will force a scan to occur immediately.&lt;/p&gt;&lt;p&gt;This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wif&lt;/span&gt;i from the command line, except all technologies will be scanned, not just WiFi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="text">
                <string>Resc&amp;an</string>
