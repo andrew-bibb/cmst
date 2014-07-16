@@ -1372,46 +1372,49 @@ void ControlBox::assembleTrayIcon()
     if (properties_map.value("State").toString().contains("online", Qt::CaseInsensitive) ) {
       if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
         QMap<QString,QVariant> submap;
-        for (int i =0; i < services_list.size(); ++i) {
-          if (services_list.at(i).objpath.path().contains(onlineobjectpath, Qt::CaseInsensitive) ) {
-            if (services_list.at(i).objmap.value("Type").toString().contains("ethernet", Qt::CaseInsensitive) ) {
-              extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );
-              stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
-              stt.append(tr("Service: %1<br>").arg(services_list.at(i).objmap.value("Name").toString()) );
-              stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );   
-              b_useicontheme ?
-                trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wired_established.png")) )  :
-                trayicon->setIcon(QIcon(":/icons/images/systemtray/wired_established.png") );         
-            } //  if wired connection
-            
-            if (services_list.at(i).objmap.value("Type").toString().contains("wifi", Qt::CaseInsensitive) ) {
-              stt.prepend(tr("WiFi Connection<br>","icon_tool_tip"));
-              extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );              
-              stt.append(tr("SSID: %1<br>").arg(services_list.at(i).objmap.value("Name").toString()) );             
-              stt.append(tr("Security: %1<br>").arg(services_list.at(i).objmap.value("Security").toStringList().join(',')) );
-              stt.append(tr("Strength: %1%<br>").arg(services_list.at(i).objmap.value("Strength").value<quint8>()) );
-              stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
-              quint8 str = services_list.at(i).objmap.value("Strength").value<quint8>();
-              if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl00.png")) );
-              else {
-              if (str > 80 ) trayicon->setIcon(QIcon(":/icons/images/systemtray/wl00.png"));
-              else if (str > 60 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl075.png"));
-                else if (str > 40 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl050.png"));
-                  else if (str > 20 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl025.png"));
-                    else trayicon->setIcon(QIcon(":/icons/images/systemtray/wl000.png"));
-              } // else use our built in icons      
-            } //  if wifi connection
-            break;
-          } // if the service is online
-        } // for
+				if (services_list.at(0).objmap.value("Type").toString().contains("ethernet", Qt::CaseInsensitive) ) {
+					extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
+					stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
+					stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
+					stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );   
+					b_useicontheme ?
+						trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wired_established.png")) )  :
+						trayicon->setIcon(QIcon(":/icons/images/systemtray/wired_established.png") );         
+				} //  if wired connection
+				
+				if (services_list.at(0).objmap.value("Type").toString().contains("wifi", Qt::CaseInsensitive) ) {
+					stt.prepend(tr("WiFi Connection<br>","icon_tool_tip"));
+					extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );              
+					stt.append(tr("SSID: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );             
+					stt.append(tr("Security: %1<br>").arg(services_list.at(0).objmap.value("Security").toStringList().join(',')) );
+					stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
+					stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
+					quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
+					if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl00.png")) );
+					else {
+					if (str > 80 ) trayicon->setIcon(QIcon(":/icons/images/systemtray/wl00.png"));
+					else if (str > 60 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl075.png"));
+						else if (str > 40 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl050.png"));
+							else if (str > 20 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl025.png"));
+								else trayicon->setIcon(QIcon(":/icons/images/systemtray/wl000.png"));
+					} // else use our built in icons      
+				} //  if wifi connection
       } //  services if no error
     } //  if the state is online  
+    
+    else if (properties_map.value("State").toString().contains("ready", Qt::CaseInsensitive) ) {
+			b_useicontheme ?
+				trayicon->setIcon(QIcon::fromTheme("network-idle", QIcon(":/icons/images/interface/connect_creating.png")).pixmap(QSize(16,16)) ) :
+        trayicon->setIcon(QPixmap(":/icons/images/interface/connect_creating.png") );
+      stt.append(tr("Connection is in the Ready State.", "icon_tool_tip"));
+    } // else if if ready
+
     else {
       b_useicontheme ?
         trayicon->setIcon(QIcon::fromTheme("network-offline", QIcon(":/icons/images/systemtray/connect_no.png")) )  :
         trayicon->setIcon(QIcon(":/icons/images/systemtray/connect_no.png") );
       stt.append(tr("Not Connected", "icon_tool_tip"));
-    } // else not connected
+    } // else any other connection sate
   } // properties if no error
   
   // could not get any properties 
