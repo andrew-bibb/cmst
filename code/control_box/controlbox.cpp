@@ -725,8 +725,9 @@ void ControlBox::dbsTechnologyAdded(QDBusObjectPath path, QVariantMap properties
   // if it is a new element add it
   if (newelem) {
     technologies_list.append(ae);
-    updateDisplayWidgets();
   }
+  
+  updateDisplayWidgets();
   
   return;
 }
@@ -1150,31 +1151,21 @@ void ControlBox::assemblePage1()
       ui.tableWidget_technologies->setItem(row, 1, qtwi01);
       
       QTableWidgetItem* qtwi02 = new QTableWidgetItem();
-      bt = technologies_list.at(row).objmap.value("Powered").toBool();
-      // if p2p only show static label on or off
-      if (technologies_list.at(row).objmap.value("Type").toString().contains("p2p", Qt::CaseInsensitive)) {
-				QTableWidgetItem* qtwi02 = new QTableWidgetItem();
-				qtwi02->setText(bt ? tr("On") : tr("Off"));
-				qtwi02->setTextAlignment(Qt::AlignCenter);
-				ui.tableWidget_technologies->setItem(row, 2, qtwi02);
+      bt = technologies_list.at(row).objmap.value("Powered").toBool();  
+			idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
+			connect (qpb02, SIGNAL(clickedID(QString, bool)), this, SLOT(togglePowered(QString, bool)));
+			QString padding = "     ";
+			if (bt ) {
+				qpb02->setText(tr("%1On", "powered").arg(padding));
+				qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
+				qpb02->setChecked(true);
 			}
-			// else allow user to turn technology on and off
-			else {      
-				idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
-				connect (qpb02, SIGNAL(clickedID(QString, bool)), this, SLOT(togglePowered(QString, bool)));
-				QString padding = "     ";
-				if (bt ) {
-					qpb02->setText(tr("%1On", "powered").arg(padding));
-					qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
-					qpb02->setChecked(true);
-				}
-				else {
-					qpb02->setText(tr("%1Off", "powered").arg(padding));
-					qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
-					qpb02->setChecked(false);
-				} 
-				ui.tableWidget_technologies->setCellWidget(row, 2, qpb02);
-			}	// else
+			else {
+				qpb02->setText(tr("%1Off", "powered").arg(padding));
+				qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
+				qpb02->setChecked(false);
+			} 
+			ui.tableWidget_technologies->setCellWidget(row, 2, qpb02);
       
       QTableWidgetItem* qtwi03 = new QTableWidgetItem();
       bt = technologies_list.at(row).objmap.value("Connected").toBool();

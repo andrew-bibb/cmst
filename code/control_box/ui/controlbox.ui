@@ -667,8 +667,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>636</width>
-               <height>137</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -726,8 +726,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>636</width>
-               <height>136</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -959,6 +959,12 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Notification server detected on this system&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If a Notification server is detected on this system information about the server will be shown here. &lt;/p&gt;&lt;p&gt;If no server is found the checkbox at the left will be disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
             <property name="text">
              <string>Server Status</string>
             </property>
@@ -1074,8 +1080,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>536</width>
-            <height>550</height>
+            <width>104</width>
+            <height>1922</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
