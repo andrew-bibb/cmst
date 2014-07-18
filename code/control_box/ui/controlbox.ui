@@ -1074,15 +1074,15 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>536</width>
-            <height>550</height>
+            <width>550</width>
+            <height>449</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
            <item>
             <widget class="QLabel" name="label_help">
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Help&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Program help is mainly provided by the &amp;quot;What's This&amp;quot; button in the lower left corner. Press the button and then click on an item you are interested in. &amp;quot;What's This&amp;quot; is also available via context menu by right clicking on a button, box or text area.&lt;/p&gt;&lt;p&gt;A brief description of the purpose and contents of each tab follows.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Status Tab:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The status tab displays information about the global properties, found technologies, and services. Checkbox at the top right will allow you to put everything in &amp;quot;offline&amp;quot; mode.&lt;/p&gt;&lt;p&gt;To toggle a technology on or off click the entry under the Powered column &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Details Tab:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The details tab will display detailed setup and connection information about a service. Select the service you wish to investigate in the combo box at the top.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Wireless Tab:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The Wireless tab will display information, connect, disconnect, and edit certain properties of wireless services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Counters Tab:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The Counters tab will display information about the Connect time, the Transmit (TX) and Receiving (RX) counters for the service currently in the &amp;quot;online&amp;quot; state. The counters are set to fairly course intervals to minimize system usage. Currently these interval settings are hard coded into the program. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Preferences Tab:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The preferences tab will allow you to change some aspects of the GUI. &lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Help&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Program help is mainly provided by the &amp;quot;What's This&amp;quot; button in the lower left corner. Press the button and then click on an item you are interested in. &amp;quot;What's This&amp;quot; is also available via context menu by right clicking on a button, box or text area.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="wordWrap">
               <bool>true</bool>
@@ -1091,6 +1091,19 @@
               <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
              </property>
             </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </widget>

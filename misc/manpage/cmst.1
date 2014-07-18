@@ -1,4 +1,4 @@
-.TH	CMST 1 "10 May 2014" "Version: 20014.05.10"
+.TH	CMST 1 "17 July 2014" "Version: 2014.07.17"
 .SH NAME
 CMST - Connman System Tray
 .SH SYNOPSIS
@@ -34,6 +34,30 @@ create a tray icon before the system tray itself is created a dialog will be dis
 program is started automatically.  If you know the tray will exist once the system is up you may specify a wait time and CMST 
 will wait that number of seconds before trying to create the tray icon.  This is to give the window manager or panel time to create 
 the tray before we try to place the icon there.   
+.SH GUI INFO
+The GUI contains one main dialog with separate tab pages.  Program help is mainly provided through a "What's This" interface.
+The "What's This" button in the lower left corner will allow you to enter "What's This" mode, click the button and then
+click the GUI feature, or control that you are interested in.  A right mouse click on a GUI feature or control will also enter
+"What's This" mode.
+.TP
+\fbStatus Tab\fP
+The status tab displays information about the global properties, found technologies, and services. Checkbox at the top right will
+allow you to put everything in "offline" mode.  To toggle a technology on or off click the entry under the Powered column 
+.TP
+\fbDetails Tab\fP
+The details tab will display detailed setup and connection information about a service. Select the service you wish to investigate
+in the combo box at the top.
+.TP
+\fbWireless Tab\fP
+The Wireless tab will display information, connect, disconnect, and edit certain properties of wireless services. 
+.TP
+\fbCounters Tab\fP
+The Counters tab will display information about the Connect time, the Transmit (TX) and Receiving (RX) counters for the service
+currently in the "online" state. The counters are set to fairly course intervals to minimize system usage. Currently these 
+interval settings are hard coded into the program. 
+.TP
+\fbPreferences Tab\fP
+The preferences tab will allow you to change some aspects of the GUI.  
 .SH BUGS
 For the tray icon to display is it required that the system tray be compliant with the Freedesktop.org systemtray specification.  
 
