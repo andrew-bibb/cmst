@@ -5,9 +5,9 @@
 <ul>
 <li>UI updated to allow notifications from the system tray icon or from a notification server.</li>
 <li>Notifications can be sent to a notification server if present.</li>
-<li>Accomodate P2P technologies - IN PROGRESS</li>
+<li>Accomodate P2P technologies (display only)</li>
 <li>Scan WiFi button moved to Technologies box and renamed "Rescan". No change in function, just a more accurate representation of what the button does.</li>
-<li>Connections in the "Ready" state show ready with an appropriate icon in the system tray instead of showing./u	 disconnected.</li>   
+<li>Connections in the "Ready" state show ready with an appropriate icon in the system tray instead of showing disconnected.</li>   
 </ul>
 <br><b>2014.07.01	</b>
 <ul>

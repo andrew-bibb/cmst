@@ -501,7 +501,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>&amp;Connect</string>
+             <string>Connect</string>
             </property>
            </widget>
           </item>
@@ -524,7 +524,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to remove the service. &lt;/p&gt;&lt;p&gt;If a service has previously been sussessfully connected (Favorite is true) this button will remove the Favorite property. The service will also be disconnected if it is currently connected. If the service required a passphrase then the passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;If a connection attempt failed this can slso be used to reset the service.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>&amp;Remove</string>
+             <string>Remove</string>
             </property>
            </widget>
           </item>
@@ -1186,8 +1186,10 @@
   </action>
  </widget>
  <tabstops>
+  <tabstop>tabWidget</tabstop>
   <tabstop>checkBox_devicesoff</tabstop>
   <tabstop>tableWidget_technologies</tabstop>
+  <tabstop>pushButton_rescan</tabstop>
   <tabstop>tableWidget_services</tabstop>
   <tabstop>pushButton_movebefore</tabstop>
   <tabstop>pushButton_moveafter</tabstop>
@@ -1205,6 +1207,7 @@
   <tabstop>checkBox_hideIcon</tabstop>
   <tabstop>checkBox_enablesystemtraytooltips</tabstop>
   <tabstop>checkBox_systemtraynotifications</tabstop>
+  <tabstop>checkBox_notifydaemon</tabstop>
   <tabstop>pushButton_aboutCMST</tabstop>
   <tabstop>pushButton_aboutIconSet</tabstop>
   <tabstop>pushButton_aboutQT</tabstop>
@@ -1214,7 +1217,6 @@
   <tabstop>toolButton_whatsthis</tabstop>
   <tabstop>pushButton_exit</tabstop>
   <tabstop>pushButton_minimize</tabstop>
-  <tabstop>tabWidget</tabstop>
  </tabstops>
  <resources>
   <include location="../../../cmst.qrc"/>

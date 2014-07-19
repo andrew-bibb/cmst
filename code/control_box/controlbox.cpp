@@ -289,9 +289,11 @@ void ControlBox::aboutIconSet()
 {
  QMessageBox::about(this, tr("About AwOken"),
        tr("<center>This program uses the <b>AwOken</b> icon set version 2.5"                       
-                  "<br><br>Released under the"
-      "<br>Creative Commons Attribution-Share Alike 3.0 Unported License"
-      "<br><a href=\"url\">http://creativecommons.org/licenses/by-sa/3.0/legalcode</a>"
+					"<br><br>Released under the"
+          "<br>Creative Commons"
+					"<br>Attribution-Share Alike 3.0"
+          "<br>Unported License"
+          "<br><a href=\"url\">http://creativecommons.org/licenses/by-sa/3.0/legalcode</a>"
                   ) );
 }
 
