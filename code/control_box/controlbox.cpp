@@ -45,6 +45,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/control_box/controlbox.h"
 # include "./code/resource.h" 
 # include "./code/scrollbox/scrollbox.h"
+# include "./code/peditor/peditor.h"
   
 //  headers for system logging
 # include <stdio.h>
@@ -126,9 +127,13 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // set a flag if we want to use the local system icon theme and set the whatsthis button
   b_useicontheme = parser.isSet("icon-theme"); 
   if (b_useicontheme) {
-    ui.toolButton_whatsthis->setIcon(QIcon::fromTheme("system-help", QIcon(":/icons16x16/images/16x16/help.png")) );
-    agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons16x16/images/16x16/help.png")) );
+    ui.toolButton_whatsthis->setIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
+    agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
   }
+  else {
+		ui.toolButton_whatsthis->setIcon(QIcon(":/icons/images/interface/whatsthis.png"));
+		agent->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
+	}
   
   // my plan is to eventually have these as options called from the command line.  
   wifi_interval = 60;       // number of seconds between wifi scans
@@ -230,6 +235,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_rescan, SIGNAL (clicked()), this, SLOT(scanTechnologies()));
   connect(ui.checkBox_systemtraynotifications, SIGNAL (clicked(bool)), this, SLOT(trayNotifications(bool)));
   connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
+	connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
 
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
@@ -930,7 +936,7 @@ void ControlBox::getServiceDetails(int index)
   //  cleared and for whatever reason could not be reseeded with entries.
   if (index < 0 ) return; 
   
-  //  Get the QMap associated with index stored in an arrayElement 
+  //  Get the QMap associated with the index stored in an arrayElement 
   QMap<QString,QVariant> map = services_list.at(index).objmap;
   
   //  Some of the QVariants in the map are QMaps themselves, create a data structure for them
@@ -1249,6 +1255,9 @@ void ControlBox::assemblePage2()
       
     ui.comboBox_service->setCurrentIndex(0);
   } // services if no error
+  
+  // if there are no services disable the properties pushbutton
+  services_list.size() > 0 ? ui.pushButton_configuration->setEnabled(true) : ui.pushButton_configuration->setDisabled(true);
   
   return;
 }
@@ -1849,6 +1858,25 @@ void ControlBox::connectNotifyClient()
   } // else we don't have a valid client.
   
   return;
+}
+
+//
+// Slot to open a dialog to configure the selected service
+void ControlBox::configureService()
+{
+	PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()).objmap);
+
+	// set the whatsthis button icon
+  if (b_useicontheme) 
+   peditor->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
+  else 
+		peditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
+	
+	peditor->exec();
+	
+	//peditor->deleteLater();
+	
+	return;
 }
    
    

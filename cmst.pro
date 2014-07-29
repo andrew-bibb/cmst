@@ -41,11 +41,13 @@ HEADERS		+= ./code/agent/agent_dialog.h
 HEADERS		+= ./code/counter/counter.h
 HEADERS		+= ./code/scrollbox/scrollbox.h
 HEADERS		+= ./code/notify/notify.h
+HEADERS		+= ./code/peditor/peditor.h
 
 #	forms
 FORMS		+= ./code/control_box/ui/controlbox.ui
 FORMS		+= ./code/agent/ui/agent.ui
 FORMS		+= ./code/scrollbox/ui/scrollbox.ui
+FORMS		+= ./code/peditor/ui/peditor.ui
 
 #	sources
 SOURCES	+= ./code/main.cpp
@@ -55,6 +57,7 @@ SOURCES += ./code/agent/agent_dialog.cpp
 SOURCES += ./code/counter/counter.cpp
 SOURCES += ./code/scrollbox/scrollbox.cpp
 SOURCES += ./code/notify/notify.cpp
+SOURCES	+= ./code/peditor/peditor.cpp
 
 #	resource files
 RESOURCES 	+= cmst.qrc

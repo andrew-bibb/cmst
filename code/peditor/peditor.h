@@ -1,9 +1,6 @@
-/**************************** agent_dialog.h ***************************
+/**************************** peditor.h ***************************
 
-Code to manage the agent user interface.  When the connman daemon
-needs to communicate with the user it does so through the agent.  The
-agent has a QDialog as a class member, and agent_dialog.cpp manages
-that dialog.  
+Code to manage the Properties Editor dialog.
 
 Copyright (C) 2013-2014
 by: Andrew J. Bibb
@@ -28,44 +25,42 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/ 
 
-# ifndef AGENT_DIALOG_H
-# define AGENT_DIALOG_H
+# ifndef PROPERTIES_EDITOR_H
+# define PROPERTIES_EDITOR_H
 
 # include <QDialog>
-# include <QString>
+# include <QMap>
 # include <QVariant>
+# include <QStringList>
+# include <QWhatsThis>
 
-# include "ui_agent.h"
+# include "ui_peditor.h"
 
-//	The class to control the agent UI based on a QDialog
-class AgentDialog : public QDialog
+//	The class to control the properties editor UI based on a QDialog
+class PropertiesEditor : public QDialog
 {
   Q_OBJECT
 
   public:
   // members
-    AgentDialog(QWidget*);
+    PropertiesEditor(QWidget*, QMap<QString,QVariant>);
     
-	// functions
-		int showPage0(const QMap<QString,QString>&);
-		int showPage1(const QString&);		
-		void createDict(QMap<QString,QVariant>&);
   
   private:  
   // members
-		Ui::Agent ui;
-		QString sys_env_path;
+		Ui::Peditor ui;
+		QMap<QString,QVariant> objmap;
 		
 	// functions
-		void initialize();
+		inline QStringList getNameservers() {return objmap.value("Nameservers.Configuration").toStringList();}
+		inline QStringList getTimeservers() {return objmap.value("Timeservers.Congiguration").toStringList();}
+		inline QStringList getDomains() {return objmap.value("Domains.configuration").toStringList();}
 		   
   private slots:
-		void hidePassphrase(bool);
-		void useWPSPushButton(bool);		
-		void showWhatsThis();
-		void useOtherBrowser(bool);
-		void launchBrowser();
-		
+  	void showWhatsThis();
+		void resetPage(int page = -1);
+		void resetAll();
+				
 	public:
 		inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
 };

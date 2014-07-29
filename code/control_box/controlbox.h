@@ -196,6 +196,7 @@ class ControlBox : public QDialog
 		void writeSettings();
 		void readSettings();
 		void connectNotifyClient();
+		void configureService();
 };
 
 #endif
