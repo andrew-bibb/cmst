@@ -33,6 +33,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QVariant>
 # include <QStringList>
 # include <QWhatsThis>
+# include <QRegularExpressionValidator>
 
 # include "ui_peditor.h"
 
@@ -49,12 +50,9 @@ class PropertiesEditor : public QDialog
   private:  
   // members
 		Ui::Peditor ui;
-		QMap<QString,QVariant> objmap;
+		QValidator* addressvalidator;
 		
 	// functions
-		inline QStringList getNameservers() {return objmap.value("Nameservers.Configuration").toStringList();}
-		inline QStringList getTimeservers() {return objmap.value("Timeservers.Congiguration").toStringList();}
-		inline QStringList getDomains() {return objmap.value("Domains.configuration").toStringList();}
 		   
   private slots:
   	void showWhatsThis();

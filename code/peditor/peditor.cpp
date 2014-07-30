@@ -1,3 +1,4 @@
+
 /****************** peditor.cpp *********************************** 
 
 Code to manage the Properties Editor dialog.
@@ -26,20 +27,35 @@ DEALINGS IN THE SOFTWARE.
 ***********************************************************************/  
 
 # include <QtCore/QDebug>
+# include <QRegularExpression>
 
 # include "./code/peditor/peditor.h"
 
 PropertiesEditor::PropertiesEditor(QWidget* parent, QMap<QString,QVariant> objmap)
     : QDialog(parent)
 {
-	// setup the user interface
+	// Setup the user interface
   ui.setupUi(this);
-  	  
+  
+  // Setup the address validator and apply it to any ui line edit. We'll
+  // need to run entries in the QPlainTextEdit boxes separately when we process them.
+  // Validator will validate an IP address or any amount of white space (to allow 
+  // editing of the line edit).
+  QString octet = "(?:[0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])";
+  QRegularExpression rx("\\s*|^" + octet + "\\." + octet + "\\." + octet + "\\." + octet + "$");
+  
+  addressvalidator = new QRegularExpressionValidator(rx, this);
+  ui.lineEdit_ipv4address->setValidator(addressvalidator);
+  ui.lineEdit_ipv4netmask->setValidator(addressvalidator);
+  ui.lineEdit_ipv4gateway->setValidator(addressvalidator);
+  ui.lineEdit_ipv6address->setValidator(addressvalidator);
+  ui.lineEdit_ipv6gateway->setValidator(addressvalidator);
+  
+   	  
 	// seed initial values in the dialog
-	ui.plainTextEdit_nameservers->setPlainText(getNameservers().join("\n"));
-	ui.plainTextEdit_timeservers->setPlainText(getTimeservers().join("\n"));
-	ui.plainTextEdit_domains->setPlainText(getDomains().join("\n"));
-
+	ui.plainTextEdit_nameservers->setPlainText(objmap.value("Nameservers.Configuration").toStringList().join("\n") );
+	ui.plainTextEdit_timeservers->setPlainText(objmap.value("Timeservers.Congiguration").toStringList().join("\n"));
+	ui.plainTextEdit_domains->setPlainText(objmap.value("Domains.configuration").toStringList().join("\n"));
  
   // connect signals to slots
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));  
@@ -81,7 +97,7 @@ void PropertiesEditor::resetPage(int page)
 			ui.comboBox_ipv4method->setCurrentIndex(0);
 			ui.lineEdit_ipv4address->clear();
 			ui.lineEdit_ipv4netmask->clear();
-			ui.lineEdit_ipv4gatgeway->clear();
+			ui.lineEdit_ipv4gateway->clear();
 			break;
 		case 4:
 			ui.comboBox_ipv6method->setCurrentIndex(0);

@@ -124,7 +124,7 @@
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QLineEdit" name="lineEdit_ipv4gatgeway"/>
+          <widget class="QLineEdit" name="lineEdit_ipv4gateway"/>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_2">
@@ -348,7 +348,7 @@
          <item row="1" column="0" colspan="2">
           <widget class="QStackedWidget" name="stackedWidget_proxy01">
            <property name="currentIndex">
-            <number>0</number>
+            <number>2</number>
            </property>
            <widget class="QWidget" name="page_0">
             <layout class="QGridLayout" name="gridLayout_4">
@@ -535,6 +535,29 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>plainTextEdit_nameservers</tabstop>
+  <tabstop>plainTextEdit_timeservers</tabstop>
+  <tabstop>plainTextEdit_domains</tabstop>
+  <tabstop>comboBox_ipv4method</tabstop>
+  <tabstop>lineEdit_ipv4address</tabstop>
+  <tabstop>lineEdit_ipv4netmask</tabstop>
+  <tabstop>lineEdit_ipv4gateway</tabstop>
+  <tabstop>comboBox_ipv6method</tabstop>
+  <tabstop>spinBox_ipv6prefixlength</tabstop>
+  <tabstop>lineEdit_ipv6address</tabstop>
+  <tabstop>lineEdit_ipv6gateway</tabstop>
+  <tabstop>comboBox_ipv6privacy</tabstop>
+  <tabstop>comboBox_proxymethod</tabstop>
+  <tabstop>lineEdit_proxyurl</tabstop>
+  <tabstop>textEdit_proxyservers</tabstop>
+  <tabstop>textEdit_proxyexcludes</tabstop>
+  <tabstop>toolButton_whatsthis</tabstop>
+  <tabstop>pushButton_resetpage</tabstop>
+  <tabstop>pushButton_resetall</tabstop>
+  <tabstop>pushButton_ok</tabstop>
+  <tabstop>pushButton_cancel</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
