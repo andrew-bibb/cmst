@@ -37,22 +37,26 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, QMap<QString,QVariant> objma
 	// Setup the user interface
   ui.setupUi(this);
   
-  // Setup the address validator and apply it to any ui line edit. We'll
+  // Setup the address validator and apply it to any ui QLineEdit. We'll
   // need to run entries in the QPlainTextEdit boxes separately when we process them.
-  // Validator will validate an IP address or any amount of white space (to allow 
+  // The lev validator will validate an IP address or any amount of white space (to allow 
   // editing of the line edit).
-  QString octet = "(?:[0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])";
+  //QString octet = "(?:[0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])";
+  QString octet = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
   QRegularExpression rx("\\s*|^" + octet + "\\." + octet + "\\." + octet + "\\." + octet + "$");
+  QRegularExpressionValidator* lev = new QRegularExpressionValidator(rx, this);
   
-  addressvalidator = new QRegularExpressionValidator(rx, this);
-  ui.lineEdit_ipv4address->setValidator(addressvalidator);
-  ui.lineEdit_ipv4netmask->setValidator(addressvalidator);
-  ui.lineEdit_ipv4gateway->setValidator(addressvalidator);
-  ui.lineEdit_ipv6address->setValidator(addressvalidator);
-  ui.lineEdit_ipv6gateway->setValidator(addressvalidator);
+  ui.lineEdit_ipv4address->setValidator(lev);
+  ui.lineEdit_ipv4netmask->setValidator(lev);
+  ui.lineEdit_ipv4gateway->setValidator(lev);
+  ui.lineEdit_ipv6address->setValidator(lev);
+  ui.lineEdit_ipv6gateway->setValidator(lev);
   
+  // We don't want the whitespace check for things other than the QLineEdits
+  rx.setPattern("^" + octet + "\\." + octet + "\\." + octet + "\\." + octet + "$");
+	addressvalidator = new QRegularExpressionValidator(rx, this);
    	  
-	// seed initial values in the dialog
+	// Seed initial values in the dialog.
 	ui.plainTextEdit_nameservers->setPlainText(objmap.value("Nameservers.Configuration").toStringList().join("\n") );
 	ui.plainTextEdit_timeservers->setPlainText(objmap.value("Timeservers.Congiguration").toStringList().join("\n"));
 	ui.plainTextEdit_domains->setPlainText(objmap.value("Domains.configuration").toStringList().join("\n"));

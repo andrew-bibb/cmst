@@ -50,7 +50,7 @@ class PropertiesEditor : public QDialog
   private:  
   // members
 		Ui::Peditor ui;
-		QValidator* addressvalidator;
+		QRegularExpressionValidator* addressvalidator;
 		
 	// functions
 		   
