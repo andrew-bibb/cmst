@@ -44,7 +44,7 @@ class PropertiesEditor : public QDialog
 
   public:
   // members
-    PropertiesEditor(QWidget*, const QMap<QString,QVariant>&, const QMap<QString,QVariant>&, const QMap<QString,QVariant>&);
+    PropertiesEditor(QWidget*, const QMap<QString,QVariant>&, bool (*extractMapData) (QMap<QString,QVariant>&, const QVariant&) );
     
   
   private:  

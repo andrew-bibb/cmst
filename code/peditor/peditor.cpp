@@ -31,7 +31,7 @@ DEALINGS IN THE SOFTWARE.
 
 # include "./code/peditor/peditor.h"
 
-PropertiesEditor::PropertiesEditor(QWidget* parent, const QMap<QString,QVariant>& objmap, const QMap<QString,QVariant>& ipv4map, const QMap<QString,QVariant>& ipv6map)
+PropertiesEditor::PropertiesEditor(QWidget* parent, const QMap<QString,QVariant>& objmap, bool (*extractMapData) (QMap<QString,QVariant>&,const QVariant&))
     : QDialog(parent)
 {
 	// Setup the user interface
@@ -61,22 +61,22 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const QMap<QString,QVariant>
 	ui.plainTextEdit_timeservers->setPlainText(objmap.value("Timeservers.Congiguration").toStringList().join("\n"));
 	ui.plainTextEdit_domains->setPlainText(objmap.value("Domains.configuration").toStringList().join("\n"));
 	
-	if (! ipv4map.value("Method").toString().isEmpty() ) {
-		ui.comboBox_ipv4method->setCurrentIndex(ui.comboBox_ipv4method->findText(ipv4map.value("Method").toString(), Qt::MatchFixedString) );
-	}
-	ui.lineEdit_ipv4address->setText(ipv4map.value("Address").toString() );
-	ui.lineEdit_ipv4netmask->setText(ipv4map.value("Netmask").toString() );
-	ui.lineEdit_ipv4gateway->setText(ipv4map.value("Gateway").toString() );
+	//if (! ipv4map.value("Method").toString().isEmpty() ) {
+		//ui.comboBox_ipv4method->setCurrentIndex(ui.comboBox_ipv4method->findText(ipv4map.value("Method").toString(), Qt::MatchFixedString) );
+	//}
+	//ui.lineEdit_ipv4address->setText(ipv4map.value("Address").toString() );
+	//ui.lineEdit_ipv4netmask->setText(ipv4map.value("Netmask").toString() );
+	//ui.lineEdit_ipv4gateway->setText(ipv4map.value("Gateway").toString() );
 	
-	if (! ipv6map.value("Method").toString().isEmpty() ) {
-		ui.comboBox_ipv6method->setCurrentIndex(ui.comboBox_ipv6method->findText(ipv6map.value("Method").toString(), Qt::MatchFixedString) );
-	}
-	ui.spinBox_ipv6prefixlength->setValue(ipv6map.value("PrefixLength").toInt() );
-	ui.lineEdit_ipv4address->setText(ipv6map.value("Address").toString() );
-	ui.lineEdit_ipv4gateway->setText(ipv6map.value("Gateway").toString() );
-	if (! ipv6map.value("Privacy").toString().isEmpty() ) {
-		ui.comboBox_ipv6privacy->setCurrentIndex(ui.comboBox_ipv6privacy->findText(ipv6map.value("Privacy").toString(), Qt::MatchFixedString) );
-	}
+	//if (! ipv6map.value("Method").toString().isEmpty() ) {
+		//ui.comboBox_ipv6method->setCurrentIndex(ui.comboBox_ipv6method->findText(ipv6map.value("Method").toString(), Qt::MatchFixedString) );
+	//}
+	//ui.spinBox_ipv6prefixlength->setValue(ipv6map.value("PrefixLength").toInt() );
+	//ui.lineEdit_ipv4address->setText(ipv6map.value("Address").toString() );
+	//ui.lineEdit_ipv4gateway->setText(ipv6map.value("Gateway").toString() );
+	//if (! ipv6map.value("Privacy").toString().isEmpty() ) {
+		//ui.comboBox_ipv6privacy->setCurrentIndex(ui.comboBox_ipv6privacy->findText(ipv6map.value("Privacy").toString(), Qt::MatchFixedString) );
+	//}
 	
  
   // connect signals to slots
@@ -85,6 +85,8 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const QMap<QString,QVariant>
 	connect(ui.pushButton_resetall, SIGNAL(clicked()), this, SLOT(resetAll()));
   		  
 }    
+
+///////////////////////////////////////////////// Private Functions /////////////////////////////////////////////
 
 
 ///////////////////////////////////////////////// Private Slots /////////////////////////////////////////////

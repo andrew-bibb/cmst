@@ -1866,12 +1866,12 @@ void ControlBox::connectNotifyClient()
 void ControlBox::configureService()
 {
 	// defind and populate submaps
-	QMap<QString,QVariant> ipv4map;	
-	QMap<QString,QVariant> ipv6map;
-	extractMapData(ipv4map, services_list.at(ui.comboBox_service->currentIndex()).objmap.value("IPv4.Configuration") );
-	extractMapData(ipv6map, services_list.at(ui.comboBox_service->currentIndex()).objmap.value("IPv6.Configuration") );
+	//QMap<QString,QVariant> ipv4map;	
+	//QMap<QString,QVariant> ipv6map;
+	//extractMapData(ipv4map, services_list.at(ui.comboBox_service->currentIndex()).objmap.value("IPv4.Configuration") );
+	//extractMapData(ipv6map, services_list.at(ui.comboBox_service->currentIndex()).objmap.value("IPv6.Configuration") );
 	
-	PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()).objmap, ipv4map, ipv6map);
+	PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()).objmap, this->extractMapData );
 
 	// set the whatsthis button icon
   if (b_useicontheme) 
