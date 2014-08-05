@@ -1,9 +1,10 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
 <br>
-<br><b>2014.07.19</b>
+<br><b>In Progress</b>
 <ul>
 <li>Removed tooltips for obvious controls.  Tooltips now are only available for dynamic GUI elements (unless the user disables them in preferences).</li>
+<li>Detailed configuration dialog - IN PROGRESS</li>
 </ul>
 <br>
 <br><b>2014.07.19</b>
@@ -83,9 +84,3 @@
 <li>View detailed information about services</li>
 <li>Basic WiFi service management</li>
 </ul>
-
-<b>To Do</b>
-<ul>
-<li>Continue working on command line options (next up are the timer intervals)</li>
-<li>Look at possibly using system icons as an option to our hard coded icons</li>
-</ul> 

@@ -960,10 +960,11 @@ void ControlBox::getServiceDetails(int index)
   
   rs.append(tr("<br><b>IPv6</b><br>"));
   extractMapData(submap, services_list.at(index).objmap.value("IPv6") );
-  rs.append(tr("IP Address Acquisition: %1<br>").arg(submap.value("Method").toString()));
+  rs.append(tr("Address Acquisition: %1<br>").arg(submap.value("Method").toString()));
   rs.append(tr("IP Address: %1<br>").arg(submap.value("Address").toString()));
-  rs.append(tr("IP Netmask: %1<br>").arg(submap.value("Netmask").toString()));
+  rs.append(tr("Prefix Length: %1<br>").arg(submap.value("PrefixLength").toInt()));
   rs.append(tr("IP Gateway: %1<br>").arg(submap.value("Gateway").toString()));
+  rs.append(tr("Privacy: %1<br>").arg(submap.value("Privacy").toString()));
   
   //  write the text to the left display label
   ui.label_details_left->setText(rs);
@@ -1864,7 +1865,13 @@ void ControlBox::connectNotifyClient()
 // Slot to open a dialog to configure the selected service
 void ControlBox::configureService()
 {
-	PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()).objmap);
+	// defind and populate submaps
+	QMap<QString,QVariant> ipv4map;	
+	QMap<QString,QVariant> ipv6map;
+	extractMapData(ipv4map, services_list.at(ui.comboBox_service->currentIndex()).objmap.value("IPv4.Configuration") );
+	extractMapData(ipv6map, services_list.at(ui.comboBox_service->currentIndex()).objmap.value("IPv6.Configuration") );
+	
+	PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()).objmap, ipv4map, ipv6map);
 
 	// set the whatsthis button icon
   if (b_useicontheme) 
