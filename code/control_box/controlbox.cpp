@@ -962,9 +962,25 @@ void ControlBox::getServiceDetails(int index)
   extractMapData(submap, services_list.at(index).objmap.value("IPv6") );
   rs.append(tr("Address Acquisition: %1<br>").arg(submap.value("Method").toString()));
   rs.append(tr("IP Address: %1<br>").arg(submap.value("Address").toString()));
-  rs.append(tr("Prefix Length: %1<br>").arg(submap.value("PrefixLength").toInt()));
+  QString s_ipv6prefix = submap.value("PrefixLength").toString();
+  if (s_ipv6prefix.isEmpty() )
+		rs.append(tr("Prefix Length: <br>"));
+	else
+		rs.append(tr("Prefix Length: %1<br>").arg(submap.value("PrefixLength").toInt()));
   rs.append(tr("IP Gateway: %1<br>").arg(submap.value("Gateway").toString()));
   rs.append(tr("Privacy: %1<br>").arg(submap.value("Privacy").toString()));
+  
+  rs.append(tr("<br><b>Proxy</b><br>"));
+  extractMapData(submap, services_list.at(index).objmap.value("Proxy") );
+  QString s_proxymethod = submap.value("Method").toString();
+  rs.append(tr("Address Acquisition: %1<br>").arg(s_proxymethod) );
+  if (s_proxymethod.contains("auto", Qt::CaseInsensitive) ) {
+		rs.append(tr("URL: %1<br>").arg(submap.value("URL").toString()) );
+	}
+	else if (s_proxymethod.contains("manual", Qt::CaseInsensitive) ) {
+		rs.append(tr("Servers:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Servers").toStringList().join("<br>&nbsp;&nbsp;")) );
+		rs.append(tr("Excludes:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Excludes").toStringList().join("<br>&nbsp;&nbsp;")) );
+	}
   
   //  write the text to the left display label
   ui.label_details_left->setText(rs);
@@ -1864,13 +1880,7 @@ void ControlBox::connectNotifyClient()
 //
 // Slot to open a dialog to configure the selected service
 void ControlBox::configureService()
-{
-	// defind and populate submaps
-	//QMap<QString,QVariant> ipv4map;	
-	//QMap<QString,QVariant> ipv6map;
-	//extractMapData(ipv4map, services_list.at(ui.comboBox_service->currentIndex()).objmap.value("IPv4.Configuration") );
-	//extractMapData(ipv6map, services_list.at(ui.comboBox_service->currentIndex()).objmap.value("IPv6.Configuration") );
-	
+{	
 	PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()).objmap, this->extractMapData );
 
 	// set the whatsthis button icon

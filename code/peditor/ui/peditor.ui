@@ -330,12 +330,12 @@
           <widget class="QComboBox" name="comboBox_proxymethod">
            <item>
             <property name="text">
-             <string>Auto</string>
+             <string>Direct</string>
             </property>
            </item>
            <item>
             <property name="text">
-             <string>Direct</string>
+             <string>Auto</string>
             </property>
            </item>
            <item>
@@ -348,9 +348,10 @@
          <item row="1" column="0" colspan="2">
           <widget class="QStackedWidget" name="stackedWidget_proxy01">
            <property name="currentIndex">
-            <number>2</number>
+            <number>0</number>
            </property>
-           <widget class="QWidget" name="page_0">
+           <widget class="QWidget" name="page_0"/>
+           <widget class="QWidget" name="page_1">
             <layout class="QGridLayout" name="gridLayout_4">
              <item row="0" column="2">
               <widget class="QLineEdit" name="lineEdit_proxyurl"/>
@@ -377,7 +378,6 @@
              </item>
             </layout>
            </widget>
-           <widget class="QWidget" name="page_1"/>
            <widget class="QWidget" name="page_2">
             <layout class="QVBoxLayout" name="verticalLayout_8">
              <item>
@@ -388,7 +388,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QTextEdit" name="textEdit_proxyservers"/>
+              <widget class="QPlainTextEdit" name="plainTextEdit_proxyservers"/>
              </item>
              <item>
               <widget class="QLabel" name="label_12">
@@ -398,7 +398,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QTextEdit" name="textEdit_proxyexcludes"/>
+              <widget class="QPlainTextEdit" name="plainTextEdit_proxyexcludes"/>
              </item>
              <item>
               <spacer name="verticalSpacer_6">
@@ -550,8 +550,6 @@
   <tabstop>comboBox_ipv6privacy</tabstop>
   <tabstop>comboBox_proxymethod</tabstop>
   <tabstop>lineEdit_proxyurl</tabstop>
-  <tabstop>textEdit_proxyservers</tabstop>
-  <tabstop>textEdit_proxyexcludes</tabstop>
   <tabstop>toolButton_whatsthis</tabstop>
   <tabstop>pushButton_resetpage</tabstop>
   <tabstop>pushButton_resetall</tabstop>

@@ -56,29 +56,47 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const QMap<QString,QVariant>
   rx.setPattern("^" + octet + "\\." + octet + "\\." + octet + "\\." + octet + "$");
 	addressvalidator = new QRegularExpressionValidator(rx, this);
    	  
+	// define and populate submaps
+	QMap<QString,QVariant> ipv4map;	
+	QMap<QString,QVariant> ipv6map;
+	QMap<QString,QVariant> proxmap;
+	extractMapData(ipv4map, objmap.value("IPv4.Configuration") );
+	extractMapData(ipv6map, objmap.value("IPv6.Configuration") );
+	extractMapData(proxmap, objmap.value("Proxy.Configuration") );
+	
 	// Seed initial values in the dialog.
 	ui.plainTextEdit_nameservers->setPlainText(objmap.value("Nameservers.Configuration").toStringList().join("\n") );
 	ui.plainTextEdit_timeservers->setPlainText(objmap.value("Timeservers.Congiguration").toStringList().join("\n"));
 	ui.plainTextEdit_domains->setPlainText(objmap.value("Domains.configuration").toStringList().join("\n"));
 	
-	//if (! ipv4map.value("Method").toString().isEmpty() ) {
-		//ui.comboBox_ipv4method->setCurrentIndex(ui.comboBox_ipv4method->findText(ipv4map.value("Method").toString(), Qt::MatchFixedString) );
-	//}
-	//ui.lineEdit_ipv4address->setText(ipv4map.value("Address").toString() );
-	//ui.lineEdit_ipv4netmask->setText(ipv4map.value("Netmask").toString() );
-	//ui.lineEdit_ipv4gateway->setText(ipv4map.value("Gateway").toString() );
+	// ipv4 page
+	if (! ipv4map.value("Method").toString().isEmpty() ) {
+		ui.comboBox_ipv4method->setCurrentIndex(ui.comboBox_ipv4method->findText(ipv4map.value("Method").toString(), Qt::MatchFixedString) );
+	}
+	ui.lineEdit_ipv4address->setText(ipv4map.value("Address").toString() );
+	ui.lineEdit_ipv4netmask->setText(ipv4map.value("Netmask").toString() );
+	ui.lineEdit_ipv4gateway->setText(ipv4map.value("Gateway").toString() );
 	
-	//if (! ipv6map.value("Method").toString().isEmpty() ) {
-		//ui.comboBox_ipv6method->setCurrentIndex(ui.comboBox_ipv6method->findText(ipv6map.value("Method").toString(), Qt::MatchFixedString) );
-	//}
-	//ui.spinBox_ipv6prefixlength->setValue(ipv6map.value("PrefixLength").toInt() );
-	//ui.lineEdit_ipv4address->setText(ipv6map.value("Address").toString() );
-	//ui.lineEdit_ipv4gateway->setText(ipv6map.value("Gateway").toString() );
-	//if (! ipv6map.value("Privacy").toString().isEmpty() ) {
-		//ui.comboBox_ipv6privacy->setCurrentIndex(ui.comboBox_ipv6privacy->findText(ipv6map.value("Privacy").toString(), Qt::MatchFixedString) );
-	//}
+	// ipv6 page
+	if (! ipv6map.value("Method").toString().isEmpty() ) {
+		ui.comboBox_ipv6method->setCurrentIndex(ui.comboBox_ipv6method->findText(ipv6map.value("Method").toString(), Qt::MatchFixedString) );
+	}
+	ui.spinBox_ipv6prefixlength->setValue(ipv6map.value("PrefixLength").toInt() );
+	ui.lineEdit_ipv4address->setText(ipv6map.value("Address").toString() );
+	ui.lineEdit_ipv4gateway->setText(ipv6map.value("Gateway").toString() );
+	if (! ipv6map.value("Privacy").toString().isEmpty() ) {
+		ui.comboBox_ipv6privacy->setCurrentIndex(ui.comboBox_ipv6privacy->findText(ipv6map.value("Privacy").toString(), Qt::MatchFixedString) );
+	}
 	
- 
+	// proxy page
+	if (! proxmap.value("Method").toString().isEmpty() ) {
+		ui.comboBox_proxymethod->setCurrentIndex(ui.comboBox_proxymethod->findText(proxmap.value("Method").toString(), Qt::MatchFixedString) );
+	}
+	ui.plainTextEdit_proxyservers->setPlainText(proxmap.value("Servers").toStringList().join("<br>") );
+	ui.plainTextEdit_proxyexcludes->setPlainText(proxmap.value("Excludes").toStringList().join("<br>") );
+	ui.lineEdit_proxyurl->setText(proxmap.value("URL").toString() );
+	
+	
   // connect signals to slots
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));  
 	connect(ui.pushButton_resetpage, SIGNAL(clicked()), this, SLOT(resetPage()));
@@ -133,8 +151,8 @@ void PropertiesEditor::resetPage(int page)
 		case 5:
 			ui.comboBox_proxymethod->setCurrentIndex(0);
 			ui.lineEdit_proxyurl->clear();
-			ui.textEdit_proxyservers->clear();
-			ui.textEdit_proxyexcludes->clear();
+			ui.plainTextEdit_proxyservers->clear();
+			ui.plainTextEdit_proxyexcludes->clear();
 			break;
 		default:
 			break;

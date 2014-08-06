@@ -5,8 +5,8 @@
 <ul>
 <li>Removed tooltips for obvious controls.  Tooltips now are only available for dynamic GUI elements (unless the user disables them in preferences).</li>
 <li>Detailed configuration dialog - IN PROGRESS</li>
+<li>Added scrollbars and additional information to the service details tab.</li>
 </ul>
-<br>
 <br><b>2014.07.19</b>
 <ul>
 <li>UI updated to allow notifications from the system tray icon or from a notification server.</li>
