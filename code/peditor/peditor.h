@@ -33,7 +33,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QVariant>
 # include <QStringList>
 # include <QWhatsThis>
-# include <QRegularExpressionValidator>
 
 # include "ui_peditor.h"
 
@@ -46,11 +45,9 @@ class PropertiesEditor : public QDialog
   // members
     PropertiesEditor(QWidget*, const QMap<QString,QVariant>&, bool (*extractMapData) (QMap<QString,QVariant>&, const QVariant&) );
     
-  
   private:  
   // members
 		Ui::Peditor ui;
-		QRegularExpressionValidator* addressvalidator;
 		
 	// functions
 		   

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>298</width>
-    <height>507</height>
+    <width>297</width>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,26 +30,35 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>280</width>
-        <height>251</height>
+        <width>279</width>
+        <height>194</height>
        </rect>
       </property>
       <property name="toolTip">
        <string/>
       </property>
       <property name="whatsThis">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The list of manually configured domain name servers. Some cellular networks don't provide correct name servers and this allows for an override.&lt;/p&gt;&lt;p&gt;This array is sorted by priority and the first entry in the list represents the nameserver with the highest priority.&lt;/p&gt;&lt;p&gt;When using manual configuration and no global nameservers are configured, then it is useful to configure this setting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The list of manually configured domain name servers. Some cellular networks don't provide correct name servers and this allows for an override.&lt;/p&gt;&lt;p&gt;This array is sorted by priority and the first entry in the list represents the nameserver with the highest priority.&lt;/p&gt;&lt;p&gt;When using manual configuration and no global nameservers are configured, then it is useful to configure this setting.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses.  Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <attribute name="label">
        <string>&amp;Nameservers</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <widget class="QPlainTextEdit" name="plainTextEdit_nameservers">
-         <property name="whatsThis">
-          <string/>
+        <widget class="QLineEdit" name="lineEdit_nameservers"/>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
          </property>
-        </widget>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -58,22 +67,35 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>280</width>
-        <height>251</height>
+        <width>279</width>
+        <height>194</height>
        </rect>
       </property>
       <property name="toolTip">
        <string/>
       </property>
       <property name="whatsThis">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The list of manually configured time servers.&lt;/p&gt;&lt;p&gt;The first entry in the list represents the timeserver with the highest priority.&lt;/p&gt;&lt;p&gt;When using manual configuration this setting is useful to override all the other timeserver settings. This is service specific, hence only the values for the default service are used.&lt;/p&gt;&lt;p&gt;Changes to this property will result in restart of NTP query.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The list of manually configured time servers.&lt;/p&gt;&lt;p&gt;The first entry in the list represents the timeserver with the highest priority.&lt;/p&gt;&lt;p&gt;When using manual configuration this setting is useful to override all the other timeserver settings. This is service specific, hence only the values for the default service are used.&lt;/p&gt;&lt;p&gt;Changes to this property will result in restart of NTP query.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses.  Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <attribute name="label">
        <string>&amp;TImeservers</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
-        <widget class="QPlainTextEdit" name="plainTextEdit_timeservers"/>
+        <widget class="QLineEdit" name="lineEdit_timeservers"/>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -82,19 +104,32 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>280</width>
-        <height>251</height>
+        <width>279</width>
+        <height>194</height>
        </rect>
       </property>
       <property name="whatsThis">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;List of manually configures search domains.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;List of manually configures search domains.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses.  Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <attribute name="label">
        <string>&amp;Domains</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
-        <widget class="QPlainTextEdit" name="plainTextEdit_domains"/>
+        <widget class="QLineEdit" name="lineEdit_domains"/>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -103,8 +138,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>280</width>
-        <height>251</height>
+        <width>279</width>
+        <height>194</height>
        </rect>
       </property>
       <attribute name="label">
@@ -191,8 +226,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>280</width>
-        <height>251</height>
+        <width>279</width>
+        <height>194</height>
        </rect>
       </property>
       <attribute name="label">
@@ -309,8 +344,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>266</width>
-        <height>264</height>
+        <width>279</width>
+        <height>194</height>
        </rect>
       </property>
       <attribute name="label">
@@ -354,7 +389,11 @@
            <widget class="QWidget" name="page_1">
             <layout class="QGridLayout" name="gridLayout_4">
              <item row="0" column="2">
-              <widget class="QLineEdit" name="lineEdit_proxyurl"/>
+              <widget class="QLineEdit" name="lineEdit_proxyurl">
+               <property name="whatsThis">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic proxy configuration URL.  Used by the &amp;quot;auto&amp;quot; method.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
              </item>
              <item row="1" column="2">
               <spacer name="verticalSpacer_7">
@@ -388,7 +427,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QPlainTextEdit" name="plainTextEdit_proxyservers"/>
+              <widget class="QLineEdit" name="lineEdit_proxyservers">
+               <property name="whatsThis">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used when &amp;quot;manual&amp;quot; is set.List of proxy URIs.  The URI without a protocol will be interpreted as the generic proxy URI.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
              </item>
              <item>
               <widget class="QLabel" name="label_12">
@@ -398,7 +441,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QPlainTextEdit" name="plainTextEdit_proxyexcludes"/>
+              <widget class="QLineEdit" name="lineEdit_proxyexcludes">
+               <property name="whatsThis">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used when &amp;quot;manual&amp;quot; is set.  A list of hosts which can be accessed directly.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses.  Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
              </item>
              <item>
               <spacer name="verticalSpacer_6">
@@ -536,9 +583,6 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>plainTextEdit_nameservers</tabstop>
-  <tabstop>plainTextEdit_timeservers</tabstop>
-  <tabstop>plainTextEdit_domains</tabstop>
   <tabstop>comboBox_ipv4method</tabstop>
   <tabstop>lineEdit_ipv4address</tabstop>
   <tabstop>lineEdit_ipv4netmask</tabstop>

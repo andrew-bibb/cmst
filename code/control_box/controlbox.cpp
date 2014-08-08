@@ -119,7 +119,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   QString s_app = PROGRAM_NAME; 
   settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
   notifyclient = 0;
-	onlineobjectpath.clear();
+  onlineobjectpath.clear();
 
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request")); 
@@ -131,9 +131,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
   }
   else {
-		ui.toolButton_whatsthis->setIcon(QIcon(":/icons/images/interface/whatsthis.png"));
-		agent->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
-	}
+    ui.toolButton_whatsthis->setIcon(QIcon(":/icons/images/interface/whatsthis.png"));
+    agent->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
+  }
   
   // my plan is to eventually have these as options called from the command line.  
   wifi_interval = 60;       // number of seconds between wifi scans
@@ -235,7 +235,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_rescan, SIGNAL (clicked()), this, SLOT(scanTechnologies()));
   connect(ui.checkBox_systemtraynotifications, SIGNAL (clicked(bool)), this, SLOT(trayNotifications(bool)));
   connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
-	connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
+  connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
 
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
@@ -295,9 +295,9 @@ void ControlBox::aboutIconSet()
 {
  QMessageBox::about(this, tr("About AwOken"),
        tr("<center>This program uses the <b>AwOken</b> icon set version 2.5"                       
-					"<br><br>Released under the"
+          "<br><br>Released under the"
           "<br>Creative Commons"
-					"<br>Attribution-Share Alike 3.0"
+          "<br>Attribution-Share Alike 3.0"
           "<br>Unported License"
           "<br><a href=\"url\">http://creativecommons.org/licenses/by-sa/3.0/legalcode</a>"
                   ) );
@@ -376,13 +376,13 @@ void ControlBox::moveService(QAction* act)
   // apply the movebefore or moveafter message to the source object
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this); 
   if (iface_serv->isValid() ) {
-		if (mvsrv_menu->title() == ui.actionMove_Before->text()) {
-			QDBusMessage reply = iface_serv->call(QDBus::NoBlock, "MoveBefore", QVariant::fromValue(targetobj) );
-		}
-		else {
-			QDBusMessage reply = iface_serv->call(QDBus::NoBlock, "MoveAfter", QVariant::fromValue(targetobj) );
-		}
-	}	// iface_srv is valid
+    if (mvsrv_menu->title() == ui.actionMove_Before->text()) {
+      QDBusMessage reply = iface_serv->call(QDBus::NoBlock, "MoveBefore", QVariant::fromValue(targetobj) );
+    }
+    else {
+      QDBusMessage reply = iface_serv->call(QDBus::NoBlock, "MoveAfter", QVariant::fromValue(targetobj) );
+    }
+  } // iface_srv is valid
   
   iface_serv->deleteLater();
   
@@ -546,57 +546,57 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
   } // if contains offlinemode
   
   if (name.contains("State", Qt::CaseInsensitive)) {
-		// local variables
-		QString type;
-		QString name;
-		QString state;
-		QString iconpath;
-	  
-	  // if there is at least 1 service
-	  if (services_list.count() > 0 ) {
-	      QMap<QString,QVariant> map = services_list.at(0).objmap;
-	      type = services_list.at(0).objmap.value("Type").toString();
-	      type = type.replace(0, 1, type.left(1).toUpper() );
-	      name = services_list.at(0).objmap.value("Name").toString();
-	      name = name.replace(0, 1, name.left(1).toUpper() );
-	      state = services_list.at(0).objmap.value("State").toString();
-	      state = state.replace(0, 1, state.left(1).toUpper() );
-	  
-		  // notification text and icons
-		  if (type.contains("wifi", Qt::CaseInsensitive)) {
-		    if (b_useicontheme)
-		      iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wl000.png");
-		    else
-		      iconpath = QString(":/icons/images/systemtray/wl000.png");
-		  } // if wifi
-		  else { 
-		    if (b_useicontheme) 
-		      iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wired_established.png");
-		    else
-		      iconpath = QString(":/icons/images/systemtray/wired_established.png");
-		  } // else probably wired
-		
-		  notifyclient->init();
-		  notifyclient->setSummary(tr("%1 (%2) Network").arg(type).arg(name) );
-		  notifyclient->setBody(tr("Connection: %1").arg(state) );
-		  notifyclient->setIcon(iconpath);
-		  this->sendNotifications();
-		}	// if services count > 
-		
-		// no services listed
-		else {
-			if (b_useicontheme)
-				iconpath = QIcon::hasThemeIcon("network-offline") ? QString("network-offline") : QString(":/icons/images/systemtray/connect_no.png") ;
+    // local variables
+    QString type;
+    QString name;
+    QString state;
+    QString iconpath;
+    
+    // if there is at least 1 service
+    if (services_list.count() > 0 ) {
+        QMap<QString,QVariant> map = services_list.at(0).objmap;
+        type = services_list.at(0).objmap.value("Type").toString();
+        type = type.replace(0, 1, type.left(1).toUpper() );
+        name = services_list.at(0).objmap.value("Name").toString();
+        name = name.replace(0, 1, name.left(1).toUpper() );
+        state = services_list.at(0).objmap.value("State").toString();
+        state = state.replace(0, 1, state.left(1).toUpper() );
+    
+      // notification text and icons
+      if (type.contains("wifi", Qt::CaseInsensitive)) {
+        if (b_useicontheme)
+          iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wl000.png");
+        else
+          iconpath = QString(":/icons/images/systemtray/wl000.png");
+      } // if wifi
+      else { 
+        if (b_useicontheme) 
+          iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wired_established.png");
+        else
+          iconpath = QString(":/icons/images/systemtray/wired_established.png");
+      } // else probably wired
+    
+      notifyclient->init();
+      notifyclient->setSummary(tr("%1 (%2) Network").arg(type).arg(name) );
+      notifyclient->setBody(tr("Connection: %1").arg(state) );
+      notifyclient->setIcon(iconpath);
+      this->sendNotifications();
+    } // if services count > 
+    
+    // no services listed
+    else {
+      if (b_useicontheme)
+        iconpath = QIcon::hasThemeIcon("network-offline") ? QString("network-offline") : QString(":/icons/images/systemtray/connect_no.png") ;
       else  
         iconpath = QString(":/icons/images/systemtray/connect_no.png");
         
-			notifyclient->init();
-			notifyclient->setSummary(tr("Connman State") );
-			notifyclient->setBody(tr("Connection: %1").arg(state) );   
-			notifyclient->setIcon(iconpath);
-			this->sendNotifications();
-		}	// else no services listed
-	}	// if state change
+      notifyclient->init();
+      notifyclient->setSummary(tr("Connman State") );
+      notifyclient->setBody(tr("Connection: %1").arg(state) );   
+      notifyclient->setIcon(iconpath);
+      this->sendNotifications();
+    } // else no services listed
+  } // if state change
         
   return;
 }
@@ -789,13 +789,13 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
 
   // if state property changed sync the online data members
   if (property.contains("State", Qt::CaseInsensitive)) {
-		if (value.toString().contains("Online", Qt::CaseInsensitive)) {
-			onlineobjectpath = s_path;
-		}	// 
-		else if (s_path.contains(onlineobjectpath, Qt::CaseInsensitive)) {
-			onlineobjectpath.clear();
-		}	// else if this service just went offline
-	}	// if property contains State
+    if (value.toString().contains("Online", Qt::CaseInsensitive)) {
+      onlineobjectpath = s_path;
+    } // 
+    else if (s_path.contains(onlineobjectpath, Qt::CaseInsensitive)) {
+      onlineobjectpath.clear();
+    } // else if this service just went offline
+  } // if property contains State
   
   updateDisplayWidgets();
   
@@ -964,9 +964,9 @@ void ControlBox::getServiceDetails(int index)
   rs.append(tr("IP Address: %1<br>").arg(submap.value("Address").toString()));
   QString s_ipv6prefix = submap.value("PrefixLength").toString();
   if (s_ipv6prefix.isEmpty() )
-		rs.append(tr("Prefix Length: <br>"));
-	else
-		rs.append(tr("Prefix Length: %1<br>").arg(submap.value("PrefixLength").toInt()));
+    rs.append(tr("Prefix Length: <br>"));
+  else
+    rs.append(tr("Prefix Length: %1<br>").arg(submap.value("PrefixLength").toInt()));
   rs.append(tr("IP Gateway: %1<br>").arg(submap.value("Gateway").toString()));
   rs.append(tr("Privacy: %1<br>").arg(submap.value("Privacy").toString()));
   
@@ -975,12 +975,12 @@ void ControlBox::getServiceDetails(int index)
   QString s_proxymethod = submap.value("Method").toString();
   rs.append(tr("Address Acquisition: %1<br>").arg(s_proxymethod) );
   if (s_proxymethod.contains("auto", Qt::CaseInsensitive) ) {
-		rs.append(tr("URL: %1<br>").arg(submap.value("URL").toString()) );
-	}
-	else if (s_proxymethod.contains("manual", Qt::CaseInsensitive) ) {
-		rs.append(tr("Servers:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Servers").toStringList().join("<br>&nbsp;&nbsp;")) );
-		rs.append(tr("Excludes:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Excludes").toStringList().join("<br>&nbsp;&nbsp;")) );
-	}
+    rs.append(tr("URL: %1<br>").arg(submap.value("URL").toString()) );
+  }
+  else if (s_proxymethod.contains("manual", Qt::CaseInsensitive) ) {
+    rs.append(tr("Servers:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Servers").toStringList().join("<br>&nbsp;&nbsp;")) );
+    rs.append(tr("Excludes:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Excludes").toStringList().join("<br>&nbsp;&nbsp;")) );
+  }
   
   //  write the text to the left display label
   ui.label_details_left->setText(rs);
@@ -1177,20 +1177,20 @@ void ControlBox::assemblePage1()
       
       QTableWidgetItem* qtwi02 = new QTableWidgetItem();
       bt = technologies_list.at(row).objmap.value("Powered").toBool();  
-			idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
-			connect (qpb02, SIGNAL(clickedID(QString, bool)), this, SLOT(togglePowered(QString, bool)));
-			QString padding = "     ";
-			if (bt ) {
-				qpb02->setText(tr("%1On", "powered").arg(padding));
-				qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
-				qpb02->setChecked(true);
-			}
-			else {
-				qpb02->setText(tr("%1Off", "powered").arg(padding));
-				qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
-				qpb02->setChecked(false);
-			} 
-			ui.tableWidget_technologies->setCellWidget(row, 2, qpb02);
+      idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
+      connect (qpb02, SIGNAL(clickedID(QString, bool)), this, SLOT(togglePowered(QString, bool)));
+      QString padding = "     ";
+      if (bt ) {
+        qpb02->setText(tr("%1On", "powered").arg(padding));
+        qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
+        qpb02->setChecked(true);
+      }
+      else {
+        qpb02->setText(tr("%1Off", "powered").arg(padding));
+        qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
+        qpb02->setChecked(false);
+      } 
+      ui.tableWidget_technologies->setCellWidget(row, 2, qpb02);
       
       QTableWidgetItem* qtwi03 = new QTableWidgetItem();
       bt = technologies_list.at(row).objmap.value("Connected").toBool();
@@ -1392,39 +1392,39 @@ void ControlBox::assembleTrayIcon()
     if (properties_map.value("State").toString().contains("online", Qt::CaseInsensitive) ) {
       if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
         QMap<QString,QVariant> submap;
-				if (services_list.at(0).objmap.value("Type").toString().contains("ethernet", Qt::CaseInsensitive) ) {
-					extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
-					stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
-					stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
-					stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );   
-					b_useicontheme ?
-						trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wired_established.png")) )  :
-						trayicon->setIcon(QIcon(":/icons/images/systemtray/wired_established.png") );         
-				} //  if wired connection
-				
-				if (services_list.at(0).objmap.value("Type").toString().contains("wifi", Qt::CaseInsensitive) ) {
-					stt.prepend(tr("WiFi Connection<br>","icon_tool_tip"));
-					extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );              
-					stt.append(tr("SSID: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );             
-					stt.append(tr("Security: %1<br>").arg(services_list.at(0).objmap.value("Security").toStringList().join(',')) );
-					stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
-					stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
-					quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
-					if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl00.png")) );
-					else {
-					if (str > 80 ) trayicon->setIcon(QIcon(":/icons/images/systemtray/wl00.png"));
-					else if (str > 60 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl075.png"));
-						else if (str > 40 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl050.png"));
-							else if (str > 20 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl025.png"));
-								else trayicon->setIcon(QIcon(":/icons/images/systemtray/wl000.png"));
-					} // else use our built in icons      
-				} //  if wifi connection
+        if (services_list.at(0).objmap.value("Type").toString().contains("ethernet", Qt::CaseInsensitive) ) {
+          extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
+          stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
+          stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
+          stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );   
+          b_useicontheme ?
+            trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wired_established.png")) )  :
+            trayicon->setIcon(QIcon(":/icons/images/systemtray/wired_established.png") );         
+        } //  if wired connection
+        
+        if (services_list.at(0).objmap.value("Type").toString().contains("wifi", Qt::CaseInsensitive) ) {
+          stt.prepend(tr("WiFi Connection<br>","icon_tool_tip"));
+          extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );              
+          stt.append(tr("SSID: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );             
+          stt.append(tr("Security: %1<br>").arg(services_list.at(0).objmap.value("Security").toStringList().join(',')) );
+          stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
+          stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
+          quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
+          if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl00.png")) );
+          else {
+          if (str > 80 ) trayicon->setIcon(QIcon(":/icons/images/systemtray/wl00.png"));
+          else if (str > 60 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl075.png"));
+            else if (str > 40 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl050.png"));
+              else if (str > 20 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl025.png"));
+                else trayicon->setIcon(QIcon(":/icons/images/systemtray/wl000.png"));
+          } // else use our built in icons      
+        } //  if wifi connection
       } //  services if no error
     } //  if the state is online  
     
     else if (properties_map.value("State").toString().contains("ready", Qt::CaseInsensitive) ) {
-			b_useicontheme ?
-				trayicon->setIcon(QIcon::fromTheme("network-idle", QIcon(":/icons/images/interface/connect_creating.png")).pixmap(QSize(16,16)) ) :
+      b_useicontheme ?
+        trayicon->setIcon(QIcon::fromTheme("network-idle", QIcon(":/icons/images/interface/connect_creating.png")).pixmap(QSize(16,16)) ) :
         trayicon->setIcon(QPixmap(":/icons/images/interface/connect_creating.png") );
       stt.append(tr("Connection is in the Ready State.", "icon_tool_tip"));
     } // else if if ready
@@ -1589,9 +1589,9 @@ void ControlBox::sendNotifications()
   }
   
   // if we want notify daemon notifications
-		if (ui.checkBox_notifydaemon->isChecked() && notifyclient->isValid() ) {
-			notifyclient->sendNotification();
-		}
+    if (ui.checkBox_notifydaemon->isChecked() && notifyclient->isValid() ) {
+      notifyclient->sendNotification();
+    }
   return;
 }
 
@@ -1718,6 +1718,9 @@ bool ControlBox::getMap(QMap<QString,QVariant>& r_map, const QDBusMessage& r_msg
 //  Return value a bool, true on success, false otherwise.
 //  The map is sent by reference (called r_map here) and is modified by this function.
 //  r_var is a constant reference to the QDBusArgument.
+//
+//  This is a static function because we send it to the PropertiesEditor class 
+//  as a function argument.
 bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r_var)
 {
   //  make sure we can convert the QVariant into a QDBusArgument
@@ -1831,18 +1834,18 @@ void ControlBox::clearCounters()
 // function.
 void ControlBox::connectNotifyClient()
 {
-	 //initialize the counter
-	 static short count = 0;
-	 ++count;	 
+   //initialize the counter
+   static short count = 0;
+   ++count;  
   
   if (count > 1 ) {
-		// if we have a valid notifyclient return now
-		if (notifyclient->isValid() )
-			return;
-		// else try to connect again 			
-		else
-			notifyclient->connectToServer(); 
-	}	// if count > 1
+    // if we have a valid notifyclient return now
+    if (notifyclient->isValid() )
+      return;
+    // else try to connect again      
+    else
+      notifyclient->connectToServer(); 
+  } // if count > 1
   
   // setup the notify server label if we were successful in finding and connecting to a server
   if (notifyclient->isValid() ) {
@@ -1863,7 +1866,7 @@ void ControlBox::connectNotifyClient()
   // not successful, try again or abandon if counter is at limit
   else { 
     if (count < 4) {
-			ui.label_serverstatus->setText(tr("Attempt %1 of 4 looking for notification server.").arg(count));
+      ui.label_serverstatus->setText(tr("Attempt %1 of 4 looking for notification server.").arg(count));
     } // try again
     else {
       ui.label_serverstatus->setText(tr("Unable to find or connect to a Notification server."));
@@ -1880,20 +1883,20 @@ void ControlBox::connectNotifyClient()
 //
 // Slot to open a dialog to configure the selected service
 void ControlBox::configureService()
-{	
-	PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()).objmap, this->extractMapData );
+{ 
+  PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()).objmap, this->extractMapData );
 
-	// set the whatsthis button icon
+  // set the whatsthis button icon
   if (b_useicontheme) 
    peditor->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
   else 
-		peditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
-	
-	peditor->exec();
-	
-	//peditor->deleteLater();
-	
-	return;
+    peditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
+  
+  peditor->exec();
+  
+  peditor->deleteLater();
+  
+  return;
 }
    
    
