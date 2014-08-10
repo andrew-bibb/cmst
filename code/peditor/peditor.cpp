@@ -1,4 +1,6 @@
 
+
+
 /****************** peditor.cpp *********************************** 
 
 Code to manage the Properties Editor dialog.
@@ -32,20 +34,25 @@ DEALINGS IN THE SOFTWARE.
 
 # include "./code/peditor/peditor.h"
 
-PropertiesEditor::PropertiesEditor(QWidget* parent, const QMap<QString,QVariant>& objmap, bool (*extractMapData) (QMap<QString,QVariant>&,const QVariant&))
+#define DBUS_SERVICE "net.connman"
+
+PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae, bool (*extractMapData) (QMap<QString,QVariant>&,const QVariant&))
     : QDialog(parent)
 {
   // Setup the user interface
   ui.setupUi(this);
   
+  // Data members
+  objpath = ae.objpath;
+  objmap = ae.objmap;
+  
   // Setup the address validator and apply it to any ui QLineEdit. 
   // The lev validator will validate an IP address or any amount of white space (to allow 
   // editing of the line edit).
-  //QString octet = "(?:[0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])";
   QString octet = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
   
   // QLineEdits that allow single address
-  QRegularExpression rx("\\s*|^" + octet + "\\." + octet + "\\." + octet + "\\." + octet + "$");
+  QRegularExpression rx("\\s?|^" + octet + "\\." + octet + "\\." + octet + "\\." + octet + "$");
   QRegularExpressionValidator* lev_s = new QRegularExpressionValidator(rx, this);
   ui.lineEdit_ipv4address->setValidator(lev_s);
   ui.lineEdit_ipv4netmask->setValidator(lev_s);
@@ -85,7 +92,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const QMap<QString,QVariant>
   if (! ipv6map.value("Method").toString().isEmpty() ) {
     ui.comboBox_ipv6method->setCurrentIndex(ui.comboBox_ipv6method->findText(ipv6map.value("Method").toString(), Qt::MatchFixedString) );
   }
-  ui.spinBox_ipv6prefixlength->setValue(ipv6map.value("PrefixLength").toInt() );
+  ui.spinBox_ipv6prefixlength->setValue(ipv6map.value("PrefixLength").toUInt() );
   ui.lineEdit_ipv4address->setText(ipv6map.value("Address").toString() );
   ui.lineEdit_ipv4gateway->setText(ipv6map.value("Gateway").toString() );
   if (! ipv6map.value("Privacy").toString().isEmpty() ) {
@@ -105,6 +112,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const QMap<QString,QVariant>
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));  
   connect(ui.pushButton_resetpage, SIGNAL(clicked()), this, SLOT(resetPage()));
   connect(ui.pushButton_resetall, SIGNAL(clicked()), this, SLOT(resetAll()));
+  connect(ui.pushButton_ok, SIGNAL(clicked()), this, SLOT(updateConfiguration()));
         
 }    
 
@@ -177,3 +185,116 @@ void PropertiesEditor::resetAll()
   return;
 }
 
+//
+// Slot to update the configuration then exit.  Called when  ui.pushButton_ok
+// is clicked. Step through each page of the QToolBox and send any entries
+// to connman. 
+void PropertiesEditor::updateConfiguration()
+{
+	// Some variables
+	QString s;
+	QStringList sl;
+	QList<QVariant> vlist;
+	QMap<QString,QVariant> dict;
+	QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+	QList<QLineEdit*> lep;
+	QStringList slp;
+	
+	// QLineEdits (nameservers, timeservers and domains)
+	lep.clear();
+	slp.clear();
+	lep << ui.lineEdit_nameservers << ui.lineEdit_timeservers << ui.lineEdit_domains;
+	slp << "Nameservers.Configuration" << "Timeservers.Configuration" << "Domains.Configuration";
+	for (int i = 0; i < lep.count(); ++i) {
+		s = lep.at(i)->text();
+		s.replace(',', ' ');
+		s.replace(';', ' ');
+		s = s.simplified();
+
+		vlist.clear();
+		vlist << slp.at(i);
+		if (s.isEmpty() ) sl.clear();
+		else sl = s.split(' ');
+		vlist << QVariant::fromValue(QDBusVariant(sl) ); 
+		QDBusMessage reply01 = iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
+		//qDebug() << reply01;
+	}	//for
+	
+	// ipv4
+	vlist.clear();
+	lep.clear();
+	slp.clear();
+	dict.clear();
+	vlist << "IPv4.Configuration";
+	dict.insert("Method", ui.comboBox_ipv4method->currentText().toLower() );
+	
+	lep << ui.lineEdit_ipv4address << ui.lineEdit_ipv4netmask << ui.lineEdit_ipv4gateway;
+	slp << "Address" << "Netmask" << "Gateway";
+	for (int i = 0; i < lep.count(); ++i) {
+		s = lep.at(i)->text();
+		s = s.simplified();	// really should not be needed with the validator
+		if (s.isEmpty() ) s.clear();
+		dict.insert(slp.at(i), s);
+	}	// for  
+	
+	vlist << QVariant::fromValue(QDBusVariant(dict) );
+	QDBusMessage reply02 = iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);		
+	//qDebug() << reply02;
+	
+	// ipv6
+	vlist.clear();
+	lep.clear();
+	slp.clear();
+	dict.clear();
+	vlist << "IPv6.Configuration";
+	dict.insert("Method", ui.comboBox_ipv6method->currentText().toLower() );
+	dict.insert("PrefixLength", QVariant::fromValue(static_cast<quint8>(ui.spinBox_ipv6prefixlength->value())) );
+	dict.insert("Privacy", ui.comboBox_ipv6privacy->currentText().toLower() );
+	
+	lep << ui.lineEdit_ipv6address <<  ui.lineEdit_ipv6gateway;
+	slp << "Address" << "Gateway";
+	for (int i = 0; i < lep.count(); ++i) {
+		s = lep.at(i)->text();
+		s = s.simplified();	// really should not be needed with the validator
+		if (s.isEmpty() ) s.clear();
+		dict.insert(slp.at(i), s);
+	}	// for 	
+	
+	vlist << QVariant::fromValue(QDBusVariant(dict) );
+	QDBusMessage reply03 = iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);		
+	//qDebug() << reply03;	
+
+	// proxy
+	vlist.clear();
+	lep.clear();
+	slp.clear();
+	dict.clear();
+	vlist << "Proxy.Configuration";
+	dict.insert("Method", ui.comboBox_proxymethod->currentText().toLower() );
+	
+	lep << ui.lineEdit_proxyurl << ui.lineEdit_proxyservers << ui.lineEdit_proxyexcludes;
+	slp << "URL" << "Servers" << "Excludes";
+	for (int i = 0; i < lep.count(); ++i) {
+		s = lep.at(i)->text();
+		s = s.simplified();	
+		// URL is a single string
+		if ( i == 0 ) {
+			if (s.isEmpty() ) s.clear();
+			dict.insert(slp.at(i), s);
+		}
+		// remanider are an array of strings 
+		else {
+			if (s.isEmpty() ) sl.clear();
+			else sl = s.split(' ');
+			dict.insert(slp.at(i), sl);
+		}
+	}	// for 	
+	
+	vlist << QVariant::fromValue(QDBusVariant(dict) );
+	qDebug() << dict;
+	QDBusMessage reply04 = iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);		
+	//qDebug() << reply04;	
+	
+	iface_serv->deleteLater();	
+	this->accept();
+}

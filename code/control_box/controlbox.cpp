@@ -42,7 +42,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QCloseEvent>
 # include <QToolTip>
 
-# include "./code/control_box/controlbox.h"
+
 # include "./code/resource.h" 
 # include "./code/scrollbox/scrollbox.h"
 # include "./code/peditor/peditor.h"
@@ -966,7 +966,7 @@ void ControlBox::getServiceDetails(int index)
   if (s_ipv6prefix.isEmpty() )
     rs.append(tr("Prefix Length: <br>"));
   else
-    rs.append(tr("Prefix Length: %1<br>").arg(submap.value("PrefixLength").toInt()));
+    rs.append(tr("Prefix Length: %1<br>").arg(submap.value("PrefixLength").toUInt()));
   rs.append(tr("IP Gateway: %1<br>").arg(submap.value("Gateway").toString()));
   rs.append(tr("Privacy: %1<br>").arg(submap.value("Privacy").toString()));
   
@@ -1884,16 +1884,20 @@ void ControlBox::connectNotifyClient()
 // Slot to open a dialog to configure the selected service
 void ControlBox::configureService()
 { 
-  PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()).objmap, this->extractMapData );
+	// Make sure the index is real
+	if (ui.comboBox_service->currentIndex() < 0 ) return;
+	
+	// Create a new properties editor
+  PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()), this->extractMapData );
 
-  // set the whatsthis button icon
+  // Set the whatsthis button icon
   if (b_useicontheme) 
    peditor->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
   else 
     peditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
   
+  // call then clean up
   peditor->exec();
-  
   peditor->deleteLater();
   
   return;

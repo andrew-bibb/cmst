@@ -33,8 +33,10 @@ DEALINGS IN THE SOFTWARE.
 # include <QVariant>
 # include <QStringList>
 # include <QWhatsThis>
+# include <QDBusObjectPath>
 
 # include "ui_peditor.h"
+# include "./code/control_box/controlbox.h"
 
 //	The class to control the properties editor UI based on a QDialog
 class PropertiesEditor : public QDialog
@@ -43,11 +45,13 @@ class PropertiesEditor : public QDialog
 
   public:
   // members
-    PropertiesEditor(QWidget*, const QMap<QString,QVariant>&, bool (*extractMapData) (QMap<QString,QVariant>&, const QVariant&) );
+    PropertiesEditor(QWidget*, const arrayElement&, bool (*extractMapData) (QMap<QString,QVariant>&, const QVariant&) );
     
   private:  
   // members
 		Ui::Peditor ui;
+		QDBusObjectPath objpath;
+		QMap<QString,QVariant> objmap;
 		
 	// functions
 		   
@@ -55,6 +59,7 @@ class PropertiesEditor : public QDialog
   	void showWhatsThis();
 		void resetPage(int page = -1);
 		void resetAll();
+		void updateConfiguration();
 				
 	public:
 		inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Service Properties</string>
+   <string>Property Editor</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
@@ -67,8 +67,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>279</width>
-        <height>194</height>
+        <width>98</width>
+        <height>46</height>
        </rect>
       </property>
       <property name="toolTip">
@@ -104,8 +104,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>279</width>
-        <height>194</height>
+        <width>98</width>
+        <height>46</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -138,9 +138,12 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>279</width>
-        <height>194</height>
+        <width>154</width>
+        <height>132</height>
        </rect>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User configuration of IPv4 settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <attribute name="label">
        <string>IPv&amp;4</string>
@@ -229,6 +232,9 @@
         <width>279</width>
         <height>194</height>
        </rect>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User configuration of IPv6 settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <attribute name="label">
        <string>IPv&amp;6</string>
@@ -347,6 +353,9 @@
         <width>279</width>
         <height>194</height>
        </rect>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User configuration of Proxy settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <attribute name="label">
        <string>&amp;Proxy</string>
@@ -558,7 +567,7 @@
      <item>
       <widget class="QPushButton" name="pushButton_ok">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="whatsThis">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accept the entries, send them to Connman, and close the dialog.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -609,44 +618,12 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>247</x>
-     <y>486</y>
+     <x>239</x>
+     <y>434</y>
     </hint>
     <hint type="destinationlabel">
-     <x>268</x>
-     <y>0</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_ok</sender>
-   <signal>clicked()</signal>
-   <receiver>Peditor</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>172</x>
-     <y>476</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>228</x>
-     <y>0</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>comboBox_proxymethod</sender>
-   <signal>currentIndexChanged(int)</signal>
-   <receiver>stackedWidget_proxy01</receiver>
-   <slot>setCurrentIndex(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>230</x>
-     <y>198</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>247</x>
-     <y>220</y>
+     <x>226</x>
+     <y>-14</y>
     </hint>
    </hints>
   </connection>
