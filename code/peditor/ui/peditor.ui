@@ -67,8 +67,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>98</width>
-        <height>46</height>
+        <width>279</width>
+        <height>194</height>
        </rect>
       </property>
       <property name="toolTip">
@@ -104,8 +104,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>98</width>
-        <height>46</height>
+        <width>279</width>
+        <height>194</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -138,8 +138,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>154</width>
-        <height>132</height>
+        <width>279</width>
+        <height>194</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -624,6 +624,22 @@
     <hint type="destinationlabel">
      <x>226</x>
      <y>-14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_proxymethod</sender>
+   <signal>activated(int)</signal>
+   <receiver>stackedWidget_proxy01</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>218</y>
     </hint>
    </hints>
   </connection>

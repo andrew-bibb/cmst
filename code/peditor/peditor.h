@@ -52,6 +52,9 @@ class PropertiesEditor : public QDialog
 		Ui::Peditor ui;
 		QDBusObjectPath objpath;
 		QMap<QString,QVariant> objmap;
+		QMap<QString,QVariant> ipv4map; 
+		QMap<QString,QVariant> ipv6map;
+		QMap<QString,QVariant> proxmap;
 		
 	// functions
 		   
