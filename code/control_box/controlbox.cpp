@@ -512,7 +512,7 @@ void ControlBox::removePressed()
   
   //  send the Remove message to the service
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-  iface_serv->call(QDBus::NoBlock, "Remove");
+  iface_serv->call(QDBus::AutoDetect, "Remove");
   iface_serv->deleteLater();
 
   return;
