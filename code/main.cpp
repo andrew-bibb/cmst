@@ -94,6 +94,8 @@ int main(int argc, char *argv[])
 	QStringList sl = parser.unknownOptionNames();
 	if (sl.size() > 0 ) parser.showHelp(1);
 								
+	// Showing the dialog (or not) is controlled in the createSystemTrayIcon() function
+	// called from the ControlBox constructor.  We don't show it from here.							
 	ControlBox ctlbox(parser);
 	return app.exec();
 }

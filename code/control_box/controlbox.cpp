@@ -42,8 +42,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QCloseEvent>
 # include <QToolTip>
 
-
 # include "./code/resource.h" 
+# include "./code/control_box/controlbox.h"
 # include "./code/scrollbox/scrollbox.h"
 # include "./code/peditor/peditor.h"
   

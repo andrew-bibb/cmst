@@ -1,7 +1,7 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
 <br>
-<br><b>In Progress</b>
+<br><b>2014.08.23</b>
 <ul>
 <li>Removed tooltips for obvious controls.  Tooltips now are only available for dynamic GUI elements (unless the user disables them in preferences).</li>
 <li>Detailed service configuration dialog.</li>
