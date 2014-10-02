@@ -453,8 +453,15 @@ void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QStrin
 
 //
 //  Slot to connect a wifi service. Called when ui.pushButton_connect is pressed
+#include <QTableWidgetSelectionRange>
 void ControlBox::connectPressed()
 {
+	// if there is only one row select it
+	if (ui.tableWidget_wifi->rowCount() == 1 ) {
+		QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(0, 0, 0, ui.tableWidget_wifi->columnCount() - 1); 
+		ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
+	}
+	
   // if no row is selected then return(
   QList<QTableWidgetItem*> list;
   list.clear();
@@ -1366,6 +1373,13 @@ void ControlBox::assemblePage3()
   // resize the services column 0 and 1 to contents
   ui.tableWidget_wifi->resizeColumnToContents(0);
   ui.tableWidget_wifi->resizeColumnToContents(1);
+  
+  // enable the control buttons if there is at least on line in the table
+  bool b_enable = false;
+  if ( wifi_list.count() > 0 ) b_enable = true;
+  ui.pushButton_connect->setEnabled(b_enable);
+  ui.pushButton_disconnect->setEnabled(b_enable);
+  ui.pushButton_remove->setEnabled(b_enable);
   
   return;
 } 
