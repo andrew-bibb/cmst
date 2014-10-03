@@ -41,6 +41,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QLocale>
 # include <QCloseEvent>
 # include <QToolTip>
+# include <QTableWidgetSelectionRange>
 
 # include "./code/resource.h" 
 # include "./code/control_box/controlbox.h"
@@ -453,16 +454,15 @@ void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QStrin
 
 //
 //  Slot to connect a wifi service. Called when ui.pushButton_connect is pressed
-#include <QTableWidgetSelectionRange>
 void ControlBox::connectPressed()
 {
-	// if there is only one row select it
+	// If there is only one row select it
 	if (ui.tableWidget_wifi->rowCount() == 1 ) {
 		QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(0, 0, 0, ui.tableWidget_wifi->columnCount() - 1); 
 		ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
 	}
 	
-  // if no row is selected then return(
+  // If no row is selected then return(
   QList<QTableWidgetItem*> list;
   list.clear();
   list = ui.tableWidget_wifi->selectedItems();
@@ -484,6 +484,25 @@ void ControlBox::connectPressed()
 //  Slot to disconnect a wifi service. Called when ui.pushButton_disconnect is pressed
 void ControlBox::disconnectPressed()
 {
+  // Run through the wifi list looking for services in "online" or "ready" state. If more than
+  // one is found break as we will have to select manually
+  int cntr_connected = 0;
+  int row_connected = -1;
+  for (int row = 0; row < wifi_list.size(); ++row) {
+    QMap<QString,QVariant> map = wifi_list.at(row).objmap;
+    if (map.value("State").toString().contains("online", Qt::CaseInsensitive) || map.value("State").toString().contains("ready", Qt::CaseInsensitive) ) {
+			 ++cntr_connected;
+			 row_connected = row;
+		 }
+		 if (cntr_connected > 1 ) break;
+	}	// for
+	
+	// if only one wifi entry is connected or online, select it
+	if (cntr_connected == 1 ) {
+		QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row_connected, 0, row_connected, ui.tableWidget_wifi->columnCount() - 1); 
+		ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
+	}	
+	
   // if no row selected return
   QList<QTableWidgetItem*> list;
   list.clear();
