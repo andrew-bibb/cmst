@@ -51,7 +51,10 @@ int main(int argc, char *argv[])
 	// make sure only one instance of the program is run at a time
 	QSharedMemory sharedMemory;
 	sharedMemory.setKey(LONG_NAME);
-	if(sharedMemory.attach()) return 1;
+	if(sharedMemory.attach()) {
+		qDebug() << "Another running instance of CMST has been detected.  This instance is aborting";  
+		return 1;
+	}
 	else sharedMemory.create(1);
 
 	// setup the command line parser
