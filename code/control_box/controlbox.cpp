@@ -37,7 +37,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QMenu>
 # include <QPixmap>
 # include <QProgressBar>
-# include <QMessageBox>"Another running instance of CMST has been detected.  This instance is aborting";  
+# include <QMessageBox>
 # include <QLocale>
 # include <QCloseEvent>
 # include <QToolTip>
