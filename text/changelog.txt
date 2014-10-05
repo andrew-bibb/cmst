@@ -6,6 +6,8 @@
 <li>Connect, Disconnect, and Remove buttons in the Wifi tab are disabled if no Wifi services are available.<li>
 <li>If only one WiFi service exists it is no longer necessary to select it first before pressing the Connect button.</li>
 <li>If only one WiFi service is connected it is no longer necessary to select it first before pressing the Disconnect button.</li>
+<li>Single instance code now checked using a local socket, not shared memory.</li>
+<li>If an instance of CMST is started while one is running the running copy will be raised, and a message about a second instance trying to start will be printed to stderr.</li> 
 </ul>
 <br>
 <br><b>2014.08.23</b>

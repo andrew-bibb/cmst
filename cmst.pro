@@ -7,6 +7,7 @@ CONFIG +=nostrip
 #  Widgets needed for QT5, 
 QT += widgets
 QT += dbus
+QT += network
 
 TEMPLATE = app
 TARGET = cmst

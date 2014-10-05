@@ -44,6 +44,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QCommandLineParser>
 # include <QMenu>
 # include <QSettings>
+# include <QLocalServer>
 
 # include "ui_controlbox.h"
 # include "./code/agent/agent.h"
@@ -145,6 +146,7 @@ class ControlBox : public QDialog
 		QMenu* mvsrv_menu;
 		QSettings* settings;
 		QString onlineobjectpath;
+		QLocalServer* socketserver;
 	
 	// functions
 		int managerRescan(const int& srv = 0);
@@ -197,6 +199,7 @@ class ControlBox : public QDialog
 		void readSettings();
 		void connectNotifyClient();
 		void configureService();
+		void socketConnectionDetected();
 };
 
 #endif

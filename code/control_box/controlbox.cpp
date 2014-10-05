@@ -37,7 +37,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QMenu>
 # include <QPixmap>
 # include <QProgressBar>
-# include <QMessageBox>
+# include <QMessageBox>"Another running instance of CMST has been detected.  This instance is aborting";  
 # include <QLocale>
 # include <QCloseEvent>
 # include <QToolTip>
@@ -106,7 +106,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   
   // set the window title 
   setWindowTitle(tr(WINDOW_TITLE));    
- 
+  
   // data members
   q8_errors = CMST::No_Errors;
   properties_map.clear();
@@ -121,6 +121,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
   notifyclient = 0;
   onlineobjectpath.clear();
+	socketserver = new QLocalServer(this);
+	socketserver->listen(LONG_NAME);
 
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request")); 
@@ -237,6 +239,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.checkBox_systemtraynotifications, SIGNAL (clicked(bool)), this, SLOT(trayNotifications(bool)));
   connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
   connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
+  connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
 
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
@@ -1936,4 +1939,12 @@ void ControlBox::configureService()
   return;
 }
    
+//
+// Slot called when a connection to the local socket was detected.  Means another instance of CMST was started
+// while this instance was running.
+void ControlBox::socketConnectionDetected()
+{
+	this->showNormal();
+	return;
+}   
    
