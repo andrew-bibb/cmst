@@ -1,15 +1,15 @@
 [Unit]
 Description="CMST - A QT based gui frontend with system tray icon for the connman daemon"
 Documentation="man:cmst(1)"
+BindsTo=multi-user.target.wants/connman.service
+After=multi-user.target.wants/connman.service
 
 [Service]
-#Type=oneshot
-#ExecStart=/bin/bash -c '/usr/bin/myles_apps/checkboot/checkboot.sh -f -l'
-#TimeoutSec=0
-#RemainAfterExit=no
+Environment=DISPLAY=:0
+Type=simple
+ExecStart=/usr/bin/cmst --minimized --icon-theme
+TimeoutSec=0
+RemainAfterExit=no
 
 [Install]
-#
-WantedBy=multi-user.target
-
-3
+WantedBy=graphical.target
