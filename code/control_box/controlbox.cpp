@@ -36,7 +36,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QWhatsThis>
 # include <QMenu>
 # include <QPixmap>
-# include <QProgressBar>
 # include <QMessageBox>
 # include <QLocale>
 # include <QCloseEvent>
@@ -81,12 +80,34 @@ idButton::idButton(QWidget* parent, const QDBusObjectPath& id) :
   
 }
 
-
 void idButton::buttonClicked(bool checked)
 {
   this->setDisabled(true);
   
   emit clickedID (obj_id.path(), checked);
+  
+  return;
+}
+
+// Custom QProgressBar for wifi signals.  Use so we can define a frame
+// around the actual progress bar, set margins, etc.
+SignalBar::SignalBar(QWidget* parent) : QFrame(parent)
+{
+  // margins
+  const int m_left = 11;
+  const int m_top = 7;
+  const int m_right = 11;
+  const int m_bottom = 7;
+  
+  // create the bar
+  bar = new QProgressBar(this);
+  bar->setAlignment(Qt::AlignCenter);
+  bar->setRange(0, 100);
+  
+  // create the box
+  QHBoxLayout* layout = new QHBoxLayout(this);
+  layout->setContentsMargins(m_left, m_top, m_right, m_bottom);
+  layout->addWidget(bar, 0, 0);
   
   return;
 }
@@ -121,8 +142,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
   notifyclient = 0;
   onlineobjectpath.clear();
-	socketserver = new QLocalServer(this);
-	socketserver->listen(LONG_NAME);
+  socketserver = new QLocalServer(this);
+  socketserver->listen(LONG_NAME);
 
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request")); 
@@ -459,12 +480,12 @@ void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QStrin
 //  Slot to connect a wifi service. Called when ui.pushButton_connect is pressed
 void ControlBox::connectPressed()
 {
-	// If there is only one row select it
-	if (ui.tableWidget_wifi->rowCount() == 1 ) {
-		QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(0, 0, 0, ui.tableWidget_wifi->columnCount() - 1); 
-		ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
-	}
-	
+  // If there is only one row select it
+  if (ui.tableWidget_wifi->rowCount() == 1 ) {
+    QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(0, 0, 0, ui.tableWidget_wifi->columnCount() - 1); 
+    ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
+  }
+  
   // If no row is selected then return(
   QList<QTableWidgetItem*> list;
   list.clear();
@@ -494,18 +515,18 @@ void ControlBox::disconnectPressed()
   for (int row = 0; row < wifi_list.size(); ++row) {
     QMap<QString,QVariant> map = wifi_list.at(row).objmap;
     if (map.value("State").toString().contains("online", Qt::CaseInsensitive) || map.value("State").toString().contains("ready", Qt::CaseInsensitive) ) {
-			 ++cntr_connected;
-			 row_connected = row;
-		 }
-		 if (cntr_connected > 1 ) break;
-	}	// for
-	
-	// if only one wifi entry is connected or online, select it
-	if (cntr_connected == 1 ) {
-		QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row_connected, 0, row_connected, ui.tableWidget_wifi->columnCount() - 1); 
-		ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
-	}	
-	
+       ++cntr_connected;
+       row_connected = row;
+     }
+     if (cntr_connected > 1 ) break;
+  } // for
+  
+  // if only one wifi entry is connected or online, select it
+  if (cntr_connected == 1 ) {
+    QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row_connected, 0, row_connected, ui.tableWidget_wifi->columnCount() - 1); 
+    ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
+  } 
+  
   // if no row selected return
   QList<QTableWidgetItem*> list;
   list.clear();
@@ -1381,12 +1402,10 @@ void ControlBox::assemblePage3()
       qtwi03->setText(map.value("Security").toStringList().join(',') );
       qtwi03->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_wifi->setItem(rowcount, 3, qtwi03);      
-        
-      QProgressBar* qpb04 = new QProgressBar(ui.tableWidget_wifi);
-      qpb04->setAlignment(Qt::AlignCenter);
-      qpb04->setRange(0, 100);
-      qpb04->setValue(map.value("Strength").value<quint8>() );
-      ui.tableWidget_wifi->setCellWidget(rowcount, 4, qpb04);
+         
+      SignalBar* sb04 = new SignalBar(ui.tableWidget_wifi);          
+      sb04->setBarValue(map.value("Strength").value<quint8>() );  
+      ui.tableWidget_wifi->setCellWidget(rowcount, 4, sb04);
             
       ++rowcount;
     } //  if wifi cnxn
@@ -1920,10 +1939,10 @@ void ControlBox::connectNotifyClient()
 // Slot to open a dialog to configure the selected service
 void ControlBox::configureService()
 { 
-	// Make sure the index is real
-	if (ui.comboBox_service->currentIndex() < 0 ) return;
-	
-	// Create a new properties editor
+  // Make sure the index is real
+  if (ui.comboBox_service->currentIndex() < 0 ) return;
+  
+  // Create a new properties editor
   PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()), this->extractMapData );
 
   // Set the whatsthis button icon
@@ -1944,7 +1963,7 @@ void ControlBox::configureService()
 // while this instance was running.
 void ControlBox::socketConnectionDetected()
 {
-	this->showNormal();
-	return;
+  this->showNormal();
+  return;
 }   
    

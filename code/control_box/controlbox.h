@@ -45,63 +45,78 @@ DEALINGS IN THE SOFTWARE.
 # include <QMenu>
 # include <QSettings>
 # include <QLocalServer>
+# include <QFrame>
+# include <QProgressBar>
 
 # include "ui_controlbox.h"
 # include "./code/agent/agent.h"
 # include "./code/counter/counter.h"
 # include "./code/notify/notify.h"
 
-//	Used for enum's local to this program
+//  Used for enum's local to this program
 namespace CMST 
 {
   enum {
     // errors
-    No_Errors					= 0x00,
-    Err_No_DBus				= (1 << 0),	// Can't find DBus 
-    Err_Invalid_Iface	= (1 << 1),	// Invalid interface
-    Err_Properties		=	(1 << 2),	// There was an error reading connman.Manager.GetProperties
-    Err_Technologies	=	(1 << 3),	// There was an error reading connman.Manager.GetTechnologies       
-    Err_Services			=	(1 << 4),	// There was an error reading connman.Manager.GetServices  
+    No_Errors         = 0x00,
+    Err_No_DBus       = (1 << 0), // Can't find DBus 
+    Err_Invalid_Iface = (1 << 1), // Invalid interface
+    Err_Properties    = (1 << 2), // There was an error reading connman.Manager.GetProperties
+    Err_Technologies  = (1 << 3), // There was an error reading connman.Manager.GetTechnologies       
+    Err_Services      = (1 << 4), // There was an error reading connman.Manager.GetServices  
     
     // methods
-    Manager_Properties		= (1 << 1),	// scan for properties
-    Manager_Technologies	= (1 << 2),	// scan for technologies  
-    Manager_Services	 		=	(1 << 3),	// scan for services
-    Manager_All						= (CMST::Manager_Properties | CMST::Manager_Technologies | CMST::Manager_Services),
+    Manager_Properties    = (1 << 1), // scan for properties
+    Manager_Technologies  = (1 << 2), // scan for technologies  
+    Manager_Services      = (1 << 3), // scan for services
+    Manager_All           = (CMST::Manager_Properties | CMST::Manager_Technologies | CMST::Manager_Services),
   };
 } // namespace CMST
 
 
-//	Two of the connman.Manager query functions will return an array of structures.
-//	This struct provides a receiving element we can use to collect the return data.
+//  Two of the connman.Manager query functions will return an array of structures.
+//  This struct provides a receiving element we can use to collect the return data.
 struct arrayElement
 {
-	QDBusObjectPath objpath;
-	QMap<QString,QVariant> objmap;
+  QDBusObjectPath objpath;
+  QMap<QString,QVariant> objmap;
 };
 
 //
 // custom QPushButton that will emit a button id
 class idButton : public QPushButton
 {
-	Q_OBJECT
-	
-	public:
-		idButton (QWidget*, const QDBusObjectPath&);
-		
-	signals:
-		void clickedID(QString, bool);
-	
-	private:
-		QDBusObjectPath obj_id;
-		
-	private slots:
-		void buttonClicked(bool);
+  Q_OBJECT
+  
+  public:
+    idButton (QWidget*, const QDBusObjectPath&);
+    
+  signals:
+    void clickedID(QString, bool);
+  
+  private:
+    QDBusObjectPath obj_id;
+    
+  private slots:
+    void buttonClicked(bool);
 };
 
+//
+// custom QFrame containing a progress bar
+class SignalBar : public QFrame
+{
+  Q_OBJECT
+  
+  public:
+    SignalBar (QWidget*);
+    inline void setBarValue (int val) {bar->setValue(val);}
+    
+  private:
+    QProgressBar* bar;      
+};
 
 //
-//	The main program class based on a QDialog
+//  The main program class based on a QDialog
 class ControlBox : public QDialog
 {
   Q_OBJECT
@@ -110,96 +125,96 @@ class ControlBox : public QDialog
     ControlBox(const QCommandLineParser&, QWidget* parent = 0);
 
   public slots:  
-		void aboutCMST();
-		void aboutIconSet();
-		void showLicense();
-		void showChangeLog();
-		
-	protected:
-		void closeEvent(QCloseEvent*);
-		bool eventFilter(QObject*, QEvent*); 
-		
+    void aboutCMST();
+    void aboutIconSet();
+    void showLicense();
+    void showChangeLog();
+    
+  protected:
+    void closeEvent(QCloseEvent*);
+    bool eventFilter(QObject*, QEvent*); 
+    
   private:
   // members 
     Ui::ControlBox ui;
-		quint8 q8_errors;
-		QMap<QString,QVariant>	properties_map;
-		QList<arrayElement>		services_list;
-		QList<arrayElement>		technologies_list;
-		QList<arrayElement>		wifi_list;
-		QList<arrayElement>		peer_list;
-		ConnmanAgent* agent;
-		ConnmanCounter* counter;	
-		NotifyClient* notifyclient;	
-		short wifi_interval;		
-		quint32 counter_accuracy;	
-		quint32 counter_period;				
-		QDBusInterface* iface_manager;
-		QTimer* wifi_timer;
-		QSystemTrayIcon*	trayicon; 
-		QActionGroup* minMaxGroup;
-		QActionGroup* moveGroup;
-		QAction* minimizeAction;
-		QAction* maximizeAction;
-		QAction* exitAction;
-		bool b_useicontheme;
-		QMenu* mvsrv_menu;
-		QSettings* settings;
-		QString onlineobjectpath;
-		QLocalServer* socketserver;
-	
-	// functions
-		int managerRescan(const int& srv = 0);
-		void assemblePage1();
-		void assemblePage2();
-		void assemblePage3();
-		void assemblePage4();
-		void assembleTrayIcon();
-		void createSystemTrayIcon(bool);
-		void sendNotifications();
-		bool getProperties();
-		bool getTechnologies();		
-		bool getServices();
-		bool getArray(QList<arrayElement>&, const QDBusMessage&);
-		bool getMap(QMap<QString,QVariant>&, const QDBusMessage&); 
-		static bool extractMapData(QMap<QString,QVariant>&,const QVariant&);
-		void logErrors(const quint8&);
-		QString readResourceText(const char*);
-		void clearCounters();
+    quint8 q8_errors;
+    QMap<QString,QVariant>  properties_map;
+    QList<arrayElement>   services_list;
+    QList<arrayElement>   technologies_list;
+    QList<arrayElement>   wifi_list;
+    QList<arrayElement>   peer_list;
+    ConnmanAgent* agent;
+    ConnmanCounter* counter;  
+    NotifyClient* notifyclient; 
+    short wifi_interval;    
+    quint32 counter_accuracy; 
+    quint32 counter_period;       
+    QDBusInterface* iface_manager;
+    QTimer* wifi_timer;
+    QSystemTrayIcon*  trayicon; 
+    QActionGroup* minMaxGroup;
+    QActionGroup* moveGroup;
+    QAction* minimizeAction;
+    QAction* maximizeAction;
+    QAction* exitAction;
+    bool b_useicontheme;
+    QMenu* mvsrv_menu;
+    QSettings* settings;
+    QString onlineobjectpath;
+    QLocalServer* socketserver;
+  
+  // functions
+    int managerRescan(const int& srv = 0);
+    void assemblePage1();
+    void assemblePage2();
+    void assemblePage3();
+    void assemblePage4();
+    void assembleTrayIcon();
+    void createSystemTrayIcon(bool);
+    void sendNotifications();
+    bool getProperties();
+    bool getTechnologies();   
+    bool getServices();
+    bool getArray(QList<arrayElement>&, const QDBusMessage&);
+    bool getMap(QMap<QString,QVariant>&, const QDBusMessage&); 
+    static bool extractMapData(QMap<QString,QVariant>&,const QVariant&);
+    void logErrors(const quint8&);
+    QString readResourceText(const char*);
+    void clearCounters();
 
   private slots:
-  	void	updateDisplayWidgets();
-		void moveService(QAction*);
-		void moveButtonPressed(QAction*);
-		void enableMoveButtons(int,int);
-		void counterUpdated(const QDBusObjectPath&, const QString&, const QString&);
-		void connectPressed();
-		void disconnectPressed();
-		void removePressed();
-		void dbsPropertyChanged(QString,QDBusVariant);
-		void dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage);
-		void dbsPeersChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage);
-		void dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage);
-		void dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage);
-		void dbsTechnologyAdded(QDBusObjectPath, QVariantMap);
-		void dbsTechnologyRemoved(QDBusObjectPath);
-		void scanTechnologies();
-		void toggleOfflineMode(bool);
-		void toggleTrayIcon(bool);
-		void togglePowered(QString, bool);
-		void minMaxWindow(QAction* = 0);
-		void getServiceDetails(int);
-		void showWhatsThis();
-		inline void startSystemTrayMinimized() {createSystemTrayIcon(true);}
-		inline void startSystemTrayNormal() {createSystemTrayIcon(false);}
-		inline void trayNotifications(bool checked) {if (checked) ui.checkBox_notifydaemon->setChecked(false);}
-		inline void daemonNotifications(bool checked) {if (checked) ui.checkBox_systemtraynotifications->setChecked(false);}
-		void iconActivated(QSystemTrayIcon::ActivationReason reason);
-		void writeSettings();
-		void readSettings();
-		void connectNotifyClient();
-		void configureService();
-		void socketConnectionDetected();
+    void  updateDisplayWidgets();
+    void moveService(QAction*);
+    void moveButtonPressed(QAction*);
+    void enableMoveButtons(int,int);
+    void counterUpdated(const QDBusObjectPath&, const QString&, const QString&);
+    void connectPressed();
+    void disconnectPressed();
+    void removePressed();
+    void dbsPropertyChanged(QString,QDBusVariant);
+    void dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage);
+    void dbsPeersChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage);
+    void dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage);
+    void dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage);
+    void dbsTechnologyAdded(QDBusObjectPath, QVariantMap);
+    void dbsTechnologyRemoved(QDBusObjectPath);
+    void scanTechnologies();
+    void toggleOfflineMode(bool);
+    void toggleTrayIcon(bool);
+    void togglePowered(QString, bool);
+    void minMaxWindow(QAction* = 0);
+    void getServiceDetails(int);
+    void showWhatsThis();
+    inline void startSystemTrayMinimized() {createSystemTrayIcon(true);}
+    inline void startSystemTrayNormal() {createSystemTrayIcon(false);}
+    inline void trayNotifications(bool checked) {if (checked) ui.checkBox_notifydaemon->setChecked(false);}
+    inline void daemonNotifications(bool checked) {if (checked) ui.checkBox_systemtraynotifications->setChecked(false);}
+    void iconActivated(QSystemTrayIcon::ActivationReason reason);
+    void writeSettings();
+    void readSettings();
+    void connectNotifyClient();
+    void configureService();
+    void socketConnectionDetected();
 };
 
 #endif
