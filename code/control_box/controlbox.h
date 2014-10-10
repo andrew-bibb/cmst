@@ -83,18 +83,22 @@ struct arrayElement
 };
 
 //
-// custom QPushButton that will emit a button id
-class idButton : public QPushButton
+// custom QFrame containing a QPushButton that will emit a button id
+class idButton : public QFrame
 {
   Q_OBJECT
   
   public:
     idButton (QWidget*, const QDBusObjectPath&);
+    inline void setText (const QString& text) {button->setText(text);}
+    inline void setIcon (const QPixmap& pixmap) {button->setIcon(pixmap);}
+    inline void setChecked (bool checked) {button->setChecked(checked);}
     
   signals:
     void clickedID(QString, bool);
   
   private:
+		QPushButton* button;
     QDBusObjectPath obj_id;
     
   private slots:
@@ -102,14 +106,14 @@ class idButton : public QPushButton
 };
 
 //
-// custom QFrame containing a progress bar
+// custom QFrame containing a QProgressBar
 class SignalBar : public QFrame
 {
   Q_OBJECT
   
   public:
     SignalBar (QWidget*);
-    inline void setBarValue (int val) {bar->setValue(val);}
+    inline void setBarValue (const int& val) {bar->setValue(val);}
     
   private:
     QProgressBar* bar;      

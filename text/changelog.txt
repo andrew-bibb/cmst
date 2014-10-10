@@ -8,7 +8,7 @@
 <li>If only one WiFi service is connected it is no longer necessary to select it first before pressing the Disconnect button.</li>
 <li>Single instance code now checked using a local socket, not shared memory.</li>
 <li>If an instance of CMST is started while one is running the running copy will be raised, and a message about a second instance trying to start will be printed to stderr.</li> 
-<li>Wifi signal strength bar has a frame around it so that it no longer fills an entire cell</li>
+<li>Wifi signal strength bar and techonlogy buttons now have frames around them so that they do not fill an entire table cell</li>
 </ul>
 <br>
 <br><b>2014.08.23</b>

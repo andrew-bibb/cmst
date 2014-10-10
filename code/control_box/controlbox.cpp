@@ -71,13 +71,26 @@ DEALINGS IN THE SOFTWARE.
 // This is really a single use button, after it is clicked all idButtons
 // are deleted and recreated.  Once is is clicked disable the button.
 idButton::idButton(QWidget* parent, const QDBusObjectPath& id) :
-    QPushButton(parent)
+					QFrame(parent)
 {
+	// margins
+  const int m_left = 5;
+  const int m_top = 0;
+  const int m_right = 5;
+  const int m_bottom = 0;
+  
+	// create the button
+	button = new QPushButton(this);
   obj_id = id;
-  setCheckable(true);
-  
-  connect (this, SIGNAL(clicked(bool)), this, SLOT(buttonClicked(bool)));
-  
+  button->setCheckable(true); 
+  connect (button, SIGNAL(clicked(bool)), this, SLOT(buttonClicked(bool)));
+    
+  // create the box
+  QHBoxLayout* layout = new QHBoxLayout(this);
+  layout->setContentsMargins(m_left, m_top, m_right, m_bottom);
+  layout->addWidget(button, 0, 0);  
+	
+	return;  
 }
 
 void idButton::buttonClicked(bool checked)
@@ -91,7 +104,8 @@ void idButton::buttonClicked(bool checked)
 
 // Custom QProgressBar for wifi signals.  Use so we can define a frame
 // around the actual progress bar, set margins, etc.
-SignalBar::SignalBar(QWidget* parent) : QFrame(parent)
+SignalBar::SignalBar(QWidget* parent) :
+					QFrame(parent)
 {
   // margins
   const int m_left = 11;
