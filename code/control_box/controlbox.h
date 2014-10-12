@@ -98,7 +98,7 @@ class idButton : public QFrame
     void clickedID(QString, bool);
   
   private:
-		QPushButton* button;
+    QPushButton* button;
     QDBusObjectPath obj_id;
     
   private slots:

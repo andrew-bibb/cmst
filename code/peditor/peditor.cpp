@@ -73,6 +73,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae, bool
   extractMapData(proxmap, objmap.value("Proxy.Configuration") );
 
   // Seed initial values in the dialog.
+  ui.checkBox_autoconnect->setChecked(objmap.value("AutoConnect").toBool() );
   ui.lineEdit_nameservers->setText(objmap.value("Nameservers.Configuration").toStringList().join("\n") );
   ui.lineEdit_timeservers->setText(objmap.value("Timeservers.Configuration").toStringList().join("\n"));
   ui.lineEdit_domains->setText(objmap.value("Domains.Configuration").toStringList().join("\n"));
@@ -134,28 +135,31 @@ void PropertiesEditor::resetPage(int page)
 
   switch (toolboxindex) {
     case 0:
-      ui.lineEdit_nameservers->clear();
+      ui.checkBox_autoconnect->setChecked(objmap.value("AutoConnect").toBool() );
       break;
     case 1:
-      ui.lineEdit_timeservers->clear();
+      ui.lineEdit_nameservers->clear();
       break;
     case 2:
-      ui.lineEdit_domains->clear();
+      ui.lineEdit_timeservers->clear();
       break;
     case 3:
+      ui.lineEdit_domains->clear();
+      break;
+    case 4:
       ui.comboBox_ipv4method->setCurrentIndex(0);
       ui.lineEdit_ipv4address->clear();
       ui.lineEdit_ipv4netmask->clear();
       ui.lineEdit_ipv4gateway->clear();
       break;
-    case 4:
+    case 5:
       ui.comboBox_ipv6method->setCurrentIndex(0);
       ui.spinBox_ipv6prefixlength->setValue(0);
       ui.lineEdit_ipv6address->clear();
       ui.lineEdit_ipv6gateway->clear();
       ui.comboBox_ipv6privacy->setCurrentIndex(0);
       break;
-    case 5:
+    case 6:
       ui.comboBox_proxymethod->setCurrentIndex(0);
       ui.lineEdit_proxyurl->clear();
       ui.lineEdit_proxyservers->clear();
@@ -194,6 +198,16 @@ void PropertiesEditor::updateConfiguration()
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
   QList<QLineEdit*> lep;
   QStringList slp;
+
+  // QCheckboxes
+  // Only update if changed
+  if (ui.checkBox_autoconnect->isChecked() != objmap.value("AutoConnect").toBool() ) {
+    vlist.clear();
+    vlist << "AutoConnect";
+    vlist << QVariant::fromValue(QDBusVariant(ui.checkBox_autoconnect->isChecked()) );
+    QDBusMessage reply00 = iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
+    //qDebug() << reply00;
+  }
 
   // QLineEdits (nameservers, timeservers and domains)
   lep.clear();

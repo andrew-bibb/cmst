@@ -25,13 +25,43 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
+     <widget class="QWidget" name="general">
+      <attribute name="label">
+       <string>&amp;General</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QCheckBox" name="checkBox_autoconnect">
+         <property name="whatsThis">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked this service will auto-connect when no other connection is available. This is only available for services marked &amp;quot;Favorite&amp;quot;. &lt;/p&gt;&lt;p&gt;The service will not auto-connect while roaming.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>AutoConnect</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="nameservers">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
         <width>279</width>
-        <height>194</height>
+        <height>166</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -65,7 +95,7 @@
         <x>0</x>
         <y>0</y>
         <width>279</width>
-        <height>194</height>
+        <height>166</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -99,7 +129,7 @@
         <x>0</x>
         <y>0</y>
         <width>279</width>
-        <height>194</height>
+        <height>166</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -133,7 +163,7 @@
         <x>0</x>
         <y>0</y>
         <width>279</width>
-        <height>194</height>
+        <height>166</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -224,7 +254,7 @@
         <x>0</x>
         <y>0</y>
         <width>279</width>
-        <height>194</height>
+        <height>166</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -344,8 +374,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>279</width>
-        <height>194</height>
+        <width>265</width>
+        <height>168</height>
        </rect>
       </property>
       <property name="whatsThis">
