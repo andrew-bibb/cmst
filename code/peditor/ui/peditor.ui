@@ -26,6 +26,14 @@
       <number>0</number>
      </property>
      <widget class="QWidget" name="general">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>279</width>
+        <height>166</height>
+       </rect>
+      </property>
       <attribute name="label">
        <string>&amp;General</string>
       </attribute>
@@ -162,8 +170,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>279</width>
-        <height>166</height>
+        <width>154</width>
+        <height>132</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -253,8 +261,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>279</width>
-        <height>166</height>
+        <width>194</width>
+        <height>161</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -335,7 +343,7 @@
            </item>
            <item>
             <property name="text">
-             <string>Prefered</string>
+             <string>Preferred</string>
             </property>
            </item>
            <item>
@@ -374,7 +382,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>265</width>
+        <width>146</width>
         <height>168</height>
        </rect>
       </property>
@@ -416,7 +424,7 @@
          <item row="1" column="0" colspan="2">
           <widget class="QStackedWidget" name="stackedWidget_proxy01">
            <property name="currentIndex">
-            <number>0</number>
+            <number>2</number>
            </property>
            <widget class="QWidget" name="page_0"/>
            <widget class="QWidget" name="page_1">

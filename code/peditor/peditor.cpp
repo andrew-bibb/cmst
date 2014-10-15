@@ -46,20 +46,24 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae, bool
   // Setup the address validator and apply it to any ui QLineEdit.
   // The lev validator will validate an IP address or up to one white space character (to allow
   // editing of the line edit).
-  QString octet = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
+  QString s_ip4 = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
+  QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
 
   // QLineEdits that allow single address
-  QRegularExpression rx("\\s?|^" + octet + "\\." + octet + "\\." + octet + "\\." + octet + "$");
-  QRegularExpressionValidator* lev_s = new QRegularExpressionValidator(rx, this);
-  ui.lineEdit_ipv4address->setValidator(lev_s);
-  ui.lineEdit_ipv4netmask->setValidator(lev_s);
-  ui.lineEdit_ipv4gateway->setValidator(lev_s);
-  ui.lineEdit_ipv6address->setValidator(lev_s);
-  ui.lineEdit_ipv6gateway->setValidator(lev_s);
+  QRegularExpression rx4("\\s?|^" + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "$");
+  QRegularExpression rx6("\\s?|^" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + "$");
+  QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
+  QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
+  ui.lineEdit_ipv4address->setValidator(lev_4);
+  ui.lineEdit_ipv4netmask->setValidator(lev_4);
+  ui.lineEdit_ipv4gateway->setValidator(lev_4);
+  ui.lineEdit_ipv6address->setValidator(lev_6);
+  ui.lineEdit_ipv6gateway->setValidator(lev_6);
 
   // now QLineEdits that allow multiple addresses
-  rx.setPattern("\\s*|(" + octet + "\\." + octet + "\\." + octet + "\\." + octet + "(\\s*[,|;]?\\s*))+");
-  QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rx, this);
+  //rx4.setPattern("\\s*|(" + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "(\\s*[,|;]?\\s*))+");
+  QRegularExpression rx46("\\s?|((" + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "|" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ")" + "(\\s*[,|;|\\s]+\\s*))+");
+  QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rx46, this);
   ui.lineEdit_nameservers->setValidator(lev_m);
   ui.lineEdit_timeservers->setValidator(lev_m);
   ui.lineEdit_domains->setValidator(lev_m);
