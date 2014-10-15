@@ -50,8 +50,8 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae, bool
   QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
 
   // QLineEdits that allow single address
-  QRegularExpression rx4("\\s?|^" + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "$");
-  QRegularExpression rx6("\\s?|^" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + "$");
+  QRegularExpression rx4("\\s?|^" + s_ip4 + "(?:\\." + s_ip4 + "){3}" + "$");
+  QRegularExpression rx6("\\s?|^" + s_ip6 + "(?::" + s_ip6 + "){7}" + "$");
   QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
   QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
   ui.lineEdit_ipv4address->setValidator(lev_4);
@@ -61,8 +61,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae, bool
   ui.lineEdit_ipv6gateway->setValidator(lev_6);
 
   // now QLineEdits that allow multiple addresses
-  //rx4.setPattern("\\s*|(" + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "(\\s*[,|;]?\\s*))+");
-  QRegularExpression rx46("\\s?|((" + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "\\." + s_ip4 + "|" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ":" + s_ip6 + ")" + "(\\s*[,|;|\\s]+\\s*))+");
+  QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");
   QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rx46, this);
   ui.lineEdit_nameservers->setValidator(lev_m);
   ui.lineEdit_timeservers->setValidator(lev_m);

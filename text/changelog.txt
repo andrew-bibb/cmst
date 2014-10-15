@@ -1,4 +1,4 @@
-q<b><center>Connman System Tray (CMST)</center></b>
+<b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
 <br>
 <br><b>2014.10.15</b>
@@ -10,7 +10,7 @@ q<b><center>Connman System Tray (CMST)</center></b>
 <li>If an instance of CMST is started while one is running the running copy will be raised, and a message about a second instance trying to start will be printed to stderr.</li> 
 <li>Wifi signal strength bar and techonlogy buttons now have frames around them so that they do not fill an entire table cell</li>
 <li>Autoconnect property can be set or unset from the property editor.</li>
-<li>Fixed IPv6 validator in the properties editor.</li>
+<li>Fixed the IPv6 validator in the properties editor.</li>
 </ul>
 <br>
 <br><b>2014.08.23</b>
