@@ -56,11 +56,11 @@ ConnmanAgent::ConnmanAgent(QObject* parent)
 	
 	//	Create Adaptor and register this Agent on the system bus.  
 	new AgentAdaptor(this);
-	QDBusConnection::systemBus().registerObject("/org/monkeybusiness/Agent", this);
+	QDBusConnection::systemBus().registerObject("/org/cmst/Agent", this);
 
 	//	Create an Interface for the Agent
 	net::connman::Agent* iface;
-	iface = new net::connman::Agent(QString("net.connman.Agent"), QString("/org/monkeybusiness/Agent"), QDBusConnection::systemBus(), this);
+	iface = new net::connman::Agent(QString("net.connman.Agent"), QString("/org/cmst/Agent"), QDBusConnection::systemBus(), this);
 }
 
 /////////////////////////////////////// PUBLIC Q_SLOTS////////////////////////////////

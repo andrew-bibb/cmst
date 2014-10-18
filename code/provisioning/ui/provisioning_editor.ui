@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>502</width>
-    <height>761</height>
+    <width>482</width>
+    <height>760</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,8 +27,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>484</width>
-        <height>589</height>
+        <width>464</width>
+        <height>588</height>
        </rect>
       </property>
       <attribute name="label">
@@ -77,8 +77,8 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-14</y>
-        <width>540</width>
+        <y>0</y>
+        <width>450</width>
         <height>603</height>
        </rect>
       </property>
@@ -127,7 +127,7 @@
          <property name="title">
           <string>IPV4</string>
          </property>
-         <layout class="QFormLayout" name="formLayout_3">
+         <layout class="QGridLayout" name="gridLayout_8">
           <item row="0" column="0">
            <widget class="QLabel" name="label_8">
             <property name="text">
@@ -154,6 +154,19 @@
             </item>
            </widget>
           </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>265</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label">
             <property name="text">
@@ -161,7 +174,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="1" column="1" colspan="2">
            <widget class="QLineEdit" name="lineEdit_ipv4address"/>
           </item>
           <item row="2" column="0">
@@ -171,7 +184,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="2" column="1" colspan="2">
            <widget class="QLineEdit" name="lineEdit_ipv4netmask"/>
           </item>
           <item row="3" column="0">
@@ -181,7 +194,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="3" column="1" colspan="2">
            <widget class="QLineEdit" name="lineEdit_ipv4gateway"/>
           </item>
          </layout>
@@ -192,7 +205,7 @@
          <property name="title">
           <string>IPV6</string>
          </property>
-         <layout class="QFormLayout" name="formLayout_2">
+         <layout class="QGridLayout" name="gridLayout_9">
           <item row="0" column="0">
            <widget class="QLabel" name="label_9">
             <property name="text">
@@ -219,6 +232,19 @@
             </item>
            </widget>
           </item>
+          <item row="0" column="3">
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>225</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_7">
             <property name="text">
@@ -233,6 +259,19 @@
             </property>
            </widget>
           </item>
+          <item row="1" column="2" colspan="2">
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>237</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_5">
             <property name="text">
@@ -240,7 +279,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="2" column="1" colspan="3">
            <widget class="QLineEdit" name="lineEdit_ipv6address"/>
           </item>
           <item row="3" column="0">
@@ -250,7 +289,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="3" column="1" colspan="3">
            <widget class="QLineEdit" name="lineEdit_ipv6gateway"/>
           </item>
           <item row="4" column="0">
@@ -260,8 +299,14 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="4" column="1" colspan="2">
            <widget class="QComboBox" name="comboBox_ipv6privacy">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
             <item>
              <property name="text">
               <string>Disabled</string>
@@ -278,6 +323,19 @@
              </property>
             </item>
            </widget>
+          </item>
+          <item row="4" column="3">
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>225</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
@@ -361,8 +419,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>554</width>
-        <height>589</height>
+        <width>464</width>
+        <height>588</height>
        </rect>
       </property>
       <attribute name="label">
@@ -455,6 +513,19 @@
             </item>
            </widget>
           </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>290</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_22">
             <property name="text">
@@ -462,7 +533,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="1" column="1" colspan="2">
            <widget class="QLineEdit" name="lineEdit_eaptype"/>
           </item>
          </layout>
@@ -475,108 +546,24 @@
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="0" column="0">
-           <widget class="QLabel" name="label_18">
-            <property name="text">
-             <string>CA Certificate File</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="lineEdit_cacertfile"/>
-          </item>
-          <item row="0" column="2">
            <widget class="QToolButton" name="toolButton_cacertfile">
             <property name="text">
              <string>...</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_19">
-            <property name="text">
-             <string>Client Certificate File</string>
-            </property>
-           </widget>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_cacertfile"/>
           </item>
           <item row="1" column="1">
            <widget class="QLineEdit" name="lineEdit_clientcertfile"/>
           </item>
-          <item row="1" column="2">
+          <item row="1" column="0">
            <widget class="QToolButton" name="toolButton_clientcertfile">
             <property name="text">
              <string>...</string>
             </property>
            </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QGroupBox" name="groupBox_privatekey">
-         <property name="title">
-          <string>Private Key</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_20">
-            <property name="text">
-             <string>Private Key File</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1" colspan="3">
-           <widget class="QLineEdit" name="lineEdit_privatekeyfile"/>
-          </item>
-          <item row="0" column="4">
-           <widget class="QToolButton" name="toolButton_privatekeyfile">
-            <property name="text">
-             <string>...</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0" colspan="2">
-           <widget class="QLabel" name="label_26">
-            <property name="text">
-             <string>Private Key Passphrase</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2" colspan="3">
-           <widget class="QLineEdit" name="lineEdit_privatekeypassphrase"/>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_27">
-            <property name="text">
-             <string>Passphrase Type</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1" colspan="2">
-           <widget class="QComboBox" name="comboBox_privatekeypassphrasetype">
-            <item>
-             <property name="text">
-              <string/>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>fsid</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="2" column="3" colspan="2">
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>117</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </widget>
@@ -587,14 +574,14 @@
           <string>Security</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_6">
-          <item row="0" column="0" colspan="2">
+          <item row="0" column="0">
            <widget class="QLabel" name="label_25">
             <property name="text">
              <string>Security Type</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="2">
+          <item row="0" column="1">
            <widget class="QComboBox" name="comboBox_securitytype">
             <item>
              <property name="text">
@@ -618,6 +605,19 @@
             </item>
            </widget>
           </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>230</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_23">
             <property name="text">
@@ -625,7 +625,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="2">
+          <item row="1" column="1" colspan="2">
            <widget class="QLineEdit" name="lineEdit_passphrase"/>
           </item>
           <item row="2" column="0">
@@ -635,8 +635,71 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="2">
+          <item row="2" column="1" colspan="2">
            <widget class="QLineEdit" name="lineEdit_phase2"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QGroupBox" name="groupBox_privatekey">
+         <property name="title">
+          <string>Private Key</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QToolButton" name="toolButton_privatekeyfile">
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="QLineEdit" name="lineEdit_privatekeyfile"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_26">
+            <property name="text">
+             <string>Private Key&lt;br&gt;Passphrase</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2">
+           <widget class="QLineEdit" name="lineEdit_privatekeypassphrase"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_27">
+            <property name="text">
+             <string>Passphrase Type</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="comboBox_privatekeypassphrasetype">
+            <item>
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>fsid</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>117</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
@@ -749,7 +812,7 @@
   </layout>
   <action name="actionFile_CA_Cert">
    <property name="text">
-    <string>Select</string>
+    <string>CA Certificate</string>
    </property>
    <property name="toolTip">
     <string>Select File</string>
@@ -757,7 +820,7 @@
   </action>
   <action name="actionFile_Client_Cert">
    <property name="text">
-    <string>Select</string>
+    <string>Client Certificate</string>
    </property>
    <property name="toolTip">
     <string>Select File</string>
@@ -765,7 +828,7 @@
   </action>
   <action name="actionFile_Private_Key">
    <property name="text">
-    <string>Select</string>
+    <string>Private Key File</string>
    </property>
    <property name="toolTip">
     <string>Select File</string>

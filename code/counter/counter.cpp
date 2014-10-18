@@ -49,11 +49,11 @@ ConnmanCounter::ConnmanCounter(QObject* parent)
 	
 	//	Create Adaptor and register this Counter on the system bus.  
 	new CounterAdaptor(this);
-	QDBusConnection::systemBus().registerObject("/org/monkeybusiness/Counter", this);
+	QDBusConnection::systemBus().registerObject("/org/cmst/Counter", this);
 
-	//	Create an Interface for the Conter
+	//	Create an Interface for the Counter
 	net::connman::Counter* iface;
-	iface = new net::connman::Counter(QString("net.connman.Counter"), QString("/org/monkeybusiness/Counter"), QDBusConnection::systemBus(), this);
+	iface = new net::connman::Counter(QString("net.connman.Counter"), QString("/org/cmst/Counter"), QDBusConnection::systemBus(), this);
 }
 
 

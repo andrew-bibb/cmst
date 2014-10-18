@@ -33,6 +33,8 @@ DBUS_ADAPTORS 	+= ./code/agent/org.monkey_business_enterprises.agent.xml
 DBUS_INTERFACES	+= ./code/agent/org.monkey_business_enterprises.agent.xml
 DBUS_ADAPTORS 	+= ./code/counter/org.monkey_business_enterprises.counter.xml
 DBUS_INTERFACES	+= ./code/counter/org.monkey_business_enterprises.counter.xml
+DBUS_ADAPTORS		+= ./code/provisioning/org.monkey_business_enterprises.roothelper.xml
+DBUS_INTERFACES	+= ./code/provisioning/org.monkey_business_enterprises.roothelper.xml
 
 #	header files
 HEADERS		+= ./code/resource.h
@@ -44,6 +46,7 @@ HEADERS		+= ./code/scrollbox/scrollbox.h
 HEADERS		+= ./code/notify/notify.h
 HEADERS		+= ./code/peditor/peditor.h
 HEADERS   += ./code/provisioning/prov_ed.h
+HEADERS		+= ./code/provisioning/roothelper.h
 
 #	forms
 FORMS		+= ./code/control_box/ui/controlbox.ui
@@ -62,16 +65,14 @@ SOURCES += ./code/scrollbox/scrollbox.cpp
 SOURCES += ./code/notify/notify.cpp
 SOURCES	+= ./code/peditor/peditor.cpp
 SOURCES += ./code/provisioning/prov_ed.cpp
+SOURCES	+= ./code/provisioning/roothelper.cpp
 
 #	resource files
 RESOURCES 	+= cmst.qrc
-
 
 ##  Place all object files in their own directory and moc files in their own directory
 ##  This is not necessary but keeps things cleaner.
 OBJECTS_DIR = ./object_files
 MOC_DIR = ./moc_files
 
-
 sources.files = $$SOURCES $$HEADERS $$RESOURCES $$FORMS *.pro
-

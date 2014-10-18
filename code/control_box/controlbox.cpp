@@ -209,14 +209,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       // register the agent
       QList<QVariant> vlist_agent;
       vlist_agent.clear();
-      vlist_agent << QVariant::fromValue(QDBusObjectPath("/org/monkeybusiness/Agent")); 
+      vlist_agent << QVariant::fromValue(QDBusObjectPath("/org/cmst/Agent")); 
       iface_manager->callWithArgumentList(QDBus::NoBlock, "RegisterAgent", vlist_agent);
       
       // if counters are enabled register the counter
       if (! parser.isSet("disable-counters")) {
         QList<QVariant> vlist_counter;
         vlist_counter.clear();
-        vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/monkeybusiness/Counter")) << counter_accuracy << counter_period;;
+        vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter")) << counter_accuracy << counter_period;;
         iface_manager->callWithArgumentList(QDBus::NoBlock, "RegisterCounter", vlist_counter);      
       }
     
