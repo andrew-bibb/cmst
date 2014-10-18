@@ -28,6 +28,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QtCore/QDebug>
 # include <QRegularExpression>
 # include <QRegularExpressionValidator>
+# include <QFileDialog>
+# include <QDir>
 
 # include "./code/provisioning/prov_ed.h"
 
@@ -46,77 +48,53 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   //objpath = ae.objpath;
   //objmap = ae.objmap;
 
-  //// Setup the address validator and apply it to any ui QLineEdit.
-  //// The lev validator will validate an IP address or up to one white space character (to allow
-  //// editing of the line edit).
-  //QString s_ip4 = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
-  //QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
+	// Add actions to toolbuttons.  Actions are defined in the ui file.  Here we
+	// assign them to toolbuttons, and below we put the actions into a QActionGroup.
+	// Without this formulation we would need multiple slots containing almost
+	// identical code.  
+	this->ui.toolButton_cacertfile->setDefaultAction(ui.actionFile_CA_Cert);
+	this->ui.toolButton_clientcertfile->setDefaultAction(ui.actionFile_Client_Cert);
+	this->ui.toolButton_privatekeyfile->setDefaultAction(ui.actionFile_Private_Key);
+	
+	// Add actions to the action group
+	group_file = new QActionGroup(this);
+	group_file->addAction(ui.actionFile_CA_Cert);
+	group_file->addAction(ui.actionFile_Client_Cert);
+	group_file->addAction(ui.actionFile_Private_Key);
+	
+  // Setup the address validator and apply it to any ui QLineEdit.
+  // The lev validator will validate an IP address or up to one white space character (to allow
+  // editing of the line edit).
+  QString s_ip4 = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
+  QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
+  QString s_mac = "(?:[0-9a-fA-F]{1,2})";
 
-  //// QLineEdits that allow single address
-  //QRegularExpression rx4("\\s?|^" + s_ip4 + "(?:\\." + s_ip4 + "){3}" + "$");
-  //QRegularExpression rx6("\\s?|^" + s_ip6 + "(?::" + s_ip6 + "){7}" + "$");
-  //QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
-  //QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
-  //ui.lineEdit_ipv4address->setValidator(lev_4);
-  //ui.lineEdit_ipv4netmask->setValidator(lev_4);
-  //ui.lineEdit_ipv4gateway->setValidator(lev_4);
-  //ui.lineEdit_ipv6address->setValidator(lev_6);
-  //ui.lineEdit_ipv6gateway->setValidator(lev_6);
-
-  //// now QLineEdits that allow multiple addresses
-  //QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");
-  //QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rx46, this);
-  //ui.lineEdit_nameservers->setValidator(lev_m);
-  //ui.lineEdit_timeservers->setValidator(lev_m);
-  //ui.lineEdit_domains->setValidator(lev_m);
-
-  //// initialize and populate submaps
-  //ipv4map.clear();
-  //ipv6map.clear();
-  //proxmap.clear();
-  //extractMapData(ipv4map, objmap.value("IPv4.Configuration") );
-  //extractMapData(ipv6map, objmap.value("IPv6.Configuration") );
-  //extractMapData(proxmap, objmap.value("Proxy.Configuration") );
-
-  //// Seed initial values in the dialog.
-  //ui.checkBox_autoconnect->setChecked(objmap.value("AutoConnect").toBool() );
-  //ui.lineEdit_nameservers->setText(objmap.value("Nameservers.Configuration").toStringList().join("\n") );
-  //ui.lineEdit_timeservers->setText(objmap.value("Timeservers.Configuration").toStringList().join("\n"));
-  //ui.lineEdit_domains->setText(objmap.value("Domains.Configuration").toStringList().join("\n"));
-
-  //// ipv4 page
-  //if (! ipv4map.value("Method").toString().isEmpty() ) {
-    //ui.comboBox_ipv4method->setCurrentIndex(ui.comboBox_ipv4method->findText(ipv4map.value("Method").toString(), Qt::MatchFixedString) );
-  //}
-  //ui.lineEdit_ipv4address->setText(ipv4map.value("Address").toString() );
-  //ui.lineEdit_ipv4netmask->setText(ipv4map.value("Netmask").toString() );
-  //ui.lineEdit_ipv4gateway->setText(ipv4map.value("Gateway").toString() );
-
-  //// ipv6 page
-  //if (! ipv6map.value("Method").toString().isEmpty() ) {
-    //ui.comboBox_ipv6method->setCurrentIndex(ui.comboBox_ipv6method->findText(ipv6map.value("Method").toString(), Qt::MatchFixedString) );
-  //}
-  //ui.spinBox_ipv6prefixlength->setValue(ipv6map.value("PrefixLength").toUInt() );
-  //ui.lineEdit_ipv6address->setText(ipv6map.value("Address").toString() );
-  //ui.lineEdit_ipv6gateway->setText(ipv6map.value("Gateway").toString() );
-  //if (! ipv6map.value("Privacy").toString().isEmpty() ) {
-    //ui.comboBox_ipv6privacy->setCurrentIndex(ui.comboBox_ipv6privacy->findText(ipv6map.value("Privacy").toString(), Qt::MatchFixedString) );
-  //}
-
-  //// proxy page
-  //if (! proxmap.value("Method").toString().isEmpty() ) {
-    //ui.comboBox_proxymethod->setCurrentIndex(ui.comboBox_proxymethod->findText(proxmap.value("Method").toString(), Qt::MatchFixedString) );
-  //}
-  //ui.lineEdit_proxyservers->setText(proxmap.value("Servers").toStringList().join("\n") );
-  //ui.lineEdit_proxyexcludes->setText(proxmap.value("Excludes").toStringList().join("\n") );
-  //ui.lineEdit_proxyurl->setText(proxmap.value("URL").toString() );
-
+  // QLineEdits that allow single address
+  QRegularExpression rx4("\\s?|^" + s_ip4 + "(?:\\." + s_ip4 + "){3}" + "$");
+  QRegularExpression rx6("\\s?|^" + s_ip6 + "(?::" + s_ip6 + "){7}" + "$");
+  QRegularExpression rxm("\\s?|^" + s_mac + "(?::" + s_mac + "){5}" + "$");
+  QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
+  QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
+  QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rxm, this); 
+  ui.lineEdit_ipv4address->setValidator(lev_4);
+  ui.lineEdit_ipv4netmask->setValidator(lev_4);
+  ui.lineEdit_ipv4gateway->setValidator(lev_4);
+  ui.lineEdit_ipv6address->setValidator(lev_6);
+  ui.lineEdit_ipv6gateway->setValidator(lev_6);
+  ui.lineEdit_macaddress->setValidator(lev_m);
+  
+  // now QLineEdits that allow multiple addresses
+  QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");
+  QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);
+  ui.lineEdit_nameservers->setValidator(lev_46);
+  ui.lineEdit_timeservers->setValidator(lev_46);
 
   // connect signals to slots
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
   connect(ui.pushButton_resetpage, SIGNAL(clicked()), this, SLOT(resetPage()));
   connect(ui.pushButton_resetall, SIGNAL(clicked()), this, SLOT(resetAll()));
   connect(ui.comboBox_type, SIGNAL(currentTextChanged(const QString&)), this, SLOT(serviceTypeChanged(const QString&)));
+  connect(this->group_file, SIGNAL(triggered(QAction*)), this, SLOT(selectFile(QAction*)));
 }
 
 /////////////////////////////////////////////// Private Slots /////////////////////////////////////////////
@@ -202,5 +180,31 @@ void ProvisioningEditor::serviceTypeChanged(const QString& type)
 	ui.toolBox_prov_ed->setItemEnabled(2, type.contains("wifi", Qt::CaseInsensitive));
 		
 	return;	
+}
+
+//
+// Slot to open a file dialog to select a file
+void ProvisioningEditor::selectFile(QAction* act)
+{
+	
+	QString fname = QFileDialog::getOpenFileName(this, tr("Open File"),
+											QDir::homePath(),
+                      tr("Key Files (*.pem);;All Files (*.*)"));
+
+	// return if the file name returned is empty (cancel pressed in the dialog)
+	if (fname.isEmpty() ) return;
+
+	// put the filename into the proper QLineEdit field
+	if (act == ui.actionFile_CA_Cert) {
+		ui.lineEdit_cacertfile->setText(fname);
+	}	//if
+	else {
+		if (act == ui.actionFile_Client_Cert)
+			ui.lineEdit_clientcertfile->setText(fname);
+		else
+			ui.lineEdit_privatekeyfile->setText(fname);		
+	}	// else
+	
+	return;
 }
 

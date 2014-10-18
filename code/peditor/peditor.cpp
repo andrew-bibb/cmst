@@ -65,7 +65,6 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae, bool
   QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rx46, this);
   ui.lineEdit_nameservers->setValidator(lev_m);
   ui.lineEdit_timeservers->setValidator(lev_m);
-  ui.lineEdit_domains->setValidator(lev_m);
 
   // initialize and populate submaps
   ipv4map.clear();

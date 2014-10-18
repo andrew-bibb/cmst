@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>390</width>
+    <width>502</width>
     <height>761</height>
    </rect>
   </property>
@@ -27,7 +27,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>372</width>
+        <width>484</width>
         <height>589</height>
        </rect>
       </property>
@@ -77,8 +77,8 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
-        <width>358</width>
+        <y>-14</y>
+        <width>540</width>
         <height>603</height>
        </rect>
       </property>
@@ -361,8 +361,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>357</width>
-        <height>579</height>
+        <width>554</width>
+        <height>589</height>
        </rect>
       </property>
       <attribute name="label">
@@ -635,7 +635,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1" colspan="2">
+          <item row="2" column="2">
            <widget class="QLineEdit" name="lineEdit_phase2"/>
           </item>
          </layout>
@@ -747,6 +747,30 @@
     </layout>
    </item>
   </layout>
+  <action name="actionFile_CA_Cert">
+   <property name="text">
+    <string>Select</string>
+   </property>
+   <property name="toolTip">
+    <string>Select File</string>
+   </property>
+  </action>
+  <action name="actionFile_Client_Cert">
+   <property name="text">
+    <string>Select</string>
+   </property>
+   <property name="toolTip">
+    <string>Select File</string>
+   </property>
+  </action>
+  <action name="actionFile_Private_Key">
+   <property name="text">
+    <string>Select</string>
+   </property>
+   <property name="toolTip">
+    <string>Select File</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>
@@ -757,12 +781,12 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>346</x>
-     <y>710</y>
+     <x>351</x>
+     <y>737</y>
     </hint>
     <hint type="destinationlabel">
-     <x>303</x>
-     <y>-17</y>
+     <x>310</x>
+     <y>-23</y>
     </hint>
    </hints>
   </connection>

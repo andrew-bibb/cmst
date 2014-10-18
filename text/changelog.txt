@@ -1,5 +1,10 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<br>In Progress</br>
+<ul>
+<li>Removed incorrect validator from Properties Editor domains field.</li>
+<li>Provisioning Editor to create and edit Connman service configuration files.</li>
+</ul>
 <br>
 <br><b>2014.10.15</b>
 <ul>

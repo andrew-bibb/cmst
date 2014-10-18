@@ -29,11 +29,9 @@ DEALINGS IN THE SOFTWARE.
 # define PROVISIONING_EDITOR_H
 
 # include <QDialog>
-# include <QMap>
-# include <QVariant>
-# include <QStringList>
 # include <QWhatsThis>
-# include <QDBusObjectPath>
+# include <QAction>
+# include <QActionGroup>
 
 # include "ui_provisioning_editor.h"
 # include "./code/control_box/controlbox.h"
@@ -50,19 +48,14 @@ class ProvisioningEditor : public QDialog
   private:  
   // members
 		Ui::Provisioning ui;
-		//QDBusObjectPath objpath;
-		//QMap<QString,QVariant> objmap;
-		//QMap<QString,QVariant> ipv4map; 
-		//QMap<QString,QVariant> ipv6map;
-		//QMap<QString,QVariant> proxmap;
+		QActionGroup* group_file;
 		
-	// functions
-		   
   private slots:
   	void showWhatsThis();
 		void resetPage(int page = -1);
 		void resetAll();
 		void serviceTypeChanged(const QString&);
+		void selectFile(QAction*);
 				
 	public:
 		inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
