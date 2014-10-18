@@ -46,6 +46,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/control_box/controlbox.h"
 # include "./code/scrollbox/scrollbox.h"
 # include "./code/peditor/peditor.h"
+# include "./code/provisioning/prov_ed.h"
   
 //  headers for system logging
 # include <stdio.h>
@@ -185,6 +186,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // restore GUI settings
   this->readSettings(); 
   
+  // operate on settings not dealt with elsewhere
+	ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
+  
   // Create the notifyclient, make four tries; first immediately in constructor, then
   // at 1/2 second, 2 seconds and finally at 8 seconds 
   notifyclient = new NotifyClient(this);
@@ -274,6 +278,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.checkBox_systemtraynotifications, SIGNAL (clicked(bool)), this, SLOT(trayNotifications(bool)));
   connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
   connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
+  connect(ui.pushButton_provisioning_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
   connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
 
   // tray icon - disable it if we specifiy that option on the commandline
@@ -1561,6 +1566,7 @@ void ControlBox::writeSettings()
   settings->setValue("enable_systemtray_notications", ui.checkBox_systemtraynotifications->isChecked() );
   settings->setValue("enable_daemon_notifications", ui.checkBox_notifydaemon->isChecked() );
   settings->setValue("reset_counters", ui.checkBox_resetcounters->isChecked() );
+  settings->setValue("advanced", ui.checkBox_advanced->isChecked() );
   settings->endGroup(); 
   
   return;
@@ -1588,6 +1594,7 @@ void ControlBox::readSettings()
   ui.checkBox_systemtraynotifications->setChecked(settings->value("enable_systemtray_notications").toBool() );
   ui.checkBox_notifydaemon->setChecked(settings->value("enable_daemon_notifications").toBool() );
   ui.checkBox_resetcounters->setChecked(settings->value("reset_counters").toBool() );
+  ui.checkBox_advanced->setChecked(settings->value("advanced").toBool() );
   settings->endGroup();
   
   return;
@@ -1949,6 +1956,14 @@ void ControlBox::connectNotifyClient()
   return;
 }
 
+// The following two functions are somewhat similar.  ConfigureSerivce opens a dialog to tweak
+// defaults set by Connman.  All settings are read and written by Connman into files that Connman
+// creates.
+//
+// Provisioning creates a provision file that takes precedence over anything Connman creates.  It
+// is required for certain types of networks, for instance Eduroam.  The provisioning file must be
+// created manually before trying to connect via Connman.  Disk reads and writes are handled by
+// a program (this one) and not by Connman.
 //
 // Slot to open a dialog to configure the selected service
 void ControlBox::configureService()
@@ -1971,6 +1986,25 @@ void ControlBox::configureService()
   
   return;
 }
+ 
+//
+// Slot to open the provisioning editor to create a configuration (provisioning) file
+void ControlBox::provisionService()
+{
+	ProvisioningEditor* veditor = new ProvisioningEditor(this);
+	
+  // Set the whatsthis button icon
+  if (b_useicontheme) 
+   veditor->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
+  else 
+    veditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));	
+  
+  // call then clean up
+  veditor->exec();
+  veditor->deleteLater();  
+    
+  return;
+}  
    
 //
 // Slot called when a connection to the local socket was detected.  Means another instance of CMST was started

@@ -43,12 +43,14 @@ HEADERS		+= ./code/counter/counter.h
 HEADERS		+= ./code/scrollbox/scrollbox.h
 HEADERS		+= ./code/notify/notify.h
 HEADERS		+= ./code/peditor/peditor.h
+HEADERS   += ./code/provisioning/prov_ed.h
 
 #	forms
 FORMS		+= ./code/control_box/ui/controlbox.ui
 FORMS		+= ./code/agent/ui/agent.ui
 FORMS		+= ./code/scrollbox/ui/scrollbox.ui
 FORMS		+= ./code/peditor/ui/peditor.ui
+FORMS		+= ./code/provisioning/ui/provisioning_editor.ui
 
 #	sources
 SOURCES	+= ./code/main.cpp
@@ -59,6 +61,7 @@ SOURCES += ./code/counter/counter.cpp
 SOURCES += ./code/scrollbox/scrollbox.cpp
 SOURCES += ./code/notify/notify.cpp
 SOURCES	+= ./code/peditor/peditor.cpp
+SOURCES += ./code/provisioning/prov_ed.cpp
 
 #	resource files
 RESOURCES 	+= cmst.qrc

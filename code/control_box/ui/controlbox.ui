@@ -435,8 +435,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>32</height>
+            <width>660</width>
+            <height>371</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -664,8 +664,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
-               <height>46</height>
+               <width>636</width>
+               <height>137</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -720,8 +720,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
-               <height>46</height>
+               <width>636</width>
+               <height>136</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -829,6 +829,19 @@
             </property>
             <property name="text">
              <string>Reset Counters</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_advanced">
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked additional controls for advanced users are displayed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Advanced Controls</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -1026,8 +1039,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>412</height>
+            <width>550</width>
+            <height>449</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1077,6 +1090,16 @@
        </property>
        <property name="text">
         <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_provisioning_editor">
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the provisioning editor to create or edit Connman configuration (provisioning) files.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>Provisioning Editor</string>
        </property>
       </widget>
      </item>
@@ -1165,34 +1188,18 @@
  </resources>
  <connections>
   <connection>
-   <sender>pushButton_movebefore</sender>
-   <signal>clicked()</signal>
-   <receiver>actionMove_Before</receiver>
-   <slot>trigger()</slot>
+   <sender>checkBox_advanced</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pushButton_provisioning_editor</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>75</x>
-     <y>470</y>
+     <x>36</x>
+     <y>163</y>
     </hint>
     <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_moveafter</sender>
-   <signal>clicked()</signal>
-   <receiver>actionMove_After</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>163</x>
-     <y>470</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
+     <x>86</x>
+     <y>528</y>
     </hint>
    </hints>
   </connection>

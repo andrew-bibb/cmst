@@ -187,7 +187,7 @@ class ControlBox : public QDialog
     void clearCounters();
 
   private slots:
-    void  updateDisplayWidgets();
+    void updateDisplayWidgets();
     void moveService(QAction*);
     void moveButtonPressed(QAction*);
     void enableMoveButtons(int,int);
@@ -218,6 +218,7 @@ class ControlBox : public QDialog
     void readSettings();
     void connectNotifyClient();
     void configureService();
+    void provisionService();
     void socketConnectionDetected();
 };
 
