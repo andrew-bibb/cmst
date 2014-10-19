@@ -1,5 +1,0 @@
-[D-BUS Service]
-Name=org.cmst.roothelper
-#Exec=/usr/bin/roothelper
-Exec=/home/andy/git_local/monkey-business/cmst/code/rootapp/cmstroothelper
-User=root
