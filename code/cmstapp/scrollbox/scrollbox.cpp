@@ -1,10 +1,7 @@
-/**************************** resource.h *******************************
+/**************************** scrollbox.cpp ***************************
 
-Header file that contains program #defines.  It used to be that we kept
-all program update and version information in this single file.  Now
-we've moved a lot of that to txt files inside the /text directory which
-are compiled in as a resource.  This seems to result in a faster 
-compile, but we now have manage information in two locations.
+Dialog to display text to the user.  Kind of like a neutered QMessageBox
+except it has scroll bars built in. 
 
 Copyright (C) 2013-2014
 by: Andrew J. Bibb
@@ -29,26 +26,44 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/ 
 
-#ifndef RESOURCE_H
-#define RESOURCE_H
 
-///////////////////////////////// Program Values ///////////////////////
-// Program Info 
-#define VERSION "14.10.19-1"
-#define RELEASE_DATE "15 October 2014"
-#define COPYRIGHT_DATE "2013-2014"
+# include <QtCore/QDebug>
 
-// Program Values
-#define WINDOW_TITLE "Connman System Tray"
-#define PROGRAM_NAME "CMST"
-#define LONG_NAME "CMST - Connman System Tray"
-#define ORG "cmst"
+# include "./scrollbox/scrollbox.h"
 
+// constructor
+// Most of the interface is defined in the ui
+ScrollBox::ScrollBox(QWidget *parent)
+    : QDialog(parent)
+{
+	
+  // setup the user interface
+  ui.setupUi(this);	
+  
+  // initialize the display text
+  ui.label_displaytext->clear();
+	
+}  
 
-///////////////////////////////// Locale ///////////////////////////////
-// Change lines below as needed. 
-# define L_LANG  English
-# define L_COUNTRY UnitedStates
+////////////////////////////////////////////// Public Functions //////////////////////////////////////
+//
+void ScrollBox::execScrollBox(QString title, QString text, QWidget* parent)
+{
+	ScrollBox scrollBox (parent);
+	scrollBox.setDisplayText(text);
+	scrollBox.setWindowTitle(title);
+	
+	scrollBox.exec();
+}
 
-#endif
+////////////////////////////////////////////////// Public Slots //////////////////////////////////////
+//
+//	Slot to set the display text
+void ScrollBox::setDisplayText(const QString& s)
+{
+	ui.label_displaytext->setText(s);
+	
+	return;
+}
+
 

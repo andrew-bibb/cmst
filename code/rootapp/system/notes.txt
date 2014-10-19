@@ -1,0 +1,2 @@
+org.cmst.roothelper.conf goes into /etc/dbus-1/system.d/
+org.cmst.roothelper.service goes into /usr/share/dbus-1/system-services/
