@@ -49,6 +49,7 @@ class ProvisioningEditor : public QDialog
   // members
 		Ui::Provisioning ui;
 		QActionGroup* group_file;
+		QString filename;
 		
   private slots:
   	void showWhatsThis();
@@ -58,6 +59,7 @@ class ProvisioningEditor : public QDialog
 		void selectFile(QAction*);
 		void requestFileList();
 		void processFileList(const QStringList&);
+		void createConfFile();
 				
 	public:
 		inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}

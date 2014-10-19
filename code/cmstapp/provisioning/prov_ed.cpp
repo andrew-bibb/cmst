@@ -46,12 +46,11 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   // Setup the user interface
   ui.setupUi(this);
   
-  //
+  // Enable or disable the wifi page based on the connection type
   ui.toolBox_prov_ed->setItemEnabled(2, ui.comboBox_type->currentText().contains("wifi", Qt::CaseInsensitive));
 
   //// Data members
-  //objpath = ae.objpath;
-  //objmap = ae.objmap;
+  filename="";
 
 	// Add actions to toolbuttons.  Actions are defined in the ui file.  Here we
 	// assign them to toolbuttons, and below we put the actions into a QActionGroup.
@@ -101,6 +100,7 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   connect(ui.comboBox_type, SIGNAL(currentTextChanged(const QString&)), this, SLOT(serviceTypeChanged(const QString&)));
   connect(this->group_file, SIGNAL(triggered(QAction*)), this, SLOT(selectFile(QAction*)));
   connect(ui.pushButton_open, SIGNAL(clicked()), this, SLOT(requestFileList()));
+  connect(ui.pushButton_save, SIGNAL(clicked()), this, SLOT(createConfFile()));
   
   // signals from dbus
   QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "readCompleted", this, SLOT(processFileList(const QStringList&)));
@@ -192,7 +192,9 @@ void ProvisioningEditor::serviceTypeChanged(const QString& type)
 }
 
 //
-// Slot to open a file dialog to select a file
+// Slot to open a file dialog to select a file.  Only used for cert and key
+// files, not to select a /var/lib/connman/*.conf file.  That is accomplished
+// using the roothelper.  
 void ProvisioningEditor::selectFile(QAction* act)
 {
 	
@@ -235,9 +237,7 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
 {
 	// variables
 	bool ok;
-	QString item;
 		
-	
 	// display dialogs based on the length of the stringlist
 	switch (sl_conf.size()) {
 		case 0:
@@ -253,20 +253,41 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
 				tr("<center>Reading configuration file: %1").arg(sl_conf.at(0)),
 				QMessageBox::Ok,
 				QMessageBox::Ok);
+			filename = sl_conf.at(0);
 			break;
 		default:
-			item = QInputDialog::getItem(this,
+			QString item = QInputDialog::getItem(this,
 					tr("%1 - Select File").arg(PROGRAM_NAME),
 					tr("Select a file to load."),
 					sl_conf,
 					0,
 					false,
 					&ok);
-				break;
-			}	// switch
+			if (ok) filename = item;		
+			break;
+		}	// switch
 			
-			qDebug() << "ok is " << ok << "item is " << item;		
-				
+	return;
+}
+
+//
+// Slot to create a QByteArray representing the .conf file and send it to roothelper
+// write to disk
+void ProvisioningEditor::createConfFile()
+{
+	QString s_working = "";
+	
+	// global section
+	if (! ui.lineEdit_name->text().isEmpty() || ! ui.plainTextEdit_description->document()->toPlainText().isEmpty() )  {
+		s_working.append("[global]\n");
+		if (! ui.lineEdit_name->text().isEmpty() ) s_working.append(QString("Name = %1\n").arg(ui.lineEdit_name->text()) );
+		if (! ui.plainTextEdit_description->document()->toPlainText().isEmpty() )
+			s_working.append(QString("Description = %1\n").arg(ui.plainTextEdit_description->document()->toPlainText()) );
+		s_working.append("\n");	
+	}	// global section
+	
+	qDebug() << "working string";
+	qDebug() << s_working;
 	
 	return;
 }
