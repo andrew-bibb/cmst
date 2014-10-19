@@ -283,7 +283,8 @@ void ProvisioningEditor::createConfFile()
 		if (! ui.lineEdit_name->text().isEmpty() ) s_working.append(QString("Name = %1\n").arg(ui.lineEdit_name->text()) );
 		if (! ui.plainTextEdit_description->document()->toPlainText().isEmpty() )
 			s_working.append(QString("Description = %1\n").arg(ui.plainTextEdit_description->document()->toPlainText()) );
-		s_working.append("\n");	
+		s_working.append("\n");
+			
 	}	// global section
 	
 	qDebug() << "working string";
