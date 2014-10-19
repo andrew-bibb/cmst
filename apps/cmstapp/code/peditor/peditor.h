@@ -36,7 +36,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QDBusObjectPath>
 
 # include "ui_peditor.h"
-# include "./control_box/controlbox.h"
+# include "./code/control_box/controlbox.h"
 
 //	The class to control the properties editor UI based on a QDialog
 class PropertiesEditor : public QDialog

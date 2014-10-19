@@ -34,7 +34,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QTemporaryFile>
 # include <QFile>
 
-# include "./notify/notify.h"
+# include "./notify.h"
                      
 #define DBUS_SERVICE "org.freedesktop.Notifications"
 #define DBUS_PATH "/org/freedesktop/Notifications"

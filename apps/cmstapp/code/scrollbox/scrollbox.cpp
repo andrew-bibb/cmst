@@ -29,7 +29,7 @@ DEALINGS IN THE SOFTWARE.
 
 # include <QtCore/QDebug>
 
-# include "./scrollbox/scrollbox.h"
+# include "./scrollbox.h"
 
 // constructor
 // Most of the interface is defined in the ui

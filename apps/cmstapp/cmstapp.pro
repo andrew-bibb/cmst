@@ -29,39 +29,39 @@ icon.files = ./misc/desktop/cmst.png
 INSTALLS += icon
 
 # dbus
-DBUS_ADAPTORS 	+= ./agent/org.monkey_business_enterprises.agent.xml
-DBUS_INTERFACES	+= ./agent/org.monkey_business_enterprises.agent.xml
-DBUS_ADAPTORS 	+= ./counter/org.monkey_business_enterprises.counter.xml
-DBUS_INTERFACES	+= ./counter/org.monkey_business_enterprises.counter.xml
+DBUS_ADAPTORS 	+= ./code/agent/org.monkey_business_enterprises.agent.xml
+DBUS_INTERFACES	+= ./code/agent/org.monkey_business_enterprises.agent.xml
+DBUS_ADAPTORS 	+= ./code/counter/org.monkey_business_enterprises.counter.xml
+DBUS_INTERFACES	+= ./code/counter/org.monkey_business_enterprises.counter.xml
 
 #	header files
 HEADERS		+= ../resource.h
-HEADERS 	+= ./control_box/controlbox.h
-HEADERS		+= ./agent/agent.h
-HEADERS		+= ./agent/agent_dialog.h
-HEADERS		+= ./counter/counter.h
-HEADERS		+= ./scrollbox/scrollbox.h
-HEADERS		+= ./notify/notify.h
-HEADERS		+= ./peditor/peditor.h
-HEADERS   += ./provisioning/prov_ed.h
+HEADERS 	+= ./code/control_box/controlbox.h
+HEADERS		+= ./code/agent/agent.h
+HEADERS		+= ./code/agent/agent_dialog.h
+HEADERS		+= ./code/counter/counter.h
+HEADERS		+= ./code/scrollbox/scrollbox.h
+HEADERS		+= ./code/notify/notify.h
+HEADERS		+= ./code/peditor/peditor.h
+HEADERS   += ./code/provisioning/prov_ed.h
 
 #	forms
-FORMS		+= ./control_box/ui/controlbox.ui
-FORMS		+= ./agent/ui/agent.ui
-FORMS		+= ./scrollbox/ui/scrollbox.ui
-FORMS		+= ./peditor/ui/peditor.ui
-FORMS		+= ./provisioning/ui/provisioning_editor.ui
+FORMS		+= ./code/control_box/ui/controlbox.ui
+FORMS		+= ./code/agent/ui/agent.ui
+FORMS		+= ./code/scrollbox/ui/scrollbox.ui
+FORMS		+= ./code/peditor/ui/peditor.ui
+FORMS		+= ./code/provisioning/ui/provisioning_editor.ui
 
 #	sources
-SOURCES	+= ./main.cpp
-SOURCES	+= ./control_box/controlbox.cpp
-SOURCES += ./agent/agent.cpp
-SOURCES += ./agent/agent_dialog.cpp
-SOURCES += ./counter/counter.cpp
-SOURCES += ./scrollbox/scrollbox.cpp
-SOURCES += ./notify/notify.cpp
-SOURCES	+= ./peditor/peditor.cpp
-SOURCES += ./provisioning/prov_ed.cpp
+SOURCES	+= ./code/main.cpp
+SOURCES	+= ./code/control_box/controlbox.cpp
+SOURCES += ./code/agent/agent.cpp
+SOURCES += ./code/agent/agent_dialog.cpp
+SOURCES += ./code/counter/counter.cpp
+SOURCES += ./code/scrollbox/scrollbox.cpp
+SOURCES += ./code/notify/notify.cpp
+SOURCES	+= ./code/peditor/peditor.cpp
+SOURCES += ./code/provisioning/prov_ed.cpp
 
 #	resource files
 RESOURCES 	+= ../../cmst.qrc

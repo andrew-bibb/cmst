@@ -43,10 +43,10 @@ DEALINGS IN THE SOFTWARE.
 # include <QTableWidgetSelectionRange>
 
 # include "../resource.h" 
-# include "./control_box/controlbox.h"
-# include "./scrollbox/scrollbox.h"
-# include "./peditor/peditor.h"
-# include "./provisioning/prov_ed.h"
+# include "./controlbox.h"
+# include "./code/scrollbox/scrollbox.h"
+# include "./code/peditor/peditor.h"
+# include "./code/provisioning/prov_ed.h"
   
 //  headers for system logging
 # include <stdio.h>

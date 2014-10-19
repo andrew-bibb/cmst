@@ -49,9 +49,9 @@ DEALINGS IN THE SOFTWARE.
 # include <QProgressBar>
 
 # include "ui_controlbox.h"
-# include "./agent/agent.h"
-# include "./counter/counter.h"
-# include "./notify/notify.h"
+# include "./code/agent/agent.h"
+# include "./code/counter/counter.h"
+# include "./code/notify/notify.h"
 
 //  Used for enum's local to this program
 namespace CMST 

@@ -38,7 +38,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QtDBus/QDBusObjectPath>
 # include <QtDBus/QDBusContext>
 
-# include "./agent_dialog.h"
+# include "./code/agent/agent_dialog.h"
 
 class ConnmanAgent : public QObject, protected QDBusContext
 {

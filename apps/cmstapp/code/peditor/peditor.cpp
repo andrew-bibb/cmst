@@ -29,7 +29,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QRegularExpression>
 # include <QRegularExpressionValidator>
 
-# include "./peditor/peditor.h"
+# include "./peditor.h"
 
 #define DBUS_SERVICE "net.connman"
 

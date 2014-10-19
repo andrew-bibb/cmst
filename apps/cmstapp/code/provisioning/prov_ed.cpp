@@ -35,7 +35,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QMessageBox>
 # include <QInputDialog>
 
-# include "./provisioning/prov_ed.h"
+# include "./prov_ed.h"
 # include "../resource.h"
 
 #define DBUS_SERVICE "net.connman"
