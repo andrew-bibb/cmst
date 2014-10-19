@@ -2,3 +2,5 @@
 TEMPLATE = subdirs
 SUBDIRS = ./code/cmstapp ./code/rootapp
 
+cmstapp.file = ./cmstapp.pro
+rootapp.file = ./rootapp.pro
