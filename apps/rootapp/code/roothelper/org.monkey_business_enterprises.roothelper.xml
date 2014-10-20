@@ -1,14 +1,25 @@
 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
 <node>
   <interface name="org.cmst.roothelper">
-    <signal name="readCompleted">
+    <signal name="obtainedFileList">
       <arg type="as" direction="out"/>
+    </signal>
+    <signal name="fileReadCompleted">
+      <arg type="s" direction="out"/>
+    </signal>
+    <signal name="fileWriteCompleted">
+      <arg type="t" direction="out"/>
     </signal>
     <method name="startHelper">
     </method>
     <method name="getFileList">
     </method>
+    <method name="readFile">
+      <arg type="s" direction="in"/>
+    </method>
     <method name="saveFile">
+      <arg type="s" direction="in"/>
+      <arg type="s" direction="in"/>
     </method>
     <method name="isConnected">
       <arg type="b" direction="out"/>

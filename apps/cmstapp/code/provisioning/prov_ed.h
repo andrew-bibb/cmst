@@ -30,8 +30,10 @@ DEALINGS IN THE SOFTWARE.
 
 # include <QDialog>
 # include <QWhatsThis>
-# include <QAction>
-# include <QActionGroup>
+# include <QMenuBar>
+# include <QMenu>
+//# include <QAction>
+//# include <QActionGroup>
 
 # include "ui_provisioning_editor.h"
 # include "./code/control_box/controlbox.h"
@@ -48,15 +50,15 @@ class ProvisioningEditor : public QDialog
   private:  
   // members
 		Ui::Provisioning ui;
-		QActionGroup* group_file;
 		QString filename;
+		QMenuBar* menubar;
+		QMenu* menu_global;
+		QMenu* menu_service;
+		QMenu* menu_wifi;
 		
   private slots:
   	void showWhatsThis();
-		void resetPage(int page = -1);
-		void resetAll();
-		void serviceTypeChanged(const QString&);
-		void selectFile(QAction*);
+		void resetPage();
 		void requestFileList();
 		void processFileList(const QStringList&);
 		void createConfFile();

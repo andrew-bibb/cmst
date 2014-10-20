@@ -34,6 +34,7 @@ DEALINGS IN THE SOFTWARE.
 #	define ROOTHELPER
 
 # include <QObject>
+# include <QString>
 # include <QStringList>
 # include <QtDBus/QDBusContext>
 
@@ -48,12 +49,14 @@ class RootHelper : public QObject, protected QDBusContext
 	public slots:
 		void startHelper();
 		void getFileList();
-		void saveFile();
+		void readFile(const QString&);
+		void saveFile(const QString&, const QString&);
 		inline bool isConnected() {return b_connected;}	// may not actually use this
 		
 	signals:
-		void readCompleted(const QStringList&);
-		//void saveCompleted();
+		void obtainedFileList(const QStringList&);
+		void fileReadCompleted(const QString&);
+		void fileWriteCompleted(quint64);
 		
 	private:
 		// members

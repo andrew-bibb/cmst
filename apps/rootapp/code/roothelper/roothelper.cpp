@@ -32,6 +32,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QtCore/QDebug>
 # include <QtDBus/QDBusConnection>
 # include <QDir>
+# include <QFile>
 
 #	include "./roothelper.h"
 
@@ -85,20 +86,55 @@ void RootHelper::getFileList()
 	filters << "*.conf";
 
 	// get a list of all conf files and return it
-	emit readCompleted(dir.entryList(filters, QDir::Files, QDir::Name | QDir::Reversed) );
+	emit obtainedFileList(dir.entryList(filters, QDir::Files, QDir::Name | QDir::Reversed) );
 	
+	return;
+}
+
+//
+// Slot to read a file from disk
+void RootHelper::readFile(const QString& fn)
+{
+	QString filename = fn;
+	
+	// make sure the file name has a type
+	if (! fn.endsWith(".conf", Qt::CaseSensitive) )
+		filename.append(".conf");
+		
+	// open the file for reading	
+	QFile infile(QString("/var/lib/connman/%1").arg(filename) );
+	if (! infile.open(QIODevice::ReadOnly | QIODevice::Text))
+		return;
+	
+	// read the file and emit a signal when done
+	QByteArray ba = infile.readAll();
+	emit fileReadCompleted(QString(ba)); 
+	
+	// cleanup and exit
+	infile.close();
 	return;
 }
 
 //
 // Slot to write the file to disk
-void RootHelper::saveFile()
+void RootHelper::saveFile(const QString& fn, const QString& data)
 {
-	qDebug() << "inside save file";
+	QString filename = fn;
 	
+	// make sure the file name has a type
+	if (! fn.endsWith(".conf", Qt::CaseSensitive) )
+		filename.append(".conf");
+		
+	// open the file for writing	
+	QFile outfile(QString("/var/lib/connman/%1").arg(filename) );
+	if (! outfile.open(QIODevice::WriteOnly | QIODevice::Text))
+		return;
+	
+	// write the file and emit a signal when done
+	emit fileWriteCompleted(outfile.write(data.toLatin1()) );
+	
+	// cleanup and exit
+	outfile.close();
 	return;
 }
-
-////////////////////// Private Functions ///////////////////////////////
-//
 
