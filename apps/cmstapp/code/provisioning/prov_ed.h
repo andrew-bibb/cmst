@@ -61,7 +61,6 @@ class ProvisioningEditor : public QDialog
 		void resetPage();
 		void requestFileList();
 		void processFileList(const QStringList&);
-		void createConfFile();
 				
 	public:
 		inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}

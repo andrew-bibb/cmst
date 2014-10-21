@@ -121,7 +121,6 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
   connect(ui.pushButton_resetpage, SIGNAL(clicked()), this, SLOT(resetPage()));
   connect(ui.pushButton_open, SIGNAL(clicked()), this, SLOT(requestFileList()));
-  connect(ui.pushButton_save, SIGNAL(clicked()), this, SLOT(createConfFile()));
   
   // signals from dbus
   QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "obtainedFileList", this, SLOT(processFileList(const QStringList&)));
@@ -137,55 +136,10 @@ void ProvisioningEditor::showWhatsThis()
 }
 
 //
-// Function to clear the contents of the specified page.  If the page
-// argument is less than one (default value is -1) then clear the
-// current toolbox page. Called when ui.pushButton_resetpage is clicked()
+// Function to clear the contents of the textedit
 void ProvisioningEditor::resetPage()
 {
-  // find the page (index) to clear.
-  //int toolboxindex = ui.toolBox_prov_ed->currentIndex();
-  //if (page >= 0 ) toolboxindex = page;
-
-  //switch (toolboxindex) {
-    //case 0:
-			//ui.lineEdit_name->clear();
-      //ui.plainTextEdit_description->clear();
-      //break;
-    //case 1:
-			//ui.comboBox_type->setCurrentIndex(0);
-			//ui.comboBox_ipv4method->setCurrentIndex(0);
-			//ui.lineEdit_ipv4address->clear();
-			//ui.lineEdit_ipv4netmask->clear();
-			//ui.lineEdit_ipv4gateway->clear();
-			//ui.comboBox_ipv6method->setCurrentIndex(0);
-			//ui.spinBox_ipv6prefixlength->setValue(0);
-      //ui.lineEdit_ipv6address->clear();
-      //ui.lineEdit_ipv6gateway->clear();
-      //ui.comboBox_ipv6privacy->setCurrentIndex(0);
-      //ui.lineEdit_macaddress->clear();
-      //ui.lineEdit_domain->clear();
-      //ui.lineEdit_nameservers->clear();
-      //ui.lineEdit_timeservers->clear();
-      //ui.lineEdit_searchdomains->clear();
-      //break;
-    //case 2:
-			//ui.lineEdit_wifiname->clear();
-			//ui.lineEdit_wifissid->clear();
-			//ui.checkBox_wifihidden->setChecked(false);		
-			//ui.comboBox_eaptype->setCurrentIndex(0);
-			//ui.lineEdit_eaptype->clear();
-			//ui.lineEdit_cacertfile->clear();
-			//ui.lineEdit_clientcertfile->clear();
-			//ui.lineEdit_privatekeyfile->clear();
-			//ui.lineEdit_privatekeypassphrase->clear();
-			//ui.comboBox_privatekeypassphrasetype->setCurrentIndex(0);
-			//ui.comboBox_securitytype->setCurrentIndex(0);
-			//ui.lineEdit_passphrase->clear();
-			//ui.lineEdit_phase2->clear();
-      //break;
-    //default:
-      //break;
-  //} // switch
+	ui.plainTextEdit_main->document()->clear();
 
   return;
 }
@@ -203,11 +157,12 @@ void ProvisioningEditor::requestFileList()
 
 //
 // Slot to process the file list from /var/lib/connman.  Connected to
-// the readCompleted signal in roothelper
+// the obtainedFileList signal in roothelper
 void ProvisioningEditor::processFileList(const QStringList& sl_conf)
 {
 	// variables
 	bool ok;
+	filename.clear();
 		
 	// display dialogs based on the length of the stringlist
 	switch (sl_conf.size()) {
@@ -237,29 +192,14 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
 			if (ok) filename = item;		
 			break;
 		}	// switch
+	
+	// if we have a filename try to open the file
+	//if (! filename.isEmpty() {
+		//QList<QVariant> vlist;
+    //QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+		
+		
 			
 	return;
 }
 
-//
-// Slot to create a QByteArray representing the .conf file and send it to roothelper
-// write to disk
-void ProvisioningEditor::createConfFile()
-{
-	//QString s_working = "";
-	
-	//// global section
-	//if (! ui.lineEdit_name->text().isEmpty() || ! ui.plainTextEdit_description->document()->toPlainText().isEmpty() )  {
-		//s_working.append("[global]\n");
-		//if (! ui.lineEdit_name->text().isEmpty() ) s_working.append(QString("Name = %1\n").arg(ui.lineEdit_name->text()) );
-		//if (! ui.plainTextEdit_description->document()->toPlainText().isEmpty() )
-			//s_working.append(QString("Description = %1\n").arg(ui.plainTextEdit_maincument()->toPlainText()) );
-		//s_working.append("\n");
-			
-	//}	// global section
-	
-	//qDebug() << "working string";
-	//qDebug() << s_working;
-	
-	return;
-}
