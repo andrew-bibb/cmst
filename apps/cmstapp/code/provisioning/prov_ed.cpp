@@ -30,8 +30,11 @@ DEALINGS IN THE SOFTWARE.
 # include <QRegularExpressionValidator>
 # include <QDBusMessage>
 # include <QDBusConnection>
+# include <QDBusInterface>
 # include <QMessageBox>
 # include <QInputDialog>
+# include <QList>
+# include <QVariant>
 
 # include "./prov_ed.h"
 # include "../resource.h"
@@ -47,7 +50,11 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   // Data members
   menubar = new QMenuBar(this);
   ui.verticalLayout01->setMenuBar(menubar);
-  filename="";
+  filename = "";
+  i_sel = CMST::ProvEd_No_Selection;
+  statusbar = new QStatusBar(this);
+  ui.verticalLayout01->addWidget(statusbar);
+  statustimeout = 2000;
   
   // Add Actions from UI to menu's
   menu_global = new QMenu(tr("Global"), this);
@@ -120,10 +127,15 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   // connect signals to slots
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
   connect(ui.pushButton_resetpage, SIGNAL(clicked()), this, SLOT(resetPage()));
-  connect(ui.pushButton_open, SIGNAL(clicked()), this, SLOT(requestFileList()));
+  connect(ui.pushButton_open, SIGNAL(clicked()), this, SLOT(openFile()));
+  connect(ui.pushButton_delete, SIGNAL(clicked()), this, SLOT(deleteFile()));
+  connect(ui.pushButton_save, SIGNAL(clicked()), this, SLOT(writeFile()));
   
   // signals from dbus
   QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "obtainedFileList", this, SLOT(processFileList(const QStringList&)));
+  QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "fileReadCompleted", this, SLOT(seedTextEdit(const QString&)));
+  QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "fileDeleteCompleted", this, SLOT(deleteCompleted(bool)));
+  QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "fileWriteCompleted", this, SLOT(writeCompleted(quint64)));
 }
 
 /////////////////////////////////////////////// Private Slots /////////////////////////////////////////////
@@ -145,13 +157,48 @@ void ProvisioningEditor::resetPage()
 }
 
 //
-// Slot to request a file list from the roothelper.  Connected to the 
-// ui.pushButton_open control
-void ProvisioningEditor::requestFileList()
+// Slot to read a file.  First request a file list from the roothelper.
+// Roothelper will emit an obtainedFileList signal when finished.  This slot 
+// is connected to the ui.pushButton_open control
+void ProvisioningEditor::openFile()
 {
+	// initialize the selection 	
+	i_sel = CMST::ProvEd_File_Read;
+	
 	QDBusMessage msg = QDBusMessage::createMethodCall ("org.cmst.roothelper", "/", "org.cmst.roothelper", QLatin1String("getFileList"));
 	QDBusMessage reply = QDBusConnection::systemBus().call(msg, QDBus::NoBlock);
 	//qDebug() << reply;
+	
+	return;
+}
+
+//
+// Slot to write a file
+void ProvisioningEditor::writeFile()
+{
+	// initialize the selection 	
+	i_sel = CMST::ProvEd_File_Write;
+	
+	QDBusMessage msg = QDBusMessage::createMethodCall ("org.cmst.roothelper", "/", "org.cmst.roothelper", QLatin1String("getFileList"));
+	QDBusMessage reply = QDBusConnection::systemBus().call(msg, QDBus::NoBlock);
+	//qDebug() << reply;
+	
+	return;	
+}
+
+//
+// Slot to delete a file.  First request a file list from the roothelper.
+// Roothelper will emit a obtainedFileList signal when finished.  This slot 
+// is connected to the ui.pushButton_delete control
+void ProvisioningEditor::deleteFile()
+{
+	// initialize the selection 	
+	i_sel = CMST::ProvEd_File_Delete;
+	
+	QDBusMessage msg = QDBusMessage::createMethodCall ("org.cmst.roothelper", "/", "org.cmst.roothelper", QLatin1String("getFileList"));
+	QDBusMessage reply = QDBusConnection::systemBus().call(msg, QDBus::NoBlock);
+	//qDebug() << reply;
+	
 	return;
 }
 
@@ -163,43 +210,151 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
 	// variables
 	bool ok;
 	filename.clear();
-		
-	// display dialogs based on the length of the stringlist
-	switch (sl_conf.size()) {
-		case 0:
-			QMessageBox::information(this, 
-				QString(PROGRAM_NAME) + tr("- Information"),
-				tr("<center>No configuration files were found.<br>You may use this dialog to create one."),
-				QMessageBox::Ok,
-				QMessageBox::Ok);
-			break; 
-		case 1:
-			QMessageBox::information(this,
-				tr("%1 - Information").arg(PROGRAM_NAME),
-				tr("<center>Reading configuration file: %1").arg(sl_conf.at(0)),
-				QMessageBox::Ok,
-				QMessageBox::Ok);
-			filename = sl_conf.at(0);
-			break;
-		default:
-			QString item = QInputDialog::getItem(this,
-					tr("%1 - Select File").arg(PROGRAM_NAME),
-					tr("Select a file to load."),
-					sl_conf,
-					0,
-					false,
-					&ok);
-			if (ok) filename = item;		
-			break;
-		}	// switch
+	QList<QVariant> vlist;
+  QDBusInterface* iface_pfl = new QDBusInterface("org.cmst.roothelper", "/", "org.cmst.roothelper", QDBusConnection::systemBus(), this);
+  
+	// If we are trying to open and read the file
+	if (i_sel & CMST::ProvEd_File_Read) {
+		// display dialogs based on the length of the stringlist
+		switch (sl_conf.size()) {
+			case 0:
+				QMessageBox::information(this, 
+					QString(PROGRAM_NAME) + tr("- Information"),
+					tr("<center>No configuration files were found.<br>You may use this dialog to create one."),
+					QMessageBox::Ok,
+					QMessageBox::Ok);
+				break; 
+			case 1:
+				QMessageBox::information(this,
+					tr("%1 - Information").arg(PROGRAM_NAME),
+					tr("<center>Reading configuration file: %1").arg(sl_conf.at(0)),
+					QMessageBox::Ok,
+					QMessageBox::Ok);
+				filename = sl_conf.at(0);
+				break;
+			default:
+				QString item = QInputDialog::getItem(this,
+						tr("%1 - Select File").arg(PROGRAM_NAME),
+						tr("Select a file to load."),
+						sl_conf,
+						0,
+						false,
+						&ok);
+				if (ok) filename = item;		
+				break;
+			}	// switch	
+		// if we have a filename try to open the file
+		if (! filename.isEmpty() ) {
+			vlist.clear();
+			vlist << QVariant::fromValue(filename);
+		  QDBusMessage reply01 = iface_pfl->callWithArgumentList(QDBus::AutoDetect, QLatin1String("readFile"), vlist);	
+		}	// if there is a file name
+	}	// if i_sel is File_Read
 	
-	// if we have a filename try to open the file
-	//if (! filename.isEmpty() {
-		//QList<QVariant> vlist;
-    //QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-		
-		
+	// If we are trying to delete the file
+	else if (i_sel & CMST::ProvEd_File_Delete) {
+		// // user will have to select the file to delete it
+		switch (sl_conf.size()) {			
+			case 0:
+				QMessageBox::information(this, 
+					QString(PROGRAM_NAME) + tr("- Information"),
+					tr("<center>No configuration files were found.<br>Nothing will be deleted."),
+					QMessageBox::Ok,
+					QMessageBox::Ok);
+				break; 
+			default:
+				QString item = QInputDialog::getItem(this,
+						tr("%1 - Select File").arg(PROGRAM_NAME),
+						tr("Select a file to be deleted."),
+						sl_conf,
+						0,
+						false,
+						&ok);
+				if (ok) filename = item;		
+				break;
+			}	// switch
+		// if we have a filename try to delete the file
+		if (! filename.isEmpty() ) {
+			vlist.clear();
+			vlist << QVariant::fromValue(filename);
+		  QDBusMessage reply02 = iface_pfl->callWithArgumentList(QDBus::AutoDetect, QLatin1String("deleteFile"), vlist);
+		  // qDebug() << reply02			
+		}	// if there is a file name
+	}	// if i_sel is File_Delete			
+	
+	// If we are trying to save the file
+	else if (i_sel & CMST::ProvEd_File_Write) {
+	QString item = QInputDialog::getItem(this,
+			tr("%1 - Select File").arg(PROGRAM_NAME),
+			tr("Enter a new file name or select an existing file to overwrite."),
+			sl_conf,
+			0,
+			true,
+			&ok);
+		if (ok) filename = item;		
+		// if we have a filename try to save the file
+		if (! filename.isEmpty() ) {
+			vlist.clear();
+			vlist << QVariant::fromValue(filename);
+			vlist << QVariant::fromValue(ui.plainTextEdit_main->toPlainText() );
+		  QDBusMessage reply03 = iface_pfl->callWithArgumentList(QDBus::AutoDetect, QLatin1String("saveFile"), vlist);	
+		  //qDebug() << reply03;		
+		}	// if there is a file name
+	}	// if i_sel is File_Save	
 			
+	// cleanup
+	i_sel = CMST::ProvEd_No_Selection;
+  iface_pfl->deleteLater();		
+	return;
+}
+
+//
+// Slot to seed the QTextEdit window with data read from file.  Connected to
+// fileReadCompleted signal in root helper
+void ProvisioningEditor::seedTextEdit(const QString& data)
+{
+	// clear the text edit and seed it with the read data
+	ui.plainTextEdit_main->document()->clear();
+	ui.plainTextEdit_main->setPlainText(data);
+	
+	// show a statusbar message
+	statusbar->showMessage(tr("File read completed"), statustimeout);
+	
+	return;
+}
+
+//
+// Slot to show a statusbar message when a file delete is completed
+void ProvisioningEditor::deleteCompleted(bool success)
+{
+	QString msg;
+	
+	if (success)
+		msg = tr("File deleted");
+	else
+		msg = tr("Error encountered deleting.");
+	
+	statusbar->showMessage(msg, statustimeout);
+	return;
+}	
+
+//
+// Slot to show a statusbar message when a file write is completed
+void ProvisioningEditor::writeCompleted(quint64 bytes)
+{
+	// display a status bar message showing the results of the write
+	QString msg;
+	
+	if (bytes < 0 )
+		msg = tr("File save failed.");
+	else {
+		if (bytes > 1024)
+			msg = tr("%L1 KB written").arg(bytes / 1024);
+		else	
+			msg = tr("%L1 Bytes written").arg(bytes);
+	}
+	
+	statusbar -> showMessage(msg, statustimeout);
 	return;
 }
 

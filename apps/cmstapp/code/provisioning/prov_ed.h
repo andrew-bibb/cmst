@@ -32,6 +32,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QWhatsThis>
 # include <QMenuBar>
 # include <QMenu>
+# include <QStatusBar>
 //# include <QAction>
 //# include <QActionGroup>
 
@@ -51,16 +52,24 @@ class ProvisioningEditor : public QDialog
   // members
 		Ui::Provisioning ui;
 		QString filename;
+		int i_sel;
 		QMenuBar* menubar;
 		QMenu* menu_global;
 		QMenu* menu_service;
 		QMenu* menu_wifi;
+		QStatusBar* statusbar;
+		int statustimeout;
 		
   private slots:
   	void showWhatsThis();
 		void resetPage();
-		void requestFileList();
+		void openFile();
+		void writeFile();
+		void deleteFile();
 		void processFileList(const QStringList&);
+		void seedTextEdit(const QString&);
+		void deleteCompleted(bool);
+		void writeCompleted(quint64);
 				
 	public:
 		inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}

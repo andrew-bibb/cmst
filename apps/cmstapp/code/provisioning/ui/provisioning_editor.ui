@@ -56,7 +56,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="pushButton_delete">
        <property name="text">
         <string>&amp;Delete</string>
        </property>
@@ -132,6 +132,9 @@
       </widget>
      </item>
     </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_statusbar"/>
    </item>
   </layout>
   <action name="actionGlobal">

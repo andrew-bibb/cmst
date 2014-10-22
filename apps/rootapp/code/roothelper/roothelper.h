@@ -50,12 +50,14 @@ class RootHelper : public QObject, protected QDBusContext
 		void startHelper();
 		void getFileList();
 		void readFile(const QString&);
+		void deleteFile(const QString&);
 		void saveFile(const QString&, const QString&);
 		inline bool isConnected() {return b_connected;}	// may not actually use this
 		
 	signals:
 		void obtainedFileList(const QStringList&);
 		void fileReadCompleted(const QString&);
+		void fileDeleteCompleted (bool);
 		void fileWriteCompleted(quint64);
 		
 	private:

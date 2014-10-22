@@ -86,7 +86,7 @@ void RootHelper::getFileList()
 	filters << "*.conf";
 
 	// get a list of all conf files and return it
-	emit obtainedFileList(dir.entryList(filters, QDir::Files, QDir::Name | QDir::Reversed) );
+	emit obtainedFileList(dir.entryList(filters, QDir::Files, QDir::Name) );
 	
 	return;
 }
@@ -94,39 +94,37 @@ void RootHelper::getFileList()
 //
 // Slot to read a file from disk
 void RootHelper::readFile(const QString& fn)
-{
-	QString filename = fn;
-	
-	// make sure the file name has a type
-	if (! fn.endsWith(".conf", Qt::CaseSensitive) )
-		filename.append(".conf");
-		
+{	
 	// open the file for reading	
-	QFile infile(QString("/var/lib/connman/%1").arg(filename) );
+	QFile infile(QString("/var/lib/connman/%1").arg(fn) );	
 	if (! infile.open(QIODevice::ReadOnly | QIODevice::Text))
 		return;
-	
+
 	// read the file and emit a signal when done
 	QByteArray ba = infile.readAll();
 	emit fileReadCompleted(QString(ba)); 
-	
+
 	// cleanup and exit
 	infile.close();
 	return;
 }
 
 //
+// Slot to delete a disk file
+void RootHelper::deleteFile(const QString& fn)
+{
+	// delete the file and emit a signal with the result
+	emit fileDeleteCompleted(QFile::remove(QString("/var/lib/connman/%1").arg(fn)) );
+	
+	return;
+}
+
+//
 // Slot to write the file to disk
 void RootHelper::saveFile(const QString& fn, const QString& data)
-{
-	QString filename = fn;
-	
-	// make sure the file name has a type
-	if (! fn.endsWith(".conf", Qt::CaseSensitive) )
-		filename.append(".conf");
-		
-	// open the file for writing	
-	QFile outfile(QString("/var/lib/connman/%1").arg(filename) );
+{	
+	// open the file for writing, make sure the file name ends in .conf	
+	QFile outfile(QString("/var/lib/connman/%1%2").arg(fn).arg(fn.endsWith(".conf", Qt::CaseSensitive) ? "" : ".conf") );
 	if (! outfile.open(QIODevice::WriteOnly | QIODevice::Text))
 		return;
 	

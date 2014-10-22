@@ -7,6 +7,9 @@
     <signal name="fileReadCompleted">
       <arg type="s" direction="out"/>
     </signal>
+    <signal name="fileDeleteCompleted">
+      <arg type="b" direction="out"/>
+    </signal>
     <signal name="fileWriteCompleted">
       <arg type="t" direction="out"/>
     </signal>
@@ -15,6 +18,9 @@
     <method name="getFileList">
     </method>
     <method name="readFile">
+      <arg type="s" direction="in"/>
+    </method>
+    <method name="deleteFile">
       <arg type="s" direction="in"/>
     </method>
     <method name="saveFile">

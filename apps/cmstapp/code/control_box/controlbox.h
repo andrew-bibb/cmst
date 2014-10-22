@@ -70,6 +70,12 @@ namespace CMST
     Manager_Technologies  = (1 << 2), // scan for technologies  
     Manager_Services      = (1 << 3), // scan for services
     Manager_All           = (CMST::Manager_Properties | CMST::Manager_Technologies | CMST::Manager_Services),
+    
+    // provisioning editor
+    ProvEd_No_Selection	= 0x00,
+    ProvEd_File_Read    = (1 << 0),
+    ProvEd_File_Delete	= (1 << 1),
+    ProvEd_File_Write		= (1 << 2),
   };
 } // namespace CMST
 
