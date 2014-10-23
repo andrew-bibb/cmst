@@ -33,8 +33,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QMenuBar>
 # include <QMenu>
 # include <QStatusBar>
-//# include <QAction>
-//# include <QActionGroup>
+# include <QActionGroup>
 
 # include "ui_provisioning_editor.h"
 # include "./code/control_box/controlbox.h"
@@ -57,10 +56,13 @@ class ProvisioningEditor : public QDialog
 		QMenu* menu_global;
 		QMenu* menu_service;
 		QMenu* menu_wifi;
+		QMenu* menu_template;
+		QActionGroup* group_template;
 		QStatusBar* statusbar;
 		int statustimeout;
 		
   private slots:
+		void templateTriggered(QAction*);
   	void showWhatsThis();
 		void resetPage();
 		void openFile();

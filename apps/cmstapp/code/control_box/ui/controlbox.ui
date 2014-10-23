@@ -1184,7 +1184,7 @@
   <tabstop>pushButton_minimize</tabstop>
  </tabstops>
  <resources>
-  <include location="../../../cmst.qrc"/>
+  <include location="../../../../../cmst.qrc"/>
  </resources>
  <connections>
   <connection>

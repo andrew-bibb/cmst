@@ -35,6 +35,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QInputDialog>
 # include <QList>
 # include <QVariant>
+# include <QAction>
+# include <QFile>
 
 # include "./prov_ed.h"
 # include "../resource.h"
@@ -50,11 +52,13 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   // Data members
   menubar = new QMenuBar(this);
   ui.verticalLayout01->setMenuBar(menubar);
-  filename = "";
-  i_sel = CMST::ProvEd_No_Selection;
+
   statusbar = new QStatusBar(this);
   ui.verticalLayout01->addWidget(statusbar);
   statustimeout = 2000;
+  
+  filename = "";
+  i_sel = CMST::ProvEd_No_Selection;
   
   // Add Actions from UI to menu's
   menu_global = new QMenu(tr("Global"), this);
@@ -98,10 +102,18 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   menu_wifi->addAction(ui.actionWifiPrivateKeyPassphrase);
   menu_wifi->addAction(ui.actionWifiPrivateKeyPassphraseType);
   
-  // add Menu's to UI
+  menu_template = new QMenu(tr("Templates"), this);
+  menu_template->addAction(ui.actionTemplateEduroam);
+  
+  // add menus to UI
   menubar->addMenu(menu_global);
   menubar->addMenu(menu_service);
   menubar->addMenu(menu_wifi);
+  menubar->addMenu(menu_template);
+  
+  // add menus to menugroups
+  group_template = new QActionGroup(this);
+  group_template->addAction(ui.actionTemplateEduroam);
 	
   // Setup the address validator and apply it to any ui QLineEdit.
   // The lev validator will validate an IP address or up to one white space character (to allow
@@ -130,6 +142,7 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   connect(ui.pushButton_open, SIGNAL(clicked()), this, SLOT(openFile()));
   connect(ui.pushButton_delete, SIGNAL(clicked()), this, SLOT(deleteFile()));
   connect(ui.pushButton_save, SIGNAL(clicked()), this, SLOT(writeFile()));
+  connect(group_template, SIGNAL(triggered(QAction*)), this, SLOT(templateTriggered(QAction*)));
   
   // signals from dbus
   QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "obtainedFileList", this, SLOT(processFileList(const QStringList&)));
@@ -139,6 +152,29 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
 }
 
 /////////////////////////////////////////////// Private Slots /////////////////////////////////////////////
+//
+// Slot called when a member of the QAction group group_template is triggered
+void ProvisioningEditor::templateTriggered(QAction* act)
+{
+	// variable
+	QString source;
+	
+	// get the source string depending on the action
+	if (act == ui.actionTemplateEduroam) source = ":/text/text/eduroam.txt";
+	
+	// get the text
+  QFile file(source);
+  if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {  
+		QByteArray ba = file.readAll();
+		
+		// seed the textedit with the template
+		this->seedTextEdit(QString(ba));
+	}	// if 
+	
+
+	return;
+}
+
 //
 //  Slot to enter whats this mode
 //  Called when the ui.toolButton_whatsthis clicked() signal is emitted
@@ -310,7 +346,8 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
 
 //
 // Slot to seed the QTextEdit window with data read from file.  Connected to
-// fileReadCompleted signal in root helper
+// fileReadCompleted signal in root helper.  Also called directly from
+// the templateTriggered slot. 
 void ProvisioningEditor::seedTextEdit(const QString& data)
 {
 	// clear the text edit and seed it with the read data

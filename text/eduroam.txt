@@ -1,0 +1,8 @@
+[service_eduroam]
+Type=wifi
+Name=eduroam
+EAP=peap
+CACertFile=/etc/ssl/certs/ca-certificates.crt
+Phase2=MSCHAPV2
+Identity=yourusername@domain.edu
+Passphrase=yourpassword

@@ -267,6 +267,11 @@
     <string>Hidden</string>
    </property>
   </action>
+  <action name="actionTemplateEduroam">
+   <property name="text">
+    <string>Eduroam</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>

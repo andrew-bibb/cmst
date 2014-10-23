@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="text">
+    <file>text/eduroam.txt</file>
     <file>text/changelog.txt</file>
     <file>text/license.txt</file>
   </qresource>
