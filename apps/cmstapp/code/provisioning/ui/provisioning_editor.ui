@@ -139,7 +139,7 @@
   </layout>
   <action name="actionGlobal">
    <property name="text">
-    <string>[Global]</string>
+    <string>[global]</string>
    </property>
   </action>
   <action name="actionGlobalName">
@@ -154,7 +154,7 @@
   </action>
   <action name="actionService">
    <property name="text">
-    <string>[Service]</string>
+    <string>[service_*]</string>
    </property>
   </action>
   <action name="actionServiceType">

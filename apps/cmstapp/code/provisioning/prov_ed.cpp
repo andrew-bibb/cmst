@@ -175,60 +175,37 @@ void ProvisioningEditor::inputFreeForm(QAction* act)
 {
 	// variables
 	const QLineEdit::EchoMode echomode = QLineEdit::Normal;
-	QString s;
-	QString t;
-	bool ok;
+	QString str;
+	bool ok;	
+	QString key = act->text();
 	
-  if (act == ui.actionGlobalName) {
-		t = "Name";
-		s = tr("Enter the network name.");
-	}
-  if (act == ui.actionGlobalDescription) {
-		t = "Description";
-		s = tr("Enter a description of the network.");
-	}	
-  if (act == ui.actionWifiName) {
-		t = "Name";
-		s = tr("Enter the string representation of an 802.11 SSID.");
-	}
-  if (act == ui.actionWifiPrivateKeyPassphrase) {
-		t = "PrivateKeyPassphrase";
-		s = tr("Password/Passphrase for the private key file.");
-  }
-  if (act == ui.actionWifiIdentity) {
-		t = "Identity";
-		s = tr("Identity string for EAP.");
-  }
-  if (act == ui.actionWifiPassphrase) {
-		t = "Passphrase";
-		s = tr("RSN/WPA/WPA2 Passphrase");		
-	}
-	t.append(" = %1");
+	// create some prompts
+	if (act == ui.actionService) str = tr("Tag which will replace the * with<br>an identifier unique to the config file.");
+  if (act == ui.actionGlobalName) str = tr("Enter the network name.");
+  if (act == ui.actionGlobalDescription) 	str = tr("Enter a description of the network.");
+  if (act == ui.actionWifiName)	str = tr("Enter the string representation of an 802.11 SSID.");
+  if (act == ui.actionWifiPrivateKeyPassphrase)	str = tr("Password/Passphrase for the private key file.");
+  if (act == ui.actionWifiIdentity) str = tr("Identity string for EAP.");
+  if (act == ui.actionWifiPassphrase) str = tr("RSN/WPA/WPA2 Passphrase");		
 	
-	// section markers
 	if (act == ui.actionGlobal) {
-		t = "[global]";
-		s.clear();
-		ok = true;
+		key.append("\n");
+		ui.plainTextEdit_main->insertPlainText(key);
 	}
-		if (act == ui.actionService) {
-		t = "[service_%1]";
-		s = tr("Enter the service tag");
-	}
+	else {
+		act == ui.actionService ? key = "[service_%1]\n" : key.append(" = %1\n");	
+		
+		// get the string from the user
+		QString text = "";
+			text = QInputDialog::getText(this,
+				tr("%1 - Text Input").arg(PROGRAM_NAME),
+				str,
+				echomode,
+				"",
+				&ok);
 	
-	// get the string from the user
-	QString text = " ";
-	if (! s.isEmpty()) {
-		text = QInputDialog::getText(this,
-			tr("%1 - Text Input").arg(PROGRAM_NAME),
-			s,
-			echomode,
-			"",
-			&ok);
-	}	// if
-	
-	t.append("\n");
-	if (ok) ui.plainTextEdit_main->insertPlainText(t.arg(text));	
+		if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(text));
+	}	// else 	
 	
 	return;
 }
