@@ -60,6 +60,12 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   filename = "";
   i_sel = CMST::ProvEd_No_Selection;
   
+  // Setup the buttongroup
+  bg01 = new QButtonGroup(this);
+  bg01->addButton(ui.pushButton_open);
+  bg01->addButton(ui.pushButton_save);
+  bg01->addButton(ui.pushButton_delete);
+  
   // Add Actions from UI to menu's
   menu_global = new QMenu(tr("Global"), this);
   menu_global->addAction(ui.actionGlobal);
@@ -102,8 +108,9 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   menu_wifi->addAction(ui.actionWifiPrivateKeyPassphrase);
   menu_wifi->addAction(ui.actionWifiPrivateKeyPassphraseType);
   
-  menu_template = new QMenu(tr("Templates"), this);
-  menu_template->addAction(ui.actionTemplateEduroam);
+  menu_template = new QMenu(tr("Templates"), this);menu_template->addAction(ui.actionTemplateEduroamShort);
+  menu_template->addAction(ui.actionTemplateEduroamLong);
+  menu_template->addAction(ui.actionTemplateEduroamShort);
   
   // add menus to UI
   menubar->addMenu(menu_global);
@@ -111,9 +118,20 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   menubar->addMenu(menu_wifi);
   menubar->addMenu(menu_template);
   
-  // add menus to menugroups
+  // add actions to actiongroups (signals from actiongroups are connected to slots)
   group_template = new QActionGroup(this);
-  group_template->addAction(ui.actionTemplateEduroam);
+  group_template->addAction(ui.actionTemplateEduroamLong);
+  group_template->addAction(ui.actionTemplateEduroamShort);
+  
+  group_freeform = new QActionGroup(this);
+  group_freeform->addAction(ui.actionGlobal);
+  group_freeform->addAction(ui.actionGlobalName);
+  group_freeform->addAction(ui.actionGlobalDescription);
+  group_freeform->addAction(ui.actionService);
+  group_freeform->addAction(ui.actionWifiName);
+  group_freeform->addAction(ui.actionWifiPrivateKeyPassphrase);
+  group_freeform->addAction(ui.actionWifiIdentity);
+  group_freeform->addAction(ui.actionWifiPassphrase);	
 	
   // Setup the address validator and apply it to any ui QLineEdit.
   // The lev validator will validate an IP address or up to one white space character (to allow
@@ -139,10 +157,9 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   // connect signals to slots
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
   connect(ui.pushButton_resetpage, SIGNAL(clicked()), this, SLOT(resetPage()));
-  connect(ui.pushButton_open, SIGNAL(clicked()), this, SLOT(openFile()));
-  connect(ui.pushButton_delete, SIGNAL(clicked()), this, SLOT(deleteFile()));
-  connect(ui.pushButton_save, SIGNAL(clicked()), this, SLOT(writeFile()));
+  connect(bg01, SIGNAL(buttonClicked(QAbstractButton*)), this, SLOT(requestFileList(QAbstractButton*)));
   connect(group_template, SIGNAL(triggered(QAction*)), this, SLOT(templateTriggered(QAction*)));
+  connect(group_freeform, SIGNAL(triggered(QAction*)), this, SLOT(inputFreeForm(QAction*)));
   
   // signals from dbus
   QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "obtainedFileList", this, SLOT(processFileList(const QStringList&)));
@@ -153,14 +170,79 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
 
 /////////////////////////////////////////////// Private Slots /////////////////////////////////////////////
 //
-// Slot called when a member of the QAction group group_template is triggered
+// Slot called when a member of the QActionGroup group_freeform is triggered
+void ProvisioningEditor::inputFreeForm(QAction* act)
+{
+	// variables
+	const QLineEdit::EchoMode echomode = QLineEdit::Normal;
+	QString s;
+	QString t;
+	bool ok;
+	
+  if (act == ui.actionGlobalName) {
+		t = "Name";
+		s = tr("Enter the network name.");
+	}
+  if (act == ui.actionGlobalDescription) {
+		t = "Description";
+		s = tr("Enter a description of the network.");
+	}	
+  if (act == ui.actionWifiName) {
+		t = "Name";
+		s = tr("Enter the string representation of an 802.11 SSID.");
+	}
+  if (act == ui.actionWifiPrivateKeyPassphrase) {
+		t = "PrivateKeyPassphrase";
+		s = tr("Password/Passphrase for the private key file.");
+  }
+  if (act == ui.actionWifiIdentity) {
+		t = "Identity";
+		s = tr("Identity string for EAP.");
+  }
+  if (act == ui.actionWifiPassphrase) {
+		t = "Passphrase";
+		s = tr("RSN/WPA/WPA2 Passphrase");		
+	}
+	t.append(" = %1");
+	
+	// section markers
+	if (act == ui.actionGlobal) {
+		t = "[global]";
+		s.clear();
+		ok = true;
+	}
+		if (act == ui.actionService) {
+		t = "[service_%1]";
+		s = tr("Enter the service tag");
+	}
+	
+	// get the string from the user
+	QString text = " ";
+	if (! s.isEmpty()) {
+		text = QInputDialog::getText(this,
+			tr("%1 - Text Input").arg(PROGRAM_NAME),
+			s,
+			echomode,
+			"",
+			&ok);
+	}	// if
+	
+	t.append("\n");
+	if (ok) ui.plainTextEdit_main->insertPlainText(t.arg(text));	
+	
+	return;
+}
+
+//
+// Slot called when a member of the QActionGroup group_template is triggered
 void ProvisioningEditor::templateTriggered(QAction* act)
 {
 	// variable
 	QString source;
 	
 	// get the source string depending on the action
-	if (act == ui.actionTemplateEduroam) source = ":/text/text/eduroam.txt";
+	if (act == ui.actionTemplateEduroamLong) source = ":/text/text/eduroam_long.txt";
+	else if (act == ui.actionTemplateEduroamShort) source = ":/text/text/eduroam_short.txt";
 	
 	// get the text
   QFile file(source);
@@ -193,43 +275,17 @@ void ProvisioningEditor::resetPage()
 }
 
 //
-// Slot to read a file.  First request a file list from the roothelper.
+// Slot to request a file list from the roothelper.
 // Roothelper will emit an obtainedFileList signal when finished.  This slot 
-// is connected to the ui.pushButton_open control
-void ProvisioningEditor::openFile()
+// is connected to the QButtonGroup bg01
+void ProvisioningEditor::requestFileList(QAbstractButton* button)
 {
-	// initialize the selection 	
-	i_sel = CMST::ProvEd_File_Read;
+	// initialize the selection
+	if (button == ui.pushButton_open) i_sel = CMST::ProvEd_File_Read;
+  else if (button == ui.pushButton_save) i_sel = CMST::ProvEd_File_Write;
+		else if (button == ui.pushButton_delete) i_sel = CMST::ProvEd_File_Delete;
+			else i_sel = CMST::ProvEd_No_Selection;
 	
-	QDBusMessage msg = QDBusMessage::createMethodCall ("org.cmst.roothelper", "/", "org.cmst.roothelper", QLatin1String("getFileList"));
-	QDBusMessage reply = QDBusConnection::systemBus().call(msg, QDBus::NoBlock);
-	//qDebug() << reply;
-	
-	return;
-}
-
-//
-// Slot to write a file
-void ProvisioningEditor::writeFile()
-{
-	// initialize the selection 	
-	i_sel = CMST::ProvEd_File_Write;
-	
-	QDBusMessage msg = QDBusMessage::createMethodCall ("org.cmst.roothelper", "/", "org.cmst.roothelper", QLatin1String("getFileList"));
-	QDBusMessage reply = QDBusConnection::systemBus().call(msg, QDBus::NoBlock);
-	//qDebug() << reply;
-	
-	return;	
-}
-
-//
-// Slot to delete a file.  First request a file list from the roothelper.
-// Roothelper will emit a obtainedFileList signal when finished.  This slot 
-// is connected to the ui.pushButton_delete control
-void ProvisioningEditor::deleteFile()
-{
-	// initialize the selection 	
-	i_sel = CMST::ProvEd_File_Delete;
 	
 	QDBusMessage msg = QDBusMessage::createMethodCall ("org.cmst.roothelper", "/", "org.cmst.roothelper", QLatin1String("getFileList"));
 	QDBusMessage reply = QDBusConnection::systemBus().call(msg, QDBus::NoBlock);

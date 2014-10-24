@@ -83,7 +83,7 @@ void RootHelper::getFileList()
 	// variables
 	QDir dir = QDir("/var/lib/connman");
 	QStringList filters;
-	filters << "*.conf";
+	filters << "*.config";
 
 	// get a list of all conf files and return it
 	emit obtainedFileList(dir.entryList(filters, QDir::Files, QDir::Name) );
@@ -123,8 +123,8 @@ void RootHelper::deleteFile(const QString& fn)
 // Slot to write the file to disk
 void RootHelper::saveFile(const QString& fn, const QString& data)
 {	
-	// open the file for writing, make sure the file name ends in .conf	
-	QFile outfile(QString("/var/lib/connman/%1%2").arg(fn).arg(fn.endsWith(".conf", Qt::CaseSensitive) ? "" : ".conf") );
+	// open the file for writing, make sure the file name ends in .config
+	QFile outfile(QString("/var/lib/connman/%1%2").arg(fn).arg(fn.endsWith(".config", Qt::CaseSensitive) ? "" : ".config") );
 	if (! outfile.open(QIODevice::WriteOnly | QIODevice::Text))
 		return;
 	

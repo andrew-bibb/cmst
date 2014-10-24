@@ -34,6 +34,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QMenu>
 # include <QStatusBar>
 # include <QActionGroup>
+# include <QButtonGroup>
 
 # include "ui_provisioning_editor.h"
 # include "./code/control_box/controlbox.h"
@@ -58,16 +59,17 @@ class ProvisioningEditor : public QDialog
 		QMenu* menu_wifi;
 		QMenu* menu_template;
 		QActionGroup* group_template;
+		QActionGroup* group_freeform;
+		QButtonGroup* bg01;
 		QStatusBar* statusbar;
 		int statustimeout;
 		
   private slots:
+		void inputFreeForm(QAction*);
 		void templateTriggered(QAction*);
   	void showWhatsThis();
 		void resetPage();
-		void openFile();
-		void writeFile();
-		void deleteFile();
+		void requestFileList(QAbstractButton*);
 		void processFileList(const QStringList&);
 		void seedTextEdit(const QString&);
 		void deleteCompleted(bool);

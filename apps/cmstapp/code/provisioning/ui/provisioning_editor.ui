@@ -84,7 +84,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear all entries on the current page.&lt;/p&gt;&lt;p&gt;This button will reset every field on the current page to the default value, which generally means nothing in the field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
-        <string>Reset &amp;Page</string>
+        <string>Clear &amp;Page</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -267,9 +267,14 @@
     <string>Hidden</string>
    </property>
   </action>
-  <action name="actionTemplateEduroam">
+  <action name="actionTemplateEduroamLong">
    <property name="text">
-    <string>Eduroam</string>
+    <string>Eduroam (long)</string>
+   </property>
+  </action>
+  <action name="actionTemplateEduroamShort">
+   <property name="text">
+    <string>Eduroam (short)</string>
    </property>
   </action>
  </widget>
