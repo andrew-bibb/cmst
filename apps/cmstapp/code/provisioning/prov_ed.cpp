@@ -88,7 +88,6 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
 	menu_service->addAction(ui.actionServiceSearchDomains);
 	
 	menu_wifi = new QMenu(tr("WiFi"), this);
-  menu_wifi->addAction(ui.actionWifi);
   menu_wifi->addSeparator();
   menu_wifi->addAction(ui.actionWifiName);
   menu_wifi->addAction(ui.actionWifiSSID);
@@ -132,6 +131,14 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   group_freeform->addAction(ui.actionWifiPrivateKeyPassphrase);
   group_freeform->addAction(ui.actionWifiIdentity);
   group_freeform->addAction(ui.actionWifiPassphrase);	
+  group_freeform->addAction(ui.actionWifiPhase2);
+  
+  group_combobox = new QActionGroup(this);
+  group_combobox->addAction(ui.actionServiceType);
+  group_combobox->addAction(ui.actionWifiEAP);
+  group_combobox->addAction(ui.actionWifiPrivateKeyPassphraseType);
+  group_combobox->addAction(ui.actionWifiSecurity);
+  group_combobox->addAction(ui.actionWifiHidden);
 	
   // Setup the address validator and apply it to any ui QLineEdit.
   // The lev validator will validate an IP address or up to one white space character (to allow
@@ -160,6 +167,7 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   connect(bg01, SIGNAL(buttonClicked(QAbstractButton*)), this, SLOT(requestFileList(QAbstractButton*)));
   connect(group_template, SIGNAL(triggered(QAction*)), this, SLOT(templateTriggered(QAction*)));
   connect(group_freeform, SIGNAL(triggered(QAction*)), this, SLOT(inputFreeForm(QAction*)));
+  connect(group_combobox, SIGNAL(triggered(QAction*)), this, SLOT(inputComboBox(QAction*)));
   
   // signals from dbus
   QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "obtainedFileList", this, SLOT(processFileList(const QStringList&)));
@@ -169,6 +177,36 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
 }
 
 /////////////////////////////////////////////// Private Slots /////////////////////////////////////////////
+//
+// Slot called when a member of the QActionGroup group_combobox is triggered
+void ProvisioningEditor::inputComboBox(QAction* act)
+{
+	// variables
+	QString key = act->text();
+	QString str;
+	bool ok;
+	QStringList sl;
+	
+	// create some prompts
+	if (act == ui.actionServiceType) {str = tr("Service type."); sl << "ethernet" << "wifi";}
+  if (act == ui.actionWifiEAP) {str = tr("EAP type."); sl << "tls" << "ttls" << "peap";}
+  if (act == ui.actionWifiPrivateKeyPassphraseType) {str = tr("Private key passphrase type."); sl << "fsid";}
+  if (act == ui.actionWifiSecurity) {str = tr("Network security type."); sl << "psk" << "ieee8021x" << "wep" << "none";}
+  if (act == ui.actionWifiHidden) {str = tr("Hidden network"); sl << "true" << "false";}
+	
+	QString item = QInputDialog::getItem(this,
+		tr("%1 - Item Input").arg(PROGRAM_NAME),
+		str,
+		sl,
+		0,
+		false,
+		&ok);
+		
+		key.append(" = %1\n");
+		if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(item));
+	
+	return;
+}
 //
 // Slot called when a member of the QActionGroup group_freeform is triggered
 void ProvisioningEditor::inputFreeForm(QAction* act)
@@ -186,7 +224,8 @@ void ProvisioningEditor::inputFreeForm(QAction* act)
   if (act == ui.actionWifiName)	str = tr("Enter the string representation of an 802.11 SSID.");
   if (act == ui.actionWifiPrivateKeyPassphrase)	str = tr("Password/Passphrase for the private key file.");
   if (act == ui.actionWifiIdentity) str = tr("Identity string for EAP.");
-  if (act == ui.actionWifiPassphrase) str = tr("RSN/WPA/WPA2 Passphrase");		
+  if (act == ui.actionWifiPassphrase) str = tr("RSN/WPA/WPA2 Passphrase");
+  if (act == ui.actionWifiPhase2) str = tr("Phase 2 (inner authentication with TLS tunnel)<br>authentication method.");		
 	
 	if (act == ui.actionGlobal) {
 		key.append("\n");

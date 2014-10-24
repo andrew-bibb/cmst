@@ -158,48 +158,67 @@
    </property>
   </action>
   <action name="actionServiceType">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Type</string>
    </property>
   </action>
   <action name="actionServiceIPv4">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Pv4</string>
    </property>
   </action>
   <action name="actionServiceIPv6">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>IPv6</string>
    </property>
   </action>
   <action name="actionServiceMAC">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>MAC</string>
    </property>
   </action>
   <action name="actionServiceNameServers">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>NameServers</string>
    </property>
   </action>
   <action name="actionServiceTimeServers">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>TimeServers</string>
    </property>
   </action>
   <action name="actionServiceSearchDomains">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>SearchDomains</string>
    </property>
   </action>
   <action name="actionServiceDomain">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Domain</string>
-   </property>
-  </action>
-  <action name="actionWifi">
-   <property name="text">
-    <string>[Wifi]</string>
    </property>
   </action>
   <action name="actionWifiName">
@@ -208,26 +227,41 @@
    </property>
   </action>
   <action name="actionWifiSSID">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>SSID</string>
    </property>
   </action>
   <action name="actionWifiEAP">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>EAP</string>
    </property>
   </action>
   <action name="actionWifiCACertFile">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>CACertFile</string>
    </property>
   </action>
   <action name="actionWifiClientCertFile">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>ClientCertFile</string>
    </property>
   </action>
   <action name="actionWifiPrivateKeyFile">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>PrivateKeyFile</string>
    </property>
@@ -238,6 +272,9 @@
    </property>
   </action>
   <action name="actionWifiPrivateKeyPassphraseType">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>PrivateKeyPassphraseType</string>
    </property>
@@ -248,6 +285,9 @@
    </property>
   </action>
   <action name="actionWifiPhase2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Phase2</string>
    </property>
@@ -258,11 +298,17 @@
    </property>
   </action>
   <action name="actionWifiSecurity">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Security</string>
    </property>
   </action>
   <action name="actionWifiHidden">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Hidden</string>
    </property>

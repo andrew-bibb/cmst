@@ -60,11 +60,13 @@ class ProvisioningEditor : public QDialog
 		QMenu* menu_template;
 		QActionGroup* group_template;
 		QActionGroup* group_freeform;
+		QActionGroup* group_combobox;
 		QButtonGroup* bg01;
 		QStatusBar* statusbar;
 		int statustimeout;
 		
   private slots:
+		void inputComboBox(QAction*);
 		void inputFreeForm(QAction*);
 		void templateTriggered(QAction*);
   	void showWhatsThis();
