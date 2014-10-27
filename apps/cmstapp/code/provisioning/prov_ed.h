@@ -39,13 +39,35 @@ DEALINGS IN THE SOFTWARE.
 # include "ui_provisioning_editor.h"
 # include "./code/control_box/controlbox.h"
 
+# include <QLabel>
+# include <QLineEdit>
+# include <QDialogButtonBox>
+//
+// Class for an QInputDialog knockoff with validator
+class ValidatingDialog : public QDialog
+{
+	Q_OBJECT
+	
+	public:
+		ValidatingDialog(QWidget*);
+		inline void setLabel(const QString& s) {label->setText(s);}
+		inline QString getText() {return lineedit->text();}
+		void setValidator(const int&);
+	
+	private:
+		// members
+		QLabel* label;
+		QLineEdit* lineedit;
+		QDialogButtonBox* buttonbox;
+};
+
+
 //	The class to control the properties editor UI based on a QDialog
 class ProvisioningEditor : public QDialog
 {
   Q_OBJECT
 
   public:
-  // members
     ProvisioningEditor(QWidget*);
     
   private:  
@@ -61,11 +83,13 @@ class ProvisioningEditor : public QDialog
 		QActionGroup* group_template;
 		QActionGroup* group_freeform;
 		QActionGroup* group_combobox;
+		QActionGroup* group_validated;
 		QButtonGroup* bg01;
 		QStatusBar* statusbar;
 		int statustimeout;
 		
   private slots:
+		void inputValidated(QAction*);
 		void inputComboBox(QAction*);
 		void inputFreeForm(QAction*);
 		void templateTriggered(QAction*);

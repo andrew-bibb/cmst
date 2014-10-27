@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>504</width>
-    <height>590</height>
+    <width>374</width>
+    <height>484</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -183,7 +183,7 @@
   </action>
   <action name="actionServiceMAC">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>MAC</string>
@@ -228,7 +228,7 @@
   </action>
   <action name="actionWifiSSID">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>SSID</string>

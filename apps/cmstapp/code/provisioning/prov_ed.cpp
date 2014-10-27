@@ -41,10 +41,68 @@ DEALINGS IN THE SOFTWARE.
 # include "./prov_ed.h"
 # include "../resource.h"
 
-#define DBUS_SERVICE "net.connman"
+ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
+{
+	// build the dialog
+	label = new QLabel(this);
+	lineedit = new QLineEdit(this);
+	buttonbox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
+	
+	QVBoxLayout* vboxlayout = new QVBoxLayout;
+	vboxlayout->addWidget(label);
+	vboxlayout->addWidget(lineedit);
+	vboxlayout->addWidget(buttonbox);
+	this->setLayout(vboxlayout);
 
-ProvisioningEditor::ProvisioningEditor(QWidget* parent)
-    : QDialog(parent)
+	// signals and slots
+	connect(buttonbox, SIGNAL(accepted()), this, SLOT(accept()));
+  connect(buttonbox, SIGNAL(rejected()), this, SLOT(reject()));
+}
+
+// Slot to set the lineedit validator
+void ValidatingDialog::setValidator(const int& vd)
+{
+	// setup a switch to set the validator
+	QString s_ip4 = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
+	QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
+	QString s_mac = "(?:[0-9a-fA-F]{1,2})";
+	QString s_hex = "(?:[0-9a-fA-F]*)";
+	switch (vd){
+		case CMST::ProvEd_Vd_IPv4: {
+			QRegularExpression rx4("\\s?|^" + s_ip4 + "(?:\\." + s_ip4 + "){3}" + "$");
+			QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
+			lineedit->setValidator(lev_4); }
+			break;
+		case CMST::ProvEd_Vd_IPv6: {
+		  QRegularExpression rx6("\\s?|^" + s_ip6 + "(?::" + s_ip6 + "){7}" + "$");
+		  QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
+		  lineedit->setValidator(lev_6); }
+		  break;
+		case CMST::ProvEd_Vd_MAC: {
+	    QRegularExpression rxm("\\s?|^" + s_mac + "(?::" + s_mac + "){5}" + "$");
+	  	QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rxm, this); 
+	  	lineedit->setValidator(lev_m); }
+	  	break;
+	  case CMST::ProvEd_Vd_46: {
+			QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");
+			QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);	
+	  	lineedit->setValidator(lev_46); }
+	  	break;	
+	  case CMST::ProvEd_Vd_Hex: {
+			QRegularExpression rxh("\\s?|" + s_hex + "$");
+			QRegularExpressionValidator* lev_h = new QRegularExpressionValidator(rxh, this);
+			lineedit->setValidator(lev_h); }
+			break;			
+	  default:
+			lineedit->setValidator(0);
+			break;
+		}	// switch			
+	  
+	return;
+}
+	 
+
+ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
 {
   // Setup the user interface
   ui.setupUi(this);
@@ -139,28 +197,11 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   group_combobox->addAction(ui.actionWifiPrivateKeyPassphraseType);
   group_combobox->addAction(ui.actionWifiSecurity);
   group_combobox->addAction(ui.actionWifiHidden);
-	
-  // Setup the address validator and apply it to any ui QLineEdit.
-  // The lev validator will validate an IP address or up to one white space character (to allow
-  // editing of the line edit).
-  QString s_ip4 = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
-  QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
-  QString s_mac = "(?:[0-9a-fA-F]{1,2})";
-
-  // QLineEdits that allow single address
-  QRegularExpression rx4("\\s?|^" + s_ip4 + "(?:\\." + s_ip4 + "){3}" + "$");
-  QRegularExpression rx6("\\s?|^" + s_ip6 + "(?::" + s_ip6 + "){7}" + "$");
-  QRegularExpression rxm("\\s?|^" + s_mac + "(?::" + s_mac + "){5}" + "$");
-  QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
-  QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
-  QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rxm, this); 
-
   
-  // now QLineEdits that allow multiple addresses
-  QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");
-  QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);
-
-
+  group_validated = new QActionGroup(this);
+  group_validated->addAction(ui.actionServiceMAC);
+  group_validated->addAction(ui.actionWifiSSID);
+	
   // connect signals to slots
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
   connect(ui.pushButton_resetpage, SIGNAL(clicked()), this, SLOT(resetPage()));
@@ -168,6 +209,7 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
   connect(group_template, SIGNAL(triggered(QAction*)), this, SLOT(templateTriggered(QAction*)));
   connect(group_freeform, SIGNAL(triggered(QAction*)), this, SLOT(inputFreeForm(QAction*)));
   connect(group_combobox, SIGNAL(triggered(QAction*)), this, SLOT(inputComboBox(QAction*)));
+  connect(group_validated, SIGNAL(triggered(QAction*)), this, SLOT(inputValidated(QAction*)));
   
   // signals from dbus
   QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "obtainedFileList", this, SLOT(processFileList(const QStringList&)));
@@ -177,6 +219,30 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent)
 }
 
 /////////////////////////////////////////////// Private Slots /////////////////////////////////////////////
+//
+// Slot called when a member of the QActionGroup group_validated is triggered
+void ProvisioningEditor::inputValidated(QAction* act)
+{
+	// variables
+	QString key = act->text();
+	
+	// create the dialog
+	ValidatingDialog* vd = new ValidatingDialog(this);
+	
+	// create some prompts and set validator
+	if (act == ui.actionServiceMAC) {vd->setLabel(tr("MAC address.")); vd->setValidator(CMST::ProvEd_Vd_MAC);}
+	if (act == ui.actionWifiSSID) {vd->setLabel(tr("SSID: hexadecimal representation of an 802.11 SSID")), vd->setValidator(CMST:: ProvEd_Vd_Hex);}
+	
+	if (vd->exec() == QDialog::Accepted) {
+		key.append(" = %1\n");
+		ui.plainTextEdit_main->insertPlainText(key.arg(vd->getText()) );
+	}	 
+	
+	// cleanup
+	vd->deleteLater();
+	return;
+}
+
 //
 // Slot called when a member of the QActionGroup group_combobox is triggered
 void ProvisioningEditor::inputComboBox(QAction* act)
