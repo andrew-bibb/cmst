@@ -37,6 +37,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QVariant>
 # include <QAction>
 # include <QFile>
+# include <QFileDialog>
 
 # include "./prov_ed.h"
 # include "../resource.h"
@@ -66,32 +67,38 @@ void ValidatingDialog::setValidator(const int& vd)
 	QString s_ip4 = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
 	QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
 	QString s_mac = "(?:[0-9a-fA-F]{1,2})";
-	QString s_hex = "(?:[0-9a-fA-F]*)";
+	QString s_hex = "[0-9a-fA-F]*";
+	QString s_nosp= "[0-9a-zA-Z/.]*";
 	switch (vd){
-		case CMST::ProvEd_Vd_IPv4: {
+		case CMST::ProvEd_Vd_IPv4: {	// single value
 			QRegularExpression rx4("\\s?|^" + s_ip4 + "(?:\\." + s_ip4 + "){3}" + "$");
 			QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
 			lineedit->setValidator(lev_4); }
 			break;
-		case CMST::ProvEd_Vd_IPv6: {
+		case CMST::ProvEd_Vd_IPv6: {	// single value
 		  QRegularExpression rx6("\\s?|^" + s_ip6 + "(?::" + s_ip6 + "){7}" + "$");
 		  QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
 		  lineedit->setValidator(lev_6); }
 		  break;
-		case CMST::ProvEd_Vd_MAC: {
+		case CMST::ProvEd_Vd_MAC: {	// single value
 	    QRegularExpression rxm("\\s?|^" + s_mac + "(?::" + s_mac + "){5}" + "$");
 	  	QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rxm, this); 
 	  	lineedit->setValidator(lev_m); }
 	  	break;
-	  case CMST::ProvEd_Vd_46: {
-			QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");
+	  case CMST::ProvEd_Vd_46: { // allow multiple values
+			QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");		
 			QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);	
 	  	lineedit->setValidator(lev_46); }
 	  	break;	
-	  case CMST::ProvEd_Vd_Hex: {
+	  case CMST::ProvEd_Vd_Hex: {	// single value
 			QRegularExpression rxh("\\s?|" + s_hex + "$");
 			QRegularExpressionValidator* lev_h = new QRegularExpressionValidator(rxh, this);
 			lineedit->setValidator(lev_h); }
+			break;
+		case CMST::ProvEd_Vd_NoSp: { // single value
+			QRegularExpression rxnosp("\\s?|^" + s_nosp + "$");
+			QRegularExpressionValidator* lev_nosp = new QRegularExpressionValidator(rxnosp, this);
+			lineedit->setValidator(lev_nosp); }
 			break;			
 	  default:
 			lineedit->setValidator(0);
@@ -201,6 +208,15 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   group_validated = new QActionGroup(this);
   group_validated->addAction(ui.actionServiceMAC);
   group_validated->addAction(ui.actionWifiSSID);
+  group_validated->addAction(ui.actionServiceNameServers);
+  group_validated->addAction(ui.actionServiceTimeServers);
+  group_validated->addAction(ui.actionServiceSearchDomains);
+  group_validated->addAction(ui.actionServiceDomain);
+  
+  group_selectfile = new QActionGroup(this);
+  group_selectfile->addAction(ui.actionWifiCACertFile);
+  group_selectfile->addAction(ui.actionWifiClientCertFile);
+  group_selectfile->addAction(ui.actionWifiPrivateKeyFile);
 	
   // connect signals to slots
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
@@ -210,6 +226,7 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   connect(group_freeform, SIGNAL(triggered(QAction*)), this, SLOT(inputFreeForm(QAction*)));
   connect(group_combobox, SIGNAL(triggered(QAction*)), this, SLOT(inputComboBox(QAction*)));
   connect(group_validated, SIGNAL(triggered(QAction*)), this, SLOT(inputValidated(QAction*)));
+  connect(group_selectfile, SIGNAL(triggered(QAction*)), this, SLOT(inputSelectFile(QAction*)));
   
   // signals from dbus
   QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "obtainedFileList", this, SLOT(processFileList(const QStringList&)));
@@ -219,12 +236,42 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
 }
 
 /////////////////////////////////////////////// Private Slots /////////////////////////////////////////////
+
+//
+// Slot called when a member of the QActionGroup group_selectfile
+void ProvisioningEditor::inputSelectFile(QAction* act)
+{
+	// variables
+	QString key = act->text();
+	QString title;
+	
+	if (act == ui.actionWifiCACertFile) title = tr("File Path to the CA Certificate File");
+  if (act == ui.actionWifiClientCertFile) title = tr("File Path to the Client Certificate File");
+  if (act == ui.actionWifiPrivateKeyFile) title = tr("File path to the Client Private Key File");;
+		
+	
+	QString fname = QFileDialog::getOpenFileName(this, title,
+											QDir::homePath(),
+                      tr("Key Files (*.pem);;All Files (*.*)"));
+
+	// return if the file name returned is empty (cancel pressed in the dialog)
+	if (fname.isEmpty() ) return;
+
+	// put the path into the text edit
+	key.append(" = %1\n");
+	ui.plainTextEdit_main->insertPlainText(key.arg(fname) );
+	
+	return;
+}
+
+
 //
 // Slot called when a member of the QActionGroup group_validated is triggered
 void ProvisioningEditor::inputValidated(QAction* act)
 {
 	// variables
 	QString key = act->text();
+	bool b_multiple = false;
 	
 	// create the dialog
 	ValidatingDialog* vd = new ValidatingDialog(this);
@@ -232,10 +279,25 @@ void ProvisioningEditor::inputValidated(QAction* act)
 	// create some prompts and set validator
 	if (act == ui.actionServiceMAC) {vd->setLabel(tr("MAC address.")); vd->setValidator(CMST::ProvEd_Vd_MAC);}
 	if (act == ui.actionWifiSSID) {vd->setLabel(tr("SSID: hexadecimal representation of an 802.11 SSID")), vd->setValidator(CMST:: ProvEd_Vd_Hex);}
+	if (act == ui.actionServiceNameServers) {vd->setLabel(tr("List of Nameservers")), vd->setValidator(CMST::ProvEd_Vd_46); b_multiple=true;}
+  if (act == ui.actionServiceTimeServers) {vd->setLabel(tr("List of Timeservers")), vd->setValidator(CMST::ProvEd_Vd_46); b_multiple=true;}
+	if (act == ui.actionServiceSearchDomains) {vd->setLabel(tr("List of DNS Search Domains")), vd->setValidator(CMST::ProvEd_Vd_None); b_multiple=true;}
+	if (act == ui.actionServiceDomain) {vd->setLabel(tr("Domain name to be used")), vd->setValidator(CMST::ProvEd_Vd_NoSp);}
 	
+	// if accepted put an entry in the textedit
 	if (vd->exec() == QDialog::Accepted) {
+		QString s = vd->getText();
 		key.append(" = %1\n");
-		ui.plainTextEdit_main->insertPlainText(key.arg(vd->getText()) );
+		
+		// format strings with multiple entries
+		if (b_multiple) {
+			s.replace(',', ' ');
+			s.replace(';', ' ');
+			s = s.simplified();
+			s.replace(' ', ',');
+		}
+		
+		ui.plainTextEdit_main->insertPlainText(key.arg(s) );
 	}	 
 	
 	// cleanup
@@ -268,13 +330,15 @@ void ProvisioningEditor::inputComboBox(QAction* act)
 		false,
 		&ok);
 		
-		key.append(" = %1\n");
-		if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(item));
+	key.append(" = %1\n");
+	if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(item));
 	
 	return;
 }
 //
 // Slot called when a member of the QActionGroup group_freeform is triggered
+// Freeform strings may have spaces in them.  For strings that cannot have spaces
+// use validated text and set b_multiple to false.
 void ProvisioningEditor::inputFreeForm(QAction* act)
 {
 	// variables

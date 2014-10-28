@@ -84,11 +84,13 @@ class ProvisioningEditor : public QDialog
 		QActionGroup* group_freeform;
 		QActionGroup* group_combobox;
 		QActionGroup* group_validated;
+		QActionGroup* group_selectfile;
 		QButtonGroup* bg01;
 		QStatusBar* statusbar;
 		int statustimeout;
 		
   private slots:
+		void inputSelectFile(QAction*);
 		void inputValidated(QAction*);
 		void inputComboBox(QAction*);
 		void inputFreeForm(QAction*);

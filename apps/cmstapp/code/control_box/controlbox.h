@@ -84,6 +84,7 @@ namespace CMST
     ProvEd_Vd_MAC				= (1 << 2),
     ProvEd_Vd_46				= (1 << 3),
     ProvEd_Vd_Hex				= (1 << 4),
+    ProvEd_Vd_NoSp			= (1 << 5),
   };
 } // namespace CMST
 
