@@ -52,13 +52,15 @@ class ValidatingDialog : public QDialog
 		ValidatingDialog(QWidget*);
 		inline void setLabel(const QString& s) {label->setText(s);}
 		inline QString getText() {return lineedit->text();}
-		void setValidator(const int&);
+		void setValidator(const int&, bool plural = false);
+		inline bool isPlural() {return plural;}
 	
 	private:
 		// members
 		QLabel* label;
 		QLineEdit* lineedit;
 		QDialogButtonBox* buttonbox;
+		bool plural;
 };
 
 

@@ -48,6 +48,7 @@ ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
 	label = new QLabel(this);
 	lineedit = new QLineEdit(this);
 	buttonbox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
+	this->setSizeGripEnabled(true);
 	
 	QVBoxLayout* vboxlayout = new QVBoxLayout;
 	vboxlayout->addWidget(label);
@@ -61,45 +62,54 @@ ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
 }
 
 // Slot to set the lineedit validator
-void ValidatingDialog::setValidator(const int& vd)
+void ValidatingDialog::setValidator(const int& vd, bool plural)
 {
 	// setup a switch to set the validator
-	QString s_ip4 = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
-	QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
-	QString s_mac = "(?:[0-9a-fA-F]{1,2})";
-	QString s_hex = "[0-9a-fA-F]*";
-	QString s_nosp= "[0-9a-zA-Z/.]*";
+	QString s_ip4 	= "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
+	QString s_ip6 	= "(?:[0-9a-fA-F]{1,4})";
+	QString s_mac 	= "(?:[0-9a-fA-F]{1,2})";
+	QString s_hex 	= "[0-9a-fA-F]*";
+	QString s_dom		= "[0-9a-zA-Z]*[\.]?[0-9a-zA-Z]*";
+	QString s_wd		= "[0-9,a-zA-Z_\.\!\@\#\$\%\^\&\*\+\-]*";
+	QString s_start =	(plural ? "\\s?|(" : "\\s?|^");
+	QString s_end		= (plural ? "(\\s*[,|;|\\s]\\s*))+" : "$");
+	
 	switch (vd){
-		case CMST::ProvEd_Vd_IPv4: {	// single value
-			QRegularExpression rx4("\\s?|^" + s_ip4 + "(?:\\." + s_ip4 + "){3}" + "$");
+		case CMST::ProvEd_Vd_IPv4: {
+			QRegularExpression rx4(s_start + s_ip4 + "(?:\." + s_ip4 + "){3}" + s_end);
 			QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
 			lineedit->setValidator(lev_4); }
 			break;
-		case CMST::ProvEd_Vd_IPv6: {	// single value
-		  QRegularExpression rx6("\\s?|^" + s_ip6 + "(?::" + s_ip6 + "){7}" + "$");
+		case CMST::ProvEd_Vd_IPv6: {
+		  QRegularExpression rx6(s_start + s_ip6 + "(?::" + s_ip6 + "){7}" + s_end);
 		  QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
 		  lineedit->setValidator(lev_6); }
 		  break;
-		case CMST::ProvEd_Vd_MAC: {	// single value
-	    QRegularExpression rxm("\\s?|^" + s_mac + "(?::" + s_mac + "){5}" + "$");
+		case CMST::ProvEd_Vd_MAC: {
+	    QRegularExpression rxm(s_start + s_mac + "(?::" + s_mac + "){5}" + s_end);
 	  	QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rxm, this); 
 	  	lineedit->setValidator(lev_m); }
 	  	break;
-	  case CMST::ProvEd_Vd_46: { // allow multiple values
-			QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");		
+	  case CMST::ProvEd_Vd_46: {
+			QRegularExpression rx46(s_start + "(" + s_ip4 + "(?:\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})" + s_end);		
 			QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);	
 	  	lineedit->setValidator(lev_46); }
 	  	break;	
-	  case CMST::ProvEd_Vd_Hex: {	// single value
-			QRegularExpression rxh("\\s?|" + s_hex + "$");
+	  case CMST::ProvEd_Vd_Hex: {
+			QRegularExpression rxh(s_start + s_hex + s_end);
 			QRegularExpressionValidator* lev_h = new QRegularExpressionValidator(rxh, this);
 			lineedit->setValidator(lev_h); }
 			break;
-		case CMST::ProvEd_Vd_NoSp: { // single value
-			QRegularExpression rxnosp("\\s?|^" + s_nosp + "$");
-			QRegularExpressionValidator* lev_nosp = new QRegularExpressionValidator(rxnosp, this);
-			lineedit->setValidator(lev_nosp); }
-			break;			
+		case CMST::ProvEd_Vd_Dom: {
+			QRegularExpression rxdom(s_start + s_dom + s_end);
+			QRegularExpressionValidator* lev_dom = new QRegularExpressionValidator(rxdom, this);
+			lineedit->setValidator(lev_dom); }
+			break;
+		case CMST::ProvEd_Vd_Wd: {
+			QRegularExpression rxwd(s_start + s_wd + s_end);
+			QRegularExpressionValidator* lev_wd = new QRegularExpressionValidator(rxwd, this);
+			lineedit->setValidator(lev_wd); }
+			break; 				
 	  default:
 			lineedit->setValidator(0);
 			break;
@@ -192,7 +202,6 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   group_freeform->addAction(ui.actionGlobalName);
   group_freeform->addAction(ui.actionGlobalDescription);
   group_freeform->addAction(ui.actionService);
-  group_freeform->addAction(ui.actionWifiName);
   group_freeform->addAction(ui.actionWifiPrivateKeyPassphrase);
   group_freeform->addAction(ui.actionWifiIdentity);
   group_freeform->addAction(ui.actionWifiPassphrase);	
@@ -212,6 +221,7 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   group_validated->addAction(ui.actionServiceTimeServers);
   group_validated->addAction(ui.actionServiceSearchDomains);
   group_validated->addAction(ui.actionServiceDomain);
+  group_validated->addAction(ui.actionWifiName);
   
   group_selectfile = new QActionGroup(this);
   group_selectfile->addAction(ui.actionWifiCACertFile);
@@ -271,7 +281,6 @@ void ProvisioningEditor::inputValidated(QAction* act)
 {
 	// variables
 	QString key = act->text();
-	bool b_multiple = false;
 	
 	// create the dialog
 	ValidatingDialog* vd = new ValidatingDialog(this);
@@ -279,10 +288,11 @@ void ProvisioningEditor::inputValidated(QAction* act)
 	// create some prompts and set validator
 	if (act == ui.actionServiceMAC) {vd->setLabel(tr("MAC address.")); vd->setValidator(CMST::ProvEd_Vd_MAC);}
 	if (act == ui.actionWifiSSID) {vd->setLabel(tr("SSID: hexadecimal representation of an 802.11 SSID")), vd->setValidator(CMST:: ProvEd_Vd_Hex);}
-	if (act == ui.actionServiceNameServers) {vd->setLabel(tr("List of Nameservers")), vd->setValidator(CMST::ProvEd_Vd_46); b_multiple=true;}
-  if (act == ui.actionServiceTimeServers) {vd->setLabel(tr("List of Timeservers")), vd->setValidator(CMST::ProvEd_Vd_46); b_multiple=true;}
-	if (act == ui.actionServiceSearchDomains) {vd->setLabel(tr("List of DNS Search Domains")), vd->setValidator(CMST::ProvEd_Vd_None); b_multiple=true;}
-	if (act == ui.actionServiceDomain) {vd->setLabel(tr("Domain name to be used")), vd->setValidator(CMST::ProvEd_Vd_NoSp);}
+	if (act == ui.actionServiceNameServers) {vd->setLabel(tr("List of Nameservers")), vd->setValidator(CMST::ProvEd_Vd_46, true);}
+  if (act == ui.actionServiceTimeServers) {vd->setLabel(tr("List of Timeservers")), vd->setValidator(CMST::ProvEd_Vd_46, true);}
+	if (act == ui.actionServiceSearchDomains) {vd->setLabel(tr("List of DNS Search Domains")), vd->setValidator(CMST::ProvEd_Vd_Dom, true);}
+	if (act == ui.actionServiceDomain) {vd->setLabel(tr("Domain name to be used")), vd->setValidator(CMST::ProvEd_Vd_Dom);}
+	if (act == ui.actionWifiName)	{vd->setLabel(tr("Enter the string representation of an 802.11 SSID.")), vd->setValidator(CMST::ProvEd_Vd_Wd);}
 	
 	// if accepted put an entry in the textedit
 	if (vd->exec() == QDialog::Accepted) {
@@ -290,7 +300,7 @@ void ProvisioningEditor::inputValidated(QAction* act)
 		key.append(" = %1\n");
 		
 		// format strings with multiple entries
-		if (b_multiple) {
+		if (vd->isPlural() ) {
 			s.replace(',', ' ');
 			s.replace(';', ' ');
 			s = s.simplified();
@@ -351,7 +361,6 @@ void ProvisioningEditor::inputFreeForm(QAction* act)
 	if (act == ui.actionService) str = tr("Tag which will replace the * with<br>an identifier unique to the config file.");
   if (act == ui.actionGlobalName) str = tr("Enter the network name.");
   if (act == ui.actionGlobalDescription) 	str = tr("Enter a description of the network.");
-  if (act == ui.actionWifiName)	str = tr("Enter the string representation of an 802.11 SSID.");
   if (act == ui.actionWifiPrivateKeyPassphrase)	str = tr("Password/Passphrase for the private key file.");
   if (act == ui.actionWifiIdentity) str = tr("Identity string for EAP.");
   if (act == ui.actionWifiPassphrase) str = tr("RSN/WPA/WPA2 Passphrase");
@@ -432,11 +441,18 @@ void ProvisioningEditor::requestFileList(QAbstractButton* button)
 		else if (button == ui.pushButton_delete) i_sel = CMST::ProvEd_File_Delete;
 			else i_sel = CMST::ProvEd_No_Selection;
 	
-	
 	QDBusMessage msg = QDBusMessage::createMethodCall ("org.cmst.roothelper", "/", "org.cmst.roothelper", QLatin1String("getFileList"));
-	QDBusMessage reply = QDBusConnection::systemBus().call(msg, QDBus::NoBlock);
-	//qDebug() << reply;
+	QDBusMessage reply = QDBusConnection::systemBus().call(msg, QDBus::AutoDetect);
 	
+	if ( reply.type() == QDBusMessage::ErrorMessage) {
+		QMessageBox::critical(this,
+			QString(PROGRAM_NAME) + tr("- Critical"),
+			QString(tr("<b>DBus Error:</b> %1<br><br><b>Message:</b> %2.")).arg(reply.errorName()).arg(reply.errorMessage()),
+			QMessageBox::Ok,
+			QMessageBox::Ok);
+		}	// if reply was an error
+		
+			
 	return;
 }
 
