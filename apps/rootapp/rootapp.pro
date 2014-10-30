@@ -17,7 +17,7 @@ conf.files = ./system/org.cmst.roothelper.conf
 INSTALLS += conf
 
 service.path = /usr/share/dbus-1/system-services
-service.files = ./system/org.cmst.roothelpers.service
+service.files = ./system/org.cmst.roothelper.service
 INSTALLS += service
 
 # dbus
