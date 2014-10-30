@@ -41,7 +41,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accept the entries, send them to Connman, and close the dialog.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
-        <string>Sa&amp;ve</string>
+        <string>&amp;Save</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -84,7 +84,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear all entries on the current page.&lt;/p&gt;&lt;p&gt;This button will reset every field on the current page to the default value, which generally means nothing in the field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
-        <string>Clear &amp;Page</string>
+        <string>&amp;Clear Page</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -119,12 +119,12 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_cancel">
+      <widget class="QPushButton" name="pushButton_exit">
        <property name="whatsThis">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Close the dialog without sending any entries to Connman.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
-        <string>&amp;Cancel</string>
+        <string>E&amp;xit</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -364,7 +364,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton_cancel</sender>
+   <sender>pushButton_exit</sender>
    <signal>clicked()</signal>
    <receiver>Provisioning</receiver>
    <slot>reject()</slot>
