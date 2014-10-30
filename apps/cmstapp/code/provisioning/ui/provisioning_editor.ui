@@ -331,16 +331,6 @@
     <string>IPV4 DHCP</string>
    </property>
   </action>
-  <action name="actionServiceIPv4Netmask">
-   <property name="text">
-    <string>Pv4 Netmask</string>
-   </property>
-  </action>
-  <action name="actionServiceIPv4Gateway">
-   <property name="text">
-    <string>IPv4 Gateway</string>
-   </property>
-  </action>
   <action name="actionServiceIPv6Address">
    <property name="checkable">
     <bool>true</bool>
@@ -363,16 +353,6 @@
    </property>
    <property name="text">
     <string>IPv6 Auto</string>
-   </property>
-  </action>
-  <action name="actionServiceIPv6Prefix">
-   <property name="text">
-    <string>IPv6 Prefix</string>
-   </property>
-  </action>
-  <action name="actionServiceIPv6Gateway">
-   <property name="text">
-    <string>IPv6 Gateway</string>
    </property>
   </action>
   <action name="actionServiceIPv6Privacy">

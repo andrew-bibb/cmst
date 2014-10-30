@@ -15,17 +15,17 @@ target.path = /usr/bin/
 INSTALLS += target
 
 documentation.path = /usr/share/man/man1
-documentation.files = ./misc/manpage/cmst.1.gz
+documentation.files = ../../misc/manpage/cmst.1.gz
 documentation.CONFIG = no_check_exist
-documentation.extra = gzip --keep --force ./misc/manpage/cmst.1
+documentation.extra = gzip --keep --force ../../misc/manpage/cmst.1
 INSTALLS += documentation
 
 desktop.path = /usr/share/applications
-desktop.files = ./misc/desktop/cmst.desktop
+desktop.files = ../../misc/desktop/cmst.desktop
 INSTALLS += desktop
 
 icon.path = /usr/share/icons/hicolor/24x24/apps
-icon.files = ./misc/desktop/cmst.png
+icon.files = ../../misc/desktop/cmst.png
 INSTALLS += icon
 
 # dbus

@@ -12,6 +12,14 @@ TARGET = cmstroothelper
 target.path = /usr/bin/
 INSTALLS += target
 
+conf.path = /etc/dbus-1/system.d
+conf.files = ./system/org.cmst.roothelper.conf
+INSTALLS += conf
+
+service.path = /usr/share/dbus-1/system-services
+service.files = ./system/org.cmst.roothelpers.service
+INSTALLS += service
+
 # dbus
 DBUS_ADAPTORS		+= ./code/roothelper/org.monkey_business_enterprises.roothelper.xml
 DBUS_INTERFACES	+= ./code/roothelper/org.monkey_business_enterprises.roothelper.xml
