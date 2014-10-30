@@ -1,4 +1,4 @@
 [D-BUS Service]
 Name=org.cmst.roothelper
-Exec=/usr/bin/roothelperr
+Exec=/usr/bin/roothelper
 User=root
