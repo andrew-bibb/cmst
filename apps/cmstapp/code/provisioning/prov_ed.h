@@ -46,25 +46,26 @@ DEALINGS IN THE SOFTWARE.
 // Class for an QInputDialog knockoff with validator
 class ValidatingDialog : public QDialog
 {
-	Q_OBJECT
-	
-	public:
-		ValidatingDialog(QWidget*);
-		inline void setLabel(const QString& s) {label->setText(s);}
-		inline QString getText() {return lineedit->text();}
-		void setValidator(const int&, bool plural = false);
-		inline bool isPlural() {return plural;}
-	
-	private:
-		// members
-		QLabel* label;
-		QLineEdit* lineedit;
-		QDialogButtonBox* buttonbox;
-		bool plural;
+  Q_OBJECT
+  
+  public:
+    ValidatingDialog(QWidget*);
+    inline void setLabel(const QString& s) {label->setText(s);}
+    inline QString getText() {return lineedit->text();}
+    inline void clear() {lineedit->clear();}
+    void setValidator(const int&, bool plural = false);
+    inline bool isPlural() {return plural;}
+  
+  private:
+    // members
+    QLabel* label;
+    QLineEdit* lineedit;
+    QDialogButtonBox* buttonbox;
+    bool plural;
 };
 
 
-//	The class to control the properties editor UI based on a QDialog
+//  The class to control the properties editor UI based on a QDialog
 class ProvisioningEditor : public QDialog
 {
   Q_OBJECT
@@ -74,39 +75,43 @@ class ProvisioningEditor : public QDialog
     
   private:  
   // members
-		Ui::Provisioning ui;
-		QString filename;
-		int i_sel;
-		QMenuBar* menubar;
-		QMenu* menu_global;
-		QMenu* menu_service;
-		QMenu* menu_wifi;
-		QMenu* menu_template;
-		QActionGroup* group_template;
-		QActionGroup* group_freeform;
-		QActionGroup* group_combobox;
-		QActionGroup* group_validated;
-		QActionGroup* group_selectfile;
-		QButtonGroup* bg01;
-		QStatusBar* statusbar;
-		int statustimeout;
-		
+    Ui::Provisioning ui;
+    QString filename;
+    int i_sel;
+    QMenuBar* menubar;
+    QMenu* menu_global;
+    QMenu* menu_service;
+    QMenu* menu_wifi;
+    QMenu* menu_template;
+    QActionGroup* group_template;
+    QActionGroup* group_freeform;
+    QActionGroup* group_combobox;
+    QActionGroup* group_validated;
+    QActionGroup* group_selectfile;
+    QActionGroup* group_ipv4;
+    QActionGroup* group_ipv6;
+    QButtonGroup* bg01;
+    QStatusBar* statusbar;
+    int statustimeout;
+    
   private slots:
-		void inputSelectFile(QAction*);
-		void inputValidated(QAction*);
-		void inputComboBox(QAction*);
-		void inputFreeForm(QAction*);
-		void templateTriggered(QAction*);
-  	void showWhatsThis();
-		void resetPage();
-		void requestFileList(QAbstractButton*);
-		void processFileList(const QStringList&);
-		void seedTextEdit(const QString&);
-		void deleteCompleted(bool);
-		void writeCompleted(quint64);
-				
-	public:
-		inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
+    void inputSelectFile(QAction*);
+    void inputValidated(QAction*);
+    void inputComboBox(QAction*);
+    void inputFreeForm(QAction*);
+    void ipv4Triggered(QAction*);
+    void ipv6Triggered(QAction*);
+    void templateTriggered(QAction*);
+    void showWhatsThis();
+    void resetPage();
+    void requestFileList(QAbstractButton*);
+    void processFileList(const QStringList&);
+    void seedTextEdit(const QString&);
+    void deleteCompleted(bool);
+    void writeCompleted(quint64);
+        
+  public:
+    inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
 };
 
 

@@ -165,22 +165,6 @@
     <string>Type</string>
    </property>
   </action>
-  <action name="actionServiceIPv4">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Pv4</string>
-   </property>
-  </action>
-  <action name="actionServiceIPv6">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>IPv6</string>
-   </property>
-  </action>
   <action name="actionServiceMAC">
    <property name="enabled">
     <bool>true</bool>
@@ -321,6 +305,79 @@
   <action name="actionTemplateEduroamShort">
    <property name="text">
     <string>Eduroam (short)</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv4Address">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPv4 Address</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv4Off">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPv4 Off</string>
+   </property>
+  </action>
+  <action name="actionServiceIPV4DHCP">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPV4 DHCP</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv4Netmask">
+   <property name="text">
+    <string>Pv4 Netmask</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv4Gateway">
+   <property name="text">
+    <string>IPv4 Gateway</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv6Address">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPv6 Address</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv6Off">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPv6 Off</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv6Auto">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPv6 Auto</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv6Prefix">
+   <property name="text">
+    <string>IPv6 Prefix</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv6Gateway">
+   <property name="text">
+    <string>IPv6 Gateway</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv6Privacy">
+   <property name="text">
+    <string>IPv6.Privacy</string>
    </property>
   </action>
  </widget>
