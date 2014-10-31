@@ -20,7 +20,7 @@ Displays this help.
 Use the icon theme from your system if one is defined.
 .TP
 \fB-l, --log-input-request\fP
-Log the connman inputRequest for debugging purposes.
+Log the Connman inputRequest for debugging purposes.
 .TP
 \fB-m, --minimized\fP
 Start the GUI minimized in the system tray.
@@ -33,31 +33,54 @@ Specify the wait time in seconds before starting the system tray icon (default i
 create a tray icon before the system tray itself is created a dialog will be displayed explaining that.  This sometimes happens when the 
 program is started automatically.  If you know the tray will exist once the system is up you may specify a wait time and CMST 
 will wait that number of seconds before trying to create the tray icon.  This is to give the window manager or panel time to create 
-the tray before we try to place the icon there.   
+the tray before we try to place the icon there.
 .SH GUI INFO
 The GUI contains one main dialog with separate tab pages.  Program help is mainly provided through a "What's This" interface.
 The "What's This" button in the lower left corner will allow you to enter "What's This" mode, click the button and then
 click the GUI feature, or control that you are interested in.  A right mouse click on a GUI feature or control will also enter
 "What's This" mode.
 .TP
-\fbStatus Tab\fP
+.I Status Tab
 The status tab displays information about the global properties, found technologies, and services. Checkbox at the top right will
 allow you to put everything in "offline" mode.  To toggle a technology on or off click the entry under the Powered column 
 .TP
-\fbDetails Tab\fP
+.I Details Tab
 The details tab will display detailed setup and connection information about a service. Select the service you wish to investigate
 in the combo box at the top.
 .TP
-\fbWireless Tab\fP
+.I Wireless Tab
 The Wireless tab will display information, connect, disconnect, and edit certain properties of wireless services. 
 .TP
-\fbCounters Tab\fP
+.I Counters Tab
 The Counters tab will display information about the Connect time, the Transmit (TX) and Receiving (RX) counters for the service
 currently in the "online" state. The counters are set to fairly course intervals to minimize system usage. Currently these 
 interval settings are hard coded into the program. 
 .TP
-\fbPreferences Tab\fP
+.I Preferences Tab
 The preferences tab will allow you to change some aspects of the GUI.  
+.SH CONFIGURATION
+For typical networks and access points, even hidden ones, Connman will find and automatically configure the network for you.  If Connman
+needs information, for instance a passphrase, CMST registers an agent and this agent will prompt you for the needed information.  For 
+most cases this "just works", however there are options for fine tuning the automatic configuration or creating provisioning files.
+.TP
+\fBProfile Editor\fP
+There are a variety of connection settings that may be used to override the automatic settings.  An editor is provided to access
+these settings via the
+.B Configuration
+button in the lower right corner of the
+.I Details
+tab.  One common use is to define a static IP address for the connection.  Hidden or provisioned (see below) services cannot be edited.
+.TP
+\fB802.1x Encrypted Networks (Eduroam and similar)\fP
+Certain types encrypted networks require a config (provisioning) file to be created before you first connect.  As of 2014.10.30 CMST
+has a provisioning editor built in, but it is considered an advanced control and by default it is hidden.  To enable the control check the
+.B Advanced Controls
+box on the
+.I Provisioning
+tab.  The button to open the editor will appear in the lower left corner of the dialog.  With this editor you may create, open, edit,
+delete and save config files to /var/lib/connman.  The menu at the top may be used to enter some information automatically, and many  
+of the input fields are validated as you enter text into them.  There are also predefined template files that may be used to seed the
+editing area.  All of this can be bypassed if you wish and you may cut and paste or type into the editor directly.  
 .SH BUGS
 For the tray icon to display is it required that the system tray be compliant with the Freedesktop.org systemtray specification.  
 
