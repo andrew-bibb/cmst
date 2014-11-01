@@ -35,13 +35,14 @@ DEALINGS IN THE SOFTWARE.
 # include <QStatusBar>
 # include <QActionGroup>
 # include <QButtonGroup>
-
-# include "ui_provisioning_editor.h"
-# include "./code/control_box/controlbox.h"
-
 # include <QLabel>
 # include <QLineEdit>
 # include <QDialogButtonBox>
+# include <QString>
+# include <QStringList>
+
+# include "ui_provisioning_editor.h"
+# include "./code/control_box/controlbox.h"
 //
 // Class for an QInputDialog knockoff with validator
 class ValidatingDialog : public QDialog
@@ -109,6 +110,7 @@ class ProvisioningEditor : public QDialog
     void seedTextEdit(const QString&);
     void deleteCompleted(bool);
     void writeCompleted(quint64);
+    void callbackErrorHandler(QDBusError);
         
   public:
     inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}

@@ -9,7 +9,7 @@ QT += dbus
 
 TEMPLATE = app
 TARGET = cmstroothelper
-target.path = /usr/bin/
+target.path = /usr/lib/cmst
 INSTALLS += target
 
 conf.path = /etc/dbus-1/system.d

@@ -33,6 +33,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QtDBus/QDBusConnection>
 # include <QDir>
 # include <QFile>
+# include <QFileInfo>
 
 #	include "./roothelper.h"
 
@@ -77,62 +78,71 @@ void RootHelper::startHelper()
 }
 
 //
-// Slot to select the file to read
-void RootHelper::getFileList()
+// Slot to get a list of all files in /var/lib/conmann the were created
+// by CMST.  These files will end in .cmst.config
+QStringList RootHelper::getFileList()
 {	
 	// variables
 	QDir dir = QDir("/var/lib/connman");
 	QStringList filters;
-	filters << "*.config";
+	filters << "*.cmst.config";
 
-	// get a list of all conf files and return it
-	emit obtainedFileList(dir.entryList(filters, QDir::Files, QDir::Name) );
-	
-	return;
+	// get a list of all .cmst.config files and return it
+	return dir.entryList(filters, QDir::Files, QDir::Name);
 }
 
 //
 // Slot to read a file from disk
-void RootHelper::readFile(const QString& fn)
+QString RootHelper::readFile(const QString& fn)
 {	
 	// open the file for reading	
-	QFile infile(QString("/var/lib/connman/%1").arg(fn) );	
+	QFile infile(QString("/var/lib/connman/%1.cmst.config").arg(sanitizeInput(fn)) );	
 	if (! infile.open(QIODevice::ReadOnly | QIODevice::Text))
-		return;
+		return QString();
 
-	// read the file and emit a signal when done
+	// read the file into a QByteArray
 	QByteArray ba = infile.readAll();
-	emit fileReadCompleted(QString(ba)); 
-
+	
 	// cleanup and exit
 	infile.close();
-	return;
+	return QString(ba); 
 }
 
 //
 // Slot to delete a disk file
-void RootHelper::deleteFile(const QString& fn)
+bool RootHelper::deleteFile(const QString& fn)
 {
 	// delete the file and emit a signal with the result
-	emit fileDeleteCompleted(QFile::remove(QString("/var/lib/connman/%1").arg(fn)) );
-	
-	return;
+	return QFile::remove(QString("/var/lib/connman/%1.cmst.config").arg(sanitizeInput(fn)) );
 }
 
 //
 // Slot to write the file to disk
-void RootHelper::saveFile(const QString& fn, const QString& data)
+quint64 RootHelper::saveFile(const QString& fn, const QString& data)
 {	
-	// open the file for writing, make sure the file name ends in .config
-	QFile outfile(QString("/var/lib/connman/%1%2").arg(fn).arg(fn.endsWith(".config", Qt::CaseSensitive) ? "" : ".config") );
+	// open the file for writing
+	QFile outfile(QString("/var/lib/connman/%1.cmst.config").arg(sanitizeInput(fn)) );
 	if (! outfile.open(QIODevice::WriteOnly | QIODevice::Text))
-		return;
+		return 0;
 	
 	// write the file and emit a signal when done
-	emit fileWriteCompleted(outfile.write(data.toLatin1()) );
+	quint64 bytes = outfile.write(data.toLatin1() );
 	
 	// cleanup and exit
 	outfile.close();
-	return;
+	return bytes;
+}
+
+/////////////////////////////////////////////// Private Functions //////////////////////////////////////////
+//
+// Function to take a file name, which may contain a path and extension, and return only the file name
+QString RootHelper::sanitizeInput(QString instr)
+{
+	// return a null string if instr is empty
+	if (instr.isEmpty() ) return QString();
+	
+	// extract the name and return it
+	QFileInfo fi(instr);
+	return fi.baseName();
 }
 

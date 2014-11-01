@@ -48,21 +48,18 @@ class RootHelper : public QObject, protected QDBusContext
 		
 	public slots:
 		void startHelper();
-		void getFileList();
-		void readFile(const QString&);
-		void deleteFile(const QString&);
-		void saveFile(const QString&, const QString&);
+		QStringList getFileList();
+		QString readFile(const QString&);
+		bool deleteFile(const QString&);
+		quint64 saveFile(const QString&, const QString&);
 		inline bool isConnected() {return b_connected;}	// may not actually use this
-		
-	signals:
-		void obtainedFileList(const QStringList&);
-		void fileReadCompleted(const QString&);
-		void fileDeleteCompleted (bool);
-		void fileWriteCompleted(quint64);
 		
 	private:
 		// members
 		bool b_connected;
+		
+   //functions
+   QString sanitizeInput(QString); 		
 };	
 
 #endif
