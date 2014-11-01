@@ -31,7 +31,7 @@ DEALINGS IN THE SOFTWARE.
 
 
 # ifndef ROOTHELPER
-#	define ROOTHELPER
+# define ROOTHELPER
 
 # include <QObject>
 # include <QString>
@@ -43,23 +43,23 @@ class RootHelper : public QObject, protected QDBusContext
   Q_OBJECT
   Q_CLASSINFO("D-Bus Interface", "org.cmst.roothelper")
 
-	public:
-		RootHelper(QObject* parent = 0);
-		
-	public slots:
-		void startHelper();
-		QStringList getFileList();
-		QString readFile(const QString&);
-		bool deleteFile(const QString&);
-		quint64 saveFile(const QString&, const QString&);
-		inline bool isConnected() {return b_connected;}	// may not actually use this
-		
-	private:
-		// members
-		bool b_connected;
-		
+  public:
+    RootHelper(QObject* parent = 0);
+    
+  public slots:
+    void startHelper();
+    QStringList getFileList();
+    QString readFile(const QString&);
+    bool deleteFile(const QString&);
+    quint64 saveFile(const QString&, const QString&);
+    inline bool isConnected() {return b_connected;} // may not actually use this
+    
+  private:
+    // members
+    bool b_connected;
+    
    //functions
-   QString sanitizeInput(QString); 		
-};	
+   QString sanitizeInput(QString);    
+};  
 
 #endif

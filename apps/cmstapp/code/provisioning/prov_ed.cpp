@@ -256,12 +256,6 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   connect(group_selectfile, SIGNAL(triggered(QAction*)), this, SLOT(inputSelectFile(QAction*)));
   connect(group_ipv4, SIGNAL(triggered(QAction*)), this, SLOT(ipv4Triggered(QAction*)));
   connect(group_ipv6, SIGNAL(triggered(QAction*)), this, SLOT(ipv6Triggered(QAction*)));
-  
-  // signals from dbus
-  //QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "obtainedFileList", this, SLOT(processFileList(const QStringList&)));
-  //QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "fileReadCompleted", this, SLOT(seedTextEdit(const QString&)));
-  //QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "fileDeleteCompleted", this, SLOT(deleteCompleted(bool)));
-  //QDBusConnection::systemBus().connect("org.cmst.roothelper", "/", "org.cmst.roothelper", "fileWriteCompleted", this, SLOT(writeCompleted(quint64)));
 }
 
 /////////////////////////////////////////////// Private Slots /////////////////////////////////////////////
@@ -720,11 +714,11 @@ void ProvisioningEditor::writeCompleted(quint64 bytes)
 // Slot to handle errors from callWithCallback functions
 void ProvisioningEditor::callbackErrorHandler(QDBusError err)
 {
-	QMessageBox::critical(this,
-		QString(PROGRAM_NAME) + tr("- Critical"),
-		QString(tr("<b>DBus Error Name:</b> %1<br><br><b>String:</b> %2<br><br><b>Message:</b> %3")).arg(err.name()).arg(err.errorString(err.type())).arg(err.message()),
-		QMessageBox::Ok,
-		QMessageBox::Ok);
-		
-	return;
+  QMessageBox::critical(this,
+    QString(PROGRAM_NAME) + tr("- Critical"),
+    QString(tr("<b>DBus Error Name:</b> %1<br><br><b>String:</b> %2<br><br><b>Message:</b> %3")).arg(err.name()).arg(err.errorString(err.type())).arg(err.message()),
+    QMessageBox::Ok,
+    QMessageBox::Ok);
+    
+  return;
 }
