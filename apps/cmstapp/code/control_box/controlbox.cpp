@@ -53,17 +53,6 @@ DEALINGS IN THE SOFTWARE.
 # include <unistd.h>
 # include <syslog.h>
 
-// icon substitutions 
-//  system theme                    hard coded
-//  emblem-favorite                 bookmark.png
-//  network-transmit-receive        connect_established
-//  network-idle                    connect_creating
-//  network-offline                 connect_no
-//                                  ledgreen
-//                                  ledred
-//  network-error                   cancel
-//  system-help                     help
-
 #define DBUS_SERVICE "net.connman"
 #define DBUS_PATH "/"
 #define DBUS_MANAGER "net.connman.Manager"
@@ -1502,13 +1491,23 @@ void ControlBox::assembleTrayIcon()
       } //  services if no error
     } //  if the state is online  
     
-    else if (properties_map.value("State").toString().contains("ready", Qt::CaseInsensitive) && readycount > 1 ) {
+    // else if state is ready
+    else if (properties_map.value("State").toString().contains("ready", Qt::CaseInsensitive) ) {
       b_useicontheme ?
-        trayicon->setIcon(QIcon::fromTheme("network-idle", QIcon(":/icons/images/interface/connect_creating.png")).pixmap(QSize(16,16)) ) :
-        trayicon->setIcon(QPixmap(":/icons/images/interface/connect_creating.png") );
+        trayicon->setIcon(QIcon::fromTheme("network-idle", QIcon(":/icons/images/systemtray/connect_creating.png")).pixmap(QSize(16,16)) ) :
+        trayicon->setIcon(QPixmap(":/icons/images/systemtray/connect_creating.png") );
       stt.append(tr("Connection is in the Ready State.", "icon_tool_tip"));
     } // else if if ready
-
+	
+		// else if state is failure
+		else if (properties_map.value("State").toString().contains("failure", Qt::CaseInsensitive) ) {
+      b_useicontheme ?
+        trayicon->setIcon(QIcon::fromTheme("network-error", QIcon(":/icons/images/systemtray/cancel.png")).pixmap(QSize(16,16)) ) :
+        trayicon->setIcon(QPixmap(":/icons/images/systemtray/cancel.png") );
+      stt.append(tr("Connection is in the Failure State.", "icon_tool_tip"));
+    } // else if failure state
+			 	
+		// else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"	 	
     else {
       b_useicontheme ?
         trayicon->setIcon(QIcon::fromTheme("network-offline", QIcon(":/icons/images/systemtray/connect_no.png")) )  :
