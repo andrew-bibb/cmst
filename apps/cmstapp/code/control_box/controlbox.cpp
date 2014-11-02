@@ -1461,10 +1461,16 @@ void ControlBox::assemblePage4()
 void ControlBox::assembleTrayIcon()
 {
   QString stt = QString();
+  int readycount = 0;
   
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
-    if (properties_map.value("State").toString().contains("online", Qt::CaseInsensitive) ) {
-      if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
+		// count how many services are in the ready state
+		for (int i = 0; i < services_list.count(); ++i) {
+			if (services_list.at(i).objmap.value("State").toString().contains("ready", Qt::CaseInsensitive))  ++readycount;
+		}	// for loop
+    if (properties_map.value("State").toString().contains("online", Qt::CaseInsensitive) ||
+				(properties_map.value("State").toString().contains("ready", Qt::CaseInsensitive) && readycount == 1) ) {
+      if ( (q8_errors & CMST::Err_Services) == 0x00 ) {        
         QMap<QString,QVariant> submap;
         if (services_list.at(0).objmap.value("Type").toString().contains("ethernet", Qt::CaseInsensitive) ) {
           extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
@@ -1496,7 +1502,7 @@ void ControlBox::assembleTrayIcon()
       } //  services if no error
     } //  if the state is online  
     
-    else if (properties_map.value("State").toString().contains("ready", Qt::CaseInsensitive) ) {
+    else if (properties_map.value("State").toString().contains("ready", Qt::CaseInsensitive) && readycount > 1 ) {
       b_useicontheme ?
         trayicon->setIcon(QIcon::fromTheme("network-idle", QIcon(":/icons/images/interface/connect_creating.png")).pixmap(QSize(16,16)) ) :
         trayicon->setIcon(QPixmap(":/icons/images/interface/connect_creating.png") );
