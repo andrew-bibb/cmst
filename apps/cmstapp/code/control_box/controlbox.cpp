@@ -409,7 +409,6 @@ void ControlBox::moveService(QAction* act)
   // apply the movebefore or moveafter message to the source object
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this); 
   if (iface_serv->isValid() ) {
-		qDebug() << "valid iface";
     if (mvsrv_menu->title() == ui.actionMove_Before->text()) {
       QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "MoveBefore", QVariant::fromValue(targetobj) );
 			//qDebug() << reply;
@@ -417,7 +416,7 @@ void ControlBox::moveService(QAction* act)
     else {
       QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "MoveAfter", QVariant::fromValue(targetobj) );
 			//qDebug() << reply;
-    }
+    }	// else
   } // iface_srv is valid
   
   // clean up
@@ -841,8 +840,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
     } // if
   } // for
     
-  // process errrors
-  
+  // process errrors  - errors only valid when service is in the failure state
   if (property.contains("Error", Qt::CaseInsensitive) && s_state.contains("failure", Qt::CaseInsensitive) ) {
     notifyclient->init();
     notifyclient->setSummary(QString(tr("Service Error: %1")).arg(value.toString()) );
@@ -959,16 +957,18 @@ void ControlBox::togglePowered(QString object_id, bool checkstate)
   vlist << QVariant("Powered") << QVariant::fromValue(QDBusVariant(checkstate) );
 
   QDBusMessage reply = iface_tech->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
-  if (reply.type() != QDBusMessage::ReplyMessage)
-    QMessageBox::warning(this, tr("CMST Warning"),
-    tr("<center><b>We received a DBUS reply message indicating an error while trying to send the toggle power request to connman.</b></center>"                       
-       "<p>The powered state of the technology will not be changed."
-       "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage())
-    );
-    
+  if (reply.type() != QDBusMessage::ReplyMessage) {
+		// seems to be a bug in connman - wired services return an already enabled error when turning power back on
+		if (! reply.errorMessage().contains("already enabled", Qt::CaseInsensitive) ) {
+      QMessageBox::warning(this, tr("CMST Warning"),
+				tr("<center><b>We received a DBUS reply message indicating an error while trying to send the toggle power request to connman.</b></center>"                       
+				"<p>The powered state of the technology will not be changed."
+				"<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage()) );
+		}	// if error somethign other than already enabled
+	}	// something other than a normal reply message
+	
   // cleanup
   iface_tech->deleteLater();
-  
   return;
 } 
 
@@ -1908,7 +1908,7 @@ void ControlBox::clearCounters()
 { 
   if (ui.checkBox_resetcounters->isChecked() && ! onlineobjectpath.isEmpty() ) {      
     QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, onlineobjectpath, "net.connman.Service", QDBusConnection::systemBus(), this); 
-    iface_serv->call(QDBus::NoBlock, "ResetCounters");
+    iface_serv->call(QDBus::AutoDetect, "ResetCounters");
     iface_serv->deleteLater();
   } 
   

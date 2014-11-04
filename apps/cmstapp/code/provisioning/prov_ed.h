@@ -77,7 +77,6 @@ class ProvisioningEditor : public QDialog
   private:  
   // members
     Ui::Provisioning ui;
-    QString filename;
     int i_sel;
     QMenuBar* menubar;
     QMenu* menu_global;

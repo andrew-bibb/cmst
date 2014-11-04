@@ -131,8 +131,6 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   statusbar = new QStatusBar(this);
   ui.verticalLayout01->addWidget(statusbar);
   statustimeout = 2000;
-  
-  filename = "";
   i_sel = CMST::ProvEd_No_Selection;
   
   // Setup the buttongroup
@@ -561,7 +559,7 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
 {
   // variables
   bool ok;
-  filename.clear();
+  QString filename = "";
   QList<QVariant> vlist;
   QDBusInterface* iface_pfl = new QDBusInterface("org.cmst.roothelper", "/", "org.cmst.roothelper", QDBusConnection::systemBus(), this);
   
@@ -641,8 +639,11 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
       sl_conf,
       0,    // current item 0 
       true, // editable
-      &ok);
-    if (ok) filename = item.simplified();    
+      &ok);  
+    if (ok) {
+			filename = item.simplified();    				// multiple whitespace to one space
+			filename = filename.replace(' ', '_');	// replace spaces with underscores
+		}	// if ok
     // if we have a filename try to save the file
     if (! filename.isEmpty() ) {
       vlist.clear();

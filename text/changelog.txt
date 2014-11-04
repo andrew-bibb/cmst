@@ -6,6 +6,7 @@
 <li>Provisioning Editor to create and edit Connman service configuration files.</li>
 <li>Systemtray icon will show "online" if there is exactly one connection showing in the ready state and no connections showing the online state.</li>
 <li>Systemtray icon added for a connection in the "failure" state.</li>
+<li>Fixed and cleaned up behavior of notifications and message boxes for various error conditions.</li>
 </ul>
 <br>
 <br><b>2014.10.15</b>
