@@ -589,8 +589,8 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
             tr("%1 - Select File").arg(PROGRAM_NAME),
             tr("Select a file to load."),
             sl_conf,
-            0,
-            false,
+            0,      // current item 0
+            false,  // non-editable
             &ok);
         if (ok) filename = item;    
         break;
@@ -619,10 +619,10 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
             tr("%1 - Select File").arg(PROGRAM_NAME),
             tr("Select a file to be deleted."),
             sl_conf,
-            0,
-            false,
+            0,      // current item 0
+            false,  // non-editable
             &ok);
-        if (ok) filename = item;    
+        if (ok) filename = item; 
         break;
       } // switch
     // if we have a filename try to delete the file
@@ -639,10 +639,10 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
       tr("%1 - Select File").arg(PROGRAM_NAME),
       tr("Enter a new file name or select<br>an existing file to overwrite."),
       sl_conf,
-      0,
-      true,
+      0,    // current item 0 
+      true, // editable
       &ok);
-    if (ok) filename = item;    
+    if (ok) filename = item.simplified();    
     // if we have a filename try to save the file
     if (! filename.isEmpty() ) {
       vlist.clear();
