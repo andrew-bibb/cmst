@@ -199,14 +199,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       QList<QVariant> vlist_agent;
       vlist_agent.clear();
       vlist_agent << QVariant::fromValue(QDBusObjectPath("/org/cmst/Agent")); 
-      iface_manager->callWithArgumentList(QDBus::NoBlock, "RegisterAgent", vlist_agent);
+      iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterAgent", vlist_agent);
       
       // if counters are enabled register the counter
       if (! parser.isSet("disable-counters")) {
         QList<QVariant> vlist_counter;
         vlist_counter.clear();
         vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter")) << counter_accuracy << counter_period;;
-        iface_manager->callWithArgumentList(QDBus::NoBlock, "RegisterCounter", vlist_counter);      
+        iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterCounter", vlist_counter);      
       }
     
     // connect some dbus signals to our slots
@@ -396,7 +396,7 @@ void ControlBox::moveService(QAction* act)
       break;
     } // if
   } // for
-  
+
   // make sure we got a targetobject, if not most likely cancel pressed
   if (targetobj.path().isEmpty()) return;
   
@@ -409,16 +409,19 @@ void ControlBox::moveService(QAction* act)
   // apply the movebefore or moveafter message to the source object
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this); 
   if (iface_serv->isValid() ) {
+		qDebug() << "valid iface";
     if (mvsrv_menu->title() == ui.actionMove_Before->text()) {
-      QDBusMessage reply = iface_serv->call(QDBus::NoBlock, "MoveBefore", QVariant::fromValue(targetobj) );
+      QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "MoveBefore", QVariant::fromValue(targetobj) );
+			//qDebug() << reply;
     }
     else {
-      QDBusMessage reply = iface_serv->call(QDBus::NoBlock, "MoveAfter", QVariant::fromValue(targetobj) );
+      QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "MoveAfter", QVariant::fromValue(targetobj) );
+			//qDebug() << reply;
     }
   } // iface_srv is valid
   
+  // clean up
   iface_serv->deleteLater();
-  
   return;
 }
 
