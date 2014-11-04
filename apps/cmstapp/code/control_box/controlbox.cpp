@@ -509,9 +509,10 @@ void ControlBox::connectPressed()
   
   //  send the connect message to the service
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this); 
-  iface_serv->call(QDBus::NoBlock, "Connect");
-  iface_serv->deleteLater();
+  iface_serv->call(QDBus::AutoDetect, "Connect");
   
+  // clean up
+  iface_serv->deleteLater();
   return;   
 }
 
@@ -550,7 +551,7 @@ void ControlBox::disconnectPressed()
   
   //  send the disconnect message to the service
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-  iface_serv->call(QDBus::NoBlock, "Disconnect");
+  iface_serv->call(QDBus::AutoDetect, "Disconnect");
   iface_serv->deleteLater();
   
   return; 
@@ -652,8 +653,8 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
         iconpath = QString(":/icons/images/systemtray/connect_no.png");
         
       notifyclient->init();
-      notifyclient->setSummary(tr("Connman State") );
-      notifyclient->setBody(tr("Connection: %1").arg(state) );   
+      notifyclient->setSummary(tr("Network Services:") );
+      notifyclient->setBody(tr("No network services available") );   
       notifyclient->setIcon(iconpath);
       this->sendNotifications();
     } // else no services listed
@@ -825,6 +826,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
 {
   QString s_path = msg.path();
   QVariant value = dbvalue.variant();
+	QString s_state;
 
   // replace the old values with the changed ones.
   for (int i = 0; i < services_list.count(); ++i) {
@@ -834,12 +836,14 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
       map.insert(property, value );
       arrayElement ae = {services_list.at(i).objpath, map};
       services_list.replace(i, ae);
+      s_state = map.value("State").toString();
       break;
     } // if
   } // for
     
   // process errrors
-  if (property.contains("Error", Qt::CaseInsensitive) ) {
+  
+  if (property.contains("Error", Qt::CaseInsensitive) && s_state.contains("failure", Qt::CaseInsensitive) ) {
     notifyclient->init();
     notifyclient->setSummary(QString(tr("Service Error: %1")).arg(value.toString()) );
     notifyclient->setBody(QString(tr("Object Path: %1")).arg(s_path) );
@@ -917,7 +921,7 @@ void ControlBox::toggleOfflineMode(bool checked)
   QList<QVariant> vlist;
   vlist.clear();
   vlist << QVariant("OfflineMode") << QVariant::fromValue(QDBusVariant(checked ? true : false)); 
-  iface_manager->callWithArgumentList(QDBus::NoBlock, "SetProperty", vlist);
+  iface_manager->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
   
   if (! checked ) this->scanTechnologies();
     
