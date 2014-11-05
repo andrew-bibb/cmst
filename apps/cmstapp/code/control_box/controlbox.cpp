@@ -1001,6 +1001,9 @@ void ControlBox::getServiceDetails(int index)
   //  cleared and for whatever reason could not be reseeded with entries.
   if (index < 0 ) return; 
   
+  // variables
+  bool b_editable = services_list.size() > 0 ? true : false; 
+  
   //  Get the QMap associated with the index stored in an arrayElement 
   QMap<QString,QVariant> map = services_list.at(index).objmap;
   
@@ -1010,10 +1013,12 @@ void ControlBox::getServiceDetails(int index)
   //  Start building the string for the left label
   QString rs = tr("<br><b>Service Details:</b><br>");
   rs.append(tr("Service Name: %1<br>").arg(map.value("Name").toString()) );
+  if (map.value("Name").toString().isEmpty() ) b_editable = false;
   rs.append(tr("Service Type: %1<br>").arg(map.value("Type").toString()) );
   rs.append(tr("Service State: %1<br>").arg(map.value("State").toString()) );
   rs.append(tr("Favorite: %1<br>").arg(map.value("Favorite").toBool() ? tr("Yes", "favorite") : tr("No", "favorite"))  );
   rs.append(tr("External Configuration File: %1<br>").arg(map.value("Immutable").toBool() ? tr("Yes", "immutable") : tr("No", "immutable")) );
+  if (map.value("Immutable").toBool() ) b_editable = false;
   rs.append(tr("Auto Connect: %1<br>").arg(map.value("AutoConnect").toBool() ? tr("On", "autoconnect") : tr("No", "autoconnect")) );
   
   rs.append(tr("<br><b>IPv4</b><br>"));
@@ -1074,6 +1079,9 @@ void ControlBox::getServiceDetails(int index)
   
   //  write the text to the right display label
   ui.label_details_right->setText(rs);
+  
+  // enable or disable the editor button
+  ui.pushButton_configuration->setEnabled(b_editable);
   
   return;
 }
@@ -1337,10 +1345,7 @@ void ControlBox::assemblePage2()
       
     ui.comboBox_service->setCurrentIndex(0);
   } // services if no error
-  
-  // if there are no services disable the properties pushbutton
-  services_list.size() > 0 ? ui.pushButton_configuration->setEnabled(true) : ui.pushButton_configuration->setDisabled(true);
-  
+    
   return;
 }
 
