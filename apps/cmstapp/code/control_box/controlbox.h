@@ -47,6 +47,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QLocalServer>
 # include <QFrame>
 # include <QProgressBar>
+# include <QColor>
 
 # include "ui_controlbox.h"
 # include "./code/agent/agent.h"
@@ -106,8 +107,8 @@ class idButton : public QFrame
   
   public:
     idButton (QWidget*, const QDBusObjectPath&);
+    void setIcon(const QColor&);
     inline void setText (const QString& text) {button->setText(text);}
-    inline void setIcon (const QPixmap& pixmap) {button->setIcon(pixmap);}
     inline void setChecked (bool checked) {button->setChecked(checked);}
     
   signals:
