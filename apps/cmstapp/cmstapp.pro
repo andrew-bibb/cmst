@@ -11,7 +11,7 @@ QT += network
 
 TEMPLATE = app
 TARGET = cmst
-target.path = /usr/bin/
+target.path = /usr/bin
 INSTALLS += target
 
 documentation.path = /usr/share/man/man1

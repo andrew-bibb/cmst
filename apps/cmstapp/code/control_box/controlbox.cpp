@@ -84,6 +84,10 @@ idButton::idButton(QWidget* parent, const QDBusObjectPath& id) :
   QHBoxLayout* layout = new QHBoxLayout(this);
   layout->setContentsMargins(m_left, m_top, m_right, m_bottom);
   layout->addWidget(button, 0, 0);  
+
+	//QString style;
+	//style.append("QPushButton { text-align: center }" );
+  //this->setStyleSheet(style);
   
   return;  
 }
@@ -109,7 +113,7 @@ void idButton::setIcon(const QColor& clr)
   painter.setRenderHint(QPainter::Antialiasing);
   painter.setPen(Qt::transparent);
 	painter.setBrush(QBrush(lg) );
-  painter.drawEllipse(QPoint(pxsize / 2, pxsize / 2), pxsize / 2, pxsize / 2);
+  painter.drawEllipse(QPoint(pxsize / 2 , pxsize / 2), pxsize / 2, pxsize / 2);
   painter.end();
  
  // Set the button icon

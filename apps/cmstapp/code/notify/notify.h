@@ -95,14 +95,6 @@ class NotifyClient : public QObject
       
       void connectToServer();
       void init();
-      //void notify (QString, 
-                  //quint32,
-                  //QString,
-                  //QString,
-                  //QString,
-                  //QStringList,
-                  //QVariantMap hint,
-                  //qint32 expire_timeout = -1);
       void sendNotification();                                
 
     private:

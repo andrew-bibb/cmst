@@ -56,8 +56,6 @@ NotifyClient::NotifyClient(QObject* parent)
   this->init();
 
   // Create our client and try to connect to the notify server
-  // if the connection to the server fails we can try again by calling 
-  // connectToServer()   
   if (! QDBusConnection::sessionBus().isConnected() )
     qCritical("CMST - Cannot connect to the session bus.");
   // else try to connect to a notification server
