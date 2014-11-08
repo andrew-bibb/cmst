@@ -41,11 +41,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QCloseEvent>
 # include <QToolTip>
 # include <QTableWidgetSelectionRange>
-# include <QPainter>
-# include <QPixmap>
-# include <QPoint>
-# include <QBrush>
-# include <QLinearGradient>
 
 # include "../resource.h" 
 # include "./controlbox.h"
@@ -75,7 +70,8 @@ idButton::idButton(QWidget* parent, const QDBusObjectPath& id) :
   const int m_bottom = 0;
   
   // create the button
-  button = new QPushButton(this);
+  button = new QToolButton(this);
+  button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
   obj_id = id;
   button->setCheckable(true); 
   connect (button, SIGNAL(clicked(bool)), this, SLOT(buttonClicked(bool)));
@@ -85,42 +81,9 @@ idButton::idButton(QWidget* parent, const QDBusObjectPath& id) :
   layout->setContentsMargins(m_left, m_top, m_right, m_bottom);
   layout->addWidget(button, 0, 0);  
 
-	//QString style;
-	//style.append("QPushButton { text-align: center }" );
-  //this->setStyleSheet(style);
-  
   return;  
 }
 
-void idButton::setIcon(const QColor& clr)
-{
-	// constants
-	const int pxsize = 24;
-	
-  // create a pixmap to paint on
-  QPixmap pxmap (pxsize, pxsize);
-  pxmap.fill(Qt::transparent);
-  
-  // create the gradient.  Grade the color from the specified
-  // at the lower right to a kind of whiteish grey at the upper left
-  QLinearGradient lg(QPointF(0.0, 0.0), QPointF(2.0 * pxsize / 3.0, pxsize) );
-	lg.setColorAt(0, QColor::fromRgb(200, 200, 200) );
-	lg.setColorAt(1, clr );
-  
-  // Create the painter 
-  QPainter painter;
-  painter.begin(&pxmap);
-  painter.setRenderHint(QPainter::Antialiasing);
-  painter.setPen(Qt::transparent);
-	painter.setBrush(QBrush(lg) );
-  painter.drawEllipse(QPoint(pxsize / 2 , pxsize / 2), pxsize / 2, pxsize / 2);
-  painter.end();
- 
- // Set the button icon
-	button->setIcon(pxmap);
-	
-	return;
-}
 
 void idButton::buttonClicked(bool checked)
 {
@@ -1220,7 +1183,6 @@ int ControlBox::managerRescan(const int& srv)
     
 //
 //  Function to assemble page 1 of the dialog
-
 void ControlBox::assemblePage1()
 {
   // Global Properties
@@ -1268,6 +1230,7 @@ void ControlBox::assemblePage1()
     bool bt;
     ui.tableWidget_technologies->clearContents();
     ui.tableWidget_technologies->setRowCount(technologies_list.size() );
+    ui.tableWidget_technologies->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Fixed);
     for (int row = 0; row < technologies_list.size(); ++row) {
     
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
@@ -1290,16 +1253,19 @@ void ControlBox::assemblePage1()
       QTableWidgetItem* qtwi02 = new QTableWidgetItem();
       bt = technologies_list.at(row).objmap.value("Powered").toBool();  
       idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
+      qpb02->setFixedSize(
+				ui.tableWidget_technologies->horizontalHeader()->sectionSize(2),
+				ui.tableWidget_technologies->verticalHeader()->sectionSize(0) );
       connect (qpb02, SIGNAL(clickedID(QString, bool)), this, SLOT(togglePowered(QString, bool)));
       QString padding = "     ";
       if (bt ) {
-        qpb02->setText(tr("%1On", "powered").arg(padding));
-        qpb02->setIcon(QColor::fromRgb(10, 205, 45) );
+        qpb02->setText(tr("%1On%1%1", "powered").arg(padding));
+        qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
         qpb02->setChecked(true);
       }
       else {
-        qpb02->setText(tr("%1Off", "powered").arg(padding));
-        qpb02->setIcon(QColor::fromRgb(255, 10, 10) );
+        qpb02->setText(tr("%1Off%1%1", "powered").arg(padding));
+        qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
         qpb02->setChecked(false);
       } 
       ui.tableWidget_technologies->setCellWidget(row, 2, qpb02);

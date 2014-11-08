@@ -48,6 +48,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QFrame>
 # include <QProgressBar>
 # include <QColor>
+# include <QToolButton>
 
 # include "ui_controlbox.h"
 # include "./code/agent/agent.h"
@@ -100,22 +101,22 @@ struct arrayElement
 };
 
 //
-// custom QFrame containing a QPushButton that will emit a button id
+// custom QFrame containing a QToolButton that will emit a button id
 class idButton : public QFrame
 {
   Q_OBJECT
   
   public:
     idButton (QWidget*, const QDBusObjectPath&);
-    void setIcon(const QColor&);
     inline void setText (const QString& text) {button->setText(text);}
-    inline void setChecked (bool checked) {button->setChecked(checked);}
-    
+    inline void setIcon (const QPixmap& pixmap) {button->setIcon(pixmap);}
+    inline void setChecked (bool checked) {button->setChecked(checked);}    
+   
   signals:
     void clickedID(QString, bool);
   
   private:
-    QPushButton* button;
+    QToolButton* button;
     QDBusObjectPath obj_id;
     
   private slots:
