@@ -9,7 +9,7 @@ CMST_BUILD_DISTRO = $$DISTRO
 
 # define a libpath
 CMST_LIB_PATH = $$(USE_LIBPATH)
-isEmpty ( LIB_PATH ) {
+isEmpty ( CMST_LIB_PATH ) {
 	CMST_LIB_PATH = "/usr/lib/cmst"
 } 
 
