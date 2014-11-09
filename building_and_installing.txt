@@ -1,0 +1,37 @@
+############# Building and Installing ###########################
+
+As of 2014.10.30 CMST has had the ability to create and edit config
+(provisioning) files. These files are located in /var/lib/connman
+which is owned by root:root.  To enable reading and writing in this
+directory we have had to add a roothelper program.  This roothelper
+is activated automatically by DBus, however it has necessitated a change
+in how you build and install.  
+
+In the examples below we use the command "qmake", but if you have
+multiple versions of QT installed on your system "qmake" should be 
+replaced with "qmake-qt5"
+
+DISTRO= command line option:
+In order to use the provisioning editor you must be a member of a group
+granted access to network services.  In Arch Linux this is the "network"
+group, in Slackware it is the "netdev" group. The DISTRO= command line
+option is provided to make sure the conf file in /etc/dbus-1/system.d
+contains the proper group name.  Usage Examples:
+			qmake DISTRO=arch				// to install on an Arch Linux system
+			qmake DISTRO=slackware	// to install on Slackware
+
+If the DISTRO= option is omitted then qmake will default to the Arch
+Linux options (network group is "network").
+
+There is no error checking in the .pro files so it is important to make
+sure that the options are spelled correctly and in the proper case.
+
+Currently we only have information on Arch Linux and Slackware.  If your
+distro uses something different please open up an issue on GitHub, let
+us know what your network group is called and we'll add it in.
+
+Roothelper install file location:
+By default the roothelper (called cmstroothelper) will be installed in
+/usr/lib/cmst.  In Slackware /usr/lib is apparently not used so if you
+specify and export a variable called USE_LIBPATH pointing to your 
+install location that will be used instead.

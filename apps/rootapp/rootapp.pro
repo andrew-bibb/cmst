@@ -12,11 +12,11 @@ include(../../cmst.pri)
 
 TEMPLATE = app
 TARGET = cmstroothelper
-target.path = $$LIB_PATH
+target.path = $$CMST_LIB_PATH
 INSTALLS += target
 
 conf.path = /etc/dbus-1/system.d
-conf.files = ./system/distro/$$BUILD_DISTRO/org.cmst.roothelper.conf
+conf.files = ./system/distro/$$CMST_BUILD_DISTRO/org.cmst.roothelper.conf
 INSTALLS += conf
 
 service.path = /usr/share/dbus-1/system-services

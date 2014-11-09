@@ -5,11 +5,11 @@ isEmpty( DISTRO ) {
 	DISTRO = arch
 }
 
-BUILD_DISTRO = $$DISTRO
+CMST_BUILD_DISTRO = $$DISTRO
 
 # define a libpath
-LIB_PATH = $$(USE_LIBPATH)
+CMST_LIB_PATH = $$(USE_LIBPATH)
 isEmpty ( LIB_PATH ) {
-	LIB_PATH = "/usr/lib/cmst"
+	CMST_LIB_PATH = "/usr/lib/cmst"
 } 
 
