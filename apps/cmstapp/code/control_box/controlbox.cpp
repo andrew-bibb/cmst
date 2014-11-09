@@ -178,7 +178,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   this->readSettings(); 
   
   // operate on settings not dealt with elsewhere
-	ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
+  ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
   
   // Create the notifyclient, make four tries; first immediately in constructor, then
   // at 1/2 second, 2 seconds and finally at 8 seconds 
@@ -413,12 +413,12 @@ void ControlBox::moveService(QAction* act)
   if (iface_serv->isValid() ) {
     if (mvsrv_menu->title() == ui.actionMove_Before->text()) {
       QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "MoveBefore", QVariant::fromValue(targetobj) );
-			//qDebug() << reply;
+      //qDebug() << reply;
     }
     else {
       QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "MoveAfter", QVariant::fromValue(targetobj) );
-			//qDebug() << reply;
-    }	// else
+      //qDebug() << reply;
+    } // else
   } // iface_srv is valid
   
   // clean up
@@ -827,7 +827,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
 {
   QString s_path = msg.path();
   QVariant value = dbvalue.variant();
-	QString s_state;
+  QString s_state;
 
   // replace the old values with the changed ones.
   for (int i = 0; i < services_list.count(); ++i) {
@@ -903,11 +903,21 @@ void ControlBox::scanTechnologies()
   for (int row = 0; row < technologies_list.size(); ++row) {
     if (technologies_list.at(row).objmap.value("Type").toString().contains("wifi", Qt::CaseInsensitive) ) {
     QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
-    iface_tech->call(QDBus::AutoDetect, "Scan");
+    QDBusMessage reply = iface_tech->call(QDBus::AutoDetect, "Scan");
+    
+      // report any errors, but only if we did a manual scan
+      if (QObject::sender() == ui.pushButton_rescan) {
+        if (reply.type() != QDBusMessage::ReplyMessage) {
+          QMessageBox::warning(this, tr("CMST Warning"),
+            tr("<center><b>We received a DBUS reply message indicating an error while trying to scan technologies.</b></center>"                       
+            "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage()) );
+        } // if reply is something other than a normal reply message
+      } //  if we triggered a manual rescan
+    
     iface_tech->deleteLater();
     } // if
   } // for
-  
+    
   return;
 }
 
@@ -960,15 +970,15 @@ void ControlBox::togglePowered(QString object_id, bool checkstate)
 
   QDBusMessage reply = iface_tech->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
   if (reply.type() != QDBusMessage::ReplyMessage) {
-		// seems to be a bug in connman - wired services return an already enabled error when turning power back on
-		if (! reply.errorMessage().contains("already enabled", Qt::CaseInsensitive) ) {
+    // seems to be a bug in connman - wired services return an already enabled error when turning power back on
+    if (! reply.errorMessage().contains("already enabled", Qt::CaseInsensitive) ) {
       QMessageBox::warning(this, tr("CMST Warning"),
-				tr("<center><b>We received a DBUS reply message indicating an error while trying to send the toggle power request to connman.</b></center>"                       
-				"<p>The powered state of the technology will not be changed."
-				"<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage()) );
-		}	// if error somethign other than already enabled
-	}	// something other than a normal reply message
-	
+        tr("<center><b>We received a DBUS reply message indicating an error while trying to send the toggle power request to connman.</b></center>"                       
+        "<p>The powered state of the technology will not be changed."
+        "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage()) );
+    } // if error somethign other than already enabled
+  } // something other than a normal reply message
+  
   // cleanup
   iface_tech->deleteLater();
   return;
@@ -1254,8 +1264,8 @@ void ControlBox::assemblePage1()
       bt = technologies_list.at(row).objmap.value("Powered").toBool();  
       idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
       qpb02->setFixedSize(
-				ui.tableWidget_technologies->horizontalHeader()->sectionSize(2),
-				ui.tableWidget_technologies->verticalHeader()->sectionSize(0) );
+        ui.tableWidget_technologies->horizontalHeader()->sectionSize(2),
+        ui.tableWidget_technologies->verticalHeader()->sectionSize(0) );
       connect (qpb02, SIGNAL(clickedID(QString, bool)), this, SLOT(togglePowered(QString, bool)));
       QString padding = "     ";
       if (bt ) {
@@ -1470,12 +1480,12 @@ void ControlBox::assembleTrayIcon()
   int readycount = 0;
   
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
-		// count how many services are in the ready state
-		for (int i = 0; i < services_list.count(); ++i) {
-			if (services_list.at(i).objmap.value("State").toString().contains("ready", Qt::CaseInsensitive))  ++readycount;
-		}	// for loop
+    // count how many services are in the ready state
+    for (int i = 0; i < services_list.count(); ++i) {
+      if (services_list.at(i).objmap.value("State").toString().contains("ready", Qt::CaseInsensitive))  ++readycount;
+    } // for loop
     if (properties_map.value("State").toString().contains("online", Qt::CaseInsensitive) ||
-				(properties_map.value("State").toString().contains("ready", Qt::CaseInsensitive) && readycount == 1) ) {
+        (properties_map.value("State").toString().contains("ready", Qt::CaseInsensitive) && readycount == 1) ) {
       if ( (q8_errors & CMST::Err_Services) == 0x00 ) {        
         QMap<QString,QVariant> submap;
         if (services_list.at(0).objmap.value("Type").toString().contains("ethernet", Qt::CaseInsensitive) ) {
@@ -1515,16 +1525,16 @@ void ControlBox::assembleTrayIcon()
         trayicon->setIcon(QPixmap(":/icons/images/systemtray/connect_creating.png") );
       stt.append(tr("Connection is in the Ready State.", "icon_tool_tip"));
     } // else if if ready
-	
-		// else if state is failure
-		else if (properties_map.value("State").toString().contains("failure", Qt::CaseInsensitive) ) {
+  
+    // else if state is failure
+    else if (properties_map.value("State").toString().contains("failure", Qt::CaseInsensitive) ) {
       b_useicontheme ?
         trayicon->setIcon(QIcon::fromTheme("network-error", QIcon(":/icons/images/systemtray/cancel.png")).pixmap(QSize(16,16)) ) :
         trayicon->setIcon(QPixmap(":/icons/images/systemtray/cancel.png") );
       stt.append(tr("Connection is in the Failure State.", "icon_tool_tip"));
     } // else if failure state
-			 	
-		// else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"	 	
+        
+    // else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"    
     else {
       b_useicontheme ?
         trayicon->setIcon(QIcon::fromTheme("network-offline", QIcon(":/icons/images/systemtray/connect_no.png")) )  :
@@ -2013,13 +2023,13 @@ void ControlBox::configureService()
 // Slot to open the provisioning editor to create a configuration (provisioning) file
 void ControlBox::provisionService()
 {
-	ProvisioningEditor* veditor = new ProvisioningEditor(this);
-	
+  ProvisioningEditor* veditor = new ProvisioningEditor(this);
+  
   // Set the whatsthis button icon
   if (b_useicontheme) 
    veditor->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
   else 
-    veditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));	
+    veditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png")); 
   
   // call then clean up
   veditor->exec();
