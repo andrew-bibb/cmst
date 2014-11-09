@@ -4,4 +4,3 @@ SUBDIRS = ./apps/cmstapp ./apps/rootapp
 
 # cmst build variables
 include(cmst.pri)
-
