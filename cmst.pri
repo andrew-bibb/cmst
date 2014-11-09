@@ -6,3 +6,10 @@ isEmpty( DISTRO ) {
 }
 
 BUILD_DISTRO = $$DISTRO
+
+# define a libpath
+LIB_PATH = $$(USE_LIBPATH)
+isEmpty ( LIB_PATH ) {
+	LIB_PATH = "/usr/lib/cmst"
+} 
+

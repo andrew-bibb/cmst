@@ -12,12 +12,7 @@ include(../../cmst.pri)
 
 TEMPLATE = app
 TARGET = cmstroothelper
-# USE_LIBPATH for slackware
-isEmpty( $$(USE_LIBPATH)  ) {
-	target.path = /usr/lib/cmst
-} else {
-	target.path = $$(USE_LIBPATH)
-}
+target.path = $$LIB_PATH
 INSTALLS += target
 
 conf.path = /etc/dbus-1/system.d
