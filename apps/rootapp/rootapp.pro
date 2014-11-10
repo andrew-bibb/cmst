@@ -21,7 +21,7 @@ INSTALLS += conf
 
 service.path = /usr/share/dbus-1/system-services
 service.files = ./system/org.cmst.roothelper.service
-service.extra = "sed -i s/%PATH%/$$CMST_LIB_PATH/ ./system/org.cmst.roothelper.service"  
+service.extra = echo "Exec=$$CMST_LIB_PATH/cmstroothelpermake" >> ./system/org.cmst.roothelper.service
 INSTALLS += service
 
 # dbus
