@@ -425,7 +425,7 @@
         <string>...</string>
        </property>
        <property name="icon">
-        <iconset resource="../../../cmst.qrc">
+        <iconset>
          <normaloff>:/icons16x16/images/16x16/help.png</normaloff>:/icons16x16/images/16x16/help.png</iconset>
        </property>
       </widget>
@@ -474,7 +474,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../../../cmst.qrc"/>
+  <include location="../../../../../cmst.qrc"/>
  </resources>
  <connections>
   <connection>

@@ -33,7 +33,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QStringList>
 # include <QStyleFactory>
 # include <QLocalSocket>
-# include <QObject>
 
 # include "./control_box/controlbox.h"
 # include "../resource.h"	
