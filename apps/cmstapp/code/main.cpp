@@ -33,12 +33,13 @@ DEALINGS IN THE SOFTWARE.
 # include <QStringList>
 # include <QStyleFactory>
 # include <QLocalSocket>
+# include <QObject>
 
 # include "./control_box/controlbox.h"
 # include "../resource.h"	
 
 // uncomment to install translation code
-//#define USE_TRANSLATIONS
+#define USE_TRANSLATIONS
 
 int main(int argc, char *argv[])
 {  
@@ -51,7 +52,7 @@ int main(int argc, char *argv[])
 	QLocalSocket socket;
 	socket.connectToServer(LONG_NAME);
 	if (socket.waitForConnected(500)) { 
-		qDebug() << "Another running instance of CMST has been detected.  This instance is aborting";  
+		qDebug() <<  QCoreApplication::translate("main.cpp", "Another running instance of CMST has been detected.  This instance is aborting");  
 		return 1;
 	}	
 
@@ -87,9 +88,9 @@ int main(int argc, char *argv[])
    QLibraryInfo::location(QLibraryInfo::TranslationsPath));
    app.installTranslator(&qtTranslator);
 
-   QTranslator connmanqtTranslator;
-   connmanqtTranslator.load("connmanqt_" + QLocale::system().name());
-   app.installTranslator(&connmanqtTranslator);
+   QTranslator cmstTranslator;
+   cmstTranslator.load("cmst_" + QLocale::system().name());
+   app.installTranslator(&cmstTranslator);  
 	#endif
    
   parser.process(app);   
