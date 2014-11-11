@@ -125,7 +125,7 @@
           <item row="0" column="0">
            <widget class="QLabel" name="label_ssid">
             <property name="text">
-             <string>&amp;SDID</string>
+             <string>&amp;SSID</string>
             </property>
             <property name="buddy">
              <cstring>lineEdit_ssid</cstring>
