@@ -88,8 +88,9 @@ int main(int argc, char *argv[])
    app.installTranslator(&qtTranslator);
 
    QTranslator cmstTranslator;
-   cmstTranslator.load("cmst_" + QLocale::system().name());
-   app.installTranslator(&cmstTranslator);  
+   if (cmstTranslator.load("cmst_" + QLocale::system().name(), ":/translations/translations" ) ) {
+		app.installTranslator(&cmstTranslator);  
+	}
 	#endif
    
   parser.process(app);   

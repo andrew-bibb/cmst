@@ -5,6 +5,9 @@
     <file>text/eduroam_short.txt</file>
     <file>text/license.txt</file>
   </qresource>
+  <qresource prefix="translations">
+    <file>translations/cmst_ru_RU.qm</file>
+  </qresource>
   <qresource prefix="icons">
     <file>images/systemtray/connect_creating.png</file>
     <file>images/systemtray/cancel.png</file>
