@@ -149,7 +149,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   notifyclient = 0;
   onlineobjectpath.clear();
   socketserver = new QLocalServer(this);
-  socketserver->listen(LONG_NAME);
+  socketserver->removeServer(SOCKET_NAME);	// remove any files that may have been left after a crash
+  socketserver->listen(SOCKET_NAME);
 
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request")); 
@@ -2046,4 +2047,4 @@ void ControlBox::socketConnectionDetected()
   this->showNormal();
   return;
 }   
-   
+	

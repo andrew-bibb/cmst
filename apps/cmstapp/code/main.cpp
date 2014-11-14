@@ -49,8 +49,9 @@ int main(int argc, char *argv[])
 	QApplication app(argc, argv);		
 	
 	QLocalSocket socket;
-	socket.connectToServer(LONG_NAME);
-	if (socket.waitForConnected(500)) { 
+	socket.connectToServer(SOCKET_NAME);
+	if (socket.waitForConnected(500)) {
+		socket.abort(); 
 		qDebug() <<  QCoreApplication::translate("main.cpp", "Another running instance of CMST has been detected.  This instance is aborting");  
 		return 1;
 	}	

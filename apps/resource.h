@@ -34,7 +34,7 @@ DEALINGS IN THE SOFTWARE.
 
 ///////////////////////////////// Program Values ///////////////////////
 // Program Info 
-#define VERSION "14.11.12-2"
+#define VERSION "14.11.13-1"
 #define RELEASE_DATE "15 October 2014"
 #define COPYRIGHT_DATE "2013-2014"
 
@@ -42,6 +42,7 @@ DEALINGS IN THE SOFTWARE.
 #define WINDOW_TITLE "Connman System Tray"
 #define PROGRAM_NAME "CMST"
 #define LONG_NAME "CMST - Connman System Tray"
+#define SOCKET_NAME "cmst_single_app_socket"
 #define ORG "cmst"
 
 
