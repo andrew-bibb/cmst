@@ -149,7 +149,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   notifyclient = 0;
   onlineobjectpath.clear();
   socketserver = new QLocalServer(this);
-  socketserver->removeServer(SOCKET_NAME);	// remove any files that may have been left after a crash
+  socketserver->removeServer(SOCKET_NAME);  // remove any files that may have been left after a crash
   socketserver->listen(SOCKET_NAME);
 
   // set a flag if we sent a commandline option to log the connman inputrequest
@@ -262,6 +262,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_aboutCMST, SIGNAL(clicked()), this, SLOT(aboutCMST()));  
   connect(ui.pushButton_aboutIconSet, SIGNAL(clicked()), this, SLOT(aboutIconSet())); 
   connect(ui.pushButton_aboutQT, SIGNAL(clicked()), qApp, SLOT(aboutQt()));
+  connect(qApp, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()));
   connect(ui.pushButton_license, SIGNAL(clicked()), this, SLOT(showLicense()));
   connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));  
   connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
@@ -2047,4 +2048,15 @@ void ControlBox::socketConnectionDetected()
   this->showNormal();
   return;
 }   
-	
+
+//
+// Slot to tidy up the place at close.  Called when the QApplication aboutToQuit() signal is emitted
+void ControlBox::cleanUp()
+{
+  // close and delete the socket server
+  socketserver->close();
+  delete socketserver;
+
+  return;
+}
+  

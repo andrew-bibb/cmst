@@ -74,20 +74,20 @@ namespace CMST
     Manager_All           = (CMST::Manager_Properties | CMST::Manager_Technologies | CMST::Manager_Services),
     
     // provisioning editor
-    ProvEd_No_Selection	= 0x00,
+    ProvEd_No_Selection = 0x00,
     ProvEd_File_Read    = (1 << 0),
-    ProvEd_File_Delete	= (1 << 1),
-    ProvEd_File_Write		= (1 << 2),
+    ProvEd_File_Delete  = (1 << 1),
+    ProvEd_File_Write   = (1 << 2),
     
     // provisioning editor validator input
-    ProvEd_Vd_None		= 0x00,
-    ProvEd_Vd_IPv4		= (1 << 0),
-    ProvEd_Vd_IPv6		= (1 << 1),
-    ProvEd_Vd_MAC			= (1 << 2),
-    ProvEd_Vd_46			= (1 << 3),
-    ProvEd_Vd_Hex			= (1 << 4),
-    ProvEd_Vd_Dom			= (1 << 5),
-    ProvEd_Vd_Wd			= (1 << 6),
+    ProvEd_Vd_None    = 0x00,
+    ProvEd_Vd_IPv4    = (1 << 0),
+    ProvEd_Vd_IPv6    = (1 << 1),
+    ProvEd_Vd_MAC     = (1 << 2),
+    ProvEd_Vd_46      = (1 << 3),
+    ProvEd_Vd_Hex     = (1 << 4),
+    ProvEd_Vd_Dom     = (1 << 5),
+    ProvEd_Vd_Wd      = (1 << 6),
   };
 } // namespace CMST
 
@@ -238,6 +238,7 @@ class ControlBox : public QDialog
     void configureService();
     void provisionService();
     void socketConnectionDetected();
+    void cleanUp();
 };
 
 #endif

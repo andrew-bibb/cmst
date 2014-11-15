@@ -33,56 +33,71 @@ DEALINGS IN THE SOFTWARE.
 # include <QStringList>
 # include <QStyleFactory>
 # include <QLocalSocket>
+# include <signal.h>   
 
 # include "./control_box/controlbox.h"
-# include "../resource.h"	
+# include "../resource.h" 
+
+
+// Create a signal handler to catch ^C from console
+void signalhandler(int sig) {
+  if(sig==SIGINT) {
+    qApp->quit();
+  }
+  
+  return;
+}
+
 
 // uncomment to install translation code
 #define USE_TRANSLATIONS
 
 int main(int argc, char *argv[])
 {  
-	QApplication::setApplicationName(LONG_NAME);
-	QApplication::setApplicationVersion(VERSION);
-	QApplication::setOrganizationName(ORG);	
-	QApplication::setDesktopSettingsAware(true);
-	QApplication app(argc, argv);		
-	
-	QLocalSocket socket;
-	socket.connectToServer(SOCKET_NAME);
-	if (socket.waitForConnected(500)) {
-		socket.abort(); 
-		qDebug() <<  QCoreApplication::translate("main.cpp", "Another running instance of CMST has been detected.  This instance is aborting");  
-		return 1;
-	}	
+  QApplication::setApplicationName(LONG_NAME);
+  QApplication::setApplicationVersion(VERSION);
+  QApplication::setOrganizationName(ORG); 
+  QApplication::setDesktopSettingsAware(true);
+  QApplication app(argc, argv);   
+  
+  // make sure only one instance is running
+  QLocalSocket* socket = new QLocalSocket();
+  socket->connectToServer(SOCKET_NAME);
+  bool b_connected = socket->waitForConnected(500);
+  socket->abort();
+  delete socket;  
+  if (b_connected) { 
+    qDebug() <<  QCoreApplication::translate("main.cpp", "Another running instance of CMST has been detected.  This instance is aborting");  
+    return 1;
+  }
 
 
-	// setup the command line parser
-	QCommandLineParser parser;
-	QCommandLineOption disableCounters(QStringList() << "c" << "disable-counters", QCoreApplication::translate("main.cpp", "Disable data counters.  May be used to minimize load on your system.") );
-	parser.addOption(disableCounters);	
-	
-	QCommandLineOption disableTrayIcon(QStringList() << "d" << "disable-tray-icon", QCoreApplication::translate("main.cpp", "Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.") );
-	parser.addOption(disableTrayIcon);	
-	
-	parser.setApplicationDescription(QApplication::translate("main.cpp", "Connman System Tray.") );
-	parser.addHelpOption();
-	
-	QCommandLineOption useIconTheme(QStringList() << "i" << "icon-theme", QCoreApplication::translate("main.cpp", "Use the icon theme from your system if one is defined.") );
-	parser.addOption(useIconTheme);	
-	
-	QCommandLineOption logInputRequest(QStringList() << "l" << "log-input-request", QCoreApplication::translate("main.cpp", "Log the connman inputRequest for debugging purposes.") );
-	parser.addOption(logInputRequest);
+  // setup the command line parser
+  QCommandLineParser parser;
+  QCommandLineOption disableCounters(QStringList() << "c" << "disable-counters", QCoreApplication::translate("main.cpp", "Disable data counters.  May be used to minimize load on your system.") );
+  parser.addOption(disableCounters);  
+  
+  QCommandLineOption disableTrayIcon(QStringList() << "d" << "disable-tray-icon", QCoreApplication::translate("main.cpp", "Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.") );
+  parser.addOption(disableTrayIcon);  
+  
+  parser.setApplicationDescription(QApplication::translate("main.cpp", "Connman System Tray.") );
+  parser.addHelpOption();
+  
+  QCommandLineOption useIconTheme(QStringList() << "i" << "icon-theme", QCoreApplication::translate("main.cpp", "Use the icon theme from your system if one is defined.") );
+  parser.addOption(useIconTheme); 
+  
+  QCommandLineOption logInputRequest(QStringList() << "l" << "log-input-request", QCoreApplication::translate("main.cpp", "Log the connman inputRequest for debugging purposes.") );
+  parser.addOption(logInputRequest);
 
-	QCommandLineOption startMinimized(QStringList() << "m" << "minimized", QCoreApplication::translate("main.cpp", "Start the GUI minimized in the system tray.") );
-	parser.addOption(startMinimized);
-		
-	parser.addVersionOption();	
-	
-	QCommandLineOption waitTime(QStringList() << "w" << "wait-time", QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon (default is 0 seconds)."), QCoreApplication::translate("main.cpp", "wait-time"), "0" );
-	parser.addOption(waitTime); 	
-	   
-	#ifdef USE_TRANSLATIONS
+  QCommandLineOption startMinimized(QStringList() << "m" << "minimized", QCoreApplication::translate("main.cpp", "Start the GUI minimized in the system tray.") );
+  parser.addOption(startMinimized);
+    
+  parser.addVersionOption();  
+  
+  QCommandLineOption waitTime(QStringList() << "w" << "wait-time", QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon (default is 0 seconds)."), QCoreApplication::translate("main.cpp", "wait-time"), "0" );
+  parser.addOption(waitTime);   
+     
+  #ifdef USE_TRANSLATIONS
    QTranslator qtTranslator;
    qtTranslator.load("qt_" + QLocale::system().name(),
    QLibraryInfo::location(QLibraryInfo::TranslationsPath));
@@ -90,17 +105,20 @@ int main(int argc, char *argv[])
 
    QTranslator cmstTranslator;
    if (cmstTranslator.load("cmst_" + QLocale::system().name(), ":/translations/translations" ) ) {
-		app.installTranslator(&cmstTranslator);  
-	}
-	#endif
+    app.installTranslator(&cmstTranslator);  
+  }
+  #endif
    
   parser.process(app);   
-	QStringList sl = parser.unknownOptionNames();
-	if (sl.size() > 0 ) parser.showHelp(1);
-								
-	// Showing the dialog (or not) is controlled in the createSystemTrayIcon() function
-	// called from the ControlBox constructor.  We don't show it from here.							
-	ControlBox ctlbox(parser);
-	return app.exec();
+  QStringList sl = parser.unknownOptionNames();
+  if (sl.size() > 0 ) parser.showHelp(1);
+                
+  // signal handler             
+  signal(SIGINT, signalhandler);                
+                
+  // Showing the dialog (or not) is controlled in the createSystemTrayIcon() function
+  // called from the ControlBox constructor.  We don't show it from here.             
+  ControlBox ctlbox(parser);
+  return app.exec();
 }
 
