@@ -441,8 +441,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>660</width>
-            <height>371</height>
+            <width>98</width>
+            <height>32</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -670,8 +670,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>636</width>
-               <height>137</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -726,8 +726,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>636</width>
-               <height>136</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1045,8 +1045,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>550</width>
-            <height>449</height>
+            <width>98</width>
+            <height>412</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1102,7 +1102,7 @@
      <item>
       <widget class="QPushButton" name="pushButton_provisioning_editor">
        <property name="whatsThis">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the provisioning editor to create or edit Connman configuration (provisioning) files.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. As long as you are a member of the &amp;quot;network&amp;quot; group, which you must be to communicate with Connman via DBus, then CMST will communicate with the roothelper, also via DBus.&lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the provisioning editor to create or edit Connman configuration (provisioning) files.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. &lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
         <string>Provisioning Editor</string>

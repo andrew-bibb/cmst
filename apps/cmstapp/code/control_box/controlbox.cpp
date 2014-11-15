@@ -2050,12 +2050,12 @@ void ControlBox::socketConnectionDetected()
 }   
 
 //
-// Slot to tidy up the place at close.  Called when the QApplication aboutToQuit() signal is emitted
+// Slot to tidy up the place at close.  Called when the QApplication::aboutToQuit() signal is emitted
 void ControlBox::cleanUp()
 {
   // close and delete the socket server
   socketserver->close();
-  delete socketserver;
+  socketserver->deleteLater();
 
   return;
 }

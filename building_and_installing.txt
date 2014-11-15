@@ -32,6 +32,7 @@ us know what your network group is called and we'll add it in.
 
 Roothelper install file location:
 By default the roothelper (called cmstroothelper) will be installed in
-/usr/lib/cmst.  In Slackware /usr/lib is apparently not used so if you
-specify and export a variable called USE_LIBPATH pointing to your 
-install location that will be used instead.
+/usr/lib/cmst.  In Slackware /usr/lib is apparently not used for every
+architecture so if you specify and export a variable called USE_LIBPATH
+pointing to your install location that location will be used as the
+install target instead.
