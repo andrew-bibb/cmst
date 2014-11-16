@@ -947,12 +947,21 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 {
   if (trayicon != 0 ) {
     if (b_checked) {
-      trayicon->hide();
+      trayicon->setVisible(false);
       ui.pushButton_minimize->setDisabled(true);
     } // if
     else {
-      trayicon->show();
       ui.pushButton_minimize->setDisabled(false);
+			// QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
+			// maxtries to get a valid icon geometry 
+			const int maxtries = 250;
+			for (int i = 0; i < maxtries; ++i) {
+				trayicon->setVisible(true);
+				if (trayicon->geometry().left() > 0 && trayicon->geometry().top() > 0) return;
+				qDebug() << "Failed at attempt " << i << "to show the tray icon";
+			}	// hammer loop
+			qDebug() << "Failed to make a valid icon in " << maxtries << "tries.";
+			ui.pushButton_minimize->setDisabled(true);
     } // else
   } //if
   
