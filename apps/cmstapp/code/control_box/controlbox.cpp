@@ -959,6 +959,7 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 				trayicon->setVisible(true);
 				if (trayicon->geometry().left() > 0 && trayicon->geometry().top() > 0) return;
 				qDebug() << "Failed at attempt " << i << "to show the tray icon";
+				trayicon->setVisible(false);
 			}	// hammer loop
 			qDebug() << "Failed to make a valid icon in " << maxtries << "tries.";
 			ui.pushButton_minimize->setDisabled(true);
