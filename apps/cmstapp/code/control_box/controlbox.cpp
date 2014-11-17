@@ -954,14 +954,13 @@ void ControlBox::toggleTrayIcon(bool b_checked)
       ui.pushButton_minimize->setDisabled(false);
 			// QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
 			// maxtries to get a valid icon geometry 
-			const int maxtries = 250;
+			const int maxtries = 125;
 			for (int i = 0; i < maxtries; ++i) {
 				trayicon->setVisible(true);
 				if (trayicon->geometry().left() > 0 && trayicon->geometry().top() > 0) return;
-				qDebug() << "Failed at attempt " << i << "to show the tray icon";
 				trayicon->setVisible(false);
 			}	// hammer loop
-			qDebug() << "Failed to make a valid icon in " << maxtries << "tries.";
+			qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
 			ui.pushButton_minimize->setDisabled(true);
     } // else
   } //if
