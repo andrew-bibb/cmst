@@ -69,13 +69,13 @@ QString ConnmanCounter::getLabel(const QVariantMap& map)
 	const int k_cutoff = 1024 * 1024 * 1.875 ; // size in Bytes to change units from KB to MB
 	const int m_cutoff = 1024 * 1024 * 1024 * 1.875 ; // size in Bytes to change units from MB to GB
 	QString datafield;
-	if (map.value("TX.Bytes").toInt() < b_cutoff )	datafield = QString("%L1 Bytes").arg(map.value("TX.Bytes").toInt());
-	else if (map.value("TX.Bytes").toInt() <  k_cutoff) 																											
-		datafield = QString("%L1 KB").arg(static_cast<double>(map.value("TX.Bytes").toInt()) / (1024), 0, 'f', 1);	
-			else if (map.value("TX.Bytes").toInt() <  m_cutoff) 																											
-				datafield = QString("%L1 MB").arg(static_cast<double>(map.value("TX.Bytes").toInt()) / (1024 * 1024), 0, 'f', 1);	
+	if (map.value("TX.Bytes").toLongLong() < b_cutoff )	datafield = QString("%L1 Bytes").arg(map.value("TX.Bytes").toLongLong());
+	else if (map.value("TX.Bytes").toLongLong() <  k_cutoff) 																											
+		datafield = QString("%L1 KB").arg(static_cast<double>(map.value("TX.Bytes").toLongLong()) / (1024), 0, 'f', 1);	
+			else if (map.value("TX.Bytes").toLongLong() <  m_cutoff) 																											
+				datafield = QString("%L1 MB").arg(static_cast<double>(map.value("TX.Bytes").toLongLong()) / (1024 * 1024), 0, 'f', 1);	
 					else 
-						datafield = QString("%L1 GB").arg(static_cast<double>(map.value("TX.Bytes").toInt()) / (1024 * 1024 * 1024), 0, 'f', 1);	
+						datafield = QString("%L1 GB").arg(static_cast<double>(map.value("TX.Bytes").toLongLong()) / (1024 * 1024 * 1024), 0, 'f', 1);	
 
 	// Create a label with the total number of packets [errors and dropped] sent.
 	QString rtn = tr("<b>Transmit:</b><br>TX Total: %L1 %2 (%3),  TX Errors: %L4 %5,  TX Dropped: %L6 %7")	  \
@@ -88,13 +88,13 @@ QString ConnmanCounter::getLabel(const QVariantMap& map)
 																					.arg(map.value("TX.Dropped").toInt() == 1 ? "Packet" : "Packets")	;
 
 	// Set RX data bytes to Bytes, KB, MB or GB
-	if (map.value("RX.Bytes").toInt() < b_cutoff )	datafield = QString("%L1 Bytes").arg(map.value("RX.Bytes").toInt());
-	else if (map.value("RX.Bytes").toInt() <  k_cutoff) 																											
-		datafield = QString("%L1 KB").arg(static_cast<double>(map.value("RX.Bytes").toInt()) / (1024), 0, 'f', 1);	
-			else if (map.value("RX.Bytes").toInt() <  m_cutoff) 																											
-				datafield = QString("%L1 MB").arg(static_cast<double>(map.value("RX.Bytes").toInt()) / (1024 * 1024), 0, 'f', 1);	
+	if (map.value("RX.Bytes").toLongLong() < b_cutoff )	datafield = QString("%L1 Bytes").arg(map.value("RX.Bytes").toLongLong());
+	else if (map.value("RX.Bytes").toLongLong() <  k_cutoff) 																											
+		datafield = QString("%L1 KB").arg(static_cast<double>(map.value("RX.Bytes").toLongLong()) / (1024), 0, 'f', 1);	
+			else if (map.value("RX.Bytes").toLongLong() <  m_cutoff) 																											
+				datafield = QString("%L1 MB").arg(static_cast<double>(map.value("RX.Bytes").toLongLong()) / (1024 * 1024), 0, 'f', 1);	
 					else 
-						datafield = QString("%L1 GB").arg(static_cast<double>(map.value("RX.Bytes").toInt()) / (1024 * 1024 * 1024), 0, 'f', 1);	
+						datafield = QString("%L1 GB").arg(static_cast<double>(map.value("RX.Bytes").toLongLong()) / (1024 * 1024 * 1024), 0, 'f', 1);	
 
 	// Append to the label the total number of packets [errors and dropped] received.
 	rtn.append(tr("<br><br><b>Received:</b><br>RX Total: %L1 %2 (%3),  RX Errors: %L4 %5,  RX Dropped: %L6 %7") 	\
