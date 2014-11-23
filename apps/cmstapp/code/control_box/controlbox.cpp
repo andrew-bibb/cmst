@@ -1517,7 +1517,7 @@ void ControlBox::assembleTrayIcon()
           stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
           quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
-          if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl00.png")) );
+          if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl100.png")) );
           else {
           if (str > 80 ) trayicon->setIcon(QIcon(":/icons/images/systemtray/wl100.png"));
           else if (str > 60 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl075.png"));
