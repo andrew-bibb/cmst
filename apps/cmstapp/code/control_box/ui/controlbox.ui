@@ -440,12 +440,12 @@
             <x>0</x>
             <y>0</y>
             <width>660</width>
-            <height>371</height>
+            <height>352</height>
            </rect>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <layout class="QVBoxLayout" name="_2">
            <item>
-            <widget class="QLabel" name="label_details_left">
+            <widget class="QLabel" name="label_details_connection">
              <property name="text">
               <string/>
              </property>
@@ -455,11 +455,25 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_details_right">
-             <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-             </property>
-            </widget>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_details_left">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_details_right">
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
          </widget>
