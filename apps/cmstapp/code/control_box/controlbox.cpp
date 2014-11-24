@@ -1044,9 +1044,12 @@ void ControlBox::getServiceDetails(int index)
   //  Some of the QVariants in the map are QMaps themselves, create a data structure for them
   QMap<QString,QVariant> submap;
   
+  // Get a QFileInfo associated with the index
+  QFileInfo fi = services_list.at(index).objpath.path();
+
   //  Start building the string for the left label
   QString rs = tr("<br><b>Service Details:</b><br>");
-  rs.append(tr("Connection: %1<br>").arg(services_list.at(index).objpath.path().baseName()) );
+  rs.append(tr("Connection: %1<br>").arg(fi.baseName()) );
   if (map.value("Name").toString().isEmpty() ) b_editable = false;
   rs.append(tr("Service Type: %1<br>").arg(map.value("Type").toString()) );
   rs.append(tr("Service State: %1<br>").arg(map.value("State").toString()) );
