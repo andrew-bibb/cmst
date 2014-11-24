@@ -1046,7 +1046,7 @@ void ControlBox::getServiceDetails(int index)
   
   // Get a QFileInfo associated with the index and display the connection
   QFileInfo fi = services_list.at(index).objpath.path();
-  QString rs = "Connection: " + fi.baseName();
+  QString rs = tr("Connection: %1".arg(fi.baseName()) );
 
   //  Start building the string for the left label
   rs.append(tr("<br><br><b>Service Details:</b><br>") );
