@@ -19,6 +19,10 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="../../../../../cmst.qrc">
+    <normaloff>:/icons/images/application/cmst.png</normaloff>:/icons/images/application/cmst.png</iconset>
+  </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
@@ -435,8 +439,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>32</height>
+            <width>660</width>
+            <height>371</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -664,8 +668,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
-               <height>46</height>
+               <width>636</width>
+               <height>137</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -720,8 +724,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
-               <height>46</height>
+               <width>636</width>
+               <height>136</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1039,8 +1043,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>412</height>
+            <width>550</width>
+            <height>449</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">

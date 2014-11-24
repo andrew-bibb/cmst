@@ -337,6 +337,7 @@ void ControlBox::aboutIconSet()
           "<br>Attribution-Share Alike 3.0"
           "<br>Unported License"
           "<br><a href=\"url\">http://creativecommons.org/licenses/by-sa/3.0/legalcode</a>"
+          "<br><center>The CMST icon is a derivative work from the AwOken icon set."
                   ) );
 }
 

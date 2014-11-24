@@ -25,7 +25,7 @@ desktop.files = ../../misc/desktop/cmst.desktop
 INSTALLS += desktop
 
 icon.path = /usr/share/icons/hicolor/24x24/apps
-icon.files = ../../misc/desktop/cmst.png
+icon.files = ../../images/application/cmst.png
 INSTALLS += icon
 
 # dbus
