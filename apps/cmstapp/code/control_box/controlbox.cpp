@@ -1376,8 +1376,8 @@ void ControlBox::assemblePage2()
   
     // populate the combobox
     for (int row = 0; row < services_list.size(); ++row) {
-      QFileInfo fi =services_list.at(row).objpath.path();
-      ui.comboBox_service->addItem(fi.baseName() );
+      QString ss  =services_list.at(row).objmap.value("Name").toString();
+      ui.comboBox_service->addItem(ss);
     } // services for loop
       
     ui.comboBox_service->setCurrentIndex(0);
