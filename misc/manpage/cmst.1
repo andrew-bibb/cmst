@@ -34,6 +34,11 @@ create a tray icon before the system tray itself is created a dialog will be dis
 program is started automatically.  If you know the tray will exist once the system is up you may specify a wait time and CMST 
 will wait that number of seconds before trying to create the tray icon.  This is to give the window manager or panel time to create 
 the tray before we try to place the icon there.
+.TP
+\fB--use-xfce\fP
+Use code specific for XFCE.  As of 2014.11.24 there seems to be a problem with QT5.3 and the XFCE system tray.  There is code
+in the program to try and work around this issue.  If the bug gets fixed in QT5.4 (or later) this option will remain so that
+user start up scripts and commands do not break, but it will be a no operation place holder.
 .SH GUI INFO
 The GUI contains one main dialog with separate tab pages.  Program help is mainly provided through a "What's This" interface.
 The "What's This" button in the lower left corner will allow you to enter "What's This" mode, click the button and then

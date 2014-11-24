@@ -166,6 +166,11 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     agent->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
   }
   
+  // set a flag is we want to use XFCE custom code.  
+  // Currently (as of 2014.11.24) this is only used to get around a bug between QT5.3 and the XFCE system tray
+  // Even then the fix may not work, but for now keep it in.  
+  b_usexfce = parser.isSet("use-xfce");
+  
   // my plan is to eventually have these as options called from the command line.  
   wifi_interval = 60;       // number of seconds between wifi scans
   counter_accuracy = 1024;  // number of kb for counter updates
@@ -952,17 +957,22 @@ void ControlBox::toggleTrayIcon(bool b_checked)
       ui.pushButton_minimize->setDisabled(true);
     } // if
     else {
-      ui.pushButton_minimize->setDisabled(false);
 			// QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
-			// maxtries to get a valid icon geometry 
-			const int maxtries = 125;
-			for (int i = 0; i < maxtries; ++i) {
+			// maxtries to get a valid icon geometry
+			if (b_usexfce) { 
+				const int maxtries = 125;
+				for (int i = 0; i < maxtries; ++i) {
+						trayicon->setVisible(true);
+						if (trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) return;
+						trayicon->setVisible(false);
+				}   // hammer loop
+				qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
+				ui.pushButton_minimize->setDisabled(true);
+			}	// if use xfce
+			else {
 				trayicon->setVisible(true);
-				if (trayicon->geometry().left() > 0 && trayicon->geometry().top() > 0) return;
-				trayicon->setVisible(false);
-			}	// hammer loop
-			qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
-			ui.pushButton_minimize->setDisabled(true);
+				ui.pushButton_minimize->setDisabled(false); 
+			}	// else tray icon for everything not xfce 	
     } // else
   } //if
   
@@ -1518,9 +1528,9 @@ void ControlBox::assembleTrayIcon()
           stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
           quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
-          if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl00.png")) );
+          if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl100.png")) );
           else {
-          if (str > 80 ) trayicon->setIcon(QIcon(":/icons/images/systemtray/wl00.png"));
+          if (str > 80 ) trayicon->setIcon(QIcon(":/icons/images/systemtray/wl100.png"));
           else if (str > 60 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl075.png"));
             else if (str > 40 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl050.png"));
               else if (str > 20 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl025.png"));

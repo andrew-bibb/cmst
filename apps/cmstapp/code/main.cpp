@@ -93,9 +93,14 @@ int main(int argc, char *argv[])
   parser.addOption(startMinimized);
     
   parser.addVersionOption();  
-  
+    
   QCommandLineOption waitTime(QStringList() << "w" << "wait-time", QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon (default is 0 seconds)."), QCoreApplication::translate("main.cpp", "wait-time"), "0" );
-  parser.addOption(waitTime);   
+  parser.addOption(waitTime); 
+  
+  // Added on 2014.11.24 to work around a bug where QT5.3 won't show an icon in XFCE,  My fix may not work, but keep it in for now.  If this gets fixed in 
+  // QT5.4 keep the command line option so users start up commands don't break, but make it a NOP. 
+  QCommandLineOption useXFCE(QStringList() << "use-xfce", QCoreApplication::translate("main.cpp", "Use XFCE specific code.") );
+  parser.addOption(useXFCE);    
      
   #ifdef USE_TRANSLATIONS
    QTranslator qtTranslator;

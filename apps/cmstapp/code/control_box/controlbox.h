@@ -180,6 +180,7 @@ class ControlBox : public QDialog
     QAction* maximizeAction;
     QAction* exitAction;
     bool b_useicontheme;
+    bool b_usexfce;
     QMenu* mvsrv_menu;
     QSettings* settings;
     QString onlineobjectpath;
