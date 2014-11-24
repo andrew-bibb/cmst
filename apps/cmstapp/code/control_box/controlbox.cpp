@@ -1046,10 +1046,10 @@ void ControlBox::getServiceDetails(int index)
   
   // Get a QFileInfo associated with the index and display the connection
   QFileInfo fi = services_list.at(index).objpath.path();
-  QString rs = tr("Connection: %1".arg(fi.baseName()) );
+  ui.label_details_connection->setText(tr("<b>Connection:</b> %1").arg(fi.baseName()) );
 
   //  Start building the string for the left label
-  rs.append(tr("<br><br><b>Service Details:</b><br>") );
+  QString rs = tr("<br><b>Service Details:</b><br>");
   if (map.value("Name").toString().isEmpty() ) b_editable = false;
   rs.append(tr("Service Type: %1<br>").arg(map.value("Type").toString()) );
   rs.append(tr("Service State: %1<br>").arg(map.value("State").toString()) );
@@ -1093,7 +1093,7 @@ void ControlBox::getServiceDetails(int index)
   ui.label_details_left->setText(rs);
   
   // Start building the stringfortherightlabel
-  rs = tr("<br><br><b>Name Servers</b><br>");
+  rs = tr("<br><b>Name Servers</b><br>");
   rs.append(map.value("Nameservers").toStringList().join("<br>") );
   
   rs.append(tr("<br><br><b>Time Servers</b><br>  "));
