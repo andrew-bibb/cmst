@@ -1046,7 +1046,7 @@ void ControlBox::getServiceDetails(int index)
   
   //  Start building the string for the left label
   QString rs = tr("<br><b>Service Details:</b><br>");
-  rs.append(tr("Service Name: %1<br>").arg(map.value("Name").toString()) );
+  rs.append(tr("Connection: %1<br>").arg(services_list.at(index).objpath.path().baseName()) );
   if (map.value("Name").toString().isEmpty() ) b_editable = false;
   rs.append(tr("Service Type: %1<br>").arg(map.value("Type").toString()) );
   rs.append(tr("Service State: %1<br>").arg(map.value("State").toString()) );
@@ -1376,7 +1376,7 @@ void ControlBox::assemblePage2()
   
     // populate the combobox
     for (int row = 0; row < services_list.size(); ++row) {
-      QString ss  =services_list.at(row).objmap.value("Name").toString();
+      QString ss = services_list.at(row).objmap.value("Name").toString();
       ui.comboBox_service->addItem(ss);
     } // services for loop
       
