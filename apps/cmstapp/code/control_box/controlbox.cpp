@@ -957,7 +957,6 @@ void ControlBox::toggleTrayIcon(bool b_checked)
       ui.pushButton_minimize->setDisabled(true);
     } // if
     else {
-<<<<<<< HEAD
 			// QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
 			// maxtries to get a valid icon geometry
 			if (b_usexfce) { 
@@ -974,19 +973,6 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 				trayicon->setVisible(true);
 				ui.pushButton_minimize->setDisabled(false); 
 			}	// else tray icon for everything not xfce 	
-=======
-      ui.pushButton_minimize->setDisabled(false);
-            // QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
-            // maxtries to get a valid icon geometry 
-            const int maxtries = 125;
-            for (int i = 0; i < maxtries; ++i) {
-                trayicon->setVisible(true);
-                if (trayicon->geometry().left() >= 0 && trayicon->geometry().top() >= 0) return;
-                trayicon->setVisible(false);
-            }   // hammer loop
-            qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
-            ui.pushButton_minimize->setDisabled(true);
->>>>>>> 2f0d6a9203e189f5fe896045e58db714aeba9b55
     } // else
   } //if
   
