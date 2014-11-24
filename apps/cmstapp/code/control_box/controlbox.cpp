@@ -952,16 +952,16 @@ void ControlBox::toggleTrayIcon(bool b_checked)
     } // if
     else {
       ui.pushButton_minimize->setDisabled(false);
-			// QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
-			// maxtries to get a valid icon geometry 
-			const int maxtries = 125;
-			for (int i = 0; i < maxtries; ++i) {
-				trayicon->setVisible(true);
-				if (trayicon->geometry().left() > 0 && trayicon->geometry().top() > 0) return;
-				trayicon->setVisible(false);
-			}	// hammer loop
-			qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
-			ui.pushButton_minimize->setDisabled(true);
+            // QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
+            // maxtries to get a valid icon geometry 
+            const int maxtries = 125;
+            for (int i = 0; i < maxtries; ++i) {
+                trayicon->setVisible(true);
+                if (trayicon->geometry().left() >= 0 && trayicon->geometry().top() >= 0) return;
+                trayicon->setVisible(false);
+            }   // hammer loop
+            qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
+            ui.pushButton_minimize->setDisabled(true);
     } // else
   } //if
   
@@ -1517,9 +1517,9 @@ void ControlBox::assembleTrayIcon()
           stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
           quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
-          if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl00.png")) );
+          if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl100.png")) );
           else {
-          if (str > 80 ) trayicon->setIcon(QIcon(":/icons/images/systemtray/wl00.png"));
+          if (str > 80 ) trayicon->setIcon(QIcon(":/icons/images/systemtray/wl100.png"));
           else if (str > 60 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl075.png"));
             else if (str > 40 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl050.png"));
               else if (str > 20 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl025.png"));
