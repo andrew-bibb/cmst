@@ -1,0 +1,4 @@
+Program icons are located in the ./variations subdirectory.  
+
+To build one into the program either copy or symlink the icon you wish
+to use into this directory and call it: cmst.png

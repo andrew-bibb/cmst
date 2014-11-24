@@ -1,6 +1,12 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<br>2014.11.18</br>
+<br><b>2014.11.24</b>
+<ul>
+<li>Added CMST icon.</li>
+<li>Added --use-xfce command line option.  Code for XFCE that breaks KDE now must be called with this option.</li>
+</ul>
+<br>
+<br><b>2014.11.18</b>
 <ul>
 <li>Removed incorrect validator from Properties Editor domains field.</li>
 <li>Provisioning Editor to create and edit Connman service configuration files.</li>
