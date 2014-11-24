@@ -457,17 +457,17 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_7">
              <item>
-              <widget class="QLabel" name="label_details_right">
+              <widget class="QLabel" name="label_details_left">
+               <property name="text">
+                <string/>
+               </property>
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_details_left">
-               <property name="text">
-                <string/>
-               </property>
+              <widget class="QLabel" name="label_details_right">
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                </property>
