@@ -7,6 +7,7 @@
   </qresource>
   <qresource prefix="translations">
     <file>translations/cmst_ru_RU.qm</file>
+    <file>translations/cmst_en_US.qm</file>
   </qresource>
   <qresource prefix="icons">
     <file>images/systemtray/connect_creating.png</file>
