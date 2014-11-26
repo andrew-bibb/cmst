@@ -328,7 +328,8 @@ void ControlBox::aboutCMST()
                   "<center>Andrew J. Bibb\n"
                   "<center>Vermont, USA\n"
                   "<br><center><b>Contributors:</b>\n"
-                  "<center>Brett Dutro").arg(PROGRAM_NAME).arg(VERSION).arg(RELEASE_DATE).arg(COPYRIGHT_DATE) );
+                  "<center>Brett Dutro"
+                  "<center>Adam Fontenot").arg(PROGRAM_NAME).arg(VERSION).arg(RELEASE_DATE).arg(COPYRIGHT_DATE) );
 }
 
 //
@@ -399,7 +400,6 @@ void ControlBox::moveService(QAction* act)
   QDBusObjectPath targetobj;
   for (int i = 0; i < services_list.size(); ++i) {
     ss = services_list.at(i).objmap.value("Name").toString();
-    ss = ss.replace(0, 1, ss.left(1).toUpper() );
     // the items in mvsrv_menu are in the same order as services_list
     if (ss == act->text() ) {
       targetobj = QDBusObjectPath(services_list.at(i).objpath.path());
@@ -457,7 +457,6 @@ void ControlBox::enableMoveButtons(int row, int col)
   QString ss;
   for (int i = 0; i < services_list.size(); ++i) {
     ss = services_list.at(i).objmap.value("Name").toString();
-    ss = ss.replace(0, 1, ss.left(1).toUpper() );
     QAction* act = mvsrv_menu->addAction(ss);
     if (i == row) act->setDisabled(true);
     }
@@ -627,11 +626,8 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
     if (services_list.count() > 0 ) {
         QMap<QString,QVariant> map = services_list.at(0).objmap;
         type = services_list.at(0).objmap.value("Type").toString();
-        type = type.replace(0, 1, type.left(1).toUpper() );
         name = services_list.at(0).objmap.value("Name").toString();
-        name = name.replace(0, 1, name.left(1).toUpper() );
         state = services_list.at(0).objmap.value("State").toString();
-        state = state.replace(0, 1, state.left(1).toUpper() );
     
       // notification text and icons
       if (type.contains("wifi", Qt::CaseInsensitive)) {
@@ -1223,7 +1219,6 @@ void ControlBox::assemblePage1()
   // Global Properties
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) { 
     QString s1 = properties_map.value("State").toString();
-    s1 = s1.replace(0, 1, s1.left(1).toUpper() );
     if (s1.contains("online", Qt::CaseInsensitive)) {
       b_useicontheme ?
         ui.label_state_pix->setPixmap(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/interface/connect_established.png")).pixmap(QSize(16,16)) ) :
@@ -1270,17 +1265,12 @@ void ControlBox::assemblePage1()
     
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       st = technologies_list.at(row).objmap.value("Name").toString();
-      st = st.replace(0, 1, st.left(1).toUpper() );
       qtwi00->setText(st);
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 0, qtwi00) ;
       
       QTableWidgetItem* qtwi01 = new QTableWidgetItem();
       st = technologies_list.at(row).objmap.value("Type").toString();
-      if (st.contains("p2p", Qt::CaseInsensitive))
-        st = st.toUpper();
-      else
-        st = st.replace(0, 1, st.left(1).toUpper() );
       qtwi01->setText(st);
       qtwi01->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 1, qtwi01);
@@ -1328,14 +1318,12 @@ void ControlBox::assemblePage1()
       
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       ss = services_list.at(row).objmap.value("Name").toString();
-      ss = ss.replace(0, 1, ss.left(1).toUpper() );
       qtwi00->setText(ss);
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_services->setItem(row, 0, qtwi00);   
       
       QTableWidgetItem* qtwi01 = new QTableWidgetItem();
       ss = services_list.at(row).objmap.value("State").toString();
-      ss = ss.replace(0, 1, ss.left(1).toUpper() );
       qtwi01->setText(ss);
       qtwi01->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_services->setItem(row, 1, qtwi01);
@@ -1454,8 +1442,7 @@ void ControlBox::assemblePage3()
         } // else any other state
       } // else ready or any other state
       ql02->setAlignment(Qt::AlignCenter);
-      QString s2 = map.value("State").toString();
-      ql02->setToolTip(s2.replace(0, 1, s2.left(1).toUpper()) );
+      ql02->setToolTip(map.value("State").toString());
       ui.tableWidget_wifi->setCellWidget(rowcount, 2, ql02);      
       
       QTableWidgetItem* qtwi03 = new QTableWidgetItem();
@@ -1799,6 +1786,19 @@ bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg
     arrayElement ael;
     qdb_arg.beginStructure();
     qdb_arg >> ael.objpath >> ael.objmap;
+    // iterate over the objmap and replace connman text with translated text
+    QMapIterator<QString, QVariant> itr(ael.objmap);
+    while (itr.hasNext()) {
+			itr.next();
+			if (itr.value().canConvert(QMetaType::QString)) ael.objmap.insert(itr.key(), QVariant::fromValue(cmtr(itr.value().toString())) );
+			if (itr.value().canConvert(QMetaType::QStringList)) {
+				QStringList sl = itr.value().toStringList();
+				for (int i = 0; i < sl.size(); ++i) {
+					sl.replace(i, cmtr(sl.at(i)) );
+				}	// stringlist loop
+				ael.objmap.insert(itr.key(), QVariant::fromValue(sl) );
+			}	// if value was a stringlist
+		}	// map iterator	
     qdb_arg.endStructure();
     r_list.append (ael);
     }
@@ -1834,6 +1834,8 @@ bool ControlBox::getMap(QMap<QString,QVariant>& r_map, const QDBusMessage& r_msg
     QVariant value;
     qdb_arg.beginMapEntry();
     qdb_arg >> key >> value;
+    // store translated text (if some exists)
+    if (value.canConvert(QMetaType::QString)) value = QVariant::fromValue(cmtr(value.toString()) );
     qdb_arg.endMapEntry();
     r_map.insert(key, value);
   }
@@ -1961,6 +1963,38 @@ void ControlBox::clearCounters()
 }
 
 //
+// Function to allow translations of strings returned by Connman. 
+QString ControlBox::cmtr(const QString& instr)
+{
+	if (instr.contains("idle", Qt::CaseInsensitive) ) return tr("idle", "connman state string");
+	else if (instr.contains("association", Qt::CaseInsensitive) ) return tr("association", "connman state string");
+		else if (instr.contains("configuration", Qt::CaseInsensitive) ) return tr("configuration", "connman state string");
+			else if (instr.contains("ready", Qt::CaseInsensitive) ) return tr("ready", "connman state string");
+				else if (instr.contains("online", Qt::CaseInsensitive) ) return tr("online", "connman state string");
+					else if (instr.contains("disconnect", Qt::CaseInsensitive) ) return tr("disconnect", "connman state string");
+						else if (instr.contains("failure", Qt::CaseInsensitive) ) return tr("failure", "connman state string");	
+								
+							else if (instr.contains("system", Qt::CaseInsensitive) ) return tr("system", "connman type string");
+								else if (instr.contains("ethernet", Qt::CaseInsensitive) ) return tr("ethernet", "connman type string");
+									else if (instr.contains("wifi", Qt::CaseInsensitive) ) return tr("wifi", "connman type string");
+										else if (instr.contains("bluetooth", Qt::CaseInsensitive) ) return tr("bluetooth", "connman type string");
+											else if (instr.contains("cellular", Qt::CaseInsensitive) ) return tr("cellular", "connman type string");
+												else if (instr.contains("gps", Qt::CaseInsensitive) ) return tr("gps", "connman type string");
+													else if (instr.contains("vpn", Qt::CaseInsensitive) ) return tr("vpn", "connman type string");
+														else if (instr.contains("gadget", Qt::CaseInsensitive) ) return tr("gadget", "connman type string");
+															else if (instr.contains("p2p", Qt::CaseInsensitive) ) return tr("p2p", "connman type string");		
+																else if (instr.contains("wired", Qt::CaseInsensitive) ) return tr("wired", "connman type string");																												
+														
+																	else if (instr.contains("direct", Qt::CaseInsensitive) ) return tr("direct", "connman proxy string");
+																		else if (instr.contains("manual", Qt::CaseInsensitive) ) return tr("manual", "connman proxy string");
+																			else if (instr.contains("auto", Qt::CaseInsensitive) ) return tr("auto", "connman proxy string");
+																				else if (instr.contains("psk", Qt::CaseInsensitive) ) return tr("psk", "connman security string");
+																					else if (instr.contains("ieee8021x", Qt::CaseInsensitive) ) return tr("ieee8021x", "connman security string");
+																						else if (instr.contains("none", Qt::CaseInsensitive) ) return tr("none", "connman security string");
+																							else if (instr.contains("wep", Qt::CaseInsensitive) ) return tr("wep", "connman security string");												
+	return instr; 
+}
+
 // Slot to connect to the notification client. Called from QTimers to give time for the notification server
 // to start up if this program is started automatically at boot.  We make four attempts at finding the
 // notification server.  First is in the constructor of NotifyClient, following we call the connectToServer()

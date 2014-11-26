@@ -204,6 +204,7 @@ class ControlBox : public QDialog
     void logErrors(const quint8&);
     QString readResourceText(const char*);
     void clearCounters();
+    QString cmtr(const QString&);
 
   private slots:
     void updateDisplayWidgets();
