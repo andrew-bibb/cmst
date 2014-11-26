@@ -171,11 +171,12 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // Even then the fix may not work, but for now keep it in.  
   b_usexfce = parser.isSet("use-xfce");
   
-  // my plan is to eventually have these as options called from the command line.  
-  wifi_interval = 60;       // number of seconds between wifi scans
-  counter_accuracy = 1024;  // number of kb for counter updates
-  counter_period = 10;      // number of seconds for counter updates
-
+  // set counter update params from command line options if available
+  // otherwise, default params specified in main.cpp are used
+  wifi_interval = parser.value("wifi-scan-rate").toUInt(); // number of seconds between wifi scans
+  counter_accuracy = parser.value("counter-update-kb").toUInt(); // number of kb for counter updates
+  counter_period = parser.value("counter-update-rate").toUInt(); // number of seconds for counter updates
+  
   // connect counter signal to the counterUpdated slot before we register the counter, assuming counters are not disabled
   if (! parser.isSet("disable-counters"))
     connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
