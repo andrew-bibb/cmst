@@ -9,12 +9,15 @@ QT += widgets
 QT += dbus
 QT += network
 
+# cmst variables
+include(../../cmst.pri)
+
 TEMPLATE = app
 TARGET = cmst
 target.path = /usr/bin
 INSTALLS += target
 
-documentation.path = /usr/share/man/man1
+documentation.path = $$CMST_DOC_PATH
 documentation.files = ../../misc/manpage/cmst.1.gz
 documentation.CONFIG = no_check_exist
 documentation.extra = gzip --keep --force ../../misc/manpage/cmst.1
