@@ -1382,13 +1382,22 @@ void ControlBox::assemblePage2()
 //  Function to assemble page 3 of the dialog.
 void ControlBox::assemblePage3()
 {
+  // Get current table position so that we can return to it after the scan.
+  QString current_item;
+  QList<QTableWidgetItem*> list;
+  list.clear();
+  list = ui.tableWidget_wifi->selectedItems();
+  if (!list.isEmpty()) {
+      current_item = wifi_list.at(list.at(0)->row()).objpath.path();
+  }
+
   //  initilize the table
   ui.tableWidget_wifi->clearContents();
   int rowcount=0;
   
   // Make sure we got the services_list before we try to work with it.  
   if ( (q8_errors & CMST::Err_Services) != 0x00 ) return;
-  
+ 
   // Run through the technologies again, this time only look for wifi
   if ( (q8_errors & CMST::Err_Technologies) == 0x00 ) {
     int i_wifidevices= 0;
@@ -1469,7 +1478,18 @@ void ControlBox::assemblePage3()
   ui.pushButton_connect->setEnabled(b_enable);
   ui.pushButton_disconnect->setEnabled(b_enable);
   ui.pushButton_remove->setEnabled(b_enable);
-  
+ 
+  // select entry in table that was selected before refresh if it's still available
+  if (!list.isEmpty()) {
+    for (int row = 0; row < ui.tableWidget_wifi->rowCount(); row++) {
+      QString path_string = wifi_list.at(row).objpath.path();
+      if (path_string == current_item) {
+        QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row, 0, row, ui.tableWidget_wifi->columnCount() - 1);
+        ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
+      }
+    }
+  }
+
   return;
 } 
 
