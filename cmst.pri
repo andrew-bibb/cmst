@@ -13,5 +13,5 @@ isEmpty ( CMST_LIB_PATH ) {
 # define a path for the man page
 CMST_DOC_PATH = $$(USE_MANPATH)
 isEmpty ( CMST_DOC_PATH ) {
-	CMST_DOC_PATH = "/usr/share/man/man1"
+	CMST_DOC_PATH = "/usr/share/man"
 }

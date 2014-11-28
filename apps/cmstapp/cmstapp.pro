@@ -17,7 +17,7 @@ TARGET = cmst
 target.path = /usr/bin
 INSTALLS += target
 
-documentation.path = $$CMST_DOC_PATH
+documentation.path = $$CMST_DOC_PATH/man1
 documentation.files = ../../misc/manpage/cmst.1.gz
 documentation.CONFIG = no_check_exist
 documentation.extra = gzip --keep --force ../../misc/manpage/cmst.1
