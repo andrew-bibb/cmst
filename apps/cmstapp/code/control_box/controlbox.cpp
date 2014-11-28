@@ -1113,7 +1113,7 @@ void ControlBox::getServiceDetails(int index)
   QList<QString>::iterator i;
   for (i = sec_words.begin(); i != sec_words.end(); ++i)
       *i = cmtr(*i);
-  rs.append(tr("Security: %1<br>").arg(sec_words.join(', ')) );
+  rs.append(tr("Security: %1<br>").arg(sec_words.join(", ")) );
   if (! map.value("Strength").toString().isEmpty() ) rs.append(tr("Strength: %1<br>").arg(map.value("Strength").value<quint8>()) );
   rs.append(tr("Roaming: %1<br>").arg(map.value("Roaming").toBool() ? tr("Yes", "roaming") : tr("No", "roaming")) );
   
@@ -1459,7 +1459,7 @@ void ControlBox::assemblePage3()
       QList<QString>::iterator i;
       for (i = sec_words.begin(); i != sec_words.end(); ++i)
           *i = cmtr(*i);
-      qtwi03->setText(sec_words.join(', ') );
+      qtwi03->setText(sec_words.join(", ") );
       qtwi03->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_wifi->setItem(rowcount, 3, qtwi03);      
          
@@ -1532,7 +1532,7 @@ void ControlBox::assembleTrayIcon()
           QList<QString>::iterator qli;
           for (qli = sec_words.begin(); qli != sec_words.end(); ++qli)
               *qli = cmtr(*qli);
-          stt.append(tr("Security: %1<br>").arg(sec_words.join(', ')) );
+          stt.append(tr("Security: %1<br>").arg(sec_words.join(", ")) );
           stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
           quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
