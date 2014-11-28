@@ -96,7 +96,16 @@ int main(int argc, char *argv[])
     
   QCommandLineOption waitTime(QStringList() << "w" << "wait-time", QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon (default is 0 seconds)."), QCoreApplication::translate("main.cpp", "wait-time"), "0" );
   parser.addOption(waitTime); 
-  
+
+  QCommandLineOption wifiScanRate(QStringList() << "r" << "wifi-scan-rate", QCoreApplication::translate("main.cpp", "Specific the interval in seconds to scan the wifi for connections (default: 60 seconds)"), QCoreApplication::translate("main.cpp", "wifi-scan-rate"), "60" );
+  parser.addOption(wifiScanRate);
+
+  QCommandLineOption counterUpdateKb (QStringList() << "counter-update-kb", QCoreApplication::translate("main.cpp", "Specify the number of kb that have to be transmitted before the counter updates (default: 1024)"), QCoreApplication::translate("main.cpp", "counter-update-kb"), "1024" );
+  parser.addOption(counterUpdateKb);
+
+  QCommandLineOption counterUpdateRate (QStringList() << "counter-update-rate", QCoreApplication::translate("main.cpp", "Specific the interval in seconds between counter updates (default: 10 seconds)"), QCoreApplication::translate("main.cpp", "counter-update-rate"), "10" );
+  parser.addOption(counterUpdateRate);
+
   // Added on 2014.11.24 to work around a bug where QT5.3 won't show an icon in XFCE,  My fix may not work, but keep it in for now.  If this gets fixed in 
   // QT5.4 keep the command line option so users start up commands don't break, but make it a NOP. 
   QCommandLineOption useXFCE(QStringList() << "use-xfce", QCoreApplication::translate("main.cpp", "Use XFCE specific code.") );

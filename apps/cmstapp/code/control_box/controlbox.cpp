@@ -171,11 +171,12 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // Even then the fix may not work, but for now keep it in.  
   b_usexfce = parser.isSet("use-xfce");
   
-  // my plan is to eventually have these as options called from the command line.  
-  wifi_interval = 60;       // number of seconds between wifi scans
-  counter_accuracy = 1024;  // number of kb for counter updates
-  counter_period = 10;      // number of seconds for counter updates
-
+  // set counter update params from command line options if available
+  // otherwise, default params specified in main.cpp are used
+  wifi_interval = parser.value("wifi-scan-rate").toUInt(); // number of seconds between wifi scans
+  counter_accuracy = parser.value("counter-update-kb").toUInt(); // number of kb for counter updates
+  counter_period = parser.value("counter-update-rate").toUInt(); // number of seconds for counter updates
+  
   // connect counter signal to the counterUpdated slot before we register the counter, assuming counters are not disabled
   if (! parser.isSet("disable-counters"))
     connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
@@ -1389,13 +1390,22 @@ void ControlBox::assemblePage2()
 //  Function to assemble page 3 of the dialog.
 void ControlBox::assemblePage3()
 {
+  // Get current table position so that we can return to it after the scan.
+  QString current_item;
+  QList<QTableWidgetItem*> list;
+  list.clear();
+  list = ui.tableWidget_wifi->selectedItems();
+  if (!list.isEmpty()) {
+      current_item = wifi_list.at(list.at(0)->row()).objpath.path();
+  }
+
   //  initilize the table
   ui.tableWidget_wifi->clearContents();
   int rowcount=0;
   
   // Make sure we got the services_list before we try to work with it.  
   if ( (q8_errors & CMST::Err_Services) != 0x00 ) return;
-  
+ 
   // Run through the technologies again, this time only look for wifi
   if ( (q8_errors & CMST::Err_Technologies) == 0x00 ) {
     int i_wifidevices= 0;
@@ -1476,7 +1486,18 @@ void ControlBox::assemblePage3()
   ui.pushButton_connect->setEnabled(b_enable);
   ui.pushButton_disconnect->setEnabled(b_enable);
   ui.pushButton_remove->setEnabled(b_enable);
-  
+ 
+  // select entry in table that was selected before refresh if it's still available
+  if (!list.isEmpty()) {
+    for (int row = 0; row < ui.tableWidget_wifi->rowCount(); row++) {
+      QString path_string = wifi_list.at(row).objpath.path();
+      if (path_string == current_item) {
+        QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row, 0, row, ui.tableWidget_wifi->columnCount() - 1);
+        ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
+      }
+    }
+  }
+
   return;
 } 
 
