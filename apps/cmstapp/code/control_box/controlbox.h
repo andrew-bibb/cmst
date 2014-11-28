@@ -205,6 +205,7 @@ class ControlBox : public QDialog
     QString readResourceText(const char*);
     void clearCounters();
     static QString cmtr(const QString&);
+    static QVariant translateVariant(const QVariant&);
 
   private slots:
     void updateDisplayWidgets();

@@ -595,10 +595,8 @@ void ControlBox::removePressed()
 //  Slot called whenever DBUS issues a PropertyChanged signal
 void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 {
-  QVariant value = dbvalue.variant();
-  
   // update propertiesMap
-  properties_map.insert(name, value);
+  properties_map.insert(name, translateVariant(dbvalue.variant()) );
   
   // refresh display widgets
   updateDisplayWidgets();
@@ -606,7 +604,7 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
   // offlinemode property
   if (name.contains("OfflineMode", Qt::CaseInsensitive) ) {
     notifyclient->init();
-    if (value.toBool()) {
+    if (dbvalue.variant().toBool()) {
       notifyclient->setSummary(tr("Offline Mode Engaged"));
       notifyclient->setIcon(":/icons/images/interface/golfball_green.png");
     }
@@ -696,7 +694,7 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
         QMapIterator<QString, QVariant> itr(revised_element.objmap);
         while (itr.hasNext()) {
           itr.next();
-          original_element.objmap.insert(itr.key(), itr.value());
+          original_element.objmap.insert(itr.key(), translateVariant(itr.value()) );
         } // while
         
         // now insert the element into the revised list
@@ -751,7 +749,7 @@ void ControlBox::dbsPeersChanged(QMap<QString, QVariant> vmap, QList<QDBusObject
         QMapIterator<QString, QVariant> itr(revised_element.objmap);
         while (itr.hasNext()) {
           itr.next();
-          original_element.objmap.insert(itr.key(), itr.value());
+          original_element.objmap.insert(itr.key(), translateVariant(itr.value()) );
         } // while
         
         // now insert the element into the revised list
@@ -787,6 +785,14 @@ void ControlBox::dbsPeersChanged(QMap<QString, QVariant> vmap, QList<QDBusObject
 // we don't already have from getTechnologies.
 void ControlBox::dbsTechnologyAdded(QDBusObjectPath path, QVariantMap properties)
 {
+	// iterate over the properties map and replace connman text with translated text
+	QMapIterator<QString, QVariant> itr(properties);
+	while (itr.hasNext()) {
+		itr.next();
+		properties.insert(itr.key(), translateVariant(itr.value()));
+	}	// map iterator	
+	
+	// construct an arrayElement 
   arrayElement ae = {path, properties};
   bool newelem = true;
 
@@ -832,7 +838,7 @@ void ControlBox::dbsTechnologyRemoved(QDBusObjectPath removed)
 void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalue, QDBusMessage msg)
 {
   QString s_path = msg.path();
-  QVariant value = dbvalue.variant();
+  QVariant value = translateVariant(dbvalue.variant() );
   QString s_state;
 
   // replace the old values with the changed ones.
@@ -884,7 +890,7 @@ void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue
     if (s_path.contains(technologies_list.at(i).objpath.path(), Qt::CaseSensitive) ) {
       QMap<QString,QVariant> map = technologies_list.at(i).objmap;
       map.remove(name);
-      map.insert(name, dbvalue.variant() );
+      map.insert(name, translateVariant(dbvalue.variant()) );
       arrayElement ae = {technologies_list.at(i).objpath, map};
       technologies_list.replace(i, ae);
       break;
@@ -1788,19 +1794,14 @@ bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg
     arrayElement ael;
     qdb_arg.beginStructure();
     qdb_arg >> ael.objpath >> ael.objmap;
+    
     // iterate over the objmap and replace connman text with translated text
     QMapIterator<QString, QVariant> itr(ael.objmap);
     while (itr.hasNext()) {
 			itr.next();
-			if (itr.value().canConvert(QMetaType::QString)) ael.objmap.insert(itr.key(), QVariant::fromValue(cmtr(itr.value().toString())) );
-			if (itr.value().canConvert(QMetaType::QStringList)) {
-				QStringList sl = itr.value().toStringList();
-				for (int i = 0; i < sl.size(); ++i) {
-					sl.replace(i, cmtr(sl.at(i)) );
-				}	// stringlist loop
-				ael.objmap.insert(itr.key(), QVariant::fromValue(sl) );
-			}	// if value was a stringlist
+			ael.objmap.insert(itr.key(), translateVariant(itr.value()));
 		}	// map iterator	
+    
     qdb_arg.endStructure();
     r_list.append (ael);
     }
@@ -1838,14 +1839,7 @@ bool ControlBox::getMap(QMap<QString,QVariant>& r_map, const QDBusMessage& r_msg
     qdb_arg >> key >> value;
     
 		// store translated text (if some exists)    
-		if (value.canConvert(QMetaType::QString)) value = QVariant::fromValue(cmtr(value.toString()) );
-		if (value.canConvert(QMetaType::QStringList)) {
-			QStringList sl = value.toStringList();
-			for (int i = 0; i < sl.size(); ++i) {
-				sl.replace(i, cmtr(sl.at(i)) );
-			}	// stringlist loop
-			value = QVariant::fromValue(sl);
-		}	// if value was a stringlist   
+		value = translateVariant(value);  
 		   
     qdb_arg.endMapEntry();
     r_map.insert(key, value);
@@ -1887,14 +1881,7 @@ bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r
       qdba >> key >> value;
       
 			// store translated text (if some exists)    
-			if (value.canConvert(QMetaType::QString)) value = QVariant::fromValue(cmtr(value.toString()) );
-			if (value.canConvert(QMetaType::QStringList)) {
-				QStringList sl = value.toStringList();
-				for (int i = 0; i < sl.size(); ++i) {
-					sl.replace(i, cmtr(sl.at(i)) );
-				}	// stringlist loop
-				value = QVariant::fromValue(sl);
-			}	// if value was a stringlist
+			value = translateVariant(value);  
 			       
       qdba.endMapEntry();
       r_map.insert(key, value);
@@ -1995,27 +1982,46 @@ QString ControlBox::cmtr(const QString& instr)
 				else if (instr.contains("online", Qt::CaseInsensitive) ) return tr("online", "connman state string");
 					else if (instr.contains("disconnect", Qt::CaseInsensitive) ) return tr("disconnect", "connman state string");
 						else if (instr.contains("failure", Qt::CaseInsensitive) ) return tr("failure", "connman state string");	
+							else if (instr.contains("offline", Qt::CaseInsensitive) ) return tr("offline", "connman state string");
 								
-							else if (instr.contains("system", Qt::CaseInsensitive) ) return tr("system", "connman type string");
-								else if (instr.contains("ethernet", Qt::CaseInsensitive) ) return tr("ethernet", "connman type string");
-									else if (instr.contains("wifi", Qt::CaseInsensitive) ) return tr("wifi", "connman type string");
-										else if (instr.contains("bluetooth", Qt::CaseInsensitive) ) return tr("bluetooth", "connman type string");
-											else if (instr.contains("cellular", Qt::CaseInsensitive) ) return tr("cellular", "connman type string");
-												else if (instr.contains("gps", Qt::CaseInsensitive) ) return tr("gps", "connman type string");
-													else if (instr.contains("vpn", Qt::CaseInsensitive) ) return tr("vpn", "connman type string");
-														else if (instr.contains("gadget", Qt::CaseInsensitive) ) return tr("gadget", "connman type string");
-															else if (instr.contains("p2p", Qt::CaseInsensitive) ) return tr("p2p", "connman type string");		
-																else if (instr.contains("wired", Qt::CaseInsensitive) ) return tr("wired", "connman type string");																												
+								else if (instr.contains("system", Qt::CaseInsensitive) ) return tr("system", "connman type string");
+									else if (instr.contains("ethernet", Qt::CaseInsensitive) ) return tr("ethernet", "connman type string");
+										else if (instr.contains("wifi", Qt::CaseInsensitive) ) return tr("wifi", "connman type string");
+											else if (instr.contains("bluetooth", Qt::CaseInsensitive) ) return tr("bluetooth", "connman type string");
+												else if (instr.contains("cellular", Qt::CaseInsensitive) ) return tr("cellular", "connman type string");
+													else if (instr.contains("gps", Qt::CaseInsensitive) ) return tr("gps", "connman type string");
+														else if (instr.contains("vpn", Qt::CaseInsensitive) ) return tr("vpn", "connman type string");
+															else if (instr.contains("gadget", Qt::CaseInsensitive) ) return tr("gadget", "connman type string");
+																else if (instr.contains("p2p", Qt::CaseInsensitive) ) return tr("p2p", "connman type string");		
+																	else if (instr.contains("wired", Qt::CaseInsensitive) ) return tr("wired", "connman type string");																												
 														
-																	else if (instr.contains("direct", Qt::CaseInsensitive) ) return tr("direct", "connman proxy string");
-																		else if (instr.contains("manual", Qt::CaseInsensitive) ) return tr("manual", "connman proxy string");
-																			else if (instr.contains("auto", Qt::CaseInsensitive) ) return tr("auto", "connman proxy string");
-																				else if (instr.contains("psk", Qt::CaseInsensitive) ) return tr("psk", "connman security string");
-																					else if (instr.contains("ieee8021x", Qt::CaseInsensitive) ) return tr("ieee8021x", "connman security string");
-																						else if (instr.contains("none", Qt::CaseInsensitive) ) return tr("none", "connman security string");
-																							else if (instr.contains("wep", Qt::CaseInsensitive) ) return tr("wep", "connman security string");												
+																		else if (instr.contains("direct", Qt::CaseInsensitive) ) return tr("direct", "connman proxy string");
+																			else if (instr.contains("manual", Qt::CaseInsensitive) ) return tr("manual", "connman proxy string");
+																				else if (instr.contains("auto", Qt::CaseInsensitive) ) return tr("auto", "connman proxy string");
+																					else if (instr.contains("psk", Qt::CaseInsensitive) ) return tr("psk", "connman security string");
+																						else if (instr.contains("ieee8021x", Qt::CaseInsensitive) ) return tr("ieee8021x", "connman security string");
+																							else if (instr.contains("none", Qt::CaseInsensitive) ) return tr("none", "connman security string");
+																								else if (instr.contains("wep", Qt::CaseInsensitive) ) return tr("wep", "connman security string");												
 	return instr; 
 }
+
+//
+// Function to translate any QStrings or QStringlists inside a variant.  Called from
+// various dbs__ slots and get__ functions
+QVariant ControlBox::translateVariant(const QVariant& value)
+{
+	// if value contains a QString or QStringList try to translate it
+	if (value.canConvert(QMetaType::QString)) return QVariant::fromValue(cmtr(value.toString()) );
+	if (value.canConvert(QMetaType::QStringList)) {
+		QStringList sl = value.toStringList();
+		for (int i = 0; i < sl.size(); ++i) {
+			sl.replace(i, cmtr(sl.at(i)) );
+		}	// stringlist loop
+		return QVariant::fromValue(sl);
+	}	// if value was a stringlist	
+
+	return value;
+} 
 
 // Slot to connect to the notification client. Called from QTimers to give time for the notification server
 // to start up if this program is started automatically at boot.  We make four attempts at finding the
