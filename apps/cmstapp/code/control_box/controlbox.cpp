@@ -1988,33 +1988,23 @@ void ControlBox::clearCounters()
 // Function to allow translations of strings returned by Connman. 
 QString ControlBox::cmtr(const QString& instr)
 {
-	if (instr.contains("idle", Qt::CaseInsensitive) ) return tr("idle", "connman state string");
-	else if (instr.contains("association", Qt::CaseInsensitive) ) return tr("association", "connman state string");
-		else if (instr.contains("configuration", Qt::CaseInsensitive) ) return tr("configuration", "connman state string");
-			else if (instr.contains("ready", Qt::CaseInsensitive) ) return tr("ready", "connman state string");
-				else if (instr.contains("online", Qt::CaseInsensitive) ) return tr("online", "connman state string");
-					else if (instr.contains("disconnect", Qt::CaseInsensitive) ) return tr("disconnect", "connman state string");
-						else if (instr.contains("failure", Qt::CaseInsensitive) ) return tr("failure", "connman state string");	
-								
-							else if (instr.contains("system", Qt::CaseInsensitive) ) return tr("system", "connman type string");
-								else if (instr.contains("ethernet", Qt::CaseInsensitive) ) return tr("ethernet", "connman type string");
-									else if (instr.contains("wifi", Qt::CaseInsensitive) ) return tr("wifi", "connman type string");
-										else if (instr.contains("bluetooth", Qt::CaseInsensitive) ) return tr("bluetooth", "connman type string");
-											else if (instr.contains("cellular", Qt::CaseInsensitive) ) return tr("cellular", "connman type string");
-												else if (instr.contains("gps", Qt::CaseInsensitive) ) return tr("gps", "connman type string");
-													else if (instr.contains("vpn", Qt::CaseInsensitive) ) return tr("vpn", "connman type string");
-														else if (instr.contains("gadget", Qt::CaseInsensitive) ) return tr("gadget", "connman type string");
-															else if (instr.contains("p2p", Qt::CaseInsensitive) ) return tr("p2p", "connman type string");		
-																else if (instr.contains("wired", Qt::CaseInsensitive) ) return tr("wired", "connman type string");																												
-														
-																	else if (instr.contains("direct", Qt::CaseInsensitive) ) return tr("direct", "connman proxy string");
-																		else if (instr.contains("manual", Qt::CaseInsensitive) ) return tr("manual", "connman proxy string");
-																			else if (instr.contains("auto", Qt::CaseInsensitive) ) return tr("auto", "connman proxy string");
-																				else if (instr.contains("psk", Qt::CaseInsensitive) ) return tr("psk", "connman security string");
-																					else if (instr.contains("ieee8021x", Qt::CaseInsensitive) ) return tr("ieee8021x", "connman security string");
-																						else if (instr.contains("none", Qt::CaseInsensitive) ) return tr("none", "connman security string");
-																							else if (instr.contains("wep", Qt::CaseInsensitive) ) return tr("wep", "connman security string");												
-	return instr; 
+    QStringList connman_state_strings;
+    connman_state_strings << "idle" << "association" << "configuration" << "ready" << "online" << "disconnect" << "failure";
+    QStringList connman_type_strings;
+    connman_type_strings << "system" << "ethernet" << "wifi" << "bluetooth" << "cellular" << "gps" << "vpn" << "gadget" << "p2p" << "wired";
+    QStringList connman_proxy_strings;
+    connman_proxy_strings << "direct" << "manual" << "auto";
+    QStringList connman_security_strings;
+    connman_security_strings << "psk" << "ieee8021x" << "none" << "wep";
+    
+    // use qPrintable because tr expects a standard string input
+    // perhaps improve this by using a class for the connman api
+    if (connman_state_strings.contains(instr)) return tr(qPrintable(instr), "connman state string");
+    else if (connman_type_strings.contains(instr)) return tr(qPrintable(instr), "connman type string");
+    else if (connman_proxy_strings.contains(instr)) return tr(qPrintable(instr), "connman proxy string");
+    else if (connman_security_strings.contains(instr)) return tr(qPrintable(instr), "connman security string");
+        
+    return instr;
 }
 
 // Slot to connect to the notification client. Called from QTimers to give time for the notification server
