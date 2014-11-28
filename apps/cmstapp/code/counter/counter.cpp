@@ -96,10 +96,10 @@ QString ConnmanCounter::getLabel(const QVariantMap& map)
 
 	// Append to the label the total number of packets [errors and dropped] received.
 	rtn.append(tr("<br><br><b>Received:</b><br>RX Total: %1 (%2),  RX Errors: %3,  RX Dropped: %4") 						\
-																					.arg(tr("%Ln Packet(s)", 0, map.value("TX.Packets").toLongLong()) )	\  
+																					.arg(tr("%Ln Packet(s)", 0, map.value("RX.Packets").toLongLong()) )	\  
 																					.arg(datafield)																											\
-																					.arg(tr("%Ln Packet(s)", 0, map.value("TX.Errors").toLongLong()) )	\
-																					.arg(tr("%Ln Packet(s)", 0, map.value("TX.Dropped").toLongLong())) );			
+																					.arg(tr("%Ln Packet(s)", 0, map.value("RX.Errors").toLongLong()) )	\
+																					.arg(tr("%Ln Packet(s)", 0, map.value("RX.Dropped").toLongLong())) );			
 	
 	// Append the time title
 	rtn.append(tr("<br><br><b>Connect Time:</b><br>") );																																																																																							
