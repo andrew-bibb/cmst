@@ -1813,7 +1813,6 @@ bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg
 			if (itr.value().canConvert(QMetaType::QStringList)) {
 				QStringList sl = itr.value().toStringList();
 				for (int i = 0; i < sl.size(); ++i) {
-					// TODO remove me // sl.replace(i, cmtr(sl.at(i)) );
                                         sl.replace(i, sl.at(i) );
 				}	// stringlist loop
 				ael.objmap.insert(itr.key(), QVariant::fromValue(sl) );
@@ -1856,12 +1855,10 @@ bool ControlBox::getMap(QMap<QString,QVariant>& r_map, const QDBusMessage& r_msg
     qdb_arg >> key >> value;
     
 		// store translated text (if some exists)    
-		// TODO remove me // if (value.canConvert(QMetaType::QString)) value = QVariant::fromValue(cmtr(value.toString()) );
-                if (value.canConvert(QMetaType::QString)) value = QVariant::fromValue(value.toString() );
+    if (value.canConvert(QMetaType::QString)) value = QVariant::fromValue(value.toString() );
 		if (value.canConvert(QMetaType::QStringList)) {
 			QStringList sl = value.toStringList();
 			for (int i = 0; i < sl.size(); ++i) {
-				// TODO remove me // sl.replace(i, cmtr(sl.at(i)) );
                                 sl.replace(i, sl.at(i) );
 			}	// stringlist loop
 			value = QVariant::fromValue(sl);
@@ -1907,12 +1904,10 @@ bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r
       qdba >> key >> value;
       
 			// store translated text (if some exists)    
-			// TODO remove me // if (value.canConvert(QMetaType::QString)) value = QVariant::fromValue(cmtr(value.toString()) );
-                        if (value.canConvert(QMetaType::QString)) value = QVariant::fromValue(value.toString());
+			if (value.canConvert(QMetaType::QString)) value = QVariant::fromValue(value.toString());
 			if (value.canConvert(QMetaType::QStringList)) {
 				QStringList sl = value.toStringList();
 				for (int i = 0; i < sl.size(); ++i) {
-					// TODO remove me // sl.replace(i, cmtr(sl.at(i)) );
                                         sl.replace(i, sl.at(i));
 				}	// stringlist loop
 				value = QVariant::fromValue(sl);
