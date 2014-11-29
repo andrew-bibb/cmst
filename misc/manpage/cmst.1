@@ -7,7 +7,7 @@ Usage: cmst [options]
 A QT5 based GUI front end for the Connman network daemon
 .SH OPTIONS
 .TP
-\fB-c, --disable-counters\fP
+\fB-c, --disable-counters [Experimental] \fP
 Disable the counters.  May be used to minimize load on your system.
 .TP
 \fB-d, --disable-tray-icon\fP
@@ -25,6 +25,10 @@ Log the Connman inputRequest for debugging purposes.
 \fB-m, --minimized\fP
 Start the GUI minimized in the system tray.
 .TP
+.TP
+\fB-r, wifi-scan-rate\fP
+Specify the frequency of wifi scans (default is 60 seconds). 
+.TP
 \fB-v, --version\fP
 Displays version information.
 .TP
@@ -35,10 +39,24 @@ program is started automatically.  If you know the tray will exist once the syst
 will wait that number of seconds before trying to create the tray icon.  This is to give the window manager or panel time to create 
 the tray before we try to place the icon there.
 .TP
+.TP
+\fB--counter-update-kb [Experimental] \fP
+Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).
+Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented.
+.TP
+.TP
+\fB--counter-update-rate [Experimental] \fP
+Specify the frequency in seconds between counter updates (default is 10 seconds).  
+.TP
 \fB--use-xfce\fP
 Use code specific for XFCE.  As of 2014.11.24 there seems to be a problem with QT5.3 and the XFCE system tray.  There is code
 in the program to try and work around this issue.  If the bug gets fixed in QT5.4 (or later) this option will remain so that
 user start up scripts and commands do not break, but it will be a no operation place holder.
+.SH COMMAND LINE STABILITY
+Command line options marked
+.I [Experimental]
+refer to some option in Connman that is currently flagged experimental.  These options should not be assumed to be fixed and could
+change at any time.  Other command line options may be assumed to be fixed and should be safe to use in startup scripts.
 .SH GUI INFO
 The GUI contains one main dialog with separate tab pages.  Program help is mainly provided through a "What's This" interface.
 The "What's This" button in the lower left corner will allow you to enter "What's This" mode, click the button and then
