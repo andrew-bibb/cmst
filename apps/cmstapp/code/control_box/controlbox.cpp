@@ -466,7 +466,7 @@ void ControlBox::enableMoveButtons(int row, int col)
     
   // add a cancel option
   mvsrv_menu->addSeparator();
-  QAction* act = mvsrv_menu->addAction(tr("Cancel"));
+	mvsrv_menu->addAction(tr("Cancel"));
     
   return;
 }
@@ -520,8 +520,10 @@ void ControlBox::connectPressed()
   
   //  send the connect message to the service
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this); 
-  iface_serv->call(QDBus::AutoDetect, "Connect");
-  
+  // don't know why, but can't get the Agent until the timeout, set a short one of 1 millisecond
+  iface_serv->setTimeout(1);
+  QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
+   
   // clean up
   iface_serv->deleteLater();
   return;   
@@ -1284,7 +1286,6 @@ void ControlBox::assemblePage1()
       qtwi01->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 1, qtwi01);
       
-      QTableWidgetItem* qtwi02 = new QTableWidgetItem();
       bt = technologies_list.at(row).objmap.value("Powered").toBool();  
       idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
       qpb02->setFixedSize(

@@ -52,9 +52,6 @@ ConnmanCounter::ConnmanCounter(QObject* parent)
 	new CounterAdaptor(this);
 	QDBusConnection::systemBus().registerObject("/org/cmst/Counter", this);
 
-	//	Create an Interface for the Counter
-	net::connman::Counter* iface;
-	iface = new net::connman::Counter(QString("net.connman.Counter"), QString("/org/cmst/Counter"), QDBusConnection::systemBus(), this);
 }
 
 
