@@ -1417,7 +1417,7 @@ void ControlBox::assemblePage3()
         if (technologies_list.at(row).objmap.value("Powered").toBool() ) ++i_wifipowered;
       } // if census
     } // for loop
-    ui.label_wifi_state->setText(tr("  WiFi Technologies:  %1 Found, %2 Powered").arg(i_wifidevices).arg(i_wifipowered) );
+    ui.label_wifi_state->setText(tr("  WiFi Technologies:<br>  %1 Found, %2 Powered").arg(i_wifidevices).arg(i_wifipowered) );
   } // technologis if no errors 
     
   // Run through each service_list looking for wifi services
