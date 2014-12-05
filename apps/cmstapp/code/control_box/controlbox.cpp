@@ -171,11 +171,20 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // Even then the fix may not work, but for now keep it in.  
   b_usexfce = parser.isSet("use-xfce");
   
-  // set counter update params from command line options if available
-  // otherwise, default params specified in main.cpp are used
-  wifi_interval = parser.value("wifi-scan-rate").toUInt(); // number of seconds between wifi scans
-  counter_accuracy = parser.value("counter-update-kb").toUInt(); // number of kb for counter updates
-  counter_period = parser.value("counter-update-rate").toUInt(); // number of seconds for counter updates
+  // set counter update params from command line options if available otherwise
+  // default params specified in main.cpp are used.  Set a minimum value for
+  // each to maintain program response.
+  uint minval = 10;
+  uint setval = parser.value("wifi-scan-rate").toUInt();
+  wifi_interval = setval > minval ? setval : minval; // number of seconds between wifi scans
+  
+  minval = 256;
+  setval = parser.value("counter-update-kb").toUInt();
+  counter_accuracy = setval > minval ? setval : minval; // number of kb for counter updates
+  
+  minval = 5;
+  setval = parser.value("counter-update-rate").toUInt();
+  counter_period = setval > minval ? setval : minval; // number of seconds for counter updates
   
   // connect counter signal to the counterUpdated slot before we register the counter, assuming counters are not disabled
   if (! parser.isSet("disable-counters"))
@@ -1402,7 +1411,8 @@ void ControlBox::assemblePage3()
 
   //  initilize the table
   ui.tableWidget_wifi->clearContents();
-  int rowcount=0;
+  ui.tableWidget_wifi->setRowCount(0);
+  int rowcount = 0;
   
   // Make sure we got the services_list before we try to work with it.  
   if ( (q8_errors & CMST::Err_Services) != 0x00 ) return;

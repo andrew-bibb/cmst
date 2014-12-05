@@ -48,10 +48,6 @@ void signalhandler(int sig) {
   return;
 }
 
-
-// uncomment to install translation code
-#define USE_TRANSLATIONS
-
 int main(int argc, char *argv[])
 {  
   QApplication::setApplicationName(LONG_NAME);
@@ -110,19 +106,24 @@ int main(int argc, char *argv[])
   // QT5.4 keep the command line option so users start up commands don't break, but make it a NOP. 
   QCommandLineOption useXFCE(QStringList() << "use-xfce", QCoreApplication::translate("main.cpp", "Use XFCE specific code.") );
   parser.addOption(useXFCE);    
-     
-  #ifdef USE_TRANSLATIONS
-   QTranslator qtTranslator;
-   qtTranslator.load("qt_" + QLocale::system().name(),
-   QLibraryInfo::location(QLibraryInfo::TranslationsPath));
-   app.installTranslator(&qtTranslator);
+  
+  // Setup translations   
+  QTranslator qtTranslator;
+  qtTranslator.load("qt_" + QLocale::system().name(),
+  QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+  app.installTranslator(&qtTranslator);
 
-   QTranslator cmstTranslator;
-   if (cmstTranslator.load("cmst_" + QLocale::system().name(), ":/translations/translations" ) ) {
-    app.installTranslator(&cmstTranslator);  
-  }
-  #endif
-   
+  QTranslator cmstTranslator;
+  if (cmstTranslator.load("cmst_" + QLocale::system().name(), ":/translations/translations" ) ) {  
+		app.installTranslator(&cmstTranslator);	
+	}
+	// else use en_US as it contains Connman strings properized and some singular/plural strings
+	else if (cmstTranslator.load("cmst_en_US", ":/translations/translations" ) ) {
+		app.installTranslator(&cmstTranslator);	
+	}
+
+		  	
+  // Make sure all the command lines can be parsed 
   parser.process(app);   
   QStringList sl = parser.unknownOptionNames();
   if (sl.size() > 0 ) parser.showHelp(1);
