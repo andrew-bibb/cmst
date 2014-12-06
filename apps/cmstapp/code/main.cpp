@@ -93,13 +93,13 @@ int main(int argc, char *argv[])
     
   parser.addVersionOption();  
     
-  QCommandLineOption waitTime(QStringList() << "w" << "wait-time", QCoreApplication::translate("main.cpp", "[Experimental] Specify the wait time in seconds before starting the system tray icon (default is 0 seconds)."), QCoreApplication::translate("main.cpp", "wait-time"), "0" );
+  QCommandLineOption waitTime(QStringList() << "w" << "wait-time", QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon (default is 0 seconds)."), QCoreApplication::translate("main.cpp", "wait-time"), "0" );
   parser.addOption(waitTime); 
 
   QCommandLineOption counterUpdateKb (QStringList() << "counter-update-kb", QCoreApplication::translate("main.cpp", "[Experimental] The number of kb that have to be transmitted before the counter updates (default: 1024)"), QCoreApplication::translate("main.cpp", "counter-update-kb"), "1024" );
   parser.addOption(counterUpdateKb);
 
-  QCommandLineOption counterUpdateRate (QStringList() << "counter-update-rate", QCoreApplication::translate("main.cpp", "The interval in seconds between counter updates (default: 10 seconds)"), QCoreApplication::translate("main.cpp", "counter-update-rate"), "10" );
+  QCommandLineOption counterUpdateRate (QStringList() << "counter-update-rate", QCoreApplication::translate("main.cpp", "[Experimental] The interval in seconds between counter updates (default: 10 seconds)"), QCoreApplication::translate("main.cpp", "counter-update-rate"), "10" );
   parser.addOption(counterUpdateRate);
 
   // Added on 2014.11.24 to work around a bug where QT5.3 won't show an icon in XFCE,  My fix may not work, but keep it in for now.  If this gets fixed in 

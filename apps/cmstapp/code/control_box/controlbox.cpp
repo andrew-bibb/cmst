@@ -914,9 +914,9 @@ void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue
   return;
 }
 
-//  Slot to rescan all technologies.  Called periodically from a QTimer,
-//  and it also can be called by functions as well.  Results signaled by
-//  manager.ServicesChanged()//  except for P2P which will be signaled by
+//  Slot to rescan all WiFi technologies.  Called periodically from a QTimer,
+//  and it can also be called by functions as well.  Results signaled by
+//  manager.ServicesChanged(), except for P2P which will be signaled by
 //  manager.PeersChanged()
 void ControlBox::scanTechnologies()
 {
