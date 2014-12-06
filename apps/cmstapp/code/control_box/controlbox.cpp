@@ -1580,6 +1580,15 @@ void ControlBox::assembleTrayIcon()
   
     // else if state is failure
     else if (properties_map.value("State").toString().contains(cmtr("failure")) ) {
+			// try to reconnect if service is wifi and Favorite and if reconnect is specified
+			if (ui.checkBox_retryfailed->isChecked() ) {
+				if (services_list.at(0).objmap.value("Type").toString().contains(cmtr("wifi"))	&& services_list.at(0).objmap.value("Favorite").toBool() ) {
+					QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(0).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this); 
+					QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
+					iface_serv->deleteLater();
+					stt.append(tr("Connection is in the Failure State, attempting to reestablish the connection", "icon_tool_tip") );
+				}	// if wifi and favorite
+			}	// if retry checked
       b_useicontheme ?
         trayicon->setIcon(QIcon::fromTheme("network-error", QIcon(":/icons/images/systemtray/cancel.png")).pixmap(QSize(16,16)) ) :
         trayicon->setIcon(QPixmap(":/icons/images/systemtray/cancel.png") );
@@ -1651,6 +1660,7 @@ void ControlBox::writeSettings()
   settings->setValue("enable_daemon_notifications", ui.checkBox_notifydaemon->isChecked() );
   settings->setValue("reset_counters", ui.checkBox_resetcounters->isChecked() );
   settings->setValue("advanced", ui.checkBox_advanced->isChecked() );
+  settings->setValue("retry_failed", ui.checkBox_retryfailed->isChecked() );
   settings->endGroup(); 
   
   return;
@@ -1679,6 +1689,7 @@ void ControlBox::readSettings()
   ui.checkBox_notifydaemon->setChecked(settings->value("enable_daemon_notifications").toBool() );
   ui.checkBox_resetcounters->setChecked(settings->value("reset_counters").toBool() );
   ui.checkBox_advanced->setChecked(settings->value("advanced").toBool() );
+  ui.checkBox_retryfailed->setChecked(settings->value("retry_failed").toBool() );
   settings->endGroup();
   
   return;
@@ -1733,7 +1744,7 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 
 //
 // Function to show notifications (if desired by the user). Called from
-// the functions we connect dbus signals to, for instance dbsPropertyChanged().
+// the functions we connect dbus signals to, for instance dbsPropertyChanged(),
 // The notifyclient class is used to store data for display from both
 // the systemtrayicon and the notification server.  
 void ControlBox::sendNotifications()
