@@ -87,9 +87,6 @@ int main(int argc, char *argv[])
 
   QCommandLineOption startMinimized(QStringList() << "m" << "minimized", QCoreApplication::translate("main.cpp", "Start the GUI minimized in the system tray.") );
   parser.addOption(startMinimized);
-
-  QCommandLineOption wifiScanRate(QStringList() << "r" << "wifi-scan-rate", QCoreApplication::translate("main.cpp", "The interval in seconds between wifi scans (default: 60 seconds)."), QCoreApplication::translate("main.cpp", "wifi-scan-rate"), "60" );
-  parser.addOption(wifiScanRate);
     
   parser.addVersionOption();  
     

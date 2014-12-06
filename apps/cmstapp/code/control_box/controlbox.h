@@ -39,7 +39,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QVariant>
 # include <QSystemTrayIcon>
 # include <QAction>
-# include <QTimer>
 # include <QActionGroup>
 # include <QCommandLineParser>
 # include <QMenu>
@@ -172,7 +171,6 @@ class ControlBox : public QDialog
     quint32 counter_accuracy; 
     quint32 counter_period;       
     QDBusInterface* iface_manager;
-    QTimer* wifi_timer;
     QSystemTrayIcon*  trayicon; 
     QActionGroup* minMaxGroup;
     QActionGroup* moveGroup;
@@ -223,7 +221,7 @@ class ControlBox : public QDialog
     void dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage);
     void dbsTechnologyAdded(QDBusObjectPath, QVariantMap);
     void dbsTechnologyRemoved(QDBusObjectPath);
-    void scanTechnologies();
+    void scanWiFi();
     void toggleOfflineMode(bool);
     void toggleTrayIcon(bool);
     void togglePowered(QString, bool);

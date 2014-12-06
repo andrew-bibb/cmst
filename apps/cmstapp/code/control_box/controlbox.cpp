@@ -174,12 +174,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // set counter update params from command line options if available otherwise
   // default params specified in main.cpp are used.  Set a minimum value for
   // each to maintain program response.
-  uint minval = 10;
-  uint setval = parser.value("wifi-scan-rate").toUInt();
-  wifi_interval = setval > minval ? setval : minval; // number of seconds between wifi scans
-  
-  minval = 256;
-  setval = parser.value("counter-update-kb").toUInt();
+  uint minval = 256;
+  uint setval = parser.value("counter-update-kb").toUInt();
   counter_accuracy = setval > minval ? setval : minval; // number of kb for counter updates
   
   minval = 5;
@@ -239,12 +235,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     
     } // else have valid connection
   } // else have connected systemBus
-  
-  //  setup the dialog  
-  //  timer to scan for wifi services now and again
-  wifi_timer = new QTimer(this);
-  wifi_timer->setInterval(wifi_interval * 1000); 
-  connect(wifi_timer, SIGNAL(timeout()), this, SLOT(scanTechnologies()));
       
   //  add actions 
   minMaxGroup = new QActionGroup(this);
@@ -282,7 +272,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));  
   connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
   connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(updateDisplayWidgets()));
-  connect(ui.pushButton_rescan, SIGNAL (clicked()), this, SLOT(scanTechnologies()));
+  connect(ui.pushButton_rescan, SIGNAL (clicked()), this, SLOT(scanWiFi()));
   connect(ui.checkBox_systemtraynotifications, SIGNAL (clicked(bool)), this, SLOT(trayNotifications(bool)));
   connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
   connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
@@ -313,14 +303,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     }
     } // else
   
-  //// turn network cards on or off globally based on checkbox
-  toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
-    
-  // start the timer
-  wifi_timer->start();
-    
-  // set up and fill in the display widgets
-  this->updateDisplayWidgets();       
+  // turn network cards on or off globally based on checkbox
+  toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );      
 }  
 
 ////////////////////////////////////////////////// Public Functions //////////////////////////////////
@@ -681,13 +665,27 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 }
 
 //
-//  Slot called whenever DBUS issues a ServicesChanged signal
+// Slot called whenever DBUS issues a ServicesChanged signal.  When a
+// Scan method is called on a technology the results of that scan are 
+// signaled through this slot.  vmap will not be empty, it contains all
+// of the services found.  The objmap for the will be empty is nothing
+// in the service changed, so test for that to see if we want to call
+// updateDisplayWidgets().
 void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
-{
+{	
+	// Set the update flag
+	bool b_needupdate = false;
+		
+	// Function is called everytime we do a wifi scan and we get new list of 
+	
   // process changed services. Demarshall the raw QDBusMessage instead of vmap as it is easier.
   if (! vmap.isEmpty() ) {  
     QList<arrayElement> revised_list;
-    if (! getArray(revised_list, msg)) return;
+    if (! getArray(revised_list, msg)) return;   
+    
+    // if revised_list is not the same size as the existing services_list
+    // then we definetely need an update
+    if (revised_list.count() != services_list.count() ) b_needupdate = true;
     
     // merge the existing services_list into the revised_list
     // first find the original element that matches the revised
@@ -706,6 +704,7 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
         QMapIterator<QString, QVariant> itr(revised_element.objmap);
         while (itr.hasNext()) {
           itr.next();
+          b_needupdate = true;
           original_element.objmap.insert(itr.key(), translateVariant(itr.value()) );
         } // while
         
@@ -721,6 +720,7 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
 
   // process removed services
   if (! removed.isEmpty() ) {
+		b_needupdate = true;
     for (int i = 0; i < services_list.count(); ++i) {
       if (removed.contains(services_list.at(i).objpath) )
         services_list.removeAt(i);
@@ -728,21 +728,31 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
     } // if we needed to remove something
 
   // clear the counters (if selected) and update the widgets
-  clearCounters();
-  updateDisplayWidgets();
-  managerRescan(CMST::Manager_Services);  // used to connect service object signals to dbsServicePropertyChanged() slot
+  if (b_needupdate) {
+		clearCounters();
+		updateDisplayWidgets();
+		managerRescan(CMST::Manager_Services);  // used to connect service object signals to dbsServicePropertyChanged() slot
+	}
   
   return;
 }
 
 //
-// Slot called whenever DBUS issues a Peerschanged signal
+// Slot called whenever DBUS issues a Peerschanged signal.  See note above about 
+// scan results being signaled here. 
 void ControlBox::dbsPeersChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {
+	// Set the update flag
+	bool b_needupdate = false;	
+	
   // Process changed peers. Demarshall the raw QDBusMessage instead of vmap as it is easier.
   if (! vmap.isEmpty() ) {  
     QList<arrayElement> revised_list;
     if (! getArray(revised_list, msg)) return;
+    
+    // if revised_list is not the same size as the existing peer_list
+    // then we definetely need an update
+    if (revised_list.count() != peer_list.count() ) b_needupdate = true;    
     
     // merge the existing peers_list into the revised_list
     // first find the original element that matches the revised
@@ -761,6 +771,7 @@ void ControlBox::dbsPeersChanged(QMap<QString, QVariant> vmap, QList<QDBusObject
         QMapIterator<QString, QVariant> itr(revised_element.objmap);
         while (itr.hasNext()) {
           itr.next();
+          b_needupdate = true;          
           original_element.objmap.insert(itr.key(), translateVariant(itr.value()) );
         } // while
         
@@ -783,7 +794,7 @@ void ControlBox::dbsPeersChanged(QMap<QString, QVariant> vmap, QList<QDBusObject
     } // if we needed to remove something
 
   // update the widgets
-  updateDisplayWidgets();
+  if (b_needupdate) updateDisplayWidgets();
   
   return;
 }    
@@ -908,40 +919,44 @@ void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue
       break;
     } // if
   } // for
-  
+   
   updateDisplayWidgets();
   
   return;
 }
 
-//  Slot to rescan all WiFi technologies.  Called periodically from a QTimer,
-//  and it can also be called by functions as well.  Results signaled by
-//  manager.ServicesChanged(), except for P2P which will be signaled by
-//  manager.PeersChanged()
-void ControlBox::scanTechnologies()
+//  Slot to rescan all WiFi technologies.  Called from the 
+//	ui.pushButton_rescan control.
+//  Results signaled by manager.ServicesChanged(), except for peer 
+//  services which will be signaled by manager.PeersChanged()
+void ControlBox::scanWiFi()
 {
   // Make sure we got the technologies_list before we try to work with it.
   if ( (q8_errors & CMST::Err_Technologies) != 0x00 ) return; 
-  
+    
   // Run through each technology and do a scan for any wifi
   for (int row = 0; row < technologies_list.size(); ++row) {
     if (technologies_list.at(row).objmap.value("Type").toString().contains(cmtr("wifi")) ) {
-    QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
-    QDBusMessage reply = iface_tech->call(QDBus::AutoDetect, "Scan");
-    
-      // report any errors, but only if we did a manual scan
-      if (QObject::sender() == ui.pushButton_rescan) {
-        if (reply.type() != QDBusMessage::ReplyMessage) {
-          QMessageBox::warning(this, tr("CMST Warning"),
-            tr("<center><b>We received a DBUS reply message indicating an error while trying to scan technologies.</b></center>"                       
-            "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage()) );
-        } // if reply is something other than a normal reply message
-      } //  if we triggered a manual rescan
-    
-    iface_tech->deleteLater();
-    } // if
+			if (technologies_list.at(row).objmap.value("Powered").toBool() ) {
+				ui.pushButton_rescan->setDisabled(true); 
+				ui.tableWidget_services->setCurrentIndex(QModelIndex()); // first cell becomes selected once pushbutton is disabled
+				qApp->processEvents();	// needed to promply disable the button
+				QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
+				iface_tech->setTimeout( 8 * 1000);	// full 25 second timeout is a bit much when there is a problem
+				QDBusMessage reply = iface_tech->call(QDBus::AutoDetect, "Scan");
+	
+				if (reply.type() != QDBusMessage::InvalidMessage) ui.pushButton_rescan->setEnabled(true);
+	      if (reply.type() != QDBusMessage::ReplyMessage) {
+	        QMessageBox::warning(this, tr("CMST Warning"),
+	          tr("<center><b>We received a DBUS reply message indicating an error while trying to scan technologies.</b></center>"                       
+	          "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage()) );
+	      } // if reply is something other than a normal reply message		
+			
+				iface_tech->deleteLater();
+			}	// if the wifi was powered
+    } // if the list item is wifi
   } // for
-    
+      
   return;
 }
 
@@ -956,9 +971,7 @@ void ControlBox::toggleOfflineMode(bool checked)
   vlist.clear();
   vlist << QVariant("OfflineMode") << QVariant::fromValue(QDBusVariant(checked ? true : false)); 
   iface_manager->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
-  
-  if (! checked ) this->scanTechnologies();
-    
+   
   return;
 }
 
@@ -1007,15 +1020,6 @@ void ControlBox::togglePowered(QString object_id, bool checkstate)
   vlist << QVariant("Powered") << QVariant::fromValue(QDBusVariant(checkstate) );
 
   QDBusMessage reply = iface_tech->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
-  if (reply.type() != QDBusMessage::ReplyMessage) {
-    // seems to be a bug in connman - wired services return an already enabled error when turning power back on
-    if (! reply.errorMessage().contains("already enabled", Qt::CaseInsensitive) ) {
-      QMessageBox::warning(this, tr("CMST Warning"),
-        tr("<center><b>We received a DBUS reply message indicating an error while trying to send the toggle power request to connman.</b></center>"                       
-        "<p>The powered state of the technology will not be changed."
-        "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage()) );
-    } // if error somethign other than already enabled
-  } // something other than a normal reply message
   
   // cleanup
   iface_tech->deleteLater();
@@ -1400,15 +1404,6 @@ void ControlBox::assemblePage2()
 //  Function to assemble page 3 of the dialog.
 void ControlBox::assemblePage3()
 {
-  // Get current table position so that we can return to it after the scan.
-  QString current_item;
-  QList<QTableWidgetItem*> list;
-  list.clear();
-  list = ui.tableWidget_wifi->selectedItems();
-  if (!list.isEmpty()) {
-      current_item = wifi_list.at(list.at(0)->row()).objpath.path();
-  }
-
   //  initilize the table
   ui.tableWidget_wifi->clearContents();
   ui.tableWidget_wifi->setRowCount(0);
@@ -1498,17 +1493,6 @@ void ControlBox::assemblePage3()
   ui.pushButton_disconnect->setEnabled(b_enable);
   ui.pushButton_remove->setEnabled(b_enable);
  
-  // select entry in table that was selected before refresh if it's still available
-  if (!list.isEmpty()) {
-    for (int row = 0; row < ui.tableWidget_wifi->rowCount(); row++) {
-      QString path_string = wifi_list.at(row).objpath.path();
-      if (path_string == current_item) {
-        QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row, 0, row, ui.tableWidget_wifi->columnCount() - 1);
-        ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
-      }
-    }
-  }
-
   return;
 } 
 
@@ -1525,7 +1509,8 @@ void ControlBox::assemblePage4()
 }
 
 //
-//  Function to assemble the tray icon tooltip text and picture
+//  Function to assemble the tray icon tooltip text and picture.  Called
+//  mainly from updateDisplayWidgets(), also from createSystemTrayIcon()
 void ControlBox::assembleTrayIcon()
 {
   QString stt = QString();
@@ -1616,9 +1601,6 @@ void ControlBox::assembleTrayIcon()
   //  set the tool tip
   trayicon->setToolTip(stt);
   
-  // show or hide depending on checkbox
-  toggleTrayIcon(ui.checkBox_hideIcon->isChecked() );
-  
   return;
 }
 
@@ -1701,7 +1683,7 @@ void ControlBox::readSettings()
 // and here).  Used in situations where CMST is created before the system tray.
 // The default time is zero seconds
 void ControlBox::createSystemTrayIcon(bool b_startminimized)
-{ 
+{ 	
   // We still need to make sure there is a tray available 
   if (QSystemTrayIcon::isSystemTrayAvailable() ) {
     QMenu* trayIconMenu = new QMenu(this);
@@ -1711,10 +1693,11 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
     trayIconMenu->addAction(exitAction);
   
     trayicon = new QSystemTrayIcon(this);
+     // set up and fill in the display widgets
+		assembleTrayIcon();
     trayicon->setContextMenu(trayIconMenu);
     connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
     ui.checkBox_hideIcon->setEnabled(true);
-    this->updateDisplayWidgets();
     trayicon->setVisible(true);
   
     // start minimized, no reason to do anything as we're minimized until
@@ -1737,7 +1720,9 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
     this->showNormal();
               
   } // else
-    
+      
+  // lastly update the display widgets
+  this->updateDisplayWidgets();   
   
   return;
 }
