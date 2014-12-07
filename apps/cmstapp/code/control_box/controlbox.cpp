@@ -985,24 +985,10 @@ void ControlBox::toggleTrayIcon(bool b_checked)
       trayicon->setVisible(false);
       ui.pushButton_minimize->setDisabled(true);
     } // if
-    else {
-			// QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
-			// maxtries to get a valid icon geometry
-			if (b_usexfce) { 
-				const int maxtries = 125;
-				for (int i = 0; i < maxtries; ++i) {
-						trayicon->setVisible(true);
-						if (trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) return;
-						trayicon->setVisible(false);
-				}   // hammer loop
-				qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
-				ui.pushButton_minimize->setDisabled(true);
-			}	// if use xfce
-			else {
-				trayicon->setVisible(true);
-				ui.pushButton_minimize->setDisabled(false); 
-			}	// else tray icon for everything not xfce 	
-    } // else
+		else {
+			trayicon->setVisible(true);
+			ui.pushButton_minimize->setDisabled(false); 
+		}	// else 
   } //if
   
   return;
@@ -1692,9 +1678,28 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(exitAction);
   
-    trayicon = new QSystemTrayIcon(this);
-     // set up and fill in the display widgets
-		assembleTrayIcon();
+    trayicon = new QSystemTrayIcon(this);    
+    
+    // set up and fill in the display widgets
+		assembleTrayIcon(); 
+		
+    // QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
+		// maxtries to get a valid icon geometry
+		if (b_usexfce) { 
+			const int maxtries = 125;
+			int i = 0;
+			for (i; i < maxtries; ++i) {
+					trayicon->setVisible(true);
+					qDebug() << trayicon->geometry();
+					if (trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) break;
+					trayicon->setVisible(false);
+			}   // hammer loop
+			if (i == maxtries - 1) {
+				qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
+				ui.pushButton_minimize->setDisabled(true);
+			}	// if we hit the end of the loop
+		}	// if use xfce   		
+		  
     trayicon->setContextMenu(trayIconMenu);
     connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
     ui.checkBox_hideIcon->setEnabled(true);
