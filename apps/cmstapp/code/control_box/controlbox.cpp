@@ -1689,10 +1689,9 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 			const int maxtries = 125;
 			int i = 0;
 			for (i; i < maxtries; ++i) {
-					trayicon->setVisible(true);
-					qDebug() << trayicon->geometry();
-					if (trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) break;
-					trayicon->setVisible(false);
+				trayicon->setVisible(true);
+				if (trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) break;
+				trayicon->setVisible(false);
 			}   // hammer loop
 			if (i == maxtries - 1) {
 				qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
