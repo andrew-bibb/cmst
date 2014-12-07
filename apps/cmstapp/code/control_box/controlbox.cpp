@@ -1894,6 +1894,7 @@ bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r
   //  make sure we can convert the QVariant into a QDBusArgument
   if (! r_var.canConvert<QDBusArgument>() ) return false;
   const QDBusArgument qdba =  r_var.value<QDBusArgument>();
+  //QDBusArgument qdba =  r_var.value<QDBusArgument>();
   
   // make sure the QDBusArgument holds a map
   if (! qdba.currentType() == QDBusArgument::MapType ) return false;  
@@ -1907,14 +1908,16 @@ bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r
       QVariant value;
       qdba.beginMapEntry();
       qdba >> key >> value;
-      
+			qdba.endMapEntry(); 
+			
 			// store translated text (if some exists)    
 			value = translateVariant(value);  
 			       
-      qdba.endMapEntry();
       r_map.insert(key, value);
     } // while
-    qdba.endMap();  
+        
+    qdba.endMap();
+    return true;  
 }
 
 //
