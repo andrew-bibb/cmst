@@ -281,7 +281,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
-  // or showMaximized.
+  // or showMaximized.  The startSystemTray slots are inline functions and
+  // both point to createSystemTrayIcon.
   trayicon = 0;
   if (parser.isSet("disable-tray-icon")) {
     ui.checkBox_hideIcon->setDisabled(true);
@@ -296,12 +297,12 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     if (timeout < mintrigger) timeout = mintrigger;
     if (parser.isSet("minimized")) {
       QTimer::singleShot(timeout, this, SLOT(startSystemTrayMinimized()));
-    }
+    }	// if showMinimized
     else {
       this->showNormal();
       QTimer::singleShot(timeout, this, SLOT(startSystemTrayNormal()));
-    }
-    } // else
+    }	// else showNormal
+   } // else 
   
   // turn network cards on or off globally based on checkbox
   toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );      
@@ -1026,8 +1027,19 @@ void ControlBox::minMaxWindow(QAction* act)
     else this->showMinimized();
   } // if minimizeAction
   
-  else
+  else if (act == maximizeAction) {
     this->showNormal();
+	}
+	
+	// Called from the systemtrayicon context menu.  Actions are
+	// created dynamically and we don't know them up front.  Actions here
+	// we want to open the details page and set the combo box to display
+	// information on the service.
+	else {
+		ui.tabWidget->setCurrentIndex(1);
+		ui.comboBox_service->setCurrentIndex(ui.comboBox_service->findText(act->text()) );
+		this->showNormal();
+	} 
   
   return;
 }
@@ -1584,8 +1596,23 @@ void ControlBox::assembleTrayIcon()
     stt.append(tr("Connection status is unknown"));
   }
   
-  //  set the tool tip
+  //  set the tool tip (shown when mouse hovers over the systemtrayicon)
   trayicon->setToolTip(stt);
+  
+  // set the menu for the tray icon.  Minimize, maximize and exit actions
+  // are defined in the constructor and are controlbox class members)
+  trayiconmenu->clear();
+  for (int i = 0; i < services_list.count(); ++i) {
+		QAction* act = new QAction(services_list.at(i).objmap.value("Name").toString(), trayiconmenu);
+		minMaxGroup->addAction(act);
+		trayiconmenu->addAction(act);
+		if (i == services_list.count() - 1 ) trayiconmenu->addSeparator();
+	}	// i for
+	trayiconmenu->addAction(maximizeAction);
+  trayiconmenu->addAction(minimizeAction);
+  trayiconmenu->addSeparator();
+  trayiconmenu->addSeparator();
+  trayiconmenu->addAction(exitAction);
   
   return;
 }
@@ -1666,21 +1693,22 @@ void ControlBox::readSettings()
 //
 // Function to create the systemtray icon.  Really part of the constructor
 // and called by a single shot QTimer (actually via a slot between the timer
-// and here).  Used in situations where CMST is created before the system tray.
-// The default time is zero seconds
+// and here).  
 void ControlBox::createSystemTrayIcon(bool b_startminimized)
 { 	
   // We still need to make sure there is a tray available 
   if (QSystemTrayIcon::isSystemTrayAvailable() ) {
-    QMenu* trayIconMenu = new QMenu(this);
-    trayIconMenu->addAction(maximizeAction);
-    trayIconMenu->addAction(minimizeAction);
-    trayIconMenu->addSeparator();
-    trayIconMenu->addAction(exitAction);
-  
-    trayicon = new QSystemTrayIcon(this);    
+		
+		// Create the systemtrayicon
+		trayicon = new QSystemTrayIcon(this);
+
+		// Create a context menu.  Menu contents is defined in the
+		// assembletrayIcon() function.
+    trayiconmenu = new QMenu(this);  
+    trayicon->setContextMenu(trayiconmenu);
+    connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason))); 
     
-    // set up and fill in the display widgets
+    // Assemble the tray icon (set the icon to display)
 		assembleTrayIcon(); 
 		
     // QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
@@ -1696,18 +1724,16 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 			if (i == maxtries - 1) {
 				qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
 				ui.pushButton_minimize->setDisabled(true);
+				trayicon = 0;	// reinitialize the pointer
 			}	// if we hit the end of the loop
 		}	// if use xfce   		
 		  
-    trayicon->setContextMenu(trayIconMenu);
-    connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
+		// Sync the visibility to the checkbox
     ui.checkBox_hideIcon->setEnabled(true);
-    trayicon->setVisible(true);
+    trayicon->setVisible(true); 
+  } // if there is a systemtray available
   
-    // start minimized, no reason to do anything as we're minimized until
-    // we tell it otherwise
-
-  } // if
+  // else no systemtray available
   else {
     ui.checkBox_hideIcon->setDisabled(true);
     trayicon = 0;
@@ -1721,11 +1747,11 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
           ) );
     
     // Even if we want to be minimized we can't there is no place to minimize to.
-    this->showNormal();
-              
+    this->showNormal();            
   } // else
       
-  // lastly update the display widgets
+  // Lastly update the display widgets (since this is actually the last
+  // line of the constructor.)
   this->updateDisplayWidgets();   
   
   return;

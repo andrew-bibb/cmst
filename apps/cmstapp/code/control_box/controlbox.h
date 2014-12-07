@@ -171,7 +171,8 @@ class ControlBox : public QDialog
     quint32 counter_accuracy; 
     quint32 counter_period;       
     QDBusInterface* iface_manager;
-    QSystemTrayIcon*  trayicon; 
+    QSystemTrayIcon*  trayicon;
+    QMenu* trayiconmenu; 
     QActionGroup* minMaxGroup;
     QActionGroup* moveGroup;
     QAction* minimizeAction;
