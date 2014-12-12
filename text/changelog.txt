@@ -4,6 +4,8 @@
 <ul>
 <li>If a Wifi service falls into the failue state provide an option to try and automatically reconnect.</li>
 <li>Removed -r (--wife-scan-rate) command line option and all code internal for having CMST to WiFi scans.  This was conflicting with Connman auto scans.</li>
+<li>Available services now shown with right click on system tray icon.</li>
+<li>Added option to automatically retry a connect when a service falls into the "failed" state.<li>
 </ul>
 <br><b>2014.12.05</b>
 <ul>
