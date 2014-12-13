@@ -279,6 +279,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_provisioning_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
   connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
 
+  // turn network cards on or off globally based on checkbox
+  toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );   
+  
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
   // or showMaximized.  The startSystemTray slots are inline functions and
@@ -286,6 +289,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   trayicon = 0;
   if (parser.isSet("disable-tray-icon")) {
     ui.checkBox_hideIcon->setDisabled(true);
+    this->updateDisplayWidgets();
     this->showNormal(); // no place to minimize to, so showMaximized
   } // if
   else {
@@ -302,10 +306,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       this->showNormal();
       QTimer::singleShot(timeout, this, SLOT(startSystemTrayNormal()));
     }	// else showNormal
-   } // else 
-  
-  // turn network cards on or off globally based on checkbox
-  toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );      
+   } // else      
 }  
 
 ////////////////////////////////////////////////// Public Functions //////////////////////////////////
@@ -1701,7 +1702,7 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 		
 		// Create the systemtrayicon
 		trayicon = new QSystemTrayIcon(this);
-
+		
 		// Create a context menu.  Menu contents is defined in the
 		// assembletrayIcon() function.
     trayiconmenu = new QMenu(this);  
@@ -1711,13 +1712,22 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
     // Assemble the tray icon (set the icon to display)
 		assembleTrayIcon(); 
 		
+		// This code block I found several places on how to work around tray icons
+		// not showing properly with GTK based trays.  May not be necessary with
+		// QT5.4 but leave it in if it does not hurt anything.
+		trayicon->setVisible(true);
+		trayicon->setVisible(false);
+		qApp->processEvents();		
+		
     // QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
-		// maxtries to get a valid icon geometry
+		// maxtries to get a valid icon geometry.
+		// QT5.4 update, may be fixed but leave option in for now
 		if (b_usexfce) { 
 			const int maxtries = 125;
 			int i = 0;
 			for (i; i < maxtries; ++i) {
 				trayicon->setVisible(true);
+				qDebug() << "icon geometry: " << trayicon->geometry();				
 				if (trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) break;
 				trayicon->setVisible(false);
 			}   // hammer loop
@@ -1730,7 +1740,8 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 		  
 		// Sync the visibility to the checkbox
     ui.checkBox_hideIcon->setEnabled(true);
-    trayicon->setVisible(true); 
+    trayicon->setVisible(true);
+        
   } // if there is a systemtray available
   
   // else no systemtray available
