@@ -1710,14 +1710,7 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
     connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason))); 
     
     // Assemble the tray icon (set the icon to display)
-		assembleTrayIcon(); 
-		
-		// This code block I found several places on how to work around tray icons
-		// not showing properly with GTK based trays.  May not be necessary with
-		// QT5.4 but leave it in if it does not hurt anything.
-		trayicon->setVisible(true);
-		trayicon->setVisible(false);
-		qApp->processEvents();		
+		assembleTrayIcon(); 		
 		
     // QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
 		// maxtries to get a valid icon geometry.
@@ -1730,6 +1723,7 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 				qDebug() << "icon geometry: " << trayicon->geometry();				
 				if (trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) break;
 				trayicon->setVisible(false);
+				qApp->processEvents();
 			}   // hammer loop
 			if (i == maxtries - 1) {
 				qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
