@@ -234,6 +234,7 @@ class ControlBox : public QDialog
     inline void trayNotifications(bool checked) {if (checked) ui.checkBox_notifydaemon->setChecked(false);}
     inline void daemonNotifications(bool checked) {if (checked) ui.checkBox_systemtraynotifications->setChecked(false);}
     void iconActivated(QSystemTrayIcon::ActivationReason reason);
+    void enableRunOnStartup(bool enabled);
     void writeSettings();
     void readSettings();
     void connectNotifyClient();

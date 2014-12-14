@@ -41,6 +41,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QCloseEvent>
 # include <QToolTip>
 # include <QTableWidgetSelectionRange>
+# include <QProcessEnvironment>"
+# include <QCryptographicHash>
 
 # include "../resource.h" 
 # include "./controlbox.h"
@@ -186,6 +188,16 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   if (! parser.isSet("disable-counters"))
     connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
   
+  //retrieve setting from the config file to be overriden by the command line option (if one of them is set)
+  bool runOnStartup = settings->value("CheckBoxes/run_on_startup", "false").toBool();
+  if (parser.isSet("run-on-startup")) {
+      runOnStartup = true;
+  } else if (parser.isSet("no-run-on-startup")) {
+      runOnStartup = false;
+  }
+  settings->setValue("CheckBoxes/run_on_startup", runOnStartup);
+  this->enableRunOnStartup(runOnStartup);
+
   // restore GUI settings
   this->readSettings(); 
   
@@ -278,6 +290,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
   connect(ui.pushButton_provisioning_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
   connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
+  connect(ui.checkBox_run_on_startup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
 
   // turn network cards on or off globally based on checkbox
   toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );   
@@ -1637,6 +1650,45 @@ void ControlBox::iconActivated(QSystemTrayIcon::ActivationReason reason)
   }
 }
 
+void ControlBox::enableRunOnStartup(bool enabled)
+{
+  QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+  QString HOME = env.value("HOME");
+  QString XDG_CONFIG_HOME = env.value("XDG_CONFIG_HOME", QFileInfo(QDir(HOME), ".config").absoluteFilePath());
+  QFileInfo autostart_dir_info(QDir(XDG_CONFIG_HOME), "autostart");
+  QFileInfo autostart_file_info(QDir(autostart_dir_info.absoluteFilePath()), "cmst-autostart.desktop");
+  QFile user_autostart_file(autostart_file_info.absoluteFilePath());
+
+  if (enabled) {
+    QCryptographicHash hasher(QCryptographicHash::Sha1);
+    QFile fileToCopy("/usr/share/cmst/autostart/cmst-autostart.desktop");
+
+    if (user_autostart_file.exists()) {
+      hasher.reset();
+      hasher.addData(&fileToCopy);
+      QByteArray orig_file_hash = hasher.result();
+
+      hasher.reset();
+      hasher.addData(&user_autostart_file);
+      QByteArray user_autostart_file_hash = hasher.result();
+
+      if (orig_file_hash == user_autostart_file_hash) {
+        return;
+      }
+
+      if (!user_autostart_file.remove()) {
+        return;
+      }
+    }
+    fileToCopy.copy(autostart_file_info.absoluteFilePath());
+  } else {
+    if (!autostart_file_info.exists()) {
+        return;
+    }
+    user_autostart_file.remove();
+  }
+}
+
 // Slot to save GUI settings to disk
 void ControlBox::writeSettings()
 {
@@ -1657,6 +1709,7 @@ void ControlBox::writeSettings()
   settings->setValue("reset_counters", ui.checkBox_resetcounters->isChecked() );
   settings->setValue("advanced", ui.checkBox_advanced->isChecked() );
   settings->setValue("retry_failed", ui.checkBox_retryfailed->isChecked() );
+  settings->setValue("run_on_startup", ui.checkBox_run_on_startup->isChecked());
   settings->endGroup(); 
   
   return;
@@ -1686,6 +1739,7 @@ void ControlBox::readSettings()
   ui.checkBox_resetcounters->setChecked(settings->value("reset_counters").toBool() );
   ui.checkBox_advanced->setChecked(settings->value("advanced").toBool() );
   ui.checkBox_retryfailed->setChecked(settings->value("retry_failed").toBool() );
+  ui.checkBox_run_on_startup->setChecked(settings->value("run_on_startup").toBool());
   settings->endGroup();
   
   return;
