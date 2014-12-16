@@ -119,11 +119,22 @@ int main(int argc, char *argv[])
 		app.installTranslator(&cmstTranslator);	
 	}
 
+  QCommandLineOption runOnStartup(QStringList() << "run-on-startup", QCoreApplication::translate("main.cpp", "Run application when user the user logins."));
+  parser.addOption(runOnStartup);
+
+  QCommandLineOption noRunOnStartup(QStringList() << "no-run-on-startup", QCoreApplication::translate("main.cpp", "Do not run application when user the user logins."));
+  parser.addOption(noRunOnStartup);
+
 		  	
   // Make sure all the command lines can be parsed 
   parser.process(app);   
   QStringList sl = parser.unknownOptionNames();
   if (sl.size() > 0 ) parser.showHelp(1);
+
+  // Make sure that mutually exclusive options are not both set
+  if (parser.isSet(runOnStartup) + parser.isSet(noRunOnStartup) > 1) {
+      parser.showHelp(1);
+  }
                 
   // signal handler             
   signal(SIGINT, signalhandler);                

@@ -27,6 +27,10 @@ desktop.path = /usr/share/applications
 desktop.files = ../../misc/desktop/cmst.desktop
 INSTALLS += desktop
 
+autostart.path = /usr/share/cmst/autostart
+autostart.files = ../../misc/desktop/cmst-autostart.desktop
+INSTALLS += autostart
+
 icon.path = /usr/share/icons/hicolor/24x24/apps
 icon.files = ../../images/application/cmst.png
 INSTALLS += icon
