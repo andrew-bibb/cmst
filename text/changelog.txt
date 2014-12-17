@@ -1,6 +1,6 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<br><b>In Progress</b>
+<br><b>2014.12.14</b>
 <ul>
 <li>If a Wifi service falls into the failue state provide an option to try and automatically reconnect.</li>
 <li>Removed -r (--wife-scan-rate) command line option and all code internal for having CMST to WiFi scans.  This was conflicting with Connman auto scans.</li>

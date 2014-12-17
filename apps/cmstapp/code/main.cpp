@@ -102,7 +102,11 @@ int main(int argc, char *argv[])
   // Added on 2014.11.24 to work around a bug where QT5.3 won't show an icon in XFCE,  My fix may not work, but keep it in for now.  If this gets fixed in 
   // QT5.4 keep the command line option so users start up commands don't break, but make it a NOP. 
   QCommandLineOption useXFCE(QStringList() << "use-xfce", QCoreApplication::translate("main.cpp", "Use XFCE specific code.") );
-  parser.addOption(useXFCE);    
+  parser.addOption(useXFCE);   
+  
+  // Added on 2014.12.16 to work around a similar bug where QT5.3 won't show an icon in MATE.   
+  QCommandLineOption useMATE(QStringList() << "use-mate", QCoreApplication::translate("main.cpp", "Use MATE DE specific code.") );
+  parser.addOption(useMATE); 
   
   // Setup translations   
   QTranslator qtTranslator;

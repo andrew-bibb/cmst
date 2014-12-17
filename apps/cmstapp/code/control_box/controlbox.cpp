@@ -1,30 +1,30 @@
 /**************************** controlbox.cpp ***************************
 
 Code to manage the primary user interface to include the QDialog the
-user interfaces with and the system tray icon.  
+user interfaces with and the system tray icon.
 
 Copyright (C) 2013-2014
 by: Andrew J. Bibb
-License: MIT 
+License: MIT
 
-Permission is hereby granted, free of charge, to any person obtaining a copy 
-of this software and associated documentation files (the "Software"),to deal 
-in the Software without restriction, including without limitation the rights 
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
-copies of the Software, and to permit persons to whom the Software is 
-furnished to do so, subject to the following conditions: 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"),to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included 
+The above copyright notice and this permission notice shall be included
 in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
 OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
-***********************************************************************/ 
+***********************************************************************/
 
 # include <QtCore/QDebug>
 # include <QDBusArgument>
@@ -41,15 +41,15 @@ DEALINGS IN THE SOFTWARE.
 # include <QCloseEvent>
 # include <QToolTip>
 # include <QTableWidgetSelectionRange>
-# include <QProcessEnvironment>"
+# include <QProcessEnvironment>
 # include <QCryptographicHash>
 
-# include "../resource.h" 
+# include "../resource.h"
 # include "./controlbox.h"
 # include "./code/scrollbox/scrollbox.h"
 # include "./code/peditor/peditor.h"
 # include "./code/provisioning/prov_ed.h"
-  
+
 //  headers for system logging
 # include <stdio.h>
 # include <unistd.h>
@@ -70,29 +70,29 @@ idButton::idButton(QWidget* parent, const QDBusObjectPath& id) :
   const int m_top = 0;
   const int m_right = 5;
   const int m_bottom = 0;
-  
+
   // create the button
   button = new QToolButton(this);
   button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
   obj_id = id;
-  button->setCheckable(true); 
+  button->setCheckable(true);
   connect (button, SIGNAL(clicked(bool)), this, SLOT(buttonClicked(bool)));
-    
+
   // create the box
   QHBoxLayout* layout = new QHBoxLayout(this);
   layout->setContentsMargins(m_left, m_top, m_right, m_bottom);
-  layout->addWidget(button, 0, 0);  
+  layout->addWidget(button, 0, 0);
 
-  return;  
+  return;
 }
 
 
 void idButton::buttonClicked(bool checked)
 {
   this->setDisabled(true);
-  
+
   emit clickedID (obj_id.path(), checked);
-  
+
   return;
 }
 
@@ -106,36 +106,36 @@ SignalBar::SignalBar(QWidget* parent) :
   const int m_top = 7;
   const int m_right = 11;
   const int m_bottom = 7;
-  
+
   // create the bar
   bar = new QProgressBar(this);
   bar->setAlignment(Qt::AlignCenter);
   bar->setRange(0, 100);
-  
+
   // create the box
   QHBoxLayout* layout = new QHBoxLayout(this);
   layout->setContentsMargins(m_left, m_top, m_right, m_bottom);
   layout->addWidget(bar, 0, 0);
-  
+
   return;
 }
-    
+
 // main GUI element
 ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     : QDialog(parent)
-{ 
+{
   // set the Locale
-  QLocale::setDefault(QLocale(QLocale::L_LANG, QLocale::L_COUNTRY));  
-  
+  QLocale::setDefault(QLocale(QLocale::L_LANG, QLocale::L_COUNTRY));
+
   // setup the user interface
   ui.setupUi(this);
-  
+
   // install global event filter (used to disable showing tooltips)
   qApp->installEventFilter(this);
-  
-  // set the window title 
-  setWindowTitle(tr(WINDOW_TITLE));    
-  
+
+  // set the window title
+  setWindowTitle(tr(WINDOW_TITLE));
+
   // data members
   q8_errors = CMST::No_Errors;
   properties_map.clear();
@@ -146,7 +146,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   agent = new ConnmanAgent(this);
   counter = new ConnmanCounter(this);
   mvsrv_menu = new QMenu(this);
-  QString s_app = PROGRAM_NAME; 
+  QString s_app = PROGRAM_NAME;
   settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
   notifyclient = 0;
   onlineobjectpath.clear();
@@ -155,10 +155,10 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   socketserver->listen(SOCKET_NAME);
 
   // set a flag if we sent a commandline option to log the connman inputrequest
-  agent->setLogInputRequest(parser.isSet("log-input-request")); 
-  
+  agent->setLogInputRequest(parser.isSet("log-input-request"));
+
   // set a flag if we want to use the local system icon theme and set the whatsthis button
-  b_useicontheme = parser.isSet("icon-theme"); 
+  b_useicontheme = parser.isSet("icon-theme");
   if (b_useicontheme) {
     ui.toolButton_whatsthis->setIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
     agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
@@ -167,27 +167,28 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     ui.toolButton_whatsthis->setIcon(QIcon(":/icons/images/interface/whatsthis.png"));
     agent->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
   }
-  
-  // set a flag is we want to use XFCE custom code.  
+
+  // set a flag is we want to use XFCE or MATE custom code.
   // Currently (as of 2014.11.24) this is only used to get around a bug between QT5.3 and the XFCE system tray
-  // Even then the fix may not work, but for now keep it in.  
+  // Even then the fix may not work, but for now keep it in.
   b_usexfce = parser.isSet("use-xfce");
-  
+  b_usemate = parser.isSet("use-mate");
+
   // set counter update params from command line options if available otherwise
   // default params specified in main.cpp are used.  Set a minimum value for
   // each to maintain program response.
   uint minval = 256;
   uint setval = parser.value("counter-update-kb").toUInt();
   counter_accuracy = setval > minval ? setval : minval; // number of kb for counter updates
-  
+
   minval = 5;
   setval = parser.value("counter-update-rate").toUInt();
   counter_period = setval > minval ? setval : minval; // number of seconds for counter updates
-  
+
   // connect counter signal to the counterUpdated slot before we register the counter, assuming counters are not disabled
   if (! parser.isSet("disable-counters"))
     connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
-  
+
   //retrieve setting from the config file to be overriden by the command line option (if one of them is set)
   bool runOnStartup = settings->value("CheckBoxes/run_on_startup", "false").toBool();
   if (parser.isSet("run-on-startup")) {
@@ -199,89 +200,89 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   this->enableRunOnStartup(runOnStartup);
 
   // restore GUI settings
-  this->readSettings(); 
-  
+  this->readSettings();
+
   // operate on settings not dealt with elsewhere
   ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
-  
+
   // Create the notifyclient, make four tries; first immediately in constructor, then
-  // at 1/2 second, 2 seconds and finally at 8 seconds 
+  // at 1/2 second, 2 seconds and finally at 8 seconds
   notifyclient = new NotifyClient(this);
   this->connectNotifyClient();
-  QTimer::singleShot(500, this, SLOT(connectNotifyClient()));  
+  QTimer::singleShot(500, this, SLOT(connectNotifyClient()));
   QTimer::singleShot(2 * 1000, this, SLOT(connectNotifyClient()));
   QTimer::singleShot(8 * 1000, this, SLOT(connectNotifyClient()));
-      
+
   // setup the dbus interface to connman.manager
   if (! QDBusConnection::systemBus().isConnected() ) logErrors(CMST::Err_No_DBus);
-  else {  
-    iface_manager = new QDBusInterface(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, QDBusConnection::systemBus(), this); 
+  else {
+    iface_manager = new QDBusInterface(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, QDBusConnection::systemBus(), this);
     if (! iface_manager->isValid() ) logErrors(CMST::Err_Invalid_Iface);
     else {
       // Access connman.manager to retrieve the data
       this->managerRescan(CMST::Manager_All);
-      
+
       // register the agent
       QList<QVariant> vlist_agent;
       vlist_agent.clear();
-      vlist_agent << QVariant::fromValue(QDBusObjectPath("/org/cmst/Agent")); 
+      vlist_agent << QVariant::fromValue(QDBusObjectPath("/org/cmst/Agent"));
       iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterAgent", vlist_agent);
-      
+
       // if counters are enabled register the counter
       if (! parser.isSet("disable-counters")) {
         QList<QVariant> vlist_counter;
         vlist_counter.clear();
         vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter")) << counter_accuracy << counter_period;;
-        iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterCounter", vlist_counter);      
+        iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterCounter", vlist_counter);
       }
-    
+
     // connect some dbus signals to our slots
     QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
     QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
     QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PeersChanged", this, SLOT(dbsPeersChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
     QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
     QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
-  
+
     // clear the counters if selected
     this->clearCounters();
-    
+
     } // else have valid connection
   } // else have connected systemBus
-      
-  //  add actions 
+
+  //  add actions
   minMaxGroup = new QActionGroup(this);
   minimizeAction = new QAction(tr("Mi&nimize"), this);
   maximizeAction = new QAction(tr("Ma&ximize"), this);
   minMaxGroup->addAction(minimizeAction);
   minMaxGroup->addAction(maximizeAction);
   exitAction = new QAction(tr("&Exit"), this);
-  
+
   moveGroup = new QActionGroup(this);
   moveGroup->addAction(ui.actionMove_Before);
   moveGroup->addAction(ui.actionMove_After);
-  
-  //  connect signals and slots - actions and action groups   
+
+  //  connect signals and slots - actions and action groups
   connect(minMaxGroup, SIGNAL(triggered(QAction*)), this, SLOT(minMaxWindow(QAction*)));
   connect(exitAction, SIGNAL(triggered()), this, SLOT(close()));
   connect(moveGroup, SIGNAL(triggered(QAction*)), this, SLOT(moveButtonPressed(QAction*)));
   connect(mvsrv_menu, SIGNAL(triggered(QAction*)), this, SLOT(moveService(QAction*)));
-  
+
   //  connect signals and slots - ui elements
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
   connect(ui.comboBox_service, SIGNAL(currentIndexChanged(int)), this, SLOT(getServiceDetails(int)));
   connect(ui.pushButton_exit, SIGNAL(clicked()), this, SLOT(close()));
   connect(ui.pushButton_minimize, SIGNAL(clicked()), minimizeAction, SLOT(trigger()));
-  connect(ui.checkBox_hideIcon, SIGNAL(clicked(bool)), this, SLOT(toggleTrayIcon(bool)));   
+  connect(ui.checkBox_hideIcon, SIGNAL(clicked(bool)), this, SLOT(toggleTrayIcon(bool)));
   connect(ui.checkBox_devicesoff, SIGNAL(clicked(bool)), this, SLOT(toggleOfflineMode(bool)));
   connect(ui.pushButton_connect,SIGNAL(clicked()),this, SLOT(connectPressed()));
-  connect(ui.pushButton_disconnect,SIGNAL(clicked()),this, SLOT(disconnectPressed()));  
-  connect(ui.pushButton_remove,SIGNAL(clicked()),this, SLOT(removePressed()));    
-  connect(ui.pushButton_aboutCMST, SIGNAL(clicked()), this, SLOT(aboutCMST()));  
-  connect(ui.pushButton_aboutIconSet, SIGNAL(clicked()), this, SLOT(aboutIconSet())); 
+  connect(ui.pushButton_disconnect,SIGNAL(clicked()),this, SLOT(disconnectPressed()));
+  connect(ui.pushButton_remove,SIGNAL(clicked()),this, SLOT(removePressed()));
+  connect(ui.pushButton_aboutCMST, SIGNAL(clicked()), this, SLOT(aboutCMST()));
+  connect(ui.pushButton_aboutIconSet, SIGNAL(clicked()), this, SLOT(aboutIconSet()));
   connect(ui.pushButton_aboutQT, SIGNAL(clicked()), qApp, SLOT(aboutQt()));
   connect(qApp, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()));
   connect(ui.pushButton_license, SIGNAL(clicked()), this, SLOT(showLicense()));
-  connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));  
+  connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));
   connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
   connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(updateDisplayWidgets()));
   connect(ui.pushButton_rescan, SIGNAL (clicked()), this, SLOT(scanWiFi()));
@@ -293,8 +294,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.checkBox_run_on_startup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
 
   // turn network cards on or off globally based on checkbox
-  toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );   
-  
+  toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
+
   // tray icon - disable it if we specifiy that option on the commandline
   // otherwise set a singleshot timer to create the tray icon and showMinimized
   // or showMaximized.  The startSystemTray slots are inline functions and
@@ -314,13 +315,13 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     if (timeout < mintrigger) timeout = mintrigger;
     if (parser.isSet("minimized")) {
       QTimer::singleShot(timeout, this, SLOT(startSystemTrayMinimized()));
-    }	// if showMinimized
+    } // if showMinimized
     else {
       this->showNormal();
       QTimer::singleShot(timeout, this, SLOT(startSystemTrayNormal()));
-    }	// else showNormal
-   } // else      
-}  
+    } // else showNormal
+   } // else
+}
 
 ////////////////////////////////////////////////// Public Functions //////////////////////////////////
 
@@ -332,7 +333,7 @@ void ControlBox::aboutCMST()
  QMessageBox::about(this, tr("About %1").arg(PROGRAM_NAME),
       tr("<center>%1 is a program to interface with the Connman daemon and to provide a system tray control."
       "<br><center>Version <b>%2</b>"
-                  "<center>Release date: %3"                        
+                  "<center>Release date: %3"
                   "<center>Copyright c %4<center>by"
                   "<center>Andrew J. Bibb"
                   "<center>Vermont, USA"
@@ -348,7 +349,7 @@ void ControlBox::aboutCMST()
 void ControlBox::aboutIconSet()
 {
  QMessageBox::about(this, tr("About AwOken"),
-       tr("<center>This program uses the <b>AwOken</b> icon set version 2.5"                       
+       tr("<center>This program uses the <b>AwOken</b> icon set version 2.5"
           "<br><br>Released under the"
           "<br>Creative Commons"
           "<br>Attribution-Share Alike 3.0"
@@ -364,7 +365,7 @@ void ControlBox::showLicense()
 {
   QString s = readResourceText(":/text/text/license.txt");
   if ( s.isEmpty() ) s.append(tr("%1 license is the MIT license.").arg(PROGRAM_NAME));
-  
+
   QMessageBox::about(this, tr("License"), s);
 }
 
@@ -374,7 +375,7 @@ void ControlBox::showChangeLog()
 {
   QString s = readResourceText(":/text/text/changelog.txt");
   if ( s.isEmpty() ) s.append(tr("%1 change log is not available.").arg(PROGRAM_NAME));
-  
+
   ScrollBox::execScrollBox(tr("ChangeLog"), s, this);
 }
 
@@ -385,23 +386,23 @@ void ControlBox::updateDisplayWidgets()
 {
   // each assemble function will check q8_errors to make sure it can
   // get the information it needs.  Only check for major errors since we
-  // can't run the assemble functions if there are. 
+  // can't run the assemble functions if there are.
 
-  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) == 0x00 ) {    
-      
-    //  rebuild our pages 
+  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) == 0x00 ) {
+
+    //  rebuild our pages
     this->assemblePage1();
     this->assemblePage2();
     this->assemblePage3();
     this->assemblePage4();
     if (trayicon != 0 ) this->assembleTrayIcon();
-    
+
   } // if there were no major errors
-  
+
   return;
 }
 //
-// Slot to move the selected service before or after another service.  
+// Slot to move the selected service before or after another service.
 // Called when an item in mvsrv_menu is selected.  QAction act is the
 // action selected.
 void ControlBox::moveService(QAction* act)
@@ -420,15 +421,15 @@ void ControlBox::moveService(QAction* act)
 
   // make sure we got a targetobject, if not most likely cancel pressed
   if (targetobj.path().isEmpty()) return;
-  
+
   // get enough information from tableWidget_services to identify the source object
   QList<QTableWidgetItem*> list;
   list.clear();
   list = ui.tableWidget_services->selectedItems();
   if (list.isEmpty() ) return;
-  
+
   // apply the movebefore or moveafter message to the source object
-  QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this); 
+  QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
   if (iface_serv->isValid() ) {
     if (mvsrv_menu->title() == ui.actionMove_Before->text()) {
       QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "MoveBefore", QVariant::fromValue(targetobj) );
@@ -439,7 +440,7 @@ void ControlBox::moveService(QAction* act)
       //qDebug() << reply;
     } // else
   } // iface_srv is valid
-  
+
   // clean up
   iface_serv->deleteLater();
   return;
@@ -451,7 +452,7 @@ void ControlBox::moveButtonPressed(QAction* act)
 {
   mvsrv_menu->setTitle(act->text());
   mvsrv_menu->popup(QCursor::pos());
-  
+
   return;
 }
 
@@ -471,11 +472,11 @@ void ControlBox::enableMoveButtons(int row, int col)
     QAction* act = mvsrv_menu->addAction(ss);
     if (i == row) act->setDisabled(true);
     }
-    
+
   // add a cancel option
   mvsrv_menu->addSeparator();
-	mvsrv_menu->addAction(tr("Cancel"));
-    
+  mvsrv_menu->addAction(tr("Cancel"));
+
   return;
 }
 
@@ -485,7 +486,7 @@ void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QStrin
 {
   // Don't update the counter if qdb_objpath is not the online service
   if (! qdb_objpath.path().contains(onlineobjectpath, Qt::CaseInsensitive) ) return;
-  
+
   // Set the labels in page 4
   if (! qdb_objpath.path().isEmpty() ) {
     QMap<QString,QVariant> map;
@@ -499,9 +500,9 @@ void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QStrin
     ui.label_home_counter->setText(home_label);
     ui.label_roam_counter->setText(roam_label);
   }
-  else 
+  else
     ui.label_counter_service_name->setText(tr("<b>Service:</b> %1").arg(tr("Unable to determine service")) );
-    
+
   return;
 }
 
@@ -512,10 +513,10 @@ void ControlBox::connectPressed()
 {
   // If there is only one row select it
   if (ui.tableWidget_wifi->rowCount() == 1 ) {
-    QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(0, 0, 0, ui.tableWidget_wifi->columnCount() - 1); 
+    QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(0, 0, 0, ui.tableWidget_wifi->columnCount() - 1);
     ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
   }
-  
+
   // If no row is selected then return(
   QList<QTableWidgetItem*> list;
   list.clear();
@@ -525,16 +526,16 @@ void ControlBox::connectPressed()
       tr("You need to select a Wifi service before pressing the connect button.") );
     return;
   }
-  
+
   //  send the connect message to the service
-  QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this); 
+  QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
   // don't know why, but can't get the Agent until the timeout, set a short one of 1 millisecond
   iface_serv->setTimeout(1);
   QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
-   
+
   // clean up
   iface_serv->deleteLater();
-  return;   
+  return;
 }
 
 //
@@ -553,13 +554,13 @@ void ControlBox::disconnectPressed()
      }
      if (cntr_connected > 1 ) break;
   } // for
-  
+
   // if only one wifi entry is connected or online, select it
   if (cntr_connected == 1 ) {
-    QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row_connected, 0, row_connected, ui.tableWidget_wifi->columnCount() - 1); 
+    QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row_connected, 0, row_connected, ui.tableWidget_wifi->columnCount() - 1);
     ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
-  } 
-  
+  }
+
   // if no row selected return
   QList<QTableWidgetItem*> list;
   list.clear();
@@ -569,13 +570,13 @@ void ControlBox::disconnectPressed()
       tr("You need to select a Wifi service before pressing the disconnect button.") );
     return;
   }
-  
+
   //  send the disconnect message to the service
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
   iface_serv->call(QDBus::AutoDetect, "Disconnect");
   iface_serv->deleteLater();
-  
-  return; 
+
+  return;
 }
 
 //
@@ -592,26 +593,26 @@ void ControlBox::removePressed()
       tr("You need to select a Wifi service before pressing the remove button.") );
     return;
   }
-  
+
   //  send the Remove message to the service
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
   iface_serv->call(QDBus::AutoDetect, "Remove");
   iface_serv->deleteLater();
 
   return;
-} 
+}
 
-//  dbs slots are slots to receive DBus Signals   
+//  dbs slots are slots to receive DBus Signals
 //
 //  Slot called whenever DBUS issues a PropertyChanged signal
 void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 {
   // update propertiesMap
   properties_map.insert(name, translateVariant(dbvalue.variant()) );
-  
+
   // refresh display widgets
   updateDisplayWidgets();
-    
+
   // offlinemode property
   if (name.contains("OfflineMode", Qt::CaseInsensitive) ) {
     notifyclient->init();
@@ -625,21 +626,21 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
     }
     this->sendNotifications();
   } // if contains offlinemode
-  
+
   if (name.contains("State", Qt::CaseInsensitive) ) {
     // local variables
     QString type;
     QString name;
     QString state;
     QString iconpath;
-    
+
     // if there is at least 1 service
     if (services_list.count() > 0 ) {
         QMap<QString,QVariant> map = services_list.at(0).objmap;
         type = services_list.at(0).objmap.value("Type").toString();
         name = services_list.at(0).objmap.value("Name").toString();
         state = services_list.at(0).objmap.value("State").toString();
-    
+
       // notification text and icons
       if (type.contains(cmtr("wifi")) ) {
         if (b_useicontheme)
@@ -647,61 +648,61 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
         else
           iconpath = QString(":/icons/images/systemtray/wl000.png");
       } // if wifi
-      else { 
-        if (b_useicontheme) 
+      else {
+        if (b_useicontheme)
           iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wired_established.png");
         else
           iconpath = QString(":/icons/images/systemtray/wired_established.png");
       } // else probably wired
-    
+
       notifyclient->init();
       notifyclient->setSummary(tr("%1 (%2) Network").arg(type).arg(name) );
       notifyclient->setBody(tr("Connection: %1").arg(state) );
       notifyclient->setIcon(iconpath);
       this->sendNotifications();
-    } // if services count > 
-    
+    } // if services count >
+
     // no services listed
     else {
       if (b_useicontheme)
         iconpath = QIcon::hasThemeIcon("network-offline") ? QString("network-offline") : QString(":/icons/images/systemtray/connect_no.png") ;
-      else  
+      else
         iconpath = QString(":/icons/images/systemtray/connect_no.png");
-        
+
       notifyclient->init();
       notifyclient->setSummary(tr("Network Services:") );
-      notifyclient->setBody(tr("No network services available") );   
+      notifyclient->setBody(tr("No network services available") );
       notifyclient->setIcon(iconpath);
       this->sendNotifications();
     } // else no services listed
   } // if state change
-        
+
   return;
 }
 
 //
 // Slot called whenever DBUS issues a ServicesChanged signal.  When a
-// Scan method is called on a technology the results of that scan are 
+// Scan method is called on a technology the results of that scan are
 // signaled through this slot.  vmap will not be empty, it contains all
 // of the services found.  The objmap for the will be empty is nothing
 // in the service changed, so test for that to see if we want to call
 // updateDisplayWidgets().
 void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
-{	
-	// Set the update flag
-	bool b_needupdate = false;
-		
-	// Function is called everytime we do a wifi scan and we get new list of 
-	
+{
+  // Set the update flag
+  bool b_needupdate = false;
+
+  // Function is called everytime we do a wifi scan and we get new list of
+
   // process changed services. Demarshall the raw QDBusMessage instead of vmap as it is easier.
-  if (! vmap.isEmpty() ) {  
+  if (! vmap.isEmpty() ) {
     QList<arrayElement> revised_list;
-    if (! getArray(revised_list, msg)) return;   
-    
+    if (! getArray(revised_list, msg)) return;
+
     // if revised_list is not the same size as the existing services_list
     // then we definetely need an update
     if (revised_list.count() != services_list.count() ) b_needupdate = true;
-    
+
     // merge the existing services_list into the revised_list
     // first find the original element that matches the revised
     for (int i = 0; i < revised_list.size(); ++i) {
@@ -713,7 +714,7 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
           break;
         } // if
       } // j for
-      
+
       // merge the new elementArray into the existing
       if (! original_element.objpath.path().isEmpty()) {
         QMapIterator<QString, QVariant> itr(revised_element.objmap);
@@ -722,20 +723,20 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
           b_needupdate = true;
           original_element.objmap.insert(itr.key(), translateVariant(itr.value()) );
         } // while
-        
+
         // now insert the element into the revised list
         revised_list.replace(i, original_element);
       } // if original element is not empty
     } // i for
-    
+
     // now copy the revised list to services_list
     services_list.clear();
-    services_list = revised_list;    
+    services_list = revised_list;
   } // vmap not empty
 
   // process removed services
   if (! removed.isEmpty() ) {
-		b_needupdate = true;
+    b_needupdate = true;
     for (int i = 0; i < services_list.count(); ++i) {
       if (removed.contains(services_list.at(i).objpath) )
         services_list.removeAt(i);
@@ -744,31 +745,31 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
 
   // clear the counters (if selected) and update the widgets
   if (b_needupdate) {
-		clearCounters();
-		updateDisplayWidgets();
-		managerRescan(CMST::Manager_Services);  // used to connect service object signals to dbsServicePropertyChanged() slot
-	}
-  
+    clearCounters();
+    updateDisplayWidgets();
+    managerRescan(CMST::Manager_Services);  // used to connect service object signals to dbsServicePropertyChanged() slot
+  }
+
   return;
 }
 
 //
-// Slot called whenever DBUS issues a Peerschanged signal.  See note above about 
-// scan results being signaled here. 
+// Slot called whenever DBUS issues a Peerschanged signal.  See note above about
+// scan results being signaled here.
 void ControlBox::dbsPeersChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {
-	// Set the update flag
-	bool b_needupdate = false;	
-	
+  // Set the update flag
+  bool b_needupdate = false;
+
   // Process changed peers. Demarshall the raw QDBusMessage instead of vmap as it is easier.
-  if (! vmap.isEmpty() ) {  
+  if (! vmap.isEmpty() ) {
     QList<arrayElement> revised_list;
     if (! getArray(revised_list, msg)) return;
-    
+
     // if revised_list is not the same size as the existing peer_list
     // then we definetely need an update
-    if (revised_list.count() != peer_list.count() ) b_needupdate = true;    
-    
+    if (revised_list.count() != peer_list.count() ) b_needupdate = true;
+
     // merge the existing peers_list into the revised_list
     // first find the original element that matches the revised
     for (int i = 0; i < revised_list.size(); ++i) {
@@ -780,26 +781,26 @@ void ControlBox::dbsPeersChanged(QMap<QString, QVariant> vmap, QList<QDBusObject
           break;
         } // if
       } // j for
-      
+
       // merge the new elementArray into the existing
       if (! original_element.objpath.path().isEmpty()) {
         QMapIterator<QString, QVariant> itr(revised_element.objmap);
         while (itr.hasNext()) {
           itr.next();
-          b_needupdate = true;          
+          b_needupdate = true;
           original_element.objmap.insert(itr.key(), translateVariant(itr.value()) );
         } // while
-        
+
         // now insert the element into the revised list
         revised_list.replace(i, original_element);
       } // if original element exists
     } // i for
-    
+
     // now copy the revised list to peer_list
     peer_list.clear();
     peer_list = revised_list;
-  } // vmap not empty    
-   
+  } // vmap not empty
+
   // process removed peers
   if (! removed.isEmpty() ) {
     for (int i = 0; i < peer_list.count(); ++i) {
@@ -810,27 +811,27 @@ void ControlBox::dbsPeersChanged(QMap<QString, QVariant> vmap, QList<QDBusObject
 
   // update the widgets
   if (b_needupdate) updateDisplayWidgets();
-  
+
   return;
-}    
+}
 
 //
 // Slot called whenever DBUS issues a TechonlogyAdded signal
-// There must be an internal counter for technologies, first time a 
+// There must be an internal counter for technologies, first time a
 // technology is changed we get a signal even if we've already run
 // getTechnologies.  After that first time we never get this signal.
 // Use this this to catch real additions, which we defined as something
 // we don't already have from getTechnologies.
 void ControlBox::dbsTechnologyAdded(QDBusObjectPath path, QVariantMap properties)
 {
-	// iterate over the properties map and replace connman text with translated text
-	QMapIterator<QString, QVariant> itr(properties);
-	while (itr.hasNext()) {
-		itr.next();
-		properties.insert(itr.key(), translateVariant(itr.value()));
-	}	// map iterator	
-	
-	// construct an arrayElement 
+  // iterate over the properties map and replace connman text with translated text
+  QMapIterator<QString, QVariant> itr(properties);
+  while (itr.hasNext()) {
+    itr.next();
+    properties.insert(itr.key(), translateVariant(itr.value()));
+  } // map iterator
+
+  // construct an arrayElement
   arrayElement ae = {path, properties};
   bool newelem = true;
 
@@ -842,14 +843,14 @@ void ControlBox::dbsTechnologyAdded(QDBusObjectPath path, QVariantMap properties
       break;
     } // if
   } // for
-  
+
   // if it is a new element add it
   if (newelem) {
     technologies_list.append(ae);
   }
-  
+
   updateDisplayWidgets();
-  
+
   return;
 }
 
@@ -863,14 +864,14 @@ void ControlBox::dbsTechnologyRemoved(QDBusObjectPath removed)
       break;
     } // if
   } // for
-  
+
   updateDisplayWidgets();
-  
+
   return;
 }
 
 //
-//  Slots called from objects previous slots were called from Manager)  
+//  Slots called from objects previous slots were called from Manager)
 //
 //  Slot called whenever a service object issues a PropertyChanged signal on DBUS
 void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalue, QDBusMessage msg)
@@ -891,7 +892,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
       break;
     } // if
   } // for
-    
+
   // process errrors  - errors only valid when service is in the failure state
   if (property.contains("Error", Qt::CaseInsensitive) && s_state.contains(cmtr("failure")) ) {
     notifyclient->init();
@@ -906,14 +907,14 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
   if (property.contains("State", Qt::CaseInsensitive) ) {
     if (value.toString().contains(cmtr("online")) ) {
       onlineobjectpath = s_path;
-    } // 
+    } //
     else if (s_path.contains(onlineobjectpath, Qt::CaseInsensitive) ) {
       onlineobjectpath.clear();
     } // else if this service just went offline
   } // if property contains State
-  
+
   updateDisplayWidgets();
-  
+
   return;
 }
 
@@ -922,7 +923,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
 void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue, QDBusMessage msg)
 {
   QString s_path = msg.path();
-  
+
   // replace the old values with the changed ones.
   for (int i = 0; i < technologies_list.count(); ++i) {
     if (s_path.contains(technologies_list.at(i).objpath.path(), Qt::CaseSensitive) ) {
@@ -934,44 +935,44 @@ void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue
       break;
     } // if
   } // for
-   
+
   updateDisplayWidgets();
-  
+
   return;
 }
 
-//  Slot to rescan all WiFi technologies.  Called from the 
-//	ui.pushButton_rescan control.
-//  Results signaled by manager.ServicesChanged(), except for peer 
+//  Slot to rescan all WiFi technologies.  Called from the
+//  ui.pushButton_rescan control.
+//  Results signaled by manager.ServicesChanged(), except for peer
 //  services which will be signaled by manager.PeersChanged()
 void ControlBox::scanWiFi()
 {
   // Make sure we got the technologies_list before we try to work with it.
-  if ( (q8_errors & CMST::Err_Technologies) != 0x00 ) return; 
-    
+  if ( (q8_errors & CMST::Err_Technologies) != 0x00 ) return;
+
   // Run through each technology and do a scan for any wifi
   for (int row = 0; row < technologies_list.size(); ++row) {
     if (technologies_list.at(row).objmap.value("Type").toString().contains(cmtr("wifi")) ) {
-			if (technologies_list.at(row).objmap.value("Powered").toBool() ) {
-				ui.pushButton_rescan->setDisabled(true); 
-				ui.tableWidget_services->setCurrentIndex(QModelIndex()); // first cell becomes selected once pushbutton is disabled
-				qApp->processEvents();	// needed to promply disable the button
-				QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
-				iface_tech->setTimeout( 8 * 1000);	// full 25 second timeout is a bit much when there is a problem
-				QDBusMessage reply = iface_tech->call(QDBus::AutoDetect, "Scan");
-	
-				if (reply.type() != QDBusMessage::InvalidMessage) ui.pushButton_rescan->setEnabled(true);
-	      if (reply.type() != QDBusMessage::ReplyMessage) {
-	        QMessageBox::warning(this, tr("CMST Warning"),
-	          tr("<center><b>We received a DBUS reply message indicating an error while trying to scan technologies.</b></center>"                       
-	          "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage()) );
-	      } // if reply is something other than a normal reply message		
-			
-				iface_tech->deleteLater();
-			}	// if the wifi was powered
+      if (technologies_list.at(row).objmap.value("Powered").toBool() ) {
+        ui.pushButton_rescan->setDisabled(true);
+        ui.tableWidget_services->setCurrentIndex(QModelIndex()); // first cell becomes selected once pushbutton is disabled
+        qApp->processEvents();  // needed to promply disable the button
+        QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
+        iface_tech->setTimeout( 8 * 1000);  // full 25 second timeout is a bit much when there is a problem
+        QDBusMessage reply = iface_tech->call(QDBus::AutoDetect, "Scan");
+
+        if (reply.type() != QDBusMessage::InvalidMessage) ui.pushButton_rescan->setEnabled(true);
+        if (reply.type() != QDBusMessage::ReplyMessage) {
+          QMessageBox::warning(this, tr("CMST Warning"),
+            tr("<center><b>We received a DBUS reply message indicating an error while trying to scan technologies.</b></center>"
+            "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage()) );
+        } // if reply is something other than a normal reply message
+
+        iface_tech->deleteLater();
+      } // if the wifi was powered
     } // if the list item is wifi
   } // for
-      
+
   return;
 }
 
@@ -980,13 +981,13 @@ void ControlBox::scanWiFi()
 //  Called when ui.checkBox_devicesoff is clicked
 void ControlBox::toggleOfflineMode(bool checked)
 {
-  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) != 0x00 ) return;  
-  
+  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) != 0x00 ) return;
+
   QList<QVariant> vlist;
   vlist.clear();
-  vlist << QVariant("OfflineMode") << QVariant::fromValue(QDBusVariant(checked ? true : false)); 
+  vlist << QVariant("OfflineMode") << QVariant::fromValue(QDBusVariant(checked ? true : false));
   iface_manager->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
-   
+
   return;
 }
 
@@ -1000,12 +1001,12 @@ void ControlBox::toggleTrayIcon(bool b_checked)
       trayicon->setVisible(false);
       ui.pushButton_minimize->setDisabled(true);
     } // if
-		else {
-			trayicon->setVisible(true);
-			ui.pushButton_minimize->setDisabled(false); 
-		}	// else 
+    else {
+      trayicon->setVisible(true);
+      ui.pushButton_minimize->setDisabled(false);
+    } // else
   } //if
-  
+
   return;
 }
 
@@ -1013,7 +1014,7 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 //  Slot to toggle the powered state of a technology
 //  Called when our custom idButton in the powered cell in the page 1 technology tableWidget is clicked
 void ControlBox::togglePowered(QString object_id, bool checkstate)
-{ 
+{
   QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
 
   QList<QVariant> vlist;
@@ -1021,11 +1022,11 @@ void ControlBox::togglePowered(QString object_id, bool checkstate)
   vlist << QVariant("Powered") << QVariant::fromValue(QDBusVariant(checkstate) );
 
   QDBusMessage reply = iface_tech->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
-  
+
   // cleanup
   iface_tech->deleteLater();
   return;
-} 
+}
 
 //
 //  Slot to minimize the input window.  QWidget.hide() if the tray icon
@@ -1040,21 +1041,21 @@ void ControlBox::minMaxWindow(QAction* act)
     if (trayicon != 0 ) trayicon->isVisible() ? this->hide() : this->showMinimized();
     else this->showMinimized();
   } // if minimizeAction
-  
+
   else if (act == maximizeAction) {
     this->showNormal();
-	}
-	
-	// Called from the systemtrayicon context menu.  Actions are
-	// created dynamically and we don't know them up front.  Actions here
-	// we want to open the details page and set the combo box to display
-	// information on the service.
-	else {
-		ui.tabWidget->setCurrentIndex(1);
-		ui.comboBox_service->setCurrentIndex(ui.comboBox_service->findText(act->text()) );
-		this->showNormal();
-	} 
-  
+  }
+
+  // Called from the systemtrayicon context menu.  Actions are
+  // created dynamically and we don't know them up front.  Actions here
+  // we want to open the details page and set the combo box to display
+  // information on the service.
+  else {
+    ui.tabWidget->setCurrentIndex(1);
+    ui.comboBox_service->setCurrentIndex(ui.comboBox_service->findText(act->text()) );
+    this->showNormal();
+  }
+
   return;
 }
 
@@ -1063,19 +1064,19 @@ void ControlBox::minMaxWindow(QAction* act)
 //  Called when the ui.comboBox_services currentIndexChanged() signal is emitted.
 void ControlBox::getServiceDetails(int index)
 {
-  //  Make sure we were sent a valid index, can happen if the comboBox is 
+  //  Make sure we were sent a valid index, can happen if the comboBox is
   //  cleared and for whatever reason could not be reseeded with entries.
-  if (index < 0 ) return; 
-  
+  if (index < 0 ) return;
+
   // variables
-  bool b_editable = services_list.size() > 0 ? true : false; 
-  
-  //  Get the QMap associated with the index stored in an arrayElement 
+  bool b_editable = services_list.size() > 0 ? true : false;
+
+  //  Get the QMap associated with the index stored in an arrayElement
   QMap<QString,QVariant> map = services_list.at(index).objmap;
-  
+
   //  Some of the QVariants in the map are QMaps themselves, create a data structure for them
   QMap<QString,QVariant> submap;
-  
+
   // Get a QFileInfo associated with the index and display the connection
   QFileInfo fi = services_list.at(index).objpath.path();
   ui.label_details_connection->setText(tr("<b>Connection:</b> %1").arg(fi.baseName()) );
@@ -1089,14 +1090,14 @@ void ControlBox::getServiceDetails(int index)
   rs.append(tr("External Configuration File: %1<br>").arg(map.value("Immutable").toBool() ? tr("Yes", "immutable") : tr("No", "immutable")) );
   if (map.value("Immutable").toBool() ) b_editable = false;
   rs.append(tr("Auto Connect: %1<br>").arg(map.value("AutoConnect").toBool() ? tr("On", "autoconnect") : tr("No", "autoconnect")) );
-  
+
   rs.append(tr("<br><b>IPv4</b><br>"));
   extractMapData(submap, services_list.at(index).objmap.value("IPv4") );
   rs.append(tr("IP Address Acquisition: %1<br>").arg(submap.value("Method").toString()));
   rs.append(tr("IP Address: %1<br>").arg(submap.value("Address").toString()));
   rs.append(tr("IP Netmask: %1<br>").arg(submap.value("Netmask").toString()));
   rs.append(tr("IP Gateway: %1<br>").arg(submap.value("Gateway").toString()));
-  
+
   rs.append(tr("<br><b>IPv6</b><br>"));
   extractMapData(submap, services_list.at(index).objmap.value("IPv6") );
   rs.append(tr("Address Acquisition: %1<br>").arg(submap.value("Method").toString()));
@@ -1108,7 +1109,7 @@ void ControlBox::getServiceDetails(int index)
     rs.append(tr("Prefix Length: %1<br>").arg(submap.value("PrefixLength").toUInt()));
   rs.append(tr("IP Gateway: %1<br>").arg(submap.value("Gateway").toString()));
   rs.append(tr("Privacy: %1<br>").arg(submap.value("Privacy").toString()));
-  
+
   rs.append(tr("<br><b>Proxy</b><br>"));
   extractMapData(submap, services_list.at(index).objmap.value("Proxy") );
   QString s_proxymethod = submap.value("Method").toString();
@@ -1120,38 +1121,38 @@ void ControlBox::getServiceDetails(int index)
     rs.append(tr("Servers:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Servers").toStringList().join("<br>&nbsp;&nbsp;")) );
     rs.append(tr("Excludes:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Excludes").toStringList().join("<br>&nbsp;&nbsp;")) );
   }
-  
+
   //  write the text to the left display label
   ui.label_details_left->setText(rs);
-  
+
   // Start building the stringfortherightlabel
   rs = tr("<br><b>Name Servers</b><br>");
   rs.append(map.value("Nameservers").toStringList().join("<br>") );
-  
+
   rs.append(tr("<br><br><b>Time Servers</b><br>  "));
   rs.append(map.value("Timeservers").toStringList().join("<br>") );
-  
+
   rs.append(tr("<br><br><b>Search Domains</b><br>  "));
-  rs.append(map.value("Domains").toStringList().join("<br>") ); 
-  
+  rs.append(map.value("Domains").toStringList().join("<br>") );
+
   rs.append(tr("<br><br><b>Ethernet</b><br>"));
   extractMapData(submap, services_list.at(index).objmap.value("Ethernet") );
   rs.append(tr("Connection Method: %1<br>").arg(submap.value("Method").toString()) );
   rs.append(tr("Interface: %1<br>").arg(submap.value("Interface").toString()) );
-  rs.append(tr("Device Address: %1<br>").arg(submap.value("Address").toString()) ); 
+  rs.append(tr("Device Address: %1<br>").arg(submap.value("Address").toString()) );
   rs.append(tr("MTU: %1<br>").arg(submap.value("MTU").value<quint16>()) );
-  
+
   rs.append(tr("<br><b>Wireless</b><br>"));
   rs.append(tr("Security: %1<br>").arg(map.value("Security").toStringList().join(',')) );
   if (! map.value("Strength").toString().isEmpty() ) rs.append(tr("Strength: %1<br>").arg(map.value("Strength").value<quint8>()) );
   rs.append(tr("Roaming: %1<br>").arg(map.value("Roaming").toBool() ? tr("Yes", "roaming") : tr("No", "roaming")) );
-  
+
   //  write the text to the right display label
   ui.label_details_right->setText(rs);
-  
+
   // enable or disable the editor button
   ui.pushButton_configuration->setEnabled(b_editable);
-  
+
   return;
 }
 //
@@ -1169,7 +1170,7 @@ void ControlBox::closeEvent(QCloseEvent* e)
 {
   this->writeSettings();
   e->accept();
-  
+
   return;
 }
 
@@ -1177,7 +1178,7 @@ void ControlBox::closeEvent(QCloseEvent* e)
 // Event filter used to filter out tooltip events if we don't want to see them
 // in eventFilters return true eats the event, false passes on it.
 bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
-{ 
+{
   if (evn->type() == QEvent::ToolTip) {
     // first check if the object is the system tray icon
     QString objname = obj->metaObject()->className();
@@ -1187,14 +1188,14 @@ bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
       else
         return true;
     } // if obj is QSystemTrayIconSys
-    
+
     // now check all the other interface widgets
     if (ui.checkBox_enableinterfacetooltips->isChecked())
       return false;
     else
       return true;
   } // event is a tooltip
-  
+
   return false;
 }
 
@@ -1211,49 +1212,49 @@ int ControlBox::managerRescan(const int& srv)
     q8_errors &= ~CMST::Err_Properties;
     q8_errors &= ~CMST::Err_Technologies;
     q8_errors &= ~CMST::Err_Services;
-  
+
     // Access connman.manager to retrieve the data
     if (srv & CMST::Manager_Technologies) {
       if (! getTechnologies() ) {
         logErrors(CMST::Err_Technologies);
       } // if
-      else {  
+      else {
         // connect technology signals to slots
-        for (int i = 0; i < technologies_list.size(); ++i) {  
+        for (int i = 0; i < technologies_list.size(); ++i) {
           QDBusConnection::systemBus().disconnect(DBUS_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
           QDBusConnection::systemBus().connect(DBUS_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
-        } // for  
-      } //else      
+        } // for
+      } //else
     } // if technolgies
-    
+
     if (srv & CMST::Manager_Services) {
       if (! getServices() ) {
         logErrors(CMST::Err_Services);
       } // if
       // connect service signals to slots
-      else {  
+      else {
         for (int i = 0; i < services_list.size(); ++i) {
           QDBusConnection::systemBus().disconnect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
           QDBusConnection::systemBus().connect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
         } // for
       } // else
     } // if services
-    
+
     if (srv & CMST::Manager_Properties) {
       if (! getProperties() ) logErrors(CMST::Err_Properties);
     }
-        
+
   } // if
-  
+
   return (q8_errors & CMST::Err_Properties) | (q8_errors & CMST::Err_Technologies) | (q8_errors & CMST::Err_Services);
-}   
-    
+}
+
 //
 //  Function to assemble page 1 of the dialog
 void ControlBox::assemblePage1()
 {
   // Global Properties
-  if ( (q8_errors & CMST::Err_Properties) == 0x00 ) { 
+  if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
     QString s1 = properties_map.value("State").toString();
     if (s1.contains(cmtr("online")) ) {
       b_useicontheme ?
@@ -1271,25 +1272,25 @@ void ControlBox::assemblePage1()
           ui.label_state_pix->setPixmap(QIcon::fromTheme("network-offline", QIcon(":/icons/images/interface/connect_no.png")).pixmap(QSize(16,16)) )  :
           ui.label_state_pix->setPixmap(QPixmap (":/icons/images/interface/connect_no.png"));
       } // else any other state
-    } //  else ready or any other state 
+    } //  else ready or any other state
     s1.prepend(tr("State: ") );
     ui.label_state->setText(s1);
-    
+
     bool b1 = properties_map.value("OfflineMode").toBool();
     QString s2 = QString();
     if (b1 ) {
       s2 = tr("Engaged");
       ui.label_offlinemode_pix->setPixmap(QPixmap (":/icons/images/interface/golfball_green.png"));
     } // if offline mode is engaged
-      
+
     else {
       s2 = tr("Disabled");
       ui.label_offlinemode_pix->setPixmap(QPixmap (":/icons/images/interface/golfball_red.png"));
-    } //  else offlinemode disabled 
+    } //  else offlinemode disabled
     s2.prepend(tr("Offline Mode "));
-    ui.label_offlinemode->setText(s2);  
-  } // properties if no error   
-  
+    ui.label_offlinemode->setText(s2);
+  } // properties if no error
+
   // Technologies
   if ( (q8_errors & CMST::Err_Technologies) == 0x00 ) {
     QString st = QString();
@@ -1298,20 +1299,20 @@ void ControlBox::assemblePage1()
     ui.tableWidget_technologies->setRowCount(technologies_list.size() );
     ui.tableWidget_technologies->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Fixed);
     for (int row = 0; row < technologies_list.size(); ++row) {
-    
+
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       st = technologies_list.at(row).objmap.value("Name").toString();
       qtwi00->setText(st);
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 0, qtwi00) ;
-      
+
       QTableWidgetItem* qtwi01 = new QTableWidgetItem();
       st = technologies_list.at(row).objmap.value("Type").toString();
       qtwi01->setText(st);
       qtwi01->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 1, qtwi01);
-      
-      bt = technologies_list.at(row).objmap.value("Powered").toBool();  
+
+      bt = technologies_list.at(row).objmap.value("Powered").toBool();
       idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
       qpb02->setFixedSize(
         ui.tableWidget_technologies->horizontalHeader()->sectionSize(2),
@@ -1327,68 +1328,68 @@ void ControlBox::assemblePage1()
         qpb02->setText(tr("%1Off%1%1", "powered").arg(padding));
         qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
         qpb02->setChecked(false);
-      } 
+      }
       ui.tableWidget_technologies->setCellWidget(row, 2, qpb02);
-      
+
       QTableWidgetItem* qtwi03 = new QTableWidgetItem();
       bt = technologies_list.at(row).objmap.value("Connected").toBool();
       qtwi03->setText( bt ? tr("Yes", "connected") : tr("No", "connected") );
       qtwi03->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 3, qtwi03);
-      
+
       QTableWidgetItem* qtwi04 = new QTableWidgetItem();
       bt = technologies_list.at(row).objmap.value("Tethered").toBool();
       qtwi04->setText( bt ? tr("Yes", "tethered") : tr("No", "tethered") );
       qtwi04->setTextAlignment(Qt::AlignCenter);
-      ui.tableWidget_technologies->setItem(row, 4, qtwi04); 
+      ui.tableWidget_technologies->setItem(row, 4, qtwi04);
     } // technologies for loop
   } // technologies if no error
-    
+
   // Services
   if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
     QString ss = QString();
     ui.tableWidget_services->clearContents();
     ui.tableWidget_services->setRowCount(services_list.size() );
     for (int row = 0; row < services_list.size(); ++row) {
-      
+
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       ss = services_list.at(row).objmap.value("Name").toString();
       qtwi00->setText(ss);
       qtwi00->setTextAlignment(Qt::AlignCenter);
-      ui.tableWidget_services->setItem(row, 0, qtwi00);   
-      
+      ui.tableWidget_services->setItem(row, 0, qtwi00);
+
       QTableWidgetItem* qtwi01 = new QTableWidgetItem();
       ss = services_list.at(row).objmap.value("State").toString();
       qtwi01->setText(ss);
       qtwi01->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_services->setItem(row, 1, qtwi01);
-      
+
       QTableWidgetItem* qtwi02 = new QTableWidgetItem();
       QFileInfo fi = services_list.at(row).objpath.path();
       qtwi02->setText(fi.baseName() );
       qtwi02->setTextAlignment(Qt::AlignVCenter|Qt::AlignLeft);
       ui.tableWidget_services->setItem(row, 2, qtwi02);
-      
+
       if (ui.checkBox_hidecnxn->isChecked() ) {
         ui.tableWidget_services->hideColumn(2);
       }
       else {
         ui.tableWidget_services->showColumn(2);
         ui.tableWidget_services->horizontalHeader()->resizeSection(1, ui.tableWidget_services->horizontalHeader()->defaultSectionSize());
-      }     
+      }
     } // services for loop
-    
+
     // resize the services column 0 to contents
-    ui.tableWidget_services->resizeColumnToContents(0);     
-      
+    ui.tableWidget_services->resizeColumnToContents(0);
+
   } // services if no error
-  
+
   return;
 }
 
 //
 //  Function to assemble page 2 of the dialog.  Only fill in the
-//  ui.comboBox_service widget.  The detail portion will be filled in 
+//  ui.comboBox_service widget.  The detail portion will be filled in
 //  by the getServiceDetails() slot whenever the comboBox index changes.
 void ControlBox::assemblePage2()
 {
@@ -1396,19 +1397,19 @@ void ControlBox::assemblePage2()
   ui.comboBox_service->clear();
   ui.label_details_left->clear();
   ui.label_details_right->clear();
-  
+
   //  services details
   if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
-  
+
     // populate the combobox
     for (int row = 0; row < services_list.size(); ++row) {
       QString ss = services_list.at(row).objmap.value("Name").toString();
       ui.comboBox_service->addItem(ss);
     } // services for loop
-      
+
     ui.comboBox_service->setCurrentIndex(0);
   } // services if no error
-    
+
   return;
 }
 
@@ -1420,10 +1421,10 @@ void ControlBox::assemblePage3()
   ui.tableWidget_wifi->clearContents();
   ui.tableWidget_wifi->setRowCount(0);
   int rowcount = 0;
-  
-  // Make sure we got the services_list before we try to work with it.  
+
+  // Make sure we got the services_list before we try to work with it.
   if ( (q8_errors & CMST::Err_Services) != 0x00 ) return;
- 
+
   // Run through the technologies again, this time only look for wifi
   if ( (q8_errors & CMST::Err_Technologies) == 0x00 ) {
     int i_wifidevices= 0;
@@ -1435,22 +1436,22 @@ void ControlBox::assemblePage3()
       } // if census
     } // for loop
     ui.label_wifi_state->setText(tr("  WiFi Technologies:<br>  %1 Found, %2 Powered").arg(i_wifidevices).arg(i_wifipowered) );
-  } // technologis if no errors 
-    
+  } // technologis if no errors
+
   // Run through each service_list looking for wifi services
   wifi_list.clear();
   for (int row = 0; row < services_list.size(); ++row) {
     QMap<QString,QVariant> map = services_list.at(row).objmap;
     if (map.value("Type").toString().contains(cmtr("wifi")) ) {
       wifi_list.append(services_list.at(row));
-      ui.tableWidget_wifi->setRowCount(rowcount + 1); 
-      
+      ui.tableWidget_wifi->setRowCount(rowcount + 1);
+
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       qtwi00->setText(map.value("Name").toString() );
       qtwi00->setTextAlignment(Qt::AlignCenter);
-      ui.tableWidget_wifi->setItem(rowcount, 0, qtwi00);  
-      
-      QLabel* ql01 = new QLabel(ui.tableWidget_wifi);     
+      ui.tableWidget_wifi->setItem(rowcount, 0, qtwi00);
+
+      QLabel* ql01 = new QLabel(ui.tableWidget_wifi);
       if (map.value("Favorite").toBool() ) {
         b_useicontheme ?
           ql01->setPixmap(QIcon::fromTheme("emblem-favorite", QIcon(":/icons/images/interface/favorite.png")).pixmap(QSize(16,16)) ) :
@@ -1458,14 +1459,14 @@ void ControlBox::assemblePage3()
       }
       ql01->setAlignment(Qt::AlignCenter);
       ui.tableWidget_wifi->setCellWidget(rowcount, 1, ql01);
-      
+
       QLabel* ql02 = new QLabel(ui.tableWidget_wifi);
       if (map.value("State").toString().contains(cmtr("online")) ) {
         b_useicontheme ?
           ql02->setPixmap(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/interface/connect_established.png")).pixmap(QSize(16,16)) ) :
           ql02->setPixmap(QPixmap(":/icons/images/interface/connect_established.png"));
       } // if online
-      else { 
+      else {
         if (map.value("State").toString().contains(cmtr("ready")) ) {
           b_useicontheme ?
             ql02->setPixmap(QIcon::fromTheme("network-idle", QIcon(":/icons/images/interface/connect_creating.png")).pixmap(QSize(16,16)) ) :
@@ -1479,17 +1480,17 @@ void ControlBox::assemblePage3()
       } // else ready or any other state
       ql02->setAlignment(Qt::AlignCenter);
       ql02->setToolTip(map.value("State").toString());
-      ui.tableWidget_wifi->setCellWidget(rowcount, 2, ql02);      
-      
+      ui.tableWidget_wifi->setCellWidget(rowcount, 2, ql02);
+
       QTableWidgetItem* qtwi03 = new QTableWidgetItem();
       qtwi03->setText(map.value("Security").toStringList().join(',') );
       qtwi03->setTextAlignment(Qt::AlignCenter);
-      ui.tableWidget_wifi->setItem(rowcount, 3, qtwi03);      
-         
-      SignalBar* sb04 = new SignalBar(ui.tableWidget_wifi);          
-      sb04->setBarValue(map.value("Strength").value<quint8>() );  
+      ui.tableWidget_wifi->setItem(rowcount, 3, qtwi03);
+
+      SignalBar* sb04 = new SignalBar(ui.tableWidget_wifi);
+      sb04->setBarValue(map.value("Strength").value<quint8>() );
       ui.tableWidget_wifi->setCellWidget(rowcount, 4, sb04);
-            
+
       ++rowcount;
     } //  if wifi cnxn
   } // services for loop
@@ -1497,26 +1498,26 @@ void ControlBox::assemblePage3()
   // resize the services column 0 and 1 to contents
   ui.tableWidget_wifi->resizeColumnToContents(0);
   ui.tableWidget_wifi->resizeColumnToContents(1);
-  
+
   // enable the control buttons if there is at least on line in the table
   bool b_enable = false;
   if ( wifi_list.count() > 0 ) b_enable = true;
   ui.pushButton_connect->setEnabled(b_enable);
   ui.pushButton_disconnect->setEnabled(b_enable);
   ui.pushButton_remove->setEnabled(b_enable);
- 
+
   return;
-} 
+}
 
 //
 //  Function to assemble page 4 of the dialog.
 void ControlBox::assemblePage4()
-{ 
+{
   // Text for the counter settings label
   ui.label_counter_settings->setText(tr("Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.")   \
       .arg(counter_accuracy)  \
       .arg(counter_period) );
-        
+
   return;
 }
 
@@ -1527,7 +1528,7 @@ void ControlBox::assembleTrayIcon()
 {
   QString stt = QString();
   int readycount = 0;
-  
+
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
     // count how many services are in the ready state
     for (int i = 0; i < services_list.count(); ++i) {
@@ -1535,22 +1536,22 @@ void ControlBox::assembleTrayIcon()
     } // for loop
     if (properties_map.value("State").toString().contains(cmtr("online") ) ||
         (properties_map.value("State").toString().contains(cmtr("ready")) && readycount == 1) ) {
-      if ( (q8_errors & CMST::Err_Services) == 0x00 ) {        
+      if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
         QMap<QString,QVariant> submap;
         if (services_list.at(0).objmap.value("Type").toString().contains(cmtr("ethernet")) ) {
           extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
           stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
           stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
-          stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );   
+          stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
           b_useicontheme ?
             trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wired_established.png")) )  :
-            trayicon->setIcon(QIcon(":/icons/images/systemtray/wired_established.png") );         
+            trayicon->setIcon(QIcon(":/icons/images/systemtray/wired_established.png") );
         } //  if wired connection
-        
+
         if (services_list.at(0).objmap.value("Type").toString().contains(cmtr("wifi")) ) {
           stt.prepend(tr("WiFi Connection<br>","icon_tool_tip"));
-          extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );              
-          stt.append(tr("SSID: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );             
+          extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
+          stt.append(tr("SSID: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
           stt.append(tr("Security: %1<br>").arg(services_list.at(0).objmap.value("Security").toStringList().join(',')) );
           stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
@@ -1562,11 +1563,11 @@ void ControlBox::assembleTrayIcon()
             else if (str > 40 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl050.png"));
               else if (str > 20 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl025.png"));
                 else trayicon->setIcon(QIcon(":/icons/images/systemtray/wl000.png"));
-          } // else use our built in icons      
+          } // else use our built in icons
         } //  if wifi connection
       } //  services if no error
-    } //  if the state is online  
-    
+    } //  if the state is online
+
     // else if state is ready
     else if (properties_map.value("State").toString().contains(cmtr("ready")) ) {
       b_useicontheme ?
@@ -1574,25 +1575,25 @@ void ControlBox::assembleTrayIcon()
         trayicon->setIcon(QPixmap(":/icons/images/systemtray/connect_creating.png") );
       stt.append(tr("Connection is in the Ready State.", "icon_tool_tip"));
     } // else if if ready
-  
+
     // else if state is failure
     else if (properties_map.value("State").toString().contains(cmtr("failure")) ) {
-			// try to reconnect if service is wifi and Favorite and if reconnect is specified
-			if (ui.checkBox_retryfailed->isChecked() ) {
-				if (services_list.at(0).objmap.value("Type").toString().contains(cmtr("wifi"))	&& services_list.at(0).objmap.value("Favorite").toBool() ) {
-					QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(0).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this); 
-					QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
-					iface_serv->deleteLater();
-					stt.append(tr("Connection is in the Failure State, attempting to reestablish the connection", "icon_tool_tip") );
-				}	// if wifi and favorite
-			}	// if retry checked
+      // try to reconnect if service is wifi and Favorite and if reconnect is specified
+      if (ui.checkBox_retryfailed->isChecked() ) {
+        if (services_list.at(0).objmap.value("Type").toString().contains(cmtr("wifi"))  && services_list.at(0).objmap.value("Favorite").toBool() ) {
+          QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(0).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+          QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
+          iface_serv->deleteLater();
+          stt.append(tr("Connection is in the Failure State, attempting to reestablish the connection", "icon_tool_tip") );
+        } // if wifi and favorite
+      } // if retry checked
       b_useicontheme ?
         trayicon->setIcon(QIcon::fromTheme("network-error", QIcon(":/icons/images/systemtray/cancel.png")).pixmap(QSize(16,16)) ) :
         trayicon->setIcon(QPixmap(":/icons/images/systemtray/cancel.png") );
       stt.append(tr("Connection is in the Failure State.", "icon_tool_tip"));
     } // else if failure state
-        
-    // else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"    
+
+    // else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"
     else {
       b_useicontheme ?
         trayicon->setIcon(QIcon::fromTheme("network-offline", QIcon(":/icons/images/systemtray/connect_no.png")) )  :
@@ -1600,8 +1601,8 @@ void ControlBox::assembleTrayIcon()
       stt.append(tr("Not Connected", "icon_tool_tip"));
     } // else any other connection sate
   } // properties if no error
-  
-  // could not get any properties 
+
+  // could not get any properties
   else {
     b_useicontheme ?
       trayicon->setIcon(QIcon::fromTheme("network-error", QIcon(":/icons/images/interface/cancel.png")) ) :
@@ -1609,25 +1610,25 @@ void ControlBox::assembleTrayIcon()
     stt.append(tr("Error retrieving properties via Dbus"));
     stt.append(tr("Connection status is unknown"));
   }
-  
+
   //  set the tool tip (shown when mouse hovers over the systemtrayicon)
   trayicon->setToolTip(stt);
-  
+
   // set the menu for the tray icon.  Minimize, maximize and exit actions
   // are defined in the constructor and are controlbox class members)
   trayiconmenu->clear();
   for (int i = 0; i < services_list.count(); ++i) {
-		QAction* act = new QAction(services_list.at(i).objmap.value("Name").toString(), trayiconmenu);
-		minMaxGroup->addAction(act);
-		trayiconmenu->addAction(act);
-		if (i == services_list.count() - 1 ) trayiconmenu->addSeparator();
-	}	// i for
-	trayiconmenu->addAction(maximizeAction);
+    QAction* act = new QAction(services_list.at(i).objmap.value("Name").toString(), trayiconmenu);
+    minMaxGroup->addAction(act);
+    trayiconmenu->addAction(act);
+    if (i == services_list.count() - 1 ) trayiconmenu->addSeparator();
+  } // i for
+  trayiconmenu->addAction(maximizeAction);
   trayiconmenu->addAction(minimizeAction);
   trayiconmenu->addSeparator();
   trayiconmenu->addSeparator();
   trayiconmenu->addAction(exitAction);
-  
+
   return;
 }
 
@@ -1695,8 +1696,8 @@ void ControlBox::writeSettings()
   settings->beginGroup("MainWindow");
   settings->setValue("size", size() );
   settings->setValue("pos", pos() );
-  settings->endGroup(); 
-  
+  settings->endGroup();
+
   settings->beginGroup("CheckBoxes");
   settings->setValue("hide_tray_icon", ui.checkBox_hideIcon->isChecked() );
   settings->setValue("devices_off", ui.checkBox_devicesoff->isChecked() );
@@ -1710,8 +1711,8 @@ void ControlBox::writeSettings()
   settings->setValue("advanced", ui.checkBox_advanced->isChecked() );
   settings->setValue("retry_failed", ui.checkBox_retryfailed->isChecked() );
   settings->setValue("run_on_startup", ui.checkBox_run_on_startup->isChecked());
-  settings->endGroup(); 
-  
+  settings->endGroup();
+
   return;
 }
 
@@ -1721,12 +1722,12 @@ void ControlBox::readSettings()
 {
   // only restore settings if retain_settings is checked
   if (! settings->value("CheckBoxes/retain_settings").toBool() ) return;
-  
+
   settings->beginGroup("MainWindow");
   resize(settings->value("size", QSize(700, 550)).toSize() );
   move(settings->value("pos", QPoint(200, 200)).toPoint() );
   settings->endGroup();
-  
+
   settings->beginGroup("CheckBoxes");
   ui.checkBox_hideIcon->setChecked(settings->value("hide_tray_icon").toBool() );
   ui.checkBox_devicesoff->setChecked(settings->value("devices_off").toBool() );
@@ -1741,78 +1742,78 @@ void ControlBox::readSettings()
   ui.checkBox_retryfailed->setChecked(settings->value("retry_failed").toBool() );
   ui.checkBox_run_on_startup->setChecked(settings->value("run_on_startup").toBool());
   settings->endGroup();
-  
+
   return;
 }
 
 //
 // Function to create the systemtray icon.  Really part of the constructor
 // and called by a single shot QTimer (actually via a slot between the timer
-// and here).  
+// and here).
 void ControlBox::createSystemTrayIcon(bool b_startminimized)
-{ 	
-  // We still need to make sure there is a tray available 
+{
+  // We still need to make sure there is a tray available
   if (QSystemTrayIcon::isSystemTrayAvailable() ) {
-		
-		// Create the systemtrayicon
-		trayicon = new QSystemTrayIcon(this);
-		
-		// Create a context menu.  Menu contents is defined in the
-		// assembletrayIcon() function.
-    trayiconmenu = new QMenu(this);  
+
+    // Create the systemtrayicon
+    trayicon = new QSystemTrayIcon(this);
+
+    // Create a context menu.  Menu contents is defined in the
+    // assembletrayIcon() function.
+    trayiconmenu = new QMenu(this);
     trayicon->setContextMenu(trayiconmenu);
-    connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason))); 
-    
+    connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
+
     // Assemble the tray icon (set the icon to display)
-		assembleTrayIcon(); 		
-		
+    assembleTrayIcon();
+
     // QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
-		// maxtries to get a valid icon geometry.
-		// QT5.4 update, may be fixed but leave option in for now
-		if (b_usexfce) { 
-			const int maxtries = 125;
-			int i = 0;
-			for (i; i < maxtries; ++i) {
-				trayicon->setVisible(true);
-				qDebug() << "icon geometry: " << trayicon->geometry();				
-				if (trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) break;
-				trayicon->setVisible(false);
-				qApp->processEvents();
-			}   // hammer loop
-			if (i == maxtries - 1) {
-				qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
-				ui.pushButton_minimize->setDisabled(true);
-				trayicon = 0;	// reinitialize the pointer
-			}	// if we hit the end of the loop
-		}	// if use xfce   		
-		  
-		// Sync the visibility to the checkbox
+    // maxtries to get a valid icon geometry.
+    // QT5.4 update, may be fixed but leave option in for now
+    if (b_usexfce || b_usemate) {
+      const int maxtries = 125;
+      int i = 0;
+      for (i; i < maxtries; ++i) {
+        trayicon->setVisible(true);
+        qDebug() << "icon geometry: " << trayicon->geometry();
+        if ((trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) && trayicon->geometry().width() > 1) break;
+        trayicon->setVisible(false);
+        qApp->processEvents();
+      }   // hammer loop
+      if (i == maxtries - 1) {
+        qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
+        ui.pushButton_minimize->setDisabled(true);
+        trayicon = 0; // reinitialize the pointer
+      } // if we hit the end of the loop
+    } // if use xfce
+
+    // Sync the visibility to the checkbox
     ui.checkBox_hideIcon->setEnabled(true);
     trayicon->setVisible(true);
-        
+
   } // if there is a systemtray available
-  
+
   // else no systemtray available
   else {
     ui.checkBox_hideIcon->setDisabled(true);
     trayicon = 0;
-    
+
     QMessageBox::warning(this, tr("CMST Warning"),
-      tr("<center><b>Unable to find a systemtray on this machine.</b>"                       
+      tr("<center><b>Unable to find a systemtray on this machine.</b>"
          "<center><br>The program may still be used to manage your connections, but the tray icon will be disabled."
          "<center><br><br>If you are seeing this message at system start up and you know a system tray exists once the "
          "system is up, try starting with the <b>-w</b> switch and set a delay as necessary.  The exact wait time will vary "
-         "from system to system." 
+         "from system to system."
           ) );
-    
+
     // Even if we want to be minimized we can't there is no place to minimize to.
-    this->showNormal();            
+    this->showNormal();
   } // else
-      
+
   // Lastly update the display widgets (since this is actually the last
   // line of the constructor.)
-  this->updateDisplayWidgets();   
-  
+  this->updateDisplayWidgets();
+
   return;
 }
 
@@ -1820,19 +1821,19 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
 // Function to show notifications (if desired by the user). Called from
 // the functions we connect dbus signals to, for instance dbsPropertyChanged(),
 // The notifyclient class is used to store data for display from both
-// the systemtrayicon and the notification server.  
+// the systemtrayicon and the notification server.
 void ControlBox::sendNotifications()
 {
   // if we want system tray notifications
-  if (ui.checkBox_systemtraynotifications->isChecked() && QSystemTrayIcon::isSystemTrayAvailable() ) { 
+  if (ui.checkBox_systemtraynotifications->isChecked() && QSystemTrayIcon::isSystemTrayAvailable() ) {
     QSystemTrayIcon::MessageIcon sticon = QSystemTrayIcon::NoIcon;
     if (notifyclient->getUrgency() == Nc::UrgencyCritical) sticon = QSystemTrayIcon::Warning;
     else sticon = QSystemTrayIcon::Information;
-    
+
     if (notifyclient->getBody().isEmpty() )  trayicon->showMessage(PROGRAM_NAME, notifyclient->getSummary(), sticon);
     else trayicon->showMessage(PROGRAM_NAME,  QString(notifyclient->getSummary() + "\n" + notifyclient->getBody()), sticon);
   }
-  
+
   // if we want notify daemon notifications
     if (ui.checkBox_notifydaemon->isChecked() && notifyclient->isValid() ) {
       notifyclient->sendNotification();
@@ -1847,7 +1848,7 @@ bool ControlBox::getProperties()
 {
   // call connman and GetProperties
   QDBusMessage reply = iface_manager->call("GetProperties");
-    
+
   // call the function to get the map values
   properties_map.clear();
   return getMap(properties_map, reply);
@@ -1860,10 +1861,10 @@ bool ControlBox::getTechnologies()
 {
   // call connman and GetTechnologies
   QDBusMessage reply = iface_manager->call("GetTechnologies");
-    
+
   // call the function to get the map values
   technologies_list.clear();
-  return getArray(technologies_list, reply);    
+  return getArray(technologies_list, reply);
 }
 
 //
@@ -1873,60 +1874,60 @@ bool ControlBox::getServices()
 {
   // call connman and GetServices
   QDBusMessage reply = iface_manager->call("GetServices");
-    
+
   // call the function to get the map values
   services_list.clear();
-  return getArray(services_list, reply);    
+  return getArray(services_list, reply);
 }
 
 //
 //  Function to extract arrayElements from a DBus reply message (that contains an array).
-//  This data type is returned by GetServices and GetTechnologies. 
+//  This data type is returned by GetServices and GetTechnologies.
 //
 //  Return value a bool, true on success, false otherwise
-//  A QList of arrayElements is sent by reference (called r_list here) 
+//  A QList of arrayElements is sent by reference (called r_list here)
 //  and is modified by this function.  r_msg is a constant reference
 //  to the DBus reply message.
 bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg )
 {
   //  make sure we got a result back in the r_msg
   if (! r_msg.type() == QDBusMessage::ReplyMessage ) return false;
-  
+
   // make sure r_msg is a QDBusArgument
-  if ( ! r_msg.arguments().at(0).canConvert<QDBusArgument>() ) return false;  
-    
+  if ( ! r_msg.arguments().at(0).canConvert<QDBusArgument>() ) return false;
+
   // make sure the QDBusArgument holds an array
   const QDBusArgument &qdb_arg = r_msg.arguments().at(0).value<QDBusArgument>();
   if (! qdb_arg.currentType() == QDBusArgument::ArrayType ) return false;
-  
+
   // iterate over the QDBusArgument pulling array elements out and inserting into
   // an arrayElement structure.
   qdb_arg.beginArray();
   r_list.clear();
-    
-  while ( ! qdb_arg.atEnd() ) { 
+
+  while ( ! qdb_arg.atEnd() ) {
     // make sure the argument is a structure type
     if (! qdb_arg.currentType() == QDBusArgument::StructureType ) return false;
-    
+
     arrayElement ael;
     qdb_arg.beginStructure();
     qdb_arg >> ael.objpath >> ael.objmap;
-    
+
     // iterate over the objmap and replace connman text with translated text
     QMapIterator<QString, QVariant> itr(ael.objmap);
     while (itr.hasNext()) {
-			itr.next();
-			ael.objmap.insert(itr.key(), translateVariant(itr.value()));
-		}	// map iterator	
-    
+      itr.next();
+      ael.objmap.insert(itr.key(), translateVariant(itr.value()));
+    } // map iterator
+
     qdb_arg.endStructure();
     r_list.append (ael);
     }
-  qdb_arg.endArray();   
-  
+  qdb_arg.endArray();
+
   return true;
 }
-    
+
 //  Function to extract a QMap from a DBus reply message (that contains a map).
 //  This data type is returned by GetProperties
 //
@@ -1937,27 +1938,27 @@ bool ControlBox::getMap(QMap<QString,QVariant>& r_map, const QDBusMessage& r_msg
 {
   //  make sure we got a result back in the r_msg
   if (! r_msg.type() == QDBusMessage::ReplyMessage ) return false;
-  
+
   // make sure r_msg is a QDBusArgument
   if ( ! r_msg.arguments().at(0).canConvert<QDBusArgument>() ) return false;
-  
+
   // make sure the QDBusArgument holds a map
   const QDBusArgument &qdb_arg = r_msg.arguments().at(0).value<QDBusArgument>();
-  if (! qdb_arg.currentType() == QDBusArgument::MapType ) return false; 
-  
+  if (! qdb_arg.currentType() == QDBusArgument::MapType ) return false;
+
   // iterate over the QDBusArgument pulling map keys and values out
   qdb_arg.beginMap();
   r_map.clear();
-  
+
   while ( ! qdb_arg.atEnd() ) {
     QString key;
     QVariant value;
     qdb_arg.beginMapEntry();
     qdb_arg >> key >> value;
-    
-		// store translated text (if some exists)    
-		value = translateVariant(value);  
-		   
+
+    // store translated text (if some exists)
+    value = translateVariant(value);
+
     qdb_arg.endMapEntry();
     r_map.insert(key, value);
   }
@@ -1966,7 +1967,7 @@ bool ControlBox::getMap(QMap<QString,QVariant>& r_map, const QDBusMessage& r_msg
   return true;
 }
 
-//  
+//
 //  Function to extract the data from a QDBusArgument that contains a map.
 //  Some of the arrayElements can contain a QDBusArgument as the object
 //  instead of a primitive (string, bool, int, etc.). This function
@@ -1976,7 +1977,7 @@ bool ControlBox::getMap(QMap<QString,QVariant>& r_map, const QDBusMessage& r_msg
 //  The map is sent by reference (called r_map here) and is modified by this function.
 //  r_var is a constant reference to the QDBusArgument.
 //
-//  This is a static function because we send it to the PropertiesEditor class 
+//  This is a static function because we send it to the PropertiesEditor class
 //  as a function argument.
 bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r_var)
 {
@@ -1984,29 +1985,29 @@ bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r
   if (! r_var.canConvert<QDBusArgument>() ) return false;
   const QDBusArgument qdba =  r_var.value<QDBusArgument>();
   //QDBusArgument qdba =  r_var.value<QDBusArgument>();
-  
+
   // make sure the QDBusArgument holds a map
-  if (! qdba.currentType() == QDBusArgument::MapType ) return false;  
-  
+  if (! qdba.currentType() == QDBusArgument::MapType ) return false;
+
   // iterate over the QDBusArgument pulling map keys and values out
     r_map.clear();
     qdba.beginMap();
-    
+
     while ( ! qdba.atEnd() ) {
       QString key;
       QVariant value;
       qdba.beginMapEntry();
       qdba >> key >> value;
-			qdba.endMapEntry(); 
-			
-			// store translated text (if some exists)    
-			value = translateVariant(value);  
-			       
+      qdba.endMapEntry();
+
+      // store translated text (if some exists)
+      value = translateVariant(value);
+
       r_map.insert(key, value);
     } // while
-        
+
     qdba.endMap();
-    return true;  
+    return true;
 }
 
 //
@@ -2015,47 +2016,47 @@ void ControlBox::logErrors(const quint8& err)
 {
   //  store the error in a data element
   q8_errors |= err;
-  
+
   //  Log the error in the system log
   //  LOG_PID   Include PID with each message
   //  LOG_CONS  Write to console if there is a problem writing to system log
   //  LOG_USER  User Level Message
   //  LOG_ERR   Error condition
   //  LOG_WARNING   Warning contition
-  //    Defined in resource.h  
+  //    Defined in resource.h
   openlog(PROGRAM_NAME, LOG_PID|LOG_CONS, LOG_USER);
   switch (err)
-  { 
+  {
     case  CMST::Err_No_DBus:
       syslog(LOG_ERR, tr("Could not find a connection to the system bus").toUtf8().constData() );
       QMessageBox::critical(this, tr("%1 - Critical Error").arg(PROGRAM_NAME),
-        tr("Unable to find a connection to the system bus.<br><br>%1 will not be able to communicate with connman.").arg(PROGRAM_NAME) );     
+        tr("Unable to find a connection to the system bus.<br><br>%1 will not be able to communicate with connman.").arg(PROGRAM_NAME) );
       break;
     case  CMST::Err_Invalid_Iface:
-      syslog(LOG_ERR, tr("Could not create an interface to connman on the system bus").toUtf8().constData()); 
+      syslog(LOG_ERR, tr("Could not create an interface to connman on the system bus").toUtf8().constData());
       QMessageBox::critical(this, tr("%1 - Critical Error").arg(PROGRAM_NAME),
-        tr("Unable to create an interface to connman on the system bus.<br><br>%1 will not be able to communicate with connman.").arg(PROGRAM_NAME) );          
+        tr("Unable to create an interface to connman on the system bus.<br><br>%1 will not be able to communicate with connman.").arg(PROGRAM_NAME) );
       break;
     case  CMST::Err_Properties:
-      syslog(LOG_ERR, tr("Error reading or parsing connman.Manager.GetProperties").toUtf8().constData() );  
+      syslog(LOG_ERR, tr("Error reading or parsing connman.Manager.GetProperties").toUtf8().constData() );
       QMessageBox::warning(this, tr("%1 - Warning").arg(PROGRAM_NAME),
         tr("There was an error reading or parsing the reply from method connman.Manager.GetProperties.<br><br>It is unlikely any portion of %1 will be functional.").arg(PROGRAM_NAME) );
-      break;      
+      break;
     case  CMST::Err_Technologies:
       syslog(LOG_ERR, tr("Error reading or parsing connman.Manager.GetTechnologies").toUtf8().constData() );
       QMessageBox::warning(this, tr("%1 - Warning").arg(PROGRAM_NAME),
         tr("There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.<br><br>Some portion of %1 may still be functional.").arg(PROGRAM_NAME) );
-      break;            
+      break;
     case  CMST::Err_Services:
-      syslog(LOG_ERR, tr("Error reading or parsing connman.Manager.GetServices").toUtf8().constData() );  
+      syslog(LOG_ERR, tr("Error reading or parsing connman.Manager.GetServices").toUtf8().constData() );
       QMessageBox::warning(this, tr("%1 - Warning").arg(PROGRAM_NAME),
         tr("There was an error reading or parsing the reply from method connman.Manager.GetServices.<br><br>Some portion of %1 may still be functional.").arg(PROGRAM_NAME) );
       break;
     default:
-      break;      
-    } 
+      break;
+    }
  closelog();
- 
+
  return;
 }
 
@@ -2065,7 +2066,7 @@ void ControlBox::logErrors(const quint8& err)
 QString ControlBox::readResourceText(const char* textfile)
 {
   QString rtnstring = QString();
-    
+
   QFile file(textfile);
   if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
     QTextStream in(&file);
@@ -2073,56 +2074,56 @@ QString ControlBox::readResourceText(const char* textfile)
       rtnstring.append(in.readLine() );
     } // while
   } // if
-  
+
   return rtnstring;
-} 
+}
 
 //
 // Function to clear the counters if selected in the ui.  Called from the constructor
 // and from dbsServicesChanged
 void ControlBox::clearCounters()
-{ 
-  if (ui.checkBox_resetcounters->isChecked() && ! onlineobjectpath.isEmpty() ) {      
-    QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, onlineobjectpath, "net.connman.Service", QDBusConnection::systemBus(), this); 
+{
+  if (ui.checkBox_resetcounters->isChecked() && ! onlineobjectpath.isEmpty() ) {
+    QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, onlineobjectpath, "net.connman.Service", QDBusConnection::systemBus(), this);
     iface_serv->call(QDBus::AutoDetect, "ResetCounters");
     iface_serv->deleteLater();
-  } 
-  
+  }
+
   return;
 }
 
 //
-// Function to allow translations of strings returned by Connman. 
+// Function to allow translations of strings returned by Connman.
 QString ControlBox::cmtr(const QString& instr)
 {
-	if (instr.contains("idle", Qt::CaseInsensitive) ) return tr("idle", "connman state string");
-	else if (instr.contains("association", Qt::CaseInsensitive) ) return tr("association", "connman state string");
-		else if (instr.contains("configuration", Qt::CaseInsensitive) ) return tr("configuration", "connman state string");
-			else if (instr.contains("ready", Qt::CaseInsensitive) ) return tr("ready", "connman state string");
-				else if (instr.contains("online", Qt::CaseInsensitive) ) return tr("online", "connman state string");
-					else if (instr.contains("disconnect", Qt::CaseInsensitive) ) return tr("disconnect", "connman state string");
-						else if (instr.contains("failure", Qt::CaseInsensitive) ) return tr("failure", "connman state string");	
-							else if (instr.contains("offline", Qt::CaseInsensitive) ) return tr("offline", "connman state string");
-								
-								else if (instr.contains("system", Qt::CaseInsensitive) ) return tr("system", "connman type string");
-									else if (instr.contains("ethernet", Qt::CaseInsensitive) ) return tr("ethernet", "connman type string");
-										else if (instr.contains("wifi", Qt::CaseInsensitive) ) return tr("wifi", "connman type string");
-											else if (instr.contains("bluetooth", Qt::CaseInsensitive) ) return tr("bluetooth", "connman type string");
-												else if (instr.contains("cellular", Qt::CaseInsensitive) ) return tr("cellular", "connman type string");
-													else if (instr.contains("gps", Qt::CaseInsensitive) ) return tr("gps", "connman type string");
-														else if (instr.contains("vpn", Qt::CaseInsensitive) ) return tr("vpn", "connman type string");
-															else if (instr.contains("gadget", Qt::CaseInsensitive) ) return tr("gadget", "connman type string");
-																else if (instr.contains("p2p", Qt::CaseInsensitive) ) return tr("p2p", "connman type string");		
-																	else if (instr.contains("wired", Qt::CaseInsensitive) ) return tr("wired", "connman type string");																												
-														
-																		else if (instr.contains("direct", Qt::CaseInsensitive) ) return tr("direct", "connman proxy string");
-																			else if (instr.contains("manual", Qt::CaseInsensitive) ) return tr("manual", "connman proxy string");
-																				else if (instr.contains("auto", Qt::CaseInsensitive) ) return tr("auto", "connman proxy string");
-																					else if (instr.contains("psk", Qt::CaseInsensitive) ) return tr("psk", "connman security string");
-																						else if (instr.contains("ieee8021x", Qt::CaseInsensitive) ) return tr("ieee8021x", "connman security string");
-																							else if (instr.contains("none", Qt::CaseInsensitive) ) return tr("none", "connman security string");
-																								else if (instr.contains("wep", Qt::CaseInsensitive) ) return tr("wep", "connman security string");												
-	return instr; 
+  if (instr.contains("idle", Qt::CaseInsensitive) ) return tr("idle", "connman state string");
+  else if (instr.contains("association", Qt::CaseInsensitive) ) return tr("association", "connman state string");
+    else if (instr.contains("configuration", Qt::CaseInsensitive) ) return tr("configuration", "connman state string");
+      else if (instr.contains("ready", Qt::CaseInsensitive) ) return tr("ready", "connman state string");
+        else if (instr.contains("online", Qt::CaseInsensitive) ) return tr("online", "connman state string");
+          else if (instr.contains("disconnect", Qt::CaseInsensitive) ) return tr("disconnect", "connman state string");
+            else if (instr.contains("failure", Qt::CaseInsensitive) ) return tr("failure", "connman state string");
+              else if (instr.contains("offline", Qt::CaseInsensitive) ) return tr("offline", "connman state string");
+
+                else if (instr.contains("system", Qt::CaseInsensitive) ) return tr("system", "connman type string");
+                  else if (instr.contains("ethernet", Qt::CaseInsensitive) ) return tr("ethernet", "connman type string");
+                    else if (instr.contains("wifi", Qt::CaseInsensitive) ) return tr("wifi", "connman type string");
+                      else if (instr.contains("bluetooth", Qt::CaseInsensitive) ) return tr("bluetooth", "connman type string");
+                        else if (instr.contains("cellular", Qt::CaseInsensitive) ) return tr("cellular", "connman type string");
+                          else if (instr.contains("gps", Qt::CaseInsensitive) ) return tr("gps", "connman type string");
+                            else if (instr.contains("vpn", Qt::CaseInsensitive) ) return tr("vpn", "connman type string");
+                              else if (instr.contains("gadget", Qt::CaseInsensitive) ) return tr("gadget", "connman type string");
+                                else if (instr.contains("p2p", Qt::CaseInsensitive) ) return tr("p2p", "connman type string");
+                                  else if (instr.contains("wired", Qt::CaseInsensitive) ) return tr("wired", "connman type string");
+
+                                    else if (instr.contains("direct", Qt::CaseInsensitive) ) return tr("direct", "connman proxy string");
+                                      else if (instr.contains("manual", Qt::CaseInsensitive) ) return tr("manual", "connman proxy string");
+                                        else if (instr.contains("auto", Qt::CaseInsensitive) ) return tr("auto", "connman proxy string");
+                                          else if (instr.contains("psk", Qt::CaseInsensitive) ) return tr("psk", "connman security string");
+                                            else if (instr.contains("ieee8021x", Qt::CaseInsensitive) ) return tr("ieee8021x", "connman security string");
+                                              else if (instr.contains("none", Qt::CaseInsensitive) ) return tr("none", "connman security string");
+                                                else if (instr.contains("wep", Qt::CaseInsensitive) ) return tr("wep", "connman security string");
+  return instr;
 }
 
 //
@@ -2130,18 +2131,18 @@ QString ControlBox::cmtr(const QString& instr)
 // various dbs__ slots and get__ functions
 QVariant ControlBox::translateVariant(const QVariant& value)
 {
-	// if value contains a QString or QStringList try to translate it
-	if (value.canConvert(QMetaType::QString)) return QVariant::fromValue(cmtr(value.toString()) );
-	if (value.canConvert(QMetaType::QStringList)) {
-		QStringList sl = value.toStringList();
-		for (int i = 0; i < sl.size(); ++i) {
-			sl.replace(i, cmtr(sl.at(i)) );
-		}	// stringlist loop
-		return QVariant::fromValue(sl);
-	}	// if value was a stringlist	
+  // if value contains a QString or QStringList try to translate it
+  if (value.canConvert(QMetaType::QString)) return QVariant::fromValue(cmtr(value.toString()) );
+  if (value.canConvert(QMetaType::QStringList)) {
+    QStringList sl = value.toStringList();
+    for (int i = 0; i < sl.size(); ++i) {
+      sl.replace(i, cmtr(sl.at(i)) );
+    } // stringlist loop
+    return QVariant::fromValue(sl);
+  } // if value was a stringlist
 
-	return value;
-} 
+  return value;
+}
 
 // Slot to connect to the notification client. Called from QTimers to give time for the notification server
 // to start up if this program is started automatically at boot.  We make four attempts at finding the
@@ -2151,17 +2152,17 @@ void ControlBox::connectNotifyClient()
 {
    //initialize the counter
    static short count = 0;
-   ++count;  
-  
+   ++count;
+
   if (count > 1 ) {
     // if we have a valid notifyclient return now
     if (notifyclient->isValid() )
       return;
-    // else try to connect again      
+    // else try to connect again
     else
-      notifyclient->connectToServer(); 
+      notifyclient->connectToServer();
   } // if count > 1
-  
+
   // setup the notify server label if we were successful in finding and connecting to a server
   if (notifyclient->isValid() ) {
     QString name = notifyclient->getServerName().toLower();
@@ -2176,10 +2177,10 @@ void ControlBox::connectNotifyClient()
     ui.label_serverstatus->clear();
     ui.label_serverstatus->setDisabled(true);
     ui.groupBox_notfications->setToolTip(tr("%1 detected").arg(name) );
-    ui.groupBox_notfications->setWhatsThis(lab);    
+    ui.groupBox_notfications->setWhatsThis(lab);
   }
   // not successful, try again or abandon if counter is at limit
-  else { 
+  else {
     if (count < 4) {
       ui.label_serverstatus->setText(tr("Attempt %1 of 4 looking for notification server.").arg(count));
     } // try again
@@ -2191,7 +2192,7 @@ void ControlBox::connectNotifyClient()
   ui.groupBox_notfications->setToolTip("");
   ui.groupBox_notfications->setWhatsThis("");
   } // else we don't have a valid client.
-  
+
   return;
 }
 
@@ -2206,45 +2207,45 @@ void ControlBox::connectNotifyClient()
 //
 // Slot to open a dialog to configure the selected service
 void ControlBox::configureService()
-{ 
+{
   // Make sure the index is real
   if (ui.comboBox_service->currentIndex() < 0 ) return;
-  
+
   // Create a new properties editor
   PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()), this->extractMapData );
 
   // Set the whatsthis button icon
-  if (b_useicontheme) 
+  if (b_useicontheme)
    peditor->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
-  else 
+  else
     peditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
-  
+
   // call then clean up
   peditor->exec();
   peditor->deleteLater();
-  
+
   return;
 }
- 
+
 //
 // Slot to open the provisioning editor to create a configuration (provisioning) file
 void ControlBox::provisionService()
 {
   ProvisioningEditor* veditor = new ProvisioningEditor(this);
-  
+
   // Set the whatsthis button icon
-  if (b_useicontheme) 
+  if (b_useicontheme)
    veditor->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
-  else 
-    veditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png")); 
-  
+  else
+    veditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
+
   // call then clean up
   veditor->exec();
-  veditor->deleteLater();  
-    
+  veditor->deleteLater();
+
   return;
-}  
-   
+}
+
 //
 // Slot called when a connection to the local socket was detected.  Means another instance of CMST was started
 // while this instance was running.
@@ -2252,7 +2253,7 @@ void ControlBox::socketConnectionDetected()
 {
   this->showNormal();
   return;
-}   
+}
 
 //
 // Slot to tidy up the place at close.  Called when the QApplication::aboutToQuit() signal is emitted
@@ -2264,4 +2265,4 @@ void ControlBox::cleanUp()
 
   return;
 }
-  
+
