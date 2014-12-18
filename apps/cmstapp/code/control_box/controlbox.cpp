@@ -340,6 +340,7 @@ void ControlBox::aboutCMST()
                   "<br><center><b>Contributors:</b>"
                   "<center>Brett Dutro"
                   "<center>Adam Fontenot"
+                  "<center>Lester Bico"
                   "<br><center><b>Translations:</b>"
                   "<center>Ilya Shestopalov (Russian)").arg(PROGRAM_NAME).arg(VERSION).arg(RELEASE_DATE).arg(COPYRIGHT_DATE) );
 }
