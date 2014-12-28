@@ -28,7 +28,6 @@ DEALINGS IN THE SOFTWARE.
 
 # include <QtCore/QDebug>
 # include <QtDBus/QDBusConnection>
-# include <QLocale>
 
 #	include "./counter.h"
 # include "../resource.h"	
@@ -41,9 +40,6 @@ DEALINGS IN THE SOFTWARE.
 ConnmanCounter::ConnmanCounter(QObject* parent)
     : QObject(parent)
 {	
-	// set the Locale
-	QLocale::setDefault(QLocale(QLocale::L_LANG, QLocale::L_COUNTRY));
-	
 	//	data members
 	home_data = QVariantMap();
 	roam_data = QVariantMap();

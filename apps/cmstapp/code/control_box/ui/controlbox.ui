@@ -872,7 +872,7 @@
          </layout>
         </widget>
        </item>
-       <item row="6" column="0">
+       <item row="5" column="0">
         <spacer name="verticalSpacer_4">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -885,7 +885,7 @@
          </property>
         </spacer>
        </item>
-       <item row="3" column="0">
+       <item row="2" column="0">
         <widget class="QGroupBox" name="groupBox_systemtray">
          <property name="whatsThis">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the system tray are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -933,7 +933,7 @@
          </layout>
         </widget>
        </item>
-       <item row="4" column="0">
+       <item row="3" column="0">
         <widget class="QGroupBox" name="groupBox_notfications">
          <property name="enabled">
           <bool>true</bool>
@@ -974,7 +974,7 @@
          </layout>
         </widget>
        </item>
-       <item row="5" column="0">
+       <item row="4" column="0">
         <widget class="QGroupBox" name="groupBox">
          <property name="title">
           <string>Program Control</string>
@@ -990,17 +990,11 @@
             </property>
            </widget>
           </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QGroupBox" name="groupbox_startup">
-         <property name="title">
-          <string>Startup</string>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_13">
           <item>
-           <widget class="QCheckBox" name="checkBox_run_on_startup">
+           <widget class="QCheckBox" name="checkBox_runonstartup">
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will place an entry in the autostart directory for the current user. This directory is typically: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. If the directory does not exist it will be created.&lt;/p&gt;&lt;p&gt;A check in this box will only place (or remove) the desktop entry. Autostarting is typically dependent upon your Desktop Environment and must be enabled from there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
             <property name="text">
              <string>Run on startup</string>
             </property>

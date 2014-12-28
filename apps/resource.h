@@ -33,23 +33,60 @@ DEALINGS IN THE SOFTWARE.
 #define RESOURCE_H
 
 ///////////////////////////////// Program Values ///////////////////////
-// Program Info 
-#define VERSION "14.12.17-1"
+//
+// Program Info (may be visible, but don't mark for tranalation) 
+#define VERSION "14.12.27-1"
 #define RELEASE_DATE "14 December 2014"
 #define COPYRIGHT_DATE "2013-2014"
 
-// Program Values
-#define WINDOW_TITLE "Connman System Tray"
-#define PROGRAM_NAME "CMST"
+// Program Values - QApplication (not user visible)
 #define LONG_NAME "CMST - Connman System Tray"
-#define SOCKET_NAME "cmst_single_app_socket"
 #define ORG "cmst"
 
+// Program Values - Misc. (not user visible)
+#define SOCKET_NAME "cmst_single_app_socket"
 
-///////////////////////////////// Locale ///////////////////////////////
-// Change lines below as needed. 
-# define L_LANG  English
-# define L_COUNTRY UnitedStates
+// Program Values - user visible
+#define WINDOW_TITLE "Connman System Tray"
+#define PROGRAM_NAME "CMST"
+
+
+//////////////////////////// CMST Namespace/////////////////////////////
+//  Used for enum's local to this program
+namespace CMST 
+{
+  enum {
+    // errors
+    No_Errors         = 0x00,
+    Err_No_DBus       = (1 << 0), // Can't find DBus 
+    Err_Invalid_Iface = (1 << 1), // Invalid interface
+    Err_Properties    = (1 << 2), // There was an error reading connman.Manager.GetProperties
+    Err_Technologies  = (1 << 3), // There was an error reading connman.Manager.GetTechnologies       
+    Err_Services      = (1 << 4), // There was an error reading connman.Manager.GetServices  
+    
+    // methods
+    Manager_Properties    = (1 << 1), // scan for properties
+    Manager_Technologies  = (1 << 2), // scan for technologies  
+    Manager_Services      = (1 << 3), // scan for services
+    Manager_All           = (CMST::Manager_Properties | CMST::Manager_Technologies | CMST::Manager_Services),
+    
+    // provisioning editor
+    ProvEd_No_Selection = 0x00,
+    ProvEd_File_Read    = (1 << 0),
+    ProvEd_File_Delete  = (1 << 1),
+    ProvEd_File_Write   = (1 << 2),
+    
+    // provisioning editor validator input
+    ProvEd_Vd_None    = 0x00,
+    ProvEd_Vd_IPv4    = (1 << 0),
+    ProvEd_Vd_IPv6    = (1 << 1),
+    ProvEd_Vd_MAC     = (1 << 2),
+    ProvEd_Vd_46      = (1 << 3),
+    ProvEd_Vd_Hex     = (1 << 4),
+    ProvEd_Vd_Dom     = (1 << 5),
+    ProvEd_Vd_Wd      = (1 << 6),
+  };	// enum
+} // namespace CMST
 
 #endif
 

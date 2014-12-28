@@ -37,7 +37,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QMenu>
 # include <QPixmap>
 # include <QMessageBox>
-# include <QLocale>
 # include <QCloseEvent>
 # include <QToolTip>
 # include <QTableWidgetSelectionRange>
@@ -125,7 +124,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     : QDialog(parent)
 {
   // set the Locale
-  QLocale::setDefault(QLocale(QLocale::L_LANG, QLocale::L_COUNTRY));
+  //QLocale::setDefault(QLocale(QLocale::L_LANG, QLocale::L_COUNTRY));
 
   // setup the user interface
   ui.setupUi(this);
@@ -189,21 +188,23 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   if (! parser.isSet("disable-counters"))
     connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
 
-  //retrieve setting from the config file to be overriden by the command line option (if one of them is set)
-  bool runOnStartup = settings->value("CheckBoxes/run_on_startup", "false").toBool();
-  if (parser.isSet("run-on-startup")) {
-      runOnStartup = true;
-  } else if (parser.isSet("no-run-on-startup")) {
-      runOnStartup = false;
-  }
-  settings->setValue("CheckBoxes/run_on_startup", runOnStartup);
-  this->enableRunOnStartup(runOnStartup);
+	// I'm not sure about the commandline settings.
+  ////retrieve setting from the config file to be overriden by the command line option (if one of them is set)
+  //bool runOnStartup = settings->value("CheckBoxes/run_on_startup", "false").toBool();
+  //if (parser.isSet("run-on-startup")) {
+      //runOnStartup = true;
+  //} else if (parser.isSet("no-run-on-startup")) {
+      //runOnStartup = false;
+  //}
+  //settings->setValue("CheckBoxes/run_on_startup", runOnStartup);
+  //this->enableRunOnStartup(runOnStartup);
 
   // restore GUI settings
   this->readSettings();
-
+  
   // operate on settings not dealt with elsewhere
   ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
+  enableRunOnStartup(ui.checkBox_runonstartup->isChecked() );
 
   // Create the notifyclient, make four tries; first immediately in constructor, then
   // at 1/2 second, 2 seconds and finally at 8 seconds
@@ -291,7 +292,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
   connect(ui.pushButton_provisioning_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
   connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
-  connect(ui.checkBox_run_on_startup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
+  connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
 
   // turn network cards on or off globally based on checkbox
   toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
@@ -1682,8 +1683,13 @@ void ControlBox::enableRunOnStartup(bool enabled)
         return;
       }
     }
+    // Copy the autostart file (create the target directory first if needed)
+		QDir dir = autostart_file_info.dir();
+		if (! dir.exists() ) dir.mkdir(autostart_file_info.path() );
     fileToCopy.copy(autostart_file_info.absoluteFilePath());
-  } else {
+    
+  }	// if enabled 
+  else {
     if (!autostart_file_info.exists()) {
         return;
     }
@@ -1711,7 +1717,7 @@ void ControlBox::writeSettings()
   settings->setValue("reset_counters", ui.checkBox_resetcounters->isChecked() );
   settings->setValue("advanced", ui.checkBox_advanced->isChecked() );
   settings->setValue("retry_failed", ui.checkBox_retryfailed->isChecked() );
-  settings->setValue("run_on_startup", ui.checkBox_run_on_startup->isChecked());
+  settings->setValue("run_on_startup", ui.checkBox_runonstartup->isChecked());
   settings->endGroup();
 
   return;
@@ -1741,7 +1747,7 @@ void ControlBox::readSettings()
   ui.checkBox_resetcounters->setChecked(settings->value("reset_counters").toBool() );
   ui.checkBox_advanced->setChecked(settings->value("advanced").toBool() );
   ui.checkBox_retryfailed->setChecked(settings->value("retry_failed").toBool() );
-  ui.checkBox_run_on_startup->setChecked(settings->value("run_on_startup").toBool());
+  ui.checkBox_runonstartup->setChecked(settings->value("run_on_startup").toBool());
   settings->endGroup();
 
   return;

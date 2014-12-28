@@ -40,9 +40,10 @@ DEALINGS IN THE SOFTWARE.
 # include <QDialogButtonBox>
 # include <QString>
 # include <QStringList>
+# include <QtDBus/QtDBus>
 
 # include "ui_provisioning_editor.h"
-# include "./code/control_box/controlbox.h"
+
 //
 // Class for an QInputDialog knockoff with validator
 class ValidatingDialog : public QDialog

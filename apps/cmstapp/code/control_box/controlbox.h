@@ -54,42 +54,6 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/counter/counter.h"
 # include "./code/notify/notify.h"
 
-//  Used for enum's local to this program
-namespace CMST 
-{
-  enum {
-    // errors
-    No_Errors         = 0x00,
-    Err_No_DBus       = (1 << 0), // Can't find DBus 
-    Err_Invalid_Iface = (1 << 1), // Invalid interface
-    Err_Properties    = (1 << 2), // There was an error reading connman.Manager.GetProperties
-    Err_Technologies  = (1 << 3), // There was an error reading connman.Manager.GetTechnologies       
-    Err_Services      = (1 << 4), // There was an error reading connman.Manager.GetServices  
-    
-    // methods
-    Manager_Properties    = (1 << 1), // scan for properties
-    Manager_Technologies  = (1 << 2), // scan for technologies  
-    Manager_Services      = (1 << 3), // scan for services
-    Manager_All           = (CMST::Manager_Properties | CMST::Manager_Technologies | CMST::Manager_Services),
-    
-    // provisioning editor
-    ProvEd_No_Selection = 0x00,
-    ProvEd_File_Read    = (1 << 0),
-    ProvEd_File_Delete  = (1 << 1),
-    ProvEd_File_Write   = (1 << 2),
-    
-    // provisioning editor validator input
-    ProvEd_Vd_None    = 0x00,
-    ProvEd_Vd_IPv4    = (1 << 0),
-    ProvEd_Vd_IPv6    = (1 << 1),
-    ProvEd_Vd_MAC     = (1 << 2),
-    ProvEd_Vd_46      = (1 << 3),
-    ProvEd_Vd_Hex     = (1 << 4),
-    ProvEd_Vd_Dom     = (1 << 5),
-    ProvEd_Vd_Wd      = (1 << 6),
-  };
-} // namespace CMST
-
 
 //  Two of the connman.Manager query functions will return an array of structures.
 //  This struct provides a receiving element we can use to collect the return data.
