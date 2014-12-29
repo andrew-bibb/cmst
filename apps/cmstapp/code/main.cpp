@@ -27,7 +27,6 @@ DEALINGS IN THE SOFTWARE.
 
 # include <QtCore/QDebug>
 # include <QApplication>
-# include <QLocale>
 # include <QCommandLineOption>
 # include <QCommandLineParser>
 # include <QStringList>
@@ -66,7 +65,6 @@ int main(int argc, char *argv[])
     qDebug() <<  QCoreApplication::translate("main.cpp", "Another running instance of CMST has been detected.  This instance is aborting");  
     return 1;
   }
-
 
   // setup the command line parser
   QCommandLineParser parser;

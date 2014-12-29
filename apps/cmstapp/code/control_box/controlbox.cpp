@@ -42,6 +42,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QTableWidgetSelectionRange>
 # include <QProcessEnvironment>
 # include <QCryptographicHash>
+# include <QLocale>
 
 # include "../resource.h"
 # include "./controlbox.h"
@@ -123,8 +124,8 @@ SignalBar::SignalBar(QWidget* parent) :
 ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     : QDialog(parent)
 {
-  // set the Locale
-  //QLocale::setDefault(QLocale(QLocale::L_LANG, QLocale::L_COUNTRY));
+  // set the Locale (probably not necessary since the default is the system one anyway)
+  QLocale::setDefault(QLocale::system() );
 
   // setup the user interface
   ui.setupUi(this);
