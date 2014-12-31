@@ -35,13 +35,18 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation) 
-#define VERSION "14.12.30-1"
+#define VERSION "14.12.31-1"
 #define RELEASE_DATE "14 December 2014"
 #define COPYRIGHT_DATE "2013-2014"
 
-// Program Values - QApplication (not user visible)
+// Program Values:
+//	QApplication (not user visible)
+//  QSettings (visible in filesystem only)
+//	System Logging (visible in system logs only)
 #define LONG_NAME "CMST - Connman System Tray"
 #define ORG "cmst"
+#define APP "cmst"
+#define LOG_NAME "CMST" 
 
 // Program Values - Misc. (not user visible)
 #define SOCKET_NAME "cmst_single_app_socket"

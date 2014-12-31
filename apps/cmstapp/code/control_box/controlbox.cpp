@@ -135,8 +135,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   qApp->installEventFilter(this);
 
   // set the window title
-	setWindowTitle(TranslateStrings::cmtr("connman system tray"));
-	
+  setWindowTitle(TranslateStrings::cmtr("connman system tray"));
+  
   // data members
   q8_errors = CMST::No_Errors;
   properties_map.clear();
@@ -147,8 +147,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   agent = new ConnmanAgent(this);
   counter = new ConnmanCounter(this);
   mvsrv_menu = new QMenu(this);
-  QString s_app = TranslateStrings::cmtr("cmst");
-  settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
+  settings = new QSettings(ORG, APP, this);
   notifyclient = 0;
   onlineobjectpath.clear();
   socketserver = new QLocalServer(this);
@@ -190,7 +189,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   if (! parser.isSet("disable-counters"))
     connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
 
-	// I'm not sure about the commandline settings.
+  // I'm not sure about the commandline settings.
   ////retrieve setting from the config file to be overriden by the command line option (if one of them is set)
   //bool runOnStartup = settings->value("CheckBoxes/run_on_startup", "false").toBool();
   //if (parser.isSet("run-on-startup")) {
@@ -1686,11 +1685,11 @@ void ControlBox::enableRunOnStartup(bool enabled)
       }
     }
     // Copy the autostart file (create the target directory first if needed)
-		QDir dir = autostart_file_info.dir();
-		if (! dir.exists() ) dir.mkdir(autostart_file_info.path() );
+    QDir dir = autostart_file_info.dir();
+    if (! dir.exists() ) dir.mkdir(autostart_file_info.path() );
     fileToCopy.copy(autostart_file_info.absoluteFilePath());
     
-  }	// if enabled 
+  } // if enabled 
   else {
     if (!autostart_file_info.exists()) {
         return;
@@ -2020,7 +2019,8 @@ bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r
 }
 
 //
-//  Function to log errors to the system log
+// Function to log errors to the system log.  Functionallity provided
+// by syslog.h and friends.
 void ControlBox::logErrors(const quint8& err)
 {
   //  store the error in a data element
@@ -2032,8 +2032,9 @@ void ControlBox::logErrors(const quint8& err)
   //  LOG_USER  User Level Message
   //  LOG_ERR   Error condition
   //  LOG_WARNING   Warning contition
-  //    Defined in resource.h
-  openlog(qPrintable(TranslateStrings::cmtr("cmst")), LOG_PID|LOG_CONS, LOG_USER);
+  //  Defined in resource.h
+  //  LOG_NAME  Name to display in the log  
+  openlog(qPrintable(LOG_NAME), LOG_PID|LOG_CONS, LOG_USER);
   switch (err)
   {
     case  CMST::Err_No_DBus:
