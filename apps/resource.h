@@ -35,7 +35,7 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation) 
-#define VERSION "14.12.28-1"
+#define VERSION "14.12.30-1"
 #define RELEASE_DATE "14 December 2014"
 #define COPYRIGHT_DATE "2013-2014"
 
@@ -45,11 +45,6 @@ DEALINGS IN THE SOFTWARE.
 
 // Program Values - Misc. (not user visible)
 #define SOCKET_NAME "cmst_single_app_socket"
-
-// Program Values - user visible
-#define WINDOW_TITLE "Connman System Tray"
-#define PROGRAM_NAME "CMST"
-
 
 //////////////////////////// CMST Namespace/////////////////////////////
 //  Used for enum's local to this program

@@ -49,6 +49,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/scrollbox/scrollbox.h"
 # include "./code/peditor/peditor.h"
 # include "./code/provisioning/prov_ed.h"
+# include "./code/trstring/tr_strings.h"
 
 //  headers for system logging
 # include <stdio.h>
@@ -134,8 +135,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   qApp->installEventFilter(this);
 
   // set the window title
-  setWindowTitle(tr(WINDOW_TITLE));
-
+	setWindowTitle(TranslateStrings::cmtr("connman system tray"));
+	
   // data members
   q8_errors = CMST::No_Errors;
   properties_map.clear();
@@ -146,7 +147,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   agent = new ConnmanAgent(this);
   counter = new ConnmanCounter(this);
   mvsrv_menu = new QMenu(this);
-  QString s_app = PROGRAM_NAME;
+  QString s_app = TranslateStrings::cmtr("cmst");
   settings = new QSettings(s_app.toLower(), s_app.toLower(), this);
   notifyclient = 0;
   onlineobjectpath.clear();
@@ -332,7 +333,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 // slot to display an about box for this program
 void ControlBox::aboutCMST()
 {
- QMessageBox::about(this, tr("About %1").arg(PROGRAM_NAME),
+ QMessageBox::about(this, tr("About %1").arg(TranslateStrings::cmtr("cmst")),
       tr("<center>%1 is a program to interface with the Connman daemon and to provide a system tray control."
       "<br><center>Version <b>%2</b>"
                   "<center>Release date: %3"
@@ -344,7 +345,7 @@ void ControlBox::aboutCMST()
                   "<center>Adam Fontenot"
                   "<center>Lester Bico"
                   "<br><center><b>Translations:</b>"
-                  "<center>Ilya Shestopalov (Russian)").arg(PROGRAM_NAME).arg(VERSION).arg(RELEASE_DATE).arg(COPYRIGHT_DATE) );
+                  "<center>Ilya Shestopalov (Russian)").arg(TranslateStrings::cmtr("cmst")).arg(VERSION).arg(RELEASE_DATE).arg(COPYRIGHT_DATE) );
 }
 
 //
@@ -367,7 +368,7 @@ void ControlBox::aboutIconSet()
 void ControlBox::showLicense()
 {
   QString s = readResourceText(":/text/text/license.txt");
-  if ( s.isEmpty() ) s.append(tr("%1 license is the MIT license.").arg(PROGRAM_NAME));
+  if ( s.isEmpty() ) s.append(tr("%1 license is the MIT license.").arg(TranslateStrings::cmtr("cmst")));
 
   QMessageBox::about(this, tr("License"), s);
 }
@@ -377,7 +378,7 @@ void ControlBox::showLicense()
 void ControlBox::showChangeLog()
 {
   QString s = readResourceText(":/text/text/changelog.txt");
-  if ( s.isEmpty() ) s.append(tr("%1 change log is not available.").arg(PROGRAM_NAME));
+  if ( s.isEmpty() ) s.append(tr("%1 change log is not available.").arg(TranslateStrings::cmtr("cmst")));
 
   ScrollBox::execScrollBox(tr("ChangeLog"), s, this);
 }
@@ -1838,8 +1839,8 @@ void ControlBox::sendNotifications()
     if (notifyclient->getUrgency() == Nc::UrgencyCritical) sticon = QSystemTrayIcon::Warning;
     else sticon = QSystemTrayIcon::Information;
 
-    if (notifyclient->getBody().isEmpty() )  trayicon->showMessage(PROGRAM_NAME, notifyclient->getSummary(), sticon);
-    else trayicon->showMessage(PROGRAM_NAME,  QString(notifyclient->getSummary() + "\n" + notifyclient->getBody()), sticon);
+    if (notifyclient->getBody().isEmpty() )  trayicon->showMessage(TranslateStrings::cmtr("cmst"), notifyclient->getSummary(), sticon);
+    else trayicon->showMessage(TranslateStrings::cmtr("cmst"),  QString(notifyclient->getSummary() + "\n" + notifyclient->getBody()), sticon);
   }
 
   // if we want notify daemon notifications
@@ -2032,33 +2033,33 @@ void ControlBox::logErrors(const quint8& err)
   //  LOG_ERR   Error condition
   //  LOG_WARNING   Warning contition
   //    Defined in resource.h
-  openlog(PROGRAM_NAME, LOG_PID|LOG_CONS, LOG_USER);
+  openlog(qPrintable(TranslateStrings::cmtr("cmst")), LOG_PID|LOG_CONS, LOG_USER);
   switch (err)
   {
     case  CMST::Err_No_DBus:
       syslog(LOG_ERR, tr("Could not find a connection to the system bus").toUtf8().constData() );
-      QMessageBox::critical(this, tr("%1 - Critical Error").arg(PROGRAM_NAME),
-        tr("Unable to find a connection to the system bus.<br><br>%1 will not be able to communicate with connman.").arg(PROGRAM_NAME) );
+      QMessageBox::critical(this, tr("%1 - Critical Error").arg(TranslateStrings::cmtr("cmst")),
+        tr("Unable to find a connection to the system bus.<br><br>%1 will not be able to communicate with connman.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     case  CMST::Err_Invalid_Iface:
       syslog(LOG_ERR, tr("Could not create an interface to connman on the system bus").toUtf8().constData());
-      QMessageBox::critical(this, tr("%1 - Critical Error").arg(PROGRAM_NAME),
-        tr("Unable to create an interface to connman on the system bus.<br><br>%1 will not be able to communicate with connman.").arg(PROGRAM_NAME) );
+      QMessageBox::critical(this, tr("%1 - Critical Error").arg(TranslateStrings::cmtr("cmst")),
+        tr("Unable to create an interface to connman on the system bus.<br><br>%1 will not be able to communicate with connman.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     case  CMST::Err_Properties:
       syslog(LOG_ERR, tr("Error reading or parsing connman.Manager.GetProperties").toUtf8().constData() );
-      QMessageBox::warning(this, tr("%1 - Warning").arg(PROGRAM_NAME),
-        tr("There was an error reading or parsing the reply from method connman.Manager.GetProperties.<br><br>It is unlikely any portion of %1 will be functional.").arg(PROGRAM_NAME) );
+      QMessageBox::warning(this, tr("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
+        tr("There was an error reading or parsing the reply from method connman.Manager.GetProperties.<br><br>It is unlikely any portion of %1 will be functional.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     case  CMST::Err_Technologies:
       syslog(LOG_ERR, tr("Error reading or parsing connman.Manager.GetTechnologies").toUtf8().constData() );
-      QMessageBox::warning(this, tr("%1 - Warning").arg(PROGRAM_NAME),
-        tr("There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.<br><br>Some portion of %1 may still be functional.").arg(PROGRAM_NAME) );
+      QMessageBox::warning(this, tr("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
+        tr("There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.<br><br>Some portion of %1 may still be functional.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     case  CMST::Err_Services:
       syslog(LOG_ERR, tr("Error reading or parsing connman.Manager.GetServices").toUtf8().constData() );
-      QMessageBox::warning(this, tr("%1 - Warning").arg(PROGRAM_NAME),
-        tr("There was an error reading or parsing the reply from method connman.Manager.GetServices.<br><br>Some portion of %1 may still be functional.").arg(PROGRAM_NAME) );
+      QMessageBox::warning(this, tr("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
+        tr("There was an error reading or parsing the reply from method connman.Manager.GetServices.<br><br>Some portion of %1 may still be functional.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     default:
       break;

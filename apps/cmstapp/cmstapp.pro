@@ -51,6 +51,7 @@ HEADERS		+= ./code/scrollbox/scrollbox.h
 HEADERS		+= ./code/notify/notify.h
 HEADERS		+= ./code/peditor/peditor.h
 HEADERS   += ./code/provisioning/prov_ed.h
+HEADERS		+= ./code/trstring/tr_strings.h
 
 #	forms
 FORMS		+= ./code/control_box/ui/controlbox.ui
@@ -69,6 +70,7 @@ SOURCES += ./code/scrollbox/scrollbox.cpp
 SOURCES += ./code/notify/notify.cpp
 SOURCES	+= ./code/peditor/peditor.cpp
 SOURCES += ./code/provisioning/prov_ed.cpp
+SOURCES	+= ./code/trstring/tr_strings.cpp
 
 #	resource files
 RESOURCES 	+= ../../cmst.qrc

@@ -41,6 +41,7 @@ DEALINGS IN THE SOFTWARE.
 
 # include "./prov_ed.h"
 # include "../resource.h"
+# include "./code/trstring/tr_strings.h"
 
 ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
 {
@@ -344,7 +345,7 @@ void ProvisioningEditor::inputComboBox(QAction* act)
   if (act == ui.actionServiceIPv6Privacy) {str = tr("IPv6 Privacy"); sl << "disabled" << "enabled" << "preferred";}
   
   QString item = QInputDialog::getItem(this,
-    tr("%1 - Item Input").arg(PROGRAM_NAME),
+    tr("%1 - Item Input").arg(TranslateStrings::cmtr("cmst")),
     str,
     sl,
     0,
@@ -387,7 +388,7 @@ void ProvisioningEditor::inputFreeForm(QAction* act)
     // get the string from the user
     QString text = "";
       text = QInputDialog::getText(this,
-        tr("%1 - Text Input").arg(PROGRAM_NAME),
+        tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
         str,
         echomode,
         "",
@@ -412,7 +413,7 @@ void ProvisioningEditor::ipv4Triggered(QAction* act)
   if (act == ui.actionServiceIPV4DHCP) ui.plainTextEdit_main->insertPlainText(s.arg("dhcp") );
   if (act == ui.actionServiceIPv4Address) {
     QMessageBox::StandardButton but = QMessageBox::information(this, 
-                                        QString(PROGRAM_NAME) + tr("- Information"),
+                                        QString(TranslateStrings::cmtr("cmst")) + tr("- Information"),
                                         tr("The IPv4 <b>Address</b>, <b>Netmask</b>, and optionally <b>Gateway</b> need to be provided."  \
                                         "<p>Press OK when you are ready to proceed."),
                                         QMessageBox::Ok | QMessageBox::Abort,QMessageBox::Ok);
@@ -457,7 +458,7 @@ void ProvisioningEditor::ipv6Triggered(QAction* act)
   if (act == ui.actionServiceIPv6Auto) ui.plainTextEdit_main->insertPlainText(s.arg("auto") );
   if (act == ui.actionServiceIPv6Address) {
     QMessageBox::StandardButton but = QMessageBox::information(this, 
-                                        QString(PROGRAM_NAME) + tr("- Information"),
+                                        QString(TranslateStrings::cmtr("cmst")) + tr("- Information"),
                                         tr("The IPv6 <b>Address</b>, <b>Prefix Length</b>, and optionally <b>Gateway</b> need to be provided."  \
                                         "<p>Press OK when you are ready to proceed."),
                                         QMessageBox::Ok | QMessageBox::Abort,QMessageBox::Ok);
@@ -468,7 +469,7 @@ void ProvisioningEditor::ipv6Triggered(QAction* act)
       if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
         val = vd->getText();
         int i = QInputDialog::getInt(this,
-          tr("%1 - Integer Input").arg(PROGRAM_NAME),
+          tr("%1 - Integer Input").arg(TranslateStrings::cmtr("cmst")),
           tr("Enter the IPv6 prefix length"),
           0, 0, 255, 1,
           &ok);
@@ -569,14 +570,14 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
     switch (sl_conf.size()) {
       case 0:
         QMessageBox::information(this, 
-          QString(PROGRAM_NAME) + tr("- Information"),
+          QString(TranslateStrings::cmtr("cmst")) + tr("- Information"),
           tr("<center>No configuration files were found.<br>You may use this dialog to create one."),
           QMessageBox::Ok,
           QMessageBox::Ok);
         break; 
       case 1:
         QMessageBox::information(this,
-          tr("%1 - Information").arg(PROGRAM_NAME),
+          tr("%1 - Information").arg(TranslateStrings::cmtr("cmst")),
           tr("<center>Reading configuration file: %1").arg(sl_conf.at(0)),
           QMessageBox::Ok,
           QMessageBox::Ok);
@@ -584,7 +585,7 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
         break;
       default:
         QString item = QInputDialog::getItem(this,
-            tr("%1 - Select File").arg(PROGRAM_NAME),
+            tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")),
             tr("Select a file to load."),
             sl_conf,
             0,      // current item 0
@@ -607,14 +608,14 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
     switch (sl_conf.size()) {     
       case 0:
         QMessageBox::information(this, 
-          QString(PROGRAM_NAME) + tr("- Information"),
+          QString(TranslateStrings::cmtr("cmst")) + tr("- Information"),
           tr("<center>No configuration files were found.<br>Nothing will be deleted."),
           QMessageBox::Ok,
           QMessageBox::Ok);
         break; 
       default:
         QString item = QInputDialog::getItem(this,
-            tr("%1 - Select File").arg(PROGRAM_NAME),
+            tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")),
             tr("Select a file to be deleted."),
             sl_conf,
             0,      // current item 0
@@ -634,7 +635,7 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
   // If we are trying to save the file
   else if (i_sel & CMST::ProvEd_File_Write) {
   QString item = QInputDialog::getItem(this,
-      tr("%1 - Select File").arg(PROGRAM_NAME),
+      tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")),
       tr("Enter a new file name or select<br>an existing file to overwrite."),
       sl_conf,
       0,    // current item 0 
@@ -716,7 +717,7 @@ void ProvisioningEditor::writeCompleted(quint64 bytes)
 void ProvisioningEditor::callbackErrorHandler(QDBusError err)
 {
   QMessageBox::critical(this,
-    QString(PROGRAM_NAME) + tr("- Critical"),
+    QString(TranslateStrings::cmtr("cmst")) + tr("- Critical"),
     QString(tr("<b>DBus Error Name:</b> %1<br><br><b>String:</b> %2<br><br><b>Message:</b> %3")).arg(err.name()).arg(err.errorString(err.type())).arg(err.message()),
     QMessageBox::Ok,
     QMessageBox::Ok);
