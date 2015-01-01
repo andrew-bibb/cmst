@@ -551,7 +551,7 @@ void ControlBox::disconnectPressed()
   int row_connected = -1;
   for (int row = 0; row < wifi_list.size(); ++row) {
     QMap<QString,QVariant> map = wifi_list.at(row).objmap;
-    if (map.value("State").toString().contains(cmtr("online")) || map.value("State").toString().contains(cmtr("ready")) ) {
+    if (map.value("State").toString().contains(TranslateStrings::cmtr("online")) || map.value("State").toString().contains(TranslateStrings::cmtr("ready")) ) {
        ++cntr_connected;
        row_connected = row;
      }
@@ -645,7 +645,7 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
         state = services_list.at(0).objmap.value("State").toString();
 
       // notification text and icons
-      if (type.contains(cmtr("wifi")) ) {
+      if (type.contains(TranslateStrings::cmtr("wifi")) ) {
         if (b_useicontheme)
           iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wl000.png");
         else
@@ -897,7 +897,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
   } // for
 
   // process errrors  - errors only valid when service is in the failure state
-  if (property.contains("Error", Qt::CaseInsensitive) && s_state.contains(cmtr("failure")) ) {
+  if (property.contains("Error", Qt::CaseInsensitive) && s_state.contains(TranslateStrings::cmtr("failure")) ) {
     notifyclient->init();
     notifyclient->setSummary(QString(tr("Service Error: %1")).arg(value.toString()) );
     notifyclient->setBody(QString(tr("Object Path: %1")).arg(s_path) );
@@ -908,7 +908,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
 
   // if state property changed sync the online data members
   if (property.contains("State", Qt::CaseInsensitive) ) {
-    if (value.toString().contains(cmtr("online")) ) {
+    if (value.toString().contains(TranslateStrings::cmtr("online")) ) {
       onlineobjectpath = s_path;
     } //
     else if (s_path.contains(onlineobjectpath, Qt::CaseInsensitive) ) {
@@ -955,7 +955,7 @@ void ControlBox::scanWiFi()
 
   // Run through each technology and do a scan for any wifi
   for (int row = 0; row < technologies_list.size(); ++row) {
-    if (technologies_list.at(row).objmap.value("Type").toString().contains(cmtr("wifi")) ) {
+    if (technologies_list.at(row).objmap.value("Type").toString().contains(TranslateStrings::cmtr("wifi")) ) {
       if (technologies_list.at(row).objmap.value("Powered").toBool() ) {
         ui.pushButton_rescan->setDisabled(true);
         ui.tableWidget_services->setCurrentIndex(QModelIndex()); // first cell becomes selected once pushbutton is disabled
@@ -1117,10 +1117,10 @@ void ControlBox::getServiceDetails(int index)
   extractMapData(submap, services_list.at(index).objmap.value("Proxy") );
   QString s_proxymethod = submap.value("Method").toString();
   rs.append(tr("Address Acquisition: %1<br>").arg(s_proxymethod) );
-  if (s_proxymethod.contains(cmtr("auto")) ) {
+  if (s_proxymethod.contains(TranslateStrings::cmtr("auto")) ) {
     rs.append(tr("URL: %1<br>").arg(submap.value("URL").toString()) );
   }
-  else if (s_proxymethod.contains(cmtr("manual")) ) {
+  else if (s_proxymethod.contains(TranslateStrings::cmtr("manual")) ) {
     rs.append(tr("Servers:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Servers").toStringList().join("<br>&nbsp;&nbsp;")) );
     rs.append(tr("Excludes:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Excludes").toStringList().join("<br>&nbsp;&nbsp;")) );
   }
@@ -1259,13 +1259,13 @@ void ControlBox::assemblePage1()
   // Global Properties
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
     QString s1 = properties_map.value("State").toString();
-    if (s1.contains(cmtr("online")) ) {
+    if (s1.contains(TranslateStrings::cmtr("online")) ) {
       b_useicontheme ?
         ui.label_state_pix->setPixmap(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/interface/connect_established.png")).pixmap(QSize(16,16)) ) :
         ui.label_state_pix->setPixmap(QPixmap (":/icons/images/interface/connect_established.png"));
     } // if online
     else {
-      if (s1.contains(cmtr("ready")) ) {
+      if (s1.contains(TranslateStrings::cmtr("ready")) ) {
         b_useicontheme ?
           ui.label_state_pix->setPixmap(QIcon::fromTheme("network-idle", QIcon(":/icons/images/interface/connect_creating.png")).pixmap(QSize(16,16)) ) :
           ui.label_state_pix->setPixmap(QPixmap (":/icons/images/interface/connect_creating.png"));
@@ -1433,7 +1433,7 @@ void ControlBox::assemblePage3()
     int i_wifidevices= 0;
     int i_wifipowered = 0;
     for (int row = 0; row < technologies_list.size(); ++row) {
-      if (technologies_list.at(row).objmap.value("Type").toString() .contains(cmtr("wifi")) ) {
+      if (technologies_list.at(row).objmap.value("Type").toString() .contains(TranslateStrings::cmtr("wifi")) ) {
         ++i_wifidevices;
         if (technologies_list.at(row).objmap.value("Powered").toBool() ) ++i_wifipowered;
       } // if census
@@ -1445,7 +1445,7 @@ void ControlBox::assemblePage3()
   wifi_list.clear();
   for (int row = 0; row < services_list.size(); ++row) {
     QMap<QString,QVariant> map = services_list.at(row).objmap;
-    if (map.value("Type").toString().contains(cmtr("wifi")) ) {
+    if (map.value("Type").toString().contains(TranslateStrings::cmtr("wifi")) ) {
       wifi_list.append(services_list.at(row));
       ui.tableWidget_wifi->setRowCount(rowcount + 1);
 
@@ -1464,13 +1464,13 @@ void ControlBox::assemblePage3()
       ui.tableWidget_wifi->setCellWidget(rowcount, 1, ql01);
 
       QLabel* ql02 = new QLabel(ui.tableWidget_wifi);
-      if (map.value("State").toString().contains(cmtr("online")) ) {
+      if (map.value("State").toString().contains(TranslateStrings::cmtr("online")) ) {
         b_useicontheme ?
           ql02->setPixmap(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/interface/connect_established.png")).pixmap(QSize(16,16)) ) :
           ql02->setPixmap(QPixmap(":/icons/images/interface/connect_established.png"));
       } // if online
       else {
-        if (map.value("State").toString().contains(cmtr("ready")) ) {
+        if (map.value("State").toString().contains(TranslateStrings::cmtr("ready")) ) {
           b_useicontheme ?
             ql02->setPixmap(QIcon::fromTheme("network-idle", QIcon(":/icons/images/interface/connect_creating.png")).pixmap(QSize(16,16)) ) :
             ql02->setPixmap(QPixmap(":/icons/images/interface/connect_creating.png") );
@@ -1535,13 +1535,13 @@ void ControlBox::assembleTrayIcon()
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
     // count how many services are in the ready state
     for (int i = 0; i < services_list.count(); ++i) {
-      if (services_list.at(i).objmap.value("State").toString().contains(cmtr("ready")) )  ++readycount;
+      if (services_list.at(i).objmap.value("State").toString().contains(TranslateStrings::cmtr("ready")) )  ++readycount;
     } // for loop
-    if (properties_map.value("State").toString().contains(cmtr("online") ) ||
-        (properties_map.value("State").toString().contains(cmtr("ready")) && readycount == 1) ) {
+    if (properties_map.value("State").toString().contains(TranslateStrings::cmtr("online") ) ||
+        (properties_map.value("State").toString().contains(TranslateStrings::cmtr("ready")) && readycount == 1) ) {
       if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
         QMap<QString,QVariant> submap;
-        if (services_list.at(0).objmap.value("Type").toString().contains(cmtr("ethernet")) ) {
+        if (services_list.at(0).objmap.value("Type").toString().contains(TranslateStrings::cmtr("ethernet")) ) {
           extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
           stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
           stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
@@ -1551,7 +1551,7 @@ void ControlBox::assembleTrayIcon()
             trayicon->setIcon(QIcon(":/icons/images/systemtray/wired_established.png") );
         } //  if wired connection
 
-        if (services_list.at(0).objmap.value("Type").toString().contains(cmtr("wifi")) ) {
+        if (services_list.at(0).objmap.value("Type").toString().contains(TranslateStrings::cmtr("wifi")) ) {
           stt.prepend(tr("WiFi Connection<br>","icon_tool_tip"));
           extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
           stt.append(tr("SSID: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
@@ -1572,7 +1572,7 @@ void ControlBox::assembleTrayIcon()
     } //  if the state is online
 
     // else if state is ready
-    else if (properties_map.value("State").toString().contains(cmtr("ready")) ) {
+    else if (properties_map.value("State").toString().contains(TranslateStrings::cmtr("ready")) ) {
       b_useicontheme ?
         trayicon->setIcon(QIcon::fromTheme("network-idle", QIcon(":/icons/images/systemtray/connect_creating.png")).pixmap(QSize(16,16)) ) :
         trayicon->setIcon(QPixmap(":/icons/images/systemtray/connect_creating.png") );
@@ -1580,10 +1580,10 @@ void ControlBox::assembleTrayIcon()
     } // else if if ready
 
     // else if state is failure
-    else if (properties_map.value("State").toString().contains(cmtr("failure")) ) {
+    else if (properties_map.value("State").toString().contains(TranslateStrings::cmtr("failure")) ) {
       // try to reconnect if service is wifi and Favorite and if reconnect is specified
       if (ui.checkBox_retryfailed->isChecked() ) {
-        if (services_list.at(0).objmap.value("Type").toString().contains(cmtr("wifi"))  && services_list.at(0).objmap.value("Favorite").toBool() ) {
+        if (services_list.at(0).objmap.value("Type").toString().contains(TranslateStrings::cmtr("wifi"))  && services_list.at(0).objmap.value("Favorite").toBool() ) {
           QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(0).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
           QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
           iface_serv->deleteLater();
@@ -2103,50 +2103,16 @@ void ControlBox::clearCounters()
 }
 
 //
-// Function to allow translations of strings returned by Connman.
-QString ControlBox::cmtr(const QString& instr)
-{
-  if (instr.contains("idle", Qt::CaseInsensitive) ) return tr("idle", "connman state string");
-  else if (instr.contains("association", Qt::CaseInsensitive) ) return tr("association", "connman state string");
-    else if (instr.contains("configuration", Qt::CaseInsensitive) ) return tr("configuration", "connman state string");
-      else if (instr.contains("ready", Qt::CaseInsensitive) ) return tr("ready", "connman state string");
-        else if (instr.contains("online", Qt::CaseInsensitive) ) return tr("online", "connman state string");
-          else if (instr.contains("disconnect", Qt::CaseInsensitive) ) return tr("disconnect", "connman state string");
-            else if (instr.contains("failure", Qt::CaseInsensitive) ) return tr("failure", "connman state string");
-              else if (instr.contains("offline", Qt::CaseInsensitive) ) return tr("offline", "connman state string");
-
-                else if (instr.contains("system", Qt::CaseInsensitive) ) return tr("system", "connman type string");
-                  else if (instr.contains("ethernet", Qt::CaseInsensitive) ) return tr("ethernet", "connman type string");
-                    else if (instr.contains("wifi", Qt::CaseInsensitive) ) return tr("wifi", "connman type string");
-                      else if (instr.contains("bluetooth", Qt::CaseInsensitive) ) return tr("bluetooth", "connman type string");
-                        else if (instr.contains("cellular", Qt::CaseInsensitive) ) return tr("cellular", "connman type string");
-                          else if (instr.contains("gps", Qt::CaseInsensitive) ) return tr("gps", "connman type string");
-                            else if (instr.contains("vpn", Qt::CaseInsensitive) ) return tr("vpn", "connman type string");
-                              else if (instr.contains("gadget", Qt::CaseInsensitive) ) return tr("gadget", "connman type string");
-                                else if (instr.contains("p2p", Qt::CaseInsensitive) ) return tr("p2p", "connman type string");
-                                  else if (instr.contains("wired", Qt::CaseInsensitive) ) return tr("wired", "connman type string");
-
-                                    else if (instr.contains("direct", Qt::CaseInsensitive) ) return tr("direct", "connman proxy string");
-                                      else if (instr.contains("manual", Qt::CaseInsensitive) ) return tr("manual", "connman proxy string");
-                                        else if (instr.contains("auto", Qt::CaseInsensitive) ) return tr("auto", "connman proxy string");
-                                          else if (instr.contains("psk", Qt::CaseInsensitive) ) return tr("psk", "connman security string");
-                                            else if (instr.contains("ieee8021x", Qt::CaseInsensitive) ) return tr("ieee8021x", "connman security string");
-                                              else if (instr.contains("none", Qt::CaseInsensitive) ) return tr("none", "connman security string");
-                                                else if (instr.contains("wep", Qt::CaseInsensitive) ) return tr("wep", "connman security string");
-  return instr;
-}
-
-//
 // Function to translate any QStrings or QStringlists inside a variant.  Called from
 // various dbs__ slots and get__ functions
 QVariant ControlBox::translateVariant(const QVariant& value)
 {
   // if value contains a QString or QStringList try to translate it
-  if (value.canConvert(QMetaType::QString)) return QVariant::fromValue(cmtr(value.toString()) );
+  if (value.canConvert(QMetaType::QString)) return QVariant::fromValue(TranslateStrings::cmtr(value.toString()) );
   if (value.canConvert(QMetaType::QStringList)) {
     QStringList sl = value.toStringList();
     for (int i = 0; i < sl.size(); ++i) {
-      sl.replace(i, cmtr(sl.at(i)) );
+      sl.replace(i,TranslateStrings::cmtr(sl.at(i)) );
     } // stringlist loop
     return QVariant::fromValue(sl);
   } // if value was a stringlist

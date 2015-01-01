@@ -168,7 +168,6 @@ class ControlBox : public QDialog
     void logErrors(const quint8&);
     QString readResourceText(const char*);
     void clearCounters();
-    static QString cmtr(const QString&);
     static QVariant translateVariant(const QVariant&);
 
   private slots:
