@@ -6,7 +6,7 @@ we've moved a lot of that to txt files inside the /text directory which
 are compiled in as a resource.  This seems to result in a faster 
 compile, but we now have manage information in two locations.
 
-Copyright (C) 2013-2014
+Copyright (C) 2013-2015
 by: Andrew J. Bibb
 License: MIT 
 
@@ -35,9 +35,9 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation) 
-#define VERSION "14.12.31-1"
+#define VERSION "15.01.01-1"
 #define RELEASE_DATE "14 December 2014"
-#define COPYRIGHT_DATE "2013-2014"
+#define COPYRIGHT_DATE "2013-2015"
 
 // Program Values:
 //	QApplication (not user visible)

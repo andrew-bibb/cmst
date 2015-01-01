@@ -2,7 +2,7 @@
 
 C++ main routine.  
 
-Copyright (C) 2013-2014
+Copyright (C) 2013-2015
 by: Andrew J. Bibb
 License: MIT 
 

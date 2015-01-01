@@ -1,5 +1,5 @@
 <b><center>Connman System Tray (CMST)</center></b>
-<center>Copyright (C) 2013-2014</center>
+<center>Copyright (C) 2013-2015</center>
 <center>by</center>
 <center>Andrew J. Bibb</center>
 <br>License: <b>MIT</b> 
