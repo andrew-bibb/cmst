@@ -1,4 +1,4 @@
-.TH	CMST 1 "12 December 2014" "Version: 2014.12.12"
+.TH	CMST 1 "3 January 2015" "Version: 2014.12.12"
 .SH NAME
 CMST - Connman System Tray
 .SH SYNOPSIS
@@ -46,6 +46,12 @@ Specify the frequency in seconds between counter updates (default is 10 seconds)
 .TP
 \fB--use-xfce\fP
 Use code specific for XFCE.  As of 2014.11.24 there seems to be a problem with QT5.3 and the XFCE system tray.  There is code
+in the program to try and work around this issue.  If the bug gets fixed in QT5.4 (or later) this option will remain so that
+user start up scripts and commands do not break, but it will be a no operation place holder.
+.TP
+.TP
+\fB--use-mate\fP
+Use code specific for MATE.  As of 2014.11.24 there seems to be a problem with QT5.3 and the XFCE system tray.  There is code
 in the program to try and work around this issue.  If the bug gets fixed in QT5.4 (or later) this option will remain so that
 user start up scripts and commands do not break, but it will be a no operation place holder.
 .SH COMMAND LINE STABILITY
