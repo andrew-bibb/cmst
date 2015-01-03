@@ -72,6 +72,26 @@ TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent)
   sl << tr("ieee8021x", "connman security string");
   sl << tr("none", "connman security string");
   sl << tr("wep", "connman security string");
+  
+  sl << tr("Invalid arguments", "connman error sring");
+  sl << tr("Permission denied", "connman error sring");
+  sl << tr("Passphrase required", "connman error sring");
+  sl << tr("Not registered", "connman error sring");
+  sl << tr("Not unique", "connman error sring");
+  sl << tr("Not supported", "connman error sring");
+  sl << tr("Not implemented", "connman error sring");
+  sl << tr("Not found", "connman error sring");
+  sl << tr("No carrier", "connman error sring");
+  sl << tr("In progress", "connman error sring");
+  sl << tr("Already exists", "connman error sring");
+  sl << tr("Already enabled", "connman error sring");
+  sl << tr("Already disabled", "connman error sring");
+  sl << tr("Already connected", "connman error sring");
+  sl << tr("Not connected", "connman error sring");
+  sl << tr("Operation aborted", "connman error sring");
+  sl << tr("Operation timeout", "connman error sring");
+  sl << tr("Invalid service", "connman error sring");
+  sl << tr("Invalid property", "connman error sring");
   	
 	return;
 }

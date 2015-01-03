@@ -1702,8 +1702,8 @@ void ControlBox::enableRunOnStartup(bool enabled)
 void ControlBox::writeSettings()
 {
   settings->beginGroup("MainWindow");
-  settings->setValue("size", size() );
-  settings->setValue("pos", pos() );
+  settings->setValue("size", this->size() );
+  settings->setValue("pos", this->pos() );
   settings->endGroup();
 
   settings->beginGroup("CheckBoxes");
@@ -1720,6 +1720,23 @@ void ControlBox::writeSettings()
   settings->setValue("retry_failed", ui.checkBox_retryfailed->isChecked() );
   settings->setValue("run_on_startup", ui.checkBox_runonstartup->isChecked());
   settings->endGroup();
+  
+  settings->beginGroup("StartOptions");
+  settings->setValue("disable_counters", ui.checkBox_disablecounters->isChecked() );
+  settings->setValue("disable_tray_icon", ui.checkBox_disabletrayicon->isChecked() );
+  settings->setValue("use_icon_theme", ui.checkBox_systemicontheme->isChecked() );
+  settings->setValue("start_minimized", ui.checkBox_startminimized->isChecked() );
+  settings->setValue("use_wait_time", ui.checkBox_waittime->isChecked() );
+  settings->setValue("wait_time", ui.spinBox_waittime->value() );
+  //settings->setValue("use_counter_update_kb", ui.checkBox_counterkb->isChecked() );
+  //settings->setValue("counter_update_kb", ui.spinBox_counterkb->value() );
+  settings->setValue("use_counter_update_rate", ui.checkBox_counterseconds->isChecked() );
+  settings->setValue("counter_update_rate", ui.spinBox_counterrate->value() );
+  settings->setValue("desktop_none", ui.radioButton_desktopnone->isChecked() );
+  settings->setValue("desktop_xfce", ui.radioButton_desktopxfce->isChecked() );
+  settings->setValue("desktop_mate", ui.radioButton_desktopmate->isChecked() );
+  settings->endGroup();
+  
 
   return;
 }
@@ -1750,6 +1767,22 @@ void ControlBox::readSettings()
   ui.checkBox_retryfailed->setChecked(settings->value("retry_failed").toBool() );
   ui.checkBox_runonstartup->setChecked(settings->value("run_on_startup").toBool());
   settings->endGroup();
+  
+  settings->beginGroup("StartOptions");
+  ui.checkBox_disablecounters->setChecked(settings->value("disable_counters").toBool() );
+  ui.checkBox_disabletrayicon->setChecked(settings->value("disable_tray_icon").toBool() );
+  ui.checkBox_systemicontheme->setChecked(settings->value("use_icon_theme").toBool() );
+  ui.checkBox_startminimized->setChecked(settings->value("start_minimized").toBool() );
+  ui.checkBox_waittime->setChecked(settings->value("use_wait_time").toBool() );
+  ui.spinBox_waittime->setValue(settings->value("wait_time").toInt() );
+  //ui.checkBox_counterkb->setChecked(settings->value("use_counter_update_kb").toBool() );
+  //ui.spinBox_counterkb->setValue(settings->value("counter_update_kb").toBool() );
+  ui.checkBox_counterseconds->setChecked(settings->value("use_counter_update_rate").toBool() );
+  ui.spinBox_counterrate->setValue(settings->value("counter_update_rate").toInt() );
+  ui.radioButton_desktopnone->setChecked(settings->value("desktop_none").toBool() );
+  ui.radioButton_desktopxfce->setChecked(settings->value("desktop_xfce").toBool() );
+  ui.radioButton_desktopmate->setChecked(settings->value("desktop_mate").toBool() );
+  settings->endGroup();  
 
   return;
 }

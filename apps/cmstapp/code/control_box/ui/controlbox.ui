@@ -893,10 +893,10 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="whatsThis">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB). Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Counter Update Interval</string>
+             <string>Counter Update KB</string>
             </property>
            </widget>
           </item>
@@ -911,21 +911,21 @@
             <property name="whatsThis">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
-            <property name="suffix">
-             <string> seconds</string>
+            <property name="minimum">
+             <number>1</number>
             </property>
             <property name="maximum">
-             <number>20</number>
+             <number>60</number>
             </property>
            </widget>
           </item>
           <item row="6" column="1">
-           <widget class="QSpinBox" name="spinBox_counterupdateinterval">
+           <widget class="QSpinBox" name="spinBox_counterkb">
             <property name="enabled">
              <bool>false</bool>
             </property>
-            <property name="suffix">
-             <string> KB</string>
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="minimum">
              <number>256</number>
@@ -983,7 +983,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="whatsThis">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
              <string>Disable Tray Icon</string>
@@ -1012,7 +1012,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Counter Update Rate</string>
+             <string>Counter Update Rate </string>
             </property>
            </widget>
           </item>
@@ -1030,15 +1030,12 @@
            </spacer>
           </item>
           <item row="7" column="1">
-           <widget class="QSpinBox" name="spinBox_counterupdaterate">
+           <widget class="QSpinBox" name="spinBox_counterrate">
             <property name="enabled">
              <bool>false</bool>
             </property>
             <property name="whatsThis">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-            <property name="suffix">
-             <string> seconds</string>
             </property>
             <property name="minimum">
              <number>5</number>
@@ -1054,7 +1051,7 @@
           <item row="8" column="0" colspan="2">
            <widget class="QGroupBox" name="groupBox_2">
             <property name="whatsThis">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use code specific for the selected desktop environment.&lt;/p&gt;&lt;p&gt;As of 2014.11.24 there seems to be a problem with QT5.3 and some system trays. There is code in the program to try and work around this issue, and selecting one of these buttons will invoke the code specific to the desktop.&lt;/p&gt;&lt;p&gt;If the bug gets fixed these options will remain so that start up scripts do not break, but the options will do nothing.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use code specific for the selected desktop environment.&lt;/p&gt;&lt;p&gt;As of 2014.11.24 there seems to be a problem with QT5.3 and some system trays. There is code in the program to try and work around this issue, and selecting one of these buttons will invoke the code specific to the desktop.&lt;/p&gt;&lt;p&gt;If the bug gets fixed these options will remain so that start up scripts do not break, but the options will do nothing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="title">
              <string>Desktop Specific</string>
@@ -1478,8 +1475,8 @@
      <y>163</y>
     </hint>
     <hint type="destinationlabel">
-     <x>126</x>
-     <y>583</y>
+     <x>163</x>
+     <y>553</y>
     </hint>
    </hints>
   </connection>
@@ -1491,7 +1488,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>203</x>
-     <y>530</y>
+     <y>500</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -1506,8 +1503,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>99</x>
-     <y>530</y>
+     <x>117</x>
+     <y>500</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -1517,7 +1514,7 @@
   </connection>
   <connection>
    <sender>checkBox_waittime</sender>
-   <signal>clicked(bool)</signal>
+   <signal>toggled(bool)</signal>
    <receiver>spinBox_waittime</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
@@ -1533,8 +1530,8 @@
   </connection>
   <connection>
    <sender>checkBox_counterkb</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>spinBox_counterupdateinterval</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBox_counterkb</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -1549,8 +1546,8 @@
   </connection>
   <connection>
    <sender>checkBox_counterseconds</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>spinBox_counterupdaterate</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBox_counterrate</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
