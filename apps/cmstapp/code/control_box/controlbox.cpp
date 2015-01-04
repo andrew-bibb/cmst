@@ -154,11 +154,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   socketserver->removeServer(SOCKET_NAME);  // remove any files that may have been left after a crash
   socketserver->listen(SOCKET_NAME);
 
+  // Read saved settings which will set the ui controls in the preferences tab.  
+  this->readSettings();
+
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request"));
 
   // set a flag if we want to use the local system icon theme and set the whatsthis button
-  b_useicontheme = parser.isSet("icon-theme");
+  b_useicontheme = (parser.isSet("icon-theme") || ui.checkBox_systemicontheme->isChecked() );
   if (b_useicontheme) {
     ui.toolButton_whatsthis->setIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
     agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
@@ -171,22 +174,35 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // set a flag is we want to use XFCE or MATE custom code.
   // Currently (as of 2014.11.24) this is only used to get around a bug between QT5.3 and the XFCE system tray
   // Even then the fix may not work, but for now keep it in.
-  b_usexfce = parser.isSet("use-xfce");
-  b_usemate = parser.isSet("use-mate");
+  b_usexfce = (parser.isSet("use-xfce") || ui.radioButton_desktopxfce->isChecked() );
+  b_usemate = ( parser.isSet("use-mate") || ui.radioButton_desktopmate->isChecked() );
 
   // set counter update params from command line options if available otherwise
   // default params specified in main.cpp are used.  Set a minimum value for
   // each to maintain program response.
   uint minval = 256;
-  uint setval = parser.value("counter-update-kb").toUInt();
+  uint setval = 0;
+  if (ui.checkBox_counterkb->isChecked() && ! parser.isSet("counter-update-kb") ) {
+		setval = ui.spinBox_counterkb->value(); }
+	else {
+		bool ok;	
+		setval = parser.value("counter-update-kb").toUInt(&ok, 10);
+		if (! ok) setval = minval;
+	}
   counter_accuracy = setval > minval ? setval : minval; // number of kb for counter updates
 
   minval = 5;
-  setval = parser.value("counter-update-rate").toUInt();
+  if (ui.checkBox_counterseconds->isChecked() && ! parser.isSet("counter-update-rate") ) {
+		setval = ui.spinBox_counterrate->value(); }
+  else {
+		bool ok;
+		setval = parser.value("counter-update-rate").toUInt(&ok, 10);
+		if (! ok) setval = minval;
+	}
   counter_period = setval > minval ? setval : minval; // number of seconds for counter updates
 
   // connect counter signal to the counterUpdated slot before we register the counter, assuming counters are not disabled
-  if (! parser.isSet("disable-counters"))
+  if (! parser.isSet("disable-counters") && ! ui.checkBox_disablecounters->isChecked() )
     connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
 
   // I'm not sure about the commandline settings.
@@ -199,14 +215,11 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   //}
   //settings->setValue("CheckBoxes/run_on_startup", runOnStartup);
   //this->enableRunOnStartup(runOnStartup);
-
-  // restore GUI settings
-  this->readSettings();
   
   // operate on settings not dealt with elsewhere
   ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
   enableRunOnStartup(ui.checkBox_runonstartup->isChecked() );
-
+  
   // Create the notifyclient, make four tries; first immediately in constructor, then
   // at 1/2 second, 2 seconds and finally at 8 seconds
   notifyclient = new NotifyClient(this);
@@ -298,24 +311,29 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // turn network cards on or off globally based on checkbox
   toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
 
-  // tray icon - disable it if we specifiy that option on the commandline
-  // otherwise set a singleshot timer to create the tray icon and showMinimized
-  // or showMaximized.  The startSystemTray slots are inline functions and
+  // tray icon - disable it if we specifiy that option on the commandline or in
+  // the settings, otherwise set a singleshot timer to create the tray icon and
+  // showMinimized or showMaximized.  The startSystemTray slots are inline functions and
   // both point to createSystemTrayIcon.
   trayicon = 0;
-  if (parser.isSet("disable-tray-icon")) {
+  if (parser.isSet("disable-tray-icon") || ui. checkBox_disabletrayicon->isChecked() ) {
     ui.checkBox_hideIcon->setDisabled(true);
     this->updateDisplayWidgets();
     this->showNormal(); // no place to minimize to, so showMaximized
   } // if
   else {
-    bool ok;
-    const short mintrigger = 100; // minimum time (milliseconds) to wait before starting the tray icon
-    int timeout = parser.value("wait-time").toInt(&ok, 10);
-    if (! ok) timeout = 0;
+    const short mintrigger = 100; // Minimum time (milliseconds) to wait before starting the tray icon.  We advertise zero, but not really.
+    int timeout = 0;
+    if (ui.checkBox_waittime->isChecked() && ! parser.isSet("wait-time") ) {
+			timeout = ui.spinBox_waittime->value(); }
+		else {	
+			bool ok;
+			timeout = parser.value("wait-time").toInt(&ok, 10);
+			if (! ok) timeout = 0;
+		}
     timeout *= 1000;
     if (timeout < mintrigger) timeout = mintrigger;
-    if (parser.isSet("minimized")) {
+    if (parser.isSet("minimized") || ui.checkBox_startminimized->isChecked() ) {
       QTimer::singleShot(timeout, this, SLOT(startSystemTrayMinimized()));
     } // if showMinimized
     else {

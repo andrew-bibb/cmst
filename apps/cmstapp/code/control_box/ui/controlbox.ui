@@ -875,7 +875,7 @@
        <item row="0" column="1" rowspan="4">
         <widget class="QGroupBox" name="groupBox_startoptions">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <property name="whatsThis">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -931,7 +931,10 @@
              <number>256</number>
             </property>
             <property name="maximum">
-             <number>2048</number>
+             <number>32768</number>
+            </property>
+            <property name="singleStep">
+             <number>64</number>
             </property>
             <property name="value">
              <number>1024</number>

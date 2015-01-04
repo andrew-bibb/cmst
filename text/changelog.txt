@@ -1,5 +1,11 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<br><b>In Progress</b>
+<ul>
+<li>Option to create a entry in the users autostart direcory (coded by Lester Bico).</li>
+<li>Added --use-mate command line option to try and work around system tray icon oddities.</li>
+<li>Start options formally only available from the command line may now be set in preferences.</li>
+</ul>
 <br><b>2014.12.14</b>
 <ul>
 <li>If a Wifi service falls into the failure state provide an option to try and automatically reconnect.</li>

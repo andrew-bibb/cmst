@@ -9,5 +9,5 @@ Comment=QT GUI frontend for connman
 Categories=Network;Utility
 Icon=/usr/share/icons/hicolor/24x24/apps/cmst.png
 Terminal=false
-Exec=/usr/bin/cmst -m
+Exec=/usr/bin/cmst
 X-GNOME-Autostart-enabled=true
