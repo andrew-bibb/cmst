@@ -153,6 +153,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   socketserver = new QLocalServer(this);
   socketserver->removeServer(SOCKET_NAME);  // remove any files that may have been left after a crash
   socketserver->listen(SOCKET_NAME);
+  trayiconbackground = QColor();
 
   // Read saved settings which will set the ui controls in the preferences tab.  
   this->readSettings();
@@ -176,6 +177,18 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // Even then the fix may not work, but for now keep it in.
   b_usexfce = (parser.isSet("use-xfce") || ui.radioButton_desktopxfce->isChecked() );
   b_usemate = ( parser.isSet("use-mate") || ui.radioButton_desktopmate->isChecked() );
+  
+  // Fake transparency
+  if (parser.isSet("fake-transparency") ) {
+		bool ok;
+		int color = parser.value("fake-transparency").toUInt(&ok, 16);
+		if (! ok) {
+			qDebug() << "Unable to convert supplied argument to a RGB color";
+		}
+		else {
+			trayiconbackground = QColor(color);
+		}	
+	}
 
   // set counter update params from command line options if available otherwise
   // default params specified in main.cpp are used.  Set a minimum value for
@@ -1545,16 +1558,20 @@ void ControlBox::assemblePage4()
 //
 //  Function to assemble the tray icon tooltip text and picture.  Called
 //  mainly from updateDisplayWidgets(), also from createSystemTrayIcon()
+# include <QPainter>
+# include <QImage>
+# include <QPixmap>
 void ControlBox::assembleTrayIcon()
 {
   QString stt = QString();
   int readycount = 0;
+  QIcon prelimicon;
 
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
     // count how many services are in the ready state
     for (int i = 0; i < services_list.count(); ++i) {
       if (services_list.at(i).objmap.value("State").toString().contains(TranslateStrings::cmtr("ready")) )  ++readycount;
-    } // for loop
+    } // readycount for loop
     if (properties_map.value("State").toString().contains(TranslateStrings::cmtr("online") ) ||
         (properties_map.value("State").toString().contains(TranslateStrings::cmtr("ready")) && readycount == 1) ) {
       if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
@@ -1565,8 +1582,8 @@ void ControlBox::assembleTrayIcon()
           stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
           b_useicontheme ?
-            trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wired_established.png")) )  :
-            trayicon->setIcon(QIcon(":/icons/images/systemtray/wired_established.png") );
+            prelimicon = (QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wired_established.png")) )  :
+            prelimicon = (QIcon(":/icons/images/systemtray/wired_established.png") );
         } //  if wired connection
 
         if (services_list.at(0).objmap.value("Type").toString().contains(TranslateStrings::cmtr("wifi")) ) {
@@ -1577,13 +1594,13 @@ void ControlBox::assembleTrayIcon()
           stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
           quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
-          if (b_useicontheme) trayicon->setIcon(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl100.png")) );
+          if (b_useicontheme) prelimicon = (QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl100.png")) );
           else {
-          if (str > 80 ) trayicon->setIcon(QIcon(":/icons/images/systemtray/wl100.png"));
-          else if (str > 60 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl075.png"));
-            else if (str > 40 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl050.png"));
-              else if (str > 20 )  trayicon->setIcon(QIcon(":/icons/images/systemtray/wl025.png"));
-                else trayicon->setIcon(QIcon(":/icons/images/systemtray/wl000.png"));
+          if (str > 80 ) prelimicon = (QIcon(":/icons/images/systemtray/wl100.png"));
+          else if (str > 60 )  prelimicon = (QIcon(":/icons/images/systemtray/wl075.png"));
+            else if (str > 40 )  prelimicon = (QIcon(":/icons/images/systemtray/wl050.png"));
+              else if (str > 20 )  prelimicon = (QIcon(":/icons/images/systemtray/wl025.png"));
+                else prelimicon = (QIcon(":/icons/images/systemtray/wl000.png"));
           } // else use our built in icons
         } //  if wifi connection
       } //  services if no error
@@ -1592,8 +1609,8 @@ void ControlBox::assembleTrayIcon()
     // else if state is ready
     else if (properties_map.value("State").toString().contains(TranslateStrings::cmtr("ready")) ) {
       b_useicontheme ?
-        trayicon->setIcon(QIcon::fromTheme("network-idle", QIcon(":/icons/images/systemtray/connect_creating.png")).pixmap(QSize(16,16)) ) :
-        trayicon->setIcon(QPixmap(":/icons/images/systemtray/connect_creating.png") );
+        prelimicon = (QIcon::fromTheme("network-idle", QIcon(":/icons/images/systemtray/connect_creating.png")).pixmap(QSize(16,16)) ) :
+        prelimicon = (QPixmap(":/icons/images/systemtray/connect_creating.png") );
       stt.append(tr("Connection is in the Ready State.", "icon_tool_tip"));
     } // else if if ready
 
@@ -1609,16 +1626,16 @@ void ControlBox::assembleTrayIcon()
         } // if wifi and favorite
       } // if retry checked
       b_useicontheme ?
-        trayicon->setIcon(QIcon::fromTheme("network-error", QIcon(":/icons/images/systemtray/cancel.png")).pixmap(QSize(16,16)) ) :
-        trayicon->setIcon(QPixmap(":/icons/images/systemtray/cancel.png") );
+        prelimicon = (QIcon::fromTheme("network-error", QIcon(":/icons/images/systemtray/cancel.png")).pixmap(QSize(16,16)) ) :
+        prelimicon = (QPixmap(":/icons/images/systemtray/cancel.png") );
       stt.append(tr("Connection is in the Failure State.", "icon_tool_tip"));
     } // else if failure state
 
     // else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"
     else {
       b_useicontheme ?
-        trayicon->setIcon(QIcon::fromTheme("network-offline", QIcon(":/icons/images/systemtray/connect_no.png")) )  :
-        trayicon->setIcon(QIcon(":/icons/images/systemtray/connect_no.png") );
+        prelimicon = (QIcon::fromTheme("network-offline", QIcon(":/icons/images/systemtray/connect_no.png")) )  :
+        prelimicon = (QIcon(":/icons/images/systemtray/connect_no.png") );
       stt.append(tr("Not Connected", "icon_tool_tip"));
     } // else any other connection sate
   } // properties if no error
@@ -1626,11 +1643,35 @@ void ControlBox::assembleTrayIcon()
   // could not get any properties
   else {
     b_useicontheme ?
-      trayicon->setIcon(QIcon::fromTheme("network-error", QIcon(":/icons/images/interface/cancel.png")) ) :
-      trayicon->setIcon(QIcon(":/icons/images/interface/cancel.png") );
+      prelimicon = (QIcon::fromTheme("network-error", QIcon(":/icons/images/interface/cancel.png")) ) :
+      prelimicon = (QIcon(":/icons/images/interface/cancel.png") );
     stt.append(tr("Error retrieving properties via Dbus"));
     stt.append(tr("Connection status is unknown"));
   }
+
+	// Set the tray icon
+	// If the trayiconbackground color is valid convert the alpha to the
+	// background to get our fake transparency
+	if (trayiconbackground.isValid() ) {
+		QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
+		QImage img = pxm.toImage();
+	  if (img.hasAlphaChannel() ) {
+			img = img.convertToFormat(QImage::Format_RGB32);
+			QRgb color;
+			for (int i = 0; i < img.width(); ++i) {
+				for (int j = 0; j < img.height(); ++j) {
+					color = img.pixel(i,j);
+					if (qRed(color) == 0 && qGreen(color) == 0 && qBlue(color) == 0) {
+						img.setPixel(i,j,trayiconbackground.rgb() );
+					}	// if background == 0
+				}	// j loop
+			}	// i loop
+		pxm = pxm.fromImage(img);	
+		prelimicon = QIcon(pxm);
+		}	// if img has an alpha channel
+	}	// if trayiconcolor is valid
+	
+	trayicon->setIcon(prelimicon);
 
   //  set the tool tip (shown when mouse hovers over the systemtrayicon)
   trayicon->setToolTip(stt);

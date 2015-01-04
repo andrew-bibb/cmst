@@ -149,6 +149,7 @@ class ControlBox : public QDialog
     QSettings* settings;
     QString onlineobjectpath;
     QLocalServer* socketserver;
+    QColor trayiconbackground;
   
   // functions
     int managerRescan(const int& srv = 0);

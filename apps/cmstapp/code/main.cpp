@@ -68,42 +68,66 @@ int main(int argc, char *argv[])
 
   // setup the command line parser
   QCommandLineParser parser;
-  QCommandLineOption disableCounters(QStringList() << "c" << "disable-counters", QCoreApplication::translate("main.cpp", "[Experimental] Disable data counters.  May be used to minimize load on your system.") );
+  parser.setApplicationDescription(QApplication::translate("main.cpp", "Connman System Tray.") );
+  
+  QCommandLineOption disableCounters(QStringList() << "c" << "disable-counters",
+		QCoreApplication::translate("main.cpp", "[Experimental] Disable data counters.  May be used to minimize load on your system.") );
   parser.addOption(disableCounters);  
   
-  QCommandLineOption disableTrayIcon(QStringList() << "d" << "disable-tray-icon", QCoreApplication::translate("main.cpp", "Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.") );
+  QCommandLineOption disableTrayIcon(QStringList() << "d" << "disable-tray-icon",
+		QCoreApplication::translate("main.cpp", "Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.") );
   parser.addOption(disableTrayIcon);  
-  
-  parser.setApplicationDescription(QApplication::translate("main.cpp", "Connman System Tray.") );
+ 
   parser.addHelpOption();
   
-  QCommandLineOption useIconTheme(QStringList() << "i" << "icon-theme", QCoreApplication::translate("main.cpp", "Use the icon theme from your system if one is defined.") );
+  QCommandLineOption useIconTheme(QStringList() << "i" << "icon-theme",
+		QCoreApplication::translate("main.cpp", "Use the icon theme from your system if one is defined.") );
   parser.addOption(useIconTheme); 
   
-  QCommandLineOption logInputRequest(QStringList() << "l" << "log-input-request", QCoreApplication::translate("main.cpp", "Log the connman inputRequest for debugging purposes.") );
+  QCommandLineOption logInputRequest(QStringList() << "l" << "log-input-request",
+		QCoreApplication::translate("main.cpp", "Log the connman inputRequest for debugging purposes.") );
   parser.addOption(logInputRequest);
 
-  QCommandLineOption startMinimized(QStringList() << "m" << "minimized", QCoreApplication::translate("main.cpp", "Start the GUI minimized in the system tray.") );
+  QCommandLineOption startMinimized(QStringList() << "m" << "minimized",
+		QCoreApplication::translate("main.cpp", "Start the GUI minimized in the system tray.") );
   parser.addOption(startMinimized);
     
   parser.addVersionOption();  
     
-  QCommandLineOption waitTime(QStringList() << "w" << "wait-time", QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon (default is 0 seconds)."), QCoreApplication::translate("main.cpp", "wait-time"), "0" );
+  QCommandLineOption waitTime(QStringList() << "w" << "wait-time",
+		QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon (default is 0 seconds)."),
+		QCoreApplication::translate("main.cpp", "wait-time"),
+		"0" );
   parser.addOption(waitTime); 
 
-  QCommandLineOption counterUpdateKb (QStringList() << "counter-update-kb", QCoreApplication::translate("main.cpp", "[Experimental] The number of kb that have to be transmitted before the counter updates (default: 1024)"), QCoreApplication::translate("main.cpp", "counter-update-kb"), "1024" );
+  QCommandLineOption counterUpdateKb (QStringList() << "counter-update-kb",
+		QCoreApplication::translate("main.cpp", "[Experimental] The number of kb that have to be transmitted before the counter updates (default: 1024)"),
+		QCoreApplication::translate("main.cpp", "counter-update-kb"),
+		"1024" );
   parser.addOption(counterUpdateKb);
 
-  QCommandLineOption counterUpdateRate (QStringList() << "counter-update-rate", QCoreApplication::translate("main.cpp", "[Experimental] The interval in seconds between counter updates (default: 10 seconds)"), QCoreApplication::translate("main.cpp", "counter-update-rate"), "10" );
+  QCommandLineOption counterUpdateRate (QStringList() << "counter-update-rate",
+		QCoreApplication::translate("main.cpp", "[Experimental] The interval in seconds between counter updates (default: 10 seconds)"),
+		QCoreApplication::translate("main.cpp", "counter-update-rate"),
+		"10" );
   parser.addOption(counterUpdateRate);
+
+	// Added on 2015.01.04 to work around QT5.4 bug with transparency not always working
+  QCommandLineOption fakeTransparency(QStringList() << "fake-transparency",
+		QCoreApplication::translate("main.cpp", "If tray icon fake transparency is required, specify the background color to use (format: 0xRRGGBB)"),
+		QCoreApplication::translate("main.cpp", "fake-transparency"),
+		"0x222222" );
+  parser.addOption(fakeTransparency); 
 
   // Added on 2014.11.24 to work around a bug where QT5.3 won't show an icon in XFCE,  My fix may not work, but keep it in for now.  If this gets fixed in 
   // QT5.4 keep the command line option so users start up commands don't break, but make it a NOP. 
-  QCommandLineOption useXFCE(QStringList() << "use-xfce", QCoreApplication::translate("main.cpp", "Use XFCE specific code.") );
+  QCommandLineOption useXFCE(QStringList() << "use-xfce",
+		QCoreApplication::translate("main.cpp", "Use XFCE specific code.") );
   parser.addOption(useXFCE);   
   
   // Added on 2014.12.16 to work around a similar bug where QT5.3 won't show an icon in MATE.   
-  QCommandLineOption useMATE(QStringList() << "use-mate", QCoreApplication::translate("main.cpp", "Use MATE DE specific code.") );
+  QCommandLineOption useMATE(QStringList() << "use-mate",
+		QCoreApplication::translate("main.cpp", "Use MATE DE specific code.") );
   parser.addOption(useMATE); 
   
   // Setup translations   
@@ -140,7 +164,7 @@ int main(int argc, char *argv[])
                 
   // signal handler             
   signal(SIGINT, signalhandler);                
-                
+             
   // Showing the dialog (or not) is controlled in the createSystemTrayIcon() function
   // called from the ControlBox constructor.  We don't show it from here.             
   ControlBox ctlbox(parser);
