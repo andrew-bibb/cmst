@@ -37,6 +37,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QMessageBox>
 
 # include "./agent_dialog.h"
+# include "./code/trstring/tr_strings.h"
 
 AgentDialog::AgentDialog(QWidget* parent)
     : QDialog(parent)
@@ -286,7 +287,8 @@ void AgentDialog::launchBrowser()
 			 process->startDetached(QString("xterm"), sl_args);
 		 }
 		 else
-		 	QMessageBox::information(qobject_cast<QWidget *> (parent()), tr("Connman Error"),
+		 	QMessageBox::information(qobject_cast<QWidget *> (parent()),
+		 	QString(TranslateStrings::cmtr("cmst")) + tr(" Information"),
 				tr("You have requested the %1 browser, but we cannot find a terminal program to open it with.  "	\
 				"Currenty we can start %1 using these terminals: <b>roxterm</b> and <b>xterm</b>." \
 				"<br><br>To continue you need to manually open a terminal and then enter: \"lynx %2\"").arg("Lynx").arg(ui.lineEdit_url->text()) );

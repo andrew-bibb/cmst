@@ -981,12 +981,12 @@ void ControlBox::scanWiFi()
         QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
         iface_tech->setTimeout( 8 * 1000);  // full 25 second timeout is a bit much when there is a problem
         QDBusMessage reply = iface_tech->call(QDBus::AutoDetect, "Scan");
-
         if (reply.type() != QDBusMessage::InvalidMessage) ui.pushButton_rescan->setEnabled(true);
         if (reply.type() != QDBusMessage::ReplyMessage) {
-          QMessageBox::warning(this, tr("CMST Warning"),
+          QMessageBox::warning(this,
+						QString(TranslateStrings::cmtr("cmst")) + tr(" Warning"),
             tr("<center><b>We received a DBUS reply message indicating an error while trying to scan technologies.</b></center>"
-            "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(reply.errorMessage()) );
+            "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(TranslateStrings::cmtr(reply.errorMessage())) );
         } // if reply is something other than a normal reply message
 
         iface_tech->deleteLater();
@@ -1857,7 +1857,8 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
     ui.checkBox_hideIcon->setDisabled(true);
     trayicon = 0;
 
-    QMessageBox::warning(this, tr("CMST Warning"),
+    QMessageBox::warning(this,
+			QString(TranslateStrings::cmtr("cmst")) + tr(" Warning"),
       tr("<center><b>Unable to find a systemtray on this machine.</b>"
          "<center><br>The program may still be used to manage your connections, but the tray icon will be disabled."
          "<center><br><br>If you are seeing this message at system start up and you know a system tray exists once the "
