@@ -179,16 +179,13 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   b_usemate = ( parser.isSet("use-mate") || ui.radioButton_desktopmate->isChecked() );
   
   // Fake transparency
-  if (parser.isSet("fake-transparency") ) {
+  if (ui.checkBox_faketranparency->isChecked() && ! parser.isSet("fake-transparency") ) {
+		trayiconbackground = QColor(ui.spinBox_faketransparency->value() ); }
+	else  if (parser.isSet("fake-transparency") ) {
 		bool ok;
-		int color = parser.value("fake-transparency").toUInt(&ok, 16);
-		if (! ok) {
-			qDebug() << "Unable to convert supplied argument to a RGB color";
-		}
-		else {
-			trayiconbackground = QColor(color);
-		}	
-	}
+		trayiconbackground = QColor(parser.value("fake-transparency").toUInt(&ok, 16) );
+		if (! ok) trayiconbackground = QColor();
+	}	// else if
 
   // set counter update params from command line options if available otherwise
   // default params specified in main.cpp are used.  Set a minimum value for
@@ -1791,6 +1788,8 @@ void ControlBox::writeSettings()
   //settings->setValue("counter_update_kb", ui.spinBox_counterkb->value() );
   settings->setValue("use_counter_update_rate", ui.checkBox_counterseconds->isChecked() );
   settings->setValue("counter_update_rate", ui.spinBox_counterrate->value() );
+  settings->setValue("use_fake_transparency", ui.checkBox_faketranparency->isChecked() );
+  settings->setValue("fake_transparency_color", ui.spinBox_faketransparency->value() );
   settings->setValue("desktop_none", ui.radioButton_desktopnone->isChecked() );
   settings->setValue("desktop_xfce", ui.radioButton_desktopxfce->isChecked() );
   settings->setValue("desktop_mate", ui.radioButton_desktopmate->isChecked() );
@@ -1838,6 +1837,8 @@ void ControlBox::readSettings()
   //ui.spinBox_counterkb->setValue(settings->value("counter_update_kb").toBool() );
   ui.checkBox_counterseconds->setChecked(settings->value("use_counter_update_rate").toBool() );
   ui.spinBox_counterrate->setValue(settings->value("counter_update_rate").toInt() );
+  ui.checkBox_faketranparency->setChecked(settings->value("use_fake_transparency").toBool() );
+  ui.spinBox_faketransparency->setValue(settings->value("fake_transparency_color").toInt() );
   ui.radioButton_desktopnone->setChecked(settings->value("desktop_none").toBool() );
   ui.radioButton_desktopxfce->setChecked(settings->value("desktop_xfce").toBool() );
   ui.radioButton_desktopmate->setChecked(settings->value("desktop_mate").toBool() );

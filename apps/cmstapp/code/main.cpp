@@ -95,27 +95,27 @@ int main(int argc, char *argv[])
   parser.addVersionOption();  
     
   QCommandLineOption waitTime(QStringList() << "w" << "wait-time",
-		QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon (default is 0 seconds)."),
-		QCoreApplication::translate("main.cpp", "wait-time"),
+		QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon."),
+		QCoreApplication::translate("main.cpp", "seconds"),
 		"0" );
   parser.addOption(waitTime); 
 
   QCommandLineOption counterUpdateKb (QStringList() << "counter-update-kb",
-		QCoreApplication::translate("main.cpp", "[Experimental] The number of kb that have to be transmitted before the counter updates (default: 1024)"),
-		QCoreApplication::translate("main.cpp", "counter-update-kb"),
+		QCoreApplication::translate("main.cpp", "[Experimental] The number of kb that have to be transmitted before the counter updates."),
+		QCoreApplication::translate("main.cpp", "KB"),
 		"1024" );
   parser.addOption(counterUpdateKb);
 
   QCommandLineOption counterUpdateRate (QStringList() << "counter-update-rate",
-		QCoreApplication::translate("main.cpp", "[Experimental] The interval in seconds between counter updates (default: 10 seconds)"),
-		QCoreApplication::translate("main.cpp", "counter-update-rate"),
+		QCoreApplication::translate("main.cpp", "[Experimental] The interval in seconds between counter updates."),
+		QCoreApplication::translate("main.cpp", "seconds"),
 		"10" );
   parser.addOption(counterUpdateRate);
 
 	// Added on 2015.01.04 to work around QT5.4 bug with transparency not always working
   QCommandLineOption fakeTransparency(QStringList() << "fake-transparency",
 		QCoreApplication::translate("main.cpp", "If tray icon fake transparency is required, specify the background color to use (format: 0xRRGGBB)"),
-		QCoreApplication::translate("main.cpp", "fake-transparency"),
+		QCoreApplication::translate("main.cpp", "RRGGBB"),
 		"0x222222" );
   parser.addOption(fakeTransparency); 
 
