@@ -1,4 +1,4 @@
-.TH	CMST 1 "3 January 2015" "Version: 2014.12.12"
+.TH	CMST 1 "5 January 2015" "Version: 2014.12.12"
 .SH NAME
 CMST - Connman System Tray
 .SH SYNOPSIS
@@ -28,7 +28,7 @@ Start the GUI minimized in the system tray.
 \fB-v, --version\fP
 Displays version information.
 .TP
-\fB-w, --wait-time <wait-time>\fP
+\fB-w, --wait-time <seconds>\fP
 Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).  If CMST is started and tries to
 create a tray icon before the system tray itself is created a dialog will be displayed explaining that.  This sometimes happens when the 
 program is started automatically.  If you know the tray will exist once the system is up you may specify a wait time and CMST 
@@ -36,13 +36,20 @@ will wait that number of seconds before trying to create the tray icon.  This is
 the tray before we try to place the icon there.
 .TP
 .TP
-\fB--counter-update-kb [Experimental] \fP
+\fB--counter-update-kb <KB> [Experimental]\fP
 Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).
 Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented.
 .TP
 .TP
-\fB--counter-update-rate [Experimental] \fP
+\fB--counter-update-rate <seconds> [Experimental]\fP
 Specify the frequency in seconds between counter updates (default is 10 seconds).  
+.TP
+.TP
+\fB--fake-transparency <RRGGBB>\fP
+On some systems the system tray icon background, which is transparent, will display as white or black.  This seems to be an issue
+between QT, system tray implementations, compositing, and perhaps certain graphics cards.  To work around it we've implemented
+a fake transparency for tray icons.  To use it specify the system tray background color with this option.  If the background color
+is provided CMST will convert the tray icon image to have the specified background color.  Color is a hex number in the format: RRGGBB.      
 .TP
 \fB--use-xfce\fP
 Use code specific for XFCE.  As of 2014.11.24 there seems to be a problem with QT5.3 and the XFCE system tray.  There is code
