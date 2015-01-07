@@ -136,7 +136,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // set the window title
   setWindowTitle(TranslateStrings::cmtr("connman system tray"));
-  
+
   // data members
   q8_errors = CMST::No_Errors;
   properties_map.clear();
@@ -155,7 +155,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   socketserver->listen(SOCKET_NAME);
   trayiconbackground = QColor();
 
-  // Read saved settings which will set the ui controls in the preferences tab.  
+  // Read saved settings which will set the ui controls in the preferences tab.
   this->readSettings();
 
   // set a flag if we sent a commandline option to log the connman inputrequest
@@ -177,15 +177,15 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // Even then the fix may not work, but for now keep it in.
   b_usexfce = (parser.isSet("use-xfce") || ui.radioButton_desktopxfce->isChecked() );
   b_usemate = ( parser.isSet("use-mate") || ui.radioButton_desktopmate->isChecked() );
-  
+
   // Fake transparency
   if (ui.checkBox_faketranparency->isChecked() && ! parser.isSet("fake-transparency") ) {
-		trayiconbackground = QColor(ui.spinBox_faketransparency->value() ); }
-	else  if (parser.isSet("fake-transparency") ) {
-		bool ok;
-		trayiconbackground = QColor(parser.value("fake-transparency").toUInt(&ok, 16) );
-		if (! ok) trayiconbackground = QColor();
-	}	// else if
+    trayiconbackground = QColor(ui.spinBox_faketransparency->value() ); }
+  else  if (parser.isSet("fake-transparency") ) {
+    bool ok;
+    trayiconbackground = QColor(parser.value("fake-transparency").toUInt(&ok, 16) );
+    if (! ok) trayiconbackground = QColor();
+  } // else if
 
   // set counter update params from command line options if available otherwise
   // default params specified in main.cpp are used.  Set a minimum value for
@@ -193,22 +193,22 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   uint minval = 256;
   uint setval = 0;
   if (ui.checkBox_counterkb->isChecked() && ! parser.isSet("counter-update-kb") ) {
-		setval = ui.spinBox_counterkb->value(); }
-	else {
-		bool ok;	
-		setval = parser.value("counter-update-kb").toUInt(&ok, 10);
-		if (! ok) setval = minval;
-	}
+    setval = ui.spinBox_counterkb->value(); }
+  else {
+    bool ok;
+    setval = parser.value("counter-update-kb").toUInt(&ok, 10);
+    if (! ok) setval = minval;
+  }
   counter_accuracy = setval > minval ? setval : minval; // number of kb for counter updates
 
   minval = 5;
   if (ui.checkBox_counterseconds->isChecked() && ! parser.isSet("counter-update-rate") ) {
-		setval = ui.spinBox_counterrate->value(); }
+    setval = ui.spinBox_counterrate->value(); }
   else {
-		bool ok;
-		setval = parser.value("counter-update-rate").toUInt(&ok, 10);
-		if (! ok) setval = minval;
-	}
+    bool ok;
+    setval = parser.value("counter-update-rate").toUInt(&ok, 10);
+    if (! ok) setval = minval;
+  }
   counter_period = setval > minval ? setval : minval; // number of seconds for counter updates
 
   // connect counter signal to the counterUpdated slot before we register the counter, assuming counters are not disabled
@@ -225,11 +225,11 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   //}
   //settings->setValue("CheckBoxes/run_on_startup", runOnStartup);
   //this->enableRunOnStartup(runOnStartup);
-  
+
   // operate on settings not dealt with elsewhere
   ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
   enableRunOnStartup(ui.checkBox_runonstartup->isChecked() );
-  
+
   // Create the notifyclient, make four tries; first immediately in constructor, then
   // at 1/2 second, 2 seconds and finally at 8 seconds
   notifyclient = new NotifyClient(this);
@@ -335,12 +335,12 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     const short mintrigger = 100; // Minimum time (milliseconds) to wait before starting the tray icon.  We advertise zero, but not really.
     int timeout = 0;
     if (ui.checkBox_waittime->isChecked() && ! parser.isSet("wait-time") ) {
-			timeout = ui.spinBox_waittime->value(); }
-		else {	
-			bool ok;
-			timeout = parser.value("wait-time").toInt(&ok, 10);
-			if (! ok) timeout = 0;
-		}
+      timeout = ui.spinBox_waittime->value(); }
+    else {
+      bool ok;
+      timeout = parser.value("wait-time").toInt(&ok, 10);
+      if (! ok) timeout = 0;
+    }
     timeout *= 1000;
     if (timeout < mintrigger) timeout = mintrigger;
     if (parser.isSet("minimized") || ui.checkBox_startminimized->isChecked() ) {
@@ -994,7 +994,7 @@ void ControlBox::scanWiFi()
         if (reply.type() != QDBusMessage::InvalidMessage) ui.pushButton_rescan->setEnabled(true);
         if (reply.type() != QDBusMessage::ReplyMessage) {
           QMessageBox::warning(this,
-						QString(TranslateStrings::cmtr("cmst")) + tr(" Warning"),
+            QString(TranslateStrings::cmtr("cmst")) + tr(" Warning"),
             tr("<center><b>We received a DBUS reply message indicating an error while trying to scan technologies.</b></center>"
             "<br><br>Error Name: %1<br><br>Error Message: %2").arg(reply.errorName()).arg(TranslateStrings::cmtr(reply.errorMessage())) );
         } // if reply is something other than a normal reply message
@@ -1646,29 +1646,31 @@ void ControlBox::assembleTrayIcon()
     stt.append(tr("Connection status is unknown"));
   }
 
-	// Set the tray icon
-	// If the trayiconbackground color is valid convert the alpha to the
-	// background to get our fake transparency
-	if (trayiconbackground.isValid() ) {
-		QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
-		QImage img = pxm.toImage();
-	  if (img.hasAlphaChannel() ) {
-			img = img.convertToFormat(QImage::Format_RGB32);
-			QRgb color;
-			for (int i = 0; i < img.width(); ++i) {
-				for (int j = 0; j < img.height(); ++j) {
-					color = img.pixel(i,j);
-					if (qRed(color) == 0 && qGreen(color) == 0 && qBlue(color) == 0) {
-						img.setPixel(i,j,trayiconbackground.rgb() );
-					}	// if background == 0
-				}	// j loop
-			}	// i loop
-		pxm = pxm.fromImage(img);	
-		prelimicon = QIcon(pxm);
-		}	// if img has an alpha channel
-	}	// if trayiconcolor is valid
-	
-	trayicon->setIcon(prelimicon);
+  // Set the tray icon.  This will be prelimicon unless fake transparency was requested.
+  // If the trayiconbackground color is valid convert the alpha to the
+  // background to get our fake transparency
+  if (trayiconbackground.isValid() ) {
+    // First convert from a QIcon through QPixmap to QImage
+    QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
+    QImage img = pxm.toImage();
+    // If the icon has an alpha channel put the background color over any non-colored pixel.
+    if (img.hasAlphaChannel() ) {
+      img = img.convertToFormat(QImage::Format_RGB32);
+      QRgb color;
+      for (int i = 0; i < img.width(); ++i) {
+        for (int j = 0; j < img.height(); ++j) {
+          color = img.pixel(i,j);
+          if (qRed(color) == 0 && qGreen(color) == 0 && qBlue(color) == 0) {
+            img.setPixel(i,j,trayiconbackground.rgb() );
+          } // if background == 0
+        } // j loop
+      } // i loop
+    // Convert the QImage back through a QPixmap to a QIcon
+    pxm = pxm.fromImage(img);
+    prelimicon = QIcon(pxm);
+    } // if img has an alpha channel
+  } // if trayiconcolor is valid
+  trayicon->setIcon(prelimicon);
 
   //  set the tool tip (shown when mouse hovers over the systemtrayicon)
   trayicon->setToolTip(stt);
@@ -1744,8 +1746,8 @@ void ControlBox::enableRunOnStartup(bool enabled)
     QDir dir = autostart_file_info.dir();
     if (! dir.exists() ) dir.mkdir(autostart_file_info.path() );
     fileToCopy.copy(autostart_file_info.absoluteFilePath());
-    
-  } // if enabled 
+
+  } // if enabled
   else {
     if (!autostart_file_info.exists()) {
         return;
@@ -1776,7 +1778,7 @@ void ControlBox::writeSettings()
   settings->setValue("retry_failed", ui.checkBox_retryfailed->isChecked() );
   settings->setValue("run_on_startup", ui.checkBox_runonstartup->isChecked());
   settings->endGroup();
-  
+
   settings->beginGroup("StartOptions");
   settings->setValue("disable_counters", ui.checkBox_disablecounters->isChecked() );
   settings->setValue("disable_tray_icon", ui.checkBox_disabletrayicon->isChecked() );
@@ -1794,7 +1796,7 @@ void ControlBox::writeSettings()
   settings->setValue("desktop_xfce", ui.radioButton_desktopxfce->isChecked() );
   settings->setValue("desktop_mate", ui.radioButton_desktopmate->isChecked() );
   settings->endGroup();
-  
+
 
   return;
 }
@@ -1825,7 +1827,7 @@ void ControlBox::readSettings()
   ui.checkBox_retryfailed->setChecked(settings->value("retry_failed").toBool() );
   ui.checkBox_runonstartup->setChecked(settings->value("run_on_startup").toBool());
   settings->endGroup();
-  
+
   settings->beginGroup("StartOptions");
   ui.checkBox_disablecounters->setChecked(settings->value("disable_counters").toBool() );
   ui.checkBox_disabletrayicon->setChecked(settings->value("disable_tray_icon").toBool() );
@@ -1842,7 +1844,7 @@ void ControlBox::readSettings()
   ui.radioButton_desktopnone->setChecked(settings->value("desktop_none").toBool() );
   ui.radioButton_desktopxfce->setChecked(settings->value("desktop_xfce").toBool() );
   ui.radioButton_desktopmate->setChecked(settings->value("desktop_mate").toBool() );
-  settings->endGroup();  
+  settings->endGroup();
 
   return;
 }
@@ -1900,7 +1902,7 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
     trayicon = 0;
 
     QMessageBox::warning(this,
-			QString(TranslateStrings::cmtr("cmst")) + tr(" Warning"),
+      QString(TranslateStrings::cmtr("cmst")) + tr(" Warning"),
       tr("<center><b>Unable to find a systemtray on this machine.</b>"
          "<center><br>The program may still be used to manage your connections, but the tray icon will be disabled."
          "<center><br><br>If you are seeing this message at system start up and you know a system tray exists once the "
@@ -2127,7 +2129,7 @@ void ControlBox::logErrors(const quint8& err)
   //  LOG_ERR   Error condition
   //  LOG_WARNING   Warning contition
   //  Defined in resource.h
-  //  LOG_NAME  Name to display in the log  
+  //  LOG_NAME  Name to display in the log
   openlog(qPrintable(LOG_NAME), LOG_PID|LOG_CONS, LOG_USER);
   switch (err)
   {

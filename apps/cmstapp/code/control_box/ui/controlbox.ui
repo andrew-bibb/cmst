@@ -439,8 +439,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>603</width>
-            <height>390</height>
+            <width>98</width>
+            <height>54</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -688,8 +688,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>579</width>
-               <height>146</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -744,8 +744,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>579</width>
-               <height>146</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -924,6 +924,9 @@
             <property name="whatsThis">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::PlusMinus</enum>
+            </property>
             <property name="minimum">
              <number>1</number>
             </property>
@@ -939,6 +942,9 @@
             </property>
             <property name="whatsThis">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::PlusMinus</enum>
             </property>
             <property name="minimum">
              <number>256</number>
@@ -1040,6 +1046,9 @@
             <property name="whatsThis">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::PlusMinus</enum>
+            </property>
             <property name="minimum">
              <number>5</number>
             </property>
@@ -1116,6 +1125,9 @@
             </property>
             <property name="whatsThis">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the background color as a hex number in the format: RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
             </property>
             <property name="maximum">
              <number>16777215</number>
@@ -1348,8 +1360,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>493</width>
-            <height>468</height>
+            <width>98</width>
+            <height>412</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
