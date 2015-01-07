@@ -267,12 +267,12 @@
 <context>
     <name>AgentDialog</name>
     <message>
-        <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="289"/>
-        <source>Connman Error</source>
+        <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="291"/>
+        <source> Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="290"/>
+        <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="292"/>
         <source>You have requested the %1 browser, but we cannot find a terminal program to open it with.  Currenty we can start %1 using these terminals: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;To continue you need to manually open a terminal and then enter: &quot;lynx %2&quot;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -280,22 +280,22 @@
 <context>
     <name>ConnmanAgent</name>
     <message>
-        <location filename="../apps/cmstapp/code/agent/agent.cpp" line="75"/>
+        <location filename="../apps/cmstapp/code/agent/agent.cpp" line="76"/>
         <source>Connman Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/agent.cpp" line="76"/>
+        <location filename="../apps/cmstapp/code/agent/agent.cpp" line="77"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/agent.cpp" line="119"/>
+        <location filename="../apps/cmstapp/code/agent/agent.cpp" line="120"/>
         <source>Agent Request Failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/agent.cpp" line="120"/>
+        <location filename="../apps/cmstapp/code/agent/agent.cpp" line="121"/>
         <source>The agent request failed before a reply was returned.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -509,7 +509,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="351"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1430"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1469"/>
         <source>Move Before</source>
         <translation type="unfinished"></translation>
     </message>
@@ -520,7 +520,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="364"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1435"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1474"/>
         <source>Move After</source>
         <translation type="unfinished"></translation>
     </message>
@@ -612,6 +612,51 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="629"/>
         <source>Wifi State</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="964"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="978"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the icon theme from your system if one is defined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="989"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1000"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Command Line Option: &lt;span style=&quot; font-weight:600;&quot;&gt;-c&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;--disable-counters&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the counters.  May be used to minimize load on your system.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1014"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1018"/>
+        <source>Counter Update Rate </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1072"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Default is no desktop specific code.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1088"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -761,154 +806,74 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="893"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="890"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="904"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="896"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="907"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="899"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="910"/>
         <source>Counter Update KB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="909"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delay time before attempting to start the system tray icon.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="912"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="920"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="915"/>
-        <source>%n second(s)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1047"/>
-        <source> seconds</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="931"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="939"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="934"/>
-        <source> KB</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="950"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="953"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="956"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="968"/>
         <source>Start Minimized</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="963"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="966"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the icon theme from your system if one is defined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="969"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="982"/>
         <source>Use System Icon Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="976"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="979"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="982"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="993"/>
         <source>Wait Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="989"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="992"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="995"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="894"/>
         <source>Disable Tray Icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1002"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Command Line Option: &lt;span style=&quot; font-weight:600;&quot;&gt;-c&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;--disable-counters&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1005"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the counters.  May be used to minimize load on your system.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1008"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1004"/>
         <source>Disable Counters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1015"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1018"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1044"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1041"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1021"/>
-        <source>Counter Update Rate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1063"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1060"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use code specific for the selected desktop environment.&lt;/p&gt;&lt;p&gt;As of 2014.11.24 there seems to be a problem with QT5.3 and some system trays. There is code in the program to try and work around this issue, and selecting one of these buttons will invoke the code specific to the desktop.&lt;/p&gt;&lt;p&gt;If the bug gets fixed these options will remain so that start up scripts do not break, but the options will do nothing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1066"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1063"/>
         <source>Desktop Specific</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1072"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Default is none.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -917,790 +882,801 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1085"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1088"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1091"/>
         <source>XFCE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1095"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1101"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1098"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1104"/>
         <source>MATE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1111"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1117"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB.  If the spedified color matches the tray background we&apos;ve effectively created fake transparency. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1121"/>
+        <source>Fake Transparency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1131"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the background color as a hex number in the format: RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1150"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the system tray are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1114"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1153"/>
         <source>System Tray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1120"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1159"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked an icon will not be displayed in the system tray.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1123"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1162"/>
         <source>Hide Tray Icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1130"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1169"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray icon will popup a status message when you hover the mouse over it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1133"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1172"/>
         <source>Enable System Tray Popups</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1146"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1185"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1149"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1188"/>
         <source>System Tray Notifications</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1162"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1201"/>
         <source>Notifications</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1171"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system desktop notification daemon will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notification daemon if one is installed. Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1174"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1213"/>
         <source>Notification Daemon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1187"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1226"/>
         <source>Server Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1200"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1239"/>
         <source>Program Control</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1206"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1245"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will place an entry in the autostart directory for the current user, unchecking will remove said entry. This directory is typically: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST only add or remove the .desktop file from the autostart directory. Autostarting is typically dependent upon your Desktop Environment and must be enabled from there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1209"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1248"/>
         <source>Enable Autostart</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1216"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1255"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If a Connman service falls into the &amp;quot;Failed&amp;quot; state it will normally remain in that state.&lt;/p&gt;&lt;p&gt;If this box is checked CMST will try to automatically reconnect a WiFi service that enters the &amp;quot;Failed&amp;quot; state. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1219"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1258"/>
         <source>Retry Failed Connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1243"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1282"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1249"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1288"/>
         <source>&amp;About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1255"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1294"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display a dialog box containing information about this program. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1258"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1297"/>
         <source>C&amp;MST</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1265"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1304"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display a dialog box containing information about the Icon set used in this program. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1268"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1307"/>
         <source>&amp;AwOken</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1275"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1314"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display a dialog box containing information about the QT toolkit used to develop this program. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1278"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1317"/>
         <source>&amp;QT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1285"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1324"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the program license.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1288"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1327"/>
         <source>&amp;License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1295"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1334"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the change log of the program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1298"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1337"/>
         <source>ChangeLo&amp;g</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1336"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1375"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Help&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Program help is mainly provided by the &amp;quot;What&apos;s This&amp;quot; button in the lower left corner. Press the button and then click on an item you are interested in. &amp;quot;What&apos;s This&amp;quot; is also available via context menu by right clicking on a button, box or text area.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1372"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1411"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1375"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1414"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to find information about an element in the GUI by entering &amp;quot;What&apos;s This&amp;quot; mode. &lt;/p&gt;&lt;p&gt;You may also right click on an element to show the &amp;quot;What&apos;s This&amp;quot; text for it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1385"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1424"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the provisioning editor to create or edit Connman configuration (provisioning) files.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. &lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1388"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1427"/>
         <source>Provisioning Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1408"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1447"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exit the program and remove the system tray icon. Connman will still be running as a daemon but will not be managed by this program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1411"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1450"/>
         <source>E&amp;xit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1418"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1457"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimize the dialog. If you have the system tray Icon shown this dialog may be restored by right clicking on the tray icon. If the tray icon is hidden minimize will not be active.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1421"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="256"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1460"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="279"/>
         <source>Mi&amp;nimize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="257"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="280"/>
         <source>Ma&amp;ximize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="260"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="283"/>
         <source>&amp;Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="335"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="363"/>
         <source>About %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="336"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="364"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Contributors:&lt;/b&gt;&lt;center&gt;Brett Dutro&lt;center&gt;Adam Fontenot&lt;center&gt;Lester Bico&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Ilya Shestopalov (Russian)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="354"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="382"/>
         <source>About AwOken</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="355"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="383"/>
         <source>&lt;center&gt;This program uses the &lt;b&gt;AwOken&lt;/b&gt; icon set version 2.5&lt;br&gt;&lt;br&gt;Released under the&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;Unported License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;&lt;br&gt;&lt;center&gt;The CMST icon is a derivative work from the AwOken icon set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="370"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="398"/>
         <source>%1 license is the MIT license.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="372"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="400"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="380"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="408"/>
         <source>%1 change log is not available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="382"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="410"/>
         <source>ChangeLog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="481"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="509"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="502"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="507"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="530"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="535"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="507"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="535"/>
         <source>Unable to determine service</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="528"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="572"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="595"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="556"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="600"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="623"/>
         <source>No Services Selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="529"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="557"/>
         <source>You need to select a Wifi service before pressing the connect button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="573"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="601"/>
         <source>You need to select a Wifi service before pressing the disconnect button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="596"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="624"/>
         <source>You need to select a Wifi service before pressing the remove button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="623"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="651"/>
         <source>Offline Mode Engaged</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="627"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="655"/>
         <source>Offline Mode Disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="662"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="690"/>
         <source>%1 (%2) Network</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="663"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="691"/>
         <source>Connection: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="676"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="704"/>
         <source>Network Services:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="677"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="705"/>
         <source>No network services available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="902"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="930"/>
         <source>Service Error: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="903"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="931"/>
         <source>Object Path: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="969"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1842"/>
-        <source>CMST Warning</source>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="997"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1905"/>
+        <source> Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="970"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="998"/>
         <source>&lt;center&gt;&lt;b&gt;We received a DBUS reply message indicating an error while trying to scan technologies.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Error Name: %1&lt;br&gt;&lt;br&gt;Error Message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1085"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1113"/>
         <source>&lt;b&gt;Connection:&lt;/b&gt; %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1088"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1116"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1090"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1118"/>
         <source>Service Type: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1091"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1119"/>
         <source>Service State: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1092"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1120"/>
         <source>Favorite: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1092"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1120"/>
         <source>Yes</source>
         <comment>favorite</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1092"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1120"/>
         <source>No</source>
         <comment>favorite</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1093"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
         <source>External Configuration File: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1093"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
         <source>Yes</source>
         <comment>immutable</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1093"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
         <source>No</source>
         <comment>immutable</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1095"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1123"/>
         <source>Auto Connect: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1095"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1123"/>
         <source>On</source>
         <comment>autoconnect</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1095"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1123"/>
         <source>No</source>
         <comment>autoconnect</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1097"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1125"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1099"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1127"/>
         <source>IP Address Acquisition: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1100"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1107"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1128"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1135"/>
         <source>IP Address: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1101"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1129"/>
         <source>IP Netmask: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1102"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1113"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1130"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1141"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1104"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1132"/>
         <source>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1106"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1119"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1134"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1147"/>
         <source>Address Acquisition: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1110"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1138"/>
         <source>Prefix Length: &lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1112"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1140"/>
         <source>Prefix Length: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1114"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1142"/>
         <source>Privacy: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1116"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1144"/>
         <source>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1149"/>
         <source>URL: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1124"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1152"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1125"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1153"/>
         <source>Excludes:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1132"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1160"/>
         <source>&lt;br&gt;&lt;b&gt;Name Servers&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1135"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1163"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Time Servers&lt;/b&gt;&lt;br&gt;  </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1138"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1166"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Search Domains&lt;/b&gt;&lt;br&gt;  </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1141"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1169"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1143"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1171"/>
         <source>Connection Method: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1144"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1172"/>
         <source>Interface: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1145"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1173"/>
         <source>Device Address: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1146"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1174"/>
         <source>MTU: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1148"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1176"/>
         <source>&lt;br&gt;&lt;b&gt;Wireless&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1149"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1558"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1177"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1590"/>
         <source>Security: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1150"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1178"/>
         <source>Strength: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1151"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1179"/>
         <source>Roaming: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1151"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1179"/>
         <source>Yes</source>
         <comment>roaming</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1151"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1179"/>
         <source>No</source>
         <comment>roaming</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1279"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1307"/>
         <source>State: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1285"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1313"/>
         <source>Engaged</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1290"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1318"/>
         <source>Disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1293"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1321"/>
         <source>Offline Mode </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1326"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1354"/>
         <source>%1On%1%1</source>
         <comment>powered</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1331"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1359"/>
         <source>%1Off%1%1</source>
         <comment>powered</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1339"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1367"/>
         <source>Yes</source>
         <comment>connected</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1339"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1367"/>
         <source>No</source>
         <comment>connected</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1345"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1373"/>
         <source>Yes</source>
         <comment>tethered</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1345"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1373"/>
         <source>No</source>
         <comment>tethered</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1520"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1548"/>
         <source>Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1546"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1578"/>
         <source>Ethernet Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1547"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1579"/>
         <source>Service: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1548"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1560"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1580"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1592"/>
         <source>Interface: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1555"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1587"/>
         <source>WiFi Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1557"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1589"/>
         <source>SSID: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1559"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1591"/>
         <source>Strength: %1%&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1579"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1611"/>
         <source>Connection is in the Ready State.</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1590"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1622"/>
         <source>Connection is in the Failure State, attempting to reestablish the connection</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1596"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1628"/>
         <source>Connection is in the Failure State.</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1604"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1636"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1613"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1645"/>
         <source>Error retrieving properties via Dbus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1614"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1646"/>
         <source>Connection status is unknown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1843"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1906"/>
         <source>&lt;center&gt;&lt;b&gt;Unable to find a systemtray on this machine.&lt;/b&gt;&lt;center&gt;&lt;br&gt;The program may still be used to manage your connections, but the tray icon will be disabled.&lt;center&gt;&lt;br&gt;&lt;br&gt;If you are seeing this message at system start up and you know a system tray exists once the system is up, try starting with the &lt;b&gt;-w&lt;/b&gt; switch and set a delay as necessary.  The exact wait time will vary from system to system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2074"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2137"/>
         <source>Could not find a connection to the system bus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2075"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2080"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2138"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2143"/>
         <source>%1 - Critical Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2076"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2139"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2079"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2142"/>
         <source>Could not create an interface to connman on the system bus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2081"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2144"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2084"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2147"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2085"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2090"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2095"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2148"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2153"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2158"/>
         <source>%1 - Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2086"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2149"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2089"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2152"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2091"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2154"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2094"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2157"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2096"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2159"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2181"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2244"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2188"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2251"/>
         <source>%1 detected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2194"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2257"/>
         <source>Attempt %1 of 4 looking for notification server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2197"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2260"/>
         <source>Unable to find or connect to a Notification server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1441"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1469"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2327,7 +2303,12 @@
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="461"/>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="573"/>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="611"/>
-        <source>- Information</source>
+        <source> Information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="720"/>
+        <source> Critical</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2445,11 +2426,6 @@
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="708"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="720"/>
-        <source>- Critical</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2771,72 +2747,78 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="71"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="74"/>
         <source>[Experimental] Disable data counters.  May be used to minimize load on your system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="74"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="78"/>
         <source>Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="77"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="71"/>
         <source>Connman System Tray.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="80"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="84"/>
         <source>Use the icon theme from your system if one is defined.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="83"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="88"/>
         <source>Log the connman inputRequest for debugging purposes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="86"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="92"/>
         <source>Start the GUI minimized in the system tray.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="91"/>
-        <source>Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).</source>
+        <location filename="../apps/cmstapp/code/main.cpp" line="98"/>
+        <source>Specify the wait time in seconds before starting the system tray icon.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="91"/>
-        <source>wait-time</source>
+        <location filename="../apps/cmstapp/code/main.cpp" line="99"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="111"/>
+        <source>seconds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="94"/>
-        <source>[Experimental] The number of kb that have to be transmitted before the counter updates (default: 1024)</source>
+        <location filename="../apps/cmstapp/code/main.cpp" line="104"/>
+        <source>[Experimental] The number of kb that have to be transmitted before the counter updates.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="94"/>
-        <source>counter-update-kb</source>
+        <location filename="../apps/cmstapp/code/main.cpp" line="105"/>
+        <source>KB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="97"/>
-        <source>[Experimental] The interval in seconds between counter updates (default: 10 seconds)</source>
+        <location filename="../apps/cmstapp/code/main.cpp" line="110"/>
+        <source>[Experimental] The interval in seconds between counter updates.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="97"/>
-        <source>counter-update-rate</source>
+        <location filename="../apps/cmstapp/code/main.cpp" line="117"/>
+        <source>If tray icon fake transparency is required, specify the background color to use (format: 0xRRGGBB)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="102"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="118"/>
+        <source>RRGGBB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/main.cpp" line="125"/>
         <source>Use XFCE specific code.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="106"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="130"/>
         <source>Use MATE DE specific code.</source>
         <translation type="unfinished"></translation>
     </message>
