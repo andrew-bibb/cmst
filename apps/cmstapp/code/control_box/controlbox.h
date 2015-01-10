@@ -48,7 +48,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QProgressBar>
 # include <QColor>
 # include <QToolButton>
-# include <QSessionManager>
 
 # include "ui_controlbox.h"
 # include "./code/agent/agent.h"
@@ -119,7 +118,6 @@ class ControlBox : public QDialog
   protected:
     void closeEvent(QCloseEvent*);
     bool eventFilter(QObject*, QEvent*); 
-    void commitData(QSessionManager&);
     
   private:
   // members 

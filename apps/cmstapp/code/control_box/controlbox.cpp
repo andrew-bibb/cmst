@@ -43,9 +43,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QProcessEnvironment>
 # include <QCryptographicHash>
 # include <QLocale>
-# include <QPainter>
-# include <QImage>
-# include <QPixmap>
 
 # include "../resource.h"
 # include "./controlbox.h"
@@ -309,7 +306,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_aboutIconSet, SIGNAL(clicked()), this, SLOT(aboutIconSet()));
   connect(ui.pushButton_aboutQT, SIGNAL(clicked()), qApp, SLOT(aboutQt()));
   connect(qApp, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()));
-  connect(qApp, SIGNAL(commitDataRequest(QSessionManager)), this, SLOT(comitData(QSessionManager))); 
   connect(ui.pushButton_license, SIGNAL(clicked()), this, SLOT(showLicense()));
   connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));
   connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
@@ -1203,11 +1199,6 @@ void ControlBox::showWhatsThis()
 // Close event.  Save GUI settings on close events
 void ControlBox::closeEvent(QCloseEvent* e)
 {
-	// clean up the temp files
-	socketserver->close();
-  socketserver->deleteLater();
-	
-	// write settings
   this->writeSettings();
   e->accept();
 
@@ -1237,18 +1228,6 @@ bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
   } // event is a tooltip
 
   return false;
-}
-
-//
-// Virtual function implementation called when the session manager
-// issues a commitDataRequest signal.  Basically just call our standard
-// cleanUp() like we would if we were closing manually.
-//
-void ControlBox::commitData(QSessionManager& manager)
-{
-	this->cleanUp();
-
-  return;	
 }
 
 //////////////////////////////////////////// Private Functions ////////////////////////////////////
@@ -1576,6 +1555,9 @@ void ControlBox::assemblePage4()
 //
 //  Function to assemble the tray icon tooltip text and picture.  Called
 //  mainly from updateDisplayWidgets(), also from createSystemTrayIcon()
+# include <QPainter>
+# include <QImage>
+# include <QPixmap>
 void ControlBox::assembleTrayIcon()
 {
   QString stt = QString();
@@ -2352,9 +2334,7 @@ void ControlBox::cleanUp()
   // close and delete the socket server
   socketserver->close();
   socketserver->deleteLater();
-  
-  // write settings
-  this->writeSettings();
 
   return;
 }
+
