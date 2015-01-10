@@ -1196,16 +1196,6 @@ void ControlBox::showWhatsThis()
 
 //////////////////////////////////////////// Protected Functions //////////////////////////////////
 //
-// Close event.  Save GUI settings on close events
-void ControlBox::closeEvent(QCloseEvent* e)
-{
-  this->writeSettings();
-  e->accept();
-
-  return;
-}
-
-//
 // Event filter used to filter out tooltip events if we don't want to see them
 // in eventFilters return true eats the event, false passes on it.
 bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
@@ -2334,6 +2324,9 @@ void ControlBox::cleanUp()
   // close and delete the socket server
   socketserver->close();
   socketserver->deleteLater();
+  
+  // write settings
+  this->writeSettings();
 
   return;
 }
