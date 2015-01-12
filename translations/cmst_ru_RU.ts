@@ -269,7 +269,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="291"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation> информация</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="292"/>
@@ -624,46 +624,51 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="964"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Параметр командной строки: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; или &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Запустить графический пользовательский интерфейс свёрнутым в системный лоток.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="978"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the icon theme from your system if one is defined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Параметр командной строки: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; или &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Использовать системную тему значков, если она определена.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="989"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Параметр командной строки: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; или &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Укажите время ожидания в секундах перед запуском значка в системном лотке (по умолчанию 0 секунд).&lt;/p&gt;&lt;p&gt;Если CMST запущен и пытается создать значок в системном лотке до запуска системного лотка, будет отображён диалог, объясняющий это. Это иногда происходит, когда программа запускается автоматически. Если вы знаете, что системный лоток будет загружен при запуске системы, вы можете указать время ожидания и CMST будет ждать указанное количество секунд перед тем как создать значок в системном лотке. Это нужно для того, чтобы дать время оконному менеджеру или панели на создание системного лотка перед попыткой помещения в него значка.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1000"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Command Line Option: &lt;span style=&quot; font-weight:600;&quot;&gt;-c&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;--disable-counters&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the counters.  May be used to minimize load on your system.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Параметр командной строки: &lt;span style=&quot; font-weight:600;&quot;&gt;-c&lt;/span&gt; или &lt;span style=&quot; font-weight:600;&quot;&gt;--disable-counters&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Отключить счётчики. Может быть использовано для минимизации нагрузки на систему.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1014"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Параметр командной строки: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Укажите частоту в секундах между обновлениями счётчика (по умолчанию 10 секунд). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1018"/>
         <source>Counter Update Rate </source>
-        <translation type="unfinished"></translation>
+        <translation>Частота обновления счётчиков </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1072"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Default is no desktop specific code.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;По умолчанию не используется код для конкретного окружения рабочего стола.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1088"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="519"/>
@@ -804,119 +809,121 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="881"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Эти настройки контролируют различные опции при загрузке CMST. &lt;/p&gt;&lt;p&gt;Все эти опции доступны из командной строки, и если они заданы в командной строке, то они получают преимущество над этими настройками.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="884"/>
         <source>Start Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Опции запуска</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="890"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Параметр командной строки: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; или &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Отключить значок в системном лотке.&lt;/p&gt;&lt;p&gt;Может понадобиться системам, несовместимым со спецификацией Freedesktop.org.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="904"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Отключено, поскольку сейчас Connman примет эту настройку, но ничего не сделает с ней.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="907"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Укажите объем данных в килобайтах, который должен быть передан до обновления счетчиков (по умолчанию 1024 КБ).&lt;/p&gt;&lt;p&gt;Connman примет этот параметр, но согласно комментарию в коде Connman эта функция всё ещё требует разработки, и выбор, следовательно, отключен.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="910"/>
         <source>Counter Update KB</source>
-        <translation type="unfinished"></translation>
+        <translation>Обновление счётчиков, КБ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="920"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Укажите время ожидания в секундах перед запуском значка в системном лотке (по умолчанию 0 секунд).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="939"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Укажите объем данных в килобайтах, который должен быть передан до обновления счетчиков (по умолчанию 1024 КБ).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="968"/>
         <source>Start Minimized</source>
-        <translation type="unfinished"></translation>
+        <translation>Запускать свёрнутым</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="982"/>
         <source>Use System Icon Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать значок из системной темы</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="993"/>
         <source>Wait Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Время ожидания</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="894"/>
         <source>Disable Tray Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить значок в системном лотке</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1004"/>
         <source>Disable Counters</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить счётчики</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1041"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Укажите частоту в секундах между обновлениями показаний счётчика (по умолчанию 0 секунд).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1060"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use code specific for the selected desktop environment.&lt;/p&gt;&lt;p&gt;As of 2014.11.24 there seems to be a problem with QT5.3 and some system trays. There is code in the program to try and work around this issue, and selecting one of these buttons will invoke the code specific to the desktop.&lt;/p&gt;&lt;p&gt;If the bug gets fixed these options will remain so that start up scripts do not break, but the options will do nothing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Использовать код, специфичный для выбранного окружения рабочего стола.&lt;/p&gt;&lt;p&gt;Начиная с версии 2014.11.24 кажется существует проблема с Qt 5.3 и некоторыми системными лотками. В программе есть код, спомощью которого можнно попытаться обойти эту проблему, и выбор одного из этих пунктов применит код, специфичный для окружения рабочего стола.&lt;/p&gt;&lt;p&gt;Если ошибка будет устранена, эти опции останутся для того, чтобы не портить загрузочный скрипт, но они уже не будут ни на что влиять.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1063"/>
         <source>Desktop Specific</source>
-        <translation type="unfinished"></translation>
+        <translation>Для конкретных окружений рабочего стола</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1075"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1091"/>
         <source>XFCE</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1101"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Параметр командной строки: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1104"/>
         <source>MATE</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1117"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB.  If the spedified color matches the tray background we&apos;ve effectively created fake transparency. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Параметр командной строки: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Используется для обхода ошибки Qt, из-за которой значки в системном лотке отображается с белым или чёрным фоном вместо прозрачного.&lt;/p&gt;&lt;p&gt;Вы можете указать здесь цвет фона значка. Формат — шестнадцатиричное число RRGGBB. Если указанный цвет совпадает с фоном системного лотка, значит мы качественно создали псевдопрозрачность. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1121"/>
         <source>Fake Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>Псевдопрозрачность</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1131"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the background color as a hex number in the format: RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Укажите цвет фона, как шестнадцатеричное число в формате RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1150"/>
@@ -986,12 +993,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1245"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will place an entry in the autostart directory for the current user, unchecking will remove said entry. This directory is typically: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST only add or remove the .desktop file from the autostart directory. Autostarting is typically dependent upon your Desktop Environment and must be enabled from there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если поставлена «галочка», CMST поместит элемент в папку автозапуска текущего пользователя, снятие «галочки» удалит этот элемент. Обычно это папка: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST добавит или удалит только .desktop-файл из папки автозапуска. Автозапуск обычно зависит от вашего окружения рабочего стола и должен быть включён отсюда.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1248"/>
         <source>Enable Autostart</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить автозапуск</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1255"/>
@@ -1250,13 +1257,13 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="364"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Contributors:&lt;/b&gt;&lt;center&gt;Brett Dutro&lt;center&gt;Adam Fontenot&lt;center&gt;Lester Bico&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Ilya Shestopalov (Russian)</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;%1 — это программа для взаимодействия с демоном Connman и предоставления контроля через системный лоток.&lt;br&gt;&lt;center&gt;Версия &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Дата выпуска: %3&lt;center&gt;Копирайт c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Вермонт, США&lt;br&gt;&lt;center&gt;&lt;b&gt;Помощники:&lt;/b&gt;&lt;center&gt;Brett Dutro&lt;center&gt;Adam Fontenot&lt;center&gt;Lester Bico&lt;br&gt;&lt;center&gt;&lt;b&gt;Переводчики:&lt;/b&gt;&lt;center&gt;Ilya Shestopalov (русский язык)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="997"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1905"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1895"/>
         <source> Warning</source>
-        <translation type="unfinished"></translation>
+        <translation> внимание</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1118"/>
@@ -1439,7 +1446,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1177"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1590"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1580"/>
         <source>Security: %1&lt;br&gt;</source>
         <translation>Безопасность: %1&lt;br&gt;</translation>
     </message>
@@ -1466,223 +1473,223 @@
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1307"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1297"/>
         <source>State: </source>
         <translation>Состояние: </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1313"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1303"/>
         <source>Engaged</source>
         <translation>активирован</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1318"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1308"/>
         <source>Disabled</source>
         <translation>не активирован</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1321"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1311"/>
         <source>Offline Mode </source>
         <translation>Автономный режим </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1354"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1344"/>
         <source>%1On%1%1</source>
         <comment>powered</comment>
         <translation>%1Да%1%1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1359"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1349"/>
         <source>%1Off%1%1</source>
         <comment>powered</comment>
         <translation>%1Нет%1%1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1367"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1357"/>
         <source>Yes</source>
         <comment>connected</comment>
         <translation>Да</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1367"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1357"/>
         <source>No</source>
         <comment>connected</comment>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1373"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1363"/>
         <source>Yes</source>
         <comment>tethered</comment>
         <translation>Да</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1373"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1363"/>
         <source>No</source>
         <comment>tethered</comment>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1548"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1538"/>
         <source>Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.</source>
         <translation>Частота обновления счётчиков основана на пороговом значении %L1 КБ данных и %L2 секундах времени.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1578"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1568"/>
         <source>Ethernet Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение Ethernet&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1579"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1569"/>
         <source>Service: %1&lt;br&gt;</source>
         <translation>Служба:%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1580"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1592"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1570"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1582"/>
         <source>Interface: %1</source>
         <translation>Интерфейс: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1587"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1577"/>
         <source>WiFi Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение Wi-Fi&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1589"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1579"/>
         <source>SSID: %1&lt;br&gt;</source>
         <translation>SSID: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1591"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1581"/>
         <source>Strength: %1%&lt;br&gt;</source>
         <translation>Сила: %1%&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1611"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1601"/>
         <source>Connection is in the Ready State.</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение в состоянии готовности.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1622"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1612"/>
         <source>Connection is in the Failure State, attempting to reestablish the connection</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение в неработоспособном состоянии, попытка переподключения</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1628"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1618"/>
         <source>Connection is in the Failure State.</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение в неработоспособном состоянии.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1636"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1626"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
         <translation>Не подключено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1645"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1635"/>
         <source>Error retrieving properties via Dbus</source>
         <translation>Ошибка при получении свойств через Dbus</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1646"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1636"/>
         <source>Connection status is unknown</source>
         <translation>Состояние соединения неизвестно</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1906"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1896"/>
         <source>&lt;center&gt;&lt;b&gt;Unable to find a systemtray on this machine.&lt;/b&gt;&lt;center&gt;&lt;br&gt;The program may still be used to manage your connections, but the tray icon will be disabled.&lt;center&gt;&lt;br&gt;&lt;br&gt;If you are seeing this message at system start up and you know a system tray exists once the system is up, try starting with the &lt;b&gt;-w&lt;/b&gt; switch and set a delay as necessary.  The exact wait time will vary from system to system.</source>
         <translation>&lt;center&gt;&lt;b&gt;Не удалось найти системный лоток в этой системе.&lt;/b&gt;&lt;center&gt;&lt;br&gt;Эта программа всё-ещё может быть использована для управения вашими соединениями, но значок в системном лотке отражаться не будет.&lt;center&gt;&lt;br&gt;&lt;br&gt;Если вы видите это сообщение при загрузке системы и вы знаете, что системный лоток будет после загрузки системы, попытайтесь запустить с опцией &lt;b&gt;-w&lt;/b&gt; и установить нужную задержку. Точное время ожидания будет зависеть от конкретной системы.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2137"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2127"/>
         <source>Could not find a connection to the system bus</source>
         <translation>Не удалось найти подключение к системной шине</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2138"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2143"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2128"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2133"/>
         <source>%1 - Critical Error</source>
         <translation>%1 - критическая ошибка</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2139"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2129"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation>Не удалось найти подключение к системной шине.&lt;br&gt;&lt;br&gt;%1 не сможет обмениваться данными с connman.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2142"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2132"/>
         <source>Could not create an interface to connman on the system bus</source>
         <translation>Не удалось создать интерфейс для connman на системной шине</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2144"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2134"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation>Не удалось создать интерфейс для connman на системной шине.&lt;br&gt;&lt;br&gt;%1 не сможет обмениваться данными с connman.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2147"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2137"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
         <translation>Ошибка чтения или анализа connman.Manager.GetProperties</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2138"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2143"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2148"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2153"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2158"/>
         <source>%1 - Warning</source>
         <translation>%1 - внимание</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2149"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2139"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
         <translation>Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;Вряд ли какая-нибудь часть %1 будет функционировать.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2152"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2142"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
         <translation>Ошибка чтения или анализа connman.Manager.GetTechnologies</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2154"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2144"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation>Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Какая-то часть %1 всё ещё может функционировать.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2157"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2147"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
         <translation>Ошибка чтения или анализа connman.Manager.GetServices</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2159"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2149"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation>Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Какая-то часть %1 всё ещё может функционировать.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1469"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1459"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
         <translation>Технологии Wi-Fi:&lt;br&gt;найдено %1, включено %2</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2244"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2234"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
         <translation>%1 версия %2 by %3 была обнаружена в этой системе.&lt;p&gt;Этот сервер поддерживает спецификацию уведомлений рабочего стола версии %4</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2251"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2241"/>
         <source>%1 detected</source>
         <translation>%1 обнаружена</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2257"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2247"/>
         <source>Attempt %1 of 4 looking for notification server.</source>
         <translation>Попытка %1 из 4-х поиска сервера уведомлений.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2260"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2250"/>
         <source>Unable to find or connect to a Notification server.</source>
         <translation>Не удалось найти или подключиться к серверу уведомлений.</translation>
     </message>
@@ -2310,12 +2317,12 @@
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="573"/>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="611"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation> информация</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="720"/>
         <source> Critical</source>
-        <translation type="unfinished"></translation>
+        <translation> критическая</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="417"/>
@@ -2454,31 +2461,18 @@
     </message>
 </context>
 <context>
-    <name>ScrollBox</name>
-    <message>
-        <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="14"/>
-        <source>Scrollbox</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="38"/>
-        <source>TextLabel</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>TranslateStrings</name>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="43"/>
         <source>connman system tray</source>
         <comment>Main Window Title</comment>
-        <translation type="unfinished"></translation>
+        <translation>Системный лоток connman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="44"/>
         <source>cmst</source>
         <comment>Abbreviated Program Name - used for QMessageBox titles</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="47"/>
@@ -2634,49 +2628,49 @@
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="76"/>
         <source>Invalid arguments</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Неправильные аргументы</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="77"/>
         <source>Permission denied</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Доступ запрещён</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="78"/>
         <source>Passphrase required</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Требуется пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="79"/>
         <source>Not registered</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Не зарегистрирована</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="80"/>
         <source>Not unique</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Не уникальна</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="81"/>
         <source>Not supported</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Не поддерживается</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="82"/>
         <source>Not implemented</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Не внедрено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="83"/>
         <source>Not found</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Не найдена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="84"/>
@@ -2688,61 +2682,61 @@
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="85"/>
         <source>In progress</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>В процессе</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="86"/>
         <source>Already exists</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Уже существует</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="87"/>
         <source>Already enabled</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Уже включена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="88"/>
         <source>Already disabled</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Уже выключена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="89"/>
         <source>Already connected</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Уже подключена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="90"/>
         <source>Not connected</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Не подключена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="91"/>
         <source>Operation aborted</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Операция отменена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="92"/>
         <source>Operation timeout</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Время ожидания операции вышло</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="93"/>
         <source>Invalid service</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Неправильная служба</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="94"/>
         <source>Invalid property</source>
         <comment>connman error sring</comment>
-        <translation type="unfinished"></translation>
+        <translation>Неправильное свойство</translation>
     </message>
 </context>
 <context>
@@ -2785,38 +2779,38 @@
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="98"/>
         <source>Specify the wait time in seconds before starting the system tray icon.</source>
-        <translation type="unfinished"></translation>
+        <translation>Укажите время ожидания в секундах перед запуском значка в системном лотке.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="99"/>
         <location filename="../apps/cmstapp/code/main.cpp" line="111"/>
         <source>seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>секунд</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="104"/>
         <source>[Experimental] The number of kb that have to be transmitted before the counter updates.</source>
-        <translation type="unfinished"></translation>
+        <translation>[Экспериментально] Количество кб которые должны быть переданы перед обновлением счётчиков.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="105"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>КБ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="110"/>
         <source>[Experimental] The interval in seconds between counter updates.</source>
-        <translation type="unfinished"></translation>
+        <translation>[Экспериментально] Промежуток в секундах между обновлением счётчиков.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="117"/>
         <source>If tray icon fake transparency is required, specify the background color to use (format: 0xRRGGBB)</source>
-        <translation type="unfinished"></translation>
+        <translation>Если значку в системном лотке требуется псевдопрозрачность, укажите цвет фона (формат: 0xRRGGBB)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="118"/>
         <source>RRGGBB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="125"/>
@@ -2826,7 +2820,7 @@
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="130"/>
         <source>Use MATE DE specific code.</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать специальный код для окружения рабочего стола MATE.</translation>
     </message>
 </context>
 </TS>
