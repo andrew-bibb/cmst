@@ -288,14 +288,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   //  connect signals and slots - actions and action groups
   connect(minMaxGroup, SIGNAL(triggered(QAction*)), this, SLOT(minMaxWindow(QAction*)));
-  connect(exitAction, SIGNAL(triggered()), this, SLOT(close()));
+  connect(exitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
   connect(moveGroup, SIGNAL(triggered(QAction*)), this, SLOT(moveButtonPressed(QAction*)));
   connect(mvsrv_menu, SIGNAL(triggered(QAction*)), this, SLOT(moveService(QAction*)));
 
   //  connect signals and slots - ui elements
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
   connect(ui.comboBox_service, SIGNAL(currentIndexChanged(int)), this, SLOT(getServiceDetails(int)));
-  connect(ui.pushButton_exit, SIGNAL(clicked()), this, SLOT(close()));
+  connect(ui.pushButton_exit, SIGNAL(clicked()), exitAction, SLOT(trigger()));
   connect(ui.pushButton_minimize, SIGNAL(clicked()), minimizeAction, SLOT(trigger()));
   connect(ui.checkBox_hideIcon, SIGNAL(clicked(bool)), this, SLOT(toggleTrayIcon(bool)));
   connect(ui.checkBox_devicesoff, SIGNAL(clicked(bool)), this, SLOT(toggleOfflineMode(bool)));
@@ -317,7 +317,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_provisioning_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
   connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
   connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
-
+ 
   // turn network cards on or off globally based on checkbox
   toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
 
@@ -1195,6 +1195,23 @@ void ControlBox::showWhatsThis()
 }
 
 //////////////////////////////////////////// Protected Functions //////////////////////////////////
+//
+// Close events for this dialog.  If there is a systemtray and it is visible
+// then a close event will only minimize (for instance clicking the X in a
+// window bar.  If there is no system tray or there is one but it is not
+// visible then close the program.
+void ControlBox::closeEvent(QCloseEvent* e)
+{
+	if (trayicon != 0 ) {
+		if (trayicon->isVisible() ){
+			this->hide();
+			e->ignore();
+		}	// if visible
+	}	// if there is a tray icon
+	else
+		e->accept();	
+  return;
+}
 //
 // Event filter used to filter out tooltip events if we don't want to see them
 // in eventFilters return true eats the event, false passes on it.
