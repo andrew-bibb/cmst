@@ -41,7 +41,7 @@ DEALINGS IN THE SOFTWARE.
 
 // Create a signal handler to catch ^C from console
 void signalhandler(int sig) {
-  if(sig==SIGINT) {
+  if(sig == SIGINT || sig == SIGTERM) {
     qApp->quit();
   }
   

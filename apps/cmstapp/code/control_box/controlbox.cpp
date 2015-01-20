@@ -2344,7 +2344,7 @@ void ControlBox::cleanUp()
   
   // write settings
   this->writeSettings();
-
+qDebug() << "last step befor about to quit";
   return;
 }
 
