@@ -1885,7 +1885,7 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
       int i = 0;
       for (i; i < maxtries; ++i) {
         trayicon->setVisible(true);
-        qDebug() << "icon geometry: " << trayicon->geometry();
+        //qDebug() << "icon geometry: " << trayicon->geometry();
         if ((trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) && trayicon->geometry().width() > 1) break;
         trayicon->setVisible(false);
         qApp->processEvents();
@@ -2344,7 +2344,7 @@ void ControlBox::cleanUp()
   
   // write settings
   this->writeSettings();
-qDebug() << "last step befor about to quit";
+  
   return;
 }
 
