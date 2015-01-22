@@ -49,7 +49,6 @@ AgentDialog::AgentDialog(QWidget* parent)
 	connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));  
   connect (ui.checkBox_hide_passphrase, SIGNAL(clicked(bool)), this, SLOT(hidePassphrase(bool)));
   connect (ui.checkBox_wps_no_pin, SIGNAL(clicked(bool)), this, SLOT(useWPSPushButton(bool)));  
-  connect (ui.radioButton_other, SIGNAL(toggled(bool)), this, SLOT(useOtherBrowser(bool))); 
   connect (ui.pushButton_launch_browser,SIGNAL(clicked()), this, SLOT(launchBrowser())); 
   
 	// find the PATH of the current environment
@@ -136,13 +135,9 @@ int AgentDialog::showPage1(const QString& url)
 		}	// for dir in path
 	}	// if path not empty	
 	
-	// enable the radioButtons where we can find a browser on this system
-	// if path is empty all are enabled
-	if (sl_browsers.contains("firefox")) 	ui.radioButton_firefox->setEnabled(true);
-	if (sl_browsers.contains("opera")) 	ui.radioButton_opera->setEnabled(true);
-	if (sl_browsers.contains("luakit")) 	ui.radioButton_luakit->setEnabled(true);	
-	if (sl_browsers.contains("lynx")) 	ui.radioButton_lynx->setEnabled(true);	
-	ui.radioButton_other->setEnabled(true);	
+	// add found browsers to the combobox
+	ui.comboBox_browser->addItems(sl_browsers);
+	ui.comboBox_browser->setEnabled(true);
 	
 	this->ui.stackedWidget->setCurrentIndex(1);
 	return this->exec();	
@@ -198,13 +193,7 @@ void AgentDialog::initialize()
 	list.append(ui.lineEdit_eap_identity);
 	list.append(ui.lineEdit_wps_pin);
 	list.append(ui.checkBox_wps_no_pin);	
-		
-	list.append(ui.radioButton_firefox);
-	list.append(ui.radioButton_opera);
-	list.append(ui.radioButton_luakit);
-	list.append(ui.radioButton_lynx);
-	list.append(ui.radioButton_other);
-	list.append(ui.lineEdit_other_browser);
+	list.append(ui.comboBox_browser);
 	
 	//	set disabled true for all widgets in the list and clear contents
 	for (int i = 0; i < list.size(); ++i) {
@@ -240,20 +229,6 @@ void AgentDialog::showWhatsThis()
 }
 
 //
-//	Slot to control activation of the lineedit to allow typing in a browser name
-//	Called when ui.radioButton_other is checked or unchecked
-void AgentDialog::useOtherBrowser(bool b_checked)
-{
-	// enable text entry box if checked
-	if (b_checked) ui.lineEdit_other_browser->setEnabled(true);
-
-	// otherwise disable
-	else ui.lineEdit_other_browser->setEnabled(false);
-	
-	return;
-}
-
-//
 //	Slot to launch the selected browser
 //	Called when ui.pushButton_launch_browser is pressed
 void AgentDialog::launchBrowser()
@@ -273,10 +248,9 @@ void AgentDialog::launchBrowser()
 		}	// for dir in path
 	}	// if path not empty	
 		
-	if (ui.radioButton_firefox->isChecked()) process->startDetached(QString("firefox"), QStringList(ui.lineEdit_url->text()) );	
-	if (ui.radioButton_opera->isChecked()) process->startDetached(QString("opera"), QStringList(ui.lineEdit_url->text()) );
-	if (ui.radioButton_luakit->isChecked()) process->startDetached(QString("luakit"), QStringList(ui.lineEdit_url->text()) );	
-	if (ui.radioButton_lynx->isChecked()) {
+	QString chosenBrowser = ui.comboBox_browser->currentText();
+	if (chosenBrowser == "lynx") {
+	// lynx (CLI browser) is chosen
 		QStringList sl_args = QStringList();
 		if (sl_terminals.contains("roxterm")) {
 			sl_args << "-T" << "Web Login" << "--execute" << "lynx" << ui.lineEdit_url->text();
@@ -292,8 +266,7 @@ void AgentDialog::launchBrowser()
 				tr("You have requested the %1 browser, but we cannot find a terminal program to open it with.  "	\
 				"Currenty we can start %1 using these terminals: <b>roxterm</b> and <b>xterm</b>." \
 				"<br><br>To continue you need to manually open a terminal and then enter: \"lynx %2\"").arg("Lynx").arg(ui.lineEdit_url->text()) );
-	 }	// lynx (CLI browser) is checked
-	
-	if (ui.radioButton_other->isChecked() && ! ui.lineEdit_other_browser->text().isEmpty() ) 
-		process->startDetached(QString(ui.lineEdit_other_browser->text()), QStringList(ui.lineEdit_url->text()) );
+	} else {
+		process->startDetached(chosenBrowser, QStringList(ui.lineEdit_url->text()) );	
+	}
 }

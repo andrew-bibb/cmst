@@ -63,7 +63,6 @@ class AgentDialog : public QDialog
 		void hidePassphrase(bool);
 		void useWPSPushButton(bool);		
 		void showWhatsThis();
-		void useOtherBrowser(bool);
 		void launchBrowser();
 		
 	public:
