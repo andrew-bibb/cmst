@@ -9,3 +9,4 @@ include(cmst.pri)
 TRANSLATIONS += ./translations/cmst_en_US.ts
 TRANSLATIONS += ./translations/cmst_ru_RU.ts
 TRANSLATIONS += ./translations/cmst_zh_CN.ts
+TRANSLATIONS += ./translations/cmst_de_DE.ts
