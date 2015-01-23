@@ -127,7 +127,7 @@ int AgentDialog::showPage1(const QString& url)
 	if (! sys_env_path.isEmpty() ) {
 		QStringList sl_loop = sys_env_path.split(':');
 		QStringList sl_targets;
-		sl_targets << "firefox" << "opera" << "luakit" << "lynx";
+		sl_targets << "google-chrome" << "google-chrome-unstable" << "chromium" << "firefox" << "opera" << "luakit" << "lynx" << "xdg-open";
 		sl_browsers.clear();
 		for (int i = 0; i < sl_loop.size(); ++i) {
 			QDir dir = QDir(sl_loop.at(i));
