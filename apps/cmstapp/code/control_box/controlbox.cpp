@@ -371,6 +371,7 @@ void ControlBox::aboutCMST()
                   "<center>Brett Dutro"
                   "<center>Adam Fontenot"
                   "<center>Lester Bico"
+                  "<center>Yaohan Chen"
                   "<br><center><b>Translations:</b>"
                   "<center>Ilya Shestopalov (Russian)").arg(TranslateStrings::cmtr("cmst")).arg(VERSION).arg(RELEASE_DATE).arg(COPYRIGHT_DATE) );
 }
