@@ -63,8 +63,9 @@ class AgentDialog : public QDialog
 		void hidePassphrase(bool);
 		void useWPSPushButton(bool);		
 		void showWhatsThis();
-		void useOtherBrowser(bool);
 		void launchBrowser();
+		void updateBrowserChoice(const QModelIndex&, const QModelIndex&);
+		void enteringBrowser(const QString&);
 		
 	public:
 		inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
