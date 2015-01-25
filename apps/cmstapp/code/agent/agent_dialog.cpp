@@ -129,7 +129,7 @@ int AgentDialog::showPage1(const QString& url)
 	if (! sys_env_path.isEmpty() ) {
 		QStringList sl_loop = sys_env_path.split(':');
 		QStringList sl_targets;
-		sl_targets << "google-chrome" << "google-chrome-unstable" << "chromium" << "firefox" << "opera" << "luakit" << "lynx" << "xdg-open";
+		sl_targets << "google-chrome" << "google-chrome-unstable" << "chromium" << "firefox" << "opera" << "qupzilla" << "luakit" << "lynx" << "xdg-open";
 		sl_browsers.clear();
 		for (int i = 0; i < sl_loop.size(); ++i) {
 			QDir dir = QDir(sl_loop.at(i));
@@ -241,8 +241,7 @@ void AgentDialog::updateBrowserChoice(const QModelIndex & current, const QModelI
 }
 //
 //  Slot to clear selection in the browser list view
-//  Called when ui.lineEdit_browser testEdited() signal is emitted
-//
+//  Called when ui.lineEdit_browser textEdited() signal is emitted
 void AgentDialog::enteringBrowser(const QString&)
 {
 	ui.listView_browsers->selectionModel()->clearSelection();

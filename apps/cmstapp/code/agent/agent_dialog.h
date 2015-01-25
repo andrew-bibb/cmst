@@ -50,6 +50,8 @@ class AgentDialog : public QDialog
 		int showPage0(const QMap<QString,QString>&);
 		int showPage1(const QString&);		
 		void createDict(QMap<QString,QVariant>&);
+		inline QString getBrowser() {return ui.lineEdit_browser->text();}
+		inline void setBrowser(const QString& b) {ui.lineEdit_browser->setText(b);}
   
   private:  
   // members

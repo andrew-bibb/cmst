@@ -643,6 +643,13 @@
             </property>
            </spacer>
           </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_browsertest">
+            <property name="text">
+             <string>Browser Test</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>

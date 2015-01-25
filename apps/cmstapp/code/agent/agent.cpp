@@ -85,7 +85,8 @@ void ConnmanAgent::ReportError(QDBusObjectPath path, QString s_error)
 //ff
 // Called when it is required to ask the user to open a website to proceed
 // with login handling
-void ConnmanAgent::RequestBrowser(QDBusObjectPath path, QString url)
+//void ConnmanAgent::RequestBrowser(QDBusObjectPath path, QString url)
+void ConnmanAgent::RequestBrowser(QString url)
 {
 	// Send the url to the dialog to have the user the necessary information, return if canceled.	
 	if (this->uiDialog->showPage1(url) == QDialog::Rejected) this->sendErrorReply(ERROR_CANCELED,"User cancelled the dialog");

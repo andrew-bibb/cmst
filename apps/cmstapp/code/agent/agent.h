@@ -46,14 +46,16 @@ class ConnmanAgent : public QObject, protected QDBusContext
     Q_CLASSINFO("D-Bus Interface", "net.connman.Agent")
  
     public:
-			ConnmanAgent(QObject*);
-			
+			ConnmanAgent(QObject*);	
 			inline void setLogInputRequest(bool b) {b_loginputrequest = b;}
+			inline QString getBrowser() {return uiDialog->getBrowser();}
+			inline void setBrowser(const QString& b) {uiDialog->setBrowser(b);}
  
     public Q_SLOTS:
       void Release();
       void ReportError(QDBusObjectPath, QString);
-      void RequestBrowser(QDBusObjectPath, QString);
+      //void RequestBrowser(QDBusObjectPath, QString);
+      void RequestBrowser(QString url="http://google.com");
       QVariantMap RequestInput(QDBusObjectPath, QMap<QString,QVariant>);
       void Cancel();
      
