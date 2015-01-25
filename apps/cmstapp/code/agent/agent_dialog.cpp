@@ -46,6 +46,15 @@ AgentDialog::AgentDialog(QWidget* parent)
 	// setup the user interface
   ui.setupUi(this);
   	  
+  // data members
+  cli_browsers.clear();	  
+ 	cli_browsers << "lynx" << "w3m" << "links" << "elinks";
+ 	gui_browsers.clear();
+	gui_browsers << "google-chrome" << "google-chrome-unstable" << "chromium" << "opera";									// blink based 	  
+	gui_browsers << "firefox" << "seamonkey";																															// gecko based 	  
+	gui_browsers << "qupzilla" << "luakit" << "dwb" << "jumanji" << "midoir" << "surf" << "vimprobable";	// webkit based 	  
+	gui_browsers << "konqueror" << "dillo" << "xdg-open";																									// other	 	  
+  	  
   // connect signals to slots
 	connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));  
   connect (ui.checkBox_hide_passphrase, SIGNAL(clicked(bool)), this, SLOT(hidePassphrase(bool)));
@@ -128,8 +137,8 @@ int AgentDialog::showPage1(const QString& url)
 	QStringList sl_browsers;	
 	if (! sys_env_path.isEmpty() ) {
 		QStringList sl_loop = sys_env_path.split(':');
-		QStringList sl_targets;
-		sl_targets << "google-chrome" << "google-chrome-unstable" << "chromium" << "firefox" << "opera" << "qupzilla" << "luakit" << "lynx" << "xdg-open";
+		QStringList sl_targets = cli_browsers;
+		sl_targets.append(gui_browsers);
 		sl_browsers.clear();
 		for (int i = 0; i < sl_loop.size(); ++i) {
 			QDir dir = QDir(sl_loop.at(i));
@@ -266,16 +275,18 @@ void AgentDialog::launchBrowser()
 		}	// for dir in path
 	}	// if path not empty	
 		
+	// Code below assumes that every browser will take a URL as an argument	
 	QString chosenBrowser = ui.lineEdit_browser->text();
-	if (chosenBrowser == "lynx") {
-	// lynx (CLI browser) is chosen
+	if (cli_browsers.contains(chosenBrowser, Qt::CaseSensitive) ) {
+		// Support 2 terminals, roxterm and xterm. This probably won't work right if
+		// someone uses XDG-OPEN and it happens to point to a cli browser
 		QStringList sl_args = QStringList();
 		if (sl_terminals.contains("roxterm")) {
-			sl_args << "-T" << "Web Login" << "--execute" << "lynx" << ui.lineEdit_url->text();
+			sl_args << "-T" << "Web Login" << "--execute" << chosenBrowser << ui.lineEdit_url->text();
 			 process->startDetached(QString("roxterm"), sl_args);
 		 }
 		 else if (sl_terminals.contains("xterm")) {
-			 sl_args << "-T"  << "Web Login" << "-e" << "lynx" << ui.lineEdit_url->text();
+			 sl_args << "-T"  << "Web Login" << "-e" << chosenBrowser << ui.lineEdit_url->text();
 			 process->startDetached(QString("xterm"), sl_args);
 		 }
 		 else
@@ -283,7 +294,7 @@ void AgentDialog::launchBrowser()
 		 	QString(TranslateStrings::cmtr("cmst")) + tr(" Information"),
 				tr("You have requested the %1 browser, but we cannot find a terminal program to open it with.  "	\
 				"Currenty we can start %1 using these terminals: <b>roxterm</b> and <b>xterm</b>." \
-				"<br><br>To continue you need to manually open a terminal and then enter: \"lynx %2\"").arg("Lynx").arg(ui.lineEdit_url->text()) );
+				"<br><br>To continue you need to manually open a terminal and then enter: \"%1 %2\"").arg(chosenBrowser).arg(ui.lineEdit_url->text()) );
 	} else {
 		process->startDetached(chosenBrowser, QStringList(ui.lineEdit_url->text()) );	
 	}
