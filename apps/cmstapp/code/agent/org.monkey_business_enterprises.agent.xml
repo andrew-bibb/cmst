@@ -9,7 +9,10 @@
     </method>
     <method name="RequestBrowser">
       <arg type="o" direction="in"/>
-      <arg type="s" direction="in"/>
+      <arg name="url" type="s" direction="in"/>
+    </method>
+    <method name="RequestBrowser">
+      <arg type="o" direction="in"/>
     </method>
     <method name="RequestInput">
       <arg type="a{sv}" direction="out"/>

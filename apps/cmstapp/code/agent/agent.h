@@ -52,7 +52,7 @@ class ConnmanAgent : public QObject, protected QDBusContext
       void Release();
       void ReportError(QDBusObjectPath, QString);
       //void RequestBrowser(QDBusObjectPath, QString);
-      void RequestBrowser(QString url="http://google.com");
+      void RequestBrowser(QDBusObjectPath=QDBusObjectPath(""), QString url="http://google.com");
       QVariantMap RequestInput(QDBusObjectPath, QMap<QString,QVariant>);
       void Cancel();
      
