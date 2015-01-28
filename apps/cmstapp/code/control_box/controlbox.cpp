@@ -318,9 +318,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
   connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
   
-  //////////////////TESTING ///////////
-  connect(ui.pushButton_browsertest, SIGNAL (clicked()), agent, SLOT(RequestBrowser()));
- 
   // turn network cards on or off globally based on checkbox
   toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
 

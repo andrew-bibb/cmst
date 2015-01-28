@@ -51,8 +51,7 @@ class ConnmanAgent : public QObject, protected QDBusContext
     public Q_SLOTS:
       void Release();
       void ReportError(QDBusObjectPath, QString);
-      //void RequestBrowser(QDBusObjectPath, QString);
-      void RequestBrowser(QString url="http://google.com");
+      void RequestBrowser(QDBusObjectPath, QString);
       QVariantMap RequestInput(QDBusObjectPath, QMap<QString,QVariant>);
       void Cancel();
      

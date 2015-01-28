@@ -439,8 +439,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>603</width>
-            <height>390</height>
+            <width>98</width>
+            <height>54</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -642,13 +642,6 @@
              </size>
             </property>
            </spacer>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_browsertest">
-            <property name="text">
-             <string>Browser Test</string>
-            </property>
-           </widget>
           </item>
          </layout>
         </widget>
@@ -1371,8 +1364,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>493</width>
-            <height>468</height>
+            <width>98</width>
+            <height>412</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">

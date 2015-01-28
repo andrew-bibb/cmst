@@ -1,13 +1,16 @@
 [Desktop Entry]
 Type=Application
 Version=1.1
-Terminal=false
-StartupNotify=false
-Name=CMST
+Name=Network Configuration
 GenericName=Network Configuration
 Comment=QT GUI frontend for connman
-Categories=Network;Utility
-Icon=/usr/share/icons/hicolor/24x24/apps/cmst.png
+Categories=Settings;System;Qt;NetworkSettings
+Icon=cmst
 Terminal=false
-Exec=/usr/bin/cmst
+Exec=cmst
+Terminal=false
+StartupNotify=false
 X-GNOME-Autostart-enabled=true
+
+Name[de]=Netzwerk-Konfiguration
+
