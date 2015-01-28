@@ -377,6 +377,7 @@ void ControlBox::aboutCMST()
                   "<center>Yaohan Chen"
                   "<br><center><b>Translations:</b>"
                   "<center>Jianfeng Zhang (Chinese)"
+                  "<center>sqozz (German)"
                   "<center>Ilya Shestopalov (Russian)").arg(TranslateStrings::cmtr("cmst")).arg(VERSION).arg(RELEASE_DATE).arg(COPYRIGHT_DATE) );
 }
 
