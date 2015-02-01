@@ -10,6 +10,6 @@ assist in obtaining the information from you necessary to logon the wifi service
 
 The program requires that connman be installed and running.  The program depends on QT5, but only the base package. 
 
-The Wiki has been started and announcements, news and other information can be found there.  Wiki link should be on the sidebar to the right.
+The [Wiki](https://github.com/andrew-bibb/cmst/wiki) has been started and announcements, news and other information can be found there.  Wiki link should be on the sidebar to the right.
 
 There is a PKGBUILD for this project in the Arch Linux AUR.
