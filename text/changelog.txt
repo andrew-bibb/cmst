@@ -1,7 +1,8 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<br><b>In Progress</b>
+<br><b>2015.03.01</b>
 <ul>
+<li>Translation to Chinese by Jianfeng Zhang.</li>
 <li>Option to create a entry in the users autostart direcory (coded by Lester Bico).</li>
 <li>Added --use-mate command line option to try and work around system tray icon oddities.</li>
 <li>Start options formally only available from the command line may now be set in preferences.</li>
