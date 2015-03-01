@@ -1,5 +1,9 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<br><b>In Progress</b>
+<ul>
+<li>Browser selections in Agent dialog improved and added xdg-open option (by Yaohan Chen).</li>
+</ul>
 <br><b>2015.03.01</b>
 <ul>
 <li>Translation to Chinese by Jianfeng Zhang.</li>
