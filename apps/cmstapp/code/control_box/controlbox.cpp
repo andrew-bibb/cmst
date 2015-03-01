@@ -317,7 +317,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_provisioning_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
   connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
   connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
- 
+  
   // turn network cards on or off globally based on checkbox
   toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
 
@@ -371,7 +371,10 @@ void ControlBox::aboutCMST()
                   "<center>Brett Dutro"
                   "<center>Adam Fontenot"
                   "<center>Lester Bico"
+                  "<center>Yaohan Chen"
                   "<br><center><b>Translations:</b>"
+                  "<center>Jianfeng Zhang (Chinese)"
+                  "<center>sqozz (German)"
                   "<center>Ilya Shestopalov (Russian)").arg(TranslateStrings::cmtr("cmst")).arg(VERSION).arg(RELEASE_DATE).arg(COPYRIGHT_DATE) );
 }
 
@@ -1803,7 +1806,10 @@ void ControlBox::writeSettings()
   settings->setValue("desktop_xfce", ui.radioButton_desktopxfce->isChecked() );
   settings->setValue("desktop_mate", ui.radioButton_desktopmate->isChecked() );
   settings->endGroup();
-
+  
+  settings->beginGroup("LocalSystem");
+	settings->setValue("browser", agent->getBrowser());
+	settings->endGroup(); 
 
   return;
 }
@@ -1852,6 +1858,11 @@ void ControlBox::readSettings()
   ui.radioButton_desktopxfce->setChecked(settings->value("desktop_xfce").toBool() );
   ui.radioButton_desktopmate->setChecked(settings->value("desktop_mate").toBool() );
   settings->endGroup();
+  
+  settings->beginGroup("LocalSystem");
+	agent->setBrowser(settings->value("browser").toString() );
+	qDebug() << settings->value("browser").toString();
+	settings->endGroup(); 
 
   return;
 }

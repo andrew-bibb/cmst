@@ -46,9 +46,7 @@ class ConnmanAgent : public QObject, protected QDBusContext
     Q_CLASSINFO("D-Bus Interface", "net.connman.Agent")
  
     public:
-			ConnmanAgent(QObject*);
-			
-			inline void setLogInputRequest(bool b) {b_loginputrequest = b;}
+			ConnmanAgent(QObject*);	
  
     public Q_SLOTS:
       void Release();
@@ -66,6 +64,9 @@ class ConnmanAgent : public QObject, protected QDBusContext
 	    
 	  public:
 			inline void setWhatsThisIcon(QIcon icon) {uiDialog->setWhatsThisIcon(icon);}  
+			inline void setLogInputRequest(bool b) {b_loginputrequest = b;}
+			inline QString getBrowser() {return uiDialog->getBrowser();}
+			inline void setBrowser(const QString& b) {uiDialog->setBrowser(b);}
 };    
 
 #endif
