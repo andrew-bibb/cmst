@@ -13,3 +13,10 @@ The program requires that connman be installed and running.  The program depends
 The [Wiki](https://github.com/andrew-bibb/cmst/wiki) has been started and announcements, news and other information can be found there.
 
 There is a PKGBUILD for this project in the Arch Linux AUR.
+
+If you are not on Arch download the release and extract the files.  Then run:
+
+    qmake
+    make
+    make install (as root)
+
