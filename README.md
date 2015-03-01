@@ -12,7 +12,7 @@ The program requires that connman be installed and running.  The program depends
 
 The [Wiki](https://github.com/andrew-bibb/cmst/wiki) has been started and announcements, news and other information can be found there.
 
-[Screen shots:](https://github.com/andrew-bibb/cmst/wiki/Screenshots) are now included in the Wiki
+[Screen shots:](https://github.com/andrew-bibb/cmst/wiki/3.-Screenshots) are now included in the Wiki
 
 There is a PKGBUILD for this project in the Arch Linux AUR.
 
