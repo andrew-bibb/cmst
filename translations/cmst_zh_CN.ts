@@ -34,9 +34,13 @@
         <translation>隐藏密码(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="73"/>
         <source>&amp;Old Passphrase</source>
-        <translation>旧密码(&amp;O)</translation>
+        <translation type="vanished">旧密码(&amp;O)</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="73"/>
+        <source>O&amp;ld Passphrase</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="83"/>
@@ -139,127 +143,108 @@
         <translation>需要用浏览器登录</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="292"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers we found are shown below as active. You may select any one browser to use it for the login. If your web browser is not shown active, or is not listed at all, select &lt;span style=&quot; font-weight:600;&quot;&gt;Other&lt;/span&gt; and type the command you would use to start your browser from a command line in the text box. To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown below:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman 需要使用浏览器完成登录。&lt;/p&gt;&lt;p&gt;检测到下列可用的浏览器。选择一个用作登录。如果你的浏览器不可用或未被列出，请选择 &lt;span style=&quot; font-weight:600;&quot;&gt;其它&lt;/span&gt; 并在文本框内输入启动浏览器的命令行。单击&lt;span style=&quot; font-weight:600;&quot;&gt;启动浏览器&lt;/span&gt;按钮启动你的浏览器。 &lt;/p&gt;&lt;p&gt;如果你想手动登录，请关闭这个对话框，并启动你的浏览器打开以下网址：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="295"/>
+        <source>Choose or enter a browser:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="307"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="302"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login.  If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers we found are shown below as active. You may select any one browser to use it for the login. If your web browser is not shown active, or is not listed at all, select &lt;span style=&quot; font-weight:600;&quot;&gt;Other&lt;/span&gt; and type the command you would use to start your browser from a command line in the text box. To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown below:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman 需要使用浏览器完成登录。&lt;/p&gt;&lt;p&gt;检测到下列可用的浏览器。选择一个用作登录。如果你的浏览器不可用或未被列出，请选择 &lt;span style=&quot; font-weight:600;&quot;&gt;其它&lt;/span&gt; 并在文本框内输入启动浏览器的命令行。单击&lt;span style=&quot; font-weight:600;&quot;&gt;启动浏览器&lt;/span&gt;按钮启动你的浏览器。 &lt;/p&gt;&lt;p&gt;如果你想手动登录，请关闭这个对话框，并启动你的浏览器打开以下网址：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="317"/>
         <source>Login URL:</source>
         <translation>登录 URL:</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="314"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="324"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting you continue login with a web browser. This box shows the URL that contains the login page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman需要使用浏览器登录。该文本框展示了包含登录页面的网址。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="328"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="331"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use  the Firefox browser.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用Firefox浏览器。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用Firefox浏览器。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="334"/>
-        <source>&amp;Firefox</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="341"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the Opera browser.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用Opera浏览器。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用Opera浏览器。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="344"/>
-        <source>&amp;Opera</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="351"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the Luakit browser.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用Luakit浏览器。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用Luakit浏览器。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="354"/>
-        <source>&amp;Luakit</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="361"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the Lynx (console mode) browser.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用Lynx（控制台模式）浏览器。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用Lynx（控制台模式）浏览器。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="364"/>
-        <source>Lyn&amp;x</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="373"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Login using a browser that is not listed.  Type the browser start command in the box below.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用一个未被列出的浏览器。在下方输入启动命令行。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用一个未被列出的浏览器。在下方输入启动命令行。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="376"/>
         <source>Othe&amp;r</source>
-        <translation>其它(&amp;R)</translation>
+        <translation type="vanished">其它(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="383"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the browser start command here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在此输入浏览器启动命令。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在此输入浏览器启动命令。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="390"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="336"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to launch the selected browser. The browser will open at the page shown in the Login URL box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;单击启动选择的浏览器。浏览器将会打开显示在“登录URL”文本框里的网址。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="393"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="339"/>
         <source>Launch &amp;Browser</source>
         <translation>启动浏览器(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="422"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="371"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;这是什么？&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="425"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="374"/>
         <source>...</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="449"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="398"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;继续连接。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="452"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="401"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accept and use the answers you have provided in this dialog. &lt;/p&gt;&lt;p&gt;This will send your input to the connman daemon to continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;接受并使用你在此会话中提供的信息。&lt;/p&gt;&lt;p&gt;这将把你的输入发送给connman守护进程以继续连接。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="455"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="404"/>
         <source>O&amp;K</source>
         <translation>确定(&amp;K)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="462"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="411"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;取消连接。&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="465"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="414"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the dialog. &lt;/p&gt;&lt;p&gt;This will send a message to the connman daemon that you have cancelled the connection request.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;取消会话。&lt;/p&gt;&lt;p&gt;这将会给connman守护进程发送取消连接请求。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="468"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="417"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
@@ -267,14 +252,18 @@
 <context>
     <name>AgentDialog</name>
     <message>
-        <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="291"/>
+        <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="294"/>
         <source> Information</source>
         <translation> 信息</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="292"/>
+        <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="295"/>
+        <source>You have requested the %1 browser, but we cannot find a terminal program to open it with.  Currenty we can start %1 using these terminals: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;To continue you need to manually open a terminal and then enter: &quot;%1 %2&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>You have requested the %1 browser, but we cannot find a terminal program to open it with.  Currenty we can start %1 using these terminals: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;To continue you need to manually open a terminal and then enter: &quot;lynx %2&quot;</source>
-        <translation>你选择了%1浏览器，但是无法找到可启动的终端程序。目前可用来启动%1的终端程序有：&lt;b&gt;roxterm&lt;/b&gt; 和 &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;要继续，请手动打开一个终端窗口并输入：&quot;lynx %2&quot;</translation>
+        <translation type="vanished">你选择了%1浏览器，但是无法找到可启动的终端程序。目前可用来启动%1的终端程序有：&lt;b&gt;roxterm&lt;/b&gt; 和 &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;要继续，请手动打开一个终端窗口并输入：&quot;lynx %2&quot;</translation>
     </message>
 </context>
 <context>
@@ -879,8 +868,8 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1088"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1091"/>
@@ -1121,564 +1110,568 @@
         <translation>关于 %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="364"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Contributors:&lt;/b&gt;&lt;center&gt;Brett Dutro&lt;center&gt;Adam Fontenot&lt;center&gt;Lester Bico&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Ilya Shestopalov (Russian)</source>
-        <translation>&lt;center&gt;%1 是connman守护进程的一个交互程序，并提供系统托盘控制。&lt;br&gt;&lt;center&gt;版本 &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;发布日期: %3&lt;center&gt;版权所有 c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;贡献者:&lt;/b&gt;&lt;center&gt;Brett Dutro&lt;center&gt;Adam Fontenot&lt;center&gt;Lester Bico&lt;br&gt;&lt;center&gt;&lt;b&gt;翻译者:&lt;/b&gt;&lt;center&gt;Ilya Shestopalov (Russian)</translation>
+        <translation type="vanished">&lt;center&gt;%1 是connman守护进程的一个交互程序，并提供系统托盘控制。&lt;br&gt;&lt;center&gt;版本 &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;发布日期: %3&lt;center&gt;版权所有 c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;贡献者:&lt;/b&gt;&lt;center&gt;Brett Dutro&lt;center&gt;Adam Fontenot&lt;center&gt;Lester Bico&lt;br&gt;&lt;center&gt;&lt;b&gt;翻译者:&lt;/b&gt;&lt;center&gt;Ilya Shestopalov (Russian)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="382"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="364"/>
+        <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Contributors:&lt;/b&gt;&lt;center&gt;Brett Dutro&lt;center&gt;Adam Fontenot&lt;center&gt;Lester Bico&lt;center&gt;Yaohan Chen&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="385"/>
         <source>About AwOken</source>
         <translation>关于 AwOken</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="383"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="386"/>
         <source>&lt;center&gt;This program uses the &lt;b&gt;AwOken&lt;/b&gt; icon set version 2.5&lt;br&gt;&lt;br&gt;Released under the&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;Unported License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;&lt;br&gt;&lt;center&gt;The CMST icon is a derivative work from the AwOken icon set.</source>
         <translation>&lt;center&gt;此程序使用 &lt;b&gt;AwOken&lt;/b&gt; 图标集 版本 2.5&lt;br&gt;&lt;br&gt;在以下许可下发布：&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;Unported License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;&lt;br&gt;&lt;center&gt;CMST 图标是 AwOken 图标集的衍生作品。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="398"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="401"/>
         <source>%1 license is the MIT license.</source>
         <translation>%1 的许可是 MIT license.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="400"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="403"/>
         <source>License</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="408"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="411"/>
         <source>%1 change log is not available.</source>
         <translation>%1 更新日志不可用。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="410"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="413"/>
         <source>ChangeLog</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="509"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="512"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="530"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="535"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="533"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="538"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;服务:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="535"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="538"/>
         <source>Unable to determine service</source>
         <translation>无法确定服务</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="556"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="600"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="623"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="559"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="603"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="626"/>
         <source>No Services Selected</source>
         <translation>未选择服务</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="557"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="560"/>
         <source>You need to select a Wifi service before pressing the connect button.</source>
         <translation>在按下连接按钮之前，你需要选择一个Wifi服务。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="601"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="604"/>
         <source>You need to select a Wifi service before pressing the disconnect button.</source>
         <translation>在按下断开按钮之前，你需要选择一个Wifi服务。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="624"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="627"/>
         <source>You need to select a Wifi service before pressing the remove button.</source>
         <translation>在按下忘记按钮之前，你需要选择一个Wifi服务。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="651"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="654"/>
         <source>Offline Mode Engaged</source>
         <translation>飞行模式已开启</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="655"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="658"/>
         <source>Offline Mode Disabled</source>
         <translation>飞行模式已禁用</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="690"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="693"/>
         <source>%1 (%2) Network</source>
         <translation>%1 (%2) 网络</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="691"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="694"/>
         <source>Connection: %1</source>
         <translation>连接: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="704"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="707"/>
         <source>Network Services:</source>
         <translation>网络服务:</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="705"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="708"/>
         <source>No network services available</source>
         <translation>无可用网络服务</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="930"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="933"/>
         <source>Service Error: %1</source>
         <translation>服务错误: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="931"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="934"/>
         <source>Object Path: %1</source>
         <translation>对象路径: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="997"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1912"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1000"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1923"/>
         <source> Warning</source>
         <translation> 警告</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="998"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1001"/>
         <source>&lt;center&gt;&lt;b&gt;We received a DBUS reply message indicating an error while trying to scan technologies.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Error Name: %1&lt;br&gt;&lt;br&gt;Error Message: %2</source>
         <translation>&lt;center&gt;&lt;b&gt;扫描设备时收到了一个来自DBUS的错误消息。&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;错误名称: %1&lt;br&gt;&lt;br&gt;错误消息: %2</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1113"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1116"/>
         <source>&lt;b&gt;Connection:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;连接:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1116"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1119"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;服务详情:&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1118"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
         <source>Service Type: %1&lt;br&gt;</source>
         <translation>服务类型: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1119"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1122"/>
         <source>Service State: %1&lt;br&gt;</source>
         <translation>服务状态: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1120"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1123"/>
         <source>Favorite: %1&lt;br&gt;</source>
         <translation>已保存: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1120"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1123"/>
         <source>Yes</source>
         <comment>favorite</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1120"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1123"/>
         <source>No</source>
         <comment>favorite</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1124"/>
         <source>External Configuration File: %1&lt;br&gt;</source>
         <translation>外部配置文件: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1124"/>
         <source>Yes</source>
         <comment>immutable</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1124"/>
         <source>No</source>
         <comment>immutable</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1123"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1126"/>
         <source>Auto Connect: %1&lt;br&gt;</source>
         <translation>自动连接: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1123"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1126"/>
         <source>On</source>
         <comment>autoconnect</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1123"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1126"/>
         <source>No</source>
         <comment>autoconnect</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1125"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1128"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1127"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1130"/>
         <source>IP Address Acquisition: %1&lt;br&gt;</source>
         <translation>IP 地址获取: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1128"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1135"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1131"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1138"/>
         <source>IP Address: %1&lt;br&gt;</source>
         <translation>IP 地址: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1129"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1132"/>
         <source>IP Netmask: %1&lt;br&gt;</source>
         <translation>IP 子网掩码: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1130"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1141"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1133"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1144"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
         <translation>IP 网关: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1132"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1135"/>
         <source>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1134"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1147"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1137"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1150"/>
         <source>Address Acquisition: %1&lt;br&gt;</source>
         <translation>地址获取: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1138"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1141"/>
         <source>Prefix Length: &lt;br&gt;</source>
         <translation>前缀长度: &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1140"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1143"/>
         <source>Prefix Length: %1&lt;br&gt;</source>
         <translation>前缀长度: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1142"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1145"/>
         <source>Privacy: %1&lt;br&gt;</source>
         <translation>隐私: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1144"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1147"/>
         <source>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;代理&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1149"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1152"/>
         <source>URL: %1&lt;br&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1152"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1155"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation>服务器:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1153"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1156"/>
         <source>Excludes:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation>排除:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1160"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1163"/>
         <source>&lt;br&gt;&lt;b&gt;Name Servers&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;DNS&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1163"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1166"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Time Servers&lt;/b&gt;&lt;br&gt;  </source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;时间服务器&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1166"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1169"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Search Domains&lt;/b&gt;&lt;br&gt;  </source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;搜索域&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1169"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1172"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;以太网&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1171"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1174"/>
         <source>Connection Method: %1&lt;br&gt;</source>
         <translation>连接方式: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1172"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1175"/>
         <source>Interface: %1&lt;br&gt;</source>
         <translation>接口: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1173"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1176"/>
         <source>Device Address: %1&lt;br&gt;</source>
         <translation>设备地址: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1174"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1177"/>
         <source>MTU: %1&lt;br&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1176"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1179"/>
         <source>&lt;br&gt;&lt;b&gt;Wireless&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;无线&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1177"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1597"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1180"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1600"/>
         <source>Security: %1&lt;br&gt;</source>
         <translation>安全性: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1178"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1181"/>
         <source>Strength: %1&lt;br&gt;</source>
         <translation>强度: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1179"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1182"/>
         <source>Roaming: %1&lt;br&gt;</source>
         <translation>漫游: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1179"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1182"/>
         <source>Yes</source>
         <comment>roaming</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1179"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1182"/>
         <source>No</source>
         <comment>roaming</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1314"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1317"/>
         <source>State: </source>
         <translation>状态: </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1320"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1323"/>
         <source>Engaged</source>
         <translation>启用</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1325"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1328"/>
         <source>Disabled</source>
         <translation>禁用</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1328"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1331"/>
         <source>Offline Mode </source>
         <translation>飞行模式</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1361"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1364"/>
         <source>%1On%1%1</source>
         <comment>powered</comment>
         <translation>%1开%1%1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1366"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1369"/>
         <source>%1Off%1%1</source>
         <comment>powered</comment>
         <translation>%1关%1%1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1374"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1377"/>
         <source>Yes</source>
         <comment>connected</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1374"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1377"/>
         <source>No</source>
         <comment>connected</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1380"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1383"/>
         <source>Yes</source>
         <comment>tethered</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1380"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1383"/>
         <source>No</source>
         <comment>tethered</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1476"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1479"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
         <translation>  WiFi 设备:&lt;br&gt;  %1 已找到, %2 已启用</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1555"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1558"/>
         <source>Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.</source>
         <translation>统计更新的阈值是 %L1 KB 的数据和 %L2 秒的时间。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1585"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1588"/>
         <source>Ethernet Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation>以太网连接&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1586"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1589"/>
         <source>Service: %1&lt;br&gt;</source>
         <translation>服务: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1587"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1599"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1590"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
         <source>Interface: %1</source>
         <translation>接口: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1594"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1597"/>
         <source>WiFi Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation>WiFi 连接&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1596"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1599"/>
         <source>SSID: %1&lt;br&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1598"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1601"/>
         <source>Strength: %1%&lt;br&gt;</source>
         <translation>强度: %1%&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1618"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1621"/>
         <source>Connection is in the Ready State.</source>
         <comment>icon_tool_tip</comment>
         <translation>连接处于就绪状态。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1629"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1632"/>
         <source>Connection is in the Failure State, attempting to reestablish the connection</source>
         <comment>icon_tool_tip</comment>
         <translation>连接处于失败状态，尝试重新建立连接</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1635"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1638"/>
         <source>Connection is in the Failure State.</source>
         <comment>icon_tool_tip</comment>
         <translation>连接处于失败状态。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1643"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1646"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
         <translation>未连接</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1652"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1655"/>
         <source>Error retrieving properties via Dbus</source>
         <translation>从DBUS取回属性失败</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1653"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1656"/>
         <source>Connection status is unknown</source>
         <translation>连接状态未知</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1913"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1924"/>
         <source>&lt;center&gt;&lt;b&gt;Unable to find a systemtray on this machine.&lt;/b&gt;&lt;center&gt;&lt;br&gt;The program may still be used to manage your connections, but the tray icon will be disabled.&lt;center&gt;&lt;br&gt;&lt;br&gt;If you are seeing this message at system start up and you know a system tray exists once the system is up, try starting with the &lt;b&gt;-w&lt;/b&gt; switch and set a delay as necessary.  The exact wait time will vary from system to system.</source>
         <translation>&lt;center&gt;&lt;b&gt;未能在此机上找到系统托盘。&lt;/b&gt;&lt;center&gt;&lt;br&gt;此程序仍可用于管理你的连接，但是托盘图标会被禁用。&lt;center&gt;&lt;br&gt;&lt;br&gt;如果你在系统启动时看到这个信息，并且你知道当系统启动时系统托盘存在，尝试用 &lt;b&gt;-w&lt;/b&gt; 参数启动本程序，并在有必要的情况下设置一个延迟时间。  实际的等待时间因不同系统而异。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2144"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2155"/>
         <source>Could not find a connection to the system bus</source>
         <translation>无法连接到system bus</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2145"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2150"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2156"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2161"/>
         <source>%1 - Critical Error</source>
         <translation>%1 - 严重错误</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2146"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2157"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation>无法连接到system bus。&lt;br&gt;&lt;br&gt;%1 将无法与connman通信。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2149"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2160"/>
         <source>Could not create an interface to connman on the system bus</source>
         <translation>无法在 system bus 上创建与connman通信的接口</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2151"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2162"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation>无法在 system bus 上创建与connman通信的接口。&lt;br&gt;&lt;br&gt;%1 将无法与connman通信。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2154"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2165"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
         <translation>在读取或解析connman.Manager.GetProperties时发生错误</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2155"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2160"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2165"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2166"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2171"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2176"/>
         <source>%1 - Warning</source>
         <translation>%1 - 警告</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2156"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2167"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
         <translation>在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 可能不工作。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2159"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2170"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
         <translation>在读取或解析connman.Manager.GetProperties时发生错误</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2161"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2172"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation>在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 部分功能可能仍可以工作。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2164"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2175"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
         <translation>在读取或解析connman.Manager.GetProperties时发生错误</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2166"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2177"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation>在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 部分功能可能仍可以工作。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2251"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2262"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
         <translation>检测到 %1 版本 %2 by %3 。&lt;p&gt;这个服务支持桌面通知规范 版本 %4</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2258"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2269"/>
         <source>%1 detected</source>
         <translation>检测到 %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2264"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2275"/>
         <source>Attempt %1 of 4 looking for notification server.</source>
         <translation>尝试 %1 of 4 查找通知服务。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2267"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2278"/>
         <source>Unable to find or connect to a Notification server.</source>
         <translation>无法找到或连接通知服务。</translation>
     </message>
@@ -2627,115 +2620,121 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="76"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="75"/>
+        <source>wps</source>
+        <comment>connman security string</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="77"/>
         <source>Invalid arguments</source>
         <comment>connman error sring</comment>
         <translation>非法参数</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="77"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="78"/>
         <source>Permission denied</source>
         <comment>connman error sring</comment>
         <translation>拒绝访问</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="78"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="79"/>
         <source>Passphrase required</source>
         <comment>connman error sring</comment>
         <translation>需要密码</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="79"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="80"/>
         <source>Not registered</source>
         <comment>connman error sring</comment>
         <translation>未注册</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="80"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="81"/>
         <source>Not unique</source>
         <comment>connman error sring</comment>
         <translation>不唯一</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="81"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="82"/>
         <source>Not supported</source>
         <comment>connman error sring</comment>
         <translation>不支持</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="82"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="83"/>
         <source>Not implemented</source>
         <comment>connman error sring</comment>
         <translation>未实现</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="83"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="84"/>
         <source>Not found</source>
         <comment>connman error sring</comment>
         <translation>未找到</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="84"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="85"/>
         <source>No carrier</source>
         <comment>connman error sring</comment>
         <translation>无法承载网络</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="85"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="86"/>
         <source>In progress</source>
         <comment>connman error sring</comment>
         <translation>进行中</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="86"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="87"/>
         <source>Already exists</source>
         <comment>connman error sring</comment>
         <translation>已经存在</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="87"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="88"/>
         <source>Already enabled</source>
         <comment>connman error sring</comment>
         <translation>已启用</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="88"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="89"/>
         <source>Already disabled</source>
         <comment>connman error sring</comment>
         <translation>已禁用</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="89"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="90"/>
         <source>Already connected</source>
         <comment>connman error sring</comment>
         <translation>已连接</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="90"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="91"/>
         <source>Not connected</source>
         <comment>connman error sring</comment>
         <translation>未连接</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="91"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="92"/>
         <source>Operation aborted</source>
         <comment>connman error sring</comment>
         <translation>操作退出</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="92"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="93"/>
         <source>Operation timeout</source>
         <comment>connman error sring</comment>
         <translation>操作超时</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="93"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="94"/>
         <source>Invalid service</source>
         <comment>connman error sring</comment>
         <translation>非法服务</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="94"/>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="95"/>
         <source>Invalid property</source>
         <comment>connman error sring</comment>
         <translation>非法属性</translation>

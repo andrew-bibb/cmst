@@ -72,6 +72,7 @@ TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent)
   sl << tr("ieee8021x", "connman security string");
   sl << tr("none", "connman security string");
   sl << tr("wep", "connman security string");
+  sl << tr("wps", "connman security string");
   
   sl << tr("Invalid arguments", "connman error sring");
   sl << tr("Permission denied", "connman error sring");
