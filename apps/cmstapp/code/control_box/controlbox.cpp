@@ -215,17 +215,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   if (! parser.isSet("disable-counters") && ! ui.checkBox_disablecounters->isChecked() )
     connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
 
-  // I'm not sure about the commandline settings.
-  ////retrieve setting from the config file to be overriden by the command line option (if one of them is set)
-  //bool runOnStartup = settings->value("CheckBoxes/run_on_startup", "false").toBool();
-  //if (parser.isSet("run-on-startup")) {
-      //runOnStartup = true;
-  //} else if (parser.isSet("no-run-on-startup")) {
-      //runOnStartup = false;
-  //}
-  //settings->setValue("CheckBoxes/run_on_startup", runOnStartup);
-  //this->enableRunOnStartup(runOnStartup);
-
   // operate on settings not dealt with elsewhere
   ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
   enableRunOnStartup(ui.checkBox_runonstartup->isChecked() );
@@ -317,9 +306,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_provisioning_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
   connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
   connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
-  
-  // turn network cards on or off globally based on checkbox
-  toggleOfflineMode(ui.checkBox_devicesoff->isChecked() );
 
   // tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon and
