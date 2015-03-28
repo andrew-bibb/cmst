@@ -82,7 +82,9 @@ int main(int argc, char *argv[])
   parser.addHelpOption();
   
   QCommandLineOption useIconTheme(QStringList() << "i" << "icon-theme",
-		QCoreApplication::translate("main.cpp", "Use the icon theme from your system if one is defined.") );
+		QCoreApplication::translate("main.cpp", "Use an icon theme from your system."),
+		QCoreApplication::translate("main.cpp", "Icon Theme Name"),
+		QString() );
   parser.addOption(useIconTheme); 
   
   QCommandLineOption logInputRequest(QStringList() << "l" << "log-input-request",
@@ -92,13 +94,13 @@ int main(int argc, char *argv[])
   QCommandLineOption startMinimized(QStringList() << "m" << "minimized",
 		QCoreApplication::translate("main.cpp", "Start the GUI minimized in the system tray.") );
   parser.addOption(startMinimized);
-    
+     
   parser.addVersionOption();  
     
   QCommandLineOption waitTime(QStringList() << "w" << "wait-time",
 		QCoreApplication::translate("main.cpp", "Specify the wait time in seconds before starting the system tray icon."),
 		QCoreApplication::translate("main.cpp", "seconds"),
-		"0" );
+		"0");
   parser.addOption(waitTime); 
 
   QCommandLineOption counterUpdateKb (QStringList() << "counter-update-kb",
@@ -145,23 +147,16 @@ int main(int argc, char *argv[])
 	else if (cmstTranslator.load("cmst_en_US", ":/translations/translations" ) ) {
 		app.installTranslator(&cmstTranslator);	
 	}
-
-	// I'm not entirely sure we want, since I'm not sure comment out instead of removing.
-  //QCommandLineOption runOnStartup(QStringList() << "run-on-startup", QCoreApplication::translate("main.cpp", "Run application when user the user logins."));
-  //parser.addOption(runOnStartup);
-
-  //QCommandLineOption noRunOnStartup(QStringList() << "no-run-on-startup", QCoreApplication::translate("main.cpp", "Do not run application when user the user logins."));
-  //parser.addOption(noRunOnStartup);
-	  	
+ 	
   // Make sure all the command lines can be parsed 
-  parser.process(app);   
+  // using parse() instead of process() as process stops on an error if an option needs a value
+  // and it is not specified, even if we provide a default.  We're supposed to catch errors if we
+  // use parse(), but parse.errorText() returns an empty string on this.  Bag the error checking
+  // for now.
+  parser.parse(QCoreApplication::arguments() );   
   QStringList sl = parser.unknownOptionNames();
   if (sl.size() > 0 ) parser.showHelp(1);
-
-  // Make sure that mutually exclusive options are not both set
-  //if (parser.isSet(runOnStartup) + parser.isSet(noRunOnStartup) > 1) {
-      //parser.showHelp(1);
-  //}
+  if (parser.isSet("help") ) parser.showHelp(1);
                 
   // signal handler             
   signal(SIGINT, signalhandler);                
