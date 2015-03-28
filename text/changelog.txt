@@ -3,6 +3,7 @@
 <br><b>In Progress</b>
 <ul>
 <li>Browser selections in Agent dialog improved and added xdg-open option (by Yaohan Chen).</li>
+<li>-i (--icon-theme) command line option will now accept a theme name.<li>
 </ul>
 <br><b>2015.03.01</b>
 <ul>
