@@ -164,7 +164,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // set a flag if we want to use the local system icon theme and set the whatsthis button
   b_useicontheme = (parser.isSet("icon-theme") || ui.checkBox_systemicontheme->isChecked() );
   if (b_useicontheme) {
-		QIcon::setThemeName(parser.value("icon-theme"));
+		if (parser.isSet("icon-theme") ) QIcon::setThemeName(parser.value("icon-theme"));
+		else QIcon::setThemeName(ui.lineEdit_icontheme->text() );		
     ui.toolButton_whatsthis->setIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
     agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
   }
@@ -1780,11 +1781,10 @@ void ControlBox::writeSettings()
   settings->setValue("disable_counters", ui.checkBox_disablecounters->isChecked() );
   settings->setValue("disable_tray_icon", ui.checkBox_disabletrayicon->isChecked() );
   settings->setValue("use_icon_theme", ui.checkBox_systemicontheme->isChecked() );
+  settings->setValue("icon_theme", ui.lineEdit_icontheme->text() );
   settings->setValue("start_minimized", ui.checkBox_startminimized->isChecked() );
   settings->setValue("use_wait_time", ui.checkBox_waittime->isChecked() );
   settings->setValue("wait_time", ui.spinBox_waittime->value() );
-  //settings->setValue("use_counter_update_kb", ui.checkBox_counterkb->isChecked() );
-  //settings->setValue("counter_update_kb", ui.spinBox_counterkb->value() );
   settings->setValue("use_counter_update_rate", ui.checkBox_counterseconds->isChecked() );
   settings->setValue("counter_update_rate", ui.spinBox_counterrate->value() );
   settings->setValue("use_fake_transparency", ui.checkBox_faketranparency->isChecked() );
@@ -1832,11 +1832,10 @@ void ControlBox::readSettings()
   ui.checkBox_disablecounters->setChecked(settings->value("disable_counters").toBool() );
   ui.checkBox_disabletrayicon->setChecked(settings->value("disable_tray_icon").toBool() );
   ui.checkBox_systemicontheme->setChecked(settings->value("use_icon_theme").toBool() );
+  ui.lineEdit_icontheme->setText(settings->value("icon_theme").toString() );
   ui.checkBox_startminimized->setChecked(settings->value("start_minimized").toBool() );
   ui.checkBox_waittime->setChecked(settings->value("use_wait_time").toBool() );
   ui.spinBox_waittime->setValue(settings->value("wait_time").toInt() );
-  //ui.checkBox_counterkb->setChecked(settings->value("use_counter_update_kb").toBool() );
-  //ui.spinBox_counterkb->setValue(settings->value("counter_update_kb").toBool() );
   ui.checkBox_counterseconds->setChecked(settings->value("use_counter_update_rate").toBool() );
   ui.spinBox_counterrate->setValue(settings->value("counter_update_rate").toInt() );
   ui.checkBox_faketranparency->setChecked(settings->value("use_fake_transparency").toBool() );
