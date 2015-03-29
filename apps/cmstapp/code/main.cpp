@@ -32,8 +32,11 @@ DEALINGS IN THE SOFTWARE.
 # include <QStringList>
 # include <QStyleFactory>
 # include <QLocalSocket>
-# include <signal.h>   
 # include <QSessionManager>
+# include <QTranslator>
+# include <QLibraryInfo>
+
+# include <signal.h>   
 
 # include "./control_box/controlbox.h"
 # include "../resource.h" 

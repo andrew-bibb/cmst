@@ -1,6 +1,6 @@
-#  We need the qt libraries, we want compiler warnings off, and this is a release version of the program  
+#  We need the qt libraries, we want compiler warnings on, and this is a release version of the program  
 CONFIG += qt
-CONFIG +=warn_off
+CONFIG +=warn_on
 CONFIG +=release
 CONFIG +=nostrip 
 
@@ -8,6 +8,7 @@ CONFIG +=nostrip
 QT += widgets
 QT += dbus
 QT += network
+QT += core
 
 # cmst variables
 include(../../cmst.pri)

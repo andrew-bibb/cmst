@@ -158,7 +158,6 @@ class ControlBox : public QDialog
     void assemblePage3();
     void assemblePage4();
     void assembleTrayIcon();
-    void createSystemTrayIcon(bool);
     void sendNotifications();
     bool getProperties();
     bool getTechnologies();   
@@ -194,14 +193,13 @@ class ControlBox : public QDialog
     void minMaxWindow(QAction* = 0);
     void getServiceDetails(int);
     void showWhatsThis();
-    inline void startSystemTrayMinimized() {createSystemTrayIcon(true);}
-    inline void startSystemTrayNormal() {createSystemTrayIcon(false);}
     inline void trayNotifications(bool checked) {if (checked) ui.checkBox_notifydaemon->setChecked(false);}
     inline void daemonNotifications(bool checked) {if (checked) ui.checkBox_systemtraynotifications->setChecked(false);}
     void iconActivated(QSystemTrayIcon::ActivationReason reason);
     void enableRunOnStartup(bool enabled);
     void writeSettings();
     void readSettings();
+    void createSystemTrayIcon();
     void connectNotifyClient();
     void configureService();
     void provisionService();

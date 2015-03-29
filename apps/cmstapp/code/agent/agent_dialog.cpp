@@ -31,7 +31,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QtCore/QDebug>
 # include <QList>
 #	include <QWhatsThis>
-# include <QProcess>.
+# include <QProcess>
 # include <QProcessEnvironment>
 # include <QDir>
 # include <QMessageBox>

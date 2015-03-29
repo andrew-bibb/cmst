@@ -310,9 +310,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
 
   // tray icon - disable it if we specifiy that option on the commandline or in
-  // the settings, otherwise set a singleshot timer to create the tray icon and
-  // showMinimized or showMaximized.  The startSystemTray slots are inline functions and
-  // both point to createSystemTrayIcon.
+  // the settings, otherwise set a singleshot timer to create the tray icon.
   trayicon = 0;
   if (parser.isSet("disable-tray-icon") || ui. checkBox_disabletrayicon->isChecked() ) {
     ui.checkBox_hideIcon->setDisabled(true);
@@ -332,11 +330,11 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     timeout *= 1000;
     if (timeout < mintrigger) timeout = mintrigger;
     if (parser.isSet("minimized") || ui.checkBox_startminimized->isChecked() ) {
-      QTimer::singleShot(timeout, this, SLOT(startSystemTrayMinimized()));
+      QTimer::singleShot(timeout, this, SLOT(createSystemTrayIcon()) );
     } // if showMinimized
     else {
       this->showNormal();
-      QTimer::singleShot(timeout, this, SLOT(startSystemTrayNormal()));
+      QTimer::singleShot(timeout, this, SLOT(createSystemTrayIcon()) );
     } // else showNormal
    } // else
 }
@@ -1847,17 +1845,15 @@ void ControlBox::readSettings()
   
   settings->beginGroup("LocalSystem");
 	agent->setBrowser(settings->value("browser").toString() );
-	qDebug() << settings->value("browser").toString();
 	settings->endGroup(); 
 
   return;
 }
 
 //
-// Function to create the systemtray icon.  Really part of the constructor
-// and called by a single shot QTimer (actually via a slot between the timer
-// and here).
-void ControlBox::createSystemTrayIcon(bool b_startminimized)
+// Slot to create the systemtray icon.  Really part of the constructor
+// and called by a single shot QTimer. 
+void ControlBox::createSystemTrayIcon()
 {
   // We still need to make sure there is a tray available
   if (QSystemTrayIcon::isSystemTrayAvailable() ) {
@@ -1879,8 +1875,8 @@ void ControlBox::createSystemTrayIcon(bool b_startminimized)
     // QT5.4 update, may be fixed but leave option in for now
     if (b_usexfce || b_usemate) {
       const int maxtries = 125;
-      int i = 0;
-      for (i; i < maxtries; ++i) {
+      int i;
+      for (i = 0; i < maxtries; ++i) {
         trayicon->setVisible(true);
         //qDebug() << "icon geometry: " << trayicon->geometry();
         if ((trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) && trayicon->geometry().width() > 1) break;
