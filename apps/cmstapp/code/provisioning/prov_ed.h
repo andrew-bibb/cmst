@@ -109,7 +109,7 @@ class ProvisioningEditor : public QDialog
     void processFileList(const QStringList&);
     void seedTextEdit(const QString&);
     void deleteCompleted(bool);
-    void writeCompleted(quint64);
+    void writeCompleted(qint64);
     void callbackErrorHandler(QDBusError);
         
   public:

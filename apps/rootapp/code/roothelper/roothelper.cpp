@@ -118,7 +118,7 @@ bool RootHelper::deleteFile(const QString& fn)
 
 //
 // Slot to write the file to disk
-quint64 RootHelper::saveFile(const QString& fn, const QString& data)
+qint64 RootHelper::saveFile(const QString& fn, const QString& data)
 { 
   // open the file for writing
   QFile outfile(QString("/var/lib/connman/%1.cmst.config").arg(sanitizeInput(fn)) );
@@ -126,7 +126,7 @@ quint64 RootHelper::saveFile(const QString& fn, const QString& data)
     return 0;
   
   // write the file and emit a signal when done
-  quint64 bytes = outfile.write(data.toLatin1() );
+  qint64 bytes = outfile.write(data.toLatin1() );
   
   // cleanup and exit
   outfile.close();

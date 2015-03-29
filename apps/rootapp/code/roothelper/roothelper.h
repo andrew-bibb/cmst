@@ -51,7 +51,7 @@ class RootHelper : public QObject, protected QDBusContext
     QStringList getFileList();
     QString readFile(const QString&);
     bool deleteFile(const QString&);
-    quint64 saveFile(const QString&, const QString&);
+    qint64 saveFile(const QString&, const QString&);
     inline bool isConnected() {return b_connected;} // may not actually use this
     
   private:

@@ -15,7 +15,7 @@
       <arg type="s" direction="in"/>
     </method>
     <method name="saveFile">
-      <arg type="t" direction="out"/>
+      <arg type="x" direction="out"/>
       <arg type="s" direction="in"/>
       <arg type="s" direction="in"/>
     </method>

@@ -70,14 +70,14 @@ void ValidatingDialog::setValidator(const int& vd, bool plural)
   QString s_ip6   = "(?:[0-9a-fA-F]{1,4})";
   QString s_mac   = "(?:[0-9a-fA-F]{1,2})";
   QString s_hex   = "[0-9a-fA-F]*";
-  QString s_dom   = "[0-9a-zA-Z]*[\.]?[0-9a-zA-Z]*";
-  QString s_wd    = "[0-9,a-zA-Z_\.\!\@\#\$\%\^\&\*\+\-]*";
+  QString s_dom   = "[0-9a-zA-Z]*[\\.]?[0-9a-zA-Z]*";
+  QString s_wd    = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
   QString s_start = (plural ? "\\s?|(" : "\\s?|^");
   QString s_end   = (plural ? "(\\s*[,|;|\\s]\\s*))+" : "$");
   
   switch (vd){
     case CMST::ProvEd_Vd_IPv4: {
-      QRegularExpression rx4(s_start + s_ip4 + "(?:\." + s_ip4 + "){3}" + s_end);
+      QRegularExpression rx4(s_start + s_ip4 + "(?:\\." + s_ip4 + "){3}" + s_end);
       QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
       lineedit->setValidator(lev_4); }
       break;
@@ -92,7 +92,7 @@ void ValidatingDialog::setValidator(const int& vd, bool plural)
       lineedit->setValidator(lev_m); }
       break;
     case CMST::ProvEd_Vd_46: {
-      QRegularExpression rx46(s_start + "(" + s_ip4 + "(?:\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})" + s_end);    
+      QRegularExpression rx46(s_start + "(" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})" + s_end);    
       QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);  
       lineedit->setValidator(lev_46); }
       break;  
@@ -650,7 +650,7 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
       vlist.clear();
       vlist << QVariant::fromValue(filename);
       vlist << QVariant::fromValue(ui.plainTextEdit_main->toPlainText() );
-      iface_pfl->callWithCallback(QLatin1String("saveFile"), vlist, this, SLOT(writeCompleted(quint64)), SLOT(callbackErrorHandler(QDBusError)));   
+      iface_pfl->callWithCallback(QLatin1String("saveFile"), vlist, this, SLOT(writeCompleted(qint64)), SLOT(callbackErrorHandler(QDBusError)));   
     } // if there is a file name
   } // if i_sel is File_Save  
       
@@ -678,7 +678,6 @@ void ProvisioningEditor::seedTextEdit(const QString& data)
 
 //
 // Slot to show a statusbar message when a file delete is completed
-//void ProvisioningEditor::deleteCompleted(bool success)
 void ProvisioningEditor::deleteCompleted(bool success)
 {
   QString msg;
@@ -694,7 +693,7 @@ void ProvisioningEditor::deleteCompleted(bool success)
 
 //
 // Slot to show a statusbar message when a file write is completed
-void ProvisioningEditor::writeCompleted(quint64 bytes)
+void ProvisioningEditor::writeCompleted(qint64 bytes)
 {
   // display a status bar message showing the results of the write
   QString msg;

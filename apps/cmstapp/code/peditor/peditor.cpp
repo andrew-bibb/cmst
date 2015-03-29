@@ -50,7 +50,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae, bool
   QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
 
   // QLineEdits that allow single address
-  QRegularExpression rx4("\\s?|^" + s_ip4 + "(?:\." + s_ip4 + "){3}" + "$");
+  QRegularExpression rx4("\\s?|^" + s_ip4 + "(?:\\." + s_ip4 + "){3}" + "$");
   QRegularExpression rx6("\\s?|^" + s_ip6 + "(?::" + s_ip6 + "){7}" + "$");
   QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
   QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
@@ -61,7 +61,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae, bool
   ui.lineEdit_ipv6gateway->setValidator(lev_6);
 
   // now QLineEdits that allow multiple addresses
-  QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");
+  QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");
   QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rx46, this);
   ui.lineEdit_nameservers->setValidator(lev_m);
   ui.lineEdit_timeservers->setValidator(lev_m);
@@ -266,7 +266,7 @@ void PropertiesEditor::updateConfiguration()
   // ipv6
   // Only update if an entry has changed.
   if (! ui.comboBox_ipv6method->currentText().contains(ipv6map.value("Method").toString(), Qt::CaseInsensitive) |
-      ui.spinBox_ipv6prefixlength->value() != ipv6map.value("PrefixLength").toUInt()                            |
+      (static_cast<uint>(ui.spinBox_ipv6prefixlength->value()) != ipv6map.value("PrefixLength").toUInt())      |
       ! ui.lineEdit_ipv6address->text().contains(ipv6map.value("Address").toString(), Qt::CaseInsensitive)      |
       ! ui.lineEdit_ipv6gateway->text().contains(ipv6map.value("Gateway").toString(), Qt::CaseInsensitive)      |
       ! ui.comboBox_ipv6privacy->currentText().contains(ipv6map.value("Privacy").toString(), Qt::CaseInsensitive)) {
