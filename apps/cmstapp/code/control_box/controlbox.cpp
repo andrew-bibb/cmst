@@ -164,8 +164,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // set a flag if we want to use the local system icon theme and set the whatsthis button
   b_useicontheme = (parser.isSet("icon-theme") || ui.checkBox_systemicontheme->isChecked() );
   if (b_useicontheme) {
-		if (parser.isSet("icon-theme") ) QIcon::setThemeName(parser.value("icon-theme"));
-		else QIcon::setThemeName(ui.lineEdit_icontheme->text() );		
+		if (parser.isSet("icon-theme") ) {
+			if (! parser.value("icon-theme").isEmpty() )
+				QIcon::setThemeName(parser.value("icon-theme"));
+			}
+		else {
+		 if (! ui.lineEdit_icontheme->text().isEmpty() )
+			QIcon::setThemeName(ui.lineEdit_icontheme->text() );		
+		}
     ui.toolButton_whatsthis->setIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
     agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
   }
