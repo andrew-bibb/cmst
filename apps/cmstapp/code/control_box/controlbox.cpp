@@ -1581,7 +1581,7 @@ void ControlBox::assembleTrayIcon()
           stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
           b_useicontheme ?
-            prelimicon = (QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wired_established.png")) )  :
+            prelimicon = (QIcon::fromTheme("network-wired", QIcon(":/icons/images/systemtray/wired_established.png")) )  :
             prelimicon = (QIcon(":/icons/images/systemtray/wired_established.png") );
         } //  if wired connection
 
@@ -1593,7 +1593,7 @@ void ControlBox::assembleTrayIcon()
           stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
           quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
-          if (b_useicontheme) prelimicon = (QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/systemtray/wl100.png")) );
+          if (b_useicontheme) prelimicon = (QIcon::fromTheme("network-wireless", QIcon(":/icons/images/systemtray/wl100.png")) );
           else {
           if (str > 80 ) prelimicon = (QIcon(":/icons/images/systemtray/wl100.png"));
           else if (str > 60 )  prelimicon = (QIcon(":/icons/images/systemtray/wl075.png"));
