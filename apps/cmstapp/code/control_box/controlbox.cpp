@@ -2140,17 +2140,17 @@ void ControlBox::logErrors(const quint8& err)
   switch (err)
   {
     case  CMST::Err_No_DBus:
-      syslog(LOG_ERR, tr("Could not find a connection to the system bus").toUtf8().constData() );
+      syslog(LOG_ERR, "%s", tr("Could not find a connection to the system bus").toUtf8().constData() );
       QMessageBox::critical(this, tr("%1 - Critical Error").arg(TranslateStrings::cmtr("cmst")),
         tr("Unable to find a connection to the system bus.<br><br>%1 will not be able to communicate with connman.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     case  CMST::Err_Invalid_Iface:
-      syslog(LOG_ERR, tr("Could not create an interface to connman on the system bus").toUtf8().constData());
+      syslog(LOG_ERR, "%s",tr("Could not create an interface to connman on the system bus").toUtf8().constData());
       QMessageBox::critical(this, tr("%1 - Critical Error").arg(TranslateStrings::cmtr("cmst")),
         tr("Unable to create an interface to connman on the system bus.<br><br>%1 will not be able to communicate with connman.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     case  CMST::Err_Properties:
-      syslog(LOG_ERR, tr("Error reading or parsing connman.Manager.GetProperties").toUtf8().constData() );
+      syslog(LOG_ERR, "%s", tr("Error reading or parsing connman.Manager.GetProperties").toUtf8().constData() );
       QMessageBox::warning(this, tr("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
         tr("There was an error reading or parsing the reply from method connman.Manager.GetProperties.<br><br>It is unlikely any portion of %1 will be functional.").arg(TranslateStrings::cmtr("cmst")) );
       break;
