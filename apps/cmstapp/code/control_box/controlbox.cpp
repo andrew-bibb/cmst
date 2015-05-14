@@ -2155,12 +2155,12 @@ void ControlBox::logErrors(const quint8& err)
         tr("There was an error reading or parsing the reply from method connman.Manager.GetProperties.<br><br>It is unlikely any portion of %1 will be functional.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     case  CMST::Err_Technologies:
-      syslog(LOG_ERR, tr("Error reading or parsing connman.Manager.GetTechnologies").toUtf8().constData() );
+      syslog(LOG_ERR, "%s",tr("Error reading or parsing connman.Manager.GetTechnologies").toUtf8().constData() );
       QMessageBox::warning(this, tr("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
         tr("There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.<br><br>Some portion of %1 may still be functional.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     case  CMST::Err_Services:
-      syslog(LOG_ERR, tr("Error reading or parsing connman.Manager.GetServices").toUtf8().constData() );
+      syslog(LOG_ERR, "%s", tr("Error reading or parsing connman.Manager.GetServices").toUtf8().constData() );
       QMessageBox::warning(this, tr("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
         tr("There was an error reading or parsing the reply from method connman.Manager.GetServices.<br><br>Some portion of %1 may still be functional.").arg(TranslateStrings::cmtr("cmst")) );
       break;
