@@ -43,7 +43,7 @@
           <item row="1" column="1" colspan="2">
            <widget class="QLineEdit" name="lineEdit_old_passphrase">
             <property name="whatsThis">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is avaliable it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>

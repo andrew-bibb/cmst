@@ -15,7 +15,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="46"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is avaliable it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果旧密码可用，它会被显示在这里作为参考。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>

@@ -15,7 +15,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="46"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is avaliable it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

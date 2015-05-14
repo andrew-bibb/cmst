@@ -1,14 +1,13 @@
 [Desktop Entry]
 Type=Application
 Version=1.1
-Name=Network Configuration
+Name=Connman UI Setup
 GenericName=Network Configuration
 Comment=QT GUI frontend for connman
-Categories=Settings;System;Qt;NetworkSettings
+Categories=Settings;System;Qt;Network
 Icon=cmst
 Terminal=false
 Exec=cmst
-Terminal=false
 StartupNotify=false
 X-GNOME-Autostart-enabled=true
 
