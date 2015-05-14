@@ -170,7 +170,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 			}
 		else {
 		 if (! ui.lineEdit_icontheme->text().isEmpty() )
-			QIcon::setThemeName(ui.lineEdit_icontheme->text() );		
+			QIcon::setThemeName(ui.lineEdit_icontheme->text() );
 		}
     ui.toolButton_whatsthis->setIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
     agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
@@ -1204,7 +1204,7 @@ void ControlBox::closeEvent(QCloseEvent* e)
 		}	// if visible
 	}	// if there is a tray icon
 	else
-		e->accept();	
+		e->accept();
   return;
 }
 //
@@ -1797,10 +1797,10 @@ void ControlBox::writeSettings()
   settings->setValue("desktop_xfce", ui.radioButton_desktopxfce->isChecked() );
   settings->setValue("desktop_mate", ui.radioButton_desktopmate->isChecked() );
   settings->endGroup();
-  
+
   settings->beginGroup("LocalSystem");
 	settings->setValue("browser", agent->getBrowser());
-	settings->endGroup(); 
+	settings->endGroup();
 
   return;
 }
@@ -1848,17 +1848,17 @@ void ControlBox::readSettings()
   ui.radioButton_desktopxfce->setChecked(settings->value("desktop_xfce").toBool() );
   ui.radioButton_desktopmate->setChecked(settings->value("desktop_mate").toBool() );
   settings->endGroup();
-  
+
   settings->beginGroup("LocalSystem");
 	agent->setBrowser(settings->value("browser").toString() );
-	settings->endGroup(); 
+	settings->endGroup();
 
   return;
 }
 
 //
 // Slot to create the systemtray icon.  Really part of the constructor
-// and called by a single shot QTimer. 
+// and called by a single shot QTimer.
 void ControlBox::createSystemTrayIcon()
 {
   // We still need to make sure there is a tray available
@@ -2340,10 +2340,10 @@ void ControlBox::cleanUp()
   // close and delete the socket server
   socketserver->close();
   socketserver->deleteLater();
-  
+
   // write settings
   this->writeSettings();
-  
+
   return;
 }
 
