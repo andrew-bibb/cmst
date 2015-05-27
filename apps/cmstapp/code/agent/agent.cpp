@@ -156,7 +156,7 @@ void ConnmanAgent::createInputMap(const QMap<QString,QVariant>& r_map)
      
     if (! i.value().canConvert<QDBusArgument>() ) return;
     const QDBusArgument qdba =  i.value().value<QDBusArgument>();
-		if ( ! qdba.currentType() == QDBusArgument::MapType ) {
+		if (qdba.currentType() != QDBusArgument::MapType ) {
 			if (b_loginputrequest) log << "Error - QDBusArgument as the value is not a MapType\n"; 
 			return;
 		}	
