@@ -5,6 +5,7 @@
 <li>Browser selections in Agent dialog improved and added xdg-open option (by Yaohan Chen).</li>
 <li>-i (--icon-theme) command line option will now accept a theme name.</li>
 <li>Counter update rate in preferences upper limit changed from 600 seconds to 86400 seconds.</li>
+<li>Minimize to tray when ESC is pressed (by kriesoff).</li>
 </ul>
 <br><b>2015.03.01</b>
 <ul>
