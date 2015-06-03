@@ -117,6 +117,7 @@ class ControlBox : public QDialog
     
   protected:
     void closeEvent(QCloseEvent*);
+    void keyPressEvent(QKeyEvent*);
     bool eventFilter(QObject*, QEvent*);   
     
   private:

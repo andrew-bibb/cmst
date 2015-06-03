@@ -38,6 +38,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QPixmap>
 # include <QMessageBox>
 # include <QCloseEvent>
+# include <QKeyEvent>
 # include <QToolTip>
 # include <QTableWidgetSelectionRange>
 # include <QProcessEnvironment>
@@ -1206,6 +1207,19 @@ void ControlBox::closeEvent(QCloseEvent* e)
 	else
 		e->accept();
   return;
+}
+//
+// Key event for this dialog. If escape is pressed, minimize instead of close if
+// applicable.
+void ControlBox::keyPressEvent(QKeyEvent* e)
+{
+	if (e->key() == Qt::Key_Escape &&
+	    trayicon != 0 &&
+	    trayicon->isVisible()) {
+		this->hide();
+		return;
+	}
+        QDialog::keyPressEvent(e);
 }
 //
 // Event filter used to filter out tooltip events if we don't want to see them
