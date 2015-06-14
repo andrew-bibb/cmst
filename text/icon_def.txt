@@ -1,0 +1,87 @@
+#
+# application icons
+[icon]
+icon_name = cmsticon
+resource = :/icons/images/application/cmst.png
+
+#
+# interface icons
+[icon]
+icon_name = state_error
+resource = :/icons/images/interface/cancel.png
+fdo_name = network_error
+
+[icon]
+icon_name = state_ready
+resource = :/icons/images/interface/connect_creating.png
+fdo_name = network-idle
+
+[icon]
+icon_name = state_online
+resource = :/icons/images/interface/connect_established.png
+fdo_name = network-transmit-receive
+
+[icon]
+icon_name = state_not_ready
+resource = :/icons/images/interface/connect_no.png
+fdo_name = network-offline
+
+[icon]
+icon_name = favorite
+resource = :/icons/images/interface/favorite.png
+fdo_name = emblem-favorite
+
+[icon]
+icon_name = airport_mode_engaged
+resource = :/icons/images/interface/golfball_green.png
+
+[icon]
+icon_name = airport_mode_disengaged
+resource = :/icons/images/interface/golfball_red.png
+
+[icon]
+icon_name = whats_this
+resource = :/icons/images/interface/whatsthis.png
+fdo_name = system-help
+
+#
+# systemtray icons
+[icon]
+icon_name = connection_failure
+resource = :/icons/images/systemtray/cancel.png
+fdo_name = network-error
+
+[icon]
+icon_name = connection_ready
+resource = :/icons/images/systemtray/connect_creating.png
+fdo_name = network-idle
+
+[icon]
+icon_name = connection_not_ready
+resource = :/icons/images/systemtray/connect_no.png
+fdo_name = network-offline
+
+[icon]
+icon_name = connection_wired_online
+resource = :/icons/images/systemtray/wired_established.png
+fdo_name = network-transmit-receive
+
+[icon]
+icon_name = connection_wifi_000
+resource = :/icons/images/systemtray/wl000.png
+
+[icon]
+icon_name = connection_wifi_025
+resource = :/icons/images/systemtray/wl025.png
+
+[icon]
+icon_name = connection_wifi_050
+resource = :/icons/images/systemtray/wl050.png
+
+[icon]
+icon_name = connection_wifi_075
+resource = :/icons/images/systemtray/wl075.png
+
+[icon]
+icon_name = connection_wifi_100
+resource = :/icons/images/systemtray/wl100.png

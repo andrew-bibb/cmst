@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="text">
     <file>text/changelog.txt</file>
+    <file>text/icon_def.txt</file>
     <file>text/eduroam_long.txt</file>
     <file>text/eduroam_short.txt</file>
     <file>text/license.txt</file>

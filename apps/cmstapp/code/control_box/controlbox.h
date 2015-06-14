@@ -53,6 +53,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/agent/agent.h"
 # include "./code/counter/counter.h"
 # include "./code/notify/notify.h"
+# include "./code/iconman/iconman.h"
 
 
 //  Two of the connman.Manager query functions will return an array of structures.
@@ -151,6 +152,7 @@ class ControlBox : public QDialog
     QString onlineobjectpath;
     QLocalServer* socketserver;
     QColor trayiconbackground;
+    IconManager* iconman;
   
   // functions
     int managerRescan(const int& srv = 0);

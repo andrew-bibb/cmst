@@ -1,10 +1,9 @@
-/**************************** tr_strings.cpp ***************************
+/**************************** iconman.h  ******************************
 
-Class to manage and present strings that need to be translated. These
-are typically not inline strings, rather strings used globally or strings
-returned by third parties, for instance, Connman.
+Class to manage icons and allow the user to provide substitutions based
+on the the system theme.
 
-Copyright (C) 2013-2015
+Copyright (C) 2015
 by: Andrew J. Bibb
 License: MIT
 
@@ -27,20 +26,35 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/
 
-# ifndef TRANSLATE_STRINGS
-# define TRANSLATE_STRINGS
+# ifndef ICON_MANAGER
+# define ICON_MANAGER
 
 # include <QObject>
+# include <QMap>
 
-class TranslateStrings : public QObject
+struct iconElement
+{
+	QString resource_path;
+	QString fdo_name;
+	QMap <QString, QString> theme_map;
+};
+
+class IconManager : public QObject
 {
   Q_OBJECT
 
   public:
   // members
-    TranslateStrings(QObject*);
+    IconManager(QObject* parent);
   
-  // functions
-		static inline QString cmtr(const QString& str) {return tr(qPrintable(str) );}  
+  private:
+  // members
+		QMap<QString, iconElement> icon_map; 
+		QMap<QString, QString> fallback_map;
+		QString filepath;
+		
+	// functions
+	void makeLocalFile();	
+  
 };
 #endif

@@ -155,6 +155,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   socketserver->removeServer(SOCKET_NAME);  // remove any files that may have been left after a crash
   socketserver->listen(SOCKET_NAME);
   trayiconbackground = QColor();
+  iconman = new IconManager(this);
 
   // Read saved settings which will set the ui controls in the preferences tab.
   this->readSettings();
