@@ -32,7 +32,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QObject>
 # include <QMap>
 
-struct iconElement
+struct IconElement
 {
 	QString resource_path;
 	QString fdo_name;
@@ -49,12 +49,15 @@ class IconManager : public QObject
   
   private:
   // members
-		QMap<QString, iconElement> icon_map; 
-		QMap<QString, QString> fallback_map;
+		QMap<QString, IconElement> icon_map; 
 		QString filepath;
+		const char* qrc;
 		
 	// functions
-	void makeLocalFile();	
+		QString getFallback(const QString&);
+		void makeLocalFile();	
+		QString extractValue(const QString&);
+		QString extractKey(const QString&);
   
 };
 #endif
