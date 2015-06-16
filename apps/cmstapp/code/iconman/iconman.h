@@ -31,6 +31,7 @@ DEALINGS IN THE SOFTWARE.
 
 # include <QObject>
 # include <QMap>
+# include <QIcon>
 
 struct IconElement
 {
@@ -46,12 +47,15 @@ class IconManager : public QObject
   public:
   // members
     IconManager(QObject* parent);
+    
+  // functions
+		QIcon getIcon(const QString&);
   
   private:
   // members
 		QMap<QString, IconElement> icon_map; 
-		QString filepath;
-		const char* qrc;
+		QString cfg;
+		QString qrc;
 		
 	// functions
 		QString getFallback(const QString&);

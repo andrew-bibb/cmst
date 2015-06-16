@@ -35,7 +35,7 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation) 
-#define VERSION "15.06.03-1"
+#define VERSION "15.06.15-1"
 #define RELEASE_DATE "1 March 2015"
 #define COPYRIGHT_DATE "2013-2015"
 
@@ -50,6 +50,7 @@ DEALINGS IN THE SOFTWARE.
 
 // Program Values - Misc. (not user visible)
 #define SOCKET_NAME "cmst_single_app_socket"
+#define INTERNAL_THEME "CMST_Icon_Theme"
 
 //////////////////////////// CMST Namespace/////////////////////////////
 //  Used for enum's local to this program

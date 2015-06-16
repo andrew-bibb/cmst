@@ -38,13 +38,12 @@ DEALINGS IN THE SOFTWARE.
 // Constructor
 IconManager::IconManager(QObject* parent) : QObject(parent) 
 {
-	// Set the filepath data member
+	// Set the cfg member (path to ${home}/.config/cmst
 	// APP defined in resource.h
-	filepath = QDir::homePath();
-	filepath.append(QString("/.config/%1").arg(QString(APP).toLower()) );	
+	cfg = QString(qPrintable(QDir::homePath().append(QString("/.config/%1/%1.icon").arg(QString(APP).toLower()))) );	
 	
 	// Set the qrc data member
-	qrc = qPrintable(QString(":/text/text/icon_def.txt") );
+	qrc = QString(qPrintable(QString(":/text/text/icon_def.txt")) );
 	
 	// Initialize icon_map
 	icon_map.clear();
@@ -53,9 +52,9 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 	this->makeLocalFile();	
 	
 	// Create the icon_ map.   
-	QFile f1(qPrintable(QString(filepath + "/%1.icons").arg(QString(APP).toLower())) );
+	QFile f1(cfg);
 	if (!f1.open(QIODevice::ReadOnly | QIODevice::Text)) {
-		qDebug() << "Error reading from icon_def resource file" ;
+		qDebug() << "Error opening icon_def file: " << cfg ;
 	}
 			
 	QTextStream in(&f1);
@@ -82,6 +81,45 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 	return;
 }
 
+////////////////////////////// Public Functions ////////////////////////////
+//
+// Function to return a QIcon based on the name provided
+QIcon IconManager::getIcon(const QString& name)
+{
+	// Data members
+	IconElement ie = icon_map.value(name);
+	QMap<QString,QString> themes = ie.theme_map;
+	
+	// If the internal theme is being used (and the user has not
+	// messed up the local config file) use that first.
+	if (QIcon::themeName() == INTERNAL_THEME) {
+		if (! ie.resource_path.isEmpty() ) {
+			if (QFileInfo(ie.resource_path).exists() )
+				return QIcon(ie.resource_path);
+		}	// if resource_path notEmpty
+	}	// if using internal theme
+	
+	// Next look for a user specified theme icon
+	if (themes.contains(QIcon::themeName() )) {
+		if (QIcon::hasThemeIcon(themes.value(QIcon::themeName())) )
+			return QIcon::fromTheme(themes.value(QIcon::themeName()) );
+	}	// if contains themeName
+	
+	// Next look for a freedesktop.org named icon
+	if (! ie.fdo_name.isEmpty() ) {
+		if (QIcon::hasThemeIcon(ie.fdo_name) )
+			return QIcon::fromTheme(ie.fdo_name);
+	}	// if freedesktop name not empty
+			
+	// Then look for hardcoded name in the users config dir
+	if (! ie.resource_path.isEmpty() ) {
+		if (QFileInfo(ie.resource_path).exists() )
+			return QIcon(ie.resource_path);
+	}	// if resource_path notEmpty	
+	
+	// Last stop is our fallback hard coded into the program
+	return QIcon(getFallback(name));
+}
 
 ////////////////////////////// Private Functions ////////////////////////////
 //
@@ -96,7 +134,7 @@ QString IconManager::getFallback(const QString& ico)
 	// Open the resource file for reading
 	QFile f0(qrc);	
 	if (!f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
-		qDebug() << "Error reading from icon_def resource file" ;
+		qDebug() << "Error opening resource file: " << qrc ;
 		return rtnstr;
 	}
 	
@@ -131,18 +169,19 @@ QString IconManager::getFallback(const QString& ico)
 void IconManager::makeLocalFile()
 {
 	// if the conf file exists return now
-	if (QFileInfo::exists(qPrintable(QString(filepath + "/%1.icons").arg(QString(APP).toLower()))) )
+	if (QFileInfo::exists(cfg) )
 		return;
-
+		
+		
 	// make the directory if it does not exist and copy the hardconded
 	// conf file to the directory
 	QDir d;
-	if (d.mkpath(filepath)) {
+	if (d.mkpath(QFileInfo(cfg).path()) ) {
 		QFile s(qrc);	
-		if (s.copy(qPrintable(QString(filepath + "/%1.icons").arg(QString(APP).toLower()))) )
-			QFile::setPermissions(qPrintable(QString(filepath + "/%1.icons").arg(QString(APP).toLower())), QFileDevice::ReadOwner | QFileDevice::WriteOwner);
+		if (s.copy(cfg) ) 
+			QFile::setPermissions(cfg, QFileDevice::ReadOwner | QFileDevice::WriteOwner);
 		else	
-			qDebug("Failed copying the icon definition file");
+			qDebug() << "Failed copying the icon definition file from " << qrc << "to " << cfg;
 	}	// if mkpath returned ture			
   
 	return;
@@ -154,10 +193,9 @@ void IconManager::makeLocalFile()
 // sv is the entire line containing the value.
 QString IconManager::extractValue(const QString& sv)
 {
-	QString s = sv.simplified();
-	s = s.section('=', 1, 1);
+	QString s = sv.section('=', 1, 1);
 	s = s.section("#", 0, 0);
-	qDebug() << "value" << s.simplified();
+	
 	return s.simplified();
 }
 
@@ -167,9 +205,8 @@ QString IconManager::extractValue(const QString& sv)
 // entire line containing the key
 QString IconManager::extractKey(const QString& sk)
 {
-	QString s = sk.simplified();
-	s = s.section('=', 0, 0);
-	qDebug() << "key " << s.simplified();
+	QString s = sk.section('=', 0, 0);
+	
 	return s.simplified();
 }
 
