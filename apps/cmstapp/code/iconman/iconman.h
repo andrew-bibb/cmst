@@ -58,6 +58,8 @@ class IconManager : public QObject
 		QString qrc;
 		
 	// functions
+		bool buildResourceIcon(QIcon&, const QString&);
+		bool buildThemeIcon(QIcon&, const QString&);	
 		QString getFallback(const QString&);
 		void makeLocalFile();	
 		QString extractValue(const QString&);

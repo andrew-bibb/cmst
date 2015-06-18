@@ -165,22 +165,34 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // set a flag if we want to use the local system icon theme and set the whatsthis button
   b_useicontheme = (parser.isSet("icon-theme") || ui.checkBox_systemicontheme->isChecked() );
-  if (b_useicontheme) {
-		if (parser.isSet("icon-theme") ) {
-			if (! parser.value("icon-theme").isEmpty() )
-				QIcon::setThemeName(parser.value("icon-theme"));
-			}
-		else {
-		 if (! ui.lineEdit_icontheme->text().isEmpty() )
+  //if (b_useicontheme) {
+		//if (parser.isSet("icon-theme") ) {
+			//if (! parser.value("icon-theme").isEmpty() )
+				//QIcon::setThemeName(parser.value("icon-theme"));
+			//}
+		//else {
+		 //if (! ui.lineEdit_icontheme->text().isEmpty() )
+			//QIcon::setThemeName(ui.lineEdit_icontheme->text() );
+		//}
+    //ui.toolButton_whatsthis->setIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
+    //agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
+  //}
+  //else {
+    //ui.toolButton_whatsthis->setIcon(QIcon(":/icons/images/interface/whatsthis.png"));
+    //agent->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
+  //}
+
+  // Set icon theme if provided on the command line or in the settings
+  if (parser.isSet("icon-theme") )
+		QIcon::setThemeName(parser.value("icon-theme"));
+	else
+		if (ui.checkBox_retainsettings->isChecked() && ui.checkBox_systemicontheme->isChecked() )
 			QIcon::setThemeName(ui.lineEdit_icontheme->text() );
-		}
-    ui.toolButton_whatsthis->setIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
-    agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
-  }
-  else {
-    ui.toolButton_whatsthis->setIcon(QIcon(":/icons/images/interface/whatsthis.png"));
-    agent->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
-  }
+		else QIcon::setThemeName(INTERNAL_THEME);
+	
+	ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));
+	agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
+
 
   // set a flag is we want to use XFCE or MATE custom code.
   // Currently (as of 2014.11.24) this is only used to get around a bug between QT5.3 and the XFCE system tray

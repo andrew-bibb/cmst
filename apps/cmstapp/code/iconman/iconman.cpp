@@ -34,6 +34,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QFileInfo>
 # include <QTextStream>
 # include <QDebug>
+# include <QList>
 
 // Constructor
 IconManager::IconManager(QObject* parent) : QObject(parent) 
@@ -89,44 +90,107 @@ QIcon IconManager::getIcon(const QString& name)
 	// Data members
 	IconElement ie = icon_map.value(name);
 	QMap<QString,QString> themes = ie.theme_map;
-	
+	QIcon ico;
 	// If the internal theme is being used (and the user has not
 	// messed up the local config file) use that first.
 	if (QIcon::themeName() == INTERNAL_THEME) {
-		if (! ie.resource_path.isEmpty() ) {
-			if (QFileInfo(ie.resource_path).exists() )
-				return QIcon(ie.resource_path);
-		}	// if resource_path notEmpty
+		if (buildResourceIcon(ico, ie.resource_path) ) {qDebug() << "INTERNAL";
+			return ico;}
 	}	// if using internal theme
 	
 	// Next look for a user specified theme icon
-	if (themes.contains(QIcon::themeName() )) {
-		if (QIcon::hasThemeIcon(themes.value(QIcon::themeName())) )
-			return QIcon::fromTheme(themes.value(QIcon::themeName()) );
+	if (themes.contains(QIcon::themeName()) ) {
+		qDebug() << "stage 0" << themes.value(QIcon::themeName());
+		if (QIcon::hasThemeIcon(themes.value(QIcon::themeName())) ) {qDebug() << "stage 1";
+			return QIcon::fromTheme(themes.value(QIcon::themeName()) );}
 	}	// if contains themeName
 	
 	// Next look for a freedesktop.org named icon
 	if (! ie.fdo_name.isEmpty() ) {
-		if (QIcon::hasThemeIcon(ie.fdo_name) )
-			return QIcon::fromTheme(ie.fdo_name);
+		if (QIcon::hasThemeIcon(ie.fdo_name) ) {qDebug() << "stage 2";
+			return QIcon::fromTheme(ie.fdo_name);}
 	}	// if freedesktop name not empty
 			
 	// Then look for hardcoded name in the users config dir
-	if (! ie.resource_path.isEmpty() ) {
-		if (QFileInfo(ie.resource_path).exists() )
-			return QIcon(ie.resource_path);
-	}	// if resource_path notEmpty	
+	if (buildResourceIcon(ico, ie.resource_path) ) {qDebug() << "stage 3";
+		return ico;}
 	
 	// Last stop is our fallback hard coded into the program
-	return QIcon(getFallback(name));
+	 buildResourceIcon(ico, getFallback(name) );
+	 return ico;
 }
 
 ////////////////////////////// Private Functions ////////////////////////////
 //
+// Function to make an icon from resource file(s).  A reference to the Icon
+// is sent to this function and is modified by this function.  If the name
+// argument contains a comma the name to the left is used for the on state
+// and the next name is used for the off state.  Additional text is ignored.
+// return true if we could find the resource files
+bool IconManager::buildResourceIcon(QIcon& icon, const QString& name)
+{
+	const QString name_on = name.section(',',  0, 0).simplified();
+	const QString name_off = name.section(',', 1, 1).simplified();
+	
+	// check to see if the names exist, if they do build the icon
+	if (QFileInfo(name_on).exists() ) {
+		if (! name_off.isEmpty() ) {
+			if (QFileInfo(name_off).exists() )
+				icon.addPixmap(name_off, QIcon::Normal, QIcon::Off);
+			else
+				return false;
+		}	// if name_off not empty
+		
+		icon.addPixmap(name_on, QIcon::Normal, QIcon::On);
+		return true;
+	}	// if name_on exists
+		
+	return false;
+}
+
+
+//
+// Function to make an icon from theme file(s).  A reference to the Icon
+// is sent to this function and is modified by this function.  If the name
+// argument contains a comma the name to the left is used for the on state
+// and the next name is used for the off state.  Additional text is ignored.
+// return true if we could find the theme files
+bool IconManager::buildThemeIcon(QIcon& icon, const QString& name)
+{
+	const QString name_on = name.section(',',  0, 0).simplified();
+	const QString name_off = name.section(',', 1, 1).simplified();	
+	
+	// check to see if the names exist, if they do build the icon
+	if (QIcon::hasThemeIcon(name_on) ) {
+		QList<QSize> sizes;
+		if (! name_off.isEmpty() ) {
+			if (QIcon::hasThemeIcon(name_off) ) {
+				sizes = QIcon::fromTheme(name_off).availableSizes(QIcon::Normal, QIcon::On);
+				for (int i = 0; i < sizes.count(); ++i) {
+					QPixmap pix02 = QIcon::fromTheme(name_off).pixmap(sizes.at(i), QIcon::Normal, QIcon::On);
+					icon.addPixmap(pix02, QIcon::Normal, QIcon::Off);
+				}	//for
+			}	// if name_off
+			else
+				return false;
+		}	// if name_off not empty	
+		
+		sizes = QIcon::fromTheme(name_on).availableSizes(QIcon::Normal, QIcon::On);
+		for (int i = 0; i < sizes.count(); ++i) {
+			QPixmap pix01 = QIcon::fromTheme(name_on).pixmap(sizes.at(i), QIcon::Normal, QIcon::On);
+			icon.addPixmap(pix01, QIcon::Normal, QIcon::On);
+		}	// for
+		return true;
+	}	// if name_on exists
+		
+	return false;
+}		
+	  
+//
 // Function to return the resource name of an icon. Read from the resource file
 // and only used in case the user has totally messed up his local copy of the
 // cmst.icon file
-QString IconManager::getFallback(const QString& ico)
+QString IconManager::getFallback(const QString& name)
 {
 	// Variables
 	QString rtnstr = QString();
@@ -153,10 +217,10 @@ QString IconManager::getFallback(const QString& ico)
 				else if (line.startsWith("resource", Qt::CaseInsensitive) )	val = extractValue(line);
 			} while ( key.isEmpty() || val.isEmpty() );
 				
-			if (key.toLower() == ico.toLower()) {
+			if (key.toLower() == name.toLower()) {
 				rtnstr = val;
 				break;
-			}	// key = ico
+			}	// key = name
 		}	// if [icon]
 	}	// while not atEnd()
 	f0.close();	
