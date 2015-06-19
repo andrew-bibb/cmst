@@ -32,11 +32,11 @@ resource = :/icons/images/interface/favorite.png
 fdo_name = emblem-favorite
 
 [icon]
-icon_name = airport_mode_engaged
+icon_name = offline_mode_engaged
 resource = :/icons/images/interface/golfball_green.png
 
 [icon]
-icon_name = airport_mode_disengaged
+icon_name = offline_mode_disengaged
 resource = :/icons/images/interface/golfball_red.png
 
 [icon]
@@ -69,34 +69,34 @@ fdo_name = network-transmit-receive
 [icon]
 icon_name = connection_wifi_000
 resource = :/icons/images/systemtray/wl000.png
-adwaita = network-wireless-signal-none
+Adwaita = network-wireless-signal-none
 gnome = network-wireless-signal-none
 oxygen = network-wireless-connected-00
 
 [icon]
 icon_name = connection_wifi_025
 resource = :/icons/images/systemtray/wl025.png
-adwaita = network-wireless-signal-weak
+Adwaita = network-wireless-signal-weak
 gnome = network-wireless-signal-weak
 oxygen = network-wireless-connected-25
 
 [icon]
 icon_name = connection_wifi_050
 resource = :/icons/images/systemtray/wl050.png
-adwaita = network-wireless-signal-ok
+Adwaita = network-wireless-signal-ok
 gnome = network-wireless-signal-ok
 oxygen = network-wireless-connected-50
 
 [icon]
 icon_name = connection_wifi_075
 resource = :/icons/images/systemtray/wl075.png
-adwaita = network-wireless-signal-good
+Adwaita = network-wireless-signal-good
 gnome = network-wireless-signal-good
 oxygen = network-wireless-connected-75
 
 [icon]
 icon_name = connection_wifi_100
 resource = :/icons/images/systemtray/wl100.png
-adwaita = network-wireless-signal-excellent
+Adwaita = network-wireless-signal-excellent
 gnome = network-wireless-signal-excellent
 oxygen = network-wireless-connected-100

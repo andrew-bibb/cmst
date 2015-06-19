@@ -164,24 +164,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   agent->setLogInputRequest(parser.isSet("log-input-request"));
 
   // set a flag if we want to use the local system icon theme and set the whatsthis button
+//FIXME GET RID OF USEICONTHEME
   b_useicontheme = (parser.isSet("icon-theme") || ui.checkBox_systemicontheme->isChecked() );
-  //if (b_useicontheme) {
-		//if (parser.isSet("icon-theme") ) {
-			//if (! parser.value("icon-theme").isEmpty() )
-				//QIcon::setThemeName(parser.value("icon-theme"));
-			//}
-		//else {
-		 //if (! ui.lineEdit_icontheme->text().isEmpty() )
-			//QIcon::setThemeName(ui.lineEdit_icontheme->text() );
-		//}
-    //ui.toolButton_whatsthis->setIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
-    //agent->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
-  //}
-  //else {
-    //ui.toolButton_whatsthis->setIcon(QIcon(":/icons/images/interface/whatsthis.png"));
-    //agent->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
-  //}
-
+  
   // Set icon theme if provided on the command line or in the settings
   if (parser.isSet("icon-theme") )
 		QIcon::setThemeName(parser.value("icon-theme"));
@@ -190,6 +175,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 			QIcon::setThemeName(ui.lineEdit_icontheme->text() );
 		else QIcon::setThemeName(INTERNAL_THEME);
 	
+	// Set the whatsthis icons
 	ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));
 	agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
 
@@ -2028,14 +2014,14 @@ bool ControlBox::getServices()
 bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg )
 {
   //  make sure we got a result back in the r_msg
-  if (r_msg.type() != QDBusMessage::ReplyMessage ) return false;
+  if (! r_msg.type() == QDBusMessage::ReplyMessage ) return false;
 
   // make sure r_msg is a QDBusArgument
-  if (! r_msg.arguments().at(0).canConvert<QDBusArgument>() ) return false;
+  if ( ! r_msg.arguments().at(0).canConvert<QDBusArgument>() ) return false;
 
   // make sure the QDBusArgument holds an array
   const QDBusArgument &qdb_arg = r_msg.arguments().at(0).value<QDBusArgument>();
-  if (qdb_arg.currentType() != QDBusArgument::ArrayType ) return false;
+  if (! qdb_arg.currentType() == QDBusArgument::ArrayType ) return false;
 
   // iterate over the QDBusArgument pulling array elements out and inserting into
   // an arrayElement structure.
@@ -2044,7 +2030,7 @@ bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg
 
   while ( ! qdb_arg.atEnd() ) {
     // make sure the argument is a structure type
-    if (qdb_arg.currentType() != QDBusArgument::StructureType ) return false;
+    if (! qdb_arg.currentType() == QDBusArgument::StructureType ) return false;
 
     arrayElement ael;
     qdb_arg.beginStructure();
@@ -2074,14 +2060,14 @@ bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg
 bool ControlBox::getMap(QMap<QString,QVariant>& r_map, const QDBusMessage& r_msg )
 {
   //  make sure we got a result back in the r_msg
-  if (r_msg.type() != QDBusMessage::ReplyMessage ) return false;
+  if (! r_msg.type() == QDBusMessage::ReplyMessage ) return false;
 
   // make sure r_msg is a QDBusArgument
   if ( ! r_msg.arguments().at(0).canConvert<QDBusArgument>() ) return false;
 
   // make sure the QDBusArgument holds a map
   const QDBusArgument &qdb_arg = r_msg.arguments().at(0).value<QDBusArgument>();
-  if (qdb_arg.currentType() != QDBusArgument::MapType ) return false;
+  if (! qdb_arg.currentType() == QDBusArgument::MapType ) return false;
 
   // iterate over the QDBusArgument pulling map keys and values out
   qdb_arg.beginMap();
@@ -2124,7 +2110,7 @@ bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r
   //QDBusArgument qdba =  r_var.value<QDBusArgument>();
 
   // make sure the QDBusArgument holds a map
-  if (qdba.currentType() != QDBusArgument::MapType ) return false;
+  if (! qdba.currentType() == QDBusArgument::MapType ) return false;
 
   // iterate over the QDBusArgument pulling map keys and values out
     r_map.clear();

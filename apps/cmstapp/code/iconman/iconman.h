@@ -50,6 +50,7 @@ class IconManager : public QObject
     
   // functions
 		QIcon getIcon(const QString&);
+		QString getIconName(const QString&);
   
   private:
   // members
