@@ -651,6 +651,7 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
       notifyclient->setIcon(":/icons/images/interface/golfball_red.png");
     }
     this->sendNotifications();
+    
   } // if contains offlinemode
 
   if (name.contains("State", Qt::CaseInsensitive) ) {
@@ -2013,15 +2014,12 @@ bool ControlBox::getServices()
 //  to the DBus reply message.
 bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg )
 {
-  //  make sure we got a result back in the r_msg
-  if (! r_msg.type() == QDBusMessage::ReplyMessage ) return false;
-
   // make sure r_msg is a QDBusArgument
   if ( ! r_msg.arguments().at(0).canConvert<QDBusArgument>() ) return false;
 
   // make sure the QDBusArgument holds an array
   const QDBusArgument &qdb_arg = r_msg.arguments().at(0).value<QDBusArgument>();
-  if (! qdb_arg.currentType() == QDBusArgument::ArrayType ) return false;
+  if (qdb_arg.currentType() != QDBusArgument::ArrayType ) return false;
 
   // iterate over the QDBusArgument pulling array elements out and inserting into
   // an arrayElement structure.
@@ -2030,7 +2028,7 @@ bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg
 
   while ( ! qdb_arg.atEnd() ) {
     // make sure the argument is a structure type
-    if (! qdb_arg.currentType() == QDBusArgument::StructureType ) return false;
+    if (qdb_arg.currentType() != QDBusArgument::StructureType ) return false;
 
     arrayElement ael;
     qdb_arg.beginStructure();
@@ -2059,15 +2057,12 @@ bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg
 //  r_msg is a constant reference to the DBus reply message.
 bool ControlBox::getMap(QMap<QString,QVariant>& r_map, const QDBusMessage& r_msg )
 {
-  //  make sure we got a result back in the r_msg
-  if (! r_msg.type() == QDBusMessage::ReplyMessage ) return false;
-
   // make sure r_msg is a QDBusArgument
   if ( ! r_msg.arguments().at(0).canConvert<QDBusArgument>() ) return false;
 
   // make sure the QDBusArgument holds a map
   const QDBusArgument &qdb_arg = r_msg.arguments().at(0).value<QDBusArgument>();
-  if (! qdb_arg.currentType() == QDBusArgument::MapType ) return false;
+  if (qdb_arg.currentType() != QDBusArgument::MapType ) return false;
 
   // iterate over the QDBusArgument pulling map keys and values out
   qdb_arg.beginMap();
@@ -2107,10 +2102,9 @@ bool ControlBox::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r
   //  make sure we can convert the QVariant into a QDBusArgument
   if (! r_var.canConvert<QDBusArgument>() ) return false;
   const QDBusArgument qdba =  r_var.value<QDBusArgument>();
-  //QDBusArgument qdba =  r_var.value<QDBusArgument>();
-
+  
   // make sure the QDBusArgument holds a map
-  if (! qdba.currentType() == QDBusArgument::MapType ) return false;
+  if (qdba.currentType() != QDBusArgument::MapType ) return false;
 
   // iterate over the QDBusArgument pulling map keys and values out
     r_map.clear();
