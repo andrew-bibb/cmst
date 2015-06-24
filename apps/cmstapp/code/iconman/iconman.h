@@ -33,6 +33,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QMap>
 # include <QIcon>
 
+# include "../resource.h"
+
 struct IconElement
 {
 	QString resource_path;

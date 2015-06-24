@@ -27,7 +27,6 @@ DEALINGS IN THE SOFTWARE.
 ***********************************************************************/
 
 # include "./iconman.h"
-# include "../resource.h"
 
 # include <QDir>
 # include <QFile>
@@ -132,7 +131,7 @@ QString IconManager::getIconName(const QString& name)
 	
 	// If the internal theme is being used (and the user has not
 	// messed up the local config file) use that first.
-	if (QIcon::themeName() == INTERNAL_THEME) {
+	if (QIcon::themeName() == INTERNAL_THEME ) {
 		const QString res_path = ie.resource_path.section(',', 0, 0).simplified();
 		if (QFileInfo(res_path).exists() )
 			return res_path;

@@ -644,11 +644,11 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
     notifyclient->init();
     if (dbvalue.variant().toBool()) {
       notifyclient->setSummary(tr("Offline Mode Engaged"));
-      notifyclient->setIcon(":/icons/images/interface/golfball_green.png");
+      notifyclient->setIcon(iconman->getIconName("offline_mode_engaged") );
     }
     else {
       notifyclient->setSummary(tr("Offline Mode Disabled"));
-      notifyclient->setIcon(":/icons/images/interface/golfball_red.png");
+      notifyclient->setIcon(iconman->getIconName("offline_mode_disengaged") );
     }
     this->sendNotifications();
     
@@ -669,18 +669,10 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
         state = services_list.at(0).objmap.value("State").toString();
 
       // notification text and icons
-      if (type.contains(TranslateStrings::cmtr("wifi")) ) {
-        if (b_useicontheme)
-          iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wl000.png");
-        else
-          iconpath = QString(":/icons/images/systemtray/wl000.png");
-      } // if wifi
-      else {
-        if (b_useicontheme)
-          iconpath = QIcon::hasThemeIcon("network-transmit-receive") ? QString("network-transmit-receive") : QString(":/icons/images/systemtray/wired_established.png");
-        else
-          iconpath = QString(":/icons/images/systemtray/wired_established.png");
-      } // else probably wired
+      if (type.contains(TranslateStrings::cmtr("wifi")) )
+				iconpath = iconman->getIconName("connection_wifi_100");
+      else 
+				iconpath = iconman->getIconName("connection_wired_online");
 
       notifyclient->init();
       notifyclient->setSummary(tr("%1 (%2) Network").arg(type).arg(name) );
@@ -691,21 +683,18 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 
     // no services listed
     else {
-      if (b_useicontheme)
-        iconpath = QIcon::hasThemeIcon("network-offline") ? QString("network-offline") : QString(":/icons/images/systemtray/connect_no.png") ;
-      else
-        iconpath = QString(":/icons/images/systemtray/connect_no.png");
-
       notifyclient->init();
       notifyclient->setSummary(tr("Network Services:") );
       notifyclient->setBody(tr("No network services available") );
-      notifyclient->setIcon(iconpath);
+      notifyclient->setIcon(iconman->getIconName("connection_not_ready") );
       this->sendNotifications();
     } // else no services listed
   } // if state change
 
   return;
 }
+
+//////////////ICONMAN IMPLEMENTED TO HERE ////////////////
 
 //
 // Slot called whenever DBUS issues a ServicesChanged signal.  When a
