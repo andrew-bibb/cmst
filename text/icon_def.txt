@@ -100,3 +100,4 @@ resource = :/icons/images/systemtray/wl100.png
 Adwaita = network-wireless-signal-excellent
 gnome = network-wireless-signal-excellent
 oxygen = network-wireless-connected-100
+

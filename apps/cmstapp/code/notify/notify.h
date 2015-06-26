@@ -123,7 +123,6 @@ class NotifyClient : public QObject
     private slots:
       void notificationClosed(quint32, quint32);
       void actionInvoked(quint32, QString);
-
 };    
 
 #endif

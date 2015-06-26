@@ -54,7 +54,7 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 	// Create the icon_ map.   
 	QFile f1(cfg);
 	if (!f1.open(QIODevice::ReadOnly | QIODevice::Text)) {
-		qDebug() << "Error opening icon_def file: " << cfg ;
+		qCritical("Error opening icon_def file: %s", qUtf8Printable(cfg) );
 	}
 			
 	QTextStream in(&f1);
@@ -121,8 +121,6 @@ QIcon IconManager::getIcon(const QString& name)
 
 //
 // Function to return a QString containing the icon theme name or resource path
-// This function only returns the on state name should more than one name be
-// defined
 QString IconManager::getIconName(const QString& name)
 {
 	// Data members
@@ -150,17 +148,17 @@ QString IconManager::getIconName(const QString& name)
 		if (QIcon::hasThemeIcon(theme_name) )
 			return theme_name;
 	}	// if freedesktop name not empty
-			
+		
 	// Then look for hardcoded name in the users config dir
 	if (! ie.resource_path.isEmpty() ) {
-		const QString res_path = ie.resource_path.section(',', 0, 0).simplified();
+		const QString res_path = ie.fdo_name.section(',', 0, 0).simplified();
 		if (QFileInfo(res_path).exists() )
-			return res_path;
+			return  res_path;
 	}
-		
+	
 	// Last stop is our fallback hard coded into the program
-	 const QString res_path = getFallback(name).section(',', 0, 0).simplified();
-	 return res_path;	
+	const QString res_path = getFallback(name).section(',', 0, 0).simplified();
+	return res_path;
  }
 
 ////////////////////////////// Private Functions ////////////////////////////
@@ -241,7 +239,7 @@ QString IconManager::getFallback(const QString& name)
 	// Open the resource file for reading
 	QFile f0(qrc);	
 	if (!f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
-		qDebug() << "Error opening resource file: " << qrc ;
+		qCritical("Error opening respource file: %s", qUtf8Printable(qrc) );
 		return rtnstr;
 	}
 	
@@ -256,10 +254,9 @@ QString IconManager::getFallback(const QString& name)
 			QString val = "";
 			do {
 				line = in.readLine();
-				if (line.startsWith("icon_name", Qt::CaseInsensitive) )	key = extractKey(line);
+				if (line.startsWith("icon_name", Qt::CaseInsensitive) )	key = extractValue(line);
 				else if (line.startsWith("resource", Qt::CaseInsensitive) )	val = extractValue(line);
 			} while ( key.isEmpty() || val.isEmpty() );
-				
 			if (key == name) {
 				rtnstr = val;
 				break;
@@ -288,7 +285,7 @@ void IconManager::makeLocalFile()
 		if (s.copy(cfg) ) 
 			QFile::setPermissions(cfg, QFileDevice::ReadOwner | QFileDevice::WriteOwner);
 		else	
-			qDebug() << "Failed copying the icon definition file from " << qrc << "to " << cfg;
+			qCritical("Failed copying the icon definition file from %s to %s",qUtf8Printable(qrc), qUtf8Printable(cfg) );
 	}	// if mkpath returned ture			
   
 	return;

@@ -166,24 +166,28 @@ void NotifyClient::sendNotification ()
   } // if capabilities contains body
   
   // process the icon, if we are using a fallback icon create a temporary file to hold it
-    QTemporaryFile tempfileicon;
+    QTemporaryFile*  tempfileicon; 
     if (! s_icon.isEmpty() ) {   
-			if ( QIcon::hasThemeIcon(s_icon) ) app_icon = s_icon;
-			else {
-				if (QFile::exists(s_icon) ) {
-					if (tempfileicon.open() ) {
-						QPixmap px = QPixmap(s_icon);
-						px.save(tempfileicon.fileName(),"PNG");
-						app_icon =  tempfileicon.fileName().prepend("file://");
-					} // if tempfileicon could be opened
-				} // if s_icon exists as a disk file
-			} // else not a theme icon
-    } // if s_icon is not empty
-      
+			if (QFile::exists(s_icon) ) {
+				tempfileicon = new QTemporaryFile(this);
+				if (tempfileicon->open() ) {
+					QPixmap px = QPixmap(s_icon);
+					px.save(tempfileicon->fileName(),"PNG");
+					app_icon =  tempfileicon->fileName().prepend("file://");
+				} // if tempfileicon could be opened
+			} // if s_icon exists as a disk file
+
+			// assume s_icon exists as a theme icon, don't check it here.  That
+			// check needs to be done in the calling program.
+			else app_icon = s_icon;
+		} // if s_icon is not empty
+    
   QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
   
-  if (reply.isValid() )
+  if (reply.isValid() ) {
+		///////FIXME MEMORY LEAK IN TEMPFILEICON //////////
     current_id = reply.value();
+  }
   else
     qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
   
@@ -246,7 +250,7 @@ void NotifyClient::closeNotification(quint32 id)
   // return if we don't have valid connection
   if (! b_validconnection) return; 
   
-  QDBusMessage reply = notifyclient->call(QLatin1String("CloseNotification", id));
+  QDBusMessage reply = notifyclient->call(QLatin1String("CloseNotification"), id);
   
   if (reply.type() == QDBusMessage::InvalidMessage)
     qCritical("CMST - Invalid reply received to CloseNotification method.");
@@ -263,7 +267,7 @@ void NotifyClient::closeNotification(quint32 id)
 // Right now we don't do anything with the information
 void NotifyClient::notificationClosed(quint32 id, quint32 reason)
 {
-  // qDebug() << "notification closed signal received << id << reason;
+	//qDebug() << "Notification closed" << id << reason;
   
   return;
 }
@@ -278,3 +282,4 @@ void NotifyClient::actionInvoked(quint32 id, QString action_key)
   
   return;
 }
+
