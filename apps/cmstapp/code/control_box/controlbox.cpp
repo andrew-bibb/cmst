@@ -653,7 +653,7 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
     this->sendNotifications();
     
   } // if contains offlinemode
-return;
+
   if (name.contains("State", Qt::CaseInsensitive) ) {
     // local variables
     QString type;

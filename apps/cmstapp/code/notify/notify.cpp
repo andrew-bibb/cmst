@@ -53,6 +53,7 @@ NotifyClient::NotifyClient(QObject* parent)
   sl_capabilities.clear();
   b_validconnection = false;
   current_id = 0;
+  file_map.clear();
   this->init();
 
   // Create our client and try to connect to the notify server
@@ -61,6 +62,9 @@ NotifyClient::NotifyClient(QObject* parent)
   // else try to connect to a notification server
   else 
 		connectToServer();
+		
+	// Signals and slots
+	connect(qApp, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()));	
     
   return;   
 }
@@ -166,10 +170,11 @@ void NotifyClient::sendNotification ()
   } // if capabilities contains body
   
   // process the icon, if we are using a fallback icon create a temporary file to hold it
-    QTemporaryFile*  tempfileicon; 
+    QTemporaryFile*  tempfileicon = NULL; 
     if (! s_icon.isEmpty() ) {   
 			if (QFile::exists(s_icon) ) {
 				tempfileicon = new QTemporaryFile(this);
+				tempfileicon->setAutoRemove(false);
 				if (tempfileicon->open() ) {
 					QPixmap px = QPixmap(s_icon);
 					px.save(tempfileicon->fileName(),"PNG");
@@ -185,9 +190,22 @@ void NotifyClient::sendNotification ()
   QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
   
   if (reply.isValid() ) {
-		///////FIXME MEMORY LEAK IN TEMPFILEICON //////////
     current_id = reply.value();
-  }
+    if (file_map.contains(current_id) && tempfileicon != NULL) {
+			if (b_overwrite) {
+				file_map.value(current_id)->remove();
+				delete file_map.value(current_id);
+				file_map.remove(current_id);				
+			}	// if
+			else {
+				tempfileicon->remove();
+				delete tempfileicon;
+				tempfileicon = NULL;
+			}	// else
+		}	// if contains current_id and not NULL
+		if (tempfileicon != NULL) file_map[current_id] = tempfileicon;
+  }	// if reply is valid
+  
   else
     qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
   
@@ -264,10 +282,13 @@ void NotifyClient::closeNotification(quint32 id)
 /////////////////////////////// PRIVATE SLOTS /////////////////////////////////////
 //
 // Slot called when a notification was closed
-// Right now we don't do anything with the information
 void NotifyClient::notificationClosed(quint32 id, quint32 reason)
 {
-	//qDebug() << "Notification closed" << id << reason;
+	if (file_map.contains(id) ) {
+		file_map.value(id)->remove();
+		delete file_map.value(id);
+		file_map.remove(id);
+	}	
   
   return;
 }
@@ -281,5 +302,22 @@ void NotifyClient::actionInvoked(quint32 id, QString action_key)
   //qDebug() << "Action invoked signal received" << id << action_key;
   
   return;
+}
+
+//
+// Slot to tidy up things, mainly the temp files created if we made icons
+// Called when qApp issues an aboutToQuit signal
+void NotifyClient::cleanUp()
+{
+	
+	QMapIterator<quint32, QTemporaryFile*> itr(file_map);
+	while (itr.hasNext()) {
+    itr.next();
+		file_map.value(itr.key())->remove();
+		delete file_map.value(itr.key() );
+		file_map.remove(itr.key() );    
+}
+	
+	return;
 }
 

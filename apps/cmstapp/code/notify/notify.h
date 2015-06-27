@@ -51,6 +51,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QtDBus/QtDBus>
 # include <QtDBus/QDBusInterface>
 # include <QIcon>
+# include <QMap>
+# include <QTemporaryFile>
 
 //  Used for enum's local to this program
 namespace Nc
@@ -114,6 +116,7 @@ class NotifyClient : public QObject
       int i_urgency;
       int i_expire_timeout;
       bool b_overwrite;
+      QMap<quint32, QTemporaryFile*> file_map;
       
       // functions
       void getServerInformation();
@@ -123,6 +126,7 @@ class NotifyClient : public QObject
     private slots:
       void notificationClosed(quint32, quint32);
       void actionInvoked(quint32, QString);
+      void cleanUp();
 };    
 
 #endif
