@@ -144,7 +144,6 @@ class ControlBox : public QDialog
     QAction* minimizeAction;
     QAction* maximizeAction;
     QAction* exitAction;
-    bool b_useicontheme;
     bool b_usexfce;
     bool b_usemate;
     QMenu* mvsrv_menu;

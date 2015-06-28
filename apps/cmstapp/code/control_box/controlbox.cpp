@@ -163,10 +163,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request"));
 
-  // set a flag if we want to use the local system icon theme and set the whatsthis button
-//FIXME GET RID OF USEICONTHEME
-  b_useicontheme = (parser.isSet("icon-theme") || ui.checkBox_systemicontheme->isChecked() );
-  
   // Set icon theme if provided on the command line or in the settings
   if (parser.isSet("icon-theme") )
 		QIcon::setThemeName(parser.value("icon-theme"));
@@ -650,8 +646,7 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
       notifyclient->setSummary(tr("Offline Mode Disabled"));
       notifyclient->setIcon(iconman->getIconName("offline_mode_disengaged") );
     }
-    this->sendNotifications();
-    
+    this->sendNotifications();  
   } // if contains offlinemode
 
   if (name.contains("State", Qt::CaseInsensitive) ) {
@@ -693,8 +688,6 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 
   return;
 }
-
-//////////////ICONMAN IMPLEMENTED TO HERE ////////////////
 
 //
 // Slot called whenever DBUS issues a ServicesChanged signal.  When a
@@ -914,7 +907,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
     notifyclient->init();
     notifyclient->setSummary(QString(tr("Service Error: %1")).arg(value.toString()) );
     notifyclient->setBody(QString(tr("Object Path: %1")).arg(s_path) );
-    notifyclient->setIcon(":/icons/images/interface/cancel.png");
+    notifyclient->setIcon(iconman->getIconName("state_error") );
     notifyclient->setUrgency(Nc::UrgencyCritical);
     this->sendNotifications();
   }
@@ -1171,6 +1164,7 @@ void ControlBox::getServiceDetails(int index)
 
   return;
 }
+
 //
 //  Slot to enter whats this mode
 //  Called when the ui.toolButton_whatsthis clicked() signal is emitted
@@ -1197,6 +1191,7 @@ void ControlBox::closeEvent(QCloseEvent* e)
 		e->accept();
   return;
 }
+
 //
 // Key event for this dialog. If escape is pressed, minimize instead of close if
 // applicable.
@@ -1210,6 +1205,7 @@ void ControlBox::keyPressEvent(QKeyEvent* e)
 	}
         QDialog::keyPressEvent(e);
 }
+
 //
 // Event filter used to filter out tooltip events if we don't want to see them
 // in eventFilters return true eats the event, false passes on it.
@@ -1292,36 +1288,30 @@ void ControlBox::assemblePage1()
   // Global Properties
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
     QString s1 = properties_map.value("State").toString();
-    if (s1.contains(TranslateStrings::cmtr("online")) ) {
-      b_useicontheme ?
-        ui.label_state_pix->setPixmap(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/interface/connect_established.png")).pixmap(QSize(16,16)) ) :
-        ui.label_state_pix->setPixmap(QPixmap (":/icons/images/interface/connect_established.png"));
+    if (s1.contains(TranslateStrings::cmtr("online")) ) {	
+			ui.label_state_pix->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
     } // if online
     else {
       if (s1.contains(TranslateStrings::cmtr("ready")) ) {
-        b_useicontheme ?
-          ui.label_state_pix->setPixmap(QIcon::fromTheme("network-idle", QIcon(":/icons/images/interface/connect_creating.png")).pixmap(QSize(16,16)) ) :
-          ui.label_state_pix->setPixmap(QPixmap (":/icons/images/interface/connect_creating.png"));
-      } // if ready
+				ui.label_state_pix->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
+				      } // if ready
       else {
-        b_useicontheme ?
-          ui.label_state_pix->setPixmap(QIcon::fromTheme("network-offline", QIcon(":/icons/images/interface/connect_no.png")).pixmap(QSize(16,16)) )  :
-          ui.label_state_pix->setPixmap(QPixmap (":/icons/images/interface/connect_no.png"));
+				ui.label_state_pix->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
       } // else any other state
     } //  else ready or any other state
     s1.prepend(tr("State: ") );
     ui.label_state->setText(s1);
-
+   
     bool b1 = properties_map.value("OfflineMode").toBool();
     QString s2 = QString();
     if (b1 ) {
       s2 = tr("Engaged");
-      ui.label_offlinemode_pix->setPixmap(QPixmap (":/icons/images/interface/golfball_green.png"));
+      ui.label_offlinemode_pix->setPixmap(QPixmap (iconman->getIconName("offline_mode_engaged")) );
     } // if offline mode is engaged
 
     else {
       s2 = tr("Disabled");
-      ui.label_offlinemode_pix->setPixmap(QPixmap (":/icons/images/interface/golfball_red.png"));
+      ui.label_offlinemode_pix->setPixmap(QPixmap (iconman->getIconName("offline_mode_disengaged")) );
     } //  else offlinemode disabled
     s2.prepend(tr("Offline Mode "));
     ui.label_offlinemode->setText(s2);
@@ -1489,29 +1479,21 @@ void ControlBox::assemblePage3()
 
       QLabel* ql01 = new QLabel(ui.tableWidget_wifi);
       if (map.value("Favorite").toBool() ) {
-        b_useicontheme ?
-          ql01->setPixmap(QIcon::fromTheme("emblem-favorite", QIcon(":/icons/images/interface/favorite.png")).pixmap(QSize(16,16)) ) :
-          ql01->setPixmap(QPixmap(":/icons/images/interface/favorite.png"));
+				ql01->setPixmap(iconman->getIcon("favorite").pixmap(QSize(16,16)) );
       }
       ql01->setAlignment(Qt::AlignCenter);
       ui.tableWidget_wifi->setCellWidget(rowcount, 1, ql01);
-
+ 
       QLabel* ql02 = new QLabel(ui.tableWidget_wifi);
       if (map.value("State").toString().contains(TranslateStrings::cmtr("online")) ) {
-        b_useicontheme ?
-          ql02->setPixmap(QIcon::fromTheme("network-transmit-receive", QIcon(":/icons/images/interface/connect_established.png")).pixmap(QSize(16,16)) ) :
-          ql02->setPixmap(QPixmap(":/icons/images/interface/connect_established.png"));
+				ql02->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
       } // if online
       else {
         if (map.value("State").toString().contains(TranslateStrings::cmtr("ready")) ) {
-          b_useicontheme ?
-            ql02->setPixmap(QIcon::fromTheme("network-idle", QIcon(":/icons/images/interface/connect_creating.png")).pixmap(QSize(16,16)) ) :
-            ql02->setPixmap(QPixmap(":/icons/images/interface/connect_creating.png") );
+					ql02->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
         } // if ready
         else {
-          b_useicontheme ?
-            ql02->setPixmap(QIcon::fromTheme("network-offline", QIcon(":/icons/images/interface/connect_no.png")).pixmap(QSize(16,16)) )  :
-            ql02->setPixmap(QPixmap(":/icons/images/interface/connect_no.png"));
+					ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
         } // else any other state
       } // else ready or any other state
       ql02->setAlignment(Qt::AlignCenter);
@@ -1583,9 +1565,7 @@ void ControlBox::assembleTrayIcon()
           stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
           stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
-          b_useicontheme ?
-            prelimicon = (QIcon::fromTheme("network-wired", QIcon(":/icons/images/systemtray/wired_established.png")) )  :
-            prelimicon = (QIcon(":/icons/images/systemtray/wired_established.png") );
+          prelimicon = iconman->getIcon("connection_wired_online");
         } //  if wired connection
 
         if (services_list.at(0).objmap.value("Type").toString().contains(TranslateStrings::cmtr("wifi")) ) {
@@ -1596,23 +1576,18 @@ void ControlBox::assembleTrayIcon()
           stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
           quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
-          if (b_useicontheme) prelimicon = (QIcon::fromTheme("network-wireless", QIcon(":/icons/images/systemtray/wl100.png")) );
-          else {
-          if (str > 80 ) prelimicon = (QIcon(":/icons/images/systemtray/wl100.png"));
-          else if (str > 60 )  prelimicon = (QIcon(":/icons/images/systemtray/wl075.png"));
-            else if (str > 40 )  prelimicon = (QIcon(":/icons/images/systemtray/wl050.png"));
-              else if (str > 20 )  prelimicon = (QIcon(":/icons/images/systemtray/wl025.png"));
-                else prelimicon = (QIcon(":/icons/images/systemtray/wl000.png"));
-          } // else use our built in icons
+          if (str > 80 ) prelimicon = iconman->getIcon("connection_wifi_100");
+          else if (str > 60 ) prelimicon = iconman->getIcon("connection_wifi_075");  
+            else if (str > 40 )   prelimicon = iconman->getIcon("connection_wifi_050");
+              else if (str > 20 )   prelimicon = iconman->getIcon("connection_wifi_025");
+                else prelimicon = iconman->getIcon("connection_wifi_000");
         } //  if wifi connection
       } //  services if no error
     } //  if the state is online
 
     // else if state is ready
     else if (properties_map.value("State").toString().contains(TranslateStrings::cmtr("ready")) ) {
-      b_useicontheme ?
-        prelimicon = (QIcon::fromTheme("network-idle", QIcon(":/icons/images/systemtray/connect_creating.png")).pixmap(QSize(16,16)) ) :
-        prelimicon = (QPixmap(":/icons/images/systemtray/connect_creating.png") );
+        prelimicon = iconman->getIcon("state_ready").pixmap(QSize(16,16) );
       stt.append(tr("Connection is in the Ready State.", "icon_tool_tip"));
     } // else if if ready
 
@@ -1627,26 +1602,20 @@ void ControlBox::assembleTrayIcon()
           stt.append(tr("Connection is in the Failure State, attempting to reestablish the connection", "icon_tool_tip") );
         } // if wifi and favorite
       } // if retry checked
-      b_useicontheme ?
-        prelimicon = (QIcon::fromTheme("network-error", QIcon(":/icons/images/systemtray/cancel.png")).pixmap(QSize(16,16)) ) :
-        prelimicon = (QPixmap(":/icons/images/systemtray/cancel.png") );
+      prelimicon = iconman->getIcon("state_online").pixmap(QSize(16,16) );
       stt.append(tr("Connection is in the Failure State.", "icon_tool_tip"));
     } // else if failure state
 
     // else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"
     else {
-      b_useicontheme ?
-        prelimicon = (QIcon::fromTheme("network-offline", QIcon(":/icons/images/systemtray/connect_no.png")) )  :
-        prelimicon = (QIcon(":/icons/images/systemtray/connect_no.png") );
+			prelimicon = iconman->getIcon("state_not_ready").pixmap(QSize(16,16) );
       stt.append(tr("Not Connected", "icon_tool_tip"));
     } // else any other connection sate
   } // properties if no error
 
   // could not get any properties
   else {
-    b_useicontheme ?
-      prelimicon = (QIcon::fromTheme("network-error", QIcon(":/icons/images/interface/cancel.png")) ) :
-      prelimicon = (QIcon(":/icons/images/interface/cancel.png") );
+		prelimicon = iconman->getIcon("state_error").pixmap(QSize(16,16) );
     stt.append(tr("Error retrieving properties via Dbus"));
     stt.append(tr("Connection status is unknown"));
   }
@@ -2289,10 +2258,7 @@ void ControlBox::configureService()
   PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()), this->extractMapData );
 
   // Set the whatsthis button icon
-  if (b_useicontheme)
-   peditor->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
-  else
-    peditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
+	peditor->setWhatsThisIcon(iconman->getIcon("whats_this"));
 
   // call then clean up
   peditor->exec();
@@ -2308,11 +2274,8 @@ void ControlBox::provisionService()
   ProvisioningEditor* veditor = new ProvisioningEditor(this);
 
   // Set the whatsthis button icon
-  if (b_useicontheme)
-   veditor->setWhatsThisIcon(QIcon::fromTheme("system-help", QIcon(":/icons/images/interface/whatsthis.png")) );
-  else
-    veditor->setWhatsThisIcon(QIcon(":/icons/images/interface/whatsthis.png"));
-
+	veditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
+  
   // call then clean up
   veditor->exec();
   veditor->deleteLater();
