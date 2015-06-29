@@ -54,7 +54,9 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 	// Create the icon_ map.   
 	QFile f1(cfg);
 	if (!f1.open(QIODevice::ReadOnly | QIODevice::Text)) {
-		qCritical("Error opening icon_def file: %s", qUtf8Printable(cfg) );
+		QT_VERSION >= 0x050400 ?
+			qCritical("Error opening icon_def file: %s", qUtf8Printable(cfg) ):
+			qCritical("Error opening icon_def file: %s", qPrintable(cfg) );
 	}
 			
 	QTextStream in(&f1);
@@ -239,7 +241,9 @@ QString IconManager::getFallback(const QString& name)
 	// Open the resource file for reading
 	QFile f0(qrc);	
 	if (!f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
-		qCritical("Error opening respource file: %s", qUtf8Printable(qrc) );
+		QT_VERSION >= 0x050400 ?
+			qCritical("Error opening resource file: %s", qUtf8Printable(qrc) ):
+			qCritical("Error opening resource file: %s", qPrintable(qrc) );		
 		return rtnstr;
 	}
 	
@@ -285,7 +289,9 @@ void IconManager::makeLocalFile()
 		if (s.copy(cfg) ) 
 			QFile::setPermissions(cfg, QFileDevice::ReadOwner | QFileDevice::WriteOwner);
 		else	
-			qCritical("Failed copying the icon definition file from %s to %s",qUtf8Printable(qrc), qUtf8Printable(cfg) );
+		QT_VERSION >= 0x050400 ?
+			qCritical("Failed copying the icon definition file from %s to %s", qUtf8Printable(qrc), qUtf8Printable(cfg) ):
+			qCritical("Failed copying the icon definition file from %s to %s", qPrintable(qrc), qPrintable(cfg) );		
 	}	// if mkpath returned ture			
   
 	return;
