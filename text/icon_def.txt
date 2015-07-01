@@ -62,41 +62,36 @@ resource = :/icons/images/systemtray/connect_no.png
 fdo_name = network-offline
 
 [icon]
-icon_name = connection_wired_online
+icon_name = connection_wired
 resource = :/icons/images/systemtray/wired_established.png
-fdo_name = network-transmit-receive
+fdo_name = network-wired
+
+[icon]
+icon_name = connection_wireless
+resource = :/icons/images/systemtray/wl000.png
+fdo_name = network-wireless
 
 [icon]
 icon_name = connection_wifi_000
 resource = :/icons/images/systemtray/wl000.png
-Adwaita = network-wireless-signal-none-symbolic
-gnome = network-wireless-signal-none-symbolic
-oxygen = network-wireless-connected-00
+theme_names = network-wireless-signal-none-symbolic, network-wireless-connected-00
 
 [icon]
 icon_name = connection_wifi_025
 resource = :/icons/images/systemtray/wl025.png
-Adwaita = network-wireless-signal-weak-symbolic
-gnome = network-wireless-signal-weak-symbolic
-oxygen = network-wireless-connected-25
+theme_names = network-wireless-signal-weak-symbolic, network-wireless-connected-25
 
 [icon]
 icon_name = connection_wifi_050
 resource = :/icons/images/systemtray/wl050.png
-Adwaita = network-wireless-signal-ok-symbolic
-gnome = network-wireless-signal-ok-symbolic
-oxygen = network-wireless-connected-50
+theme_names = network-wireless-signal-ok-symbolic, network-wireless-connected-50
 
 [icon]
 icon_name = connection_wifi_075
 resource = :/icons/images/systemtray/wl075.png
-Adwaita = network-wireless-signal-good-symbolic
-gnome = network-wireless-signal-good-symbolic
-oxygen = network-wireless-connected-75
+theme_names = network-wireless-signal-good-symbolic, network-wireless-connected-75
 
 [icon]
 icon_name = connection_wifi_100
 resource = :/icons/images/systemtray/wl100.png
-Adwaita = network-wireless-signal-excellent-symbolic
-gnome = network-wireless-signal-excellent-symbolic
-oxygen = network-wireless-connected-100
+theme_names = network-wireless-signal-excellent-symbolic, network-wireless-connected-100

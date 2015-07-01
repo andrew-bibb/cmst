@@ -664,15 +664,16 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
         state = services_list.at(0).objmap.value("State").toString();
 
       // notification text and icons
-      if (type.contains(TranslateStrings::cmtr("wifi")) )
-				iconpath = iconman->getIconName("connection_wifi_100");
+      if (type.contains("wifi", Qt::CaseInsensitive) )
+				iconpath = iconman->getIconName("connection_wireless");
       else 
-				iconpath = iconman->getIconName("connection_wired_online");
+				iconpath = iconman->getIconName("connection_wired");
 
       notifyclient->init();
       notifyclient->setSummary(tr("%1 (%2) Network").arg(type).arg(name) );
       notifyclient->setBody(tr("Connection: %1").arg(state) );
       notifyclient->setIcon(iconpath);
+      
       this->sendNotifications();
     } // if services count >
 
@@ -1565,7 +1566,7 @@ void ControlBox::assembleTrayIcon()
           stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
           stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
           stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
-          prelimicon = iconman->getIcon("connection_wired_online");
+          prelimicon = iconman->getIcon("connection_wired");
         } //  if wired connection
 
         if (services_list.at(0).objmap.value("Type").toString().contains(TranslateStrings::cmtr("wifi")) ) {

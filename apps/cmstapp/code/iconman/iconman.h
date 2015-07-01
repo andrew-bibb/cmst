@@ -30,8 +30,10 @@ DEALINGS IN THE SOFTWARE.
 # define ICON_MANAGER
 
 # include <QObject>
-# include <QMap>
+# include <QString>
+# include <QStringList>
 # include <QIcon>
+# include <QMap>
 
 # include "../resource.h"
 
@@ -39,7 +41,7 @@ struct IconElement
 {
 	QString resource_path;
 	QString fdo_name;
-	QMap <QString, QString> theme_map;
+	QStringList name_list;
 };
 
 class IconManager : public QObject

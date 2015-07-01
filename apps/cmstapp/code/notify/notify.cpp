@@ -190,7 +190,7 @@ void NotifyClient::sendNotification ()
   QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
   
   if (reply.isValid() ) {
-    current_id = reply.value();
+		current_id = reply.value();
     if (file_map.contains(current_id) && tempfileicon != NULL) {
 			if (b_overwrite) {
 				file_map.value(current_id)->remove();
