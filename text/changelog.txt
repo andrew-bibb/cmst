@@ -4,8 +4,10 @@
 <ul>
 <li>Browser selections in Agent dialog improved and added xdg-open option (by Yaohan Chen).</li>
 <li>-i (--icon-theme) command line option will now accept a theme name.</li>
+<li>Theme icons not part of the standard Freedesktop.org icon naming specification (mainly wifi signal strengths) will be used if available.</li>
 <li>Counter update rate in preferences upper limit changed from 600 seconds to 86400 seconds.</li>
 <li>Minimize to tray when ESC is pressed (by kriesoff).</li>
+<li>Restoring window size and geometry is now independent from the other settings.</li>
 </ul>
 <br><b>2015.03.01</b>
 <ul>

@@ -826,13 +826,23 @@
              <bool>true</bool>
             </property>
             <property name="whatsThis">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the GUI will be restored from settings saved on disk. Settings include the geometry of the dialog and the state of various check boxes, such as this one. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p style='white-space:pre'&gt;The settings file is: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/cmst/cmst.conf  &lt;/span&gt;&lt;br&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the settings selected on this page will be restored next time CMST is started. &lt;/p&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The settings file is: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/cmst/cmst.conf  &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
              <string>Retain Settings</string>
             </property>
             <property name="checked">
              <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_retainstate">
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the state of the GUI will be restored from settings saved on disk. Settings include the geometry and position of the dialog and the current tab. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p&gt;The settings file is: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Retain State</string>
             </property>
            </widget>
           </item>
@@ -1547,8 +1557,8 @@
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>36</x>
-     <y>163</y>
+     <x>59</x>
+     <y>196</y>
     </hint>
     <hint type="destinationlabel">
      <x>163</x>
@@ -1665,6 +1675,118 @@
     <hint type="destinationlabel">
      <x>483</x>
      <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_retainsettings</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>groupBox_startoptions</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>302</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_retainsettings</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>groupBox_systemtray</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>65</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_retainsettings</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>groupBox_notfications</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>66</x>
+     <y>340</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_retainsettings</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>groupBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>94</x>
+     <y>402</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_retainsettings</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>checkBox_advanced</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>47</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_retainsettings</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>checkBox_resetcounters</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>36</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_retainsettings</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>checkBox_enableinterfacetooltips</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>130</y>
     </hint>
    </hints>
   </connection>

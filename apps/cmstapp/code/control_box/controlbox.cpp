@@ -1737,12 +1737,14 @@ void ControlBox::writeSettings()
   settings->beginGroup("MainWindow");
   settings->setValue("size", this->size() );
   settings->setValue("pos", this->pos() );
+  settings->setValue("current_page", ui.tabWidget->currentIndex());
   settings->endGroup();
 
   settings->beginGroup("CheckBoxes");
   settings->setValue("hide_tray_icon", ui.checkBox_hideIcon->isChecked() );
   settings->setValue("devices_off", ui.checkBox_devicesoff->isChecked() );
   settings->setValue("retain_settings", ui.checkBox_retainsettings->isChecked() );
+  settings->setValue("retain_state", ui.checkBox_retainstate->isChecked() );
   settings->setValue("services_less", ui.checkBox_hidecnxn->isChecked() );
   settings->setValue("enable_interface_tooltips", ui.checkBox_enableinterfacetooltips->isChecked() );
   settings->setValue("enable_systemtray_tooltips", ui.checkBox_enablesystemtraytooltips->isChecked() );
@@ -1782,18 +1784,20 @@ void ControlBox::writeSettings()
 // Slot to read GUI settings to disk
 void ControlBox::readSettings()
 {
-  // only restore settings if retain_settings is checked
-  if (! settings->value("CheckBoxes/retain_settings").toBool() ) return;
-
-  settings->beginGroup("MainWindow");
-  resize(settings->value("size", QSize(700, 550)).toSize() );
-  move(settings->value("pos", QPoint(200, 200)).toPoint() );
-  settings->endGroup();
+	// only restore window if retain_state is checked
+	if (settings->value("CheckBoxes/retain_state").toBool() ) {
+		settings->beginGroup("MainWindow");
+		resize(settings->value("size", QSize(700, 550)).toSize() );
+		move(settings->value("pos", QPoint(200, 200)).toPoint() );
+		ui.tabWidget->setCurrentIndex(settings->value("current_page").toInt() );
+		settings->endGroup();
+	}
 
   settings->beginGroup("CheckBoxes");
   ui.checkBox_hideIcon->setChecked(settings->value("hide_tray_icon").toBool() );
   ui.checkBox_devicesoff->setChecked(settings->value("devices_off").toBool() );
   ui.checkBox_retainsettings->setChecked(settings->value("retain_settings").toBool() );
+  ui.checkBox_retainstate->setChecked(settings->value("retain_state").toBool() );
   ui.checkBox_hidecnxn->setChecked(settings->value("services_less").toBool() );
   ui.checkBox_enableinterfacetooltips->setChecked(settings->value("enable_interface_tooltips").toBool() );
   ui.checkBox_enablesystemtraytooltips->setChecked(settings->value("enable_systemtray_tooltips").toBool() );
