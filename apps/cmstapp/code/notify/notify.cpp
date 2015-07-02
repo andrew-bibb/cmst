@@ -122,7 +122,11 @@ void NotifyClient::init()
   //if (reply.isValid() )
     //current_id = reply.value();
   //else
+  	//#if QT_VERSION >= 0x050400 
+  	//qCritical("CMST - Error reply received to the Notify method: %s", qUtf8Printable(reply.error().message()) );
+		//#else
     //qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
+    //#endif
   
   //return;
 //}   
@@ -207,7 +211,11 @@ void NotifyClient::sendNotification ()
   }	// if reply is valid
   
   else
+	#if QT_VERSION >= 0x050400 
+		qCritical("CMST - Error reply received to the Notify method: %s", qUtf8Printable(reply.error().message()) );
+  #else
     qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
+  #endif
   
   return;
 } 
@@ -236,7 +244,11 @@ void NotifyClient::getServerInformation()
       qCritical("CMST - Invalid reply received to GetServerInformation method.");
     
     else if (reply.type() == QDBusMessage::ErrorMessage) 
+    #if QT_VERSION >= 0x050400 
+			qCritical("CMST - Error reply received to GetServerInforation method: %s", qUtf8Printable(reply.errorMessage()) );
+    #else
       qCritical("CMST - Error reply received to GetServerInforation method: %s", qPrintable(reply.errorMessage()) );
+    #endif
   } // else some error occured
   
 
@@ -256,7 +268,11 @@ void NotifyClient::getCapabilities()
   if (reply.isValid()) 
     sl_capabilities = reply.value();
   else
+  #if QT_VERSION >= 0x050400 
+		qCritical("CMST - Error reply received to GetCapabilities method: %s", qUtf8Printable(reply.error().message()) );
+  #else
     qCritical("CMST - Error reply received to GetCapabilities method: %s", qPrintable(reply.error().message()) );
+  #endif
   
   return;
 }
@@ -274,7 +290,11 @@ void NotifyClient::closeNotification(quint32 id)
     qCritical("CMST - Invalid reply received to CloseNotification method.");
   
   else if (reply.type() == QDBusMessage::ErrorMessage) 
+  #if QT_VERSION >= 0x050400 
+		qCritical("CMST - Error reply received to CloseNotification method: %s", qUtf8Printable(reply.errorMessage()) );
+  #else
     qCritical("CMST - Error reply received to CloseNotification method: %s", qPrintable(reply.errorMessage()) );
+  #endif
   
   return;
 }
