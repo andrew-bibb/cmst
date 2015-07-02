@@ -1,3 +1,65 @@
+# cmst.icon
+#
+# This icon definition file, located in the user's home directory, can be
+# edited.  The purpose of this file is to facilitate the use of theme icons
+# that are not part of the official Freedesktop.org naming specification. 
+# 
+# QT provides very good icon selection with a fallback mechanism.  In order
+# to use it one must know the name of the theme icon you want.  This is 
+# not a problem with the official named icons, but is if you want to support
+# any icon theme since the name of any icon not part of the official 
+# Freedesktop.org specification is up to the theme author.   
+#
+# This file basically describes the pictures to use for each icon.  Format 
+# of the file is as follows:
+#
+# Comments are the # sign.  Any text on a line after the first # is treated
+# as a comment.
+#
+# Each icon definition starts with the [icon] token and is terminated by a
+# blank line.  Inside each icon block are various sections, each contained
+# on one line. Each section contains a key and value pair separated by an
+# equal (=) sign.
+#
+# icon_name = is the descriptive name of what the icon is to show.  This
+# entry is read and used by the program and should not be edited.
+#
+# resource = is the location of the default picture which is hard coded
+# into the program in a QResource file.  This can be edited provided you
+# select another valid resource which must already exist.  You cannot add
+# resources using this file.  This key/value pair is mandatory.
+#
+# fdo_name = is the name of one of the official Freedesktop.org named icons.
+# This key/value pair is optional.
+#
+# theme_names = is a comma (,) separated list of theme icon names which 
+# are not part of the Freedesktop.org specification. The list will be
+# searched in order looking for each icon name in the current theme.
+# This key/value pair is also optional.
+#
+# The text in a value field may contain the vertical delimiter (|) symbol.
+# If it does the text on each side should be a complete resource path or
+# theme icon name. Text to the left is the ON state of the icon, to the right
+# is the OFF state. This is used for icons which show a different picture
+# depending on state.  Play/Pause in a media player would be a classic example.
+#
+# If this file becomes corrupted by editing or by other means is can be 
+# regenerated simply by deleting it, then stopping and starting CMST.
+#
+# Icon selections at runtime are as follows:
+# If the -i (--icon-theme) command line switch or preferences setting is not
+# used then the resource name specified here is used if found, if not found
+# the hard coded internal icon will be used.
+#
+# If the -i (--icon-theme) command line switch or preferences settings is used     
+# then icons are searched in the following order until one is found:
+#   theme_names from left to right (match will only occur if one of the names
+#               can be found in the current or specified theme.)
+#   fdo_name
+#   resource location as specified in this file
+#   hard coded internal icon
+#
+#
 #
 # application icons
 [icon]
