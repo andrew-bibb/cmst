@@ -8,6 +8,8 @@
 <li>Counter update rate in preferences upper limit changed from 600 seconds to 86400 seconds.</li>
 <li>Minimize to tray when ESC is pressed (by kriesoff).</li>
 <li>Restoring window size and geometry is now independent from the other settings.</li>
+<li>Added -b command line option to bypass restoring window state if that option is set in Preferences.</li>
+<li>Added -B command line option to bypass all startup options set in Preferences.</li>
 </ul>
 <br><b>2015.03.01</b>
 <ul>
