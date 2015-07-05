@@ -159,6 +159,18 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // Read saved settings which will set the ui controls in the preferences tab.
   this->readSettings();
+  
+  // Constructor scope bool, set to true if we are using start options
+  bool b_so = (! parser.isSet("bypass-start-options") && ui.checkBox_usestartoptions->isChecked() );
+  
+  // Restore window if retain_state is checked and we have not bypassed it on the command line
+	if (! parser.isSet("bypass-restore-state") && settings->value("CheckBoxes/retain_state").toBool() ) {
+		settings->beginGroup("MainWindow");
+		resize(settings->value("size", QSize(700, 550)).toSize() );
+		move(settings->value("pos", QPoint(200, 200)).toPoint() );
+		ui.tabWidget->setCurrentIndex(settings->value("current_page").toInt() );
+		settings->endGroup();
+	}
 
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request"));
@@ -167,7 +179,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   if (parser.isSet("icon-theme") )
 		QIcon::setThemeName(parser.value("icon-theme"));
 	else
-		if (ui.checkBox_retainsettings->isChecked() && ui.checkBox_systemicontheme->isChecked() )
+		if (b_so && ui.checkBox_systemicontheme->isChecked() )
 			QIcon::setThemeName(ui.lineEdit_icontheme->text() );
 		else QIcon::setThemeName(INTERNAL_THEME);
 	
@@ -179,44 +191,49 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // set a flag is we want to use XFCE or MATE custom code.
   // Currently (as of 2014.11.24) this is only used to get around a bug between QT5.3 and the XFCE system tray
   // Even then the fix may not work, but for now keep it in.
-  b_usexfce = (parser.isSet("use-xfce") || ui.radioButton_desktopxfce->isChecked() );
-  b_usemate = ( parser.isSet("use-mate") || ui.radioButton_desktopmate->isChecked() );
+  b_usexfce = (parser.isSet("use-xfce") || (b_so && ui.radioButton_desktopxfce->isChecked()) );
+  b_usemate = (parser.isSet("use-mate") || (b_so && ui.radioButton_desktopmate->isChecked()) );
 
   // Fake transparency
-  if (ui.checkBox_faketranparency->isChecked() && ! parser.isSet("fake-transparency") ) {
-    trayiconbackground = QColor(ui.spinBox_faketransparency->value() ); }
-  else  if (parser.isSet("fake-transparency") ) {
+  if (parser.isSet("fake-transparency") ) {
     bool ok;
     trayiconbackground = QColor(parser.value("fake-transparency").toUInt(&ok, 16) );
     if (! ok) trayiconbackground = QColor();
-  } // else if
+  } // if parser set
+  else if (b_so && ui.checkBox_faketranparency->isChecked() ) {
+		trayiconbackground = QColor(ui.spinBox_faketransparency->value() );
+	}	// else if
+	
 
   // set counter update params from command line options if available otherwise
   // default params specified in main.cpp are used.  Set a minimum value for
   // each to maintain program response.
   uint minval = 256;
   uint setval = 0;
-  if (ui.checkBox_counterkb->isChecked() && ! parser.isSet("counter-update-kb") ) {
-    setval = ui.spinBox_counterkb->value(); }
-  else {
-    bool ok;
+  if (parser.isSet("counter-update-kb") ) {
+		bool ok;
     setval = parser.value("counter-update-kb").toUInt(&ok, 10);
     if (! ok) setval = minval;
-  }
-  counter_accuracy = setval > minval ? setval : minval; // number of kb for counter updates
+	}	// if parser set
+  else if (b_so && ui.checkBox_counterkb->isChecked() ) {
+    setval = ui.spinBox_counterkb->value();
+	}	// else if
+	counter_accuracy = setval > minval ? setval : minval; // number of kb for counter updates
 
   minval = 5;
-  if (ui.checkBox_counterseconds->isChecked() && ! parser.isSet("counter-update-rate") ) {
-    setval = ui.spinBox_counterrate->value(); }
-  else {
-    bool ok;
+  setval = 0;
+  if (parser.isSet("counter-update-rate") ) {
+		bool ok;
     setval = parser.value("counter-update-rate").toUInt(&ok, 10);
     if (! ok) setval = minval;
+	}	// if parser set
+  else if (b_so && ui.checkBox_counterseconds->isChecked() ) {
+    setval = ui.spinBox_counterrate->value();
   }
   counter_period = setval > minval ? setval : minval; // number of seconds for counter updates
 
   // connect counter signal to the counterUpdated slot before we register the counter, assuming counters are not disabled
-  if (! parser.isSet("disable-counters") && ! ui.checkBox_disablecounters->isChecked() )
+  if (! parser.isSet("disable-counters") && (b_so ? (! ui.checkBox_disablecounters->isChecked()) : true ) ) 
     connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
 
   // operate on settings not dealt with elsewhere
@@ -247,7 +264,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterAgent", vlist_agent);
 
       // if counters are enabled register the counter
-      if (! parser.isSet("disable-counters")) {
+      if (! parser.isSet("disable-counters") && (b_so ? (! ui.checkBox_disablecounters->isChecked()) : true ) ) {
         QList<QVariant> vlist_counter;
         vlist_counter.clear();
         vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter")) << counter_accuracy << counter_period;;
@@ -314,7 +331,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon.
   trayicon = 0;
-  if (parser.isSet("disable-tray-icon") || ui. checkBox_disabletrayicon->isChecked() ) {
+  if (parser.isSet("disable-tray-icon") || (b_so && ui.checkBox_disabletrayicon->isChecked()) ) {
     ui.checkBox_hideIcon->setDisabled(true);
     this->updateDisplayWidgets();
     this->showNormal(); // no place to minimize to, so showMaximized
@@ -322,16 +339,18 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   else {
     const short mintrigger = 100; // Minimum time (milliseconds) to wait before starting the tray icon.  We advertise zero, but not really.
     int timeout = 0;
-    if (ui.checkBox_waittime->isChecked() && ! parser.isSet("wait-time") ) {
-      timeout = ui.spinBox_waittime->value(); }
-    else {
-      bool ok;
+    if (parser.isSet("wait-time") ) {
+			bool ok;
       timeout = parser.value("wait-time").toInt(&ok, 10);
       if (! ok) timeout = 0;
+		}	// if parser set
+    else if (b_so && ui.checkBox_waittime->isChecked() ) {
+      timeout = ui.spinBox_waittime->value();
     }
+
     timeout *= 1000;
     if (timeout < mintrigger) timeout = mintrigger;
-    if (parser.isSet("minimized") || ui.checkBox_startminimized->isChecked() ) {
+    if (parser.isSet("minimized") || (b_so && ui.checkBox_startminimized->isChecked()) ) {
       QTimer::singleShot(timeout, this, SLOT(createSystemTrayIcon()) );
     } // if showMinimized
     else {
@@ -1743,7 +1762,7 @@ void ControlBox::writeSettings()
   settings->beginGroup("CheckBoxes");
   settings->setValue("hide_tray_icon", ui.checkBox_hideIcon->isChecked() );
   settings->setValue("devices_off", ui.checkBox_devicesoff->isChecked() );
-  settings->setValue("retain_settings", ui.checkBox_retainsettings->isChecked() );
+  settings->setValue("retain_settings", ui.checkBox_usestartoptions->isChecked() );
   settings->setValue("retain_state", ui.checkBox_retainstate->isChecked() );
   settings->setValue("services_less", ui.checkBox_hidecnxn->isChecked() );
   settings->setValue("enable_interface_tooltips", ui.checkBox_enableinterfacetooltips->isChecked() );
@@ -1784,19 +1803,10 @@ void ControlBox::writeSettings()
 // Slot to read GUI settings to disk
 void ControlBox::readSettings()
 {
-	// only restore window if retain_state is checked
-	if (settings->value("CheckBoxes/retain_state").toBool() ) {
-		settings->beginGroup("MainWindow");
-		resize(settings->value("size", QSize(700, 550)).toSize() );
-		move(settings->value("pos", QPoint(200, 200)).toPoint() );
-		ui.tabWidget->setCurrentIndex(settings->value("current_page").toInt() );
-		settings->endGroup();
-	}
-
   settings->beginGroup("CheckBoxes");
   ui.checkBox_hideIcon->setChecked(settings->value("hide_tray_icon").toBool() );
   ui.checkBox_devicesoff->setChecked(settings->value("devices_off").toBool() );
-  ui.checkBox_retainsettings->setChecked(settings->value("retain_settings").toBool() );
+  ui.checkBox_usestartoptions->setChecked(settings->value("retain_settings").toBool() );
   ui.checkBox_retainstate->setChecked(settings->value("retain_state").toBool() );
   ui.checkBox_hidecnxn->setChecked(settings->value("services_less").toBool() );
   ui.checkBox_enableinterfacetooltips->setChecked(settings->value("enable_interface_tooltips").toBool() );

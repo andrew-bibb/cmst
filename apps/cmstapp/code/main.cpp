@@ -74,6 +74,14 @@ int main(int argc, char *argv[])
   QCommandLineParser parser;
   parser.setApplicationDescription(QApplication::translate("main.cpp", "Connman System Tray.") );
   
+  QCommandLineOption bypassState(QStringList() << "b" << "bypass-restore-state",
+		QCoreApplication::translate("main.cpp", "Bypass restoring the window state if restoring window state is specified in the settings file.") );
+  parser.addOption(bypassState);   
+  
+  QCommandLineOption bypassStartOptions(QStringList() << "B" << "bypass-start-options",
+		QCoreApplication::translate("main.cpp", "Bypass restoring any start options in the settings file.") );
+  parser.addOption(bypassStartOptions);  
+  
   QCommandLineOption disableCounters(QStringList() << "c" << "disable-counters",
 		QCoreApplication::translate("main.cpp", "[Experimental] Disable data counters.  May be used to minimize load on your system.") );
   parser.addOption(disableCounters);  
