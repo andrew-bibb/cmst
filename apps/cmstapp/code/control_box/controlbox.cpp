@@ -2232,10 +2232,10 @@ void ControlBox::connectNotifyClient()
       .arg(notifyclient->getServerVersion() )
       .arg(vendor)
       .arg(notifyclient->getServerSpecVersion() );
-    ui.label_serverstatus->clear();
-    ui.label_serverstatus->setDisabled(true);
-    ui.groupBox_notfications->setToolTip(tr("%1 detected").arg(name) );
-    ui.groupBox_notfications->setWhatsThis(lab);
+    //ui.label_serverstatus->clear();
+    //ui.label_serverstatus->setDisabled(true);
+    //ui.groupBox_notfications->setToolTip(tr("%1 detected").arg(name) );
+    //ui.groupBox_notfications->setWhatsThis(lab);
   }
   // not successful, try again or abandon if counter is at limit
   else {
