@@ -688,8 +688,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>579</width>
-               <height>146</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -744,8 +744,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>579</width>
-               <height>146</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -839,7 +839,7 @@
           <item>
            <widget class="QCheckBox" name="checkBox_retainstate">
             <property name="whatsThis">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the state of the GUI will be restored from settings saved on disk. Settings include the geometry and position of the dialog and the current tab. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p&gt;The settings file is: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the state of the GUI will be restored from settings saved on disk. Settings include the geometry and position of the dialog and the current tab. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p&gt;The settings file is: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
              <string>Retain State</string>
@@ -1221,7 +1221,7 @@
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QGroupBox" name="groupBox_notfications">
+        <widget class="QGroupBox" name="groupBox_notifications">
          <property name="enabled">
           <bool>true</bool>
          </property>
