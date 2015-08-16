@@ -40,10 +40,10 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 {
 	// Set the cfg member (path to ${home}/.config/cmst
 	// APP defined in resource.h
-	cfg = QString(qPrintable(QDir::homePath().append(QString("/.config/%1/%1.icon").arg(QString(APP).toLower()))) );	
+	cfg = QDir::homePath().append(QString("/.config/%1/%1.icon").arg(QString(APP).toLower()) );	
 	
 	// Set the qrc data member
-	qrc = QString(qPrintable(QString(":/text/text/icon_def.txt")) );
+	qrc = QString(":/text/text/icon_def.txt");
 	
 	// Initialize icon_map
 	icon_map.clear();
@@ -52,7 +52,7 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 	this->makeLocalFile();	
 	
 	// Create the icon_ map.   
-	QFile f1(cfg);
+	QFile f1(qPrintable(cfg) );
 	if (!f1.open(QIODevice::ReadOnly | QIODevice::Text)) {
 		#if QT_VERSION >= 0x050400 
 			qCritical("Error opening icon_def file: %s", qUtf8Printable(cfg) );
