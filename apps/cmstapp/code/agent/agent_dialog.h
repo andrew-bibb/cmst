@@ -34,7 +34,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QDialog>
 # include <QString>
 # include <QVariant>
-# include <QStringList>
 
 # include "ui_agent.h"
 
@@ -56,8 +55,6 @@ class AgentDialog : public QDialog
   // members
 		Ui::Agent ui;
 		QString sys_env_path;
-		QStringList cli_browsers;
-		QStringList gui_browsers;
 		
 	// functions
 		void initialize();
@@ -66,14 +63,11 @@ class AgentDialog : public QDialog
 		void hidePassphrase(bool);
 		void useWPSPushButton(bool);		
 		void showWhatsThis();
+		void useOtherBrowser(bool);
 		void launchBrowser();
-		void updateBrowserChoice(const QModelIndex&, const QModelIndex&);
-		void enteringBrowser(const QString&);
 		
 	public:
 		inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
-		inline QString getBrowser() {return ui.lineEdit_browser->text();}
-		inline void setBrowser(const QString& b) {ui.lineEdit_browser->setText(b);}
 };
 
 
