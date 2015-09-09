@@ -501,6 +501,7 @@ void ControlBox::moveButtonPressed(QAction* act)
 //  Slot to enable the movebefore and moveafter buttons, and to prepare the poupup menu
 void ControlBox::enableMoveButtons(int row, int col)
 {
+	(void)col;
   // enable the buttons
   ui.pushButton_movebefore->setEnabled(true);
   ui.pushButton_moveafter->setEnabled(true);
@@ -1792,10 +1793,6 @@ void ControlBox::writeSettings()
   settings->setValue("desktop_mate", ui.radioButton_desktopmate->isChecked() );
   settings->endGroup();
 
-  settings->beginGroup("LocalSystem");
-	settings->setValue("browser", agent->getBrowser());
-	settings->endGroup();
-
   return;
 }
 
@@ -1835,11 +1832,7 @@ void ControlBox::readSettings()
   ui.radioButton_desktopxfce->setChecked(settings->value("desktop_xfce").toBool() );
   ui.radioButton_desktopmate->setChecked(settings->value("desktop_mate").toBool() );
   settings->endGroup();
-
-  settings->beginGroup("LocalSystem");
-	agent->setBrowser(settings->value("browser").toString() );
-	settings->endGroup();
-
+  
   return;
 }
 

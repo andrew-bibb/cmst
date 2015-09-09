@@ -246,12 +246,14 @@ void AgentDialog::showWhatsThis()
 //
 void AgentDialog::updateBrowserChoice(const QModelIndex & current, const QModelIndex & previous)
 {
+	(void) previous;
+	
 	ui.lineEdit_browser->setText(current.data().toString());
 }
 //
 //  Slot to clear selection in the browser list view
 //  Called when ui.lineEdit_browser textEdited() signal is emitted
-void AgentDialog::enteringBrowser(const QString&)
+void AgentDialog::enteringBrowser()
 {
 	ui.listView_browsers->selectionModel()->clearSelection();
 }

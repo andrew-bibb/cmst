@@ -55,6 +55,8 @@ class AgentDialog : public QDialog
   // members
 		Ui::Agent ui;
 		QString sys_env_path;
+		QStringList cli_browsers;
+		QStringList gui_browsers;
 		
 	// functions
 		void initialize();
@@ -63,7 +65,8 @@ class AgentDialog : public QDialog
 		void hidePassphrase(bool);
 		void useWPSPushButton(bool);		
 		void showWhatsThis();
-		void useOtherBrowser(bool);
+		void updateBrowserChoice(const QModelIndex&, const QModelIndex&);
+		void enteringBrowser();
 		void launchBrowser();
 		
 	public:

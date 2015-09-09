@@ -498,7 +498,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="351"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1482"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1510"/>
         <source>Move Before</source>
         <translation>上移</translation>
     </message>
@@ -509,7 +509,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="364"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1487"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1515"/>
         <source>Move After</source>
         <translation>下移</translation>
     </message>
@@ -696,416 +696,447 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="829"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the GUI will be restored from settings saved on disk. Settings include the geometry of the dialog and the state of various check boxes, such as this one. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p style=&apos;white-space:pre&apos;&gt;The settings file is: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/cmst/cmst.conf  &lt;/span&gt;&lt;br&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果被勾选，GUI会恢复存储在磁盘上的设置。这些设置包含对话框的位置和一些复选框的勾选状态，例如这个复选框本身。 &lt;/p&gt;&lt;p&gt;这会使GUI在启动时恢复成最后一次退出时的样子。&lt;/p&gt;&lt;p style=&apos;white-space:pre&apos;&gt;设置文件保存在: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/cmst/cmst.conf  &lt;/span&gt;&lt;br&gt;这是一个标准的ini格式的文本文件。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the Start Options set here will be read and used next time the program starts.  &lt;/p&gt;&lt;p&gt;Settings are stored in&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf  &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="832"/>
-        <source>Retain Settings</source>
-        <translation>保存设置</translation>
+        <source>Use Start Options</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="839"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="842"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the state of the GUI will be restored from settings saved on disk. Settings include the geometry and position of the dialog and the current tab. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p&gt;The settings file is: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="845"/>
+        <source>Retain State</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="991"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="994"/>
+        <source>Use Icon Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the GUI will be restored from settings saved on disk. Settings include the geometry of the dialog and the state of various check boxes, such as this one. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p style=&apos;white-space:pre&apos;&gt;The settings file is: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/cmst/cmst.conf  &lt;/span&gt;&lt;br&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果被勾选，GUI会恢复存储在磁盘上的设置。这些设置包含对话框的位置和一些复选框的勾选状态，例如这个复选框本身。 &lt;/p&gt;&lt;p&gt;这会使GUI在启动时恢复成最后一次退出时的样子。&lt;/p&gt;&lt;p style=&apos;white-space:pre&apos;&gt;设置文件保存在: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/cmst/cmst.conf  &lt;/span&gt;&lt;br&gt;这是一个标准的ini格式的文本文件。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Retain Settings</source>
+        <translation type="vanished">保存设置</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="852"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the display of tooltips will be enabled for the interface widgets.&lt;/p&gt;&lt;p&gt;Tooltips are the small popups that appear when you hover the mouse pointer over an area of the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;被勾选上时，UI控件的提示会被启用。&lt;/p&gt;&lt;p&gt;当你用鼠标划过控件事，提示会弹出。 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="842"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="855"/>
         <source>Enable ToolTips (Interface)</source>
         <translation>启用提示</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="852"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="865"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cummulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;通常，统计信息会一直累计，连接时间和接收、传送计数会保留直到下一次启动。 &lt;/p&gt;&lt;p&gt;当勾选上时，每次cmst或connman启动时统计信息会清零。 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="855"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="868"/>
         <source>Reset Counters</source>
         <translation>重置统计</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="862"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="875"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked additional controls for advanced users are displayed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;当勾选时，为高级用户准备的附加设置会显示出来。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="865"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="878"/>
         <source>Advanced Controls</source>
         <translation>高级</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="881"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="894"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;这些条目控制cmst启动时的一些选项。 &lt;/p&gt;&lt;p&gt;所有这些选项可以通过命令行设置，而命令行将会覆盖此处的设置。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="884"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="897"/>
         <source>Start Options</source>
         <translation>启动选项</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="890"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="903"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;命令行选项: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; 或 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;禁用系统托盘图标。&lt;/p&gt;&lt;p&gt;当系统托盘不支持 Freedesktop.org 系统托盘规范时可能需要。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="894"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="907"/>
         <source>Disable Tray Icon</source>
         <translation>禁用系统托盘图标</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="904"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="917"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;此选项已禁用，因为当前connman会接受这个选项但是不会做任何事情。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="907"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="920"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设定在统计更新前必须传输的数据量，以KB表示 (默认是 1024 KB)。&lt;/p&gt;&lt;p&gt;Connman会接受这个选项，但是根据connman的代码注释，这个特性还未实现，因此选项已禁用。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="910"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="923"/>
         <source>Counter Update KB</source>
         <translation>统计更新 KB</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="920"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="933"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设置启动系统托盘前的等待时间，以秒为单位 (默认是 0 秒)。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="939"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="952"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设定在统计更新前必须传输的数据量，以KB表示 (默认是 1024 KB)。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="964"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="977"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;命令行选项: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; 或 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;启动时最小化到托盘。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="968"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="981"/>
         <source>Start Minimized</source>
         <translation>启动时最小化</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="978"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the icon theme from your system if one is defined.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;命令行选项: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; 或 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;命令行选项: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; 或 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用系统图标主题（如果至少一个被定义）。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="982"/>
         <source>Use System Icon Theme</source>
-        <translation>使用系统图标主题</translation>
+        <translation type="vanished">使用系统图标主题</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="989"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1001"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;命令行选项: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; 或 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设置启动系统托盘前的等待时间，以秒为单位 (默认是 0 秒)。&lt;/p&gt;&lt;p&gt;如果 CMST 已启动并尝试在系统托盘启动前启动托盘图标，会弹出一个警告对话框。当程序自动启动时，这有时会发生。如果你确定系统启动时会启动托盘，你可以设置一个等待时间，CMST会在创建托盘图标前等待。这使得在我们把图标放入托盘前，WM或面板有时间创建托盘。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="993"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1005"/>
         <source>Wait Time</source>
         <translation>等待时间</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1000"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1012"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Command Line Option: &lt;span style=&quot; font-weight:600;&quot;&gt;-c&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;--disable-counters&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the counters.  May be used to minimize load on your system.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;命令行选项: &lt;span style=&quot; font-weight:600;&quot;&gt;-c&lt;/span&gt; 或 &lt;span style=&quot; font-weight:600;&quot;&gt;--disable-counters&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;禁用统计。可能减少系统资源消耗。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1004"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1016"/>
         <source>Disable Counters</source>
         <translation>禁用统计</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1014"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1026"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;命令行选项: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设置统计信息更新的频率，以秒为单位 (默认是 10 秒)。 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1018"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1030"/>
         <source>Counter Update Rate </source>
         <translation>统计更新频率</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1041"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1053"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设置统计信息更新的频率，以秒为单位 (默认是 10 秒)。 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1060"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1075"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use code specific for the selected desktop environment.&lt;/p&gt;&lt;p&gt;As of 2014.11.24 there seems to be a problem with QT5.3 and some system trays. There is code in the program to try and work around this issue, and selecting one of these buttons will invoke the code specific to the desktop.&lt;/p&gt;&lt;p&gt;If the bug gets fixed these options will remain so that start up scripts do not break, but the options will do nothing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用为特定DE准备的程序代码。&lt;/p&gt;&lt;p&gt;以2014.11.24的情况，使用 QT5.3 和某些系统托盘会造成问题。程序中一些代码尝试解决这个问题，勾选一项会启用为特定桌面准备的代码。&lt;/p&gt;&lt;p&gt;当问题被修复时，这些选项会保留以避免启动脚本崩溃，但那时这个选项将什么都不做。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1063"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1078"/>
         <source>Desktop Specific</source>
         <translation>特定桌面设置</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1072"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1087"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Default is no desktop specific code.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;默认没有启用任何特定桌面的代码。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1075"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1090"/>
         <source>None</source>
         <translation>无</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1088"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1103"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1091"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1106"/>
         <source>XFCE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1101"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1116"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;命令行选项: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1104"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1119"/>
         <source>MATE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1117"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1132"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB.  If the spedified color matches the tray background we&apos;ve effectively created fake transparency. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;命令行选项: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;解决一个QT问题，该问题会使托盘图标背景为黑色或白色，而不是透明。&lt;/p&gt;&lt;p&gt;你可以在这里指定托盘图标背景颜色。格式为 RRGGBB 的十六进制值。如果制定的颜色与托盘背景颜色相同，我们就成功地伪造了一个透明背景。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1121"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1136"/>
         <source>Fake Transparency</source>
         <translation>伪造托盘图标透明背景</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1131"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1146"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the background color as a hex number in the format: RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;指定背景颜色，以十六进制按照如下格式： RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1150"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1165"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon theme to use. For this theme to be used it must be installed on your system. If the theme is not installed, or if you spell the name wrong CMST will fall back to using its internal icon set.&lt;/p&gt;&lt;p&gt;If this box is blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1178"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the system tray are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;系统托盘相关设置在这一块。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1153"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1181"/>
         <source>System Tray</source>
         <translation>系统托盘</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1159"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1187"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked an icon will not be displayed in the system tray.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;若勾选，不显示托盘图标。  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1162"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1190"/>
         <source>Hide Tray Icon</source>
         <translation>隐藏托盘图标</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1169"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1197"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray icon will popup a status message when you hover the mouse over it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;若勾选，在鼠标划过托盘图标时弹出状态信息。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1172"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1200"/>
         <source>Enable System Tray Popups</source>
         <translation>启用托盘弹框</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1185"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1213"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;若勾选，托盘图标会在connman相关的重要事件发生时弹出通知消息。&lt;/p&gt;&lt;p&gt;通知可被托盘图标处理，或被通知程序处理（如果存在）。  两者不能同时启用。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1188"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1216"/>
         <source>System Tray Notifications</source>
         <translation>系统托盘通知</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1201"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1229"/>
         <source>Notifications</source>
         <translation>通知</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1238"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system desktop notification daemon will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notification daemon if one is installed. Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;若勾选，桌面通知程序会在connman相关的重要事件发生时弹出通知消息。&lt;/p&gt;&lt;p&gt;通知可被托盘图标处理，或被通知程序处理（如果存在）。  两者不能同时启用。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1213"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1241"/>
         <source>Notification Daemon</source>
         <translation>通知程序</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1226"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1254"/>
         <source>Server Status</source>
         <translation>服务状态</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1239"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1267"/>
         <source>Program Control</source>
         <translation>程序控制</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1245"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1273"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will place an entry in the autostart directory for the current user, unchecking will remove said entry. This directory is typically: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST only add or remove the .desktop file from the autostart directory. Autostarting is typically dependent upon your Desktop Environment and must be enabled from there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;若勾选，CMST 会在当前用户的启动目录产生一个启动项，不够选则会移除。目录位置一般为： &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;。 &lt;/p&gt;&lt;p&gt;CMST 只会产生或删除启动项文件夹内的 .desktop 文件。自动启动一般依赖于桌面环境，必须在桌面环境启用。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1248"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1276"/>
         <source>Enable Autostart</source>
         <translation>启用自动启动</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1255"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If a Connman service falls into the &amp;quot;Failed&amp;quot; state it will normally remain in that state.&lt;/p&gt;&lt;p&gt;If this box is checked CMST will try to automatically reconnect a WiFi service that enters the &amp;quot;Failed&amp;quot; state. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果connman变为了 &amp;quot;失败（Failed）&amp;quot; 状态，它一般会保持那个状态。&lt;/p&gt;&lt;p&gt;如果这个复选框被勾选，CMST会尝试重新连接到进入 &amp;quot;失败（Failed）&amp;quot; 状态前的Wifi服务。 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1258"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1286"/>
         <source>Retry Failed Connection</source>
         <translation>失败重新连接</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1282"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1310"/>
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1288"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1316"/>
         <source>&amp;About</source>
         <translation>关于(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1294"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1322"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display a dialog box containing information about this program. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;显示关于本程序的信息的对话框。 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1297"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1325"/>
         <source>C&amp;MST</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1304"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1332"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display a dialog box containing information about the Icon set used in this program. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;显示关于这个程序中使用的图标的对话框。 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1307"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1335"/>
         <source>&amp;AwOken</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1314"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1342"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display a dialog box containing information about the QT toolkit used to develop this program. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;显示关于用于构建本程序的Qt工具包的对话框。 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1317"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1345"/>
         <source>&amp;QT</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1324"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the program license.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用本按钮查看程序许可。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1327"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1355"/>
         <source>&amp;License</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1334"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1362"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the change log of the program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用本按钮查看程序的更新日志。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1337"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1365"/>
         <source>ChangeLo&amp;g</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1375"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1403"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Help&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Program help is mainly provided by the &amp;quot;What&apos;s This&amp;quot; button in the lower left corner. Press the button and then click on an item you are interested in. &amp;quot;What&apos;s This&amp;quot; is also available via context menu by right clicking on a button, box or text area.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;帮助&lt;/span&gt;&lt;/p&gt;&lt;p&gt;程序的帮助信息主要由下方的 &amp;quot;这是什么？&amp;quot; 按钮提供。按下按钮，并单击你想了解的项目。 &amp;quot;这是什么？&amp;quot; 也可通过在条目上右键的上下文菜单访问。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1411"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1439"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;这是什么？&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1414"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1442"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to find information about an element in the GUI by entering &amp;quot;What&apos;s This&amp;quot; mode. &lt;/p&gt;&lt;p&gt;You may also right click on an element to show the &amp;quot;What&apos;s This&amp;quot; text for it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用这个按钮进入 &amp;quot;这是什么？&amp;quot; 模式并查看GUI元素的相关信息。 &lt;/p&gt;&lt;p&gt;你也可以通过在界面元素上右键查看与之相关的 &amp;quot;这是什么？&amp;quot; 信息。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1424"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1452"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the provisioning editor to create or edit Connman configuration (provisioning) files.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. &lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;打开配置（provision）编辑器，创建或编辑connman配置文件。&lt;/p&gt;&lt;p&gt;这些配置文件在 /var/lib/connman ，所有权为 root:root 。 CMST 会注册一个roothelper来读取和写入这个文件夹内的文件。 &lt;/p&gt;&lt;p&gt;为防止root特权滥用，编辑器只会操作后缀为 &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;的文件。这个后缀会在文件保存时自动添加上，并且不能被修改。 &lt;/p&gt;&lt;p&gt;这个编辑器不能编辑或删除其它方式创建的配置文件。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1427"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1455"/>
         <source>Provisioning Editor</source>
         <translation>配置编辑器</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1447"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1475"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exit the program and remove the system tray icon. Connman will still be running as a daemon but will not be managed by this program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;退出程序并移除托盘图标。Connman仍会以守护进程运行，但是不再受本程序管理。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1450"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1478"/>
         <source>E&amp;xit</source>
         <translation>退出(&amp;X)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1470"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1498"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimize the dialog. If you have the system tray Icon shown this dialog may be restored by right clicking on the tray icon. If the tray icon is hidden minimize will not be active.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;最小化对话框。如果系统托盘图标被启用，右键图标可恢复这个对话框。如果托盘图标被隐藏，最小化将不可用。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1473"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="268"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1501"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="289"/>
         <source>Mi&amp;nimize</source>
         <translation>最小化(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="269"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="290"/>
         <source>Ma&amp;ximize</source>
         <translation>最大化(&amp;X)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="272"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="293"/>
         <source>&amp;Exit</source>
         <translation>退出(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="349"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="370"/>
         <source>About %1</source>
         <translation>关于 %1</translation>
     </message>
@@ -1114,459 +1145,459 @@
         <translation type="vanished">&lt;center&gt;%1 是connman守护进程的一个交互程序，并提供系统托盘控制。&lt;br&gt;&lt;center&gt;版本 &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;发布日期: %3&lt;center&gt;版权所有 c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;贡献者:&lt;/b&gt;&lt;center&gt;Brett Dutro&lt;center&gt;Adam Fontenot&lt;center&gt;Lester Bico&lt;br&gt;&lt;center&gt;&lt;b&gt;翻译者:&lt;/b&gt;&lt;center&gt;Ilya Shestopalov (Russian)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="350"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="371"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Contributors:&lt;/b&gt;&lt;center&gt;Brett Dutro&lt;center&gt;Adam Fontenot&lt;center&gt;Lester Bico&lt;center&gt;Yaohan Chen&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="371"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="392"/>
         <source>About AwOken</source>
         <translation>关于 AwOken</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="372"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="393"/>
         <source>&lt;center&gt;This program uses the &lt;b&gt;AwOken&lt;/b&gt; icon set version 2.5&lt;br&gt;&lt;br&gt;Released under the&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;Unported License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;&lt;br&gt;&lt;center&gt;The CMST icon is a derivative work from the AwOken icon set.</source>
         <translation>&lt;center&gt;此程序使用 &lt;b&gt;AwOken&lt;/b&gt; 图标集 版本 2.5&lt;br&gt;&lt;br&gt;在以下许可下发布：&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;Unported License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;&lt;br&gt;&lt;center&gt;CMST 图标是 AwOken 图标集的衍生作品。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="387"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="408"/>
         <source>%1 license is the MIT license.</source>
         <translation>%1 的许可是 MIT license.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="389"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="410"/>
         <source>License</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="397"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="418"/>
         <source>%1 change log is not available.</source>
         <translation>%1 更新日志不可用。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="399"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="420"/>
         <source>ChangeLog</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="498"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="519"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="519"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="524"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="540"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="545"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;服务:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="524"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="545"/>
         <source>Unable to determine service</source>
         <translation>无法确定服务</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="545"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="589"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="612"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="566"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="610"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="633"/>
         <source>No Services Selected</source>
         <translation>未选择服务</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="546"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="567"/>
         <source>You need to select a Wifi service before pressing the connect button.</source>
         <translation>在按下连接按钮之前，你需要选择一个Wifi服务。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="590"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="611"/>
         <source>You need to select a Wifi service before pressing the disconnect button.</source>
         <translation>在按下断开按钮之前，你需要选择一个Wifi服务。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="613"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="634"/>
         <source>You need to select a Wifi service before pressing the remove button.</source>
         <translation>在按下忘记按钮之前，你需要选择一个Wifi服务。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="640"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="661"/>
         <source>Offline Mode Engaged</source>
         <translation>飞行模式已开启</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="644"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="665"/>
         <source>Offline Mode Disabled</source>
         <translation>飞行模式已禁用</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="679"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="692"/>
         <source>%1 (%2) Network</source>
         <translation>%1 (%2) 网络</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="680"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="693"/>
         <source>Connection: %1</source>
         <translation>连接: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="693"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="702"/>
         <source>Network Services:</source>
         <translation>网络服务:</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="694"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="703"/>
         <source>No network services available</source>
         <translation>无可用网络服务</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="919"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="928"/>
         <source>Service Error: %1</source>
         <translation>服务错误: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="920"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="929"/>
         <source>Object Path: %1</source>
         <translation>对象路径: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="986"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1909"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="995"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1898"/>
         <source> Warning</source>
         <translation> 警告</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="987"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="996"/>
         <source>&lt;center&gt;&lt;b&gt;We received a DBUS reply message indicating an error while trying to scan technologies.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Error Name: %1&lt;br&gt;&lt;br&gt;Error Message: %2</source>
         <translation>&lt;center&gt;&lt;b&gt;扫描设备时收到了一个来自DBUS的错误消息。&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;错误名称: %1&lt;br&gt;&lt;br&gt;错误消息: %2</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1102"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1111"/>
         <source>&lt;b&gt;Connection:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;连接:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1105"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1114"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;服务详情:&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1107"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1116"/>
         <source>Service Type: %1&lt;br&gt;</source>
         <translation>服务类型: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1108"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1117"/>
         <source>Service State: %1&lt;br&gt;</source>
         <translation>服务状态: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1109"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1118"/>
         <source>Favorite: %1&lt;br&gt;</source>
         <translation>已保存: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1109"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1118"/>
         <source>Yes</source>
         <comment>favorite</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1109"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1118"/>
         <source>No</source>
         <comment>favorite</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1110"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1119"/>
         <source>External Configuration File: %1&lt;br&gt;</source>
         <translation>外部配置文件: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1110"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1119"/>
         <source>Yes</source>
         <comment>immutable</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1110"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1119"/>
         <source>No</source>
         <comment>immutable</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1112"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
         <source>Auto Connect: %1&lt;br&gt;</source>
         <translation>自动连接: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1112"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
         <source>On</source>
         <comment>autoconnect</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1112"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
         <source>No</source>
         <comment>autoconnect</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1114"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1123"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1116"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1125"/>
         <source>IP Address Acquisition: %1&lt;br&gt;</source>
         <translation>IP 地址获取: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1117"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1124"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1126"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1133"/>
         <source>IP Address: %1&lt;br&gt;</source>
         <translation>IP 地址: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1118"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1127"/>
         <source>IP Netmask: %1&lt;br&gt;</source>
         <translation>IP 子网掩码: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1119"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1130"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1128"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1139"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
         <translation>IP 网关: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1121"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1130"/>
         <source>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1123"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1136"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1132"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1145"/>
         <source>Address Acquisition: %1&lt;br&gt;</source>
         <translation>地址获取: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1127"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1136"/>
         <source>Prefix Length: &lt;br&gt;</source>
         <translation>前缀长度: &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1129"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1138"/>
         <source>Prefix Length: %1&lt;br&gt;</source>
         <translation>前缀长度: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1131"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1140"/>
         <source>Privacy: %1&lt;br&gt;</source>
         <translation>隐私: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1133"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1142"/>
         <source>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;代理&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1138"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1147"/>
         <source>URL: %1&lt;br&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1141"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1150"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation>服务器:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1142"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1151"/>
         <source>Excludes:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation>排除:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1149"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1158"/>
         <source>&lt;br&gt;&lt;b&gt;Name Servers&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;DNS&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1152"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1161"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Time Servers&lt;/b&gt;&lt;br&gt;  </source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;时间服务器&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1155"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1164"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Search Domains&lt;/b&gt;&lt;br&gt;  </source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;搜索域&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1158"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1167"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;以太网&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1160"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1169"/>
         <source>Connection Method: %1&lt;br&gt;</source>
         <translation>连接方式: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1161"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1170"/>
         <source>Interface: %1&lt;br&gt;</source>
         <translation>接口: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1162"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1171"/>
         <source>Device Address: %1&lt;br&gt;</source>
         <translation>设备地址: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1163"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1172"/>
         <source>MTU: %1&lt;br&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1165"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1174"/>
         <source>&lt;br&gt;&lt;b&gt;Wireless&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;无线&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1166"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1586"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1175"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1595"/>
         <source>Security: %1&lt;br&gt;</source>
         <translation>安全性: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1167"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1176"/>
         <source>Strength: %1&lt;br&gt;</source>
         <translation>强度: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1168"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1177"/>
         <source>Roaming: %1&lt;br&gt;</source>
         <translation>漫游: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1168"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1177"/>
         <source>Yes</source>
         <comment>roaming</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1168"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1177"/>
         <source>No</source>
         <comment>roaming</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1303"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1322"/>
         <source>State: </source>
         <translation>状态: </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1309"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1328"/>
         <source>Engaged</source>
         <translation>启用</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1314"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1333"/>
         <source>Disabled</source>
         <translation>禁用</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1317"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1336"/>
         <source>Offline Mode </source>
         <translation>飞行模式</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1350"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1369"/>
         <source>%1On%1%1</source>
         <comment>powered</comment>
         <translation>%1开%1%1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1355"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1374"/>
         <source>%1Off%1%1</source>
         <comment>powered</comment>
         <translation>%1关%1%1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1363"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1382"/>
         <source>Yes</source>
         <comment>connected</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1363"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1382"/>
         <source>No</source>
         <comment>connected</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1369"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1388"/>
         <source>Yes</source>
         <comment>tethered</comment>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1369"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1388"/>
         <source>No</source>
         <comment>tethered</comment>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1465"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1484"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
         <translation>  WiFi 设备:&lt;br&gt;  %1 已找到, %2 已启用</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1544"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1555"/>
         <source>Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.</source>
         <translation>统计更新的阈值是 %L1 KB 的数据和 %L2 秒的时间。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1574"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1585"/>
         <source>Ethernet Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation>以太网连接&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1575"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1586"/>
         <source>Service: %1&lt;br&gt;</source>
         <translation>服务: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1576"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1588"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1587"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1597"/>
         <source>Interface: %1</source>
         <translation>接口: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1583"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1592"/>
         <source>WiFi Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation>WiFi 连接&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1585"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1594"/>
         <source>SSID: %1&lt;br&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1587"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1596"/>
         <source>Strength: %1%&lt;br&gt;</source>
         <translation>强度: %1%&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1607"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1611"/>
         <source>Connection is in the Ready State.</source>
         <comment>icon_tool_tip</comment>
         <translation>连接处于就绪状态。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1618"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1622"/>
         <source>Connection is in the Failure State, attempting to reestablish the connection</source>
         <comment>icon_tool_tip</comment>
         <translation>连接处于失败状态，尝试重新建立连接</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1624"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1626"/>
         <source>Connection is in the Failure State.</source>
         <comment>icon_tool_tip</comment>
         <translation>连接处于失败状态。</translation>
@@ -1578,100 +1609,100 @@
         <translation>未连接</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1641"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1639"/>
         <source>Error retrieving properties via Dbus</source>
         <translation>从DBUS取回属性失败</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1642"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1640"/>
         <source>Connection status is unknown</source>
         <translation>连接状态未知</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1910"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1899"/>
         <source>&lt;center&gt;&lt;b&gt;Unable to find a systemtray on this machine.&lt;/b&gt;&lt;center&gt;&lt;br&gt;The program may still be used to manage your connections, but the tray icon will be disabled.&lt;center&gt;&lt;br&gt;&lt;br&gt;If you are seeing this message at system start up and you know a system tray exists once the system is up, try starting with the &lt;b&gt;-w&lt;/b&gt; switch and set a delay as necessary.  The exact wait time will vary from system to system.</source>
         <translation>&lt;center&gt;&lt;b&gt;未能在此机上找到系统托盘。&lt;/b&gt;&lt;center&gt;&lt;br&gt;此程序仍可用于管理你的连接，但是托盘图标会被禁用。&lt;center&gt;&lt;br&gt;&lt;br&gt;如果你在系统启动时看到这个信息，并且你知道当系统启动时系统托盘存在，尝试用 &lt;b&gt;-w&lt;/b&gt; 参数启动本程序，并在有必要的情况下设置一个延迟时间。  实际的等待时间因不同系统而异。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2141"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2123"/>
         <source>Could not find a connection to the system bus</source>
         <translation>无法连接到system bus</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2142"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2147"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2124"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2129"/>
         <source>%1 - Critical Error</source>
         <translation>%1 - 严重错误</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2143"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2125"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation>无法连接到system bus。&lt;br&gt;&lt;br&gt;%1 将无法与connman通信。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2146"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2128"/>
         <source>Could not create an interface to connman on the system bus</source>
         <translation>无法在 system bus 上创建与connman通信的接口</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2148"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2130"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation>无法在 system bus 上创建与connman通信的接口。&lt;br&gt;&lt;br&gt;%1 将无法与connman通信。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2151"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2133"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
         <translation>在读取或解析connman.Manager.GetProperties时发生错误</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2152"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2157"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2162"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2134"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2139"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2144"/>
         <source>%1 - Warning</source>
         <translation>%1 - 警告</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2153"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2135"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
         <translation>在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 可能不工作。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2156"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2138"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
         <translation>在读取或解析connman.Manager.GetProperties时发生错误</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2158"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2140"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation>在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 部分功能可能仍可以工作。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2161"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2143"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
         <translation>在读取或解析connman.Manager.GetProperties时发生错误</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2163"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2145"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation>在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 部分功能可能仍可以工作。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2248"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2230"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
         <translation>检测到 %1 版本 %2 by %3 。&lt;p&gt;这个服务支持桌面通知规范 版本 %4</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2255"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2237"/>
         <source>%1 detected</source>
         <translation>检测到 %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2261"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2243"/>
         <source>Attempt %1 of 4 looking for notification server.</source>
         <translation>尝试 %1 of 4 查找通知服务。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2264"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2246"/>
         <source>Unable to find or connect to a Notification server.</source>
         <translation>无法找到或连接通知服务。</translation>
     </message>
@@ -2394,37 +2425,37 @@
         <translation>文件读取完成</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="687"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="686"/>
         <source>File deleted</source>
         <translation>文件已删除</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="689"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="688"/>
         <source>Error encountered deleting.</source>
         <translation>删除时发生了错误。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="703"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="702"/>
         <source>File save failed.</source>
         <translation>文件保存失败。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="706"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="705"/>
         <source>%L1 KB written</source>
         <translation>%L1 KB 已写入</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="708"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="707"/>
         <source>%L1 Bytes written</source>
         <translation>%L1 Bytes 已写入</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="720"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="719"/>
         <source> Critical</source>
         <translation>严重错误</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="721"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="720"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
         <translation>&lt;b&gt;DBus 错误 名称:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;字符串:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;消息:&lt;/b&gt; %3</translation>
     </message>
@@ -2743,83 +2774,102 @@
 <context>
     <name>main.cpp</name>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="66"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="69"/>
         <source>Another running instance of CMST has been detected.  This instance is aborting</source>
         <translation>另一个cmst实例正在运行。该实例将退出</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="72"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="75"/>
         <source>Connman System Tray.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="75"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="78"/>
+        <source>Bypass restoring the window state if restoring window state is specified in the settings file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/main.cpp" line="82"/>
+        <source>Bypass restoring any start options in the settings file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/main.cpp" line="86"/>
         <source>[Experimental] Disable data counters.  May be used to minimize load on your system.</source>
         <translation>[实验性] 禁用数据统计。  可能减轻系统负载。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="79"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="90"/>
         <source>Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.</source>
         <translation>禁用系统托盘图标。  可能在系统托盘不符合 Freedesktop.org system tray 规范时需要。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="85"/>
         <source>Use the icon theme from your system if one is defined.</source>
-        <translation>若存在，使用系统图标主题。</translation>
+        <translation type="vanished">若存在，使用系统图标主题。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="89"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="96"/>
+        <source>Use an icon theme from your system.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/main.cpp" line="97"/>
+        <source>Icon Theme Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/main.cpp" line="102"/>
         <source>Log the connman inputRequest for debugging purposes.</source>
         <translation>记录connman的inputRequest日志以供调试。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="93"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="106"/>
         <source>Start the GUI minimized in the system tray.</source>
         <translation>启动GUI时最小化到系统托盘。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="99"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="112"/>
         <source>Specify the wait time in seconds before starting the system tray icon.</source>
         <translation>指定系统托盘启动钱的等待时间，以秒为单位。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="100"/>
-        <location filename="../apps/cmstapp/code/main.cpp" line="112"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="113"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="125"/>
         <source>seconds</source>
         <translation>秒</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="105"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="118"/>
         <source>[Experimental] The number of kb that have to be transmitted before the counter updates.</source>
         <translation>[实验性] 统计更新前传输的数据量，以kb为单位。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="106"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="119"/>
         <source>KB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="111"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="124"/>
         <source>[Experimental] The interval in seconds between counter updates.</source>
         <translation>[实验性] 统计更新的间隔时间，以秒为单位。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="118"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="131"/>
         <source>If tray icon fake transparency is required, specify the background color to use (format: 0xRRGGBB)</source>
         <translation>如果托盘图标需要伪装背景透明，指定要使用的背景颜色 （格式：0xRRGGBB）</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="119"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="132"/>
         <source>RRGGBB</source>
         <translation>RRGGBB</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="126"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="139"/>
         <source>Use XFCE specific code.</source>
         <translation>使用为XFCE准备的代码。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="131"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="144"/>
         <source>Use MATE DE specific code.</source>
         <translation>使用为MATE准备的代码。</translation>
     </message>

@@ -304,6 +304,8 @@ void NotifyClient::closeNotification(quint32 id)
 // Slot called when a notification was closed
 void NotifyClient::notificationClosed(quint32 id, quint32 reason)
 {
+	(void) reason;
+	
 	if (file_map.contains(id) ) {
 		file_map.value(id)->remove();
 		delete file_map.value(id);
@@ -318,7 +320,9 @@ void NotifyClient::notificationClosed(quint32 id, quint32 reason)
 // RIght now we don't do anything with the information
 void NotifyClient::actionInvoked(quint32 id, QString action_key)
 {
-  
+ 
+  (void) id;
+	(void) action_key;
   //qDebug() << "Action invoked signal received" << id << action_key;
   
   return;

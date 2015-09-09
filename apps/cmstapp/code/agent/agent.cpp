@@ -73,6 +73,8 @@ void ConnmanAgent::Release()
 // error in a QMessageBox
 void ConnmanAgent::ReportError(QDBusObjectPath path, QString s_error)
 {
+	(void) path;
+	
 	if ( QMessageBox::warning(qobject_cast<QWidget *> (parent()), tr("Connman Error"),
 		tr("Connman returned the following error:<b><center>%1</b><br>Would you like to retry?").arg(TranslateStrings::cmtr(s_error)),
 		QMessageBox::Yes | QMessageBox::No,
@@ -82,11 +84,13 @@ void ConnmanAgent::ReportError(QDBusObjectPath path, QString s_error)
 	else	return;	
 }
 
-//ff
+//
 // Called when it is required to ask the user to open a website to proceed
 // with login handling
 void ConnmanAgent::RequestBrowser(QDBusObjectPath path, QString url)
 {
+	(void) path;
+	
 	// Send the url to the dialog to have the user the necessary information, return if canceled.	
 	if (this->uiDialog->showPage1(url) == QDialog::Rejected) this->sendErrorReply(ERROR_CANCELED,"User cancelled the dialog");
 	
@@ -98,6 +102,8 @@ void ConnmanAgent::RequestBrowser(QDBusObjectPath path, QString url)
 // A dialog is displayed with the required fields enabled (non-required fields are disabled).
 QVariantMap ConnmanAgent::RequestInput(QDBusObjectPath path, QMap<QString,QVariant> dict)
 {
+	(void) path;
+	
 	// Take the dict returned by DBus and extract the information we are interested in and place in input_map.
 	this->createInputMap(dict);
 	
