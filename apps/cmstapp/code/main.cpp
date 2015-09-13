@@ -168,6 +168,7 @@ int main(int argc, char *argv[])
   QStringList sl = parser.unknownOptionNames();
   if (sl.size() > 0 ) parser.showHelp(1);
   if (parser.isSet("help") ) parser.showHelp(1);
+  if (parser.isSet("version") ) parser.showVersion();
                 
   // signal handler             
   signal(SIGINT, signalhandler);                

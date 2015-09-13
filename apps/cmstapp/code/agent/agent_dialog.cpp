@@ -60,7 +60,7 @@ AgentDialog::AgentDialog(QWidget* parent)
   connect (ui.checkBox_hide_passphrase, SIGNAL(clicked(bool)), this, SLOT(hidePassphrase(bool)));
   connect (ui.checkBox_wps_no_pin, SIGNAL(clicked(bool)), this, SLOT(useWPSPushButton(bool)));  
   connect (ui.pushButton_launch_browser,SIGNAL(clicked()), this, SLOT(launchBrowser())); 
-  connect (ui.lineEdit_browser, SIGNAL(textEdited(const QString&)), this, SLOT(enteringBrowser(const QString&)));
+  connect (ui.lineEdit_browser, SIGNAL(textEdited(const QString&)), this, SLOT(enteringBrowser()));
   
 	// find the PATH of the current environment
 	sys_env_path = QString();
