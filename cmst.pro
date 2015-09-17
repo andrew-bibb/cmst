@@ -15,9 +15,32 @@ TRANSLATIONS += ./translations/cmst_it_IT.ts
 TRANSLATIONS += ./translations/cmst_es_ES.ts
 TRANSLATIONS += ./translations/cmst_es_CO.ts
 
-# if we can't find the cmst.png icon then substitue an fdo icon inside the desktop files.
-!exists( ./images/application/cmst.png ) {
-system(sed -i 's/Icon=cmst/Icon=preferences-system-network/g' "./misc/desktop/cmst.desktop")
-system(sed -i 's/Icon=cmst/Icon=preferences-system-network/g' "./misc/desktop/cmst-autostart.desktop")
+# non-application files which need to be installed
+#
+# documentation (manpage)
+documentation.path = $$CMST_DOC_PATH/man1
+documentation.files = ./misc/manpage/cmst.1.gz
+documentation.CONFIG = no_check_exist
+documentation.extra = gzip --force --keep ./misc/manpage/cmst.1
+INSTALLS += documentation
+
+# application icon
+exists(./images/application/cmst.png) {
+	icon.path = /usr/share/icons/hicolor/24x24/apps
+	icon.files = ./images/application/cmst.png
+	INSTALLS += icon
+} 
+else {
+	system(sed -i 's/Icon=cmst/Icon=preferences-system-network/g' "./misc/desktop/cmst.desktop")
+	system(sed -i 's/Icon=cmst/Icon=preferences-system-network/g' "./misc/desktop/cmst-autostart.desktop")
 }
 
+# desktop file
+desktop.path = /usr/share/applications
+desktop.files = ./misc/desktop/cmst.desktop
+INSTALLS += desktop
+
+# autostart desktop file
+autostart.path = /usr/share/cmst/autostart
+autostart.files = ./misc/desktop/cmst-autostart.desktop
+INSTALLS += autostart
