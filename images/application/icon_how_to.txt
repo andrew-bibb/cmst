@@ -2,3 +2,7 @@ Program icons are located in the ./variations subdirectory.
 
 To build one into the program either copy or symlink the icon you wish
 to use into this directory and call it: cmst.png
+
+If you wish to use the freedesktop theme icon (preferences-system-network) for
+the program icon then simply do not copy or symlink an icon here.  If an icon
+is not found the theme icon will be used instead. 

@@ -14,3 +14,10 @@ TRANSLATIONS += ./translations/cmst_pl_PL.ts
 TRANSLATIONS += ./translations/cmst_it_IT.ts
 TRANSLATIONS += ./translations/cmst_es_ES.ts
 TRANSLATIONS += ./translations/cmst_es_CO.ts
+
+# if we can't find the cmst.png icon then substitue an fdo icon inside the desktop files.
+!exists( ./images/application/cmst.png ) {
+system(sed -i 's/Icon=cmst/Icon=preferences-system-network/g' "./misc/desktop/cmst.desktop")
+system(sed -i 's/Icon=cmst/Icon=preferences-system-network/g' "./misc/desktop/cmst-autostart.desktop")
+}
+

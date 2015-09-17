@@ -61,11 +61,6 @@
 #
 #
 #
-# application icons
-[icon]
-icon_name = cmsticon
-resource = :/icons/images/application/cmst.png
-
 #
 # interface icons
 [icon]

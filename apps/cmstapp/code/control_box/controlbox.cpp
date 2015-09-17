@@ -182,6 +182,13 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 		if (b_so && ui.checkBox_systemicontheme->isChecked() )
 			QIcon::setThemeName(ui.lineEdit_icontheme->text() );
 		else QIcon::setThemeName(INTERNAL_THEME);
+		
+	// Set the window icon.  If an icon was installed to /usr/share/icons/hicolor/24x24/apps
+	// use that, otherwise use a freedesktop.org named one
+	if (QFile::exists("/usr/share/icons/hicolor/24x24/apps/cmst.png") )
+		this->setWindowIcon(QIcon("/usr/share/icons/hicolor/24x24/apps/cmst.png") );
+	else
+		this->setWindowIcon(QIcon::fromTheme("preferences-system-network") );
 	
 	// Set the whatsthis icons
 	ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));

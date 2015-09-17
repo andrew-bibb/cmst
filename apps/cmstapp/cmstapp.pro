@@ -18,6 +18,12 @@ TARGET = cmst
 target.path = /usr/bin
 INSTALLS += target
 
+exists(../../images/application/cmst.png) {
+	icon.path = /usr/share/icons/hicolor/24x24/apps
+	icon.files = ../../images/application/cmst.png
+	INSTALLS += icon
+}
+
 documentation.path = $$CMST_DOC_PATH/man1
 documentation.files = ../../misc/manpage/cmst.1.gz
 documentation.CONFIG = no_check_exist
@@ -31,10 +37,6 @@ INSTALLS += desktop
 autostart.path = /usr/share/cmst/autostart
 autostart.files = ../../misc/desktop/cmst-autostart.desktop
 INSTALLS += autostart
-
-icon.path = /usr/share/icons/hicolor/24x24/apps
-icon.files = ../../images/application/cmst.png
-INSTALLS += icon
 
 # dbus
 DBUS_ADAPTORS 	+= ./code/agent/org.monkey_business_enterprises.agent.xml

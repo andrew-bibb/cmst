@@ -19,10 +19,6 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <property name="windowIcon">
-   <iconset resource="../../../../../cmst.qrc">
-    <normaloff>:/icons/images/application/cmst.png</normaloff>:/icons/images/application/cmst.png</iconset>
-  </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
