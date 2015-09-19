@@ -110,6 +110,7 @@ QVariantMap ConnmanAgent::RequestInput(QDBusObjectPath path, QMap<QString,QVaria
 	// Send our input_map to the dialog to have the user supply the necessary information
 	// needed to continue.  Return if canceled.	
 	if (this->uiDialog->showPage0(input_map) == QDialog::Rejected) this->sendErrorReply(ERROR_CANCELED,"User cancelled the dialog");	
+
 	
 	// Create a return dict and send it back to connman on DBus	 
 	QMap<QString,QVariant> rtn;
