@@ -24,12 +24,17 @@ documentation.CONFIG = no_check_exist
 documentation.extra = gzip --force --keep ./misc/manpage/cmst.1
 INSTALLS += documentation
 
-# application icon
-exists(./images/application/cmst.png) {
-	icon.path = /usr/share/icons/hicolor/24x24/apps
-	icon.files = ./images/application/cmst.png
-	INSTALLS += icon
-} 
+# application icons - scalable icon (used internally) won't be used
+# unless the 24x24 (used for desktop files) exists.
+exists(./images/application/cmst.png) 
+	icon24.path = /usr/share/icons/hicolor/24x24/apps
+	icon24.files = ./images/application/cmst.png
+	INSTALLS += icon24
+	exists(./images/application/cmst.svg) {
+		iconsvg.path = /usr/share/icons/hicolor/scalable/apps
+		iconsvg.files = ./images/application/cmst.svg
+		INSTALLS += iconsvg
+}
 else {
 	system(sed -i 's/Icon=cmst/Icon=preferences-system-network/g' "./misc/desktop/cmst.desktop")
 	system(sed -i 's/Icon=cmst/Icon=preferences-system-network/g' "./misc/desktop/cmst-autostart.desktop")

@@ -185,8 +185,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 		
 	// Set the window icon.  If an icon was installed to /usr/share/icons/hicolor/24x24/apps
 	// use that, otherwise use a freedesktop.org named one
-	if (QFile::exists("/usr/share/icons/hicolor/24x24/apps/cmst.png") )
-		this->setWindowIcon(QIcon("/usr/share/icons/hicolor/24x24/apps/cmst.png") );
+	if (QFile::exists("/usr/share/icons/hicolor/scalable/apps/cmst.svg") )
+		this->setWindowIcon(QIcon("/usr/share/icons/hicolor/scalable/apps/cmst.svg") );
 	else
 		this->setWindowIcon(QIcon::fromTheme("preferences-system-network") );
 	
