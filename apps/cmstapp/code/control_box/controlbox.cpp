@@ -2234,8 +2234,7 @@ void ControlBox::connectNotifyClient()
       .arg(notifyclient->getServerSpecVersion() );
     ui.label_serverstatus->clear();
     ui.label_serverstatus->setDisabled(true);
-    ui.groupBox_notifications->setToolTip(tr("%1 detected").arg(name) );
-    ui.groupBox_notifications->setWhatsThis(lab);
+    ui.groupBox_notifications->setToolTip(lab);
   }
   // not successful, try again or abandon if counter is at limit
   else {
