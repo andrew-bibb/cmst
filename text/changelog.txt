@@ -1,6 +1,6 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<br><b>In Progress</b>
+<br><b>2015.10.03</b>
 <ul>
 <li>Browser selections in Agent dialog improved and added xdg-open option (by Yaohan Chen).</li>
 <li>-i (--icon-theme) command line option will now accept a theme name.</li>
@@ -10,7 +10,7 @@
 <li>Restoring window size and geometry is now independent from the other settings.</li>
 <li>Added -b command line option to bypass restoring window state if that option is set in Preferences.</li>
 <li>Added -B command line option to bypass all startup options set in Preferences.</li>
-<li>New CMST icon (by Progandy).<li>
+<li>New CMST icon (by Progandy).</li>
 </ul>
 <br><b>2015.03.01</b>
 <ul>
