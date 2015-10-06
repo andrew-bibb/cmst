@@ -168,7 +168,14 @@ int main(int argc, char *argv[])
   QStringList sl = parser.unknownOptionNames();
   if (sl.size() > 0 ) parser.showHelp(1);
   if (parser.isSet("help") ) parser.showHelp(1);
-  if (parser.isSet("version") ) parser.showVersion();
+	if (parser.isSet("version") ) 
+		#if QT_VERSION >= 0x050400 
+		parser.showVersion();
+		#else
+    qInfo("%s %s", qPrintable(LONG_NAME), qPrintable(VERSION) );
+    return 0;
+    #endif
+
                 
   // signal handler             
   signal(SIGINT, signalhandler);                
