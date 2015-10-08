@@ -41,9 +41,11 @@ DEALINGS IN THE SOFTWARE.
 # include <QKeyEvent>
 # include <QToolTip>
 # include <QTableWidgetSelectionRange>
+# include <QProcess>
 # include <QProcessEnvironment>
 # include <QCryptographicHash>
 # include <QLocale>
+
 
 # include "../resource.h"
 # include "./controlbox.h"
@@ -245,6 +247,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // operate on settings not dealt with elsewhere
   ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
+  ui.groupBox_process->setVisible(ui.checkBox_advanced->isChecked() );
   enableRunOnStartup(ui.checkBox_runonstartup->isChecked() );
 
   // Create the notifyclient, make four tries; first immediately in constructor, then
@@ -702,6 +705,21 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
       notifyclient->setIcon(iconpath);
       
       this->sendNotifications();
+      
+      // execute external program if specified
+      if (! ui.lineEdit_afterconnect->text().isEmpty()  ) {
+				if (state.contains("online", Qt::CaseInsensitive) ||
+						state.contains("ready", Qt::CaseInsensitive) ) {
+					QString text = ui.lineEdit_afterconnect->text();	
+					text = text.simplified();
+					QStringList args = text.split(' ');
+					QString cmd = args.first();
+					args.removeFirst();
+					QProcess* proc = new QProcess(this);
+					proc->startDetached(cmd, args);	
+				}	// if online or ready		  
+			}	// if lineedit not empty
+				
     } // if services count >
 
     // no services listed
@@ -1799,6 +1817,10 @@ void ControlBox::writeSettings()
   settings->setValue("desktop_xfce", ui.radioButton_desktopxfce->isChecked() );
   settings->setValue("desktop_mate", ui.radioButton_desktopmate->isChecked() );
   settings->endGroup();
+  
+  settings->beginGroup("ExternalPrograms");
+  settings->setValue("run_after_connect", ui.lineEdit_afterconnect->text() );
+  settings->endGroup();
 
   return;
 }
@@ -1838,6 +1860,10 @@ void ControlBox::readSettings()
   ui.radioButton_desktopnone->setChecked(settings->value("desktop_none").toBool() );
   ui.radioButton_desktopxfce->setChecked(settings->value("desktop_xfce").toBool() );
   ui.radioButton_desktopmate->setChecked(settings->value("desktop_mate").toBool() );
+  settings->endGroup();
+  
+  settings->beginGroup("ExternalPrograms");
+  ui.lineEdit_afterconnect->setText(settings->value("run_after_connect").toString() );
   settings->endGroup();
   
   return;
