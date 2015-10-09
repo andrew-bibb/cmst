@@ -657,16 +657,17 @@ void ControlBox::removePressed()
 //  dbs slots are slots to receive DBus Signals
 //
 //  Slot called whenever DBUS issues a PropertyChanged signal
-void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
+void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 {
-  // update propertiesMap
-  properties_map.insert(name, translateVariant(dbvalue.variant()) );
+  // save current state and update propertiesMap
+  QString oldstate = properties_map.value(prop).toString();
+  properties_map.insert(prop, translateVariant(dbvalue.variant()) );
 
   // refresh display widgets
   updateDisplayWidgets();
 
   // offlinemode property
-  if (name.contains("OfflineMode", Qt::CaseInsensitive) ) {
+  if (prop.contains("OfflineMode", Qt::CaseInsensitive) ) {
     notifyclient->init();
     if (dbvalue.variant().toBool()) {
       notifyclient->setSummary(tr("Offline Mode Engaged"));
@@ -679,11 +680,11 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
     this->sendNotifications();  
   } // if contains offlinemode
 
-  if (name.contains("State", Qt::CaseInsensitive) ) {
+  if (prop.contains("State", Qt::CaseInsensitive) ) {
     // local variables
     QString type;
     QString name;
-    QString state;
+    QString state = translateVariant(dbvalue.variant()).toString();
     QString iconpath;
 
     // if there is at least 1 service
@@ -691,7 +692,6 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
         QMap<QString,QVariant> map = services_list.at(0).objmap;
         type = services_list.at(0).objmap.value("Type").toString();
         name = services_list.at(0).objmap.value("Name").toString();
-        state = services_list.at(0).objmap.value("State").toString();
 
       // notification text and icons
       if (type.contains("wifi", Qt::CaseInsensitive) )
@@ -708,8 +708,8 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
       
       // execute external program if specified
       if (! ui.lineEdit_afterconnect->text().isEmpty()  ) {
-				if (state.contains("online", Qt::CaseInsensitive) ||
-						state.contains("ready", Qt::CaseInsensitive) ) {
+				if ((state.contains("ready", Qt::CaseInsensitive) || state.contains("online", Qt::CaseInsensitive)) &&
+					(! oldstate.contains("ready", Qt::CaseInsensitive) && ! oldstate.contains ("online", Qt::CaseInsensitive)) ) {
 					QString text = ui.lineEdit_afterconnect->text();	
 					text = text.simplified();
 					QStringList args = text.split(' ');
@@ -717,10 +717,9 @@ void ControlBox::dbsPropertyChanged(QString name, QDBusVariant dbvalue)
 					args.removeFirst();
 					QProcess* proc = new QProcess(this);
 					proc->startDetached(cmd, args);	
-				}	// if online or ready		  
+				}	// if online or ready and not online before		  
 			}	// if lineedit not empty
-				
-    } // if services count >
+    } // if services count > 0
 
     // no services listed
     else {
