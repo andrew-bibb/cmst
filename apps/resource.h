@@ -1,4 +1,4 @@
-/**************************** resource.h *******************************
+	/**************************** resource.h *******************************
 
 Header file that contains program #defines.  It used to be that we kept
 all program update and version information in this single file.  Now
@@ -35,7 +35,7 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation) 
-#define VERSION "2015.10.09-1"
+#define VERSION "2015.10.10-1"
 #define RELEASE_DATE "3 October 2015"
 #define COPYRIGHT_DATE "2013-2015"
 
