@@ -141,6 +141,8 @@ class ControlBox : public QDialog
     QMenu* trayiconmenu; 
     QActionGroup* minMaxGroup;
     QActionGroup* moveGroup;
+    QActionGroup* servicesGroup;
+    QActionGroup* wifiGroup;
     QAction* minimizeAction;
     QAction* maximizeAction;
     QAction* exitAction;
@@ -193,6 +195,8 @@ class ControlBox : public QDialog
     void toggleTrayIcon(bool);
     void togglePowered(QString, bool);
     void minMaxWindow(QAction* = 0);
+    void servicesGroupTriggered(QAction* = 0);
+    void wifiGroupTriggered(QAction* = 0);
     void getServiceDetails(int);
     void showWhatsThis();
     inline void trayNotifications(bool checked) {if (checked) ui.checkBox_notifydaemon->setChecked(false);}

@@ -294,7 +294,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     } // else have valid connection
   } // else have connected systemBus
 
-  //  add actions
+  //  add actions to groups
   minMaxGroup = new QActionGroup(this);
   minimizeAction = new QAction(tr("Mi&nimize"), this);
   maximizeAction = new QAction(tr("Ma&ximize"), this);
@@ -305,12 +305,26 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   moveGroup = new QActionGroup(this);
   moveGroup->addAction(ui.actionMove_Before);
   moveGroup->addAction(ui.actionMove_After);
+  
+  // services group is filled in dynamically from assembleTrayIcon
+  servicesGroup = new QActionGroup(this);
+  
+  // wifi group is filled dynamically from assembleTrayIcon
+  wifiGroup = new QActionGroup(this);
+  
+  // assign UI actions to controls
+	ui.pushButton_movebefore->addAction(ui.actionMove_Before);
+	ui.pushButton_moveafter->addAction(ui.actionMove_After);
+	ui.pushButton_rescan->addAction(ui.actionRescan);
 
   //  connect signals and slots - actions and action groups
   connect(minMaxGroup, SIGNAL(triggered(QAction*)), this, SLOT(minMaxWindow(QAction*)));
+  connect(servicesGroup, SIGNAL(triggered(QAction*)), this, SLOT(servicesGroupTriggered(QAction*)));
+  connect(wifiGroup, SIGNAL(triggered(QAction*)), this, SLOT(wifiGroupTriggered(QAction*)));
   connect(exitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
   connect(moveGroup, SIGNAL(triggered(QAction*)), this, SLOT(moveButtonPressed(QAction*)));
   connect(mvsrv_menu, SIGNAL(triggered(QAction*)), this, SLOT(moveService(QAction*)));
+  connect(ui.actionRescan, SIGNAL (triggered()), this, SLOT(scanWiFi()));
 
   //  connect signals and slots - ui elements
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
@@ -330,7 +344,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));
   connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
   connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(updateDisplayWidgets()));
-  connect(ui.pushButton_rescan, SIGNAL (clicked()), this, SLOT(scanWiFi()));
   connect(ui.checkBox_systemtraynotifications, SIGNAL (clicked(bool)), this, SLOT(trayNotifications(bool)));
   connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
   connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
@@ -1114,6 +1127,30 @@ void ControlBox::minMaxWindow(QAction* act)
 }
 
 //
+// Called from the systemtrayicon context menu.  Actions are
+// created dynamically and we don't know them up front.  Actions here
+// we want to open the details page and set the combo box to display
+// information on the service.
+void ControlBox::servicesGroupTriggered(QAction* act)
+{
+	ui.tabWidget->setCurrentIndex(1);
+  ui.comboBox_service->setCurrentIndex(ui.comboBox_service->findText(act->text()) );
+  this->showNormal();
+  
+  return;
+}
+
+//
+// Called from the systemtrayicon context menu.  Actions are
+// created dynamically and we don't know them up front.  Actions here
+// connect to a wifi service.
+void ControlBox::wifiGroupTriggered(QAction* act)
+{
+	qDebug() << "wifi group triggered, need code here";
+  return;
+}
+
+//
 //  Slot to get details of the selected service and write it into ui.label_details
 //  Called when the ui.comboBox_services currentIndexChanged() signal is emitted.
 void ControlBox::getServiceDetails(int index)
@@ -1697,15 +1734,31 @@ void ControlBox::assembleTrayIcon()
   // set the menu for the tray icon.  Minimize, maximize and exit actions
   // are defined in the constructor and are controlbox class members)
   trayiconmenu->clear();
-  for (int i = 0; i < services_list.count(); ++i) {
-    QAction* act = new QAction(services_list.at(i).objmap.value("Name").toString(), trayiconmenu);
-    minMaxGroup->addAction(act);
+  
+  // create the servicesGroup
+  QList<QAction*> act_services = servicesGroup->actions();
+  for (int i = 0; i < act_services.count(); ++i) {
+		servicesGroup->removeAction(act_services.at(i));
+		act_services.at(i)->deleteLater();
+	}	// i for
+	
+  for (int j = 0; j < services_list.count(); ++j) {
+    QAction* act = new QAction(services_list.at(j).objmap.value("Name").toString(), servicesGroup);
     trayiconmenu->addAction(act);
-    if (i == services_list.count() - 1 ) trayiconmenu->addSeparator();
-  } // i for
+    if (j == services_list.count() - 1 ) trayiconmenu->addSeparator();
+  } // j for
+  
+  // create the wifiGroup.  
+  QList<QAction*> act_wifi = wifiGroup->actions();
+  for (int k = 0; k < act_wifi.count(); ++k) {
+		wifiGroup->removeAction(act_wifi.at(k));
+		act_wifi.at(k)->deleteLater();
+	}	// k for
+	trayiconmenu->addAction(ui.actionRescan);
+	trayiconmenu->addSeparator();
+	
   trayiconmenu->addAction(maximizeAction);
   trayiconmenu->addAction(minimizeAction);
-  trayiconmenu->addSeparator();
   trayiconmenu->addSeparator();
   trayiconmenu->addAction(exitAction);
 
@@ -1882,6 +1935,7 @@ void ControlBox::createSystemTrayIcon()
     // Create a context menu.  Menu contents is defined in the
     // assembletrayIcon() function.
     trayiconmenu = new QMenu(this);
+    trayiconmenu->setTearOffEnabled(true);
     trayicon->setContextMenu(trayiconmenu);
     connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
 

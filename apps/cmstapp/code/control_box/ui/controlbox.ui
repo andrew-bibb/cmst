@@ -1543,6 +1543,11 @@
     <string>Move After</string>
    </property>
   </action>
+  <action name="actionRescan">
+   <property name="text">
+    <string>Rescan</string>
+   </property>
+  </action>
  </widget>
  <tabstops>
   <tabstop>tabWidget</tabstop>
