@@ -312,11 +312,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // wifi group is filled dynamically from assembleTrayIcon
   wifiGroup = new QActionGroup(this);
   
-  // assign UI actions to controls
-	ui.pushButton_movebefore->addAction(ui.actionMove_Before);
-	ui.pushButton_moveafter->addAction(ui.actionMove_After);
-	ui.pushButton_rescan->addAction(ui.actionRescan);
-
   //  connect signals and slots - actions and action groups
   connect(minMaxGroup, SIGNAL(triggered(QAction*)), this, SLOT(minMaxWindow(QAction*)));
   connect(servicesGroup, SIGNAL(triggered(QAction*)), this, SLOT(servicesGroupTriggered(QAction*)));

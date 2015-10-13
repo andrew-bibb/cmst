@@ -435,8 +435,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>603</width>
-            <height>381</height>
+            <width>98</width>
+            <height>54</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -684,8 +684,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>579</width>
-               <height>142</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -740,8 +740,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>579</width>
-               <height>141</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1420,8 +1420,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>493</width>
-            <height>459</height>
+            <width>98</width>
+            <height>412</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1603,38 +1603,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_moveafter</sender>
-   <signal>clicked()</signal>
-   <receiver>actionMove_After</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>203</x>
-     <y>558</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_movebefore</sender>
-   <signal>clicked()</signal>
-   <receiver>actionMove_Before</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>117</x>
-     <y>558</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>checkBox_waittime</sender>
    <signal>toggled(bool)</signal>
    <receiver>spinBox_waittime</receiver>
@@ -1743,6 +1711,54 @@
     <hint type="destinationlabel">
      <x>325</x>
      <y>424</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_movebefore</sender>
+   <signal>clicked()</signal>
+   <receiver>actionMove_Before</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>480</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_moveafter</sender>
+   <signal>clicked()</signal>
+   <receiver>actionMove_After</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>163</x>
+     <y>480</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_rescan</sender>
+   <signal>clicked()</signal>
+   <receiver>actionRescan</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>571</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
     </hint>
    </hints>
   </connection>
