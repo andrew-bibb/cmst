@@ -138,17 +138,18 @@ class ControlBox : public QDialog
     quint32 counter_period;       
     QDBusInterface* iface_manager;
     QSystemTrayIcon*  trayicon;
-    QMenu* trayiconmenu; 
+    QMenu* trayiconmenu;
+    QMenu* tech_submenu;
+    QMenu* info_submenu;
+    QMenu* wifi_submenu;
+    QMenu* mvsrv_menu; 
     QActionGroup* minMaxGroup;
     QActionGroup* moveGroup;
-    QActionGroup* servicesGroup;
-    QActionGroup* wifiGroup;
     QAction* minimizeAction;
     QAction* maximizeAction;
     QAction* exitAction;
     bool b_usexfce;
     bool b_usemate;
-    QMenu* mvsrv_menu;
     QSettings* settings;
     QString onlineobjectpath;
     QLocalServer* socketserver;
@@ -195,8 +196,9 @@ class ControlBox : public QDialog
     void toggleTrayIcon(bool);
     void togglePowered(QString, bool);
     void minMaxWindow(QAction* = 0);
-    void servicesGroupTriggered(QAction* = 0);
-    void wifiGroupTriggered(QAction* = 0);
+    void techSubmenuTriggered(QAction* = 0);
+    void infoSubmenuTriggered(QAction* = 0);
+    void wifiSubmenuTriggered(QAction* = 0);
     void getServiceDetails(int);
     void showWhatsThis();
     inline void trayNotifications(bool checked) {if (checked) ui.checkBox_notifydaemon->setChecked(false);}

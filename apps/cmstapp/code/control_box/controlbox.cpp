@@ -149,6 +149,10 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   peer_list.clear();
   agent = new ConnmanAgent(this);
   counter = new ConnmanCounter(this);
+  trayiconmenu = new QMenu(this);
+  tech_submenu = new QMenu(tr("Technologies"), this);
+  info_submenu = new QMenu(tr("Service Details"), this);
+  wifi_submenu = new QMenu(tr("WiFi Connections"), this);
   mvsrv_menu = new QMenu(this);
   settings = new QSettings(ORG, APP, this);
   notifyclient = 0;
@@ -305,17 +309,12 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   moveGroup = new QActionGroup(this);
   moveGroup->addAction(ui.actionMove_Before);
   moveGroup->addAction(ui.actionMove_After);
-  
-  // services group is filled in dynamically from assembleTrayIcon
-  servicesGroup = new QActionGroup(this);
-  
-  // wifi group is filled dynamically from assembleTrayIcon
-  wifiGroup = new QActionGroup(this);
-  
+    
   //  connect signals and slots - actions and action groups
   connect(minMaxGroup, SIGNAL(triggered(QAction*)), this, SLOT(minMaxWindow(QAction*)));
-  connect(servicesGroup, SIGNAL(triggered(QAction*)), this, SLOT(servicesGroupTriggered(QAction*)));
-  connect(wifiGroup, SIGNAL(triggered(QAction*)), this, SLOT(wifiGroupTriggered(QAction*)));
+  connect(tech_submenu, SIGNAL(triggered(QAction*)), this, SLOT(techSubmenuTriggered(QAction*)));
+  connect(info_submenu, SIGNAL(triggered(QAction*)), this, SLOT(infoSubmenuTriggered(QAction*)));
+  connect(wifi_submenu, SIGNAL(triggered(QAction*)), this, SLOT(wifiSubmenuTriggered(QAction*)));
   connect(exitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
   connect(moveGroup, SIGNAL(triggered(QAction*)), this, SLOT(moveButtonPressed(QAction*)));
   connect(mvsrv_menu, SIGNAL(triggered(QAction*)), this, SLOT(moveService(QAction*)));
@@ -933,7 +932,7 @@ void ControlBox::dbsTechnologyRemoved(QDBusObjectPath removed)
 }
 
 //
-//  Slots called from objects previous slots were called from Manager)
+//  Slots called from objects.  The previous slots were called from Manager
 //
 //  Slot called whenever a service object issues a PropertyChanged signal on DBUS
 void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalue, QDBusMessage msg)
@@ -1124,9 +1123,26 @@ void ControlBox::minMaxWindow(QAction* act)
 //
 // Called from the systemtrayicon context menu.  Actions are
 // created dynamically and we don't know them up front.  Actions here
+// are to power and unpower technologies
+void ControlBox::techSubmenuTriggered(QAction* act)
+{
+	// find the techology associated with the action and toggle its powered state 
+	for (int i = 0; i < technologies_list.count(); ++i) {
+		if (technologies_list.at(i).objmap.value("Name").toString() == act->text() ) {
+			togglePowered(technologies_list.at(i).objpath.path(), act->isChecked() );
+			break;
+		}	// if
+	}	// for
+	
+  return;
+}
+
+//
+// Called from the systemtrayicon context menu.  Actions are
+// created dynamically and we don't know them up front.  Actions here
 // we want to open the details page and set the combo box to display
 // information on the service.
-void ControlBox::servicesGroupTriggered(QAction* act)
+void ControlBox::infoSubmenuTriggered(QAction* act)
 {
 	ui.tabWidget->setCurrentIndex(1);
   ui.comboBox_service->setCurrentIndex(ui.comboBox_service->findText(act->text()) );
@@ -1139,7 +1155,7 @@ void ControlBox::servicesGroupTriggered(QAction* act)
 // Called from the systemtrayicon context menu.  Actions are
 // created dynamically and we don't know them up front.  Actions here
 // connect to a wifi service.
-void ControlBox::wifiGroupTriggered(QAction* act)
+void ControlBox::wifiSubmenuTriggered(QAction* act)
 {
 	qDebug() << "wifi group triggered, need code here";
   return;
@@ -1627,7 +1643,7 @@ void ControlBox::assembleTrayIcon()
   QString stt = QString();
   int readycount = 0;
   QIcon prelimicon;
-
+  
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
     // count how many services are in the ready state
     for (int i = 0; i < services_list.count(); ++i) {
@@ -1664,7 +1680,7 @@ void ControlBox::assembleTrayIcon()
 
     // else if state is ready
     else if (properties_map.value("State").toString().contains(TranslateStrings::cmtr("ready")) ) {
-        prelimicon = iconman->getIcon("state_ready").pixmap(QSize(16,16) );
+        prelimicon = iconman->getIcon("connection_ready").pixmap(QSize(16,16) );
       stt.append(tr("Connection is in the Ready State.", "icon_tool_tip"));
     } // else if if ready
 
@@ -1685,14 +1701,14 @@ void ControlBox::assembleTrayIcon()
 
     // else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"
     else {
-			prelimicon = iconman->getIcon("state_not_ready").pixmap(QSize(16,16) );
+			prelimicon = iconman->getIcon("connection_not_ready").pixmap(QSize(16,16) );
       stt.append(tr("Not Connected", "icon_tool_tip"));
     } // else any other connection sate
   } // properties if no error
 
   // could not get any properties
   else {
-		prelimicon = iconman->getIcon("state_error").pixmap(QSize(16,16) );
+		prelimicon = iconman->getIcon("connection_error").pixmap(QSize(16,16) );
     stt.append(tr("Error retrieving properties via Dbus"));
     stt.append(tr("Connection status is unknown"));
   }
@@ -1730,31 +1746,56 @@ void ControlBox::assembleTrayIcon()
   // are defined in the constructor and are controlbox class members)
   trayiconmenu->clear();
   
-  // create the servicesGroup
-  QList<QAction*> act_services = servicesGroup->actions();
-  for (int i = 0; i < act_services.count(); ++i) {
-		servicesGroup->removeAction(act_services.at(i));
-		act_services.at(i)->deleteLater();
+  // create the wifi_submenu.  
+  tech_submenu->clear();
+  for (int i = 0; i < technologies_list.count(); ++i) {
+		QAction* act = tech_submenu->addAction(technologies_list.at(i).objmap.value("Name").toString() );
+		act->setCheckable(true);
+		act->setChecked(technologies_list.at(i).objmap.value("Powered").toBool() );
 	}	// i for
-	
-  for (int j = 0; j < services_list.count(); ++j) {
-    QAction* act = new QAction(services_list.at(j).objmap.value("Name").toString(), servicesGroup);
-    trayiconmenu->addAction(act);
-    if (j == services_list.count() - 1 ) trayiconmenu->addSeparator();
-  } // j for
+	if (! tech_submenu->isEmpty() ) trayiconmenu->addMenu(tech_submenu);
   
-  // create the wifiGroup.  
-  QList<QAction*> act_wifi = wifiGroup->actions();
-  for (int k = 0; k < act_wifi.count(); ++k) {
-		wifiGroup->removeAction(act_wifi.at(k));
-		act_wifi.at(k)->deleteLater();
-	}	// k for
+  // create the info_submenu
+  info_submenu->clear();
+  for (int j = 0; j < services_list.count(); ++j) {
+    QAction* act = info_submenu->addAction(services_list.at(j).objmap.value("Name").toString() );
+    if (services_list.at(j).objmap.value("State").toString().contains(TranslateStrings::cmtr("online")) ) {
+			if (services_list.at(0).objmap.value("Type").toString().contains(TranslateStrings::cmtr("ethernet")) )
+				act->setIcon(iconman->getIcon("connection_wired"));
+			else if (services_list.at(0).objmap.value("Type").toString().contains(TranslateStrings::cmtr("wifi")) ) {
+				quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
+        if (str > 80 ) act->setIcon(iconman->getIcon("connection_wifi_100") );
+				else if (str > 60 ) act->setIcon(iconman->getIcon("connection_wifi_075") );  
+					else if (str > 40 )   act->setIcon(iconman->getIcon("connection_wifi_050") );
+						else if (str > 20 )   act->setIcon(iconman->getIcon("connection_wifi_025") );
+							else act->setIcon(iconman->getIcon("connection_wifi_000") );
+			}	// else if wifi
+		}	// if online
+		else if (services_list.at(j).objmap.value("State").toString().contains(TranslateStrings::cmtr("ready")) ) act->setIcon(iconman->getIcon("connection_ready"));
+			else if (services_list.at(j).objmap.value("State").toString().contains(TranslateStrings::cmtr("failure")) ) act->setIcon(iconman->getIcon("connection_failure"));
+				else act->setIcon(iconman->getIcon("connection_not_ready"));
+  } // j for
+  if (! info_submenu->isEmpty() ) trayiconmenu->addMenu(info_submenu);
+
+  // create the wifi_submenu.  
+  wifi_submenu->clear();
+  for (int k = 0; k < wifi_list.count(); ++k) {
+    QAction* act = wifi_submenu->addAction(wifi_list.at(k).objmap.value("Name").toString() );
+    act->setCheckable(true);
+  } // k for		
+  if (! wifi_submenu->isEmpty() ) trayiconmenu->addMenu(wifi_submenu);
+  
+	if (! tech_submenu->isEmpty()	||
+			! info_submenu->isEmpty() ||
+			! wifi_submenu->isEmpty() ) trayiconmenu->addSeparator();
+	
 	trayiconmenu->addAction(ui.actionRescan);
 	trayiconmenu->addSeparator();
 	
   trayiconmenu->addAction(maximizeAction);
   trayiconmenu->addAction(minimizeAction);
   trayiconmenu->addSeparator();
+//  trayiconmenu->addAction(tr("Cancel"), trayiconmenu, SLOT(hide()) );
   trayiconmenu->addAction(exitAction);
 
   return;
@@ -1927,9 +1968,9 @@ void ControlBox::createSystemTrayIcon()
     // Create the systemtrayicon
     trayicon = new QSystemTrayIcon(this);
 
-    // Create a context menu.  Menu contents is defined in the
+    // Start to create the context menu.  Menu contents are defined in the
     // assembletrayIcon() function.
-    trayiconmenu = new QMenu(this);
+    trayiconmenu->clear();
     trayiconmenu->setTearOffEnabled(true);
     trayicon->setContextMenu(trayiconmenu);
     connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
