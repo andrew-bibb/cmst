@@ -1543,6 +1543,19 @@
     <string>Move After</string>
    </property>
   </action>
+  <action name="actionRescan">
+   <property name="text">
+    <string>Rescan</string>
+   </property>
+  </action>
+  <action name="actionOffline_Mode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Offline Mode</string>
+   </property>
+  </action>
  </widget>
  <tabstops>
   <tabstop>tabWidget</tabstop>
@@ -1594,38 +1607,6 @@
     <hint type="destinationlabel">
      <x>163</x>
      <y>611</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_moveafter</sender>
-   <signal>clicked()</signal>
-   <receiver>actionMove_After</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>203</x>
-     <y>558</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_movebefore</sender>
-   <signal>clicked()</signal>
-   <receiver>actionMove_Before</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>117</x>
-     <y>558</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
     </hint>
    </hints>
   </connection>
@@ -1738,6 +1719,70 @@
     <hint type="destinationlabel">
      <x>325</x>
      <y>424</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_movebefore</sender>
+   <signal>clicked()</signal>
+   <receiver>actionMove_Before</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>480</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_moveafter</sender>
+   <signal>clicked()</signal>
+   <receiver>actionMove_After</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>163</x>
+     <y>480</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_rescan</sender>
+   <signal>clicked()</signal>
+   <receiver>actionRescan</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>571</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_devicesoff</sender>
+   <signal>clicked()</signal>
+   <receiver>actionOffline_Mode</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>567</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
     </hint>
    </hints>
   </connection>
