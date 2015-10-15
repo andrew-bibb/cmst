@@ -319,6 +319,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(moveGroup, SIGNAL(triggered(QAction*)), this, SLOT(moveButtonPressed(QAction*)));
   connect(mvsrv_menu, SIGNAL(triggered(QAction*)), this, SLOT(moveService(QAction*)));
   connect(ui.actionRescan, SIGNAL (triggered()), this, SLOT(scanWiFi()));
+  connect(ui.actionOffline_Mode, SIGNAL(triggered(bool)), this, SLOT(toggleOfflineMode(bool)));
 
   //  connect signals and slots - ui elements
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
@@ -326,7 +327,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_exit, SIGNAL(clicked()), exitAction, SLOT(trigger()));
   connect(ui.pushButton_minimize, SIGNAL(clicked()), minimizeAction, SLOT(trigger()));
   connect(ui.checkBox_hideIcon, SIGNAL(clicked(bool)), this, SLOT(toggleTrayIcon(bool)));
-  connect(ui.checkBox_devicesoff, SIGNAL(clicked(bool)), this, SLOT(toggleOfflineMode(bool)));
   connect(ui.pushButton_connect,SIGNAL(clicked()),this, SLOT(connectPressed()));
   connect(ui.pushButton_disconnect,SIGNAL(clicked()),this, SLOT(disconnectPressed()));
   connect(ui.pushButton_remove,SIGNAL(clicked()),this, SLOT(removePressed()));
@@ -590,10 +590,9 @@ void ControlBox::connectPressed()
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
   // don't know why, but can't get the Agent until the timeout, set a short one of 1 millisecond
   iface_serv->setTimeout(1);
-  QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
-
-  // clean up
+  iface_serv->call(QDBus::AutoDetect, "Connect");
   iface_serv->deleteLater();
+  
   return;
 }
 
@@ -613,6 +612,9 @@ void ControlBox::disconnectPressed()
      }
      if (cntr_connected > 1 ) break;
   } // for
+  
+  // If nothing is connected return now
+  if (cntr_connected == 0) return;
 
   // if only one wifi entry is connected or online, select it
   if (cntr_connected == 1 ) {
@@ -1157,9 +1159,24 @@ void ControlBox::infoSubmenuTriggered(QAction* act)
 // connect to a wifi service.
 void ControlBox::wifiSubmenuTriggered(QAction* act)
 {
-	qDebug() << "wifi group triggered, need code here";
+	// find the wifi service associated with the action.
+	for (int i = 0; i < wifi_list.count(); ++i) {
+		if (wifi_list.at(i).objmap.value("Name").toString() == act->text() ) {
+			QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+			iface_serv->setTimeout(1);
+			QString state = wifi_list.at(i).objmap.value("State").toString();
+			if (state.contains(TranslateStrings::cmtr("online")) || state.contains(TranslateStrings::cmtr("ready")) )
+				iface_serv->call(QDBus::AutoDetect, "Disconnect");
+			else 
+				iface_serv->call(QDBus::AutoDetect, "Connect");
+			iface_serv->deleteLater();
+			break;
+		}	// if
+	} 	// for
+	
   return;
 }
+
 
 //
 //  Slot to get details of the selected service and write it into ui.label_details
@@ -1739,23 +1756,28 @@ void ControlBox::assembleTrayIcon()
   } // if trayiconcolor is valid
   trayicon->setIcon(prelimicon);
 
-  //  set the tool tip (shown when mouse hovers over the systemtrayicon)
+  //  Set the tool tip (shown when mouse hovers over the systemtrayicon)
   trayicon->setToolTip(stt);
 
-  // set the menu for the tray icon.  Minimize, maximize and exit actions
-  // are defined in the constructor and are controlbox class members)
-  trayiconmenu->clear();
-  
-  // create the wifi_submenu.  
+  // Assemble the submenus for the context menu
+  // tech_submenu.  
   tech_submenu->clear();
   for (int i = 0; i < technologies_list.count(); ++i) {
 		QAction* act = tech_submenu->addAction(technologies_list.at(i).objmap.value("Name").toString() );
 		act->setCheckable(true);
 		act->setChecked(technologies_list.at(i).objmap.value("Powered").toBool() );
+		QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(technologies_list.at(i).objmap.value("Name").toString()) );
+		ttstr.append(tr("Type: %1").arg(technologies_list.at(i).objmap.value("Type").toString()) );
+		ttstr.append(tr("<br>Powered "));
+		technologies_list.at(i).objmap.value("Powered").toBool() ? ttstr.append(tr("On")) : ttstr.append(tr("Off"));
+		ttstr.append("<br>");
+		technologies_list.at(i).objmap.value("Connected").toBool() ? ttstr.append(tr("Connected")) : ttstr.append(tr("Not Connected"));	
+		ttstr.append(tr("<br>Tethering "));
+		technologies_list.at(i).objmap.value("Tethering").toBool() ? ttstr.append(tr("Enabled")) : ttstr.append(tr("Disabled"));	
+		act->setToolTip(ttstr);
 	}	// i for
-	if (! tech_submenu->isEmpty() ) trayiconmenu->addMenu(tech_submenu);
   
-  // create the info_submenu
+  // info_submenu
   info_submenu->clear();
   for (int j = 0; j < services_list.count(); ++j) {
     QAction* act = info_submenu->addAction(services_list.at(j).objmap.value("Name").toString() );
@@ -1775,29 +1797,27 @@ void ControlBox::assembleTrayIcon()
 			else if (services_list.at(j).objmap.value("State").toString().contains(TranslateStrings::cmtr("failure")) ) act->setIcon(iconman->getIcon("connection_failure"));
 				else act->setIcon(iconman->getIcon("connection_not_ready"));
   } // j for
-  if (! info_submenu->isEmpty() ) trayiconmenu->addMenu(info_submenu);
-
-  // create the wifi_submenu.  
+  
+  // wifi_submenu.  
   wifi_submenu->clear();
   for (int k = 0; k < wifi_list.count(); ++k) {
     QAction* act = wifi_submenu->addAction(wifi_list.at(k).objmap.value("Name").toString() );
     act->setCheckable(true);
+    QString state = wifi_list.at(k).objmap.value("State").toString();
+		if (state.contains(TranslateStrings::cmtr("online")) || state.contains(TranslateStrings::cmtr("ready")) ) act->setChecked(true);
+    QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(wifi_list.at(k).objmap.value("Name").toString()) );
+    ttstr.append(tr("Connection : %1").arg(state));
+    ttstr.append("<br>");
+    ttstr.append(tr("Signal Strength: %1%").arg(wifi_list.at(k).objmap.value("Strength").toInt()) );
+    ttstr.append("<br>");
+    wifi_list.at(k).objmap.value("Favorite").toBool() ? ttstr.append(tr("Favorite Connection")) : ttstr.append(tr("Never Connected"));
+    ttstr.append(tr("<br>Security : %1").arg(wifi_list.at(k).objmap.value("Security").toString()) );
+    if (wifi_list.at(k).objmap.value("Roaming").toBool() ) ttstr.append(tr("<br>Roaming"));
+    ttstr.append(tr("<br>Autoconnect is "));
+    wifi_list.at(k).objmap.value("AutoConnect").toBool() ? ttstr.append(tr("Enabled")) : ttstr.append(tr("Disabled"));
+    act->setToolTip(ttstr);
   } // k for		
-  if (! wifi_submenu->isEmpty() ) trayiconmenu->addMenu(wifi_submenu);
   
-	if (! tech_submenu->isEmpty()	||
-			! info_submenu->isEmpty() ||
-			! wifi_submenu->isEmpty() ) trayiconmenu->addSeparator();
-	
-	trayiconmenu->addAction(ui.actionRescan);
-	trayiconmenu->addSeparator();
-	
-  trayiconmenu->addAction(maximizeAction);
-  trayiconmenu->addAction(minimizeAction);
-  trayiconmenu->addSeparator();
-//  trayiconmenu->addAction(tr("Cancel"), trayiconmenu, SLOT(hide()) );
-  trayiconmenu->addAction(exitAction);
-
   return;
 }
 
@@ -1968,11 +1988,32 @@ void ControlBox::createSystemTrayIcon()
     // Create the systemtrayicon
     trayicon = new QSystemTrayIcon(this);
 
-    // Start to create the context menu.  Menu contents are defined in the
+    // Create the outline of the context menu.  Submenu contents are defined in the
     // assembletrayIcon() function.
     trayiconmenu->clear();
     trayiconmenu->setTearOffEnabled(true);
-    trayicon->setContextMenu(trayiconmenu);
+    trayiconmenu->setToolTipsVisible(true);
+    tech_submenu->setToolTipsVisible(true);
+    info_submenu->setToolTipsVisible(true);
+    wifi_submenu->setToolTipsVisible(true);
+    
+    trayiconmenu->addMenu(tech_submenu);
+    trayiconmenu->addMenu(info_submenu);
+    trayiconmenu->addMenu(wifi_submenu);
+    trayiconmenu->addSeparator();
+    
+    trayiconmenu->addAction(ui.actionRescan);
+		trayiconmenu->addAction(ui.actionOffline_Mode);
+		trayiconmenu->addSeparator();
+	
+		trayiconmenu->addAction(maximizeAction);
+		trayiconmenu->addAction(minimizeAction);
+		trayiconmenu->addSeparator();
+		trayiconmenu->addAction(tr("Cancel"), this, SLOT(closeSystemTrayTearOffMenu()) );
+		trayiconmenu->addAction(exitAction);
+   
+		trayicon->setContextMenu(trayiconmenu);
+    
     connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
 
     // Assemble the tray icon (set the icon to display)
