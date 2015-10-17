@@ -45,6 +45,9 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 	// Set the qrc data member
 	qrc = QString(":/text/text/icon_def.txt");
 	
+	// Color for the colorization function
+	color = QColor(Qt::green);
+	
 	// Initialize icon_map
 	icon_map.clear();
 	

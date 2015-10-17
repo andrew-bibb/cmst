@@ -214,6 +214,7 @@ class ControlBox : public QDialog
     void provisionService();
     void socketConnectionDetected();
     void cleanUp();
+    void callColorDialog();
 };
 
 #endif

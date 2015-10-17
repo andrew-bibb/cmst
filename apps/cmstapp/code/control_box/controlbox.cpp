@@ -45,6 +45,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QProcessEnvironment>
 # include <QCryptographicHash>
 # include <QLocale>
+# include <QColorDialog>
 
 
 # include "../resource.h"
@@ -344,6 +345,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_provisioning_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
   connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
   connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
+  connect(ui.toolButton_colorize, SIGNAL(clicked()), this, SLOT(callColorDialog()));
 
   // tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon.
@@ -1697,7 +1699,7 @@ void ControlBox::assembleTrayIcon()
 
     // else if state is ready
     else if (properties_map.value("State").toString().contains(TranslateStrings::cmtr("ready")) ) {
-        prelimicon = iconman->getIcon("connection_ready").pixmap(QSize(16,16) );
+        prelimicon = iconman->getIcon("connection_ready");
       stt.append(tr("Connection is in the Ready State.", "icon_tool_tip"));
     } // else if if ready
 
@@ -1712,20 +1714,20 @@ void ControlBox::assembleTrayIcon()
           stt.append(tr("Connection is in the Failure State, attempting to reestablish the connection", "icon_tool_tip") );
         } // if wifi and favorite
       } // if retry checked
-      prelimicon = iconman->getIcon("state_online").pixmap(QSize(16,16) );
+      prelimicon = iconman->getIcon("state_online");
       stt.append(tr("Connection is in the Failure State.", "icon_tool_tip"));
     } // else if failure state
 
     // else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"
     else {
-			prelimicon = iconman->getIcon("connection_not_ready").pixmap(QSize(16,16) );
+			prelimicon = iconman->getIcon("connection_not_ready");
       stt.append(tr("Not Connected", "icon_tool_tip"));
     } // else any other connection sate
   } // properties if no error
 
   // could not get any properties
   else {
-		prelimicon = iconman->getIcon("connection_error").pixmap(QSize(16,16) );
+		prelimicon = iconman->getIcon("connection_error");
     stt.append(tr("Error retrieving properties via Dbus"));
     stt.append(tr("Connection status is unknown"));
   }
@@ -1754,6 +1756,7 @@ void ControlBox::assembleTrayIcon()
     prelimicon = QIcon(pxm);
     } // if img has an alpha channel
   } // if trayiconcolor is valid
+
   trayicon->setIcon(prelimicon);
 
   //  Set the tool tip (shown when mouse hovers over the systemtrayicon)
@@ -1908,6 +1911,10 @@ void ControlBox::writeSettings()
   settings->setValue("retry_failed", ui.checkBox_retryfailed->isChecked() );
   settings->setValue("run_on_startup", ui.checkBox_runonstartup->isChecked());
   settings->endGroup();
+  
+  settings->beginGroup("LineEdits");
+  settings->setValue("colorize_icons", ui.lineEdit_colorize->text() );
+  settings->endGroup();  
 
   settings->beginGroup("StartOptions");
   settings->setValue("disable_counters", ui.checkBox_disablecounters->isChecked() );
@@ -1952,6 +1959,11 @@ void ControlBox::readSettings()
   ui.checkBox_retryfailed->setChecked(settings->value("retry_failed").toBool() );
   ui.checkBox_runonstartup->setChecked(settings->value("run_on_startup").toBool());
   settings->endGroup();
+ 
+  settings->beginGroup("LineEdits");
+  ui.lineEdit_colorize->setText(settings->value("colorize_icons").toString() );
+  settings->endGroup();
+  
 
   settings->beginGroup("StartOptions");
   ui.checkBox_disablecounters->setChecked(settings->value("disable_counters").toBool() );
@@ -2476,3 +2488,12 @@ void ControlBox::cleanUp()
   return;
 }
 	
+// 
+// Slot to open the color selection dialog and request input.
+void ControlBox::callColorDialog()
+{
+	QColor color = QColorDialog::getColor(QColor(ui.lineEdit_colorize->text()), this, tr("Colorize Icons"));
+	if (color.isValid() ) ui.lineEdit_colorize->setText(color.name() );
+	
+	return;
+}	
