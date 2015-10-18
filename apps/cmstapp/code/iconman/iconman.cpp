@@ -361,9 +361,9 @@ QPixmap IconManager::colorizeIcon(const QString& res)
 	// Colorize the image
 	QPainter painter(&dest);
 	painter.setCompositionMode(QPainter::CompositionMode_Source);
-  painter.fillRect(dest.rect(), icon_color);
-  painter.setCompositionMode(QPainter::CompositionMode_DestinationAtop);
-  painter.drawImage(0, 0, src);
+	painter.fillRect(dest.rect(), icon_color);
+	painter.setCompositionMode(QPainter::CompositionMode_DestinationAtop);
+	painter.drawImage(0, 0, src);
   
   // Now add overlays - overlay names have the same name as the icon they
   // need to overlay.

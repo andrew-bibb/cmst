@@ -3,6 +3,7 @@
 <br><b>In Progress</b>
 <ul>
 <li>CMST icon by Progandy was reworked and made cleaner by Hagabaka.</li>
+<li>Added feature to run an external program automatically run after a connect. The <i>Advanced Controls</i> checkbox must be checked to access this.<li>
 <li>Expanded functionality of system tray icon menu to toggle power for technologies and to connect or disconnect wifi services.</li>
 <li>System tray menu can be torn off and live in its own window on the desktop.</li>
 <li>Internal icons can be colorized (color selector control on Preferences Tab).</li>
