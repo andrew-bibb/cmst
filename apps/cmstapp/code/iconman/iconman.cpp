@@ -34,6 +34,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QTextStream>
 # include <QDebug>
 # include <QList>
+# include <QPainter>
 
 // Constructor
 IconManager::IconManager(QObject* parent) : QObject(parent) 
@@ -45,8 +46,21 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 	// Set the qrc data member
 	qrc = QString(":/text/text/icon_def.txt");
 	
-	// Color for the colorization function
-	color = QColor(Qt::green);
+	// Color and list of icons for the colorization function
+	icon_color = QColor();
+	colorizelist.clear();
+	colorizelist << ":/icons/images/interface/connect_creating.png"
+								<< ":/icons/images/interface/connect_established.png"
+								<< ":/icons/images/interface/connect_no.png"
+								<< ":/icons/images/interface/favorite.png"
+								<< ":/icons/images/systemtray/connect_creating.png"
+								<< ":/icons/images/systemtray/connect_no.png"
+								<< ":/icons/images/systemtray/wired_established.png"
+								<< ":/icons/images/systemtray/wl000.png"
+								<< ":/icons/images/systemtray/wl025.png"
+								<< ":/icons/images/systemtray/wl050.png"
+								<< ":/icons/images/systemtray/wl075.png"
+								<< ":/icons/images/systemtray/wl100.png";
 	
 	// Initialize icon_map
 	icon_map.clear();
@@ -186,12 +200,18 @@ bool IconManager::buildResourceIcon(QIcon& icon, const QString& name)
 	if (QFileInfo(name_on).exists() ) {
 		if (! name_off.isEmpty() ) {
 			if (QFileInfo(name_off).exists() )
-				icon.addPixmap(name_off, QIcon::Normal, QIcon::Off);
+				if (colorizelist.contains(name_off) )
+					icon.addPixmap(colorizeIcon(name_off), QIcon::Normal, QIcon::Off);
+				else	
+					icon.addPixmap(name_off, QIcon::Normal, QIcon::Off);
 			else
 				return false;
 		}	// if name_off not empty
 		
-		icon.addPixmap(name_on, QIcon::Normal, QIcon::On);
+		if (colorizelist.contains(name_on) )
+			icon.addPixmap(colorizeIcon(name_on), QIcon::Normal, QIcon::On);
+		else	
+			icon.addPixmap(name_on, QIcon::Normal, QIcon::On);
 		return true;
 	}	// if name_on exists
 		
@@ -202,8 +222,8 @@ bool IconManager::buildResourceIcon(QIcon& icon, const QString& name)
 //
 // Function to make an icon from theme file(s).  A reference to the Icon
 // is sent to this function and is modified by this function.  If the name
-// argument contains a comma the name to the left is used for the on state
-// and the next name is used for the off state.  Additional text is ignored.
+// argument contains a | the name to the left is used for the "on" state
+// and the next name is used for the "off" state.  Additional text is ignored.
 // return true if we could find the theme files
 bool IconManager::buildThemeIcon(QIcon& icon, const QString& name)
 {
@@ -331,5 +351,31 @@ QString IconManager::extractKey(const QString& sk)
 	return s.simplified();
 }
 
-
-
+// Function to colorize an icon.  Called from buildResourceIcon and if we
+// get here we've already checked that the resource exists
+QPixmap IconManager::colorizeIcon(const QString& res)
+{
+	QImage src = QImage(res);
+	QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);
+	
+	// Colorize the image
+	QPainter painter(&dest);
+	painter.setCompositionMode(QPainter::CompositionMode_Source);
+  painter.fillRect(dest.rect(), icon_color);
+  painter.setCompositionMode(QPainter::CompositionMode_DestinationAtop);
+  painter.drawImage(0, 0, src);
+  
+  // Now add overlays - overlay names have the same name as the icon they
+  // need to overlay.
+  QFileInfo fi = QFileInfo(res);
+  QString path = ":/icons/images/overlay/";
+  QString fn = fi.fileName();
+  fi.setFile(QString(path + fn) );
+  if (fi.exists() ) {
+		QImage ovl = QImage(fi.absoluteFilePath() );
+		painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
+		painter.drawImage(0, 0, ovl);
+	}
+	
+	return QPixmap::fromImage(dest);
+}

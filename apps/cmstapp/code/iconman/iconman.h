@@ -55,13 +55,15 @@ class IconManager : public QObject
   // functions
 		QIcon getIcon(const QString&);
 		QString getIconName(const QString&);
+		inline void setIconColor(const QColor& col) {icon_color = col;}
   
   private:
   // members
 		QMap<QString, IconElement> icon_map; 
 		QString cfg;
 		QString qrc;
-		QColor color;
+		QColor icon_color;
+		QStringList colorizelist;
 		
 	// functions
 		bool buildResourceIcon(QIcon&, const QString&);
@@ -70,6 +72,7 @@ class IconManager : public QObject
 		void makeLocalFile();	
 		QString extractValue(const QString&);
 		QString extractKey(const QString&);
+		QPixmap colorizeIcon(const QString&);
   
 };
 #endif

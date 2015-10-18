@@ -15,10 +15,13 @@
     <file>translations/cmst_en_US.qm</file>
   </qresource>
   <qresource prefix="icons">
+    <file>images/overlay/connect_no.png</file>
+    <file>images/interface/connect_creating.png</file>
+    <file>images/interface/connect_established.png</file>
     <file>images/systemtray/connect_creating.png</file>
+    <file>images/systemtray/wired_established.png</file>
     <file>images/systemtray/cancel.png</file>
     <file>images/systemtray/connect_no.png</file>
-    <file>images/systemtray/wired_established.png</file>
     <file>images/systemtray/wl000.png</file>
     <file>images/systemtray/wl025.png</file>
     <file>images/systemtray/wl050.png</file>
@@ -26,7 +29,6 @@
     <file>images/systemtray/wl100.png</file>
     <file>images/interface/cancel.png</file>
     <file>images/interface/connect_creating.png</file>
-    <file>images/interface/connect_established.png</file>
     <file>images/interface/connect_no.png</file>
     <file>images/interface/favorite.png</file>
     <file>images/interface/whatsthis.png</file>

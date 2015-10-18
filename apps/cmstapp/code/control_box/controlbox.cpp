@@ -167,6 +167,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // Read saved settings which will set the ui controls in the preferences tab.
   this->readSettings();
   
+  // Set the iconmanager color
+  iconman->setIconColor(QColor(ui.lineEdit_colorize->text()) );
+  
   // Constructor scope bool, set to true if we are using start options
   bool b_so = (! parser.isSet("bypass-start-options") && ui.checkBox_usestartoptions->isChecked() );
   

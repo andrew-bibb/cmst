@@ -1,5 +1,12 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<br><b>In Progress</b>
+<ul>
+<li>CMST icon by Progandy was reworked and made cleaner by Hagabaka.</li>
+<li>Expanded functionality of system tray icon menu to toggle power for technologies and to connect or disconnect wifi services.</li>
+<li>System tray menu can be torn off and live in its own window on the desktop.</li>
+<li>Internal icons can be colorized (color selector control on Preferences Tab).</li>
+</ul>
 <br><b>2015.10.03</b>
 <ul>
 <li>Browser selections in Agent dialog improved and added xdg-open option (by Yaohan Chen).</li>
