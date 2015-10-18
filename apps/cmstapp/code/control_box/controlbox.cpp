@@ -217,11 +217,12 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     trayiconbackground = QColor(parser.value("fake-transparency").toUInt(&ok, 16) );
     if (! ok) trayiconbackground = QColor();
   } // if parser set
-  else if (b_so && ui.checkBox_faketranparency->isChecked() ) {
-		trayiconbackground = QColor(ui.spinBox_faketransparency->value() );
-	}	// else if
+  else
+		if (b_so && ui.checkBox_faketranparency->isChecked() ) {
+			trayiconbackground = QColor(ui.spinBox_faketransparency->value() );
+		}	// if
+		else trayiconbackground = QColor();
 	
-
   // set counter update params from command line options if available otherwise
   // default params specified in main.cpp are used.  Set a minimum value for
   // each to maintain program response.
@@ -349,6 +350,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
   connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
   connect(ui.toolButton_colorize, SIGNAL(clicked()), this, SLOT(callColorDialog()));
+  connect(ui.lineEdit_colorize, SIGNAL(textChanged(const QString&)), this, SLOT(iconColorChanged(const QString&)));
 
   // tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon.
@@ -1737,28 +1739,23 @@ void ControlBox::assembleTrayIcon()
 
   // Set the tray icon.  This will be prelimicon unless fake transparency was requested.
   // If the trayiconbackground color is valid convert the alpha to the
-  // background to get our fake transparency
+  // background to get our fake transparency.  Fake transparency can be set as a command
+  // line option so trayiconbackground is set up in the constructor.
   if (trayiconbackground.isValid() ) {
     // First convert from a QIcon through QPixmap to QImage
     QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
-    QImage img = pxm.toImage();
+    QImage src = pxm.toImage();
     // If the icon has an alpha channel put the background color over any non-colored pixel.
-    if (img.hasAlphaChannel() ) {
-      img = img.convertToFormat(QImage::Format_RGB32);
-      QRgb color;
-      for (int i = 0; i < img.width(); ++i) {
-        for (int j = 0; j < img.height(); ++j) {
-          color = img.pixel(i,j);
-          if (qRed(color) == 0 && qGreen(color) == 0 && qBlue(color) == 0) {
-            img.setPixel(i,j,trayiconbackground.rgb() );
-          } // if background == 0
-        } // j loop
-      } // i loop
-    // Convert the QImage back through a QPixmap to a QIcon
-    pxm = pxm.fromImage(img);
-    prelimicon = QIcon(pxm);
-    } // if img has an alpha channel
-  } // if trayiconcolor is valid
+    if (src.hasAlphaChannel() ) {  
+			QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);
+			QPainter painter(&dest);
+			painter.setCompositionMode(QPainter::CompositionMode_Source);
+			painter.fillRect(dest.rect(), trayiconbackground);
+			painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
+			painter.drawImage(0, 0, src);
+			prelimicon = QIcon(QPixmap::fromImage(dest));
+		}	// if img has alpha channel
+	}	// if trayiconcolor is valid
 
   trayicon->setIcon(prelimicon);
 
@@ -2500,3 +2497,13 @@ void ControlBox::callColorDialog()
 	
 	return;
 }	
+
+//
+// Slot to process things when the user changes the icon color
+void ControlBox::iconColorChanged(const QString& col)
+{
+	iconman->setIconColor(QColor(col) );
+	this->updateDisplayWidgets();
+	
+	return;
+}

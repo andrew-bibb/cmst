@@ -215,6 +215,7 @@ class ControlBox : public QDialog
     void socketConnectionDetected();
     void cleanUp();
     void callColorDialog();
+    void iconColorChanged(const QString&);
 };
 
 #endif
