@@ -140,6 +140,11 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // install global event filter (used to disable showing tooltips)
   qApp->installEventFilter(this);
 
+	// We need this if someone is running the program from the tray popup menu.
+	// The main UI is fine without it, but if you call up the agent dialog and then
+	// close that seems to be treated as the last window.
+	qApp->setQuitOnLastWindowClosed(false);
+  
   // set the window title
   setWindowTitle(TranslateStrings::cmtr("connman system tray"));
 

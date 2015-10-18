@@ -435,13 +435,19 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>54</height>
+            <width>603</width>
+            <height>421</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
            <item>
             <widget class="QLabel" name="label_details_connection">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -470,6 +476,19 @@
               </widget>
              </item>
             </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </widget>
@@ -684,8 +703,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
-               <height>46</height>
+               <width>579</width>
+               <height>162</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -740,8 +759,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
-               <height>46</height>
+               <width>579</width>
+               <height>161</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1466,8 +1485,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>412</height>
+            <width>493</width>
+            <height>499</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
