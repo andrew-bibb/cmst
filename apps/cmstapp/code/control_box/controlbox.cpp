@@ -46,6 +46,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QCryptographicHash>
 # include <QLocale>
 # include <QColorDialog>
+# include <QPainter>
+# include <QImage>
 
 
 # include "../resource.h"
@@ -1659,9 +1661,6 @@ void ControlBox::assemblePage4()
 //
 //  Function to assemble the tray icon tooltip text and picture.  Called
 //  mainly from updateDisplayWidgets(), also from createSystemTrayIcon()
-# include <QPainter>
-# include <QImage>
-# include <QPixmap>
 void ControlBox::assembleTrayIcon()
 {
   QString stt = QString();
