@@ -35,6 +35,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QIcon>
 # include <QMap>
 # include <QColor>
+# include <QMap>
 # include "../resource.h"
 
 struct IconElement
@@ -63,7 +64,7 @@ class IconManager : public QObject
 		QString cfg;
 		QString qrc;
 		QColor icon_color;
-		QStringList colorizelist;
+		QMap<QString,QString> colorizemap;
 		
 	// functions
 		bool buildResourceIcon(QIcon&, const QString&);

@@ -48,19 +48,19 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 	
 	// Color and list of icons for the colorization function
 	icon_color = QColor();
-	colorizelist.clear();
-	colorizelist << ":/icons/images/interface/connect_creating.png"
-								<< ":/icons/images/interface/connect_established.png"
-								<< ":/icons/images/interface/connect_no.png"
-								<< ":/icons/images/interface/favorite.png"
-								<< ":/icons/images/systemtray/connect_creating.png"
-								<< ":/icons/images/systemtray/connect_no.png"
-								<< ":/icons/images/systemtray/wired_established.png"
-								<< ":/icons/images/systemtray/wl000.png"
-								<< ":/icons/images/systemtray/wl025.png"
-								<< ":/icons/images/systemtray/wl050.png"
-								<< ":/icons/images/systemtray/wl075.png"
-								<< ":/icons/images/systemtray/wl100.png";
+	colorizemap.clear();
+		colorizemap[ ":/icons/images/interface/connect_creating.png"]  = QString();
+		colorizemap[ ":/icons/images/interface/connect_established.png"] = QString();
+		colorizemap[ ":/icons/images/interface/connect_no.png"] = QString(":/icons/images/overlay/overlay-warningnet9.png");
+		colorizemap[ ":/icons/images/interface/favorite.png"] = QString();
+		colorizemap[ ":/icons/images/systemtray/connect_creating.png"] = QString();
+		colorizemap[ ":/icons/images/systemtray/connect_no.png"] = QString(":/icons/images/overlay/overlay-warningnet9.png");
+		colorizemap[ ":/icons/images/systemtray/wired_established.png"] = QString();
+		colorizemap[ ":/icons/images/systemtray/wl000.png"] = QString();
+		colorizemap[ ":/icons/images/systemtray/wl025.png"] = QString();
+		colorizemap[ ":/icons/images/systemtray/wl050.png"] = QString();
+		colorizemap[ ":/icons/images/systemtray/wl075.png"] = QString();
+		colorizemap[ ":/icons/images/systemtray/wl100.png"] = QString();
 	
 	// Initialize icon_map
 	icon_map.clear();
@@ -200,7 +200,7 @@ bool IconManager::buildResourceIcon(QIcon& icon, const QString& name)
 	if (QFileInfo(name_on).exists() ) {
 		if (! name_off.isEmpty() ) {
 			if (QFileInfo(name_off).exists() )
-				if (colorizelist.contains(name_off) )
+				if (colorizemap.contains(name_off) )
 					icon.addPixmap(colorizeIcon(name_off), QIcon::Normal, QIcon::Off);
 				else	
 					icon.addPixmap(name_off, QIcon::Normal, QIcon::Off);
@@ -208,7 +208,7 @@ bool IconManager::buildResourceIcon(QIcon& icon, const QString& name)
 				return false;
 		}	// if name_off not empty
 		
-		if (colorizelist.contains(name_on) )
+		if (colorizemap.contains(name_on) )
 			icon.addPixmap(colorizeIcon(name_on), QIcon::Normal, QIcon::On);
 		else	
 			icon.addPixmap(name_on, QIcon::Normal, QIcon::On);
@@ -367,14 +367,13 @@ QPixmap IconManager::colorizeIcon(const QString& res)
   
   // Now add overlays - overlay names have the same name as the icon they
   // need to overlay.
-  QFileInfo fi = QFileInfo(res);
-  QString path = ":/icons/images/overlay/";
-  QString fn = fi.fileName();
-  fi.setFile(QString(path + fn) );
-  if (fi.exists() ) {
-		QImage ovl = QImage(fi.absoluteFilePath() );
-		painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
-		painter.drawImage(0, 0, ovl);
+	if (colorizemap.contains(res) ) {
+		QFileInfo fi = QFileInfo(colorizemap.value(res) );
+		if (fi.exists() ) {
+			QImage ovl = QImage(fi.absoluteFilePath() );
+			painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
+			painter.drawImage(0, 0, ovl);
+		}
 	}
 	
 	return QPixmap::fromImage(dest);
