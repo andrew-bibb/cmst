@@ -35,6 +35,9 @@ DEALINGS IN THE SOFTWARE.
 # include <QDebug>
 # include <QList>
 # include <QPainter>
+# include <QCryptographicHash>
+# include <QSettings>
+# include <QMessageBox>
 
 // Constructor
 IconManager::IconManager(QObject* parent) : QObject(parent) 
@@ -305,26 +308,108 @@ QString IconManager::getFallback(const QString& name)
 // Function to make a local version of the configuration fiqle
 void IconManager::makeLocalFile()
 {
-	// if the conf file exists return now
-	if (QFileInfo::exists(cfg) )
-		return;
-		
-		
-	// make the directory if it does not exist and copy the hardconded
-	// conf file to the directory
-	QDir d;
-	if (d.mkpath(QFileInfo(cfg).path()) ) {
-		QFile s(qrc);	
-		if (s.copy(cfg) ) 
-			QFile::setPermissions(cfg, QFileDevice::ReadOwner | QFileDevice::WriteOwner);
-		else	
-		#if QT_VERSION >= 0x050400 
-			qCritical("Failed copying the icon definition file from %s to %s", qUtf8Printable(qrc), qUtf8Printable(cfg) );
-		#else	
-			qCritical("Failed copying the icon definition file from %s to %s", qPrintable(qrc), qPrintable(cfg) );		
-		#endif
-	}	// if mkpath returned ture			
+	// constants
+	const int maxloop = 50;
+	
+	// Get information about the last installed icon def file from the settings
+	QSettings* settings = new QSettings(ORG, APP, this);
+	settings->beginGroup("IconManager");
+  QString lastmd5 = settings->value("last_installed_icon_def_file").toString();
+  settings->endGroup();
   
+  // Get the MD5 sum of the current
+  QFile src(qrc);	
+  QCryptographicHash hash(QCryptographicHash::Md5);
+  hash.addData(&src);
+  QString currentmd5 = QString::fromLatin1(hash.result().toHex() ); 
+ 
+	// If the user's local conf file exists
+	if (QFileInfo::exists(cfg) ) {
+		if (lastmd5 == currentmd5) {	// this should be the typical case
+			settings->deleteLater();
+			return;		
+		}
+		
+		// MD5 sums don't match so make a backup of the existing local file
+		else {
+			// Find a backup name we can use
+			int ctr = 0;
+			QString bak;
+			do {
+				bak = QString(cfg + ".%1").arg(++ctr, 2, 10, QChar('0'));
+			} while (QFileInfo::exists(bak) && ctr <= maxloop);
+			
+			// Now make the backup
+			QFile f_cfg(cfg);
+			if (ctr <= maxloop && f_cfg.copy(bak) ) { 
+				QMessageBox::StandardButton dia_rtn = QMessageBox::information(0, QString(APP),
+					tr("A new icon definition file will be installed to <b>%1</b> and a backup of the old definition file has been created as <b>%2</b> \
+						<p>If the original definition file was customized you wish to retain those changes you will need to manually merge them into the new file.	\
+						<p>If the original was never customized or you just wish to delete the backup now you may select <i>Discard</i> to delete the backup or <i>Save</i> to retain it.").arg(cfg).arg(bak),
+					QMessageBox::Save | QMessageBox::Discard,
+					QMessageBox::Save);
+				if (dia_rtn == QMessageBox::Discard)
+					if (! QFile::remove(bak))
+					#if QT_VERSION >= 0x050400 
+						qCritical("Failed to remove the backup file: %s", qUtf8Printable(bak) );
+					#else	
+						qCritical("Failed to remove the backup file: %s", qPrintable(bak) );		
+					#endif
+			}	// if creating a backup copy worked		
+			else {	
+			#if QT_VERSION >= 0x050400 
+				qCritical("Failed creating the icon definition backup file: %s", qUtf8Printable(bak) );
+			#else	
+				qCritical("Failed creating the icon definition backup file: %s", qPrintable(bak) );		
+			#endif
+				settings->deleteLater();
+				return;
+			}	// else creating a backup failed so return, don't continue
+			
+			// Have a backup, now create the new file
+			QFile::remove(cfg);
+			if (src.copy(cfg) ) { 
+				QFile::setPermissions(cfg, QFileDevice::ReadOwner | QFileDevice::WriteOwner);
+				settings->beginGroup("IconManager");
+				settings->setValue("last_installed_icon_def_file", currentmd5);
+				settings->endGroup();
+			}	// if creating new file worked
+			else {	
+			#if QT_VERSION >= 0x050400 
+				qCritical("Failed creating a new icon definition file: %s", qUtf8Printable(qrc) );
+			#else	
+				qCritical("Failed creating a new icon definition file: %s", qPrintable(qrc) );		
+			#endif
+			}	// failed creating the new file (next step is return so no reason to call it here)
+		}	// qrc is different than the last installed
+	}	// if local icon_def exists
+	
+	// Local icon_def does not exist so create the directory (if need be) and copy the icon_def file
+	else {
+		QDir d;
+		if (d.mkpath(QFileInfo(cfg).path()) ) {
+			if (src.copy(cfg) ) { 
+				QFile::setPermissions(cfg, QFileDevice::ReadOwner | QFileDevice::WriteOwner);
+				settings->beginGroup("IconManager");
+				settings->setValue("last_installed_icon_def_file", currentmd5);
+				settings->endGroup();
+			}	// if creating new file worked
+			else	
+			#if QT_VERSION >= 0x050400 
+				qCritical("Failed creating a new icon definition file: %s", qUtf8Printable(qrc) );
+			#else	
+				qCritical("Failed creating a new icon definition file: %s", qPrintable(qrc) );		
+			#endif
+		}	// if mkpath returned true
+		else 
+		#if QT_VERSION >= 0x050400 
+			qCritical("Failed creating directory %s for the icon definition file.", qUtf8Printable(QFileInfo(cfg).path()) );
+		#else	
+			qCritical("Failed creating directory %s for the icon definition file.", qPrintable(QFileInfo(cfg).path()) );
+		#endif
+	}	// else local icon_def did not exist			
+  
+  settings->deleteLater();
 	return;
 }
 

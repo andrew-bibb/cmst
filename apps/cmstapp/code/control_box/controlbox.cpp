@@ -174,7 +174,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // Read saved settings which will set the ui controls in the preferences tab.
   this->readSettings();
   
-  // Set the iconmanager color
+  // Set the iconmanager color and md5 from the last conf file saved
   iconman->setIconColor(QColor(ui.lineEdit_colorize->text()) );
   
   // Constructor scope bool, set to true if we are using start options
@@ -1940,7 +1940,7 @@ void ControlBox::writeSettings()
   settings->beginGroup("ExternalPrograms");
   settings->setValue("run_after_connect", ui.lineEdit_afterconnect->text() );
   settings->endGroup();
-
+  
   return;
 }
 

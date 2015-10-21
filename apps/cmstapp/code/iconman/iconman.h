@@ -66,6 +66,7 @@ class IconManager : public QObject
 		QColor icon_color;
 		QMap<QString,QString> colorizemap;
 		
+		
 	// functions
 		bool buildResourceIcon(QIcon&, const QString&);
 		bool buildThemeIcon(QIcon&, const QString&);	
