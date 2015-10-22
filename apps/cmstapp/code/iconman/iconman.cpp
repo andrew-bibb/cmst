@@ -191,8 +191,8 @@ QString IconManager::getIconName(const QString& name)
 //
 // Function to make an icon from resource file(s).  A reference to the Icon
 // is sent to this function and is modified by this function.  If the name
-// argument contains a comma the name to the left is used for the on state
-// and the next name is used for the off state.  Additional text is ignored.
+// argument contains a | the name to the left is used for the "on" state
+// and the next name is used for the "off" state.  Additional text is ignored.
 // return true if we could find the resource files
 bool IconManager::buildResourceIcon(QIcon& icon, const QString& name)
 {
@@ -319,9 +319,12 @@ void IconManager::makeLocalFile()
   
   // Get the MD5 sum of the current
   QFile src(qrc);	
+  src.open(QIODevice::ReadOnly);
   QCryptographicHash hash(QCryptographicHash::Md5);
   hash.addData(&src);
-  QString currentmd5 = QString::fromLatin1(hash.result().toHex() ); 
+  src.close();
+  QString currentmd5 = QString::fromLatin1(hash.result().toHex() );   
+   
  
 	// If the user's local conf file exists
 	if (QFileInfo::exists(cfg) ) {
