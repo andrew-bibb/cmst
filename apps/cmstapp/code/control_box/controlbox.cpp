@@ -416,12 +416,13 @@ void ControlBox::aboutCMST()
                   "<center>Ilya Shestopalov (Russian)"
                   "<br><center><b>Build Information:</b>"
                   "<center>Compiled using QT version %5"
-                  "<center>Built %6 UTC")	.arg(TranslateStrings::cmtr("cmst"))
+                  "<center>Built %6 - %7")	.arg(TranslateStrings::cmtr("cmst"))
 																						.arg(VERSION)
 																						.arg(RELEASE_DATE)
 																						.arg(COPYRIGHT_DATE)
 																						.arg(QT_VERSION_STR)
-																						.arg(QDateTime::currentDateTimeUtc().toString("dddd MMMM d, yyyy - H:mm")) );
+																						.arg(__DATE__)
+																						.arg(__TIME__) );
 }
 
 //
