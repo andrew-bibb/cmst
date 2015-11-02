@@ -371,7 +371,8 @@ void IconManager::makeLocalFile()
 			
 			// Have a backup, now create the new file
 			QFile::remove(cfg);
-			if (src.copy(cfg) ) { 
+			QFile s(qrc);
+			if (s.copy(cfg) ) { 
 				QFile::setPermissions(cfg, QFileDevice::ReadOwner | QFileDevice::WriteOwner);
 				settings->beginGroup("IconManager");
 				settings->setValue("last_installed_icon_def_file", currentmd5);
@@ -391,7 +392,8 @@ void IconManager::makeLocalFile()
 	else {
 		QDir d;
 		if (d.mkpath(QFileInfo(cfg).path()) ) {
-			if (src.copy(cfg) ) { 
+			QFile s(qrc);
+			if (s.copy(cfg) ) { 
 				QFile::setPermissions(cfg, QFileDevice::ReadOwner | QFileDevice::WriteOwner);
 				settings->beginGroup("IconManager");
 				settings->setValue("last_installed_icon_def_file", currentmd5);
