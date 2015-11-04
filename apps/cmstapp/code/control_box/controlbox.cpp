@@ -1769,6 +1769,15 @@ void ControlBox::assembleTrayIcon()
 			prelimicon = QIcon(QPixmap::fromImage(dest));
 		}	// if img has alpha channel
 	}	// if trayiconcolor is valid
+	else {
+		QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
+    QImage src = pxm.toImage();
+		QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);
+		QPainter painter(&dest);
+		painter.setCompositionMode(QPainter::CompositionMode_Source);
+		painter.drawImage(0, 0, src);
+		prelimicon = QIcon(QPixmap::fromImage(dest));
+	}
 
   trayicon->setIcon(prelimicon);
 
