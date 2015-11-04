@@ -180,6 +180,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // Constructor scope bool, set to true if we are using start options
   bool b_so = (! parser.isSet("bypass-start-options") && ui.checkBox_usestartoptions->isChecked() );
   
+  // Enable or disable preferences group box (changed via ui signal/slot after the constructor)
+  ui.groupBox_startoptions->setEnabled(ui.checkBox_usestartoptions->isChecked());
+  
   // Restore window if retain_state is checked and we have not bypassed it on the command line
 	if (! parser.isSet("bypass-restore-state") && settings->value("CheckBoxes/retain_state").toBool() ) {
 		settings->beginGroup("MainWindow");
@@ -1750,35 +1753,28 @@ void ControlBox::assembleTrayIcon()
     stt.append(tr("Connection status is unknown"));
   }
 
-  // Set the tray icon.  This will be prelimicon unless fake transparency was requested.
-  // If the trayiconbackground color is valid convert the alpha to the
-  // background to get our fake transparency.  Fake transparency can be set as a command
+  // Set the tray icon.  If the trayiconbackground color is valid and 
+  // there is a valid alpha channel convert the alpha to the background
+  // color to get our fake transparency.  Fake transparency can be set as a command
   // line option so trayiconbackground is set up in the constructor.
-  if (trayiconbackground.isValid() ) {
-    // First convert from a QIcon through QPixmap to QImage
-    QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
-    QImage src = pxm.toImage();
-    // If the icon has an alpha channel put the background color over any non-colored pixel.
-    if (src.hasAlphaChannel() ) {  
-			QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);
-			QPainter painter(&dest);
-			painter.setCompositionMode(QPainter::CompositionMode_Source);
-			painter.fillRect(dest.rect(), trayiconbackground);
-			painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
-			painter.drawImage(0, 0, src);
-			prelimicon = QIcon(QPixmap::fromImage(dest));
-		}	// if img has alpha channel
-	}	// if trayiconcolor is valid
+  // Otherwise just convert the image to ARGB32 which seems to be required
+  // for the icons to display in Plasma5.
+  // First convert from a QIcon through QPixmap to QImage
+  QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
+  QImage src = pxm.toImage();  
+ 	QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);
+	QPainter painter(&dest); 
+  if (trayiconbackground.isValid() && src.hasAlphaChannel() ) {
+		painter.setCompositionMode(QPainter::CompositionMode_Source);
+		painter.fillRect(dest.rect(), trayiconbackground);
+		painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
+		painter.drawImage(0, 0, src);			
+		}	// if img has alpha channel and background color valid
 	else {
-		QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
-    QImage src = pxm.toImage();
-		QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);
-		QPainter painter(&dest);
 		painter.setCompositionMode(QPainter::CompositionMode_Source);
 		painter.drawImage(0, 0, src);
-		prelimicon = QIcon(QPixmap::fromImage(dest));
 	}
-
+	prelimicon = QIcon(QPixmap::fromImage(dest));
   trayicon->setIcon(prelimicon);
 
   //  Set the tool tip (shown when mouse hovers over the systemtrayicon)
