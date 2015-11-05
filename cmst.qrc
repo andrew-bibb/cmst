@@ -15,24 +15,18 @@
     <file>translations/cmst_en_US.qm</file>
   </qresource>
   <qresource prefix="icons">
-    <file>images/overlay/overlay-warningnet9.png</file>
-    <file>images/interface/connect_creating.png</file>
-    <file>images/interface/connect_established.png</file>
-    <file>images/systemtray/connect_creating.png</file>
-    <file>images/systemtray/wired_established.png</file>
-    <file>images/systemtray/cancel.png</file>
-    <file>images/systemtray/connect_no.png</file>
-    <file>images/systemtray/wl000.png</file>
-    <file>images/systemtray/wl025.png</file>
-    <file>images/systemtray/wl050.png</file>
-    <file>images/systemtray/wl075.png</file>
-    <file>images/systemtray/wl100.png</file>
-    <file>images/interface/cancel.png</file>
-    <file>images/interface/connect_creating.png</file>
-    <file>images/interface/connect_no.png</file>
-    <file>images/interface/favorite.png</file>
-    <file>images/interface/whatsthis.png</file>
     <file>images/interface/golfball_green.png</file>
     <file>images/interface/golfball_red.png</file>
+    <file>images/raw_art/application-exit1.png</file>
+    <file>images/raw_art/info2.png</file>
+    <file>images/raw_art/network-idle.png</file>
+    <file>images/raw_art/network-offline.png</file>
+    <file>images/raw_art/network-transmit-receive.png</file>
+    <file>images/raw_art/nm-signal-00.png</file>
+    <file>images/raw_art/nm-signal-25.png</file>
+    <file>images/raw_art/nm-signal-50.png</file>
+    <file>images/raw_art/nm-signal-75.png</file>
+    <file>images/raw_art/nm-signal-100.png</file>
+    <file>images/overlay/overlay-warningnet9.png</file>
   </qresource>
 </RCC>

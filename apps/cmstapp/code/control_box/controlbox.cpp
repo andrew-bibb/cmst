@@ -2522,6 +2522,8 @@ void ControlBox::iconColorChanged(const QString& col)
 {
 	iconman->setIconColor(QColor(col) );
 	this->updateDisplayWidgets();
+	ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));
+	agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
 	
 	return;
 }

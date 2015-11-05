@@ -41,8 +41,9 @@ DEALINGS IN THE SOFTWARE.
 struct IconElement
 {
 	QString resource_path;
+	QString colorize;
 	QString fdo_name;
-	QStringList name_list;
+	QStringList theme_names;
 };
 
 class IconManager : public QObject
@@ -64,17 +65,15 @@ class IconManager : public QObject
 		QString cfg;
 		QString qrc;
 		QColor icon_color;
-		QMap<QString,QString> colorizemap;
-		
 		
 	// functions
-		bool buildResourceIcon(QIcon&, const QString&);
+		bool buildResourceIcon(QIcon&, const QString&, const QString&);
 		bool buildThemeIcon(QIcon&, const QString&);	
 		QString getFallback(const QString&);
 		void makeLocalFile();	
 		QString extractValue(const QString&);
 		QString extractKey(const QString&);
-		QPixmap colorizeIcon(const QString&);
+		QPixmap processArt(const QString&, const QColor&);
   
 };
 #endif

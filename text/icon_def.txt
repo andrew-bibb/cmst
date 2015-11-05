@@ -29,6 +29,12 @@
 # select another valid resource which must already exist.  You cannot add
 # resources using this file.  This key/value pair is mandatory.
 #
+#	colorize = (no/yes, 0/1, or a color in the format RRGGBB) if yes or 1
+# the internal icons will be colorized according to the value specified 
+# from preferences.  If a color number is provided the icon will be colorized
+# to the specified color.  If no or 0 then the icon is not colorized.
+# Colorizing is only available for internal icons defined in the resource line. 
+#
 # fdo_name = is the name of one of the official Freedesktop.org named icons.
 # This key/value pair is optional.
 #
@@ -42,6 +48,12 @@
 # theme icon name. Text to the left is the ON state of the icon, to the right
 # is the OFF state. This is used for icons which show a different picture
 # depending on state.  Play/Pause in a media player would be a classic example.
+#
+#	The text in a resource value field may also contain whitespace.  If
+# it does the text on each side should be a complete resource path.  Left
+# of the whitespace is the base picture in raw_art, to the right is the
+# overlay file to place over the raw_art icon. This is only for
+# internal icons from the resource file.
 #
 # If this file becomes corrupted by editing or by other means is can be 
 # regenerated simply by deleting it, then stopping and starting CMST.
@@ -65,90 +77,108 @@
 # interface icons
 [icon]
 icon_name = state_error
-resource = :/icons/images/interface/cancel.png
+resource = :/icons/images/raw_art/application-exit1.png
+colorize = no
 fdo_name = network_error
 
 [icon]
 icon_name = state_ready
-resource = :/icons/images/interface/connect_creating.png
+resource = :/icons/images/raw_art/network-idle.png
+colorize = yes
 fdo_name = network-idle
 
 [icon]
 icon_name = state_online
-resource = :/icons/images/interface/connect_established.png
+resource = :/icons/images/raw_art/network-transmit-receive.png
+colorize = yes
 fdo_name = network-transmit-receive
 
 [icon]
 icon_name = state_not_ready
-resource = :/icons/images/interface/connect_no.png
+resource = :/icons/images/raw_art/network-offline.png :/icons/images/overlay/overlay-warningnet9.png
+colorize = yes
 fdo_name = network-offline
 
 [icon]
 icon_name = favorite
-resource = :/icons/images/interface/favorite.png
+resource = :/icons/images/raw_art/nm-signal-100.png
+colorize = yes
 fdo_name = emblem-favorite
 
 [icon]
 icon_name = offline_mode_engaged
-resource = :/icons/images/interface/golfball_green.png
+resource = :/icons/images/raw_art/golfball_green.png
+colorize = no
 
 [icon]
 icon_name = offline_mode_disengaged
-resource = :/icons/images/interface/golfball_red.png
+resource = :/icons/images/raw_art/golfball_red.png
+colorize = no
 
 [icon]
 icon_name = whats_this
-resource = :/icons/images/interface/whatsthis.png
+resource = :/icons/images/raw_art/info2.png
+colorize = 1361D9
 fdo_name = system-help
 
 #
 # systemtray icons
 [icon]
 icon_name = connection_failure
-resource = :/icons/images/systemtray/cancel.png
+resource = :/icons/images/raw_art/application-exit1.png
+colorize = no
 fdo_name = network-error
 
 [icon]
 icon_name = connection_ready
-resource = :/icons/images/systemtray/connect_creating.png
+resource = :/icons/images/raw_art/network-idle.png
+colorize = yes
 fdo_name = network-idle
 
 [icon]
 icon_name = connection_not_ready
-resource = :/icons/images/systemtray/connect_no.png
+resource = :/icons/images/raw_art/network-offline.png :/icons/images/overlay/overlay-warningnet9.png
+colorize = yes
 fdo_name = network-offline
 
 [icon]
 icon_name = connection_wired
-resource = :/icons/images/systemtray/wired_established.png
+resource = :/icons/images/raw_art/network-transmit-receive.png
+colorize = yes
 fdo_name = network-wired
 
 [icon]
 icon_name = connection_wireless
-resource = :/icons/images/systemtray/wl000.png
+resource = :/icons/images/raw_art/nm-signal-100.png
+colorize = yes
 fdo_name = network-wireless
 
 [icon]
 icon_name = connection_wifi_000
-resource = :/icons/images/systemtray/wl000.png
+resource = :/icons/images/raw_art/nm-signal-00.png
+colorize = yes
 theme_names = network-wireless-signal-none-symbolic, network-wireless-connected-00
 
 [icon]
 icon_name = connection_wifi_025
-resource = :/icons/images/systemtray/wl025.png
+resource = :/icons/images/raw_art/nm-signal-25.png
+colorize = yes
 theme_names = network-wireless-signal-weak-symbolic, network-wireless-connected-25
 
 [icon]
 icon_name = connection_wifi_050
-resource = :/icons/images/systemtray/wl050.png
+resource = :/icons/images/raw_art/nm-signal-50.png
+colorize = yes
 theme_names = network-wireless-signal-ok-symbolic, network-wireless-connected-50
 
 [icon]
 icon_name = connection_wifi_075
-resource = :/icons/images/systemtray/wl075.png
+resource = :/icons/images/raw_art/nm-signal-75.png
+colorize = yes
 theme_names = network-wireless-signal-good-symbolic, network-wireless-connected-75
 
 [icon]
 icon_name = connection_wifi_100
-resource = :/icons/images/systemtray/wl100.png
+resource = :/icons/images/raw_art/nm-signal-100.png
+colorize = yes
 theme_names = network-wireless-signal-excellent-symbolic, network-wireless-connected-100
