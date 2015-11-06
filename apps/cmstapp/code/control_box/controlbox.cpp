@@ -1768,12 +1768,11 @@ void ControlBox::assembleTrayIcon()
 		painter.setCompositionMode(QPainter::CompositionMode_Source);
 		painter.fillRect(dest.rect(), trayiconbackground);
 		painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
-		painter.drawImage(0, 0, src);			
-		}	// if img has alpha channel and background color valid
+	}	// if img has alpha channel and background color valid
 	else {
 		painter.setCompositionMode(QPainter::CompositionMode_Source);
-		painter.drawImage(0, 0, src);
-	}
+	}	// else just make an ARGB32 copy	
+	painter.drawImage(0, 0, src);
 	prelimicon = QIcon(QPixmap::fromImage(dest));
   trayicon->setIcon(prelimicon);
 
