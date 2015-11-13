@@ -420,7 +420,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="232"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="581"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1794"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
         <source>Connected</source>
         <translation>Подключено</translation>
     </message>
@@ -1191,7 +1191,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="563"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2041"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2051"/>
         <source>Cancel</source>
         <translation>Отмена</translation>
     </message>
@@ -1274,12 +1274,12 @@
         <translation>&lt;center&gt;&lt;b&gt;Мы получили ответ DBUS, сообщающий об ошибке при попытке сканирования технологий.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Название ошибки: %1&lt;br&gt;&lt;br&gt;Сообщение ошибки: %2</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1230"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1229"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Подробности о службе:&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1227"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1226"/>
         <source>&lt;b&gt;Connection:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;Соединение:&lt;/b&gt; %1</translation>
     </message>
@@ -1300,504 +1300,504 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1055"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2083"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2093"/>
         <source> Warning</source>
         <translation> внимание</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1232"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1231"/>
         <source>Service Type: %1&lt;br&gt;</source>
         <translation>Тип службы: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1233"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1232"/>
         <source>Service State: %1&lt;br&gt;</source>
         <translation>Состояние службы: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1234"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1233"/>
         <source>Favorite: %1&lt;br&gt;</source>
         <translation>Избранное: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1234"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1233"/>
         <source>Yes</source>
         <comment>favorite</comment>
         <translation>Да</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1234"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1233"/>
         <source>No</source>
         <comment>favorite</comment>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1235"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1234"/>
         <source>External Configuration File: %1&lt;br&gt;</source>
         <translation>Внешний файл настроек: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1235"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1234"/>
         <source>Yes</source>
         <comment>immutable</comment>
         <translation>Да</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1235"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1234"/>
         <source>No</source>
         <comment>immutable</comment>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1237"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1236"/>
         <source>Auto Connect: %1&lt;br&gt;</source>
         <translation>Автоподсоединение: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1237"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1236"/>
         <source>On</source>
         <comment>autoconnect</comment>
         <translation>включено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1237"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1236"/>
         <source>No</source>
         <comment>autoconnect</comment>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1239"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1238"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1241"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1240"/>
         <source>IP Address Acquisition: %1&lt;br&gt;</source>
         <translation>Получение адреса IP: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1242"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1249"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1241"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1248"/>
         <source>IP Address: %1&lt;br&gt;</source>
         <translation>Адрес IP: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1243"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1242"/>
         <source>IP Netmask: %1&lt;br&gt;</source>
         <translation>Сетевая маска IP: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1244"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1255"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1243"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1254"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
         <translation>Шлюз IP: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1246"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1245"/>
         <source>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1248"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1261"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1247"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1260"/>
         <source>Address Acquisition: %1&lt;br&gt;</source>
         <translation>Получение адреса: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1252"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1251"/>
         <source>Prefix Length: &lt;br&gt;</source>
         <translation>Длина префикса: &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1254"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1253"/>
         <source>Prefix Length: %1&lt;br&gt;</source>
         <translation>Длина префикса: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1256"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1255"/>
         <source>Privacy: %1&lt;br&gt;</source>
         <translation>Конфиденциальность: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1258"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1257"/>
         <source>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Прокси&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1263"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1262"/>
         <source>URL: %1&lt;br&gt;</source>
         <translation>URL: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1266"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1265"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation>Серверы:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1267"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1266"/>
         <source>Excludes:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation>Исключая:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1274"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1273"/>
         <source>&lt;br&gt;&lt;b&gt;Name Servers&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Серверы имён&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1277"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1276"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Time Servers&lt;/b&gt;&lt;br&gt;  </source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Серверы времени&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1280"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1279"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Search Domains&lt;/b&gt;&lt;br&gt;  </source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Домены поиска&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1283"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1282"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1285"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1284"/>
         <source>Connection Method: %1&lt;br&gt;</source>
         <translation>Способ подключения: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1286"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1285"/>
         <source>Interface: %1&lt;br&gt;</source>
         <translation>Интерфейс: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1287"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1286"/>
         <source>Device Address: %1&lt;br&gt;</source>
         <translation>Адрес устройства: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1288"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1287"/>
         <source>MTU: %1&lt;br&gt;</source>
         <translation>MTU: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1290"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1289"/>
         <source>&lt;br&gt;&lt;b&gt;Wireless&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Беспроводные сети&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1291"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1708"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1294"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1718"/>
         <source>Security: %1&lt;br&gt;</source>
         <translation>Безопасность: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1292"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1295"/>
         <source>Strength: %1&lt;br&gt;</source>
         <translation>Сила: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1293"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1296"/>
         <source>Roaming: %1&lt;br&gt;</source>
         <translation>Роуминг: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1293"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1296"/>
         <source>Yes</source>
         <comment>roaming</comment>
         <translation>Да</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1293"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1296"/>
         <source>No</source>
         <comment>roaming</comment>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1438"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1442"/>
         <source>State: </source>
         <translation>Состояние: </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1444"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1448"/>
         <source>Engaged</source>
         <translation>активирован</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1449"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1796"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1837"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1453"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1806"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1847"/>
         <source>Disabled</source>
         <translation>не активирован</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1452"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1456"/>
         <source>Offline Mode </source>
         <translation>Автономный режим </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1485"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1489"/>
         <source>%1On%1%1</source>
         <comment>powered</comment>
         <translation>%1Да%1%1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1490"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1494"/>
         <source>%1Off%1%1</source>
         <comment>powered</comment>
         <translation>%1Нет%1%1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1498"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1502"/>
         <source>Yes</source>
         <comment>connected</comment>
         <translation>Да</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1498"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1502"/>
         <source>No</source>
         <comment>connected</comment>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1504"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1508"/>
         <source>Yes</source>
         <comment>tethered</comment>
         <translation>Да</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1504"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1508"/>
         <source>No</source>
         <comment>tethered</comment>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1671"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1677"/>
         <source>Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.</source>
         <translation>Частота обновления счётчиков основана на пороговом значении %L1 КБ данных и %L2 секундах времени.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1698"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1704"/>
         <source>Ethernet Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение Ethernet&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1699"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1705"/>
         <source>Service: %1&lt;br&gt;</source>
         <translation>Служба:%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1700"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1710"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1706"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1720"/>
         <source>Interface: %1</source>
         <translation>Интерфейс: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1705"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1711"/>
         <source>WiFi Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение Wi-Fi&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1707"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1713"/>
         <source>SSID: %1&lt;br&gt;</source>
         <translation>SSID: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1709"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1719"/>
         <source>Strength: %1%&lt;br&gt;</source>
         <translation>Сила: %1%&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1724"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1734"/>
         <source>Connection is in the Ready State.</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение в состоянии готовности.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1735"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1745"/>
         <source>Connection is in the Failure State, attempting to reestablish the connection</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение в неработоспособном состоянии, попытка переподключения</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1739"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1749"/>
         <source>Connection is in the Failure State.</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение в неработоспособном состоянии.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1745"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1755"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
         <translation>Не подключено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1752"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1762"/>
         <source>Error retrieving properties via Dbus</source>
         <translation>Ошибка при получении свойств через Dbus</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1753"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1763"/>
         <source>Connection status is unknown</source>
         <translation>Состояние соединения неизвестно</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1789"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1828"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1799"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1838"/>
         <source>&lt;center&gt;&lt;b&gt;%1 Properties&lt;/b&gt;&lt;/center&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1790"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1800"/>
         <source>Type: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1791"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1801"/>
         <source>&lt;br&gt;Powered </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1792"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1802"/>
         <source>On</source>
         <translation type="unfinished">включено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1792"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1802"/>
         <source>Off</source>
         <translation type="unfinished">Выключено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1794"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
         <source>Not Connected</source>
         <translation type="unfinished">Не подключено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1795"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1805"/>
         <source>&lt;br&gt;Tethering </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1796"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1837"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1806"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1847"/>
         <source>Enabled</source>
         <translation type="unfinished">Включена</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1829"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1839"/>
         <source>Connection : %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1831"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1841"/>
         <source>Signal Strength: %1%</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1833"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1843"/>
         <source>Favorite Connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1833"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1843"/>
         <source>Never Connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1834"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1844"/>
         <source>&lt;br&gt;Security : %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1835"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1845"/>
         <source>&lt;br&gt;Roaming</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1836"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1846"/>
         <source>&lt;br&gt;Autoconnect is </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2084"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2094"/>
         <source>&lt;center&gt;&lt;b&gt;Unable to find a systemtray on this machine.&lt;/b&gt;&lt;center&gt;&lt;br&gt;The program may still be used to manage your connections, but the tray icon will be disabled.&lt;center&gt;&lt;br&gt;&lt;br&gt;If you are seeing this message at system start up and you know a system tray exists once the system is up, try starting with the &lt;b&gt;-w&lt;/b&gt; switch and set a delay as necessary.  The exact wait time will vary from system to system.</source>
         <translation>&lt;center&gt;&lt;b&gt;Не удалось найти системный лоток в этой системе.&lt;/b&gt;&lt;center&gt;&lt;br&gt;Эта программа всё-ещё может быть использована для управения вашими соединениями, но значок в системном лотке отражаться не будет.&lt;center&gt;&lt;br&gt;&lt;br&gt;Если вы видите это сообщение при загрузке системы и вы знаете, что системный лоток будет после загрузки системы, попытайтесь запустить с опцией &lt;b&gt;-w&lt;/b&gt; и установить нужную задержку. Точное время ожидания будет зависеть от конкретной системы.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2308"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2310"/>
         <source>Could not find a connection to the system bus</source>
         <translation>Не удалось найти подключение к системной шине</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2309"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2314"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2311"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2316"/>
         <source>%1 - Critical Error</source>
         <translation>%1 - критическая ошибка</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2310"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2312"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation>Не удалось найти подключение к системной шине.&lt;br&gt;&lt;br&gt;%1 не сможет обмениваться данными с connman.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2313"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2315"/>
         <source>Could not create an interface to connman on the system bus</source>
         <translation>Не удалось создать интерфейс для connman на системной шине</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2315"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2317"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation>Не удалось создать интерфейс для connman на системной шине.&lt;br&gt;&lt;br&gt;%1 не сможет обмениваться данными с connman.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2318"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2320"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
         <translation>Ошибка чтения или анализа connman.Manager.GetProperties</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2319"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2324"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2329"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2321"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2326"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2331"/>
         <source>%1 - Warning</source>
         <translation>%1 - внимание</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2320"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2322"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
         <translation>Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;Вряд ли какая-нибудь часть %1 будет функционировать.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2323"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2325"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
         <translation>Ошибка чтения или анализа connman.Manager.GetTechnologies</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2325"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2327"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation>Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Какая-то часть %1 всё ещё может функционировать.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2328"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2330"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
         <translation>Ошибка чтения или анализа connman.Manager.GetServices</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2330"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2332"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation>Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Какая-то часть %1 всё ещё может функционировать.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2512"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2497"/>
         <source>Colorize Icons</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1600"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
         <translation>Технологии Wi-Fi:&lt;br&gt;найдено %1, включено %2</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2415"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2400"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
         <translation>%1 версия %2 by %3 была обнаружена в этой системе.&lt;p&gt;Этот сервер поддерживает спецификацию уведомлений рабочего стола версии %4</translation>
     </message>
@@ -1806,12 +1806,12 @@
         <translation type="vanished">%1 обнаружена</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2427"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2412"/>
         <source>Attempt %1 of 4 looking for notification server.</source>
         <translation>Попытка %1 из 4-х поиска сервера уведомлений.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2430"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2415"/>
         <source>Unable to find or connect to a Notification server.</source>
         <translation>Не удалось найти или подключиться к серверу уведомлений.</translation>
     </message>
@@ -2776,116 +2776,284 @@
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="77"/>
         <source>Invalid arguments</source>
-        <comment>connman error sring</comment>
-        <translation>Неправильные аргументы</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Неправильные аргументы</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="78"/>
         <source>Permission denied</source>
-        <comment>connman error sring</comment>
-        <translation>Доступ запрещён</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Доступ запрещён</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="79"/>
         <source>Passphrase required</source>
-        <comment>connman error sring</comment>
-        <translation>Требуется пароль</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Требуется пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="80"/>
         <source>Not registered</source>
-        <comment>connman error sring</comment>
-        <translation>Не зарегистрирована</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Не зарегистрирована</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="81"/>
         <source>Not unique</source>
-        <comment>connman error sring</comment>
-        <translation>Не уникальна</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Не уникальна</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="82"/>
         <source>Not supported</source>
-        <comment>connman error sring</comment>
-        <translation>Не поддерживается</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Не поддерживается</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="83"/>
         <source>Not implemented</source>
-        <comment>connman error sring</comment>
-        <translation>Не внедрено</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Не внедрено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="84"/>
         <source>Not found</source>
-        <comment>connman error sring</comment>
-        <translation>Не найдена</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Не найдена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="85"/>
         <source>No carrier</source>
-        <comment>connman error sring</comment>
+        <comment>connman error string</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="86"/>
         <source>In progress</source>
-        <comment>connman error sring</comment>
-        <translation>В процессе</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">В процессе</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="87"/>
         <source>Already exists</source>
-        <comment>connman error sring</comment>
-        <translation>Уже существует</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Уже существует</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="88"/>
         <source>Already enabled</source>
-        <comment>connman error sring</comment>
-        <translation>Уже включена</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Уже включена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="89"/>
         <source>Already disabled</source>
-        <comment>connman error sring</comment>
-        <translation>Уже выключена</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Уже выключена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="90"/>
         <source>Already connected</source>
-        <comment>connman error sring</comment>
-        <translation>Уже подключена</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Уже подключена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="91"/>
         <source>Not connected</source>
-        <comment>connman error sring</comment>
-        <translation>Не подключена</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Не подключена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="92"/>
         <source>Operation aborted</source>
-        <comment>connman error sring</comment>
-        <translation>Операция отменена</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Операция отменена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="93"/>
         <source>Operation timeout</source>
-        <comment>connman error sring</comment>
-        <translation>Время ожидания операции вышло</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Время ожидания операции вышло</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="94"/>
         <source>Invalid service</source>
-        <comment>connman error sring</comment>
-        <translation>Неправильная служба</translation>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Неправильная служба</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="95"/>
         <source>Invalid property</source>
+        <comment>connman error string</comment>
+        <translation type="unfinished">Неправильное свойство</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="97"/>
+        <source>disabled</source>
+        <comment>connman privacy string</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="98"/>
+        <source>enabled</source>
+        <comment>connman privacy string</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="99"/>
+        <source>prefered</source>
+        <comment>connman privacy string</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="101"/>
+        <source>auto</source>
+        <comment>connman ethernet connection method</comment>
+        <translation type="unfinished">автоматически</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="102"/>
+        <source>manual</source>
+        <comment>connman ethernet connection method</comment>
+        <translation type="unfinished">вручную</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="104"/>
+        <source>dhcp</source>
+        <comment>connman ipv4 method string</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="105"/>
+        <source>manual</source>
+        <comment>connman ipv4 method string</comment>
+        <translation type="unfinished">вручную</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="106"/>
+        <source>off</source>
+        <comment>connman ipv4 method string</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="107"/>
+        <source>fixed</source>
+        <comment>connman ipv4 method string</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="109"/>
+        <source>auto</source>
+        <comment>connamn ipv6 method string</comment>
+        <translation type="unfinished">автоматически</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="110"/>
+        <source>manual</source>
+        <comment>connamn ipv6 method string</comment>
+        <translation type="unfinished">вручную</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="111"/>
+        <source>6to4</source>
+        <comment>connamn ipv6 method string</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="112"/>
+        <source>off</source>
+        <comment>connamn ipv6 method string</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid arguments</source>
         <comment>connman error sring</comment>
-        <translation>Неправильное свойство</translation>
+        <translation type="vanished">Неправильные аргументы</translation>
+    </message>
+    <message>
+        <source>Permission denied</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Доступ запрещён</translation>
+    </message>
+    <message>
+        <source>Passphrase required</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Требуется пароль</translation>
+    </message>
+    <message>
+        <source>Not registered</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Не зарегистрирована</translation>
+    </message>
+    <message>
+        <source>Not unique</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Не уникальна</translation>
+    </message>
+    <message>
+        <source>Not supported</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Не поддерживается</translation>
+    </message>
+    <message>
+        <source>Not implemented</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Не внедрено</translation>
+    </message>
+    <message>
+        <source>Not found</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Не найдена</translation>
+    </message>
+    <message>
+        <source>In progress</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">В процессе</translation>
+    </message>
+    <message>
+        <source>Already exists</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Уже существует</translation>
+    </message>
+    <message>
+        <source>Already enabled</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Уже включена</translation>
+    </message>
+    <message>
+        <source>Already disabled</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Уже выключена</translation>
+    </message>
+    <message>
+        <source>Already connected</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Уже подключена</translation>
+    </message>
+    <message>
+        <source>Not connected</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Не подключена</translation>
+    </message>
+    <message>
+        <source>Operation aborted</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Операция отменена</translation>
+    </message>
+    <message>
+        <source>Operation timeout</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Время ожидания операции вышло</translation>
+    </message>
+    <message>
+        <source>Invalid service</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Неправильная служба</translation>
+    </message>
+    <message>
+        <source>Invalid property</source>
+        <comment>connman error sring</comment>
+        <translation type="vanished">Неправильное свойство</translation>
     </message>
 </context>
 <context>

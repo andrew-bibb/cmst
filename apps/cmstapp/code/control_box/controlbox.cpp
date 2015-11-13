@@ -1203,7 +1203,6 @@ void ControlBox::wifiSubmenuTriggered(QAction* act)
   return;
 }
 
-
 //
 //  Slot to get details of the selected service and write it into ui.label_details
 //  Called when the ui.comboBox_services currentIndexChanged() signal is emitted.
@@ -1229,8 +1228,8 @@ void ControlBox::getServiceDetails(int index)
   //  Start building the string for the left label
   QString rs = tr("<br><b>Service Details:</b><br>");
   if (map.value("Name").toString().isEmpty() ) b_editable = false;
-  rs.append(tr("Service Type: %1<br>").arg(map.value("Type").toString()) );
-  rs.append(tr("Service State: %1<br>").arg(map.value("State").toString()) );
+  rs.append(tr("Service Type: %1<br>").arg(TranslateStrings::cmtr(map.value("Type").toString())) );
+  rs.append(tr("Service State: %1<br>").arg(TranslateStrings::cmtr(map.value("State").toString())) );
   rs.append(tr("Favorite: %1<br>").arg(map.value("Favorite").toBool() ? tr("Yes", "favorite") : tr("No", "favorite"))  );
   rs.append(tr("External Configuration File: %1<br>").arg(map.value("Immutable").toBool() ? tr("Yes", "immutable") : tr("No", "immutable")) );
   if (map.value("Immutable").toBool() ) b_editable = false;
@@ -1238,14 +1237,14 @@ void ControlBox::getServiceDetails(int index)
 
   rs.append(tr("<br><b>IPv4</b><br>"));
   extractMapData(submap, services_list.at(index).objmap.value("IPv4") );
-  rs.append(tr("IP Address Acquisition: %1<br>").arg(submap.value("Method").toString()));
+  rs.append(tr("IP Address Acquisition: %1<br>").arg(TranslateStrings::cmtr(submap.value("Method").toString(), "connman ipv4 method string")) );
   rs.append(tr("IP Address: %1<br>").arg(submap.value("Address").toString()));
   rs.append(tr("IP Netmask: %1<br>").arg(submap.value("Netmask").toString()));
   rs.append(tr("IP Gateway: %1<br>").arg(submap.value("Gateway").toString()));
 
   rs.append(tr("<br><b>IPv6</b><br>"));
   extractMapData(submap, services_list.at(index).objmap.value("IPv6") );
-  rs.append(tr("Address Acquisition: %1<br>").arg(submap.value("Method").toString()));
+  rs.append(tr("Address Acquisition: %1<br>").arg(TranslateStrings::cmtr(submap.value("Method").toString(), "connman ipv6 method string")) );
   rs.append(tr("IP Address: %1<br>").arg(submap.value("Address").toString()));
   QString s_ipv6prefix = submap.value("PrefixLength").toString();
   if (s_ipv6prefix.isEmpty() )
@@ -1253,16 +1252,16 @@ void ControlBox::getServiceDetails(int index)
   else
     rs.append(tr("Prefix Length: %1<br>").arg(submap.value("PrefixLength").toUInt()));
   rs.append(tr("IP Gateway: %1<br>").arg(submap.value("Gateway").toString()));
-  rs.append(tr("Privacy: %1<br>").arg(submap.value("Privacy").toString()));
+  rs.append(tr("Privacy: %1<br>").arg(TranslateStrings::cmtr(submap.value("Privacy").toString())) );
 
   rs.append(tr("<br><b>Proxy</b><br>"));
   extractMapData(submap, services_list.at(index).objmap.value("Proxy") );
-  QString s_proxymethod = submap.value("Method").toString();
+  QString s_proxymethod = TranslateStrings::cmtr(submap.value("Method").toString(), "connman proxy string" );
   rs.append(tr("Address Acquisition: %1<br>").arg(s_proxymethod) );
-  if (s_proxymethod.contains("auto") ) {
+  if (s_proxymethod == "auto" ) {
     rs.append(tr("URL: %1<br>").arg(submap.value("URL").toString()) );
   }
-  else if (s_proxymethod.contains("manual") ) {
+  else if (s_proxymethod == "manual" ) {
     rs.append(tr("Servers:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Servers").toStringList().join("<br>&nbsp;&nbsp;")) );
     rs.append(tr("Excludes:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Excludes").toStringList().join("<br>&nbsp;&nbsp;")) );
   }
@@ -1270,7 +1269,7 @@ void ControlBox::getServiceDetails(int index)
   //  write the text to the left display label
   ui.label_details_left->setText(rs);
 
-  // Start building the stringfortherightlabel
+  // Start building the string for the right label
   rs = tr("<br><b>Name Servers</b><br>");
   rs.append(map.value("Nameservers").toStringList().join("<br>") );
 
@@ -1282,13 +1281,17 @@ void ControlBox::getServiceDetails(int index)
 
   rs.append(tr("<br><br><b>Ethernet</b><br>"));
   extractMapData(submap, services_list.at(index).objmap.value("Ethernet") );
-  rs.append(tr("Connection Method: %1<br>").arg(submap.value("Method").toString()) );
+  rs.append(tr("Connection Method: %1<br>").arg(TranslateStrings::cmtr(submap.value("Method").toString(), "connman ethernet connection method")) );
   rs.append(tr("Interface: %1<br>").arg(submap.value("Interface").toString()) );
   rs.append(tr("Device Address: %1<br>").arg(submap.value("Address").toString()) );
   rs.append(tr("MTU: %1<br>").arg(submap.value("MTU").value<quint16>()) );
 
   rs.append(tr("<br><b>Wireless</b><br>"));
-  rs.append(tr("Security: %1<br>").arg(map.value("Security").toStringList().join(',')) );
+  QStringList sl_tr;
+  for (int i = 0; i < map.value("Security").toStringList().size(); ++i) {
+		sl_tr << TranslateStrings::cmtr(map.value("Security").toStringList().at(i) );
+	}	// for
+  rs.append(tr("Security: %1<br>").arg(sl_tr.join(',')) );
   if (! map.value("Strength").toString().isEmpty() ) rs.append(tr("Strength: %1<br>").arg(map.value("Strength").value<quint8>()) );
   rs.append(tr("Roaming: %1<br>").arg(map.value("Roaming").toBool() ? tr("Yes", "roaming") : tr("No", "roaming")) );
 
@@ -1424,23 +1427,24 @@ void ControlBox::assemblePage1()
   // Global Properties
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
     QString s1 = properties_map.value("State").toString();
-    if (s1.contains("online") ) {	
+    if (s1 == "online") {	
 			ui.label_state_pix->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
     } // if online
     else {
-      if (s1.contains("ready") ) {
+      if (s1 == "ready") {
 				ui.label_state_pix->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
 				      } // if ready
       else {
 				ui.label_state_pix->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
       } // else any other state
     } //  else ready or any other state
+    s1 = TranslateStrings::cmtr(s1);
     s1.prepend(tr("State: ") );
     ui.label_state->setText(s1);
    
     bool b1 = properties_map.value("OfflineMode").toBool();
     QString s2 = QString();
-    if (b1 ) {
+    if (b1) {
       s2 = tr("Engaged");
       ui.label_offlinemode_pix->setPixmap(QPixmap (iconman->getIconName("offline_mode_engaged")) );
     } // if offline mode is engaged
@@ -1464,13 +1468,13 @@ void ControlBox::assemblePage1()
 
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       st = technologies_list.at(row).objmap.value("Name").toString();
-      qtwi00->setText(st);
+      qtwi00->setText(TranslateStrings::cmtr(st) );
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 0, qtwi00) ;
 
       QTableWidgetItem* qtwi01 = new QTableWidgetItem();
       st = technologies_list.at(row).objmap.value("Type").toString();
-      qtwi01->setText(st);
+      qtwi01->setText(TranslateStrings::cmtr(st) );
       qtwi01->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 1, qtwi01);
 
@@ -1516,13 +1520,13 @@ void ControlBox::assemblePage1()
 
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       ss = services_list.at(row).objmap.value("Name").toString();
-      qtwi00->setText(ss);
+      qtwi00->setText(TranslateStrings::cmtr(ss) );
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_services->setItem(row, 0, qtwi00);
 
       QTableWidgetItem* qtwi01 = new QTableWidgetItem();
       ss = services_list.at(row).objmap.value("State").toString();
-      qtwi01->setText(ss);
+      qtwi01->setText(TranslateStrings::cmtr(ss) );
       qtwi01->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_services->setItem(row, 1, qtwi01);
 
@@ -1562,14 +1566,12 @@ void ControlBox::assemblePage2()
 
   //  services details
   if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
-
-    // populate the combobox
-    for (int row = 0; row < services_list.size(); ++row) {
-      QString ss = services_list.at(row).objmap.value("Name").toString();
-      ui.comboBox_service->addItem(ss);
-    } // services for loop
-
-    ui.comboBox_service->setCurrentIndex(0);
+	  // populate the combobox
+	  for (int row = 0; row < services_list.size(); ++row) {
+			QString ss = services_list.at(row).objmap.value("Name").toString();
+				ui.comboBox_service->addItem(TranslateStrings::cmtr(ss) );
+	  } // services for loop
+	   ui.comboBox_service->setCurrentIndex(0);
   } // services if no error
 
   return;
@@ -1592,7 +1594,7 @@ void ControlBox::assemblePage3()
     int i_wifidevices= 0;
     int i_wifipowered = 0;
     for (int row = 0; row < technologies_list.size(); ++row) {
-      if (technologies_list.at(row).objmap.value("Type").toString() .contains("wifi") ) {
+      if (technologies_list.at(row).objmap.value("Type").toString() == "wifi" ) {
         ++i_wifidevices;
         if (technologies_list.at(row).objmap.value("Powered").toBool() ) ++i_wifipowered;
       } // if census
@@ -1633,11 +1635,15 @@ void ControlBox::assemblePage3()
         } // else any other state
       } // else ready or any other state
       ql02->setAlignment(Qt::AlignCenter);
-      ql02->setToolTip(map.value("State").toString());
+      ql02->setToolTip(TranslateStrings::cmtr(map.value("State").toString()) );
       ui.tableWidget_wifi->setCellWidget(rowcount, 2, ql02);
 
       QTableWidgetItem* qtwi03 = new QTableWidgetItem();
-      qtwi03->setText(map.value("Security").toStringList().join(',') );
+      QStringList sl_tr;
+      for (int i = 0; i < map.value("Security").toStringList().size(); ++i) {
+				sl_tr << TranslateStrings::cmtr(map.value("Security").toStringList().at(i) );
+			}	// for
+			qtwi03->setText(sl_tr.join(',') );
       qtwi03->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_wifi->setItem(rowcount, 3, qtwi03);
 
@@ -1687,27 +1693,31 @@ void ControlBox::assembleTrayIcon()
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
     // count how many services are in the ready state
     for (int i = 0; i < services_list.count(); ++i) {
-      if (services_list.at(i).objmap.value("State").toString().contains("ready") )  ++readycount;
+      if (services_list.at(i).objmap.value("State").toString() == "ready")  ++readycount;
     } // readycount for loop
-    if (properties_map.value("State").toString().contains("online") ||
-        (properties_map.value("State").toString().contains("ready") && readycount == 1) ) {
+    if ((properties_map.value("State").toString() == "online") ||
+        (properties_map.value("State").toString() =="ready" && readycount == 1) ) {
       if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
         QMap<QString,QVariant> submap;
-        if (services_list.at(0).objmap.value("Type").toString().contains("ethernet") ) {
+        if (services_list.at(0).objmap.value("Type").toString() == "ethernet") {
           extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
           stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
           stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
-          stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
+          stt.append(tr("Interface: %1").arg(TranslateStrings::cmtr(submap.value("Interface").toString())) );
           prelimicon = iconman->getIcon("connection_wired");
         } //  if wired connection
 
-        if (services_list.at(0).objmap.value("Type").toString().contains("wifi") ) {
+        if (services_list.at(0).objmap.value("Type").toString() == "wifi") {
           stt.prepend(tr("WiFi Connection<br>","icon_tool_tip"));
           extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
-          stt.append(tr("SSID: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
-          stt.append(tr("Security: %1<br>").arg(services_list.at(0).objmap.value("Security").toStringList().join(',')) );
+          stt.append(tr("SSID: %1<br>").arg(TranslateStrings::cmtr(services_list.at(0).objmap.value("Name").toString())) );
+          QStringList sl_tr;
+					for (int i = 0; i < services_list.at(0).objmap.value("Security").toStringList().size(); ++i) {
+						sl_tr << TranslateStrings::cmtr(services_list.at(0).objmap.value("Security").toStringList().at(i) );
+					}	// for
+          stt.append(tr("Security: %1<br>").arg(sl_tr.join(',')) );
           stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
-          stt.append(tr("Interface: %1").arg(submap.value("Interface").toString()) );
+          stt.append(tr("Interface: %1").arg(TranslateStrings::cmtr(submap.value("Interface").toString())) );
           quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
           if (str > 80 ) prelimicon = iconman->getIcon("connection_wifi_100");
           else if (str > 60 ) prelimicon = iconman->getIcon("connection_wifi_075");  
@@ -1728,7 +1738,7 @@ void ControlBox::assembleTrayIcon()
     else if (properties_map.value("State").toString().contains("failure") ) {
       // try to reconnect if service is wifi and Favorite and if reconnect is specified
       if (ui.checkBox_retryfailed->isChecked() ) {
-        if (services_list.at(0).objmap.value("Type").toString().contains("wifi")  && services_list.at(0).objmap.value("Favorite").toBool() ) {
+        if (services_list.at(0).objmap.value("Type").toString() =="wifi"  && services_list.at(0).objmap.value("Favorite").toBool() ) {
           QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(0).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
           QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
           iface_serv->deleteLater();
@@ -1786,7 +1796,7 @@ void ControlBox::assembleTrayIcon()
 		QAction* act = tech_submenu->addAction(technologies_list.at(i).objmap.value("Name").toString() );
 		act->setCheckable(true);
 		act->setChecked(technologies_list.at(i).objmap.value("Powered").toBool() );
-		QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(technologies_list.at(i).objmap.value("Name").toString()) );
+		QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(technologies_list.at(i).objmap.value("Name").toString())) );
 		ttstr.append(tr("Type: %1").arg(technologies_list.at(i).objmap.value("Type").toString()) );
 		ttstr.append(tr("<br>Powered "));
 		technologies_list.at(i).objmap.value("Powered").toBool() ? ttstr.append(tr("On")) : ttstr.append(tr("Off"));
@@ -1800,11 +1810,11 @@ void ControlBox::assembleTrayIcon()
   // info_submenu
   info_submenu->clear();
   for (int j = 0; j < services_list.count(); ++j) {
-    QAction* act = info_submenu->addAction(services_list.at(j).objmap.value("Name").toString() );
-    if (services_list.at(j).objmap.value("State").toString().contains("online") ) {
-			if (services_list.at(0).objmap.value("Type").toString().contains("ethernet") )
+    QAction* act = info_submenu->addAction(TranslateStrings::cmtr(services_list.at(j).objmap.value("Name").toString()) );
+    if (services_list.at(j).objmap.value("State").toString() == "online") {
+			if (services_list.at(0).objmap.value("Type").toString() == "ethernet" )
 				act->setIcon(iconman->getIcon("connection_wired"));
-			else if (services_list.at(0).objmap.value("Type").toString().contains("wifi") ) {
+			else if (services_list.at(0).objmap.value("Type").toString() == "wifi" ) {
 				quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
         if (str > 80 ) act->setIcon(iconman->getIcon("connection_wifi_100") );
 				else if (str > 60 ) act->setIcon(iconman->getIcon("connection_wifi_075") );  
@@ -1813,19 +1823,19 @@ void ControlBox::assembleTrayIcon()
 							else act->setIcon(iconman->getIcon("connection_wifi_000") );
 			}	// else if wifi
 		}	// if online
-		else if (services_list.at(j).objmap.value("State").toString().contains("ready") ) act->setIcon(iconman->getIcon("connection_ready"));
-			else if (services_list.at(j).objmap.value("State").toString().contains("failure") ) act->setIcon(iconman->getIcon("connection_failure"));
+		else if (services_list.at(j).objmap.value("State").toString() == "ready") act->setIcon(iconman->getIcon("connection_ready"));
+			else if (services_list.at(j).objmap.value("State").toString() == "failure" ) act->setIcon(iconman->getIcon("connection_failure"));
 				else act->setIcon(iconman->getIcon("connection_not_ready"));
   } // j for
   
   // wifi_submenu.  
   wifi_submenu->clear();
   for (int k = 0; k < wifi_list.count(); ++k) {
-    QAction* act = wifi_submenu->addAction(wifi_list.at(k).objmap.value("Name").toString() );
+    QAction* act = wifi_submenu->addAction(TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Name").toString()) );
     act->setCheckable(true);
-    QString state = wifi_list.at(k).objmap.value("State").toString();
+    QString state = TranslateStrings::cmtr(wifi_list.at(k).objmap.value("State").toString() );
 		if (state.contains("online") || state.contains("ready") ) act->setChecked(true);
-    QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(wifi_list.at(k).objmap.value("Name").toString()) );
+    QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Name").toString())) );
     ttstr.append(tr("Connection : %1").arg(state));
     ttstr.append("<br>");
     ttstr.append(tr("Signal Strength: %1%").arg(wifi_list.at(k).objmap.value("Strength").toInt()) );

@@ -74,25 +74,43 @@ TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent)
   sl << tr("wep", "connman security string");
   sl << tr("wps", "connman security string");
   
-  sl << tr("Invalid arguments", "connman error sring");
-  sl << tr("Permission denied", "connman error sring");
-  sl << tr("Passphrase required", "connman error sring");
-  sl << tr("Not registered", "connman error sring");
-  sl << tr("Not unique", "connman error sring");
-  sl << tr("Not supported", "connman error sring");
-  sl << tr("Not implemented", "connman error sring");
-  sl << tr("Not found", "connman error sring");
-  sl << tr("No carrier", "connman error sring");
-  sl << tr("In progress", "connman error sring");
-  sl << tr("Already exists", "connman error sring");
-  sl << tr("Already enabled", "connman error sring");
-  sl << tr("Already disabled", "connman error sring");
-  sl << tr("Already connected", "connman error sring");
-  sl << tr("Not connected", "connman error sring");
-  sl << tr("Operation aborted", "connman error sring");
-  sl << tr("Operation timeout", "connman error sring");
-  sl << tr("Invalid service", "connman error sring");
-  sl << tr("Invalid property", "connman error sring");
+  sl << tr("Invalid arguments", "connman error string");
+  sl << tr("Permission denied", "connman error string");
+  sl << tr("Passphrase required", "connman error string");
+  sl << tr("Not registered", "connman error string");
+  sl << tr("Not unique", "connman error string");
+  sl << tr("Not supported", "connman error string");
+  sl << tr("Not implemented", "connman error string");
+  sl << tr("Not found", "connman error string");
+  sl << tr("No carrier", "connman error string");
+  sl << tr("In progress", "connman error string");
+  sl << tr("Already exists", "connman error string");
+  sl << tr("Already enabled", "connman error string");
+  sl << tr("Already disabled", "connman error string");
+  sl << tr("Already connected", "connman error string");
+  sl << tr("Not connected", "connman error string");
+  sl << tr("Operation aborted", "connman error string");
+  sl << tr("Operation timeout", "connman error string");
+  sl << tr("Invalid service", "connman error string");
+  sl << tr("Invalid property", "connman error string");
+  
+  sl << tr("disabled", "connman privacy string");
+  sl << tr("enabled", "connman privacy string");
+  sl << tr("prefered", "connman privacy string");
+  
+  sl << tr("auto", "connman ethernet connection method");
+  sl << tr("manual", "connman ethernet connection method");
+  
+  sl << tr("dhcp", "connman ipv4 method string");
+  sl << tr("manual", "connman ipv4 method string");
+  sl << tr("off", "connman ipv4 method string");
+  sl << tr("fixed", "connman ipv4 method string");
+  
+  sl << tr("auto", "connman ipv6 method string");
+  sl << tr("manual", "connman ipv6 method string");
+  sl << tr("6to4", "connman ipv6 method string");
+  sl << tr("off", "connman ipv6 method string");
+  
   	
 	return;
 }

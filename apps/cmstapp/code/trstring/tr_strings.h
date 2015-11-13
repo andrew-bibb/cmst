@@ -41,6 +41,6 @@ class TranslateStrings : public QObject
     TranslateStrings(QObject*);
   
   // functions
-		static inline QString cmtr(const QString& str) {return tr(qPrintable(str) );}  
+		static inline QString cmtr(const QString& str, const char* disamb = 0) {return tr(qPrintable(str), disamb);}  
 };
 #endif
