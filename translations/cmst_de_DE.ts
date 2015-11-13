@@ -445,7 +445,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="174"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="161"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="171"/>
         <source>Technologies</source>
         <translation type="unfinished"></translation>
     </message>
@@ -469,7 +469,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="232"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="581"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1814"/>
         <source>Connected</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1170,674 +1170,674 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1594"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="318"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="328"/>
         <source>Mi&amp;nimize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="319"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="329"/>
         <source>Ma&amp;ximize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="322"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="332"/>
         <source>&amp;Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="404"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="414"/>
         <source>About %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="162"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="172"/>
         <source>Service Details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="163"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="173"/>
         <source>WiFi Connections</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="405"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="415"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Contributors:&lt;/b&gt;&lt;center&gt;Brett Dutro&lt;center&gt;Adam Fontenot&lt;center&gt;Lester Bico&lt;center&gt;Yaohan Chen&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5&lt;center&gt;Built %6 - %7</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="435"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="445"/>
         <source>About AwOken</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="436"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="446"/>
         <source>&lt;center&gt;This program uses the &lt;b&gt;AwOken&lt;/b&gt; icon set version 2.5&lt;br&gt;&lt;br&gt;Released under the&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;Unported License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;&lt;br&gt;&lt;center&gt;The CMST icon is a derivative work from the AwOken icon set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="451"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="461"/>
         <source>%1 license is the MIT license.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="453"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="463"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="461"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="471"/>
         <source>%1 change log is not available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="463"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="473"/>
         <source>ChangeLog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="563"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2051"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="573"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2061"/>
         <source>Cancel</source>
         <translation type="unfinished">Abbrechen</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="584"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="589"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="594"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="599"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="589"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="599"/>
         <source>Unable to determine service</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="610"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="656"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="679"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="620"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="666"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="689"/>
         <source>No Services Selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="611"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="621"/>
         <source>You need to select a Wifi service before pressing the connect button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="657"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="667"/>
         <source>You need to select a Wifi service before pressing the disconnect button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="680"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="690"/>
         <source>You need to select a Wifi service before pressing the remove button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="708"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="718"/>
         <source>Offline Mode Engaged</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="712"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="722"/>
         <source>Offline Mode Disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="738"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="748"/>
         <source>%1 (%2) Network</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="739"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="749"/>
         <source>Connection: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="762"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="772"/>
         <source>Network Services:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="763"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="773"/>
         <source>No network services available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="988"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="998"/>
         <source>Service Error: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="989"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="999"/>
         <source>Object Path: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1055"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2093"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1065"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2103"/>
         <source> Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1056"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1066"/>
         <source>&lt;center&gt;&lt;b&gt;We received a DBUS reply message indicating an error while trying to scan technologies.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Error Name: %1&lt;br&gt;&lt;br&gt;Error Message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1226"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1236"/>
         <source>&lt;b&gt;Connection:&lt;/b&gt; %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1229"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1239"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1231"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1241"/>
         <source>Service Type: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1232"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1242"/>
         <source>Service State: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1233"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1243"/>
         <source>Favorite: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1233"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1243"/>
         <source>Yes</source>
         <comment>favorite</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1233"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1243"/>
         <source>No</source>
         <comment>favorite</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1234"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1244"/>
         <source>External Configuration File: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1234"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1244"/>
         <source>Yes</source>
         <comment>immutable</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1234"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1244"/>
         <source>No</source>
         <comment>immutable</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1236"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1246"/>
         <source>Auto Connect: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1236"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1246"/>
         <source>On</source>
         <comment>autoconnect</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1236"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1246"/>
         <source>No</source>
         <comment>autoconnect</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1238"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1248"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1240"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1250"/>
         <source>IP Address Acquisition: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1241"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1248"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1251"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1258"/>
         <source>IP Address: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1242"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1252"/>
         <source>IP Netmask: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1243"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1254"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1253"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1264"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1245"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1255"/>
         <source>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1247"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1260"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1257"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1270"/>
         <source>Address Acquisition: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1251"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1261"/>
         <source>Prefix Length: &lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1253"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1263"/>
         <source>Prefix Length: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1255"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1265"/>
         <source>Privacy: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1257"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1267"/>
         <source>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1262"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1272"/>
         <source>URL: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1265"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1275"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1266"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1276"/>
         <source>Excludes:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1273"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1283"/>
         <source>&lt;br&gt;&lt;b&gt;Name Servers&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1276"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1286"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Time Servers&lt;/b&gt;&lt;br&gt;  </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1279"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1289"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Search Domains&lt;/b&gt;&lt;br&gt;  </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1282"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1292"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1284"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1294"/>
         <source>Connection Method: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1285"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1295"/>
         <source>Interface: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1286"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1296"/>
         <source>Device Address: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1287"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1297"/>
         <source>MTU: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1289"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1299"/>
         <source>&lt;br&gt;&lt;b&gt;Wireless&lt;/b&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1294"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1718"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1304"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1728"/>
         <source>Security: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1295"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1305"/>
         <source>Strength: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1296"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1306"/>
         <source>Roaming: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1296"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1306"/>
         <source>Yes</source>
         <comment>roaming</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1296"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1306"/>
         <source>No</source>
         <comment>roaming</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1442"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1452"/>
         <source>State: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1448"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1458"/>
         <source>Engaged</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1453"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1806"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1847"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1463"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1816"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1857"/>
         <source>Disabled</source>
         <translation type="unfinished">Deaktiviert</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1456"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1466"/>
         <source>Offline Mode </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1489"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1499"/>
         <source>%1On%1%1</source>
         <comment>powered</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1494"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1504"/>
         <source>%1Off%1%1</source>
         <comment>powered</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1502"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1512"/>
         <source>Yes</source>
         <comment>connected</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1502"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1512"/>
         <source>No</source>
         <comment>connected</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1508"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1518"/>
         <source>Yes</source>
         <comment>tethered</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1508"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1518"/>
         <source>No</source>
         <comment>tethered</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1612"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1677"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1687"/>
         <source>Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1704"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1714"/>
         <source>Ethernet Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1705"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1715"/>
         <source>Service: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1706"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1720"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1716"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1730"/>
         <source>Interface: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1711"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1721"/>
         <source>WiFi Connection&lt;br&gt;</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1713"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1723"/>
         <source>SSID: %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1719"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1729"/>
         <source>Strength: %1%&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1734"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1744"/>
         <source>Connection is in the Ready State.</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1745"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1755"/>
         <source>Connection is in the Failure State, attempting to reestablish the connection</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1749"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1759"/>
         <source>Connection is in the Failure State.</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1755"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1765"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1762"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1772"/>
         <source>Error retrieving properties via Dbus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1763"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1773"/>
         <source>Connection status is unknown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1799"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1838"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1809"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1848"/>
         <source>&lt;center&gt;&lt;b&gt;%1 Properties&lt;/b&gt;&lt;/center&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1800"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1810"/>
         <source>Type: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1801"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1811"/>
         <source>&lt;br&gt;Powered </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1802"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1812"/>
         <source>On</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1802"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1812"/>
         <source>Off</source>
         <translation type="unfinished">Aus</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1814"/>
         <source>Not Connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1805"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1815"/>
         <source>&lt;br&gt;Tethering </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1806"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1847"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1816"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1857"/>
         <source>Enabled</source>
         <translation type="unfinished">Aktiviert</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1839"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1849"/>
         <source>Connection : %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1841"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1851"/>
         <source>Signal Strength: %1%</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1843"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1853"/>
         <source>Favorite Connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1843"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1853"/>
         <source>Never Connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1844"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1854"/>
         <source>&lt;br&gt;Security : %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1845"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1855"/>
         <source>&lt;br&gt;Roaming</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1846"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1856"/>
         <source>&lt;br&gt;Autoconnect is </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2094"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2104"/>
         <source>&lt;center&gt;&lt;b&gt;Unable to find a systemtray on this machine.&lt;/b&gt;&lt;center&gt;&lt;br&gt;The program may still be used to manage your connections, but the tray icon will be disabled.&lt;center&gt;&lt;br&gt;&lt;br&gt;If you are seeing this message at system start up and you know a system tray exists once the system is up, try starting with the &lt;b&gt;-w&lt;/b&gt; switch and set a delay as necessary.  The exact wait time will vary from system to system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2310"/>
-        <source>Could not find a connection to the system bus</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2311"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2316"/>
-        <source>%1 - Critical Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2312"/>
-        <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2315"/>
-        <source>Could not create an interface to connman on the system bus</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2317"/>
-        <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2320"/>
-        <source>Error reading or parsing connman.Manager.GetProperties</source>
+        <source>Could not find a connection to the system bus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2321"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2326"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2331"/>
-        <source>%1 - Warning</source>
+        <source>%1 - Critical Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2322"/>
-        <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
+        <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2325"/>
-        <source>Error reading or parsing connman.Manager.GetTechnologies</source>
+        <source>Could not create an interface to connman on the system bus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2327"/>
-        <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
+        <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2330"/>
-        <source>Error reading or parsing connman.Manager.GetServices</source>
+        <source>Error reading or parsing connman.Manager.GetProperties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2331"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2336"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2341"/>
+        <source>%1 - Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2332"/>
+        <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2335"/>
+        <source>Error reading or parsing connman.Manager.GetTechnologies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2337"/>
+        <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2340"/>
+        <source>Error reading or parsing connman.Manager.GetServices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2342"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2400"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2410"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2497"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2507"/>
         <source>Colorize Icons</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2412"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2422"/>
         <source>Attempt %1 of 4 looking for notification server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2415"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2425"/>
         <source>Unable to find or connect to a Notification server.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2971,26 +2971,36 @@
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="109"/>
         <source>auto</source>
-        <comment>connamn ipv6 method string</comment>
+        <comment>connman ipv6 method string</comment>
         <translation type="unfinished">Auto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="110"/>
         <source>manual</source>
-        <comment>connamn ipv6 method string</comment>
+        <comment>connman ipv6 method string</comment>
         <translation type="unfinished">Manuell</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="111"/>
         <source>6to4</source>
-        <comment>connamn ipv6 method string</comment>
+        <comment>connman ipv6 method string</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="112"/>
         <source>off</source>
-        <comment>connamn ipv6 method string</comment>
+        <comment>connman ipv6 method string</comment>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>auto</source>
+        <comment>connamn ipv6 method string</comment>
+        <translation type="obsolete">Auto</translation>
+    </message>
+    <message>
+        <source>manual</source>
+        <comment>connamn ipv6 method string</comment>
+        <translation type="obsolete">Manuell</translation>
     </message>
     <message>
         <source>Invalid arguments</source>
