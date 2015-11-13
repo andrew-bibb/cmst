@@ -570,7 +570,7 @@ void ControlBox::enableMoveButtons(int row, int col)
 void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QString& home_label, const QString& roam_label)
 {
   // Don't update the counter if qdb_objpath is not the online service
-  if (! qdb_objpath.path().contains(onlineobjectpath, Qt::CaseInsensitive) ) return;
+  if (! qdb_objpath.path().contains(onlineobjectpath) ) return;
 
   // Set the labels in page 4
   if (! qdb_objpath.path().isEmpty() ) {
@@ -632,7 +632,7 @@ void ControlBox::disconnectPressed()
   int row_connected = -1;
   for (int row = 0; row < wifi_list.size(); ++row) {
     QMap<QString,QVariant> map = wifi_list.at(row).objmap;
-    if (map.value("State").toString().contains("online") || map.value("State").toString().contains("ready") ) {
+    if (map.value("State").toString() =="online" || map.value("State").toString() == "ready" ) {
        ++cntr_connected;
        row_connected = row;
      }
@@ -702,7 +702,7 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
   updateDisplayWidgets();
 
   // offlinemode property
-  if (prop.contains("OfflineMode", Qt::CaseInsensitive) ) {
+  if (prop == "OfflineMode") {
     notifyclient->init();
     if (dbvalue.variant().toBool()) {
       notifyclient->setSummary(tr("Offline Mode Engaged"));
@@ -715,7 +715,7 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
     this->sendNotifications();  
   } // if contains offlinemode
 
-  if (prop.contains("State", Qt::CaseInsensitive) ) {
+  if (prop =="State") {
     // local variables
     QString type;
     QString name;
@@ -729,7 +729,7 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
         name = services_list.at(0).objmap.value("Name").toString();
 
       // notification text and icons
-      if (type.contains("wifi", Qt::CaseInsensitive) )
+      if (type == "wifi")
 				iconpath = iconman->getIconName("connection_wireless");
       else 
 				iconpath = iconman->getIconName("connection_wired");
@@ -743,8 +743,8 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
       
       // execute external program if specified
       if (! ui.lineEdit_afterconnect->text().isEmpty()  ) {
-				if ((state.contains("ready", Qt::CaseInsensitive) || state.contains("online", Qt::CaseInsensitive)) &&
-					(! oldstate.contains("ready", Qt::CaseInsensitive) && ! oldstate.contains ("online", Qt::CaseInsensitive)) ) {
+				if( (state == "ready" || state == "online") &&
+					(oldstate != "ready" && oldstate != "online") ) {
 					QString text = ui.lineEdit_afterconnect->text();	
 					text = text.simplified();
 					QStringList args = text.split(' ');
@@ -971,7 +971,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
 
   // replace the old values with the changed ones.
   for (int i = 0; i < services_list.count(); ++i) {
-    if (s_path.contains(services_list.at(i).objpath.path(), Qt::CaseSensitive) ) {
+    if (s_path == services_list.at(i).objpath.path() ) {
       QMap<QString,QVariant> map = services_list.at(i).objmap;
       map.remove(property);
       map.insert(property, value );
@@ -983,7 +983,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
   } // for
 
   // process errrors  - errors only valid when service is in the failure state
-  if (property.contains("Error", Qt::CaseInsensitive) && s_state.contains("failure") ) {
+  if (property =="Error" && s_state == "failure") {
     notifyclient->init();
     notifyclient->setSummary(QString(tr("Service Error: %1")).arg(value.toString()) );
     notifyclient->setBody(QString(tr("Object Path: %1")).arg(s_path) );
@@ -993,11 +993,11 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
   }
 
   // if state property changed sync the online data members
-  if (property.contains("State", Qt::CaseInsensitive) ) {
-    if (value.toString().contains("online") ) {
+  if (property == "State") {
+    if (value.toString() == "online") {
       onlineobjectpath = s_path;
     } //
-    else if (s_path.contains(onlineobjectpath, Qt::CaseInsensitive) ) {
+    else if (s_path == onlineobjectpath) {
       onlineobjectpath.clear();
     } // else if this service just went offline
   } // if property contains State
@@ -1015,7 +1015,7 @@ void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue
 
   // replace the old values with the changed ones.
   for (int i = 0; i < technologies_list.count(); ++i) {
-    if (s_path.contains(technologies_list.at(i).objpath.path(), Qt::CaseSensitive) ) {
+    if (s_path == technologies_list.at(i).objpath.path() ) {
       QMap<QString,QVariant> map = technologies_list.at(i).objmap;
       map.remove(name);
       map.insert(name, dbvalue.variant() );
@@ -1041,7 +1041,7 @@ void ControlBox::scanWiFi()
 
   // Run through each technology and do a scan for any wifi
   for (int row = 0; row < technologies_list.size(); ++row) {
-    if (technologies_list.at(row).objmap.value("Type").toString().contains("wifi") ) {
+    if (technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
       if (technologies_list.at(row).objmap.value("Powered").toBool() ) {
         ui.pushButton_rescan->setDisabled(true);
         ui.tableWidget_services->setCurrentIndex(QModelIndex()); // first cell becomes selected once pushbutton is disabled
@@ -1191,7 +1191,7 @@ void ControlBox::wifiSubmenuTriggered(QAction* act)
 			QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
 			iface_serv->setTimeout(1);
 			QString state = wifi_list.at(i).objmap.value("State").toString();
-			if (state.contains("online") || state.contains("ready") )
+			if (state == "online" || state == "ready")
 				iface_serv->call(QDBus::AutoDetect, "Disconnect");
 			else 
 				iface_serv->call(QDBus::AutoDetect, "Connect");
@@ -1606,7 +1606,7 @@ void ControlBox::assemblePage3()
   wifi_list.clear();
   for (int row = 0; row < services_list.size(); ++row) {
     QMap<QString,QVariant> map = services_list.at(row).objmap;
-    if (map.value("Type").toString().contains("wifi") ) {
+    if (map.value("Type").toString() == "wifi") {
       wifi_list.append(services_list.at(row));
       ui.tableWidget_wifi->setRowCount(rowcount + 1);
 
@@ -1623,11 +1623,11 @@ void ControlBox::assemblePage3()
       ui.tableWidget_wifi->setCellWidget(rowcount, 1, ql01);
  
       QLabel* ql02 = new QLabel(ui.tableWidget_wifi);
-      if (map.value("State").toString().contains("online") ) {
+      if (map.value("State").toString() == "online") {
 				ql02->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
       } // if online
       else {
-        if (map.value("State").toString().contains("ready") ) {
+        if (map.value("State").toString() == "ready") {
 					ql02->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
         } // if ready
         else {
@@ -1729,13 +1729,13 @@ void ControlBox::assembleTrayIcon()
     } //  if the state is online
 
     // else if state is ready
-    else if (properties_map.value("State").toString().contains("ready") ) {
+    else if (properties_map.value("State").toString() == "ready") {
         prelimicon = iconman->getIcon("connection_ready");
       stt.append(tr("Connection is in the Ready State.", "icon_tool_tip"));
     } // else if if ready
 
     // else if state is failure
-    else if (properties_map.value("State").toString().contains("failure") ) {
+    else if (properties_map.value("State").toString() == "failure") {
       // try to reconnect if service is wifi and Favorite and if reconnect is specified
       if (ui.checkBox_retryfailed->isChecked() ) {
         if (services_list.at(0).objmap.value("Type").toString() =="wifi"  && services_list.at(0).objmap.value("Favorite").toBool() ) {
@@ -1834,7 +1834,7 @@ void ControlBox::assembleTrayIcon()
     QAction* act = wifi_submenu->addAction(TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Name").toString()) );
     act->setCheckable(true);
     QString state = TranslateStrings::cmtr(wifi_list.at(k).objmap.value("State").toString() );
-		if (state.contains("online") || state.contains("ready") ) act->setChecked(true);
+		if (state == "online" || state == "ready") act->setChecked(true);
     QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Name").toString())) );
     ttstr.append(tr("Connection : %1").arg(state));
     ttstr.append("<br>");
