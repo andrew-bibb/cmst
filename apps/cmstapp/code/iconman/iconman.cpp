@@ -38,13 +38,16 @@ DEALINGS IN THE SOFTWARE.
 # include <QCryptographicHash>
 # include <QSettings>
 # include <QMessageBox>
+# include <QProcessEnvironment>
 
 // Constructor
 IconManager::IconManager(QObject* parent) : QObject(parent) 
 {
-	// Set the cfg member (path to ${home}/.config/cmst
-	// APP defined in resource.h
-	cfg = QDir::homePath().append(QString("/.config/%1/%1.icon").arg(QString(APP).toLower()) );	
+  // Setup the config path and file name (where we the store icon_def file)
+  // APP defined in resource.h
+  QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+  QString home = env.value("HOME");
+  cfg = QString(env.value("XDG_CONFIG_HOME", QString(QDir::homePath())) + "/.config/%1/%1.icon").arg(QString(APP).toLower() );	
 	
 	// Set the qrc data member
 	qrc = QString(":/text/text/icon_def.txt");
