@@ -458,7 +458,7 @@ void ControlBox::aboutIconSet()
 void ControlBox::showLicense()
 {
   QString s = readResourceText(":/text/text/license.txt");
-  if ( s.isEmpty() ) s.append(tr("%1 license is the MIT license.").arg(TranslateStrings::cmtr("cmst")));
+  if ( s.isEmpty() ) s.append(tr("%1 license is the MIT (Expat) license.").arg(TranslateStrings::cmtr("cmst")));
 
   QMessageBox::about(this, tr("License"), s);
 }

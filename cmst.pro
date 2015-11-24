@@ -41,6 +41,11 @@ else {
 	system(sed -i 's/Icon=cmst/Icon=preferences-system-network/g' "./misc/desktop/cmst-autostart.desktop")
 }
 
+# license
+license.path = /usr/share/licenses/cmst
+license.files = ./text/LICENSE
+INSTALLS += license
+
 # desktop file
 desktop.path = /usr/share/applications
 desktop.files = ./misc/desktop/cmst.desktop
