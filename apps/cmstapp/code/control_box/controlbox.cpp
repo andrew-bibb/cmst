@@ -2031,6 +2031,10 @@ void ControlBox::readSettings()
 // and called by a single shot QTimer.
 void ControlBox::createSystemTrayIcon()
 {
+	// Search for a tray icon, don't read XDG_CURRENT_DESKTOP for the tray type
+	bool b_dtaware = qApp->desktopSettingsAware();
+	qApp->setDesktopSettingsAware(false);
+	
   // We still need to make sure there is a tray available
   if (QSystemTrayIcon::isSystemTrayAvailable() ) {
 
@@ -2111,6 +2115,9 @@ void ControlBox::createSystemTrayIcon()
     // Even if we want to be minimized we can't there is no place to minimize to.
     this->showNormal();
   } // else
+
+	// Restore the desktopAware
+	qApp->setDesktopSettingsAware(b_dtaware);
 
   // Lastly update the display widgets (since this is actually the last
   // line of the constructor.)
