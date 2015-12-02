@@ -1,16 +1,17 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<br><b>In Progress</b>
+<b>2015.12.03</b>
 <ul>
 <li>CMST icon by Progandy was reworked and made cleaner by Hagabaka.</li>
-<li>Added feature to run an external program automatically run after a connect. The <i>Advanced Controls</i> checkbox must be checked to access this.<li>
+<li>Added feature to run an external program automatically after a connect. The <i>Advanced Controls</i> checkbox must be checked to access this.<li>
 <li>Expanded functionality of system tray icon menu to toggle power for technologies and to connect or disconnect wifi services.</li>
 <li>System tray menu can be torn off and live in its own window on the desktop.</li>
 <li>Internal icons can be colorized (color selector control on Preferences Tab).</li>
-<li>Fixed problem with tray icons not showing in the Plasma Desktop.<li>
-<li>Reworked internals to store text returned by Connman as is and only translate for display.<li>
+<li>Reworked internals to store text returned by Connman as is and only translate for display.</li>
+<li>Fixed issue #118 (tray icon not visible in Plasma 5)</li>
+<li>Fixed issue #119 (not starting when XDG_CURRENT_DESKTOP=kde is set and not actually running KDE).</li>
 </ul>
-<br><b>2015.10.03</b>
+<b>2015.10.03</b>
 <ul>
 <li>Browser selections in Agent dialog improved and added xdg-open option (by Yaohan Chen).</li>
 <li>-i (--icon-theme) command line option will now accept a theme name.</li>
@@ -22,7 +23,7 @@
 <li>Added -B command line option to bypass all startup options set in Preferences.</li>
 <li>New CMST icon (by Progandy).</li>
 </ul>
-<br><b>2015.03.01</b>
+<b>2015.03.01</b>
 <ul>
 <li>Translation to Chinese by Jianfeng Zhang.</li>
 <li>Option to create a entry in the users autostart direcory (coded by Lester Bico).</li>
@@ -30,25 +31,24 @@
 <li>Start options formally only available from the command line may now be set in preferences.</li>
 <li>Added --fake-transparency command line option to try and work around system trays that display transparent backgrounds as opaque (generally white).</li>
 </ul>
-<br><b>2014.12.14</b>
+<b>2014.12.14</b>
 <ul>
 <li>If a Wifi service falls into the failure state provide an option to try and automatically reconnect.</li>
 <li>Removed -r (--wife-scan-rate) command line option and all code internal for having CMST to WiFi scans.  This was conflicting with Connman auto scans.</li>
 <li>Available services now shown with right click on system tray icon.</li>
 </ul>
-<br><b>2014.12.05</b>
+<b>2014.12.05</b>
 <ul>
 <li>Adding translations (Russian Complete).</li>
 <li>Fixed response time for Agent dialog when it is needed.</li>
 </ul>
-<br><b>2014.11.24</b>
+<b>2014.11.24</b>
 <ul>
 <li>Added CMST icon.</li>
 <li>Added --use-xfce command line option.  Code for XFCE that breaks KDE now must be called with this option.</li>
 <li>Fixed integer overflow for counters.</li>
 </ul>
-<br>
-<br><b>2014.11.18</b>
+<b>2014.11.18</b>
 <ul>
 <li>Removed incorrect validator from Properties Editor domains field.</li>
 <li>Provisioning Editor to create and edit Connman service configuration files.</li>
@@ -56,8 +56,7 @@
 <li>Systemtray icon added for a connection in the "failure" state.</li>
 <li>Fixed and cleaned up behavior of notifications and message boxes for various error conditions.</li>
 </ul>
-<br>
-<br><b>2014.10.15</b>
+<b>2014.10.15</b>
 <ul>
 <li>Connect, Disconnect, and Remove buttons in the Wifi tab are disabled if no Wifi services are available.<li>
 <li>If only one WiFi service exists it is no longer necessary to select it first before pressing the Connect button.</li>
@@ -68,14 +67,13 @@
 <li>Autoconnect property can be set or unset from the property editor.</li>
 <li>Fixed the IPv6 validator in the properties editor.</li>
 </ul>
-<br>
-<br><b>2014.08.23</b>
+<b>2014.08.23</b>
 <ul>
 <li>Removed tooltips for obvious controls.  Tooltips now are only available for dynamic GUI elements (unless the user disables them in preferences).</li>
 <li>Detailed service configuration dialog.</li>
 <li>Added scrollbars and additional information to the service details tab.</li>
 </ul>
-<br><b>2014.07.19</b>
+<b>2014.07.19</b>
 <ul>
 <li>UI updated to allow notifications from the system tray icon or from a notification server.</li>
 <li>Notifications can be sent to a notification server if present.</li>
@@ -83,19 +81,19 @@
 <li>Scan WiFi button moved to Technologies box and renamed "Rescan". No change in function, just a more accurate representation of what the button does.</li>
 <li>Connections in the "Ready" state show ready with an appropriate icon in the system tray instead of showing disconnected.</li>   
 </ul>
-<br><b>2014.07.01	</b>
+<b>2014.07.01	</b>
 <ul>
 <li>Added "scan wifi" button to force a rescan of wifi sevices.</li>
 <li>Added a checkbox to preferences to reset the counters at startup and when a service changes.</li>
 <li>Finished the internal rework to catch and process dbus signals.</li>
 </ul>
-<br><b>2014.06.22	</b>
+<b>2014.06.22	</b>
 <ul>
 <li>Check to make sure only a single instance of the program can be run.</li>
 <li>Shipped with a .desktop file and icon.</li>
 <li>Internal changes to catching dbus signals.</li>
 </ul>
-<br><b>2014.06.14</b>
+<b>2014.06.14</b>
 <ul>
 <li>Selecting "Maximize" from the tray icon will show the dialog "normal" instead of "maximized".</li>
 <li>Enabled display of size grip in corner of dialog</li>
@@ -111,32 +109,32 @@
 <li>A manpage is now provided and installed.</li>
 <li>The system tray icon can optionally show notify messages in popups.</li>
 </ul>
-<br><b>2014.05.10</b>
+<b>2014.05.10</b>
 <ul>
 <li>Left mouse click in system tray will toggle the interface up and down (coded by: Brett Dutro)
 <li>Option to use system icon theme if available</li>
 <li>Added MoveBefore and MoveAfter buttons to services on first page</li>
 </ul>
-<br><b>2014.03.29 - </b>Revised per input from Arch Linux Forums
+<b>2014.03.29 - </b>Revised per input from Arch Linux Forums
 <ul>
 <li>Added command line option to wait a specified time to create the system tray</li>
 </ul>
-<br><b>2014.03.13 - </b>Revised per input from Arch Linux Forums
+<b>2014.03.13 - </b>Revised per input from Arch Linux Forums
 <ul>
 <li>Command line options to show help, version, disable the system tray and start the program minimized.</li>
 <li>Added SSID field to the agent request information dialog.</li>
 <li>Added check to make sure a system tray exists before we try to use it.</li>
 <li>Added option to log the input request from the connman daemon.</li>
 </ul>
-<br><b>2014.01.18 - </b>Revised
+<b>2014.01.18 - </b>Revised
 <ul>
 <li>Improved error dialog in Agent and ask for retry on bad password.</li>
 </ul>
-<br><b>2014.01.14 - </b>Revised
+<b>2014.01.14 - </b>Revised
 <ul>
 <li>Fixed up tooltip popup on system tray icon</li>
 </ul>
-<br><b>2014.01.11 - </b>Posted to Arch Linux Forum
+<b>2014.01.11 - </b>Posted to Arch Linux Forum
 <ul>
 <li>Added the counters and the Counters tab</li>
 <li>Fixed a SEGFAULT when connecting a Wifi service after the service order had changed.</li>
@@ -144,7 +142,6 @@
 <li>Fixed SEGFAULTS if the program fails to find or connect to DBUS</li>
 <li>Added a button on the WiFi page to remove a Wifi service</li>
 </ul>
-<br>
 <b>2014.01.05 - </b>Initial Version
 <ul>
 <li>View and set global connection properties</li>
