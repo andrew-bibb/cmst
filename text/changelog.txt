@@ -7,6 +7,8 @@
 <li>Expanded functionality of system tray icon menu to toggle power for technologies and to connect or disconnect wifi services.</li>
 <li>System tray menu can be torn off and live in its own window on the desktop.</li>
 <li>Internal icons can be colorized (color selector control on Preferences Tab).</li>
+<li>Fixed problem with tray icons not showing in the Plasma Desktop.<li>
+<li>Reworked internals to store text returned by Connman as is and only translate for display.<li>
 </ul>
 <br><b>2015.10.03</b>
 <ul>
