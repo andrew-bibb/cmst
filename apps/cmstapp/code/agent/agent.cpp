@@ -67,6 +67,8 @@ ConnmanAgent::ConnmanAgent(QObject* parent)
 // tasks so don't need much here
 void ConnmanAgent::Release()
 {
+	//qDebug() << "Agent Released";
+	
 	return;
 }
 

@@ -2504,21 +2504,18 @@ void ControlBox::cleanUp()
   this->writeSettings();
   
   // unregister objects
-  // agent
-  QList<QVariant> vlist_agent;
-	vlist_agent.clear();
-	vlist_agent << QVariant::fromValue(QDBusObjectPath("/org/cmst/Agent") );
-  QDBusMessage reply_a = iface_manager->callWithArgumentList(QDBus::AutoDetect, "UnregisterAgent", vlist_agent);
-	//qDebug() << reply_a;
-	
-	// counter - only have a signal-slot connection if the counter was able to be registered
-	if (counter->cnxns() > 0) {
-		QList<QVariant> vlist_counter;
-		vlist_counter.clear();
-		vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter") );
-		QDBusMessage reply_c = iface_manager->callWithArgumentList(QDBus::AutoDetect, "UnregisterCounter", vlist_counter); 
-		//qDebug() << reply_c;
-	}	// if counters are connected to anythign
+  if (iface_manager->isValid() ) {
+	  
+	  // agent
+	  QDBusMessage reply_a = iface_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath("/org/cmst/Agent")) );
+		//qDebug() << reply_a;
+		
+		// counter - only have a signal-slot connection if the counter was able to be registered
+		if (counter->cnxns() > 0) {
+			QDBusMessage reply_c = iface_manager->call(QDBus::AutoDetect, "UnregisterCounter", QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter")) ); 
+			//qDebug() << reply_c;
+		}	// if counters are connected to anything
+	}	// if iface_manager isValid
 
   return;
 }

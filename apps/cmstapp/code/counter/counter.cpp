@@ -138,6 +138,8 @@ QString ConnmanCounter::getLabel(const QVariantMap& map)
 // tasks so don't need much here
 void ConnmanCounter::Release()
 {
+	//qDebug() << "Counter Released";
+	
   return;
 }
 
