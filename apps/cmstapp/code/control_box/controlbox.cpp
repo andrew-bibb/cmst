@@ -2512,7 +2512,7 @@ void ControlBox::cleanUp()
 	//qDebug() << reply_a;
 	
 	// counter - only have a signal-slot connection if the counter was able to be registered
-	if (counter->cnxns() > 0) {;
+	if (counter->cnxns() > 0) {
 		QList<QVariant> vlist_counter;
 		vlist_counter.clear();
 		vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter") );
