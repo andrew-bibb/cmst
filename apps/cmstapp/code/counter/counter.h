@@ -45,7 +45,8 @@ class ConnmanCounter : public QObject
 			ConnmanCounter(QObject*);
 			QString getLabel(const QVariantMap&);
 			QDBusObjectPath getServiceObjectPath();
-			
+			inline int cnxns() {return receivers(SIGNAL(usageUpdated(const QDBusObjectPath&, const QString&, const QString&)));}
+							
 		signals:
 			void usageUpdated(const QDBusObjectPath&, const QString&, const QString&);	
  

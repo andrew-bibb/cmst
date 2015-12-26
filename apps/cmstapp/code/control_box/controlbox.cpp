@@ -270,9 +270,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   }
   counter_period = setval > minval ? setval : minval; // number of seconds for counter updates
 
-  // connect counter signal to the counterUpdated slot before we register the counter, assuming counters are not disabled
-  if (! parser.isSet("disable-counters") && (b_so ? (! ui.checkBox_disablecounters->isChecked()) : true ) ) 
-    connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
 
   // operate on settings not dealt with elsewhere
   ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
@@ -302,12 +299,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       vlist_agent << QVariant::fromValue(QDBusObjectPath("/org/cmst/Agent"));
       iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterAgent", vlist_agent);
 
-      // if counters are enabled register the counter
+      // if counters are enabled connect signal to slot and register the counter 
       if (! parser.isSet("disable-counters") && (b_so ? (! ui.checkBox_disablecounters->isChecked()) : true ) ) {
         QList<QVariant> vlist_counter;
         vlist_counter.clear();
-        vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter")) << counter_accuracy << counter_period;;
-        iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterCounter", vlist_counter);
+        vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter")) << counter_accuracy << counter_period;
+        QDBusMessage reply = iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterCounter", vlist_counter);
+        if (reply.type() == QDBusMessage::ReplyMessage)
+					connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
       }
 
     // connect some dbus signals to our slots
@@ -2503,6 +2502,23 @@ void ControlBox::cleanUp()
 
   // write settings
   this->writeSettings();
+  
+  // unregister objects
+  // agent
+  QList<QVariant> vlist_agent;
+	vlist_agent.clear();
+	vlist_agent << QVariant::fromValue(QDBusObjectPath("/org/cmst/Agent") );
+  QDBusMessage reply_a = iface_manager->callWithArgumentList(QDBus::AutoDetect, "UnregisterAgent", vlist_agent);
+	//qDebug() << reply_a;
+	
+	// counter - only have a signal-slot connection if the counter was able to be registered
+	if (counter->cnxns() > 0) {;
+		QList<QVariant> vlist_counter;
+		vlist_counter.clear();
+		vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter") );
+		QDBusMessage reply_c = iface_manager->callWithArgumentList(QDBus::AutoDetect, "UnregisterCounter", vlist_counter); 
+		//qDebug() << reply_c;
+	}	// if counters are connected to anythign
 
   return;
 }
