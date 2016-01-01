@@ -29,7 +29,7 @@ DEALINGS IN THE SOFTWARE.
 /**********************************************************************
  * NOTE TO PEOPLE HACKING ON THE CODE
  * 
- * Prior to 2015-2016.11.12 text returned by connman was translated and then
+ * Prior to 2015.11.12 text returned by connman was translated and then
  * stored in the various maps.  After that date the code was revised so
  * that text is stored in the maps exactly as connman returns it and
  * is then translated when it needs to be displayed.
