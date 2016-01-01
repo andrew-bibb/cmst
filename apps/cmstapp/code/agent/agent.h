@@ -3,7 +3,7 @@
 Code for the user agent registered on DBus.  When the connman daemon
 needs to communicate with the user it does so through this agent.
 
-Copyright (C) 2013-2015
+Copyright (C) 2013-2016
 by: Andrew J. Bibb
 License: MIT 
 
@@ -40,10 +40,14 @@ DEALINGS IN THE SOFTWARE.
 
 # include "./code/agent/agent_dialog.h"
 
+# define AGENT_SERVICE "org.cmst"
+# define AGENT_INTERFACE "net.connman.Agent"
+# define AGENT_OBJECT "/org/cmst/Agent"
+
 class ConnmanAgent : public QObject, protected QDBusContext
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "net.connman.Agent")
+    Q_CLASSINFO("D-Bus Interface", AGENT_INTERFACE)
  
     public:
 			ConnmanAgent(QObject*);

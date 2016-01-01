@@ -4,7 +4,7 @@
 Code for the user agent registered on DBus.  When the connman daemon
 needs to communicate with the user it does so through this agent.
 
-Copyright (C) 2013-2015
+Copyright (C) 2013-2016
 by: Andrew J. Bibb
 License: MIT 
 
@@ -58,7 +58,7 @@ ConnmanAgent::ConnmanAgent(QObject* parent)
 	
 	//	Create Adaptor and register this Agent on the system bus.  
 	new AgentAdaptor(this);
-	QDBusConnection::systemBus().registerObject("/org/cmst/Agent", this);
+	QDBusConnection::systemBus().registerObject(AGENT_OBJECT, this);
 }
 
 /////////////////////////////////////// PUBLIC Q_SLOTS////////////////////////////////

@@ -2,7 +2,7 @@
 
 main program for the roothelper application
 
-Copyright (C) 2013-2015
+Copyright (C) 2013-2016
 by: Andrew J. Bibb
 License: MIT 
 

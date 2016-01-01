@@ -2,7 +2,7 @@
 
 C++ main routine. 
 
-Copyright (C) 2013-2015
+Copyright (C) 2013-2016
 by: Andrew J. Bibb
 License: MIT
 
@@ -127,7 +127,7 @@ int main(int argc, char *argv[])
 		"10" );
   parser.addOption(counterUpdateRate);
 
-	// Added on 2015.01.04 to work around QT5.4 bug with transparency not always working
+	// Added on 2015-2016.01.04 to work around QT5.4 bug with transparency not always working
   QCommandLineOption fakeTransparency(QStringList() << "fake-transparency",
 		QCoreApplication::translate("main.cpp", "If tray icon fake transparency is required, specify the background color to use (format: 0xRRGGBB)"),
 		QCoreApplication::translate("main.cpp", "RRGGBB"),

@@ -3,7 +3,7 @@
 Code to manage the primary user interface to include the QDialog the
 user interfaces with and the system tray icon.
 
-Copyright (C) 2013-2015
+Copyright (C) 2013-2016
 by: Andrew J. Bibb
 License: MIT
 
@@ -29,7 +29,7 @@ DEALINGS IN THE SOFTWARE.
 /**********************************************************************
  * NOTE TO PEOPLE HACKING ON THE CODE
  * 
- * Prior to 2015.11.12 text returned by connman was translated and then
+ * Prior to 2015-2016.11.12 text returned by connman was translated and then
  * stored in the various maps.  After that date the code was revised so
  * that text is stored in the maps exactly as connman returns it and
  * is then translated when it needs to be displayed.
@@ -296,14 +296,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       // register the agent
       QList<QVariant> vlist_agent;
       vlist_agent.clear();
-      vlist_agent << QVariant::fromValue(QDBusObjectPath("/org/cmst/Agent"));
+      vlist_agent << QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT));
       iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterAgent", vlist_agent);
 
       // if counters are enabled connect signal to slot and register the counter 
       if (! parser.isSet("disable-counters") && (b_so ? (! ui.checkBox_disablecounters->isChecked()) : true ) ) {
         QList<QVariant> vlist_counter;
         vlist_counter.clear();
-        vlist_counter << QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter")) << counter_accuracy << counter_period;
+        vlist_counter << QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT)) << counter_accuracy << counter_period;
         QDBusMessage reply = iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterCounter", vlist_counter);
         if (reply.type() == QDBusMessage::ReplyMessage)
 					connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
@@ -2505,14 +2505,13 @@ void ControlBox::cleanUp()
   
   // unregister objects
   if (iface_manager->isValid() ) {
-	  
 	  // agent
-	  QDBusMessage reply_a = iface_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath("/org/cmst/Agent")) );
+	  QDBusMessage reply_a = iface_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT)) );
 		//qDebug() << reply_a;
-		
+			
 		// counter - only have a signal-slot connection if the counter was able to be registered
 		if (counter->cnxns() > 0) {
-			QDBusMessage reply_c = iface_manager->call(QDBus::AutoDetect, "UnregisterCounter", QVariant::fromValue(QDBusObjectPath("/org/cmst/Counter")) ); 
+			QDBusMessage reply_c = iface_manager->call(QDBus::AutoDetect, "UnregisterCounter", QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT)) ); 
 			//qDebug() << reply_c;
 		}	// if counters are connected to anything
 	}	// if iface_manager isValid

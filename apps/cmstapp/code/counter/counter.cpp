@@ -3,7 +3,7 @@
 Code for the connection counter registered on DBus.  When registered the
 connman daemon will communicate to this object with signals.
 
-Copyright (C) 2013-2015
+Copyright (C) 2013-2016
 by: Andrew J. Bibb
 License: MIT 
 
@@ -46,8 +46,10 @@ ConnmanCounter::ConnmanCounter(QObject* parent)
   
   //  Create Adaptor and register this Counter on the system bus.  
   new CounterAdaptor(this);
-  QDBusConnection::systemBus().registerObject("/org/cmst/Counter", this);
-
+  
+	// Try to register an object on the system bus
+	QDBusConnection::systemBus().registerObject(CNTR_OBJECT, this);
+	
 }
 
 

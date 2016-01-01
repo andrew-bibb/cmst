@@ -3,7 +3,7 @@
 Code for a notify client to interface with a desktop notification 
 server.
 
-Copyright (C) 2013-2015
+Copyright (C) 2013-2016
 by: Andrew J. Bibb
 License: MIT 
 

@@ -3,7 +3,7 @@
 Code for the connection counter registered on DBus.  When registered the
 connman daemon will communicate to this object with signals.
 
-Copyright (C) 2013-2015
+Copyright (C) 2013-2016
 by: Andrew J. Bibb
 License: MIT 
 
@@ -35,16 +35,19 @@ DEALINGS IN THE SOFTWARE.
 # include <QVariantMap>
 # include <QtDBus/QDBusObjectPath>
 
+# define CNTR_SERVICE "org.cmst"
+# define CNTR_INTERFACE "net.connman.Counter"
+# define CNTR_OBJECT "/org/cmst/Counter"
+
 
 class ConnmanCounter : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "net.connman.Counter")
+    Q_CLASSINFO("D-Bus Interface", CNTR_INTERFACE)
  
     public:
 			ConnmanCounter(QObject*);
 			QString getLabel(const QVariantMap&);
-			QDBusObjectPath getServiceObjectPath();
 			inline int cnxns() {return receivers(SIGNAL(usageUpdated(const QDBusObjectPath&, const QString&, const QString&)));}
 							
 		signals:
