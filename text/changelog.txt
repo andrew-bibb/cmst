@@ -1,5 +1,10 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<b>In Progress</b>
+<ul>
+<li>Added a VPN tab to the main controlbox.</li>
+<li>Can connect and disconnect already provisioned VPN services from controlbox.</li>
+</ul>
 <b>2015.12.03</b>
 <ul>
 <li>CMST icon by Progandy was reworked and made cleaner by Hagabaka.</li>

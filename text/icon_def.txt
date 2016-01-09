@@ -100,6 +100,12 @@ colorize = yes
 fdo_name = network-offline
 
 [icon]
+icon_name = state_vpn_connected
+resource = :/icons/images/raw_art/stock_lock.png
+colorize = yes
+theme-names = network-vpn.png, emblem-locked.png
+
+[icon]
 icon_name = favorite
 resource = :/icons/images/raw_art/nm-signal-100.png
 colorize = yes
@@ -182,3 +188,9 @@ icon_name = connection_wifi_100
 resource = :/icons/images/raw_art/nm-signal-100.png
 colorize = yes
 theme_names = network-wireless-signal-excellent-symbolic, network-wireless-connected-100
+
+[icon]
+icon_name = connection_vpn
+resource = :/icons/images/raw_art/stock_lock.png
+colorize = yes
+theme-names = network-vpn.png, emblem-locked.png

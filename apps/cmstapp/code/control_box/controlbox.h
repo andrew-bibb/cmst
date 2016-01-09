@@ -130,13 +130,14 @@ class ControlBox : public QDialog
     QList<arrayElement>   technologies_list;
     QList<arrayElement>   wifi_list;
     QList<arrayElement>   peer_list;
+    QList<arrayElement> 	vpn_list;
     ConnmanAgent* agent;
     ConnmanCounter* counter;  
     NotifyClient* notifyclient; 
     short wifi_interval;    
     quint32 counter_accuracy; 
     quint32 counter_period;       
-    QDBusInterface* iface_manager;
+    QDBusInterface* con_manager;
     QSystemTrayIcon*  trayicon;
     QMenu* trayiconmenu;
     QMenu* tech_submenu;
@@ -158,10 +159,11 @@ class ControlBox : public QDialog
   
   // functions
     int managerRescan(const int& srv = 0);
-    void assemblePage1();
-    void assemblePage2();
-    void assemblePage3();
-    void assemblePage4();
+    void assembleTabStatus();
+    void assembleTabDetails();
+    void assembleTabWireless();
+    void assembleTabVPN();
+    void assembleTabCounters();
     void assembleTrayIcon();
     void sendNotifications();
     bool getProperties();

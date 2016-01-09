@@ -35,7 +35,7 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation) 
-#define VERSION "2016.01.01-2"
+#define VERSION "2016.01.09-1"
 
 #define RELEASE_DATE "3 December 2015"
 #define COPYRIGHT_DATE "2013-2016"
@@ -59,12 +59,13 @@ namespace CMST
 {
   enum {
     // errors
-    No_Errors         = 0x00,
-    Err_No_DBus       = (1 << 0), // Can't find DBus 
-    Err_Invalid_Iface = (1 << 1), // Invalid interface
-    Err_Properties    = (1 << 2), // There was an error reading connman.Manager.GetProperties
-    Err_Technologies  = (1 << 3), // There was an error reading connman.Manager.GetTechnologies       
-    Err_Services      = (1 << 4), // There was an error reading connman.Manager.GetServices  
+    No_Errors         		= 0x00,
+    Err_No_DBus       		= (1 << 0), // Can't find DBus 
+    Err_Invalid_Con_Iface	= (1 << 1), // Invalid interface
+    Err_Properties    		= (1 << 2), // There was an error reading connman.Manager.GetProperties
+    Err_Technologies  		= (1 << 3), // There was an error reading connman.Manager.GetTechnologies       
+    Err_Services      		= (1 << 4), // There was an error reading connman.Manager.GetServices 
+    Err_Invalid_VPN_Iface	= (1 << 5), // Invalid interface 
     
     // methods
     Manager_Properties    = (1 << 1), // scan for properties

@@ -59,7 +59,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QPainter>
 # include <QImage>
 
-
 # include "../resource.h"
 # include "./controlbox.h"
 # include "./code/scrollbox/scrollbox.h"
@@ -72,9 +71,9 @@ DEALINGS IN THE SOFTWARE.
 # include <unistd.h>
 # include <syslog.h>
 
-#define DBUS_SERVICE "net.connman"
 #define DBUS_PATH "/"
-#define DBUS_MANAGER "net.connman.Manager"
+#define DBUS_CON_SERVICE "net.connman"
+#define DBUS_CON_MANAGER "net.connman.Manager"
 
 // Custom push button, used in the technology box for powered on/off
 // This is really a single use button, after it is clicked all idButtons
@@ -157,7 +156,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   
   // set the window title
   setWindowTitle(TranslateStrings::cmtr("connman system tray"));
-
+  
   // data members
   q8_errors = CMST::No_Errors;
   properties_map.clear();
@@ -165,6 +164,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   technologies_list.clear();
   wifi_list.clear();
   peer_list.clear();
+  vpn_list.clear();
   agent = new ConnmanAgent(this);
   counter = new ConnmanCounter(this);
   trayiconmenu = new QMenu(this);
@@ -287,8 +287,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // setup the dbus interface to connman.manager
   if (! QDBusConnection::systemBus().isConnected() ) logErrors(CMST::Err_No_DBus);
   else {
-    iface_manager = new QDBusInterface(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, QDBusConnection::systemBus(), this);
-    if (! iface_manager->isValid() ) logErrors(CMST::Err_Invalid_Iface);
+    con_manager = new QDBusInterface(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, QDBusConnection::systemBus(), this);
+    if (! con_manager->isValid() ) logErrors(CMST::Err_Invalid_Con_Iface);
     else {
       // Access connman.manager to retrieve the data
       this->managerRescan(CMST::Manager_All);
@@ -297,28 +297,28 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       QList<QVariant> vlist_agent;
       vlist_agent.clear();
       vlist_agent << QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT));
-      iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterAgent", vlist_agent);
+      con_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterAgent", vlist_agent);
 
       // if counters are enabled connect signal to slot and register the counter 
       if (! parser.isSet("disable-counters") && (b_so ? (! ui.checkBox_disablecounters->isChecked()) : true ) ) {
         QList<QVariant> vlist_counter;
         vlist_counter.clear();
         vlist_counter << QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT)) << counter_accuracy << counter_period;
-        QDBusMessage reply = iface_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterCounter", vlist_counter);
+        QDBusMessage reply = con_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterCounter", vlist_counter);
         if (reply.type() == QDBusMessage::ReplyMessage)
 					connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
       }
 
     // connect some dbus signals to our slots
-    QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
-    QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
-    QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "PeersChanged", this, SLOT(dbsPeersChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
-    QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
-    QDBusConnection::systemBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
+    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
+    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
+    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PeersChanged", this, SLOT(dbsPeersChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
+    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
+    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
 
     // clear the counters if selected
     this->clearCounters();
-
+    
     } // else have valid connection
   } // else have connected systemBus
 
@@ -351,9 +351,11 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_exit, SIGNAL(clicked()), exitAction, SLOT(trigger()));
   connect(ui.pushButton_minimize, SIGNAL(clicked()), minimizeAction, SLOT(trigger()));
   connect(ui.checkBox_hideIcon, SIGNAL(clicked(bool)), this, SLOT(toggleTrayIcon(bool)));
-  connect(ui.pushButton_connect,SIGNAL(clicked()),this, SLOT(connectPressed()));
-  connect(ui.pushButton_disconnect,SIGNAL(clicked()),this, SLOT(disconnectPressed()));
-  connect(ui.pushButton_remove,SIGNAL(clicked()),this, SLOT(removePressed()));
+  connect(ui.pushButton_connect, SIGNAL(clicked()),this, SLOT(connectPressed()));
+  connect(ui.pushButton_vpn_connect, SIGNAL(clicked()),this, SLOT(connectPressed()));
+  connect(ui.pushButton_disconnect, SIGNAL(clicked()),this, SLOT(disconnectPressed()));
+  connect(ui.pushButton_vpn_disconnect, SIGNAL(clicked()),this, SLOT(disconnectPressed()));
+  connect(ui.pushButton_remove, SIGNAL(clicked()),this, SLOT(removePressed()));
   connect(ui.pushButton_aboutCMST, SIGNAL(clicked()), this, SLOT(aboutCMST()));
   connect(ui.pushButton_aboutIconSet, SIGNAL(clicked()), this, SLOT(aboutIconSet()));
   connect(ui.pushButton_aboutQT, SIGNAL(clicked()), qApp, SLOT(aboutQt()));
@@ -474,6 +476,7 @@ void ControlBox::showChangeLog()
 
 
 ////////////////////////////////////////////Private Slots ////////////////////////////////////////////
+//
 //  Slot to update all of our display widgets
 void ControlBox::updateDisplayWidgets()
 {
@@ -481,13 +484,14 @@ void ControlBox::updateDisplayWidgets()
   // get the information it needs.  Only check for major errors since we
   // can't run the assemble functions if there are.
 
-  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) == 0x00 ) {
+  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Con_Iface)) == 0x00 ) {
 
     //  rebuild our pages
-    this->assemblePage1();
-    this->assemblePage2();
-    this->assemblePage3();
-    this->assemblePage4();
+    this->assembleTabStatus();
+    this->assembleTabDetails();
+    this->assembleTabWireless();
+    this->assembleTabVPN();
+    this->assembleTabCounters();
     if (trayicon != 0 ) this->assembleTrayIcon();
 
   } // if there were no major errors
@@ -522,7 +526,7 @@ void ControlBox::moveService(QAction* act)
   if (list.isEmpty() ) return;
 
   // apply the movebefore or moveafter message to the source object
-  QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+  QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, services_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
   if (iface_serv->isValid() ) {
     if (mvsrv_menu->title() == ui.actionMove_Before->text()) {
       QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "MoveBefore", QVariant::fromValue(targetobj) );
@@ -602,81 +606,115 @@ void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QStrin
 
 
 //
-//  Slot to connect a wifi service. Called when ui.pushButton_connect is pressed
+// Slot to connect a wifi or vpn service. Called when ui.pushButton_connect
+// or ui.pushButton_vpn_connect is pressed
 void ControlBox::connectPressed()
 {
+	// Process wifi or vpn depending on who sent the signal
+	QTableWidget* qtw = NULL;
+	if (sender() == ui.pushButton_connect) qtw = ui.tableWidget_wifi;
+		else if (sender() == ui.pushButton_vpn_connect) qtw = ui.tableWidget_vpn;
+			else 	return;
+				
   // If there is only one row select it
-  if (ui.tableWidget_wifi->rowCount() == 1 ) {
-    QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(0, 0, 0, ui.tableWidget_wifi->columnCount() - 1);
-    ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
+  if (qtw->rowCount() == 1 ) {
+    QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(0, 0, 0, qtw->columnCount() - 1);
+    qtw->setRangeSelected(qtwsr, true);
   }
 
   // If no row is selected then return(
   QList<QTableWidgetItem*> list;
   list.clear();
-  list = ui.tableWidget_wifi->selectedItems();
+  list = qtw->selectedItems();
   if (list.isEmpty() ) {
     QMessageBox::information(this, tr("No Services Selected"),
-      tr("You need to select a Wifi service before pressing the connect button.") );
+      tr("You need to select a service before pressing the connect button.") );
     return;
   }
-
-  //  send the connect message to the service
-  QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-  // don't know why, but can't get the Agent until the timeout, set a short one of 1 millisecond
-  iface_serv->setTimeout(1);
-  iface_serv->call(QDBus::AutoDetect, "Connect");
-  iface_serv->deleteLater();
   
-  return;
+  //	send the connect message to the service.  TableWidget only allows single selection so list can only have 0 or 1 elments
+  QDBusInterface* iface_serv = NULL;
+  if (qtw == ui.tableWidget_wifi) 
+		iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+	else if (qtw == ui.tableWidget_vpn) 
+		iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+	else return;	// really not needed 
+	
+	iface_serv->call(QDBus::AutoDetect, "Connect");
+	iface_serv->deleteLater();
+	return;  
 }
 
 //
-//  Slot to disconnect a wifi service. Called when ui.pushButton_disconnect is pressed
+// Slot to disconnect a wifi or VPN service. Called when ui.pushButton_disconnect
+// or ui.pushBotton_vpn_disconnect is pressed
 void ControlBox::disconnectPressed()
 {
-  // Run through the wifi list looking for services in "online" or "ready" state. If more than
-  // one is found break as we will have to select manually
+	// Process wifi or vpn depending on who sent the signal
+	QTableWidget* qtw = NULL;
+	if (sender() == ui.pushButton_disconnect) qtw = ui.tableWidget_wifi;
+		else if (sender() == ui.pushButton_vpn_disconnect) qtw = ui.tableWidget_vpn;
+			else 	return;
+	
+	// If there is no item is selected run through the list looking for
+  // services in "online" or "ready" state. If more than one is found 
+  // break as we will have to use the one currently selected.
   int cntr_connected = 0;
-  int row_connected = -1;
-  for (int row = 0; row < wifi_list.size(); ++row) {
-    QMap<QString,QVariant> map = wifi_list.at(row).objmap;
-    if (map.value("State").toString() =="online" || map.value("State").toString() == "ready" ) {
-       ++cntr_connected;
-       row_connected = row;
-     }
-     if (cntr_connected > 1 ) break;
-  } // for
+	int row_connected = -1;
+  if (qtw->selectedItems().isEmpty() ) {
+	  int itemcount = 0;
+	  QMap<QString,QVariant> map;
+	  if (qtw == ui.tableWidget_wifi)	itemcount = wifi_list.size();
+			else if (qtw == ui.tableWidget_vpn)  itemcount = vpn_list.size();
+				else return;	// line is not really needed
+		 
+	  for (int row = 0; row < itemcount; ++row) {
+			if (qtw == ui.tableWidget_wifi) map = wifi_list.at(row).objmap;
+				else if (qtw == ui.tableWidget_vpn)  map = vpn_list.at(row).objmap;
+					else return; // line is not really needed
+	
+	    if (map.value("State").toString() == "online" || map.value("State").toString() == "ready" ) {
+	       ++cntr_connected;
+	       row_connected = row;
+	     }
+	     if (cntr_connected > 1 ) break;
+	  } // for
+	  
+		// Nothing selected, online or ready so return now
+		if (cntr_connected == 0) return;	
   
-  // If nothing is connected return now
-  if (cntr_connected == 0) return;
-
-  // if only one wifi entry is connected or online, select it
-  if (cntr_connected == 1 ) {
-    QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row_connected, 0, row_connected, ui.tableWidget_wifi->columnCount() - 1);
-    ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
-  }
-
-  // if no row selected return
+		// If only one entry is connected or online, select it
+		if (cntr_connected == 1 ) {
+			QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row_connected, 0, row_connected, qtw->columnCount() - 1);
+			qtw->setRangeSelected(qtwsr, true);
+		}	// cntr_connected == 1		
+	}	// if there are no currently selected items
+  
+  // If no row selected return
   QList<QTableWidgetItem*> list;
   list.clear();
-  list = ui.tableWidget_wifi->selectedItems();
+  list = qtw->selectedItems();
   if (list.isEmpty() ) {
     QMessageBox::information(this, tr("No Services Selected"),
-      tr("You need to select a Wifi service before pressing the disconnect button.") );
+      tr("You need to select a service before pressing the disconnect button.") );
     return;
   }
 
-  //  send the disconnect message to the service
-  QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-  iface_serv->call(QDBus::AutoDetect, "Disconnect");
-  iface_serv->deleteLater();
-
-  return;
+  // Send the disconnect message to the service.  TableWidget only allows single selection so list can only have 0 or 1 elments
+  QDBusInterface* iface_serv = NULL;
+  if (qtw == ui.tableWidget_wifi) 
+		iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+	else if (qtw == ui.tableWidget_vpn) 
+		iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+	else return;	// this line really not needed 
+	
+	iface_serv->call(QDBus::AutoDetect, "Disconnect");
+	iface_serv->deleteLater();
+	return;
 }
 
 //
-//  Slot to remove (unset the Favorite property, clear passphrase if one exists) of a Wifi service
+//  Slot to remove (unset the Favorite property, clear passphrase if one exists) a Wifi service
 //  Called when ui.pushButton_remove is pressed
 void ControlBox::removePressed()
 {
@@ -690,12 +728,12 @@ void ControlBox::removePressed()
     return;
   }
 
-  //  send the Remove message to the service
-  QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-  iface_serv->call(QDBus::AutoDetect, "Remove");
-  iface_serv->deleteLater();
-
-  return;
+  // Send the Remove message to the service.  TableWidget only allows single selection so list can only have 0 or 1 elments
+  QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+	iface_serv->call(QDBus::AutoDetect, "Remove");
+	iface_serv->deleteLater();
+	
+	return;
 }
 
 //  dbs slots are slots to receive DBus Signals
@@ -782,24 +820,14 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 // Slot called whenever DBUS issues a ServicesChanged signal.  When a
 // Scan method is called on a technology the results of that scan are
 // signaled through this slot.  vmap will not be empty, it contains all
-// of the services found.  The objmap for the will be empty is nothing
-// in the service changed, so test for that to see if we want to call
-// updateDisplayWidgets().
+// of the services found.  
 void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {
-  // Set the update flag
-  bool b_needupdate = false;
-
   // Function is called everytime we do a wifi scan and we get new list of
-
   // process changed services. Demarshall the raw QDBusMessage instead of vmap as it is easier.
   if (! vmap.isEmpty() ) {
     QList<arrayElement> revised_list;
     if (! getArray(revised_list, msg)) return;
-
-    // if revised_list is not the same size as the existing services_list
-    // then we definetely need an update
-    if (revised_list.count() != services_list.count() ) b_needupdate = true;
 
     // merge the existing services_list into the revised_list
     // first find the original element that matches the revised
@@ -818,7 +846,6 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
         QMapIterator<QString, QVariant> itr(revised_element.objmap);
         while (itr.hasNext()) {
           itr.next();
-          b_needupdate = true;
           original_element.objmap.insert(itr.key(), itr.value() );
         } // while
 
@@ -834,7 +861,6 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
 
   // process removed services
   if (! removed.isEmpty() ) {
-    b_needupdate = true;
     for (int i = 0; i < services_list.count(); ++i) {
       if (removed.contains(services_list.at(i).objpath) )
         services_list.removeAt(i);
@@ -842,11 +868,9 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
     } // if we needed to remove something
 
   // clear the counters (if selected) and update the widgets
-  if (b_needupdate) {
     clearCounters();
     updateDisplayWidgets();
     managerRescan(CMST::Manager_Services);  // used to connect service object signals to dbsServicePropertyChanged() slot
-  }
 
   return;
 }
@@ -1055,7 +1079,7 @@ void ControlBox::scanWiFi()
         ui.pushButton_rescan->setDisabled(true);
         ui.tableWidget_services->setCurrentIndex(QModelIndex()); // first cell becomes selected once pushbutton is disabled
         qApp->processEvents();  // needed to promply disable the button
-        QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
+        QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
         iface_tech->setTimeout( 8 * 1000);  // full 25 second timeout is a bit much when there is a problem
         QDBusMessage reply = iface_tech->call(QDBus::AutoDetect, "Scan");
         if (reply.type() != QDBusMessage::InvalidMessage) ui.pushButton_rescan->setEnabled(true);
@@ -1079,12 +1103,12 @@ void ControlBox::scanWiFi()
 //  Called when ui.checkBox_devicesoff is clicked
 void ControlBox::toggleOfflineMode(bool checked)
 {
-  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) != 0x00 ) return;
+  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Con_Iface)) != 0x00 ) return;
 
   QList<QVariant> vlist;
   vlist.clear();
   vlist << QVariant("OfflineMode") << QVariant::fromValue(QDBusVariant(checked ? true : false));
-  iface_manager->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
+  con_manager->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
 
   return;
 }
@@ -1113,7 +1137,7 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 //  Called when our custom idButton in the powered cell in the page 1 technology tableWidget is clicked
 void ControlBox::togglePowered(QString object_id, bool checkstate)
 {
-  QDBusInterface* iface_tech = new QDBusInterface(DBUS_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
+  QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
 
   QList<QVariant> vlist;
   vlist.clear();
@@ -1197,7 +1221,7 @@ void ControlBox::wifiSubmenuTriggered(QAction* act)
 	// find the wifi service associated with the action.
 	for (int i = 0; i < wifi_list.count(); ++i) {
 		if (wifi_list.at(i).objmap.value("Name").toString() == act->text() ) {
-			QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, wifi_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+			QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
 			iface_serv->setTimeout(1);
 			QString state = wifi_list.at(i).objmap.value("State").toString();
 			if (state == "online" || state == "ready")
@@ -1385,7 +1409,7 @@ bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
 //  Int return value is the errors encountered
 int ControlBox::managerRescan(const int& srv)
 {
-  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Iface)) == 0x00 ) {
+  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Con_Iface)) == 0x00 ) {
 
     // Reset the getXX errors, always a chance we could read them after
     // a previous error. Don't actually believe it, but just in case.
@@ -1401,8 +1425,8 @@ int ControlBox::managerRescan(const int& srv)
       else {
         // connect technology signals to slots
         for (int i = 0; i < technologies_list.size(); ++i) {
-          QDBusConnection::systemBus().disconnect(DBUS_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
-          QDBusConnection::systemBus().connect(DBUS_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
+          QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
+          QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
         } // for
       } //else
     } // if technolgies
@@ -1414,8 +1438,8 @@ int ControlBox::managerRescan(const int& srv)
       // connect service signals to slots
       else {
         for (int i = 0; i < services_list.size(); ++i) {
-          QDBusConnection::systemBus().disconnect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
-          QDBusConnection::systemBus().connect(DBUS_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+          QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+          QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
         } // for
       } // else
     } // if services
@@ -1430,8 +1454,8 @@ int ControlBox::managerRescan(const int& srv)
 }
 
 //
-//  Function to assemble page 1 of the dialog
-void ControlBox::assemblePage1()
+//  Function to assemble status tab of the dialog
+void ControlBox::assembleTabStatus()
 {
   // Global Properties
   if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
@@ -1563,10 +1587,10 @@ void ControlBox::assemblePage1()
 }
 
 //
-//  Function to assemble page 2 of the dialog.  Only fill in the
+//  Function to assemble details tab of the dialog.  Only fill in the
 //  ui.comboBox_service widget.  The detail portion will be filled in
 //  by the getServiceDetails() slot whenever the comboBox index changes.
-void ControlBox::assemblePage2()
+void ControlBox::assembleTabDetails()
 {
   // initilize the page2 display widgets
   ui.comboBox_service->clear();
@@ -1587,8 +1611,8 @@ void ControlBox::assemblePage2()
 }
 
 //
-//  Function to assemble page 3 of the dialog.
-void ControlBox::assemblePage3()
+//  Function to assemble the wireless tab of the dialog.
+void ControlBox::assembleTabWireless()
 {
   //  initilize the table
   ui.tableWidget_wifi->clearContents();
@@ -1679,8 +1703,69 @@ void ControlBox::assemblePage3()
 }
 
 //
-//  Function to assemble page 4 of the dialog.
-void ControlBox::assemblePage4()
+// FUnction to assemble the VPN tab of the dialog
+void ControlBox::assembleTabVPN()
+{
+  //  initilize the table
+  ui.tableWidget_vpn->clearContents();
+  ui.tableWidget_vpn->setRowCount(0);
+  int rowcount = 0;
+
+  // Make sure we got the services_list before we try to work with it.
+  if ( (q8_errors & CMST::Err_Services) != 0x00 ) return;	
+  
+// Run through each service_list looking for wifi services
+  vpn_list.clear();
+  for (int row = 0; row < services_list.size(); ++row) {
+    QMap<QString,QVariant> map = services_list.at(row).objmap;
+    if (map.value("Type").toString() == "vpn") {
+      vpn_list.append(services_list.at(row));
+      ui.tableWidget_vpn->setRowCount(rowcount + 1);
+
+      QTableWidgetItem* qtwi00 = new QTableWidgetItem();
+      qtwi00->setText(map.value("Name").toString() );
+      qtwi00->setTextAlignment(Qt::AlignCenter);
+      ui.tableWidget_vpn->setItem(rowcount, 0, qtwi00);
+
+      QLabel* ql01 = new QLabel(ui.tableWidget_vpn);
+      if (map.value("Favorite").toBool() ) {
+				ql01->setPixmap(iconman->getIcon("favorite").pixmap(QSize(16,16)) );
+      }
+      ql01->setAlignment(Qt::AlignCenter);
+      ui.tableWidget_vpn->setCellWidget(rowcount, 1, ql01);
+ 
+      QLabel* ql02 = new QLabel(ui.tableWidget_vpn);
+			if (map.value("State").toString() == "ready") {
+				ql02->setPixmap(iconman->getIcon("state_vpn_connected").pixmap(QSize(16,16)) );
+			} // if ready
+			else {
+				ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
+			} // else any other state
+
+      ql02->setAlignment(Qt::AlignCenter);
+      ql02->setToolTip(TranslateStrings::cmtr(map.value("State").toString()) );
+      ui.tableWidget_vpn->setCellWidget(rowcount, 2, ql02);
+      
+      ++rowcount;
+    } //  if vpn cnxn
+  } // services for loop 
+  
+  // resize the services column 0 and 1 to contents
+  ui.tableWidget_vpn->resizeColumnToContents(0);
+  ui.tableWidget_vpn->resizeColumnToContents(1);
+  
+  // enable the control buttons if there is at least on line in the table
+  bool b_enable = false;
+  if ( vpn_list.count() > 0 ) b_enable = true;
+  ui.pushButton_vpn_connect->setEnabled(b_enable);
+  ui.pushButton_vpn_disconnect->setEnabled(b_enable);
+	
+	return;
+}
+
+//
+//  Function to assemble the counters tab of the dialog.
+void ControlBox::assembleTabCounters()
 {
   // Text for the counter settings label
   ui.label_counter_settings->setText(tr("Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.")   \
@@ -1716,7 +1801,7 @@ void ControlBox::assembleTrayIcon()
           prelimicon = iconman->getIcon("connection_wired");
         } //  if wired connection
 
-        if (services_list.at(0).objmap.value("Type").toString() == "wifi") {
+        else if (services_list.at(0).objmap.value("Type").toString() == "wifi") {
           stt.prepend(tr("WiFi Connection<br>","icon_tool_tip"));
           extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
           stt.append(tr("SSID: %1<br>").arg(TranslateStrings::cmtr(services_list.at(0).objmap.value("Name").toString())) );
@@ -1733,7 +1818,12 @@ void ControlBox::assembleTrayIcon()
             else if (str > 40 )   prelimicon = iconman->getIcon("connection_wifi_050");
               else if (str > 20 )   prelimicon = iconman->getIcon("connection_wifi_025");
                 else prelimicon = iconman->getIcon("connection_wifi_000");
-        } //  if wifi connection
+        } // else if wifi connection
+        
+        else if (services_list.at(0).objmap.value("Type").toString() == "vpn") {
+          stt.prepend(tr("VPN Connection<br>","icon_tool_tip"));
+          prelimicon = iconman->getIcon("connection_vpn");
+				}	// else if vpn connection     
       } //  services if no error
     } //  if the state is online
 
@@ -1748,7 +1838,7 @@ void ControlBox::assembleTrayIcon()
       // try to reconnect if service is wifi and Favorite and if reconnect is specified
       if (ui.checkBox_retryfailed->isChecked() ) {
         if (services_list.at(0).objmap.value("Type").toString() =="wifi"  && services_list.at(0).objmap.value("Favorite").toBool() ) {
-          QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, services_list.at(0).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+          QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, services_list.at(0).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
           QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
           iface_serv->deleteLater();
           stt.append(tr("Connection is in the Failure State, attempting to reestablish the connection", "icon_tool_tip") );
@@ -2155,7 +2245,7 @@ void ControlBox::sendNotifications()
 bool ControlBox::getProperties()
 {
   // call connman and GetProperties
-  QDBusMessage reply = iface_manager->call("GetProperties");
+  QDBusMessage reply = con_manager->call("GetProperties");
 
   // call the function to get the map values
   properties_map.clear();
@@ -2168,7 +2258,7 @@ bool ControlBox::getProperties()
 bool ControlBox::getTechnologies()
 {
   // call connman and GetTechnologies
-  QDBusMessage reply = iface_manager->call("GetTechnologies");
+  QDBusMessage reply = con_manager->call("GetTechnologies");
 
   // call the function to get the map values
   technologies_list.clear();
@@ -2181,7 +2271,7 @@ bool ControlBox::getTechnologies()
 bool ControlBox::getServices()
 {
   // call connman and GetServices
-  QDBusMessage reply = iface_manager->call("GetServices");
+  QDBusMessage reply = con_manager->call("GetServices");
 
   // call the function to get the map values
   services_list.clear();
@@ -2327,7 +2417,7 @@ void ControlBox::logErrors(const quint8& err)
       QMessageBox::critical(this, tr("%1 - Critical Error").arg(TranslateStrings::cmtr("cmst")),
         tr("Unable to find a connection to the system bus.<br><br>%1 will not be able to communicate with connman.").arg(TranslateStrings::cmtr("cmst")) );
       break;
-    case  CMST::Err_Invalid_Iface:
+    case  CMST::Err_Invalid_Con_Iface:
       syslog(LOG_ERR, "%s",tr("Could not create an interface to connman on the system bus").toUtf8().constData());
       QMessageBox::critical(this, tr("%1 - Critical Error").arg(TranslateStrings::cmtr("cmst")),
         tr("Unable to create an interface to connman on the system bus.<br><br>%1 will not be able to communicate with connman.").arg(TranslateStrings::cmtr("cmst")) );
@@ -2379,7 +2469,7 @@ QString ControlBox::readResourceText(const char* textfile)
 void ControlBox::clearCounters()
 {
   if (ui.checkBox_resetcounters->isChecked() && ! onlineobjectpath.isEmpty() ) {
-    QDBusInterface* iface_serv = new QDBusInterface(DBUS_SERVICE, onlineobjectpath, "net.connman.Service", QDBusConnection::systemBus(), this);
+    QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, onlineobjectpath, "net.connman.Service", QDBusConnection::systemBus(), this);
     iface_serv->call(QDBus::AutoDetect, "ResetCounters");
     iface_serv->deleteLater();
   }
@@ -2504,17 +2594,17 @@ void ControlBox::cleanUp()
   this->writeSettings();
   
   // unregister objects
-  if (iface_manager->isValid() ) {
+  if (con_manager->isValid() ) {
 	  // agent
-	  QDBusMessage reply_a = iface_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT)) );
+	  QDBusMessage reply_a = con_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT)) );
 		//qDebug() << reply_a;
 			
 		// counter - only have a signal-slot connection if the counter was able to be registered
 		if (counter->cnxns() > 0) {
-			QDBusMessage reply_c = iface_manager->call(QDBus::AutoDetect, "UnregisterCounter", QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT)) ); 
+			QDBusMessage reply_c = con_manager->call(QDBus::AutoDetect, "UnregisterCounter", QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT)) ); 
 			//qDebug() << reply_c;
 		}	// if counters are connected to anything
-	}	// if iface_manager isValid
+	}	// if con_manager isValid
 
   return;
 }

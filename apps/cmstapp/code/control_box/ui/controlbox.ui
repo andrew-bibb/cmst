@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>645</width>
-    <height>596</height>
+    <height>563</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -436,7 +436,7 @@
             <x>0</x>
             <y>0</y>
             <width>603</width>
-            <height>421</height>
+            <height>388</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -663,6 +663,119 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>&amp;VPN</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_13">
+       <item row="3" column="0">
+        <widget class="QTableWidget" name="tableWidget_vpn">
+         <property name="whatsThis">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description.  Online signals that an Internet connectionis available and has been verified.  Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;SIgnal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="showDropIndicator" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="dragDropOverwriteMode">
+          <bool>false</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="showGrid">
+          <bool>false</bool>
+         </property>
+         <property name="cornerButtonEnabled">
+          <bool>false</bool>
+         </property>
+         <property name="columnCount">
+          <number>3</number>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderHighlightSections">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Favorite</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Connected</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_vpn_utils">
+         <property name="title">
+          <string>VPN Services</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QPushButton" name="pushButton_vpn_connect">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one vpn service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Connect</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_vpn_disconnect">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one vpn service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Disconnect</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="Counters">
       <attribute name="title">
        <string>&amp;Counters</string>
@@ -704,7 +817,7 @@
                <x>0</x>
                <y>0</y>
                <width>579</width>
-               <height>162</height>
+               <height>145</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -760,7 +873,7 @@
                <x>0</x>
                <y>0</y>
                <width>579</width>
-               <height>161</height>
+               <height>145</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1486,7 +1599,7 @@
             <x>0</x>
             <y>0</y>
             <width>493</width>
-            <height>499</height>
+            <height>466</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1667,11 +1780,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>59</x>
-     <y>196</y>
+     <y>176</y>
     </hint>
     <hint type="destinationlabel">
      <x>163</x>
-     <y>611</y>
+     <y>536</y>
     </hint>
    </hints>
   </connection>
@@ -1750,8 +1863,8 @@
      <y>136</y>
     </hint>
     <hint type="destinationlabel">
-     <x>483</x>
-     <y>136</y>
+     <x>612</x>
+     <y>146</y>
     </hint>
    </hints>
   </connection>
@@ -1763,11 +1876,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>91</x>
-     <y>82</y>
+     <y>78</y>
     </hint>
     <hint type="destinationlabel">
-     <x>301</x>
-     <y>51</y>
+     <x>573</x>
+     <y>86</y>
     </hint>
    </hints>
   </connection>
@@ -1779,11 +1892,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>196</x>
-     <y>188</y>
+     <y>176</y>
     </hint>
     <hint type="destinationlabel">
-     <x>325</x>
-     <y>424</y>
+     <x>609</x>
+     <y>476</y>
     </hint>
    </hints>
   </connection>
@@ -1794,8 +1907,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>75</x>
-     <y>480</y>
+     <x>117</x>
+     <y>498</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -1810,8 +1923,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>163</x>
-     <y>480</y>
+     <x>203</x>
+     <y>498</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -1826,8 +1939,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>571</x>
-     <y>304</y>
+     <x>611</x>
+     <y>318</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
