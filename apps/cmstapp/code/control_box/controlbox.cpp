@@ -58,6 +58,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QColorDialog>
 # include <QPainter>
 # include <QImage>
+# include <QDesktopWidget>
 
 # include "../resource.h"
 # include "./controlbox.h"
@@ -201,7 +202,17 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 		ui.tabWidget->setCurrentIndex(settings->value("current_page").toInt() );
 		settings->endGroup();
 	}
-
+	
+	// Make sure the controlbox will fit onto small acreens
+	QSize sz_target = (qApp->desktop()->availableGeometry(this)).size();
+	QSize sz_source = this->sizeHint();
+	sz_target.scale(sz_target.width() - 100, sz_target.height() - 100, Qt::KeepAspectRatio); // give me a little buffer
+	if (sz_source.width() > sz_target.width() || sz_source.height() > sz_target.height() ) {
+		sz_source.scale(sz_target.width(), sz_target.height(), Qt::KeepAspectRatio);
+		resize(sz_source);
+		move(25, 25);
+	}
+		
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request"));
 
