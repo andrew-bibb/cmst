@@ -4,6 +4,7 @@
 <ul>
 <li>Added a VPN tab to the main controlbox.</li>
 <li>Can connect and disconnect already provisioned VPN services from controlbox.</li>
+<li>Check for screen size at startup and adjust the initial size to fit if working on a small screen.</li>
 </ul>
 <b>2015.12.03</b>
 <ul>

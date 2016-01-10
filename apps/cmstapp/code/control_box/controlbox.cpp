@@ -496,7 +496,6 @@ void ControlBox::updateDisplayWidgets()
   // can't run the assemble functions if there are.
 
   if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Con_Iface)) == 0x00 ) {
-
     //  rebuild our pages
     this->assembleTabStatus();
     this->assembleTabDetails();
@@ -504,7 +503,6 @@ void ControlBox::updateDisplayWidgets()
     this->assembleTabVPN();
     this->assembleTabCounters();
     if (trayicon != 0 ) this->assembleTrayIcon();
-
   } // if there were no major errors
 
   return;
@@ -831,14 +829,21 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 // Slot called whenever DBUS issues a ServicesChanged signal.  When a
 // Scan method is called on a technology the results of that scan are
 // signaled through this slot.  vmap will not be empty, it contains all
-// of the services found.  
+// of the services found..UpdateDisplayWidgets() is called from dbsServicePropertyChanged 
 void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
-{
+{	
+  // Set the update flag
+  bool b_needupdate = false;	
+	
   // Function is called everytime we do a wifi scan and we get new list of
   // process changed services. Demarshall the raw QDBusMessage instead of vmap as it is easier.
   if (! vmap.isEmpty() ) {
     QList<arrayElement> revised_list;
-    if (! getArray(revised_list, msg)) return;
+    if (! getArray(revised_list, msg)) return;   
+    
+    // if revised_list is not the same size as the existing services_list
+    // then we definetely need an update
+    if (revised_list.count() != services_list.count() ) b_needupdate = true;    
 
     // merge the existing services_list into the revised_list
     // first find the original element that matches the revised
@@ -857,6 +862,7 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
         QMapIterator<QString, QVariant> itr(revised_element.objmap);
         while (itr.hasNext()) {
           itr.next();
+          b_needupdate = true;
           original_element.objmap.insert(itr.key(), itr.value() );
         } // while
 
@@ -872,17 +878,20 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
 
   // process removed services
   if (! removed.isEmpty() ) {
+		b_needupdate = true;
     for (int i = 0; i < services_list.count(); ++i) {
       if (removed.contains(services_list.at(i).objpath) )
         services_list.removeAt(i);
       } // for
     } // if we needed to remove something
-
+    
   // clear the counters (if selected) and update the widgets
-    clearCounters();
-    updateDisplayWidgets();
-    managerRescan(CMST::Manager_Services);  // used to connect service object signals to dbsServicePropertyChanged() slot
-
+	if (b_needupdate) {
+		clearCounters();
+		managerRescan(CMST::Manager_Services);  // used to connect service object signals to dbsServicePropertyChanged() slot	
+	}
+	updateDisplayWidgets();
+	
   return;
 }
 
@@ -1043,11 +1052,31 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
     } //
     else if (s_path == onlineobjectpath) {
       onlineobjectpath.clear();
-    } // else if this service just went offline
-  } // if property contains State
+		} // else if object went offline
+		// Send notification if vpn changed
+		for (int i = 0; i < vpn_list.count(); ++i) {
+			qDebug() << s_path << vpn_list.at(i).objpath.path();
+			if (s_path == vpn_list.at(i).objpath.path() ) {
+				notifyclient->init();
+				if (value.toString() == "ready") {
+					notifyclient->setSummary(QString(tr("VPN Engaged")) );
+					notifyclient->setIcon(iconman->getIconName("connection_vpn") );
+				}
+				else {
+					notifyclient->setSummary(QString(tr("VPN Disengaged")) );
+					notifyclient->setIcon(iconman->getIconName("onnection_not_ready") );
+				}
+				notifyclient->setBody(QString(tr("Object Path: %1")).arg(s_path) );
+				notifyclient->setUrgency(Nc::UrgencyNormal);
+				this->sendNotifications();
+				break;
+			} // if
+		}	// for
+	} // if property contains State 
 
+	// update the widgets
   updateDisplayWidgets();
-
+  
   return;
 }
 
@@ -1795,13 +1824,13 @@ void ControlBox::assembleTrayIcon()
   int readycount = 0;
   QIcon prelimicon;
   
-  if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
+  if ( (q8_errors & CMST::Err_Properties & CMST::Err_Services) == 0x00 ) {
     // count how many services are in the ready state
     for (int i = 0; i < services_list.count(); ++i) {
       if (services_list.at(i).objmap.value("State").toString() == "ready")  ++readycount;
     } // readycount for loop
     if ((properties_map.value("State").toString() == "online") ||
-        (properties_map.value("State").toString() =="ready" && readycount == 1) ) {
+        (properties_map.value("State").toString() == "ready" && readycount == 1) ) {
       if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
         QMap<QString,QVariant> submap;
         if (services_list.at(0).objmap.value("Type").toString() == "ethernet") {
@@ -1899,6 +1928,9 @@ void ControlBox::assembleTrayIcon()
   //  Set the tool tip (shown when mouse hovers over the systemtrayicon)
   trayicon->setToolTip(stt);
 
+	// Don't continue if we can't get properties
+	if ( (q8_errors & CMST::Err_Properties & CMST::Err_Technologies & CMST::Err_Services) != 0x00 ) return;
+	
   // Assemble the submenus for the context menu
   // tech_submenu.  
   tech_submenu->clear();
@@ -1921,18 +1953,42 @@ void ControlBox::assembleTrayIcon()
   info_submenu->clear();
   for (int j = 0; j < services_list.count(); ++j) {
     QAction* act = info_submenu->addAction(TranslateStrings::cmtr(services_list.at(j).objmap.value("Name").toString()) );
-    if (services_list.at(j).objmap.value("State").toString() == "online") {
-			if (services_list.at(0).objmap.value("Type").toString() == "ethernet" )
+  
+		if (services_list.at(j).objmap.value("Type").toString() == "ethernet" ) {
+		  if (services_list.at(j).objmap.value("State").toString() == "online")
 				act->setIcon(iconman->getIcon("connection_wired"));
-			else if (services_list.at(0).objmap.value("Type").toString() == "wifi" ) {
-				quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
-        if (str > 80 ) act->setIcon(iconman->getIcon("connection_wifi_100") );
+			else
+				if(services_list.at(j).objmap.value("State").toString() == "ready")
+					act->setIcon(iconman->getIcon("connection_ready"));
+				else
+					act->setIcon(iconman->getIcon("connection_not_ready"));
+		}	// if wired
+		
+		else if (services_list.at(j).objmap.value("Type").toString() == "wifi" ) {
+			if (services_list.at(j).objmap.value("State").toString() == "online" ||
+					(properties_map.value("State").toString() != "online" &&
+					(services_list.at(j).objmap.value("State").toString() == "ready" && readycount == 1)) ) {
+				quint8 str = services_list.at(j).objmap.value("Strength").value<quint8>();
+				if (str > 80 ) act->setIcon(iconman->getIcon("connection_wifi_100") );
 				else if (str > 60 ) act->setIcon(iconman->getIcon("connection_wifi_075") );  
 					else if (str > 40 )   act->setIcon(iconman->getIcon("connection_wifi_050") );
 						else if (str > 20 )   act->setIcon(iconman->getIcon("connection_wifi_025") );
 							else act->setIcon(iconman->getIcon("connection_wifi_000") );
-			}	// else if wifi
-		}	// if online
+			}	// if we want to show a wifi signal symbol
+			else
+				if(services_list.at(j).objmap.value("State").toString() == "ready")
+					act->setIcon(iconman->getIcon("connection_ready"));
+				else
+					act->setIcon(iconman->getIcon("connection_not_ready"));
+		}	// else if wifi
+		
+		else if (services_list.at(j).objmap.value("Type").toString() == "vpn" ) {
+			if (services_list.at(j).objmap.value("State").toString() == "ready")
+				act->setIcon(iconman->getIcon("connection_vpn"));
+			else	
+				act->setIcon(iconman->getIcon("connection_not_ready"));
+		}	// else if vpn
+		
 		else if (services_list.at(j).objmap.value("State").toString() == "ready") act->setIcon(iconman->getIcon("connection_ready"));
 			else if (services_list.at(j).objmap.value("State").toString() == "failure" ) act->setIcon(iconman->getIcon("connection_failure"));
 				else act->setIcon(iconman->getIcon("connection_not_ready"));
