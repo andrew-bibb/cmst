@@ -72,9 +72,11 @@ DEALINGS IN THE SOFTWARE.
 # include <unistd.h>
 # include <syslog.h>
 
-#define DBUS_PATH "/"
-#define DBUS_CON_SERVICE "net.connman"
-#define DBUS_CON_MANAGER "net.connman.Manager"
+# define DBUS_PATH "/"
+# define DBUS_CON_SERVICE "net.connman"
+# define DBUS_VPN_SERVICE "net.connman.vpn"
+# define DBUS_CON_MANAGER "net.connman.Manager"
+# define DBUS_VPN_MANAGER	"net.connman.vpn.Manager"
 
 // Custom push button, used in the technology box for powered on/off
 // This is really a single use button, after it is clicked all idButtons
@@ -362,11 +364,11 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_exit, SIGNAL(clicked()), exitAction, SLOT(trigger()));
   connect(ui.pushButton_minimize, SIGNAL(clicked()), minimizeAction, SLOT(trigger()));
   connect(ui.checkBox_hideIcon, SIGNAL(clicked(bool)), this, SLOT(toggleTrayIcon(bool)));
-  connect(ui.pushButton_connect, SIGNAL(clicked()),this, SLOT(connectPressed()));
-  connect(ui.pushButton_vpn_connect, SIGNAL(clicked()),this, SLOT(connectPressed()));
-  connect(ui.pushButton_disconnect, SIGNAL(clicked()),this, SLOT(disconnectPressed()));
-  connect(ui.pushButton_vpn_disconnect, SIGNAL(clicked()),this, SLOT(disconnectPressed()));
-  connect(ui.pushButton_remove, SIGNAL(clicked()),this, SLOT(removePressed()));
+  connect(ui.pushButton_connect, SIGNAL(clicked()), this, SLOT(connectPressed()));
+  connect(ui.pushButton_vpn_connect, SIGNAL(clicked()), this, SLOT(connectPressed()));
+  connect(ui.pushButton_disconnect, SIGNAL(clicked()), this, SLOT(disconnectPressed()));
+  connect(ui.pushButton_vpn_disconnect, SIGNAL(clicked()), this, SLOT(disconnectPressed()));
+  connect(ui.pushButton_remove, SIGNAL(clicked()), this, SLOT(removePressed()));
   connect(ui.pushButton_aboutCMST, SIGNAL(clicked()), this, SLOT(aboutCMST()));
   connect(ui.pushButton_aboutIconSet, SIGNAL(clicked()), this, SLOT(aboutIconSet()));
   connect(ui.pushButton_aboutQT, SIGNAL(clicked()), qApp, SLOT(aboutQt()));
@@ -616,7 +618,11 @@ void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QStrin
 
 //
 // Slot to connect a wifi or vpn service. Called when ui.pushButton_connect
-// or ui.pushButton_vpn_connect is pressed
+// or ui.pushButton_vpn_connect is pressed.
+// For VPN's this connects the service, not the vpnconnection.  It appears that connman_vpn takes
+// the vpnconnections and creates one service for each.  The vpnconnection part could be connected by
+// using vpn connection interface, but not really worth it since connman automatically creates a
+// a service for us.
 void ControlBox::connectPressed()
 {
 	// Process wifi or vpn depending on who sent the signal
@@ -723,10 +729,10 @@ void ControlBox::disconnectPressed()
 }
 
 //
-//  Slot to remove (unset the Favorite property, clear passphrase if one exists) a Wifi service
-//  Called when ui.pushButton_remove is pressed
+// Slot to remove (unset the Favorite property, clear passphrase if one exists) of a Wifi service
+// Called when ui.pushButton_remove is pressed
 void ControlBox::removePressed()
-{
+{			
   // if no row selected return
   QList<QTableWidgetItem*> list;
   list.clear();
@@ -737,12 +743,12 @@ void ControlBox::removePressed()
     return;
   }
 
-  // Send the Remove message to the service.  TableWidget only allows single selection so list can only have 0 or 1 elments
+  //  send the Remove message to the service
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-	iface_serv->call(QDBus::AutoDetect, "Remove");
-	iface_serv->deleteLater();
-	
-	return;
+  iface_serv->call(QDBus::AutoDetect, "Remove");
+  iface_serv->deleteLater();
+
+  return; 	
 }
 
 //  dbs slots are slots to receive DBus Signals
@@ -1372,6 +1378,7 @@ void ControlBox::getServiceDetails(int index)
   ui.label_details_right->setText(rs);
 
   // enable or disable the editor button
+  if (map.value("Type").toString() == "vpn") b_editable = false; // can't edit vpn connections
   ui.pushButton_configuration->setEnabled(b_editable);
 
   return;
