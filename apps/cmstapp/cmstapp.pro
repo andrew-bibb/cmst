@@ -23,6 +23,8 @@ DBUS_ADAPTORS 	+= ./code/agent/org.monkey_business_enterprises.agent.xml
 DBUS_INTERFACES	+= ./code/agent/org.monkey_business_enterprises.agent.xml
 DBUS_ADAPTORS 	+= ./code/counter/org.monkey_business_enterprises.counter.xml
 DBUS_INTERFACES	+= ./code/counter/org.monkey_business_enterprises.counter.xml
+DBUS_ADAPTORS 	+= ./code/vpn_agent/org.monkey_business_enterprises.vpnagent.xml
+DBUS_INTERFACES	+= ./code/vpn_agent/org.monkey_business_enterprises.vpnagent.xml
 
 #	header files
 HEADERS		+= ../resource.h
@@ -36,6 +38,8 @@ HEADERS		+= ./code/peditor/peditor.h
 HEADERS   += ./code/provisioning/prov_ed.h
 HEADERS		+= ./code/trstring/tr_strings.h
 HEADERS		+= ./code/iconman/iconman.h
+HEADERS		+= ./code/vpn_agent/vpnagent.h
+HEADERS		+= ./code/vpn_agent/vpnagent_dialog.h
 
 #	forms
 FORMS		+= ./code/control_box/ui/controlbox.ui
@@ -43,6 +47,7 @@ FORMS		+= ./code/agent/ui/agent.ui
 FORMS		+= ./code/scrollbox/ui/scrollbox.ui
 FORMS		+= ./code/peditor/ui/peditor.ui
 FORMS		+= ./code/provisioning/ui/provisioning_editor.ui
+FORMS		+= ./code/vpn_agent/ui/vpnagent.ui
 
 #	sources
 SOURCES	+= ./code/main.cpp
@@ -56,6 +61,8 @@ SOURCES	+= ./code/peditor/peditor.cpp
 SOURCES += ./code/provisioning/prov_ed.cpp
 SOURCES	+= ./code/trstring/tr_strings.cpp
 SOURCES	+= ./code/iconman/iconman.cpp
+SOURCES += ./code/vpn_agent/vpnagent.cpp
+SOURCES += ./code/vpn_agent/vpnagent_dialog.cpp
 
 #	resource files
 RESOURCES 	+= ../../cmst.qrc

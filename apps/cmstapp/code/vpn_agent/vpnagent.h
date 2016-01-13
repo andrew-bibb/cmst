@@ -1,6 +1,6 @@
-/**************************** agent.h **********************************
+/**************************** vpnagent.h **********************************
 
-Code for the user agent registered on DBus.  When the connman daemon
+Code for the user agent registered on DBus.  When the connman vpn daemon
 needs to communicate with the user it does so through this agent.
 
 Copyright (C) 2013-2016
@@ -27,8 +27,8 @@ DEALINGS IN THE SOFTWARE.
 ***********************************************************************/  
 
 
-# ifndef CONNMANAGENT
-#	define CONNMANAGENT
+# ifndef CONNMAN_VPN_AGENT
+#	define CONNMAN_VPN_AGENT
 
 # include <QObject>
 # include <QString>
@@ -38,38 +38,35 @@ DEALINGS IN THE SOFTWARE.
 # include <QtDBus/QDBusObjectPath>
 # include <QtDBus/QDBusContext>
 
-# include "./code/agent/agent_dialog.h"
+# include "./code/vpn_agent/vpnagent_dialog.h"
 
-# define AGENT_SERVICE "org.cmst"
-# define AGENT_INTERFACE "net.connman.Agent"
-# define AGENT_OBJECT "/org/cmst/Agent"
+# define VPN_AGENT_SERVICE "org.cmst"
+# define VPN_AGENT_INTERFACE "net.connman.vpn.Agent"
+# define VPN_AGENT_OBJECT "/org/cmst/VPNAgent"
 
-class ConnmanAgent : public QObject, protected QDBusContext
+class ConnmanVPNAgent : public QObject, protected QDBusContext
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Agent Interface", AGENT_INTERFACE)
+    Q_CLASSINFO("D-Bus VPN Agent Interface ", VPN_AGENT_INTERFACE)
  
     public:
-			ConnmanAgent(QObject*);
+			ConnmanVPNAgent(QObject*);
 			
 			inline void setLogInputRequest(bool b) {b_loginputrequest = b;}
  
     public Q_SLOTS:
       void Release();
       void ReportError(QDBusObjectPath, QString);
-      void RequestBrowser(QDBusObjectPath, QString);
       QVariantMap RequestInput(QDBusObjectPath, QMap<QString,QVariant>);
       void Cancel();
      
     private:
-	    AgentDialog* uiDialog;   
+	    VPNAgentDialog* uiDialog;   
 	    QMap<QString,QString> input_map;
-	    bool b_loginputrequest;
-	    
+	    bool b_loginputrequest;    
 	    void createInputMap(const QMap<QString,QVariant>&); 
 	    
 	  public:
 			inline void setWhatsThisIcon(QIcon icon) {uiDialog->setWhatsThisIcon(icon);}  
 };    
-
 #endif
