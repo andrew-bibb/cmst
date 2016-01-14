@@ -47,11 +47,10 @@ DEALINGS IN THE SOFTWARE.
 class ConnmanVPNAgent : public QObject, protected QDBusContext
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus VPN Agent Interface ", VPN_AGENT_INTERFACE)
+    Q_CLASSINFO("D-Bus Interface", VPN_AGENT_INTERFACE)
  
     public:
-			ConnmanVPNAgent(QObject*);
-			
+			ConnmanVPNAgent(QObject*);			
 			inline void setLogInputRequest(bool b) {b_loginputrequest = b;}
  
     public Q_SLOTS:
@@ -69,4 +68,5 @@ class ConnmanVPNAgent : public QObject, protected QDBusContext
 	  public:
 			inline void setWhatsThisIcon(QIcon icon) {uiDialog->setWhatsThisIcon(icon);}  
 };    
+
 #endif

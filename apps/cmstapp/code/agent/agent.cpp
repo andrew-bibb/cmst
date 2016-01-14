@@ -57,7 +57,7 @@ ConnmanAgent::ConnmanAgent(QObject* parent)
 	b_loginputrequest = false;
 	
 	//	Create Adaptor and register this Agent on the system bus.  
-	new ConnmanAgentAdaptor(this);
+	new AgentAdaptor(this);
 	QDBusConnection::systemBus().registerObject(AGENT_OBJECT, this);
 }
 
@@ -104,7 +104,7 @@ void ConnmanAgent::RequestBrowser(QDBusObjectPath path, QString url)
 // Called when trying to connect to a service and some extra input is required from the user
 // A dialog is displayed with the required fields enabled (non-required fields are disabled).
 QVariantMap ConnmanAgent::RequestInput(QDBusObjectPath path, QMap<QString,QVariant> dict)
-{
+{qDebug() << "inside request input";
 	(void) path;
 	
 	// Take the dict returned by DBus and extract the information we are interested in and place in input_map.

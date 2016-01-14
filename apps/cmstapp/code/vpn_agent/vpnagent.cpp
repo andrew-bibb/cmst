@@ -56,7 +56,7 @@ ConnmanVPNAgent::ConnmanVPNAgent(QObject* parent)
 	b_loginputrequest = false;
 	
 	//	Create Adaptor and register this Agent on the system bus.  
-	new ConnmanVPNAgentAdaptor(this);
+	new AgentAdaptor(this);
 	QDBusConnection::systemBus().registerObject(VPN_AGENT_OBJECT, this);
 }
 

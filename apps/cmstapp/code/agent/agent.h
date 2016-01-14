@@ -47,7 +47,8 @@ DEALINGS IN THE SOFTWARE.
 class ConnmanAgent : public QObject, protected QDBusContext
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Agent Interface", AGENT_INTERFACE)
+    Q_CLASSINFO("D-Bus Interface", AGENT_INTERFACE)
+
  
     public:
 			ConnmanAgent(QObject*);
