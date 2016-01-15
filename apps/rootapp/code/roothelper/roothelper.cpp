@@ -50,6 +50,8 @@ RootHelper::RootHelper(QObject* parent)
   
   // Data members
   b_connected = false;
+  sl_allowed.clear();
+  sl_allowed << "/var/lib/connman";
   
   return;
 }  
@@ -80,10 +82,13 @@ void RootHelper::startHelper()
 //
 // Slot to get a list of all files in /var/lib/conmann the were created
 // by CMST.  These files will end in .cmst.config
-QStringList RootHelper::getFileList()
+QStringList RootHelper::getFileList(const QString& path)
 { 
+	// make sure the path is allowed
+	if (! sl_allowed.contains(path), Qt::CaseSensitive) return QStringList();
+	
   // variables
-  QDir dir = QDir("/var/lib/connman");
+  QDir dir = QDir(path);
   QStringList filters;
   filters << "*.cmst.config";
 
@@ -93,10 +98,13 @@ QStringList RootHelper::getFileList()
 
 //
 // Slot to read a file from disk
-QString RootHelper::readFile(const QString& fn)
+QString RootHelper::readFile(const QString& path, const QString& fn)
 { 
+	// make sure the path is allowed
+	//if (! sl_allowed.contains(path), Qt::CaseSensitive) return QString();
+	
   // open the file for reading  
-  QFile infile(QString("/var/lib/connman/%1.cmst.config").arg(sanitizeInput(fn)) ); 
+  QFile infile(QString(path + "/%1.cmst.config").arg(sanitizeInput(fn)) ); 
   if (! infile.open(QIODevice::ReadOnly | QIODevice::Text))
     return QString();
 
@@ -110,18 +118,25 @@ QString RootHelper::readFile(const QString& fn)
 
 //
 // Slot to delete a disk file
-bool RootHelper::deleteFile(const QString& fn)
+bool RootHelper::deleteFile(const QString& path, const QString& fn)
 {
+	// make sure the path is allowed
+	if (! sl_allowed.contains(path), Qt::CaseSensitive) return false;
+	
   // delete the file and emit a signal with the result
-  return QFile::remove(QString("/var/lib/connman/%1.cmst.config").arg(sanitizeInput(fn)) );
+  return QFile::remove(QString(path + "/%1.cmst.config").arg(sanitizeInput(fn)) );
 }
 
 //
 // Slot to write the file to disk
-qint64 RootHelper::saveFile(const QString& fn, const QString& data)
-{ 
+qint64 RootHelper::saveFile(const QString& path, const QString& fn, const QString& data)
+{ qDebug() << "save: " << path << fn;
+	// make sure the path is allowed
+	if (! sl_allowed.contains(path), Qt::CaseSensitive) return -1;
+	qDebug() << "past test";
   // open the file for writing
-  QFile outfile(QString("/var/lib/connman/%1.cmst.config").arg(sanitizeInput(fn)) );
+  QFile outfile(QString(path + "%1.cmst.config").arg(sanitizeInput(fn)) );
+  qDebug() << "name " << outfile.fileName();
   if (! outfile.open(QIODevice::WriteOnly | QIODevice::Text))
     return 0;
   

@@ -140,7 +140,7 @@ class ControlBox : public QDialog
     quint32 counter_accuracy; 
     quint32 counter_period;       
     QDBusInterface* con_manager;
-    QDBusInterface* vpn_manager;
+//    QDBusInterface* vpn_manager;
     QSystemTrayIcon*  trayicon;
     QMenu* trayiconmenu;
     QMenu* tech_submenu;

@@ -44,6 +44,7 @@ DEALINGS IN THE SOFTWARE.
 
 # include "ui_provisioning_editor.h"
 
+
 //
 // Class for an QInputDialog knockoff with validator
 class ValidatingDialog : public QDialog
@@ -94,6 +95,7 @@ class ProvisioningEditor : public QDialog
     QButtonGroup* bg01;
     QStatusBar* statusbar;
     int statustimeout;
+    QString con_path;
     
   private slots:
     void inputSelectFile(QAction*);

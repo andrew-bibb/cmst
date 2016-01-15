@@ -34,6 +34,11 @@ DEALINGS IN THE SOFTWARE.
  * that text is stored in the maps exactly as connman returns it and
  * is then translated when it needs to be displayed.
  * 
+ * As of 2016.01.14 vpn_manager and vpnagent have been pulled out.  Due
+ * to a constraint of QT and the automatic code generation I can't have
+ * and Agent for the regular connections and an Agent for vpn connections.
+ * Compile fine, but get a linker error. I'm going to need to do one or
+ * both as libraries.
 ***********************************************************************/																								 
 
 # include <QtCore/QDebug>
@@ -74,9 +79,9 @@ DEALINGS IN THE SOFTWARE.
 
 # define DBUS_PATH "/"
 # define DBUS_CON_SERVICE "net.connman"
-# define DBUS_VPN_SERVICE "net.connman.vpn"
+//# define DBUS_VPN_SERVICE "net.connman.vpn"
 # define DBUS_CON_MANAGER "net.connman.Manager"
-# define DBUS_VPN_MANAGER	"net.connman.vpn.Manager"
+//# define DBUS_VPN_MANAGER	"net.connman.vpn.Manager"
 
 // Custom push button, used in the technology box for powered on/off
 // This is really a single use button, after it is clicked all idButtons
@@ -332,7 +337,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     this->clearCounters();
     
     // VPN manager
-    vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
+   //vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
     //if (! vpn_manager->isValid() ) logErrors(CMST::Err_Invalid_VPN_Iface);
     //else  vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT)) );
     } // else have valid connection

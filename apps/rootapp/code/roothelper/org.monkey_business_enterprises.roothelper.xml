@@ -5,17 +5,21 @@
     </method>
     <method name="getFileList">
       <arg type="as" direction="out"/>
+      <arg type="s" direction="in"/>
     </method>
     <method name="readFile">
       <arg type="s" direction="out"/>
+      <arg type="s" direction="in"/>
       <arg type="s" direction="in"/>
     </method>
     <method name="deleteFile">
       <arg type="b" direction="out"/>
       <arg type="s" direction="in"/>
+      <arg type="s" direction="in"/>
     </method>
     <method name="saveFile">
       <arg type="x" direction="out"/>
+      <arg type="s" direction="in"/>
       <arg type="s" direction="in"/>
       <arg type="s" direction="in"/>
     </method>
