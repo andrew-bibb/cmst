@@ -57,10 +57,10 @@ class RootHelper : public QObject, protected QDBusContext
   private:
     // members
     bool b_connected;
-    QStringList sl_allowed;
     
    //functions
-   QString sanitizeInput(QString);    
+   QString sanitizeInput(QString);
+   bool pathAllowed(QString);    
 };  
 
 #endif

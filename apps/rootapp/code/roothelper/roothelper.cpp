@@ -50,8 +50,6 @@ RootHelper::RootHelper(QObject* parent)
   
   // Data members
   b_connected = false;
-  sl_allowed.clear();
-  sl_allowed << "/var/lib/connman";
   
   return;
 }  
@@ -75,7 +73,7 @@ void RootHelper::startHelper()
 
   // if we made it this far we have a connection and are registered on the system bus.
   b_connected = true;
-
+ 
   return;
 }
 
@@ -85,7 +83,7 @@ void RootHelper::startHelper()
 QStringList RootHelper::getFileList(const QString& path)
 { 
 	// make sure the path is allowed
-	if (! sl_allowed.contains(path), Qt::CaseSensitive) return QStringList();
+	if (! pathAllowed(path) ) return QStringList();
 	
   // variables
   QDir dir = QDir(path);
@@ -101,7 +99,7 @@ QStringList RootHelper::getFileList(const QString& path)
 QString RootHelper::readFile(const QString& path, const QString& fn)
 { 
 	// make sure the path is allowed
-	//if (! sl_allowed.contains(path), Qt::CaseSensitive) return QString();
+	if (! pathAllowed(path) ) return QString();
 	
   // open the file for reading  
   QFile infile(QString(path + "/%1.cmst.config").arg(sanitizeInput(fn)) ); 
@@ -121,7 +119,7 @@ QString RootHelper::readFile(const QString& path, const QString& fn)
 bool RootHelper::deleteFile(const QString& path, const QString& fn)
 {
 	// make sure the path is allowed
-	if (! sl_allowed.contains(path), Qt::CaseSensitive) return false;
+	if (! pathAllowed(path) ) return false;
 	
   // delete the file and emit a signal with the result
   return QFile::remove(QString(path + "/%1.cmst.config").arg(sanitizeInput(fn)) );
@@ -130,13 +128,12 @@ bool RootHelper::deleteFile(const QString& path, const QString& fn)
 //
 // Slot to write the file to disk
 qint64 RootHelper::saveFile(const QString& path, const QString& fn, const QString& data)
-{ qDebug() << "save: " << path << fn;
+{ 
 	// make sure the path is allowed
-	if (! sl_allowed.contains(path), Qt::CaseSensitive) return -1;
-	qDebug() << "past test";
+	if (! pathAllowed(path) ) return -1;
+	
   // open the file for writing
-  QFile outfile(QString(path + "%1.cmst.config").arg(sanitizeInput(fn)) );
-  qDebug() << "name " << outfile.fileName();
+  QFile outfile(QString(path + "/%1.cmst.config").arg(sanitizeInput(fn)) );
   if (! outfile.open(QIODevice::WriteOnly | QIODevice::Text))
     return 0;
   
@@ -159,5 +156,15 @@ QString RootHelper::sanitizeInput(QString instr)
   // extract the name and return it
   QFileInfo fi(instr);
   return fi.baseName();
+}
+
+//
+// Function to determine if the path is allowed
+bool RootHelper::pathAllowed(QString path)
+{
+	if (path == "/var/lib/connman") return true;
+	else if (path == "/var/lib/connman-vpn") return true;
+	
+	return false;	
 }
 
