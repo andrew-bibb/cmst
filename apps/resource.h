@@ -35,7 +35,7 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation) 
-#define VERSION "2016.01.14-1"
+#define VERSION "2016.01.16-1"
 
 #define RELEASE_DATE "3 December 2015"
 #define COPYRIGHT_DATE "2013-2016"
@@ -81,13 +81,14 @@ namespace CMST
     
     // provisioning editor validator input
     ProvEd_Vd_None    = 0x00,
-    ProvEd_Vd_IPv4    = (1 << 0),
-    ProvEd_Vd_IPv6    = (1 << 1),
-    ProvEd_Vd_MAC     = (1 << 2),
-    ProvEd_Vd_46      = (1 << 3),
-    ProvEd_Vd_Hex     = (1 << 4),
-    ProvEd_Vd_Dom     = (1 << 5),
-    ProvEd_Vd_Wd      = (1 << 6),
+    ProvEd_Vd_IPv4    = 0x01,
+    ProvEd_Vd_IPv6    = 0x02,
+    ProvEd_Vd_MAC     = 0x03,
+    ProvEd_Vd_46      = 0x04,
+    ProvEd_Vd_Hex     = 0x05,
+    ProvEd_Vd_Int			= 0x06,
+    ProvEd_Vd_Dom     = 0x07,
+    ProvEd_Vd_Wd      = 0x08,
   };	// enum
 } // namespace CMST
 

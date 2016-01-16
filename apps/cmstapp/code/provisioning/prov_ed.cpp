@@ -70,6 +70,7 @@ void ValidatingDialog::setValidator(const int& vd, bool plural)
   QString s_ip6   = "(?:[0-9a-fA-F]{1,4})";
   QString s_mac   = "(?:[0-9a-fA-F]{1,2})";
   QString s_hex   = "[0-9a-fA-F]*";
+  QString s_int		= "[0-9]*";
   QString s_dom   = "[0-9a-zA-Z]*[\\.]?[0-9a-zA-Z]*";
   QString s_wd    = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
   QString s_start = (plural ? "\\s?|(" : "\\s?|^");
@@ -101,6 +102,11 @@ void ValidatingDialog::setValidator(const int& vd, bool plural)
       QRegularExpressionValidator* lev_h = new QRegularExpressionValidator(rxh, this);
       lineedit->setValidator(lev_h); }
       break;
+    case CMST::ProvEd_Vd_Int: {
+			QRegularExpression rxint(s_start + s_int + s_end);
+      QRegularExpressionValidator* lev_int = new QRegularExpressionValidator(rxint, this);
+      lineedit->setValidator(lev_int); }
+      break;		  
     case CMST::ProvEd_Vd_Dom: {
       QRegularExpression rxdom(s_start + s_dom + s_end);
       QRegularExpressionValidator* lev_dom = new QRegularExpressionValidator(rxdom, this);
@@ -299,12 +305,12 @@ void ProvisioningEditor::inputValidated(QAction* act)
   
   // create some prompts and set validator
   if (act == ui.actionServiceMAC) {vd->setLabel(tr("MAC address.")); vd->setValidator(CMST::ProvEd_Vd_MAC);}
-  if (act == ui.actionWifiSSID) {vd->setLabel(tr("SSID: hexadecimal representation of an 802.11 SSID")), vd->setValidator(CMST:: ProvEd_Vd_Hex);}
-  if (act == ui.actionServiceNameServers) {vd->setLabel(tr("List of Nameservers")), vd->setValidator(CMST::ProvEd_Vd_46, true);}
-  if (act == ui.actionServiceTimeServers) {vd->setLabel(tr("List of Timeservers")), vd->setValidator(CMST::ProvEd_Vd_46, true);}
-  if (act == ui.actionServiceSearchDomains) {vd->setLabel(tr("List of DNS Search Domains")), vd->setValidator(CMST::ProvEd_Vd_Dom, true);}
-  if (act == ui.actionServiceDomain) {vd->setLabel(tr("Domain name to be used")), vd->setValidator(CMST::ProvEd_Vd_Dom);}
-  if (act == ui.actionWifiName) {vd->setLabel(tr("Enter the string representation of an 802.11 SSID.")), vd->setValidator(CMST::ProvEd_Vd_Wd);}
+  if (act == ui.actionWifiSSID) {vd->setLabel(tr("SSID: hexadecimal representation of an 802.11 SSID")); vd->setValidator(CMST:: ProvEd_Vd_Hex);}
+  if (act == ui.actionServiceNameServers) {vd->setLabel(tr("List of Nameservers")); vd->setValidator(CMST::ProvEd_Vd_46, true);}
+  if (act == ui.actionServiceTimeServers) {vd->setLabel(tr("List of Timeservers")); vd->setValidator(CMST::ProvEd_Vd_46, true);}
+  if (act == ui.actionServiceSearchDomains) {vd->setLabel(tr("List of DNS Search Domains")); vd->setValidator(CMST::ProvEd_Vd_Dom, true);}
+  if (act == ui.actionServiceDomain) {vd->setLabel(tr("Domain name to be used")); vd->setValidator(CMST::ProvEd_Vd_Dom);}
+  if (act == ui.actionWifiName) {vd->setLabel(tr("Enter the string representation of an 802.11 SSID.")); vd->setValidator(CMST::ProvEd_Vd_Wd);}
   
   // if accepted put an entry in the textedit
   if (vd->exec() == QDialog::Accepted) {

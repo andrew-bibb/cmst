@@ -44,30 +44,6 @@ DEALINGS IN THE SOFTWARE.
 
 # include "ui_vpn_prov_editor.h"
 
-
-//
-// Class for an QInputDialog knockoff with validator
-class VPNValidatingDialog : public QDialog
-{
-  Q_OBJECT
-  
-  public:
-    VPNValidatingDialog(QWidget*);
-    inline void setLabel(const QString& s) {label->setText(s);}
-    inline QString getText() {return lineedit->text();}
-    inline void clear() {lineedit->clear();}
-    void setValidator(const int&, bool plural = false);
-    inline bool isPlural() {return plural;}
-  
-  private:
-    // members
-    QLabel* label;
-    QLineEdit* lineedit;
-    QDialogButtonBox* buttonbox;
-    bool plural;
-};
-
-
 //  The class to control the properties editor UI based on a QDialog
 class VPN_Editor : public QDialog
 {
@@ -88,13 +64,15 @@ class VPN_Editor : public QDialog
     QMenu* menu_L2TP;
     QMenu* menu_PPTP;
     QMenu* menu_template;
-    QActionGroup* group_template;
+    QActionGroup* group_provider;
     QActionGroup* group_freeform;
     QActionGroup* group_combobox;
+    QActionGroup* group_yes;
     QActionGroup* group_validated;
     QActionGroup* group_selectfile;
     QActionGroup* group_ipv4;
     QActionGroup* group_ipv6;
+    QActionGroup* group_template;
     QButtonGroup* bg01;
     QStatusBar* statusbar;
     int statustimeout;
@@ -102,9 +80,10 @@ class VPN_Editor : public QDialog
     
   private slots:
     void inputSelectFile(QAction*);
-    void inputValidated(QAction*);
+    void inputValidated(QAction*, QString s = QString());
     void inputComboBox(QAction*);
-    void inputFreeForm(QAction*);
+    void inputYes(QAction*);
+    void inputFreeForm(QAction*, QString s = QString());
     void ipv4Triggered(QAction*);
     void ipv6Triggered(QAction*);
     void templateTriggered(QAction*);
@@ -116,6 +95,7 @@ class VPN_Editor : public QDialog
     void deleteCompleted(bool);
     void writeCompleted(qint64);
     void callbackErrorHandler(QDBusError);
+    void createProvider(QAction*);
         
   public:
     inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>418</width>
-    <height>483</height>
+    <height>574</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -146,9 +146,6 @@
      </item>
     </layout>
    </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_statusbar"/>
-   </item>
   </layout>
   <action name="actionGlobal">
    <property name="text">
@@ -159,208 +156,404 @@
    <property name="text">
     <string>Name</string>
    </property>
+   <property name="toolTip">
+    <string>Name of the network.</string>
+   </property>
   </action>
   <action name="actionGlobalDescription">
    <property name="text">
     <string>Description</string>
    </property>
-  </action>
-  <action name="actionService">
-   <property name="text">
-    <string>[service_*]</string>
+   <property name="toolTip">
+    <string>Description of the network.</string>
    </property>
   </action>
-  <action name="actionServiceType">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionProviderPPTP">
    <property name="text">
-    <string>Type</string>
+    <string>Provider PPTP</string>
    </property>
   </action>
-  <action name="actionServiceMAC">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionProviderL2TP">
    <property name="text">
-    <string>MAC</string>
+    <string>Provider L2TP</string>
    </property>
   </action>
-  <action name="actionServiceNameServers">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionProviderVPNC">
    <property name="text">
-    <string>Nameservers</string>
+    <string>Provider VPNC</string>
    </property>
   </action>
-  <action name="actionServiceTimeServers">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionProviderOpenVPN">
    <property name="text">
-    <string>Timeservers</string>
+    <string>Provider OpenVPN</string>
    </property>
   </action>
-  <action name="actionServiceSearchDomains">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionProviderOpenConnect">
    <property name="text">
-    <string>SearchDomains</string>
+    <string>Provider OpenConnect</string>
    </property>
   </action>
-  <action name="actionServiceDomain">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPTP_User">
    <property name="text">
-    <string>Domain</string>
+    <string>PPTP.User</string>
+   </property>
+   <property name="toolTip">
+    <string>PPTP User Name.</string>
    </property>
   </action>
-  <action name="actionServiceIPv4Address">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPTP_Password">
    <property name="text">
-    <string>IPv4 Address</string>
+    <string>PPTP.Password</string>
+   </property>
+   <property name="toolTip">
+    <string>PPTP Password.</string>
    </property>
   </action>
-  <action name="actionServiceIPv4Off">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPPD_EchoFailure">
    <property name="text">
-    <string>IPv4 Off</string>
+    <string>PPPD.EchoFailure</string>
+   </property>
+   <property name="toolTip">
+    <string>Set the maximum number of LCP configure-NAKs returned
+before starting to send configure-Rejects (default is 10).</string>
    </property>
   </action>
-  <action name="actionServiceIPV4DHCP">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPPD_EchoInterval">
    <property name="text">
-    <string>IPV4 DHCP</string>
+    <string>PPPD.EchoInterval</string>
+   </property>
+   <property name="toolTip">
+    <string>Send an LCP echo-request frame to the peer every n seconds.
+ This option can be used with the lcp-echo-failure option to detect
+that the peer is no longer connected.</string>
    </property>
   </action>
-  <action name="actionServiceIPv6Address">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPPD_Debug">
    <property name="text">
-    <string>IPv6 Address</string>
+    <string>PPPD.Debug</string>
+   </property>
+   <property name="toolTip">
+    <string>Debug level.</string>
    </property>
   </action>
-  <action name="actionServiceIPv6Off">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPPD_RefuseEAP">
    <property name="text">
-    <string>IPv6 Off</string>
+    <string>PPPD.RefuseEAP</string>
+   </property>
+   <property name="toolTip">
+    <string>Deny EAP authorization?</string>
    </property>
   </action>
-  <action name="actionServiceIPv6Auto">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPPD_RefusePAP">
    <property name="text">
-    <string>IPv6 Auto</string>
+    <string>PPPD.RefusePAP</string>
+   </property>
+   <property name="toolTip">
+    <string>Deny PAP authorization?</string>
    </property>
   </action>
-  <action name="actionServiceIPv6Privacy">
+  <action name="actionPPPD_RefuseCHAP">
    <property name="text">
-    <string>IPv6.Privacy</string>
+    <string>PPPD.RefuseCHAP</string>
+   </property>
+   <property name="toolTip">
+    <string>Deny CHAP authorization?</string>
    </property>
   </action>
-  <action name="actionWifiCACertFile">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPPD_RefuseMSCHAP">
    <property name="text">
-    <string>CACertFile</string>
+    <string>PPPD.RefuseMSCHAP</string>
+   </property>
+   <property name="toolTip">
+    <string>Deny MSCHAP authorization?</string>
    </property>
   </action>
-  <action name="actionWifiEAP">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPPD_RefuseMSCHAP2">
    <property name="text">
-    <string>EAP</string>
+    <string>PPPD.RefuseMSCHAP2</string>
+   </property>
+   <property name="toolTip">
+    <string>Deny MSCHAPV2 authorization?</string>
    </property>
   </action>
-  <action name="actionWifiSSID">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPPD_NoBSDComp">
    <property name="text">
-    <string>SSID</string>
+    <string>PPPD.NoBSDComp</string>
+   </property>
+   <property name="toolTip">
+    <string>Disables BSD compression?</string>
    </property>
   </action>
-  <action name="actionWifiName">
+  <action name="actionPPPD_NoDeflate">
    <property name="text">
-    <string>Name</string>
+    <string>PPPD.NoDeflate</string>
+   </property>
+   <property name="toolTip">
+    <string>Disable deflate compression?</string>
    </property>
   </action>
-  <action name="actionWifiClientCertFile">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPPD_RequirMPPE">
    <property name="text">
-    <string>ClientCertFile</string>
+    <string>PPPD.RequirMPPE</string>
+   </property>
+   <property name="toolTip">
+    <string>Require the use of MPPE?</string>
    </property>
   </action>
-  <action name="actionWifiPrivateKeyFile">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPPD_RequirMPPE40">
    <property name="text">
-    <string>PrivateKeyFile</string>
+    <string>PPPD.RequirMPPE40</string>
+   </property>
+   <property name="toolTip">
+    <string>Require the use of MPPE 40 bit?</string>
    </property>
   </action>
-  <action name="actionWifiPrivateKeyPassphrase">
+  <action name="actionPPPD_RequirMPPE128">
    <property name="text">
-    <string>PrivateKeyPassphrase</string>
+    <string>PPPD.RequirMPPE128</string>
+   </property>
+   <property name="toolTip">
+    <string>Require the use of MPPE 128 bit?</string>
    </property>
   </action>
-  <action name="actionWifiPrivateKeyPassphraseType">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionPPPD_RequirMPPEStateful">
    <property name="text">
-    <string>PrivateKeyPassphraseType</string>
+    <string>PPPD.RequireMPPEStateful</string>
+   </property>
+   <property name="toolTip">
+    <string>Allow MPPE to use stateful mode?</string>
    </property>
   </action>
-  <action name="actionWifiIdentity">
+  <action name="actionPPPD_NoVJ">
    <property name="text">
-    <string>Identity</string>
+    <string>PPPD.NoVJ</string>
+   </property>
+   <property name="toolTip">
+    <string>Disable Van Jacobson compression?</string>
    </property>
   </action>
-  <action name="actionWifiPhase2">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionL2TP_User">
    <property name="text">
-    <string>Phase2</string>
+    <string>L2TP.User</string>
+   </property>
+   <property name="toolTip">
+    <string>L2TP User Name.</string>
    </property>
   </action>
-  <action name="actionWifiPassphrase">
+  <action name="actionL2TP_Password">
    <property name="text">
-    <string>Passphrase</string>
+    <string>L2TP.Password</string>
+   </property>
+   <property name="toolTip">
+    <string>L2TP Password.</string>
    </property>
   </action>
-  <action name="actionWifiSecurity">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionL2TP_BPS">
    <property name="text">
-    <string>Security</string>
+    <string>L2TP.BPS</string>
+   </property>
+   <property name="toolTip">
+    <string>Maximum bandwidth to use.</string>
    </property>
   </action>
-  <action name="actionWifiHidden">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <action name="actionL2TP_TXBPS">
    <property name="text">
-    <string>Hidden</string>
+    <string>L2TP.TXBPS</string>
+   </property>
+   <property name="toolTip">
+    <string>Maximum transmit bandwidth to use.</string>
+   </property>
+  </action>
+  <action name="actionL2TP_RXBPS">
+   <property name="text">
+    <string>L2TP.RXBPS</string>
+   </property>
+   <property name="toolTip">
+    <string>Maximum receive bandwidth to use.</string>
+   </property>
+  </action>
+  <action name="actionL2TP_LengthBit">
+   <property name="text">
+    <string>L2TP.LengthBit</string>
+   </property>
+   <property name="toolTip">
+    <string>Use length bit?</string>
+   </property>
+  </action>
+  <action name="actionL2TP_Challenge">
+   <property name="text">
+    <string>L2TP.Challenge</string>
+   </property>
+   <property name="toolTip">
+    <string>Use challenge authentication?</string>
+   </property>
+  </action>
+  <action name="actionL2TP_DefaultRoute">
+   <property name="text">
+    <string>L2TP.DefaultRoute</string>
+   </property>
+   <property name="toolTip">
+    <string>Add a default route to the system routing tables, using the peer as the gatewa?</string>
+   </property>
+  </action>
+  <action name="actionL2TP_FlowBit">
+   <property name="text">
+    <string>L2TP.FlowBit</string>
+   </property>
+   <property name="toolTip">
+    <string>Sequence numbers included in the communication?</string>
+   </property>
+  </action>
+  <action name="actionL2TP_TunnelRWS">
+   <property name="text">
+    <string>L2TP.TunnelRWS</string>
+   </property>
+   <property name="toolTip">
+    <string>The window size of the control channel (number of unacknowledged packets, not bytes)</string>
+   </property>
+  </action>
+  <action name="actionL2TP_Exclusive">
+   <property name="text">
+    <string>L2TP.Exclusive</string>
+   </property>
+   <property name="toolTip">
+    <string>Use only one control channel?</string>
+   </property>
+  </action>
+  <action name="actionL2TP_Redial">
+   <property name="text">
+    <string>L2TP.Redial</string>
+   </property>
+   <property name="toolTip">
+    <string>Redial if disconnected?</string>
+   </property>
+  </action>
+  <action name="actionL2TP_RedialTImeout">
+   <property name="text">
+    <string>L2TP.RedialTImeout</string>
+   </property>
+   <property name="toolTip">
+    <string>Wait n seconds before redial.</string>
+   </property>
+  </action>
+  <action name="actionL2TP_MaxRedials">
+   <property name="text">
+    <string>L2TP.MaxRedials</string>
+   </property>
+   <property name="toolTip">
+    <string>Give up redial tries after X attempts.</string>
+   </property>
+  </action>
+  <action name="actionL2TP_RequirePAP">
+   <property name="text">
+    <string>L2TP.RequirePAP</string>
+   </property>
+   <property name="toolTip">
+    <string>Require the remote peer to get authenticated via PAP?</string>
+   </property>
+  </action>
+  <action name="actionL2TP_RequireCHAP">
+   <property name="text">
+    <string>L2TP.RequireCHAP</string>
+   </property>
+   <property name="toolTip">
+    <string>Require the remote peer to get authenticated via CHAP?</string>
+   </property>
+  </action>
+  <action name="actionL2TP_ReqAuth">
+   <property name="text">
+    <string>L2TP.ReqAuth</string>
+   </property>
+   <property name="toolTip">
+    <string>Require the remote peer to authenticate itself?</string>
+   </property>
+  </action>
+  <action name="actionL2TP_AccessControl">
+   <property name="text">
+    <string>L2TP.AccessControl</string>
+   </property>
+   <property name="toolTip">
+    <string>Only accept connections from specified peer addresses?</string>
+   </property>
+  </action>
+  <action name="actionL2TP_AuthFile">
+   <property name="text">
+    <string>L2TP.AuthFile</string>
+   </property>
+   <property name="toolTip">
+    <string>Authentication file location.</string>
+   </property>
+  </action>
+  <action name="actionL2TP_ListenAddr">
+   <property name="text">
+    <string>L2TP.ListenAddr</string>
+   </property>
+   <property name="toolTip">
+    <string>The IP address of the interface on which the daemon listens.</string>
+   </property>
+  </action>
+  <action name="actionL2TP_IPsecSaref">
+   <property name="text">
+    <string>L2TP.IPsecSaref</string>
+   </property>
+   <property name="toolTip">
+    <string>Use IPsec Security Association tracking?</string>
+   </property>
+  </action>
+  <action name="actionL2TP_Port">
+   <property name="text">
+    <string>L2TP.Port</string>
+   </property>
+   <property name="toolTip">
+    <string>Specify which UDP port should be used.</string>
+   </property>
+  </action>
+  <action name="actionPPPD_NoPcomp">
+   <property name="text">
+    <string>PPPD.NoPcomp</string>
+   </property>
+   <property name="toolTip">
+    <string>Disable protocol compression?</string>
+   </property>
+  </action>
+  <action name="actionPPPD_UseAccomp">
+   <property name="text">
+    <string>PPPD.UseAccomp</string>
+   </property>
+   <property name="toolTip">
+    <string>Disable address/control compression?</string>
+   </property>
+  </action>
+  <action name="actionPPPD_ReqMPPE">
+   <property name="text">
+    <string>PPPD.ReqMPPE</string>
+   </property>
+   <property name="toolTip">
+    <string>Require the use of MPPE?</string>
+   </property>
+  </action>
+  <action name="actionPPPD_ReqMPPE40">
+   <property name="text">
+    <string>PPPD.ReqMPPE40</string>
+   </property>
+   <property name="toolTip">
+    <string>Require the use of MPPE 40 bit?</string>
+   </property>
+  </action>
+  <action name="actionPPPD_ReqMPPE128">
+   <property name="text">
+    <string>PPPD.ReqMPPE128</string>
+   </property>
+   <property name="toolTip">
+    <string>Require the use of MPPE 128 bit?</string>
+   </property>
+  </action>
+  <action name="actionPPPD_ReqMPPEStateful">
+   <property name="text">
+    <string>PPPD.ReqMPPEStateful</string>
+   </property>
+   <property name="toolTip">
+    <string>Allow MPPE to use stateful mode?</string>
    </property>
   </action>
  </widget>
