@@ -36,6 +36,7 @@ HEADERS		+= ./code/scrollbox/scrollbox.h
 HEADERS		+= ./code/notify/notify.h
 HEADERS		+= ./code/peditor/peditor.h
 HEADERS   += ./code/provisioning/prov_ed.h
+HEADERS   += ./code/vpn_prov_ed/vpn_ed.h
 HEADERS		+= ./code/trstring/tr_strings.h
 HEADERS		+= ./code/iconman/iconman.h
 ##HEADERS		+= ./code/vpn_agent/vpnagent.h
@@ -47,6 +48,7 @@ FORMS		+= ./code/agent/ui/agent.ui
 FORMS		+= ./code/scrollbox/ui/scrollbox.ui
 FORMS		+= ./code/peditor/ui/peditor.ui
 FORMS		+= ./code/provisioning/ui/provisioning_editor.ui
+FORMS		+= ./code/vpn_prov_ed/ui/vpn_prov_editor.ui
 ##FORMS		+= ./code/vpn_agent/ui/vpnagent.ui
 
 #	sources
@@ -59,6 +61,7 @@ SOURCES += ./code/scrollbox/scrollbox.cpp
 SOURCES += ./code/notify/notify.cpp
 SOURCES	+= ./code/peditor/peditor.cpp
 SOURCES += ./code/provisioning/prov_ed.cpp
+SOURCES += ./code/vpn_prov_ed/vpn_ed.cpp
 SOURCES	+= ./code/trstring/tr_strings.cpp
 SOURCES	+= ./code/iconman/iconman.cpp
 ##SOURCES += ./code/vpn_agent/vpnagent.cpp

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Provisioning</class>
- <widget class="QDialog" name="Provisioning">
+ <class>VPN_Prov</class>
+ <widget class="QDialog" name="VPN_Prov">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>374</width>
-    <height>484</height>
+    <width>418</width>
+    <height>483</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Provisioning Editor</string>
+   <string>VPN Provisioning Editor</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
@@ -146,6 +146,9 @@
      </item>
     </layout>
    </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_statusbar"/>
+   </item>
   </layout>
   <action name="actionGlobal">
    <property name="text">
@@ -215,17 +218,65 @@
     <string>Domain</string>
    </property>
   </action>
-  <action name="actionWifiName">
+  <action name="actionServiceIPv4Address">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
-    <string>Name</string>
+    <string>IPv4 Address</string>
    </property>
   </action>
-  <action name="actionWifiSSID">
+  <action name="actionServiceIPv4Off">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPv4 Off</string>
+   </property>
+  </action>
+  <action name="actionServiceIPV4DHCP">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPV4 DHCP</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv6Address">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPv6 Address</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv6Off">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPv6 Off</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv6Auto">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPv6 Auto</string>
+   </property>
+  </action>
+  <action name="actionServiceIPv6Privacy">
+   <property name="text">
+    <string>IPv6.Privacy</string>
+   </property>
+  </action>
+  <action name="actionWifiCACertFile">
    <property name="enabled">
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>SSID</string>
+    <string>CACertFile</string>
    </property>
   </action>
   <action name="actionWifiEAP">
@@ -236,12 +287,17 @@
     <string>EAP</string>
    </property>
   </action>
-  <action name="actionWifiCACertFile">
+  <action name="actionWifiSSID">
    <property name="enabled">
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>CACertFile</string>
+    <string>SSID</string>
+   </property>
+  </action>
+  <action name="actionWifiName">
+   <property name="text">
+    <string>Name</string>
    </property>
   </action>
   <action name="actionWifiClientCertFile">
@@ -307,76 +363,13 @@
     <string>Hidden</string>
    </property>
   </action>
-  <action name="actionTemplateEduroamLong">
-   <property name="text">
-    <string>Eduroam (long)</string>
-   </property>
-  </action>
-  <action name="actionTemplateEduroamShort">
-   <property name="text">
-    <string>Eduroam (short)</string>
-   </property>
-  </action>
-  <action name="actionServiceIPv4Address">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>IPv4 Address</string>
-   </property>
-  </action>
-  <action name="actionServiceIPv4Off">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>IPv4 Off</string>
-   </property>
-  </action>
-  <action name="actionServiceIPV4DHCP">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>IPV4 DHCP</string>
-   </property>
-  </action>
-  <action name="actionServiceIPv6Address">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>IPv6 Address</string>
-   </property>
-  </action>
-  <action name="actionServiceIPv6Off">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>IPv6 Off</string>
-   </property>
-  </action>
-  <action name="actionServiceIPv6Auto">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>IPv6 Auto</string>
-   </property>
-  </action>
-  <action name="actionServiceIPv6Privacy">
-   <property name="text">
-    <string>IPv6.Privacy</string>
-   </property>
-  </action>
  </widget>
  <resources/>
  <connections>
   <connection>
    <sender>pushButton_exit</sender>
    <signal>clicked()</signal>
-   <receiver>Provisioning</receiver>
+   <receiver>VPN_Prov</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

@@ -70,6 +70,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/scrollbox/scrollbox.h"
 # include "./code/peditor/peditor.h"
 # include "./code/provisioning/prov_ed.h"
+# include "./code/vpn_prov_ed/vpn_ed.h"
 # include "./code/trstring/tr_strings.h"
 
 //  headers for system logging
@@ -293,6 +294,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // operate on settings not dealt with elsewhere
   ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
+  ui.pushButton_vpn_editor->setVisible(ui.checkBox_advanced->isChecked() );
   ui.groupBox_process->setVisible(ui.checkBox_advanced->isChecked() );
   enableRunOnStartup(ui.checkBox_runonstartup->isChecked() );
 
@@ -389,6 +391,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
   connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
   connect(ui.pushButton_provisioning_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
+  connect(ui.pushButton_vpn_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
   connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
   connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
   connect(ui.toolButton_colorize, SIGNAL(clicked()), this, SLOT(callColorDialog()));
@@ -2646,18 +2649,33 @@ void ControlBox::configureService()
 
 //
 // Slot to open the provisioning editor to create a configuration (provisioning) file
+// Called whenever ui.pushButton_provisioning_editor or ui.pushButton_vpn_editor
+// is pressed.
 void ControlBox::provisionService()
 {
-  ProvisioningEditor* veditor = new ProvisioningEditor(this);
-
-  // Set the whatsthis button icon
-	veditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
+	if (qobject_cast<QPushButton*>(sender()) == ui.pushButton_provisioning_editor) {
+		ProvisioningEditor* peditor = new ProvisioningEditor(this);
+		
+		// Set the whatsthis button icon
+		peditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
   
-  // call then clean up
-  veditor->exec();
-  veditor->deleteLater();
-
-  return;
+		// call then clean up
+		peditor->exec();
+		peditor->deleteLater();
+	}
+	
+	else if (qobject_cast<QPushButton*>(sender()) == ui.pushButton_vpn_editor) {
+		VPN_Editor* veditor = new VPN_Editor(this);
+				
+		// Set the whatsthis button icon
+		veditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
+  
+		// call then clean up
+		veditor->exec();
+		veditor->deleteLater();	
+	}
+	
+	return;
 }
 
 //
