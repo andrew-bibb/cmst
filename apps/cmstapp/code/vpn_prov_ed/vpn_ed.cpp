@@ -455,7 +455,7 @@ void VPN_Editor::inputComboBox(QAction* act)
   if (act == ui.actionOpenVPN_NSCertType) sl << "client" << "server";
   if (act == ui.actionOpenVPN_Proto) sl << "udp" << "tcp-client" << "tcp-server";
   if (act == ui.actionOpenVPN_CompLZO) sl << "adaptive" << "yes" << "no";
-  if (act == ui.actionOpenVPN_RemoteCertTls); sl << "client" << "server";
+  if (act == ui.actionOpenVPN_RemoteCertTls) sl << "client" << "server";
   
   QString item = QInputDialog::getItem(this,
     tr("%1 - Item Input").arg(TranslateStrings::cmtr("cmst")),

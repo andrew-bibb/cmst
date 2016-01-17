@@ -435,8 +435,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>603</width>
-            <height>388</height>
+            <width>98</width>
+            <height>60</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -816,8 +816,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>579</width>
-               <height>145</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -872,8 +872,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>579</width>
-               <height>145</height>
+               <width>98</width>
+               <height>46</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1598,8 +1598,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>493</width>
-            <height>466</height>
+            <width>98</width>
+            <height>412</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1789,8 +1789,8 @@
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>59</x>
-     <y>176</y>
+     <x>82</x>
+     <y>190</y>
     </hint>
     <hint type="destinationlabel">
      <x>163</x>
@@ -1805,12 +1805,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>361</x>
-     <y>189</y>
+     <x>410</x>
+     <y>199</y>
     </hint>
     <hint type="destinationlabel">
-     <x>612</x>
-     <y>199</y>
+     <x>578</x>
+     <y>201</y>
     </hint>
    </hints>
   </connection>
@@ -1821,12 +1821,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>466</x>
-     <y>221</y>
+     <x>410</x>
+     <y>228</y>
     </hint>
     <hint type="destinationlabel">
-     <x>519</x>
-     <y>222</y>
+     <x>578</x>
+     <y>230</y>
     </hint>
    </hints>
   </connection>
@@ -1837,12 +1837,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>457</x>
-     <y>248</y>
+     <x>410</x>
+     <y>257</y>
     </hint>
     <hint type="destinationlabel">
-     <x>612</x>
-     <y>257</y>
+     <x>578</x>
+     <y>259</y>
     </hint>
    </hints>
   </connection>
@@ -1853,12 +1853,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>466</x>
+     <x>410</x>
      <y>286</y>
     </hint>
     <hint type="destinationlabel">
-     <x>531</x>
-     <y>278</y>
+     <x>578</x>
+     <y>288</y>
     </hint>
    </hints>
   </connection>
@@ -1869,11 +1869,11 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>407</x>
-     <y>136</y>
+     <x>410</x>
+     <y>145</y>
     </hint>
     <hint type="destinationlabel">
-     <x>612</x>
+     <x>578</x>
      <y>146</y>
     </hint>
    </hints>
@@ -1885,12 +1885,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>91</x>
-     <y>78</y>
+     <x>102</x>
+     <y>73</y>
     </hint>
     <hint type="destinationlabel">
-     <x>573</x>
-     <y>86</y>
+     <x>336</x>
+     <y>53</y>
     </hint>
    </hints>
   </connection>
@@ -1901,12 +1901,12 @@
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>196</x>
-     <y>176</y>
+     <x>131</x>
+     <y>190</y>
     </hint>
     <hint type="destinationlabel">
-     <x>609</x>
-     <y>476</y>
+     <x>410</x>
+     <y>443</y>
     </hint>
    </hints>
   </connection>
@@ -1977,16 +1977,16 @@
   <connection>
    <sender>checkBox_advanced</sender>
    <signal>clicked(bool)</signal>
-   <receiver>ControlBox</receiver>
+   <receiver>pushButton_vpn_editor</receiver>
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>84</x>
-     <y>185</y>
+     <x>107</x>
+     <y>190</y>
     </hint>
     <hint type="destinationlabel">
      <x>209</x>
-     <y>529</y>
+     <y>540</y>
     </hint>
    </hints>
   </connection>
