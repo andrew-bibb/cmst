@@ -63,15 +63,12 @@ class VPN_Editor : public QDialog
     QMenu* menu_VPNC;
     QMenu* menu_L2TP;
     QMenu* menu_PPTP;
-    QMenu* menu_template;
     QActionGroup* group_provider;
     QActionGroup* group_freeform;
     QActionGroup* group_combobox;
     QActionGroup* group_yes;
     QActionGroup* group_validated;
     QActionGroup* group_selectfile;
-    QActionGroup* group_ipv4;
-    QActionGroup* group_ipv6;
     QActionGroup* group_template;
     QButtonGroup* bg01;
     QStatusBar* statusbar;
@@ -84,9 +81,6 @@ class VPN_Editor : public QDialog
     void inputComboBox(QAction*);
     void inputYes(QAction*);
     void inputFreeForm(QAction*, QString s = QString());
-    void ipv4Triggered(QAction*);
-    void ipv6Triggered(QAction*);
-    void templateTriggered(QAction*);
     void showWhatsThis();
     void resetPage();
     void requestFileList(QAbstractButton*);

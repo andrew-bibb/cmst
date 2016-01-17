@@ -47,11 +47,17 @@ DEALINGS IN THE SOFTWARE.
 //
 // This class is derived from the ProvisioningEditor class, and in fact
 // it uses validating code from there.  There are a few improvements
-// mainly in packaging text data into each QAction.  In this class
+// mainly in more efficient packaging of the text data into each QAction.
+// In this class:
 // QAction->text() contains the key for the Connman config file and display
 // text for the menus.
 // QAction->toolTip() contains the text displayed in dialogs
-//  
+//
+// I've also removed the template section since the new group_provider actions
+// ask for all mandatory fields for each type of connection.
+
+//
+//	Constructor  
 VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
 {
   // Setup the user interface
@@ -90,18 +96,26 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   group_freeform->addAction(ui.actionPPPD_Debug);
   group_freeform->addAction(ui.actionL2TP_User);
   group_freeform->addAction(ui.actionL2TP_Password);
+  group_freeform->addAction(ui.actionVPNC_IPSec_ID);
   group_freeform->addAction(ui.actionVPNC_IPSec_Secret);
   group_freeform->addAction(ui.actionVPNC_Xauth_Username);
   group_freeform->addAction(ui.actionVPNC_Xauth_Password);
   group_freeform->addAction(ui.actionVPNC_Domain);
   group_freeform->addAction(ui.actionVPNC_AppVersion);
-  
+  group_freeform->addAction(ui.actionOpenVPN_Cipher);
+  group_freeform->addAction(ui.actionOpenVPN_Auth);
+    
   group_combobox = new QActionGroup(this);
   group_combobox->addAction(ui.actionVPNC_IKE_Authmode);
   group_combobox->addAction(ui.actionVPNC_IKE_DHGroup);
   group_combobox->addAction(ui.actionVPNC_PFS);
   group_combobox->addAction(ui.actionVPNC_Vendor);
   group_combobox->addAction(ui.actionVPNC_NATTMode);
+  group_combobox->addAction(ui.actionOpenVPN_NSCertType);
+  group_combobox->addAction(ui.actionOpenVPN_Proto);
+  group_combobox->addAction(ui.actionOpenVPN_CompLZO);
+  group_combobox->addAction(ui.actionOpenVPN_RemoteCertTls);
+       
     
   group_yes = new QActionGroup(this);
   group_yes->addAction(ui.actionPPPD_RefuseEAP);
@@ -135,7 +149,12 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   group_yes->addAction(ui.actionPPPD_ReqMPPEStateful);
   group_yes->addAction(ui.actionVPNC_SingleDES);
   group_yes->addAction(ui.actionVPNC_NoEncryption);
-      
+  group_yes->addAction(ui.actionOpenVPN_AuthUserPass);
+  group_yes->addAction(ui.actionOpenVPN_AskPass);
+  group_yes->addAction(ui.actionOpenVPN_AuthNoCache);
+  group_yes->addAction(ui.actionOpenConnect_MTU);
+  group_yes->addAction(ui.actionOpenConnect_Cookie);
+   
   group_validated = new QActionGroup(this);
   group_validated->addAction(ui.actionPPPD_EchoFailure);
   group_validated->addAction(ui.actionPPPD_EchoInterval);
@@ -150,16 +169,20 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   group_validated->addAction(ui.actionVPNC_LocalPort);
   group_validated->addAction(ui.actionVPNC_CiscoPort);
   group_validated->addAction(ui.actionVPNC_DPDTimeout);
+  group_validated->addAction(ui.actionOpenVPN_MTU);
+  group_validated->addAction(ui.actionOpenVPN_Port);
+  group_validated->addAction(ui.actionOpenConnect_ServerCert);
+  group_validated->addAction(ui.actionOpenConnect_VPNHost);
        
   group_selectfile = new QActionGroup(this);
   group_selectfile->addAction(ui.actionL2TP_AuthFile);
-  
-  group_ipv4 = new QActionGroup(this);
+  group_selectfile->addAction(ui.actionOpenVPN_CACert);
+  group_selectfile->addAction(ui.actionOpenVPN_Cert);
+  group_selectfile->addAction(ui.actionOpenVPN_Key);
+  group_selectfile->addAction(ui.actionOpenVPN_ConfigFile);
+  group_selectfile->addAction(ui.actionOpenConnect_CACert);
+  group_selectfile->addAction(ui.actionOpenConnect_ClientCert);
 
-  group_ipv6 = new QActionGroup(this);
-  
-  group_template = new QActionGroup(this);
-  
   // Add Actions from UI to menu's
   menu_global = new QMenu(tr("Global"), this);
   menu_global->addAction(ui.actionGlobal);
@@ -170,12 +193,40 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   menu_OpenConnect = new QMenu(tr("OpenConnect"), this);
   menu_OpenConnect->addAction(ui.actionProviderOpenConnect);
   menu_OpenConnect->addSeparator();
-    
+  menu_OpenConnect->addAction(ui.actionOpenConnect_ServerCert);	
+  menu_OpenConnect->addAction(ui.actionOpenConnect_CACert);
+  menu_OpenConnect->addAction(ui.actionOpenConnect_ClientCert);
+  menu_OpenConnect->addSeparator(); 
+  menu_OpenConnect->addAction(ui.actionOpenConnect_MTU);
+  menu_OpenConnect->addAction(ui.actionOpenConnect_Cookie);
+  menu_OpenConnect->addSeparator();
+  menu_OpenConnect->addAction(ui.actionOpenConnect_VPNHost);  
+     
   menu_OpenVPN = new QMenu(tr("OpenVPN"), this);
   menu_OpenVPN->addAction(ui.actionProviderOpenVPN);
   menu_OpenVPN->addSeparator();
+  menu_OpenVPN->addAction(ui.actionOpenVPN_CACert);
+  menu_OpenVPN->addAction(ui.actionOpenVPN_Cert);
+  menu_OpenVPN->addAction(ui.actionOpenVPN_Key);
+  menu_OpenVPN->addSeparator();
+  menu_OpenVPN->addAction(ui.actionOpenVPN_MTU);
+  menu_OpenVPN->addAction(ui.actionOpenVPN_NSCertType);
+  menu_OpenVPN->addAction(ui.actionOpenVPN_Proto);
+  menu_OpenVPN->addAction(ui.actionOpenVPN_Port);
+  menu_OpenVPN->addSeparator();
+  menu_OpenVPN->addAction(ui.actionOpenVPN_AuthUserPass);	// connman docs imply a yes value, but openvpn man page
+  menu_OpenVPN->addAction(ui.actionOpenVPN_AskPass);			// seems to want values. I've defined as group_yes but may
+  menu_OpenVPN->addAction(ui.actionOpenVPN_AuthNoCache); 	// need to change.
+  menu_OpenVPN->addSeparator();
+  menu_OpenVPN->addAction(ui.actionOpenVPN_Cipher);
+  menu_OpenVPN->addAction(ui.actionOpenVPN_Auth);
+  menu_OpenVPN->addAction(ui.actionOpenVPN_CompLZO);
+  menu_OpenVPN->addAction(ui.actionOpenVPN_RemoteCertTls); 
+  menu_OpenVPN->addSeparator();  
+  menu_OpenVPN->addAction(ui.actionOpenVPN_ConfigFile);
   
   menu_VPNC = new QMenu(tr("VPNC"), this);
+  menu_VPNC->addAction(ui.actionVPNC_IPSec_ID);
   menu_VPNC->addAction(ui.actionProviderVPNC);
   menu_VPNC->addSeparator();
   menu_VPNC->addAction(ui.actionVPNC_IPSec_Secret);
@@ -275,7 +326,6 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   menu_PPTP->addAction(ui.actionPPPD_RequirMPPE128);
   menu_PPTP->addAction(ui.actionPPPD_RequirMPPEStateful);
     
-  menu_template = new QMenu(tr("Templates"), this );
   
   // add menus to UI
   menubar->addMenu(menu_global);
@@ -284,7 +334,6 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   menubar->addMenu(menu_VPNC);
   menubar->addMenu(menu_L2TP);
   menubar->addMenu(menu_PPTP);
-  menubar->addMenu(menu_template);  
   
   // connect signals to slots
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
@@ -296,9 +345,6 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   connect(group_yes, SIGNAL(triggered(QAction*)), this, SLOT(inputYes(QAction*)));
   connect(group_validated, SIGNAL(triggered(QAction*)), this, SLOT(inputValidated(QAction*)));
   connect(group_selectfile, SIGNAL(triggered(QAction*)), this, SLOT(inputSelectFile(QAction*)));
-  connect(group_ipv4, SIGNAL(triggered(QAction*)), this, SLOT(ipv4Triggered(QAction*)));
-  connect(group_ipv6, SIGNAL(triggered(QAction*)), this, SLOT(ipv6Triggered(QAction*)));
-  connect(group_template, SIGNAL(triggered(QAction*)), this, SLOT(templateTriggered(QAction*)));
 }
 
 /////////////////////////////////////////////// Private Slots /////////////////////////////////////////////
@@ -312,6 +358,16 @@ void VPN_Editor::inputSelectFile(QAction* act)
   QString filepath = QDir::homePath();
   
   if (act == ui.actionL2TP_AuthFile) filepath = "/etc/l2tpd/l2tp-secrets";
+  
+  filepath = "/etc/openvpn";
+  if (act == ui.actionOpenVPN_CACert) filterstring = tr("CA Files (*.pem *.ca);;All Files (*.*)");
+  if (act == ui.actionOpenVPN_Cert) filterstring = tr("Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
+  if (act == ui.actionOpenVPN_Key) filterstring = tr("Key Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
+  if (act == ui.actionOpenVPN_ConfigFile) filterstring = tr("Config Files (*.ovpn *.conf *.config);;All Files (*.*)");
+  
+  filepath = "/etc/openvpn";  
+  if (act == ui.actionOpenConnect_CACert) filterstring = tr("Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
+  if (act == ui.actionOpenConnect_ClientCert) filterstring = tr("Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
   
   QString fname = QFileDialog::getOpenFileName(this, act->toolTip(),
                       filepath,
@@ -354,15 +410,11 @@ void VPN_Editor::inputValidated(QAction* act, QString key)
   if (act == ui.actionVPNC_LocalPort) vd->setValidator(CMST::ProvEd_Vd_Int, false);
   if (act == ui.actionVPNC_CiscoPort) vd->setValidator(CMST::ProvEd_Vd_Int, false);
   if (act == ui.actionVPNC_DPDTimeout) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-		 
-  //if (act == ui.actionServiceMAC) {vd->setLabel(tr("MAC address.")); vd->setValidator(CMST::ProvEd_Vd_MAC);}
-  //if (act == ui.actionWifiSSID) {vd->setLabel(tr("SSID: hexadecimal representation of an 802.11 SSID")), vd->setValidator(CMST:: ProvEd_Vd_Hex);}
-  //if (act == ui.actionServiceNameServers) {vd->setLabel(tr("List of Nameservers")), vd->setValidator(CMST::ProvEd_Vd_46, true);}
-  //if (act == ui.actionServiceTimeServers) {vd->setLabel(tr("List of Timeservers")), vd->setValidator(CMST::ProvEd_Vd_46, true);}
-  //if (act == ui.actionServiceSearchDomains) {vd->setLabel(tr("List of DNS Search Domains")), vd->setValidator(CMST::ProvEd_Vd_Dom, true);}
-  //if (act == ui.actionServiceDomain) {vd->setLabel(tr("Domain name to be used")), vd->setValidator(CMST::ProvEd_Vd_Dom);}
-  //if (act == ui.actionWifiName) {vd->setLabel(tr("Enter the string representation of an 802.11 SSID.")), vd->setValidator(CMST::ProvEd_Vd_Wd);}
-  
+  if (act == ui.actionOpenVPN_MTU) vd->setValidator(CMST::ProvEd_Vd_Int, false);
+  if (act == ui.actionOpenVPN_Port) vd->setValidator(CMST::ProvEd_Vd_Int, false);
+  if (act == ui.actionOpenConnect_ServerCert) vd->setValidator(CMST:: ProvEd_Vd_Hex, false);
+  if (act == ui.actionOpenConnect_VPNHost) vd->setValidator(CMST::ProvEd_Vd_46, false);
+
   // if accepted put an entry in the textedit
   if (vd->exec() == QDialog::Accepted) {
     QString s = vd->getText();
@@ -400,6 +452,10 @@ void VPN_Editor::inputComboBox(QAction* act)
   if (act == ui.actionVPNC_PFS) sl << "nopfs" << "dh1" << "dh2" << "dh5" << "server";
   if (act == ui.actionVPNC_Vendor) sl << "cisco" << "netscreen";
   if (act == ui.actionVPNC_NATTMode) sl << "natt" << "none" << "force-natt" << "cisco-udp";
+  if (act == ui.actionOpenVPN_NSCertType) sl << "client" << "server";
+  if (act == ui.actionOpenVPN_Proto) sl << "udp" << "tcp-client" << "tcp-server";
+  if (act == ui.actionOpenVPN_CompLZO) sl << "adaptive" << "yes" << "no";
+  if (act == ui.actionOpenVPN_RemoteCertTls); sl << "client" << "server";
   
   QString item = QInputDialog::getItem(this,
     tr("%1 - Item Input").arg(TranslateStrings::cmtr("cmst")),
@@ -443,6 +499,10 @@ void VPN_Editor::inputFreeForm(QAction* act, QString key)
   // create some prompts
   if (key == "Name") str = tr("User defined name for the VPN");
   else if (key == "Domain") str = tr("Domain name for the VPN Service\n(example: corporate.com)");
+  else if (key == "Networks") str = tr("Networks behing the VPN link, if more than one separate by a comma.\n"
+																				"Format is network/netmask/gateway, and gateway can be omitted.\n"
+																				"Ex: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:Ldb8::1/16\n\n"
+																				"Networks = entry is optional and may be left blank.");
 	else str = act->toolTip();
   
   if (act == ui.actionGlobal) {
@@ -464,121 +524,6 @@ void VPN_Editor::inputFreeForm(QAction* act, QString key)
     if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(val));
   } // else   
   
-  return;
-}
-
-//
-//  Slot called when a member of the QActionGroup group_ipv4 is triggered
-void VPN_Editor::ipv4Triggered(QAction* act)
-{//////////////////NOT USED
-  // variables
-  QString s = "IPv4 = %1\n";
-  QString val;
-
-  // process action
-//  if (act == ui.actionServiceIPv4Off) ui.plainTextEdit_main->insertPlainText(s.arg("off") );
-//  if (act == ui.actionServiceIPV4DHCP) ui.plainTextEdit_main->insertPlainText(s.arg("dhcp") );
-  //if (act == ui.actionServiceIPv4Address) {
-    //QMessageBox::StandardButton but = QMessageBox::information(this, 
-                                        //QString(TranslateStrings::cmtr("cmst")) + tr(" Information"),
-                                        //tr("The IPv4 <b>Address</b>, <b>Netmask</b>, and optionally <b>Gateway</b> need to be provided."  \
-                                        //"<p>Press OK when you are ready to proceed."),
-                                        //QMessageBox::Ok | QMessageBox::Abort,QMessageBox::Ok);
-    //if (but == QMessageBox::Ok) {
-      //VPNValidatingDialog* vd = new VPNValidatingDialog(this);
-      //vd->setLabel(tr("IPv4 Address"));
-      //vd->setValidator(CMST::ProvEd_Vd_IPv4);
-      //if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
-        //val = vd->getText();
-        //vd->clear();
-        //vd->setLabel(tr("IPv4 Netmask")); 
-        //vd->setValidator(CMST::ProvEd_Vd_IPv4);
-        //if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
-          //val.append("/" + vd->getText() );
-          //vd->clear();
-          //vd->setLabel(tr("IPv4 Gateway (This is an optional entry)")); 
-          //vd->setValidator(CMST::ProvEd_Vd_IPv4);
-          //if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) { 
-            //val.append("/" + vd->getText() );
-          //} // if gateway accpted
-          //ui.plainTextEdit_main->insertPlainText(s.arg(val) );
-        //} // if netmask accepted
-      //} // if address accepted 
-      //vd->deleteLater();
-    //} // we pressed OK on the information dialog
-  //} // act == actionServiceIPv4Address
-  
-  return;
-}
-
-//
-// Slot called when a member of the QActonGroup group_ipv6 is triggered
-void VPN_Editor::ipv6Triggered(QAction* act)
-{ /////////////////NOT USED
-  // variables
-  QString s = "IPv6 = %1\n";
-  bool ok;
-  QString val;
-
-  // process action
-//  if (act == ui.actionServiceIPv6Off) ui.plainTextEdit_main->insertPlainText(s.arg("off") );
-//  if (act == ui.actionServiceIPv6Auto) ui.plainTextEdit_main->insertPlainText(s.arg("auto") );
-//  if (act == ui.actionServiceIPv6Address) {
-    //QMessageBox::StandardButton but = QMessageBox::information(this, 
-                                        //QString(TranslateStrings::cmtr("cmst")) + tr(" Information"),
-                                        //tr("The IPv6 <b>Address</b>, <b>Prefix Length</b>, and optionally <b>Gateway</b> need to be provided."  \
-                                        //"<p>Press OK when you are ready to proceed."),
-                                        //QMessageBox::Ok | QMessageBox::Abort,QMessageBox::Ok);
-    //if (but == QMessageBox::Ok) {
-      //VPNValidatingDialog* vd = new VPNValidatingDialog(this);
-      //vd->setLabel(tr("IPv6 Address"));
-      //vd->setValidator(CMST::ProvEd_Vd_IPv6);
-      //if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
-        //val = vd->getText();
-        //int i = QInputDialog::getInt(this,
-          //tr("%1 - Integer Input").arg(TranslateStrings::cmtr("cmst")),
-          //tr("Enter the IPv6 prefix length"),
-          //0, 0, 255, 1,
-          //&ok);
-        //if (ok) {
-          //val.append(QString("/%1").arg(i) );
-          //VPNValidatingDialog* vd = new VPNValidatingDialog(this);
-          //vd->setLabel(tr("IPv6 Gateway (This is an optional entry)")); 
-          //vd->setValidator(CMST::ProvEd_Vd_IPv6);
-          //if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
-            //val.append(QString("/" + vd->getText()) );
-          //} // if gateway was accepted
-          //ui.plainTextEdit_main->insertPlainText(s.arg(val) );
-        //} // if prefix provided 
-      //} // if address accepted
-      //vd->deleteLater();
-    //} // we pressed OK on the informaion dialog
-  //} // act == actionServiceIPv6Address
-  
-  return;
-}
-
-//
-// Slot called when a member of the QActionGroup group_template is triggered
-void VPN_Editor::templateTriggered(QAction* act)
-{ ///////////////NOT USED
-  // variable
-  QString source;
-  
-  // get the source string depending on the action
-  //if (act == ui.actionTemplateEduroamLong) source = ":/text/text/eduroam_long.txt";
-  //else if (act == ui.actionTemplateEduroamShort) source = ":/text/text/eduroam_short.txt";
-  
-  // get the text
-  QFile file(source);
-  if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {  
-    QByteArray ba = file.readAll();
-    
-    // seed the textedit with the template
-    this->seedTextEdit(QString(ba));
-  } // if 
-  
-
   return;
 }
 
@@ -733,8 +678,7 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
 
 //
 // Slot to seed the QTextEdit window with data read from file.  Connected to
-// fileReadCompleted signal in root helper.  Also called directly from
-// the templateTriggered slot. 
+// fileReadCompleted signal in root helper.  
 void VPN_Editor::seedTextEdit(const QString& data)
 {
   // clear the text edit and seed it with the read data
@@ -807,7 +751,14 @@ void VPN_Editor::createProvider(QAction* act)
 	inputFreeForm(act, "Name");
 	inputValidated(act, "Host");
 	inputFreeForm(act, "Domain");
+	inputFreeForm(act, "Networks");
 	
 	// individual provider mandatory fields
-	if (act == ui.actionProviderVPNC) inputFreeForm(ui.actionVPNC_IPSEC_ID, "VPNC.IPSec.ID");
+	if (act == ui.actionProviderVPNC) inputFreeForm(ui.actionVPNC_IPSec_ID, "VPNC.IPSec.ID");
+	if (act == ui.actionProviderOpenVPN) {
+		inputSelectFile(ui.actionOpenVPN_CACert);
+		inputSelectFile(ui.actionOpenVPN_Cert);
+		inputSelectFile(ui.actionOpenVPN_Key);
+	}
+	
 }

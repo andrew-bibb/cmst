@@ -556,9 +556,9 @@ that the peer is no longer connected.</string>
     <string>Allow MPPE to use stateful mode?</string>
    </property>
   </action>
-  <action name="actionVPNC_IPSEC_ID">
+  <action name="actionVPNC_IPSec_ID">
    <property name="text">
-    <string>VPNC.IPSEC.ID</string>
+    <string>VPNC.IPSec.ID</string>
    </property>
    <property name="toolTip">
     <string>Your Group username.</string>
@@ -682,6 +682,174 @@ that the peer is no longer connected.</string>
    </property>
    <property name="toolTip">
     <string>Enables using no encryption for data traffic.</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_CACert">
+   <property name="text">
+    <string>OpenVPN.CACert</string>
+   </property>
+   <property name="toolTip">
+    <string>Certificate authority file.</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_Cert">
+   <property name="text">
+    <string>OpenVPN.Cert</string>
+   </property>
+   <property name="toolTip">
+    <string>Local peer's signed certificate.</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_Key">
+   <property name="text">
+    <string>OpenVPN.Key</string>
+   </property>
+   <property name="toolTip">
+    <string>Local peer's private key.</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_MTU">
+   <property name="text">
+    <string>OpenVPN.MTU</string>
+   </property>
+   <property name="toolTip">
+    <string>MTU of the tunnel.</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_NSCertType">
+   <property name="text">
+    <string>OpenVPN.NSCertType</string>
+   </property>
+   <property name="toolTip">
+    <string>Peer certificate type (server/client).</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_Proto">
+   <property name="text">
+    <string>OpenVPN.Proto</string>
+   </property>
+   <property name="toolTip">
+    <string>Protocol type (udp/tcp-client/tcp-server).</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_Port">
+   <property name="text">
+    <string>OpenVPN.Port</string>
+   </property>
+   <property name="toolTip">
+    <string>TCP/UDP port number.</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_AuthUserPass">
+   <property name="text">
+    <string>OpenVPN.AuthUserPass</string>
+   </property>
+   <property name="toolTip">
+    <string>Authenticate with server using username/password?</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_AskPass">
+   <property name="text">
+    <string>OpenVPN.AskPass</string>
+   </property>
+   <property name="toolTip">
+    <string>Get certificate password from console or file?</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_AuthNoCache">
+   <property name="text">
+    <string>OpenVPN.AuthNoCache</string>
+   </property>
+   <property name="toolTip">
+    <string>Don't cache --askpass or --auth-user-pass values?</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_Cipher">
+   <property name="text">
+    <string>OpenVPN.Cipher</string>
+   </property>
+   <property name="toolTip">
+    <string>Encrypt packets with cipher algorithm:</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_Auth">
+   <property name="text">
+    <string>OpenVPN.Auth</string>
+   </property>
+   <property name="toolTip">
+    <string>Authenticate packets using algorithm:</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_CompLZO">
+   <property name="text">
+    <string>OpenVPN.CompLZO</string>
+   </property>
+   <property name="toolTip">
+    <string>Use fast LZO compression (yes/no/adaptive).</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_RemoteCertTls">
+   <property name="text">
+    <string>OpenVPN.RemoteCertTls</string>
+   </property>
+   <property name="toolTip">
+    <string>Require peer certificate signed (client/server).</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_ConfigFile">
+   <property name="text">
+    <string>OpenVPN.ConfigFile</string>
+   </property>
+   <property name="toolTip">
+    <string>OpenVPN config file that can contain extra options.</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_ServerCert">
+   <property name="text">
+    <string>OpenConnect.ServerCert</string>
+   </property>
+   <property name="toolTip">
+    <string>SHA1 certificate fingerprint of the final VPN server.</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_CACert">
+   <property name="text">
+    <string>OpenConnect.CACert</string>
+   </property>
+   <property name="toolTip">
+    <string>File containing other certificate authorities.</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_ClientCert">
+   <property name="text">
+    <string>OpenConnect.ClientCert</string>
+   </property>
+   <property name="toolTip">
+    <string>Client certificate file, if needed for web authentication. </string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_MTU">
+   <property name="text">
+    <string>OpenConnect.MTU</string>
+   </property>
+   <property name="toolTip">
+    <string>Request MTU from server to use as MTU of tunnel?</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_Cookie">
+   <property name="text">
+    <string>OpenConnect.Cookie</string>
+   </property>
+   <property name="toolTip">
+    <string>Read cookie from standard input?</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_VPNHost">
+   <property name="text">
+    <string>OpenConnect.VPNHost</string>
+   </property>
+   <property name="toolTip">
+    <string>The final VPN server to use after completing web authentication.</string>
    </property>
   </action>
  </widget>
