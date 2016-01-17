@@ -556,6 +556,134 @@ that the peer is no longer connected.</string>
     <string>Allow MPPE to use stateful mode?</string>
    </property>
   </action>
+  <action name="actionVPNC_IPSEC_ID">
+   <property name="text">
+    <string>VPNC.IPSEC.ID</string>
+   </property>
+   <property name="toolTip">
+    <string>Your Group username.</string>
+   </property>
+  </action>
+  <action name="actionVPNC_IPSec_Secret">
+   <property name="text">
+    <string>VPNC.IPSec.Secret</string>
+   </property>
+   <property name="toolTip">
+    <string>Your group password (cleartext).</string>
+   </property>
+  </action>
+  <action name="actionVPNC_Xauth_Username">
+   <property name="text">
+    <string>VPNC.Xauth.Username</string>
+   </property>
+   <property name="toolTip">
+    <string>Your username.</string>
+   </property>
+  </action>
+  <action name="actionVPNC_Xauth_Password">
+   <property name="text">
+    <string>VPNC.Xauth.Password</string>
+   </property>
+   <property name="toolTip">
+    <string>Your password (cleartext).</string>
+   </property>
+  </action>
+  <action name="actionVPNC_IKE_Authmode">
+   <property name="text">
+    <string>VPNC.IKE.Authmode</string>
+   </property>
+   <property name="toolTip">
+    <string>IKE authentication mode.</string>
+   </property>
+  </action>
+  <action name="actionVPNC_IKE_DHGroup">
+   <property name="text">
+    <string>VPNC.IKE.DHGroup</string>
+   </property>
+   <property name="toolTip">
+    <string>Name of the IKE DH Group.</string>
+   </property>
+  </action>
+  <action name="actionVPNC_PFS">
+   <property name="text">
+    <string>VPNC.PFS</string>
+   </property>
+   <property name="toolTip">
+    <string>DH gropup to use for perfect forward secrecy. </string>
+   </property>
+  </action>
+  <action name="actionVPNC_Domain">
+   <property name="text">
+    <string>VPNC.Domain</string>
+   </property>
+   <property name="toolTip">
+    <string>Domain name for authentication.</string>
+   </property>
+  </action>
+  <action name="actionVPNC_Vendor">
+   <property name="text">
+    <string>VPNC.Vendor</string>
+   </property>
+   <property name="toolTip">
+    <string>Vendor of your IPSec gateway.</string>
+   </property>
+  </action>
+  <action name="actionVPNC_LocalPort">
+   <property name="text">
+    <string>VPNC.LocalPort</string>
+   </property>
+   <property name="toolTip">
+    <string>Local ISAKMP port to use.</string>
+   </property>
+  </action>
+  <action name="actionVPNC_CiscoPort">
+   <property name="text">
+    <string>VPNC.CiscoPort</string>
+   </property>
+   <property name="toolTip">
+    <string>Local UDP port number to use.</string>
+   </property>
+  </action>
+  <action name="actionVPNC_AppVersion">
+   <property name="text">
+    <string>VPNC.AppVersion</string>
+   </property>
+   <property name="toolTip">
+    <string>Application version to report.</string>
+   </property>
+  </action>
+  <action name="actionVPNC_NATTMode">
+   <property name="text">
+    <string>VPNC.NATTMode</string>
+   </property>
+   <property name="toolTip">
+    <string>NAT-Traversal method to employ.</string>
+   </property>
+  </action>
+  <action name="actionVPNC_DPDTimeout">
+   <property name="text">
+    <string>VPNC.DPDTimeout</string>
+   </property>
+   <property name="toolTip">
+    <string>Send DPD packet after not receiving anything for n seconds</string>
+   </property>
+  </action>
+  <action name="actionVPNC_SingleDES">
+   <property name="text">
+    <string>VPNC.SingleDES</string>
+   </property>
+   <property name="toolTip">
+    <string>Enable single DES encryption.</string>
+   </property>
+  </action>
+  <action name="actionVPNC_NoEncryption">
+   <property name="text">
+    <string>VPNC.NoEncryption</string>
+   </property>
+   <property name="toolTip">
+    <string>Enables using no encryption for data traffic.</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>

@@ -44,6 +44,14 @@ DEALINGS IN THE SOFTWARE.
 # include "../resource.h"
 # include "./code/trstring/tr_strings.h"
    
+//
+// This class is derived from the ProvisioningEditor class, and in fact
+// it uses validating code from there.  There are a few improvements
+// mainly in packaging text data into each QAction.  In this class
+// QAction->text() contains the key for the Connman config file and display
+// text for the menus.
+// QAction->toolTip() contains the text displayed in dialogs
+//  
 VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
 {
   // Setup the user interface
@@ -82,8 +90,18 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   group_freeform->addAction(ui.actionPPPD_Debug);
   group_freeform->addAction(ui.actionL2TP_User);
   group_freeform->addAction(ui.actionL2TP_Password);
+  group_freeform->addAction(ui.actionVPNC_IPSec_Secret);
+  group_freeform->addAction(ui.actionVPNC_Xauth_Username);
+  group_freeform->addAction(ui.actionVPNC_Xauth_Password);
+  group_freeform->addAction(ui.actionVPNC_Domain);
+  group_freeform->addAction(ui.actionVPNC_AppVersion);
   
   group_combobox = new QActionGroup(this);
+  group_combobox->addAction(ui.actionVPNC_IKE_Authmode);
+  group_combobox->addAction(ui.actionVPNC_IKE_DHGroup);
+  group_combobox->addAction(ui.actionVPNC_PFS);
+  group_combobox->addAction(ui.actionVPNC_Vendor);
+  group_combobox->addAction(ui.actionVPNC_NATTMode);
     
   group_yes = new QActionGroup(this);
   group_yes->addAction(ui.actionPPPD_RefuseEAP);
@@ -115,7 +133,9 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   group_yes->addAction(ui.actionPPPD_ReqMPPE40);
   group_yes->addAction(ui.actionPPPD_ReqMPPE128);
   group_yes->addAction(ui.actionPPPD_ReqMPPEStateful);
-    
+  group_yes->addAction(ui.actionVPNC_SingleDES);
+  group_yes->addAction(ui.actionVPNC_NoEncryption);
+      
   group_validated = new QActionGroup(this);
   group_validated->addAction(ui.actionPPPD_EchoFailure);
   group_validated->addAction(ui.actionPPPD_EchoInterval);
@@ -127,8 +147,10 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   group_validated->addAction(ui.actionL2TP_MaxRedials);
   group_validated->addAction(ui.actionL2TP_ListenAddr);
   group_validated->addAction(ui.actionL2TP_Port);
-
-     
+  group_validated->addAction(ui.actionVPNC_LocalPort);
+  group_validated->addAction(ui.actionVPNC_CiscoPort);
+  group_validated->addAction(ui.actionVPNC_DPDTimeout);
+       
   group_selectfile = new QActionGroup(this);
   group_selectfile->addAction(ui.actionL2TP_AuthFile);
   
@@ -156,7 +178,25 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   menu_VPNC = new QMenu(tr("VPNC"), this);
   menu_VPNC->addAction(ui.actionProviderVPNC);
   menu_VPNC->addSeparator();
-  
+  menu_VPNC->addAction(ui.actionVPNC_IPSec_Secret);
+  menu_VPNC->addAction(ui.actionVPNC_Xauth_Username);
+  menu_VPNC->addAction(ui.actionVPNC_Xauth_Password);
+  menu_VPNC->addSeparator();
+  menu_VPNC->addAction(ui.actionVPNC_IKE_Authmode);
+  menu_VPNC->addAction(ui.actionVPNC_IKE_DHGroup);
+  menu_VPNC->addAction(ui.actionVPNC_PFS);
+  menu_VPNC->addSeparator();
+  menu_VPNC->addAction(ui.actionVPNC_Domain);
+  menu_VPNC->addAction(ui.actionVPNC_Vendor);
+  menu_VPNC->addAction(ui.actionVPNC_LocalPort);
+  menu_VPNC->addAction(ui.actionVPNC_CiscoPort);
+  menu_VPNC->addAction(ui.actionVPNC_AppVersion);
+  menu_VPNC->addAction(ui.actionVPNC_NATTMode);
+  menu_VPNC->addAction(ui.actionVPNC_DPDTimeout);
+  menu_VPNC->addSeparator();
+  menu_VPNC->addAction(ui.actionVPNC_SingleDES);
+  menu_VPNC->addAction(ui.actionVPNC_NoEncryption);
+
   menu_L2TP = new QMenu(tr("L2TP"), this);
   menu_L2TP->addAction(ui.actionProviderL2TP);
   menu_L2TP->addSeparator();
@@ -311,7 +351,9 @@ void VPN_Editor::inputValidated(QAction* act, QString key)
   if (act == ui.actionL2TP_RedialTImeout) vd->setValidator(CMST::ProvEd_Vd_Int, false);
   if (act == ui.actionL2TP_MaxRedials) vd->setValidator(CMST::ProvEd_Vd_Int, false);
   if (act == ui.actionL2TP_ListenAddr) vd->setValidator(CMST::ProvEd_Vd_46, false);
-  if (act == ui.actionL2TP_Port) vd->setValidator(CMST::ProvEd_Vd_Int, false);
+  if (act == ui.actionVPNC_LocalPort) vd->setValidator(CMST::ProvEd_Vd_Int, false);
+  if (act == ui.actionVPNC_CiscoPort) vd->setValidator(CMST::ProvEd_Vd_Int, false);
+  if (act == ui.actionVPNC_DPDTimeout) vd->setValidator(CMST::ProvEd_Vd_Int, false);
 		 
   //if (act == ui.actionServiceMAC) {vd->setLabel(tr("MAC address.")); vd->setValidator(CMST::ProvEd_Vd_MAC);}
   //if (act == ui.actionWifiSSID) {vd->setLabel(tr("SSID: hexadecimal representation of an 802.11 SSID")), vd->setValidator(CMST:: ProvEd_Vd_Hex);}
@@ -345,7 +387,7 @@ void VPN_Editor::inputValidated(QAction* act, QString key)
 //
 // Slot called when a member of the QActionGroup group_combobox is triggered
 void VPN_Editor::inputComboBox(QAction* act)
-{/////////// NOT USED
+{
   // variables
   QString key = act->text();
   QString str = act->toolTip();
@@ -353,24 +395,11 @@ void VPN_Editor::inputComboBox(QAction* act)
   QStringList sl;
   
   // create some prompts
-  //if (act == ui.actionPPPD_RefuseEAP 			||
-		//act == ui.actionPPPD_RefusePAP 				||
-		//act == ui.actionPPPD_RefuseCHAP				||
-		//act == ui.actionPPPD_RefuseMSCHAP			||
-		//act == ui.actionPPPD_RefuseMSCHAP2			||
-		//act == ui.actionPPPD_NoBSDComp					||
-		//act == ui.actionPPPD_NoDeflate					||
-		//act == ui.actionPPPD_NoVJ							||
-		//act == ui.actionPPPD_RequirMPPE				||
-		//act == ui.actionPPPD_RequirMPPE40			||
-		//act == ui.actionPPPD_RequirMPPE128			||
-		//act == ui.actionL2TP_LengthBit		||
-		//act == ui.actionL2TP_Challenge		||
-		//act == ui.actionL2TP_DefaultRoute	||
-		//act == ui.actionL2TP_FlowBit			||
-		//act == ui.actionL2TP_Exclusive		||
-		//act == ui.actionL2TP_Redial				||
-		//act == ui.actionPPPD_RequirMPPEStateful) sl << "yes" << "no";
+  if (act == ui.actionVPNC_IKE_Authmode)  sl << "psk" << "cert" << "hybrid";
+  if (act == ui.actionVPNC_IKE_DHGroup) sl << "dh1" << "dh2" << "dh5";
+  if (act == ui.actionVPNC_PFS) sl << "nopfs" << "dh1" << "dh2" << "dh5" << "server";
+  if (act == ui.actionVPNC_Vendor) sl << "cisco" << "netscreen";
+  if (act == ui.actionVPNC_NATTMode) sl << "natt" << "none" << "force-natt" << "cisco-udp";
   
   QString item = QInputDialog::getItem(this,
     tr("%1 - Item Input").arg(TranslateStrings::cmtr("cmst")),
@@ -769,13 +798,16 @@ void VPN_Editor::callbackErrorHandler(QDBusError err)
 // Slot to prompt and create a new Provider section
 void VPN_Editor::createProvider(QAction* act)
 {
+	// common mandatory fields
 	if (act == ui.actionProviderOpenConnect) ui.plainTextEdit_main->insertPlainText("\n[provider_openconnect]\nType = OpenConnect\n");
 		else if (act == ui.actionProviderOpenVPN) ui.plainTextEdit_main->insertPlainText("\n[provider_openvpn]\nType = OpenVPN\n");
 			else if (act == ui.actionProviderVPNC) ui.plainTextEdit_main->insertPlainText("\n[provider_vpnc]\nType = VPNC\n");
 				else if (act == ui.actionProviderL2TP) ui.plainTextEdit_main->insertPlainText("\n[provider_l2tp]\nType = L2TP\n");
 					else if (act == ui.actionProviderPPTP) ui.plainTextEdit_main->insertPlainText("\n[provider_pptp]\nType = PPTP\n");
-	
 	inputFreeForm(act, "Name");
 	inputValidated(act, "Host");
 	inputFreeForm(act, "Domain");
+	
+	// individual provider mandatory fields
+	if (act == ui.actionProviderVPNC) inputFreeForm(ui.actionVPNC_IPSEC_ID, "VPNC.IPSec.ID");
 }
