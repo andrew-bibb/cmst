@@ -80,9 +80,9 @@ DEALINGS IN THE SOFTWARE.
 
 # define DBUS_PATH "/"
 # define DBUS_CON_SERVICE "net.connman"
-//# define DBUS_VPN_SERVICE "net.connman.vpn"
+# define DBUS_VPN_SERVICE "net.connman.vpn"
 # define DBUS_CON_MANAGER "net.connman.Manager"
-//# define DBUS_VPN_MANAGER	"net.connman.vpn.Manager"
+# define DBUS_VPN_MANAGER	"net.connman.vpn.Manager"
 
 // Custom push button, used in the technology box for powered on/off
 // This is really a single use button, after it is clicked all idButtons
@@ -175,7 +175,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   peer_list.clear();
   vpn_list.clear();
   agent = new ConnmanAgent(this);
-  //vpnagent = new ConnmanVPNAgent(this);
+  vpnagent = new ConnmanVPNAgent(this);
   counter = new ConnmanCounter(this);
   trayiconmenu = new QMenu(this);
   tech_submenu = new QMenu(tr("Technologies"), this);
@@ -224,7 +224,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 		
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request"));
-  //vpnagent->setLogInputRequest(parser.isSet("log-input-request"));
+  vpnagent->setLogInputRequest(parser.isSet("log-input-request"));
 
   // Set icon theme if provided on the command line or in the settings
   if (parser.isSet("icon-theme") )
@@ -244,7 +244,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 	// Set the whatsthis icons
 	ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));
 	agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
-	//vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
+	vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
 
   // set a flag is we want to use XFCE or MATE custom code.
   // Currently (as of 2014.11.24) this is only used to get around a bug between QT5.3 and the XFCE system tray
@@ -339,9 +339,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     this->clearCounters();
     
     // VPN manager
-   //vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
-    //if (! vpn_manager->isValid() ) logErrors(CMST::Err_Invalid_VPN_Iface);
-    //else  vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT)) );
+   vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
+    if (! vpn_manager->isValid() ) logErrors(CMST::Err_Invalid_VPN_Iface);
+    else  vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT)) );
     } // else have valid connection
   } // else have connected systemBus
 
@@ -2711,10 +2711,10 @@ void ControlBox::cleanUp()
 	}	// if con_manager isValid
 	
 			
-	//if (vpn_manager->isValid() ) {
-	  //QDBusMessage reply_b = vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT)) );
+	if (vpn_manager->isValid() ) {
+	  QDBusMessage reply_b = vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT)) );
 		//qDebug() << reply_b;
-	//}	// ivpn_manager isValid
+	}	// ivpn_manager isValid
 
   return;
 }
@@ -2737,7 +2737,7 @@ void ControlBox::iconColorChanged(const QString& col)
 	this->updateDisplayWidgets();
 	ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));
 	agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
-	//vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
+	vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
 	
 	return;
 }

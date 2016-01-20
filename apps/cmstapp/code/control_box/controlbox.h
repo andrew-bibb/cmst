@@ -54,7 +54,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/counter/counter.h"
 # include "./code/notify/notify.h"
 # include "./code/iconman/iconman.h"
-//# include "./code/vpn_agent/vpnagent.h"
+# include "./code/vpn_agent/vpnagent.h"
 
 
 //  Two of the connman.Manager query functions will return an array of structures.
@@ -133,14 +133,14 @@ class ControlBox : public QDialog
     QList<arrayElement>   peer_list;
     QList<arrayElement> 	vpn_list;
     ConnmanAgent* agent;
-//    ConnmanVPNAgent* vpnagent;
+    ConnmanVPNAgent* vpnagent;
     ConnmanCounter* counter;  
     NotifyClient* notifyclient; 
     short wifi_interval;    
     quint32 counter_accuracy; 
     quint32 counter_period;       
     QDBusInterface* con_manager;
-//    QDBusInterface* vpn_manager;
+    QDBusInterface* vpn_manager;
     QSystemTrayIcon*  trayicon;
     QMenu* trayiconmenu;
     QMenu* tech_submenu;
