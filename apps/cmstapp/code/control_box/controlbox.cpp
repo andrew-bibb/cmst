@@ -1410,6 +1410,13 @@ void ControlBox::getServiceDetails(int index)
   rs.append(tr("Security: %1<br>").arg(sl_tr.join(',')) );
   if (! map.value("Strength").toString().isEmpty() ) rs.append(tr("Strength: %1<br>").arg(map.value("Strength").value<quint8>()) );
   rs.append(tr("Roaming: %1<br>").arg(map.value("Roaming").toBool() ? tr("Yes", "roaming") : tr("No", "roaming")) );
+  
+  rs.append(tr("<br><b>VPN Provider</b><br>"));
+  extractMapData(submap, services_list.at(index).objmap.value("Provider") );
+  rs.append(tr("Host: %1<br>").arg(submap.value("Host").toString()) );
+  rs.append(tr("Domain: %1<br>").arg(submap.value("Domain").toString()) );
+  rs.append(tr("Name: %1<br>").arg(submap.value("Name").toString()) );
+  rs.append(tr("Type: %1<br>").arg(submap.value("Type").toString()) );
 
   //  write the text to the right display label
   ui.label_details_right->setText(rs);
