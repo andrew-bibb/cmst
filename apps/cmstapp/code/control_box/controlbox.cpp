@@ -34,11 +34,6 @@ DEALINGS IN THE SOFTWARE.
  * that text is stored in the maps exactly as connman returns it and
  * is then translated when it needs to be displayed.
  * 
- * As of 2016.01.14 vpn_manager and vpnagent have been pulled out.  Due
- * to a constraint of QT and the automatic code generation I can't have
- * and Agent for the regular connections and an Agent for vpn connections.
- * Compile fine, but get a linker error. I'm going to need to do one or
- * both as libraries.
 ***********************************************************************/																								 
 
 # include <QtCore/QDebug>
@@ -181,6 +176,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   tech_submenu = new QMenu(tr("Technologies"), this);
   info_submenu = new QMenu(tr("Service Details"), this);
   wifi_submenu = new QMenu(tr("WiFi Connections"), this);
+  vpn_submenu	 = new QMenu(tr("VPN Connections"), this);
   mvsrv_menu = new QMenu(this);
   settings = new QSettings(ORG, APP, this);
   notifyclient = 0;
@@ -362,6 +358,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(tech_submenu, SIGNAL(triggered(QAction*)), this, SLOT(techSubmenuTriggered(QAction*)));
   connect(info_submenu, SIGNAL(triggered(QAction*)), this, SLOT(infoSubmenuTriggered(QAction*)));
   connect(wifi_submenu, SIGNAL(triggered(QAction*)), this, SLOT(wifiSubmenuTriggered(QAction*)));
+  connect(vpn_submenu, SIGNAL(triggered(QAction*)), this, SLOT(vpnSubmenuTriggered(QAction*)));
   connect(exitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
   connect(moveGroup, SIGNAL(triggered(QAction*)), this, SLOT(moveButtonPressed(QAction*)));
   connect(mvsrv_menu, SIGNAL(triggered(QAction*)), this, SLOT(moveService(QAction*)));
@@ -1299,6 +1296,30 @@ void ControlBox::wifiSubmenuTriggered(QAction* act)
 }
 
 //
+// Called from the systemtrayicon context menu.  Actions are created
+// dynamically and we don't know them up front. Actions here connect
+// to a VPN service.
+void ControlBox::vpnSubmenuTriggered(QAction* act)
+{
+	// find the VPN service associated with the action
+	for (int i = 0; i < vpn_list.count(); ++i) {
+		if (vpn_list.at(i).objmap.value("Name").toString() == act->text() ) {
+			QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+			iface_serv->setTimeout(1);
+			QString state = vpn_list.at(i).objmap.value("State").toString();
+			if (state == "ready")
+				iface_serv->call(QDBus::AutoDetect, "Disconnect");
+			else 
+				iface_serv->call(QDBus::AutoDetect, "Connect");
+			iface_serv->deleteLater();
+			break;
+		}	// if
+	} 	// for
+
+	return;
+}
+
+//
 //  Slot to get details of the selected service and write it into ui.label_details
 //  Called when the ui.comboBox_services currentIndexChanged() signal is emitted.
 void ControlBox::getServiceDetails(int index)
@@ -1976,7 +1997,6 @@ void ControlBox::assembleTrayIcon()
   info_submenu->clear();
   for (int j = 0; j < services_list.count(); ++j) {
     QAction* act = info_submenu->addAction(TranslateStrings::cmtr(services_list.at(j).objmap.value("Name").toString()) );
-  
 		if (services_list.at(j).objmap.value("Type").toString() == "ethernet" ) {
 		  if (services_list.at(j).objmap.value("State").toString() == "online")
 				act->setIcon(iconman->getIcon("connection_wired"));
@@ -2022,7 +2042,7 @@ void ControlBox::assembleTrayIcon()
   for (int k = 0; k < wifi_list.count(); ++k) {
     QAction* act = wifi_submenu->addAction(TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Name").toString()) );
     act->setCheckable(true);
-    QString state = TranslateStrings::cmtr(wifi_list.at(k).objmap.value("State").toString() );
+    QString state = wifi_list.at(k).objmap.value("State").toString();
 		if (state == "online" || state == "ready") act->setChecked(true);
     QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Name").toString())) );
     ttstr.append(tr("Connection : %1").arg(state));
@@ -2035,7 +2055,19 @@ void ControlBox::assembleTrayIcon()
     ttstr.append(tr("<br>Autoconnect is "));
     wifi_list.at(k).objmap.value("AutoConnect").toBool() ? ttstr.append(tr("Enabled")) : ttstr.append(tr("Disabled"));
     act->setToolTip(ttstr);
-  } // k for		
+  } // k for
+  
+  // vpn_subment
+  vpn_submenu->clear();	
+  for (int l = 0; l < vpn_list.count(); ++l) {
+    QAction* act = vpn_submenu->addAction(TranslateStrings::cmtr(vpn_list.at(l).objmap.value("Name").toString()) );
+    act->setCheckable(true);
+    QString state = vpn_list.at(l).objmap.value("State").toString();
+		if (state == "ready") act->setChecked(true);
+    QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(vpn_list.at(l).objmap.value("Name").toString())) );
+    ttstr.append(tr("Connection : %1").arg(state));
+    act->setToolTip(ttstr);
+  } // l for
   
   return;
 }
@@ -2232,6 +2264,7 @@ void ControlBox::createSystemTrayIcon()
     trayiconmenu->addMenu(tech_submenu);
     trayiconmenu->addMenu(info_submenu);
     trayiconmenu->addMenu(wifi_submenu);
+    trayiconmenu->addMenu(vpn_submenu);
     trayiconmenu->addSeparator();
     
     trayiconmenu->addAction(ui.actionRescan);

@@ -23,8 +23,6 @@ DBUS_ADAPTORS 	+= ./code/agent/org.monkey_business_enterprises.agent.xml
 DBUS_INTERFACES	+= ./code/agent/org.monkey_business_enterprises.agent.xml
 DBUS_ADAPTORS 	+= ./code/counter/org.monkey_business_enterprises.counter.xml
 DBUS_INTERFACES	+= ./code/counter/org.monkey_business_enterprises.counter.xml
-#DBUS_ADAPTORS 	+= ./code/vpn_agent/org.monkey_business_enterprises.vpnagent.xml
-#DBUS_INTERFACES	+= ./code/vpn_agent/org.monkey_business_enterprises.vpnagent.xml
 
 #	header files
 HEADERS		+= ../resource.h
