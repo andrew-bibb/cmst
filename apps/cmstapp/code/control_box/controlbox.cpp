@@ -1779,9 +1779,11 @@ void ControlBox::assembleTabWireless()
     } //  if wifi cnxn
   } // services for loop
 
-  // resize the services column 0 and 1 to contents
+  // resize the services column 0 to 4 to contents
   ui.tableWidget_wifi->resizeColumnToContents(0);
   ui.tableWidget_wifi->resizeColumnToContents(1);
+  ui.tableWidget_wifi->resizeColumnToContents(2);
+  ui.tableWidget_wifi->resizeColumnToContents(3);
 
   // enable the control buttons if there is at least on line in the table
   bool b_enable = false;
@@ -1811,39 +1813,73 @@ void ControlBox::assembleTabVPN()
     QMap<QString,QVariant> map = services_list.at(row).objmap;
     if (map.value("Type").toString() == "vpn") {
       vpn_list.append(services_list.at(row));
-      ui.tableWidget_vpn->setRowCount(rowcount + 1);
-
+      ui.tableWidget_vpn->setRowCount(rowcount + 1);    
+      QMap<QString,QVariant> providermap;
+      extractMapData(providermap, services_list.at(row).objmap.value("Provider") );
+      
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       qtwi00->setText(map.value("Name").toString() );
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_vpn->setItem(rowcount, 0, qtwi00);
 
       QLabel* ql01 = new QLabel(ui.tableWidget_vpn);
-      if (map.value("Favorite").toBool() ) {
-				ql01->setPixmap(iconman->getIcon("favorite").pixmap(QSize(16,16)) );
-      }
-      ql01->setAlignment(Qt::AlignCenter);
-      ui.tableWidget_vpn->setCellWidget(rowcount, 1, ql01);
+			ql01->setText(providermap.value("Type").toString() );
+			ql01->setAlignment(Qt::AlignCenter);
+			ui.tableWidget_vpn->setCellWidget(rowcount, 1, ql01);    
  
-      QLabel* ql02 = new QLabel(ui.tableWidget_vpn);
-			if (map.value("State").toString() == "ready") {
-				ql02->setPixmap(iconman->getIcon("state_vpn_connected").pixmap(QSize(16,16)) );
-			} // if ready
-			else {
-				ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
-			} // else any other state
+			if (map.value("State").toString() == "association") {
+				QProgressBar* pb02 = new QProgressBar(ui.tableWidget_vpn);
+				pb02->setMinimum(0);
+				pb02->setMaximum(0);
+				pb02->setOrientation( Qt::Horizontal);
+				pb02->setFormat("Connecting");
+				// set the stylesheet on pb02
+				QFile f0(":/stylesheets/stylesheets/vpn_connecting.qss");
+				if (f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
+					QString qss = QString(f0.readAll());
+					if (QColor(ui.lineEdit_colorize->text()).isValid() ) {
+						qss = qss.left(qss.lastIndexOf('}') );
+						qss.append(QString("background-color: %1;").arg(ui.lineEdit_colorize->text()) );
+						qss.append('}'); 
+					}
+					f0.close();
+					pb02->setStyleSheet(qss);
+				}
 
-      ql02->setAlignment(Qt::AlignCenter);
-      ql02->setToolTip(TranslateStrings::cmtr(map.value("State").toString()) );
-      ui.tableWidget_vpn->setCellWidget(rowcount, 2, ql02);
+				ui.tableWidget_vpn->setCellWidget(rowcount, 2, pb02);
+			} // if association
+			else {
+				QLabel* ql02 = new QLabel(ui.tableWidget_vpn);
+				if (map.value("State").toString() == "ready") {
+				ql02->setPixmap(iconman->getIcon("state_vpn_connected").pixmap(QSize(16,16)) );
+				} // if ready
+				else {
+					ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
+				} // else any other state
+			  ql02->setAlignment(Qt::AlignCenter);
+				ql02->setToolTip(TranslateStrings::cmtr(map.value("State").toString()) );
+				ui.tableWidget_vpn->setCellWidget(rowcount, 2, ql02);
+			}	// else not association 
+			
+      QLabel* ql03 = new QLabel(ui.tableWidget_vpn);
+      ql03->setText(providermap.value("Host").toString() );
+			ql03->setAlignment(Qt::AlignCenter);
+			ui.tableWidget_vpn->setCellWidget(rowcount, 3, ql03);
       
+      QLabel* ql04 = new QLabel(ui.tableWidget_vpn);
+			ql04->setText(providermap.value("Domain").toString() );
+			ql04->setAlignment(Qt::AlignCenter);
+			ui.tableWidget_vpn->setCellWidget(rowcount, 4, ql04);
+						     
       ++rowcount;
     } //  if vpn cnxn
   } // services for loop 
   
-  // resize the services column 0 and 1 to contents
+  // resize the services column 0 to 3 to contents
   ui.tableWidget_vpn->resizeColumnToContents(0);
   ui.tableWidget_vpn->resizeColumnToContents(1);
+  ui.tableWidget_vpn->resizeColumnToContents(2);
+  ui.tableWidget_vpn->resizeColumnToContents(3);
   
   // enable the control buttons if there is at least on line in the table
   bool b_enable = false;
@@ -2035,6 +2071,8 @@ void ControlBox::assembleTrayIcon()
 		else if (services_list.at(j).objmap.value("Type").toString() == "vpn" ) {
 			if (services_list.at(j).objmap.value("State").toString() == "ready")
 				act->setIcon(iconman->getIcon("connection_vpn"));
+			else if (services_list.at(j).objmap.value("State").toString() == "association")
+				act->setIcon(iconman->getIcon("connection_vpn_acquiring"));				
 			else	
 				act->setIcon(iconman->getIcon("connection_not_ready"));
 		}	// else if vpn

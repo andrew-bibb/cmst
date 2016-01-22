@@ -6,6 +6,9 @@
     <file>text/eduroam_short.txt</file>
     <file>text/license.txt</file>
   </qresource>
+  <qresource prefix="stylesheets">
+    <file>stylesheets/vpn_connecting.qss</file>
+  </qresource>
   <qresource prefix="translations">
     <file>translations/cmst_de_DE.qm</file>
     <file>translations/cmst_it_IT.qm</file>
@@ -15,6 +18,7 @@
     <file>translations/cmst_en_US.qm</file>
   </qresource>
   <qresource prefix="icons">
+    <file>images/raw_art/network-vpn-acquiring.png</file>
     <file>images/raw_art/stock_lock.png</file>
     <file>images/interface/golfball_green.png</file>
     <file>images/interface/golfball_red.png</file>

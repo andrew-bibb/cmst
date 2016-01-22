@@ -194,3 +194,9 @@ icon_name = connection_vpn
 resource = :/icons/images/raw_art/stock_lock.png
 colorize = yes
 theme-names = network-vpn.png, emblem-locked.png
+
+[icon]
+icon_name = connection_vpn_acquiring
+resource = :/icons/images/raw_art/network-vpn-acquiring.png
+colorize = yes
+
