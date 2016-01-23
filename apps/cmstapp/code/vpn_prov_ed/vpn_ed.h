@@ -90,6 +90,7 @@ class VPN_Editor : public QDialog
     void writeCompleted(qint64);
     void callbackErrorHandler(QDBusError);
     void createProvider(QAction*);
+    void importOpenVPN();
         
   public:
     inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}

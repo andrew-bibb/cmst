@@ -852,6 +852,11 @@ that the peer is no longer connected.</string>
     <string>The final VPN server to use after completing web authentication.</string>
    </property>
   </action>
+  <action name="actionOpenVPN_Import">
+   <property name="text">
+    <string>Import Configuration</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>

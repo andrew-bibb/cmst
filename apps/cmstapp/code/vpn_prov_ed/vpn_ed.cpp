@@ -204,6 +204,7 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
      
   menu_OpenVPN = new QMenu(tr("OpenVPN"), this);
   menu_OpenVPN->addAction(ui.actionProviderOpenVPN);
+  menu_OpenVPN->addAction(ui.actionOpenVPN_Import);
   menu_OpenVPN->addSeparator();
   menu_OpenVPN->addAction(ui.actionOpenVPN_CACert);
   menu_OpenVPN->addAction(ui.actionOpenVPN_Cert);
@@ -345,6 +346,7 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   connect(group_yes, SIGNAL(triggered(QAction*)), this, SLOT(inputYes(QAction*)));
   connect(group_validated, SIGNAL(triggered(QAction*)), this, SLOT(inputValidated(QAction*)));
   connect(group_selectfile, SIGNAL(triggered(QAction*)), this, SLOT(inputSelectFile(QAction*)));
+  connect (ui.actionOpenVPN_Import, SIGNAL(triggered()), this, SLOT(importOpenVPN()));
 }
 
 /////////////////////////////////////////////// Private Slots /////////////////////////////////////////////
@@ -360,14 +362,15 @@ void VPN_Editor::inputSelectFile(QAction* act)
   if (act == ui.actionL2TP_AuthFile) filepath = "/etc/l2tpd/l2tp-secrets";
   
   filepath = "/etc/openvpn";
-  if (act == ui.actionOpenVPN_CACert) filterstring = tr("CA Files (*.pem *.ca);;All Files (*.*)");
-  if (act == ui.actionOpenVPN_Cert) filterstring = tr("Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
-  if (act == ui.actionOpenVPN_Key) filterstring = tr("Key Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
+  if (act == ui.actionOpenVPN_CACert) filterstring = tr("CA Files (*.ca *.cert *.crt *.pem);;All Files (*.*)");
+  if (act == ui.actionOpenVPN_Cert) filterstring = tr("Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)");
+  if (act == ui.actionOpenVPN_Key) filterstring = tr("Key Files (*.key *.ca *.cert *.crt *.pem);;All Files (*.*)");
   if (act == ui.actionOpenVPN_ConfigFile) filterstring = tr("Config Files (*.ovpn *.conf *.config);;All Files (*.*)");
   
   filepath = "/etc/openvpn";  
   if (act == ui.actionOpenConnect_CACert) filterstring = tr("Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
   if (act == ui.actionOpenConnect_ClientCert) filterstring = tr("Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
+  
   
   QString fname = QFileDialog::getOpenFileName(this, act->toolTip(),
                       filepath,
@@ -761,4 +764,25 @@ void VPN_Editor::createProvider(QAction* act)
 		inputSelectFile(ui.actionOpenVPN_Key);
 	}
 	
+	return;
 }
+
+//
+// Slot to import an OpenVPN configuration file
+void VPN_Editor::importOpenVPN()
+{
+  QString filterstring = tr("OpenVPN Configurations (*.ovpn  *.conf);;All Files (*.*)");
+  QString filepath = QDir::homePath();	
+  
+  QString fname = QFileDialog::getOpenFileName(this, tr("Select the configuration file to import"),
+                      filepath,
+                      filterstring);
+
+  // return if the file name returned is empty (cancel pressed in the dialog)
+  if (fname.isEmpty() ) return;
+
+	qDebug() << "selected fname" << fname;
+	
+	return;
+}
+
