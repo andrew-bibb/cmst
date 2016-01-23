@@ -38,6 +38,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QAction>
 # include <QFile>
 # include <QFileDialog>
+# include <QProcessEnvironment>
 
 # include "./vpn_ed.h"
 # include "./code/provisioning/prov_ed.h"	// use ValidatingDialog from ProvEd
@@ -771,18 +772,108 @@ void VPN_Editor::createProvider(QAction* act)
 // Slot to import an OpenVPN configuration file
 void VPN_Editor::importOpenVPN()
 {
+	// Variables
   QString filterstring = tr("OpenVPN Configurations (*.ovpn  *.conf);;All Files (*.*)");
   QString filepath = QDir::homePath();	
-  
+  QStringList taglist = (QStringList() << "ca" << "cert" << "key" << "tls-auth");	
+	
+	// To start some things off we need some input from the user
+	ui.plainTextEdit_main->insertPlainText("\n[provider_openvpn]\nType = OpenVPN\n");
+	inputFreeForm(ui.actionProviderOpenConnect, "Name");
+	inputValidated(ui.actionProviderOpenConnect, "Host");
+	inputFreeForm(ui.actionProviderOpenConnect, "Domain");
+	inputFreeForm(ui.actionProviderOpenConnect, "Networks");	
   QString fname = QFileDialog::getOpenFileName(this, tr("Select the configuration file to import"),
                       filepath,
                       filterstring);
-
-  // return if the file name returned is empty (cancel pressed in the dialog)
+	// Return if the file name returned is empty (cancel pressed in the dialog)
   if (fname.isEmpty() ) return;
+  
+  // Read the source file
+	QFile sourcefile(fname);
+	if (sourcefile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+		QString contents = QString(sourcefile.readAll());
+		sourcefile.close();
+		
+		// Setup the data directories 
+		// APP defined in resource.h
+		QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+		QFileInfo fi(fname);	// need to extract the baseName
+		QDir target_dir = QDir(QString(env.value("XDG_DATA_HOME", QString(QDir::homePath()) + "/.local/share") + "/%1/openvpn/%2").arg(QString(APP).toLower()).arg(fi.baseName()) );
+		if (! target_dir.exists()) target_dir.mkpath(target_dir.absolutePath() ); 
+		
+		// Extract all the certs and keys
+		for (int i = 0; i < taglist.count(); ++i) {
+			int snipfrom = contents.indexOf(QString("<%1>\n").arg(taglist.at(i)) );
+			int snipto = contents.indexOf(QString("</%1>").arg(taglist.at(i)), snipfrom + QString("<%1>\n").arg(taglist.at(i)).size()) + QString("</%1>").arg(taglist.at(i)).size();
+			if (snipfrom != snipto && snipfrom >= 0) {
+				QString substring = contents.mid(snipfrom, snipto-snipfrom);
+				contents.remove(snipfrom, snipto-snipfrom);
+				
+				// Write the cert or key to a file
+				QFile outfile(QString(target_dir.absolutePath() + "/%1%2")
+					.arg(taglist.at(i) == "cert" || taglist.at(i) == "key" ? "client" : taglist.at(i) )
+					.arg(taglist.at(i) == "ca" || taglist.at(i) == "cert" ? ".crt" : ".key") );
+				
+				if (outfile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+					QTextStream outstream(&outfile);
+					substring.remove(QString("</%1>").arg(taglist.at(i)) );
+					substring.remove(QString("<%1>\n").arg(taglist.at(i)) );
+					outstream << substring;
+					outfile.close();
+					if (taglist.at(i) == "ca")
+						ui.plainTextEdit_main->insertPlainText(QString(ui.actionOpenVPN_CACert->text() + " = " + outfile.fileName() + "\n") );
+					else if (taglist.at(i) == "cert")
+						ui.plainTextEdit_main->insertPlainText(QString(ui.actionOpenVPN_Cert->text() + " = " + outfile.fileName() + "\n") );
+					else if (taglist.at(i) == "key")
+						ui.plainTextEdit_main->insertPlainText(QString(ui.actionOpenVPN_Key->text() + " = " + outfile.fileName() + "\n") );
+				}	// if outfile opened for writing
+				
+				else {
+					QMessageBox::critical(this, QString("%1 - Critical").arg(TranslateStrings::cmtr("cmst")),
+						tr("Unable to write <b>%1</b> - Aborting the import").arg(outfile.fileName() ),
+						QMessageBox::Ok,
+						QMessageBox::Ok);
+					return;
+				}	// else outfile failed to open							
+			}	// if a tag was found
+		}	// for each tag
+		
+		// if there is anything left write it to a conf file
+		contents = contents.trimmed();
+		if (! contents.isEmpty()) {
+			QFile outfile(QString(target_dir.absolutePath() + "/%1%2")
+				.arg(fi.baseName())
+				.arg(".conf") );
+			
+			if (outfile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+				QTextStream outstream(&outfile);
+				outstream << contents;
+				outfile.close();
+				ui.plainTextEdit_main->insertPlainText(QString(ui.actionOpenVPN_ConfigFile->text() + " = " + outfile.fileName() + "\n") );
+			}	// if outfile opened for writing			
+			
+			else {
+				QMessageBox::warning(this, QString("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
+				tr("Unable to write conf file <b>%1</b>").arg(sourcefile.fileName() ),
+				QMessageBox::Ok,
+				QMessageBox::Ok);
+			}	// else outfile (conf) failed to open				 
+		}	// if contents not empty
+		
+		// copy the original conf file for safekeeping
+		if (target_dir.exists(fi.fileName()) ) target_dir.remove(fi.fileName());  
+		sourcefile.copy(target_dir.absoluteFilePath(fi.fileName()) );
+		
+	}	// if sourcefile opened for reading
+	else {
+		QMessageBox::critical(this, QString("%1 - Critical").arg(TranslateStrings::cmtr("cmst")),
+			tr("Unable to read <b>%1</b> - Aborting the import").arg(sourcefile.fileName() ),
+			QMessageBox::Ok,
+			QMessageBox::Ok);
+		return;
+	}	// else sourcefile failed to open	
 
-	qDebug() << "selected fname" << fname;
-	
 	return;
 }
 

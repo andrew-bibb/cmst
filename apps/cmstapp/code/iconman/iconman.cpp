@@ -47,7 +47,7 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
   // APP defined in resource.h
   QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
   QString home = env.value("HOME");
-  cfg = QString(env.value("XDG_CONFIG_HOME", QString(QDir::homePath())) + "/.config/%1/%1.icon").arg(QString(APP).toLower() );	
+  cfg = QString(env.value("XDG_CONFIG_HOME", QString(QDir::homePath()) + "/.config") + "/%1/%1.icon").arg(QString(APP).toLower() );	
 	
 	// Set the qrc data member
 	qrc = QString(":/text/text/icon_def.txt");
