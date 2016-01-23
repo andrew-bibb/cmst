@@ -89,20 +89,6 @@ class idButton : public QFrame
 };
 
 //
-// custom QFrame containing a QProgressBar
-class SignalBar : public QFrame
-{
-  Q_OBJECT
-  
-  public:
-    SignalBar (QWidget*);
-    inline void setBarValue (const int& val) {bar->setValue(val);}
-    
-  private:
-    QProgressBar* bar;      
-};
-
-//
 //  The main program class based on a QDialog
 class ControlBox : public QDialog
 {

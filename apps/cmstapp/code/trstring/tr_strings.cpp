@@ -111,6 +111,12 @@ TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent)
   sl << tr("6to4", "connman ipv6 method string");
   sl << tr("off", "connman ipv6 method string");
   
+  sl << tr("openconnect", "connman vpn connection type");
+  sl << tr("openvpn", "connman vpn connection type");
+  sl << tr("vpnc", "connman vpn connection type");
+  sl << tr("l2tp", "connman vpn connection type");
+  sl << tr("pptp", "connman vpn connection type");
+  
   	
 	return;
 }

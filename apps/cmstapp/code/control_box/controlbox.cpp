@@ -116,30 +116,6 @@ void idButton::buttonClicked(bool checked)
   return;
 }
 
-// Custom QProgressBar for wifi signals.  Use so we can define a frame
-// around the actual progress bar, set margins, etc.
-SignalBar::SignalBar(QWidget* parent) :
-          QFrame(parent)
-{
-  // margins
-  const int m_left = 11;
-  const int m_top = 7;
-  const int m_right = 11;
-  const int m_bottom = 7;
-
-  // create the bar
-  bar = new QProgressBar(this);
-  bar->setAlignment(Qt::AlignCenter);
-  bar->setRange(0, 100);
-
-  // create the box
-  QHBoxLayout* layout = new QHBoxLayout(this);
-  layout->setContentsMargins(m_left, m_top, m_right, m_bottom);
-  layout->addWidget(bar, 0, 0);
-
-  return;
-}
-
 // main GUI element
 ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     : QDialog(parent)
@@ -848,15 +824,15 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 //
 // Slot called whenever DBUS issues a ServicesChanged signal.  When a
 // Scan method is called on a technology the results of that scan are
-// signaled through this slot.  vmap will not be empty, it contains all
-// of the services found..UpdateDisplayWidgets() is called from dbsServicePropertyChanged 
+// signaled through this slot.  This is also called when the sort order
+// of the services list changes.  It will not be called when a property
+// of a service object changes.  
 void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {	
-  // Set the update flag
+  // Set the update flag (for a manager rescan)
   bool b_needupdate = false;	
 	
-  // Function is called everytime we do a wifi scan and we get new list of
-  // process changed services. Demarshall the raw QDBusMessage instead of vmap as it is easier.
+	// Demarshall the raw QDBusMessage instead of vmap as it is easier.
   if (! vmap.isEmpty() ) {
     QList<arrayElement> revised_list;
     if (! getArray(revised_list, msg)) return;   
@@ -873,6 +849,7 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
       for (int j = 0; j < services_list.size(); ++j) {
         if (revised_element.objpath == services_list.at(j).objpath) {
           original_element = services_list.at(j);
+          if (i != j) b_needupdate = true;
           break;
         } // if
       } // j for
@@ -1728,6 +1705,20 @@ void ControlBox::assembleTabWireless()
 
   // Run through each service_list looking for wifi services
   wifi_list.clear();
+
+	// set the stylesheet for signalbars
+	QFile f0(":/stylesheets/stylesheets/signal_bar.qss");
+	QString qss;
+	if (f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
+		qss = QString(f0.readAll());
+		if (QColor(ui.lineEdit_colorize->text()).isValid() ) {
+			qss = qss.left(qss.lastIndexOf('}') );
+			qss.append(QString("background-color: %1;").arg(ui.lineEdit_colorize->text()) );
+			qss.append('}'); 
+		}
+		f0.close();
+	}
+  
   for (int row = 0; row < services_list.size(); ++row) {
     QMap<QString,QVariant> map = services_list.at(row).objmap;
     if (map.value("Type").toString() == "wifi") {
@@ -1771,9 +1762,13 @@ void ControlBox::assembleTabWireless()
       qtwi03->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_wifi->setItem(rowcount, 3, qtwi03);
 
-      SignalBar* sb04 = new SignalBar(ui.tableWidget_wifi);
-      sb04->setBarValue(map.value("Strength").value<quint8>() );
-      ui.tableWidget_wifi->setCellWidget(rowcount, 4, sb04);
+      QProgressBar* pb04 = new QProgressBar(ui.tableWidget_wifi);
+      pb04->setMinimum(0);
+			pb04->setMaximum(100);
+			pb04->setOrientation( Qt::Horizontal);
+			pb04->setStyleSheet(qss);
+      pb04->setValue(map.value("Strength").value<quint8>() );
+      ui.tableWidget_wifi->setCellWidget(rowcount, 4, pb04);
 
       ++rowcount;
     } //  if wifi cnxn
@@ -1823,7 +1818,7 @@ void ControlBox::assembleTabVPN()
       ui.tableWidget_vpn->setItem(rowcount, 0, qtwi00);
 
       QLabel* ql01 = new QLabel(ui.tableWidget_vpn);
-			ql01->setText(providermap.value("Type").toString() );
+			ql01->setText(TranslateStrings::cmtr(providermap.value("Type").toString()) );
 			ql01->setAlignment(Qt::AlignCenter);
 			ui.tableWidget_vpn->setCellWidget(rowcount, 1, ql01);    
  
@@ -1948,7 +1943,11 @@ void ControlBox::assembleTrayIcon()
         } // else if wifi connection
         
         else if (services_list.at(0).objmap.value("Type").toString() == "vpn") {
+					extractMapData(submap, services_list.at(0).objmap.value("Provider") );
           stt.prepend(tr("VPN Connection<br>","icon_tool_tip"));
+          stt.append(tr("Type: %1<br>").arg(TranslateStrings::cmtr(submap.value("Type").toString())) );
+          stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
+          stt.append(tr("Host: %1<br>").arg(TranslateStrings::cmtr(submap.value("Host").toString())) );
           prelimicon = iconman->getIcon("connection_vpn");
 				}	// else if vpn connection     
       } //  services if no error
@@ -2025,7 +2024,7 @@ void ControlBox::assembleTrayIcon()
 		QAction* act = tech_submenu->addAction(technologies_list.at(i).objmap.value("Name").toString() );
 		act->setCheckable(true);
 		act->setChecked(technologies_list.at(i).objmap.value("Powered").toBool() );
-		QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(technologies_list.at(i).objmap.value("Name").toString())) );
+		QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(technologies_list.at(i).objmap.value("Name").toString())) );
 		ttstr.append(tr("Type: %1").arg(technologies_list.at(i).objmap.value("Type").toString()) );
 		ttstr.append(tr("<br>Powered "));
 		technologies_list.at(i).objmap.value("Powered").toBool() ? ttstr.append(tr("On")) : ttstr.append(tr("Off"));
@@ -2089,8 +2088,8 @@ void ControlBox::assembleTrayIcon()
     act->setCheckable(true);
     QString state = wifi_list.at(k).objmap.value("State").toString();
 		if (state == "online" || state == "ready") act->setChecked(true);
-    QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Name").toString())) );
-    ttstr.append(tr("Connection : %1").arg(state));
+    QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Name").toString())) );
+    ttstr.append(tr("Connection : %1").arg(TranslateStrings::cmtr(state)) );
     ttstr.append("<br>");
     ttstr.append(tr("Signal Strength: %1%").arg(wifi_list.at(k).objmap.value("Strength").toInt()) );
     ttstr.append("<br>");
@@ -2102,15 +2101,15 @@ void ControlBox::assembleTrayIcon()
     act->setToolTip(ttstr);
   } // k for
   
-  // vpn_subment
+  // vpn_submenu
   vpn_submenu->clear();	
   for (int l = 0; l < vpn_list.count(); ++l) {
     QAction* act = vpn_submenu->addAction(TranslateStrings::cmtr(vpn_list.at(l).objmap.value("Name").toString()) );
     act->setCheckable(true);
     QString state = vpn_list.at(l).objmap.value("State").toString();
 		if (state == "ready") act->setChecked(true);
-    QString ttstr = QString(tr("<center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(vpn_list.at(l).objmap.value("Name").toString())) );
-    ttstr.append(tr("Connection : %1").arg(state));
+    QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1</b></center>").arg(TranslateStrings::cmtr(vpn_list.at(l).objmap.value("Name").toString())) );
+    ttstr.append(tr("Connection : %1").arg(TranslateStrings::cmtr(state)) );
     act->setToolTip(ttstr);
   } // l for
   
@@ -2305,6 +2304,7 @@ void ControlBox::createSystemTrayIcon()
     tech_submenu->setToolTipsVisible(true);
     info_submenu->setToolTipsVisible(true);
     wifi_submenu->setToolTipsVisible(true);
+    vpn_submenu->setToolTipsVisible(true);
     
     trayiconmenu->addMenu(tech_submenu);
     trayiconmenu->addMenu(info_submenu);

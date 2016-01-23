@@ -8,6 +8,6 @@ QProgressBar{
 	}
 	
 QProgressBar::chunk {
-	margin: 1px;
-	width: 5px;
+	margin: 0.5px;
+	width: 2px;
 }	
