@@ -7,6 +7,7 @@
 <li>Check for screen size at startup and adjust the initial size to fit if working on a small screen.</li>
 <li>SignalBar class removed and replaced with QProgressBar styled using QStyleSheets.</li>
 <li>VPN Editor available to help create new VPN connections.</li>
+<li>OpenVPN files in .opvn format can be imported and used to provision a VPN service.</li>
 </ul>
 <b>2015.12.03</b>
 <ul>

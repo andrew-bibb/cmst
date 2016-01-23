@@ -118,7 +118,7 @@ void ConnmanVPNAgent::Cancel()
 {
 	QMessageBox::information(qobject_cast<QWidget *> (parent()), tr("Agent Request Failed"),
 		tr("The agent request failed before a reply was returned.") );		
-		
+    
 	return;	
 }
 

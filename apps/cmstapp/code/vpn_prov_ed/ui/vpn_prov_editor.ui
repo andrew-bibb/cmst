@@ -697,7 +697,7 @@ that the peer is no longer connected.</string>
     <string>OpenVPN.Cert</string>
    </property>
    <property name="toolTip">
-    <string>Local peer's signed certificate.</string>
+    <string>File containing peer's signed certificate.</string>
    </property>
   </action>
   <action name="actionOpenVPN_Key">
@@ -705,7 +705,7 @@ that the peer is no longer connected.</string>
     <string>OpenVPN.Key</string>
    </property>
    <property name="toolTip">
-    <string>Local peer's private key.</string>
+    <string>File containing local peer's private key.</string>
    </property>
   </action>
   <action name="actionOpenVPN_MTU">
@@ -745,7 +745,7 @@ that the peer is no longer connected.</string>
     <string>OpenVPN.AuthUserPass</string>
    </property>
    <property name="toolTip">
-    <string>Authenticate with server using username/password?</string>
+    <string>File containing the user:password credentials.</string>
    </property>
   </action>
   <action name="actionOpenVPN_AskPass">
