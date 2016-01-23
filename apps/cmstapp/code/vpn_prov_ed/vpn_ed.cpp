@@ -778,7 +778,7 @@ void VPN_Editor::importOpenVPN()
   QString filepath = QDir::homePath();	
   QStringList taglist = (QStringList() << "ca" << "cert" << "key" << "tls-auth");	  
 	
-	// To start some things off we need some input from the user
+	// To start things off we need some input from the user
 	ui.plainTextEdit_main->insertPlainText("\n[provider_openvpn]\nType = OpenVPN\n");
 	inputFreeForm(ui.actionProviderOpenConnect, "Name");
 	inputValidated(ui.actionProviderOpenConnect, "Host");
@@ -807,7 +807,7 @@ void VPN_Editor::importOpenVPN()
 		for (int i = 0; i < taglist.count(); ++i) {
 			int snipfrom = contents.indexOf(QString("<%1>\n").arg(taglist.at(i)) );
 			int snipto = contents.indexOf(QString("</%1>").arg(taglist.at(i)), snipfrom + QString("<%1>\n").arg(taglist.at(i)).size()) + QString("</%1>").arg(taglist.at(i)).size();
-			if (snipfrom != snipto && snipfrom >= 0) {
+			if (snipfrom != snipto && snipfrom >= 0 && snipto >= 0) {
 				QString substring = contents.mid(snipfrom, snipto-snipfrom);
 				contents.remove(snipfrom, snipto-snipfrom);
 				
@@ -845,8 +845,11 @@ void VPN_Editor::importOpenVPN()
 			if (QMessageBox::question (this, 
 				tr("Keep --auth-user-pass"),
 				tr( "The conf file will contain the <b>auth-user-pass</b> entry which will require "
-						"prompts sent to stdout and a reply on stdin.  This cannot be handled by"
-						"Connman nor by CMST.<p>Do you wish to remove this entry?"),
+						"prompts sent to stdout and a reply on stdin.  This cannot be handled by "
+						"Connman nor by CMST.<p>If this entry is removed you will need to create a "
+						"\"user:pass\" file in order to have Connman make the VPN connection. In the "
+						"next step you will be asked if you want to create this file and you will prompted "
+						"for the user name and password.<p><b>Do you wish to remove this entry?</b>"),
 				QMessageBox::Yes | QMessageBox::No,
 				QMessageBox::Yes) == QMessageBox::Yes) contents.remove("auth-user-pass\n");
 		}	// if contents contains auth-user-pass
@@ -916,6 +919,7 @@ void VPN_Editor::importOpenVPN()
 			}	// b_continue - we have user and pass
 		}	// messagebox yes - we wanted to create a user:pass file		
 	}	// If sourcefile opened for reading
+	
 	else {
 		QMessageBox::critical(this, QString("%1 - Critical").arg(TranslateStrings::cmtr("cmst")),
 			tr("Unable to read <b>%1</b> - Aborting the import").arg(sourcefile.fileName() ),
@@ -923,6 +927,12 @@ void VPN_Editor::importOpenVPN()
 			QMessageBox::Ok);
 		return;
 	}	// else sourcefile failed to open	
+	
+	// Print a done message
+	QMessageBox::information(this, QString("%1 - Information").arg(TranslateStrings::cmtr("cmst")),
+		tr("OpenVPN import is complete.  The provisioning file may now be saved."),
+		QMessageBox::Ok,
+		QMessageBox::Ok);
 
 	return;
 }
