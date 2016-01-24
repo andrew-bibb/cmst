@@ -197,6 +197,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request"));
   vpnagent->setLogInputRequest(parser.isSet("log-input-request"));
+  QDir d(IPT_REQ_LOG_PATH);
+	d.mkpath(IPT_REQ_LOG_PATH);
+	if (d.exists(IPT_REQ_LOG_FILE)) d.remove(IPT_REQ_LOG_FILE);
 
   // Set icon theme if provided on the command line or in the settings
   if (parser.isSet("icon-theme") )

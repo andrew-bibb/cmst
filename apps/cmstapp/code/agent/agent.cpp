@@ -147,11 +147,9 @@ void ConnmanAgent::createInputMap(const QMap<QString,QVariant>& r_map)
 	
 	// QFile object for logging
 	QTextStream log;
-	QFile logfile("/tmp/cmst/input_request.log");
+	QDir d(IPT_REQ_LOG_PATH);
+	QFile logfile(d.absoluteFilePath(IPT_REQ_LOG_FILE));
 	if (b_loginputrequest) {
-		QDir d;
-		d.mkpath("/tmp/cmst");
-		if (logfile.exists()) logfile.remove();
 		if (!logfile.open(QIODevice::WriteOnly | QIODevice::Text)) b_loginputrequest = false;
 		else log.setDevice(&logfile);
 	}
@@ -162,12 +160,12 @@ void ConnmanAgent::createInputMap(const QMap<QString,QVariant>& r_map)
 	while (i != r_map.constEnd()) {
 		    
     // Lets see what the values contain, but first make sure we can get to them.
-    if (b_loginputrequest) log << "\nMap Key: " << i.key() << "\n";
+    if (b_loginputrequest) log << "Agent: " << "Map Key = " << i.key() << "\n";
      
     if (! i.value().canConvert<QDBusArgument>() ) return;
     const QDBusArgument qdba =  i.value().value<QDBusArgument>();
 		if (qdba.currentType() != QDBusArgument::MapType ) {
-			if (b_loginputrequest) log << "Error - QDBusArgument as the value is not a MapType\n"; 
+			if (b_loginputrequest) log << "Agent: " << "Error - QDBusArgument as the value is not a MapType\n"; 
 			return;
 		}	
     
@@ -175,7 +173,7 @@ void ConnmanAgent::createInputMap(const QMap<QString,QVariant>& r_map)
     qdba.beginMap();
     QMap<QString,QString> m;
 		m.clear();
-		if (b_loginputrequest) log << "Extracting the DBusArgument Map...\n"; 
+		if (b_loginputrequest) log << "Agent: " << "Extracting the DBusArgument Map...\n"; 
 		while ( ! qdba.atEnd() ) {
 			QString k;
 			QVariant v;
