@@ -228,9 +228,9 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   menu_OpenVPN->addAction(ui.actionOpenVPN_ConfigFile);
   
   menu_VPNC = new QMenu(tr("VPNC"), this);
-  menu_VPNC->addAction(ui.actionVPNC_IPSec_ID);
   menu_VPNC->addAction(ui.actionProviderVPNC);
   menu_VPNC->addSeparator();
+  menu_VPNC->addAction(ui.actionVPNC_IPSec_ID);
   menu_VPNC->addAction(ui.actionVPNC_IPSec_Secret);
   menu_VPNC->addAction(ui.actionVPNC_Xauth_Username);
   menu_VPNC->addAction(ui.actionVPNC_Xauth_Password);
