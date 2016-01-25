@@ -2,7 +2,7 @@
 
 Code to manage the VPN Provisioning Editor dialog.
 
-Copyright (C) 2013-2016
+Copyright (C) 2016
 by: Andrew J. Bibb
 License: MIT
 
@@ -49,6 +49,7 @@ DEALINGS IN THE SOFTWARE.
 // This class is derived from the ProvisioningEditor class, and in fact
 // it uses validating code from there.  There are a few improvements
 // mainly in more efficient packaging of the text data into each QAction.
+//
 // In this class:
 // QAction->text() contains the key for the Connman config file and display
 // text for the menus.
@@ -216,9 +217,9 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   menu_OpenVPN->addAction(ui.actionOpenVPN_Proto);
   menu_OpenVPN->addAction(ui.actionOpenVPN_Port);
   menu_OpenVPN->addSeparator();
-  menu_OpenVPN->addAction(ui.actionOpenVPN_AuthUserPass);	// connman docs imply a yes value, but openvpn man page
-  menu_OpenVPN->addAction(ui.actionOpenVPN_AskPass);			// seems to want values. I've defined as group_yes but may
-  menu_OpenVPN->addAction(ui.actionOpenVPN_AuthNoCache); 	// need to change.
+  menu_OpenVPN->addAction(ui.actionOpenVPN_AuthUserPass);	
+  menu_OpenVPN->addAction(ui.actionOpenVPN_AskPass);			
+  menu_OpenVPN->addAction(ui.actionOpenVPN_AuthNoCache); 	
   menu_OpenVPN->addSeparator();
   menu_OpenVPN->addAction(ui.actionOpenVPN_Cipher);
   menu_OpenVPN->addAction(ui.actionOpenVPN_Auth);
