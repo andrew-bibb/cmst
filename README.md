@@ -8,6 +8,8 @@ must be started as you normally would, this program just interfaces with that da
 what technologies and services connman has found, and for wifi services an agent is registered to
 assist in obtaining the information from you necessary to logon the wifi service.
 
+As of 2016.01.26 support for VPN connections (create, edit, delete, connect and disconnect) has been added.  It is also possible to import an OpenVPN .opvn file.  The import function will scan the .opvn file extracting and saving keys and certificates, and then place the proper lines into the provisioning editor.
+
 The program requires that connman be installed and running.  The program depends on QT5, but only the base package. 
 
 The [Wiki](https://github.com/andrew-bibb/cmst/wiki) has been started and announcements, news, and other information can be found there.
