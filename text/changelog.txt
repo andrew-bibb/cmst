@@ -1,6 +1,6 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b>In Progress</b>
+<b>2016.01.26</b>
 <ul>
 <li>Added a VPN tab to the main controlbox.</li>
 <li>Can connect and disconnect already provisioned VPN services from controlbox.</li>
