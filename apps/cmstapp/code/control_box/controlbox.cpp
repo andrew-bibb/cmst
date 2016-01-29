@@ -1511,6 +1511,17 @@ int ControlBox::managerRescan(const int& srv)
         for (int i = 0; i < services_list.size(); ++i) {
           QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
           QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+        
+					// Set a nickname for each service		 
+					QMap<QString,QVariant> submap;
+					extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );
+					if (submap.value("Interface").toString().isEmpty() )
+						services_list.at(i).objmap["Nick"] = QVariant::fromValue("andy");
+					//else
+						//services_list.at(i).objmap["Nick"] = submap.value("Interface").toString();
+						//services_list.at(i).objmap.value("Name") ;
+					//qDebug() << "NICK: " << services_list.at(i).value("Nick");	
+        
         } // for
       } // else
     } // if services
