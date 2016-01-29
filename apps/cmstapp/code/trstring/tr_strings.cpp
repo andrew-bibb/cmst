@@ -96,7 +96,7 @@ TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent)
   
   sl << tr("disabled", "connman privacy string");
   sl << tr("enabled", "connman privacy string");
-  sl << tr("prefered", "connman privacy string");
+  sl << tr("preferred", "connman privacy string");
   
   sl << tr("auto", "connman ethernet connection method");
   sl << tr("manual", "connman ethernet connection method");

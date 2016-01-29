@@ -3007,7 +3007,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="99"/>
-        <source>prefered</source>
+        <source>preferred</source>
         <comment>connman privacy string</comment>
         <translation>Prefered</translation>
     </message>
