@@ -832,18 +832,11 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 // of a service object changes.  
 void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {	
-  // Set the update flag (for a manager rescan)
-  bool b_needupdate = false;	
-	
 	// Demarshall the raw QDBusMessage instead of vmap as it is easier.
   if (! vmap.isEmpty() ) {
     QList<arrayElement> revised_list;
     if (! getArray(revised_list, msg)) return;   
-    
-    // if revised_list is not the same size as the existing services_list
-    // then we definetely need an update
-    if (revised_list.count() != services_list.count() ) b_needupdate = true;    
-
+      
     // merge the existing services_list into the revised_list
     // first find the original element that matches the revised
     for (int i = 0; i < revised_list.size(); ++i) {
@@ -852,7 +845,6 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
       for (int j = 0; j < services_list.size(); ++j) {
         if (revised_element.objpath == services_list.at(j).objpath) {
           original_element = services_list.at(j);
-          if (i != j) b_needupdate = true;
           break;
         } // if
       } // j for
@@ -862,12 +854,14 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
         QMapIterator<QString, QVariant> itr(revised_element.objmap);
         while (itr.hasNext()) {
           itr.next();
-          b_needupdate = true;
           original_element.objmap.insert(itr.key(), itr.value() );
         } // while
 
         // now insert the element into the revised list
-        revised_list.replace(i, original_element);
+        QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, original_element.objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+				revised_list.replace(i, original_element);
+				QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, revised_element.objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));       
+        
       } // if original element is not empty
     } // i for
 
@@ -878,21 +872,19 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
 
   // process removed services
   if (! removed.isEmpty() ) {
-		b_needupdate = true;
     for (int i = 0; i < services_list.count(); ++i) {
-      if (removed.contains(services_list.at(i).objpath) )
+      if (removed.contains(services_list.at(i).objpath) ) {
+				QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
         services_list.removeAt(i);
-      } // for
-    } // if we needed to remove something
+			}	// if
+     } // for
+   } // if we needed to remove something
     
   // clear the counters (if selected) and update the widgets
-	if (b_needupdate) {
-		clearCounters();
-		managerRescan(CMST::Manager_Services);  // used to connect service object signals to dbsServicePropertyChanged() slot	
-	}
+	clearCounters();
 	updateDisplayWidgets();
 	
-  return;
+  return;  
 }
 
 //
@@ -1476,8 +1468,11 @@ bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
 
 //////////////////////////////////////////// Private Functions ////////////////////////////////////
 //
-//  Function to rescan connman properties, technologies and services
-//  Int return value is the errors encountered
+// Function to rescan connman properties, technologies and services
+// Int return value is the errors encountered  
+// This function is now really misnamed.  Originally we called it a lot, but now
+// everything is dealt with using DBus signals so it is only called at startup
+// as an initial scan.
 int ControlBox::managerRescan(const int& srv)
 {
   if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Con_Iface)) == 0x00 ) {
@@ -1510,18 +1505,7 @@ int ControlBox::managerRescan(const int& srv)
       else {
         for (int i = 0; i < services_list.size(); ++i) {
           QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
-          QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
-        
-					// Set a nickname for each service		 
-					QMap<QString,QVariant> submap;
-					extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );
-					if (submap.value("Interface").toString().isEmpty() )
-						services_list.at(i).objmap["Nick"] = QVariant::fromValue("andy");
-					//else
-						//services_list.at(i).objmap["Nick"] = submap.value("Interface").toString();
-						//services_list.at(i).objmap.value("Name") ;
-					//qDebug() << "NICK: " << services_list.at(i).value("Nick");	
-        
+          QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));       
         } // for
       } // else
     } // if services
@@ -1632,36 +1616,43 @@ void ControlBox::assembleTabStatus()
     ui.tableWidget_services->clearContents();
     ui.tableWidget_services->setRowCount(services_list.size() );
     for (int row = 0; row < services_list.size(); ++row) {
-
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
-      ss = services_list.at(row).objmap.value("Name").toString();
+      ss = getNickName(services_list.at(row).objpath);
       qtwi00->setText(TranslateStrings::cmtr(ss) );
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_services->setItem(row, 0, qtwi00);
-
+      
       QTableWidgetItem* qtwi01 = new QTableWidgetItem();
-      ss = services_list.at(row).objmap.value("State").toString();
+      ss = services_list.at(row).objmap.value("Type").toString();
       qtwi01->setText(TranslateStrings::cmtr(ss) );
       qtwi01->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_services->setItem(row, 1, qtwi01);
 
       QTableWidgetItem* qtwi02 = new QTableWidgetItem();
-      QFileInfo fi = services_list.at(row).objpath.path();
-      qtwi02->setText(fi.baseName() );
-      qtwi02->setTextAlignment(Qt::AlignVCenter|Qt::AlignLeft);
+      ss = services_list.at(row).objmap.value("State").toString();
+      qtwi02->setText(TranslateStrings::cmtr(ss) );
+      qtwi02->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_services->setItem(row, 2, qtwi02);
 
+      QTableWidgetItem* qtwi03 = new QTableWidgetItem();
+      QFileInfo fi = services_list.at(row).objpath.path();
+      qtwi03->setText(fi.baseName() );
+      qtwi03->setTextAlignment(Qt::AlignVCenter|Qt::AlignLeft);
+      ui.tableWidget_services->setItem(row, 3, qtwi03);
+
       if (ui.checkBox_hidecnxn->isChecked() ) {
-        ui.tableWidget_services->hideColumn(2);
+        ui.tableWidget_services->hideColumn(3);
       }
       else {
-        ui.tableWidget_services->showColumn(2);
+        ui.tableWidget_services->showColumn(3);
         ui.tableWidget_services->horizontalHeader()->resizeSection(1, ui.tableWidget_services->horizontalHeader()->defaultSectionSize());
       }
     } // services for loop
 
     // resize the services column 0 to contents
     ui.tableWidget_services->resizeColumnToContents(0);
+    ui.tableWidget_services->resizeColumnToContents(1);
+    ui.tableWidget_services->resizeColumnToContents(2);
 
   } // services if no error
 
@@ -2657,6 +2648,33 @@ void ControlBox::clearCounters()
   }
 
   return;
+}
+
+//
+// Function to return a nick name for a service
+// Typically return the Name property.  For wired ethernet and hidden
+// wifi networks this is blank.  In those cases return the nick name.
+QString ControlBox::getNickName(const QDBusObjectPath& objpath)
+{	
+	for (int i = 0; i < services_list.size(); ++i) {
+		if (services_list.at(i).objpath == objpath) {
+			QMap<QString,QVariant> submap;
+			if (services_list.at(i).objmap.value("Type").toString() == "ethernet") {
+				extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );
+				if (submap.value("Interface").toString().isEmpty() )
+					return services_list.at(i).objmap.value("Name").toString();
+				else	
+					return QString(TranslateStrings::cmtr(services_list.at(i).objmap.value("Name").toString()) + " [%1]").arg(submap.value("Interface").toString() );				
+			}	// if type ethernet
+			
+			else if ( services_list.at(i).objmap.value("Type").toString() == "wifi" && services_list.at(i).objmap.value("Name").toString().isEmpty() ) 
+				return tr("[Hidden Wifi]");
+			else 
+				return  services_list.at(i).objmap.value("Name").toString();
+		}	// if objpath matches
+	}	// for
+	
+	return QString();
 }
 
 

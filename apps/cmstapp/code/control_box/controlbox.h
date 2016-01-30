@@ -165,6 +165,7 @@ class ControlBox : public QDialog
     void logErrors(const quint8&);
     QString readResourceText(const char*);
     void clearCounters();
+    QString getNickName(const QDBusObjectPath&);
 
   private slots:
     void updateDisplayWidgets();
