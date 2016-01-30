@@ -113,12 +113,12 @@ fdo_name = emblem-favorite
 
 [icon]
 icon_name = offline_mode_engaged
-resource = :/icons/images/raw_art/golfball_green.png
+resource = :/icons/images/interface/golfball_green.png
 colorize = no
 
 [icon]
 icon_name = offline_mode_disengaged
-resource = :/icons/images/raw_art/golfball_red.png
+resource = :/icons/images/interface/golfball_red.png
 colorize = no
 
 [icon]

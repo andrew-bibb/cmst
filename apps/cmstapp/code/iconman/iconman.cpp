@@ -333,7 +333,7 @@ void IconManager::makeLocalFile()
 			if (ctr <= maxloop && f_cfg.copy(bak) ) { 
 				QMessageBox::StandardButton dia_rtn = QMessageBox::information(0, QString(APP),
 					tr("A new icon definition file will be installed to <b>%1</b> and a backup of the old definition file has been created as <b>%2</b> \
-						<p>If the original definition file was customized you wish to retain those changes you will need to manually merge them into the new file.	\
+						<p>If the original definition file was customized and you wish to retain those changes you will need to manually merge them into the new file.	\
 						<p>If the original was never customized or you just wish to delete the backup now you may select <i>Discard</i> to delete the backup or <i>Save</i> to retain it.").arg(cfg).arg(bak),
 					QMessageBox::Save | QMessageBox::Discard,
 					QMessageBox::Save);
