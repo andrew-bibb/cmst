@@ -506,7 +506,7 @@ void ControlBox::moveService(QAction* act)
   QString ss;
   QDBusObjectPath targetobj;
   for (int i = 0; i < services_list.size(); ++i) {
-    ss = services_list.at(i).objmap.value("Name").toString();
+    ss = getNickName(services_list.at(i).objpath);
     // the items in mvsrv_menu are in the same order as services_list
     if (ss == act->text() ) {
       targetobj = QDBusObjectPath(services_list.at(i).objpath.path());
@@ -564,7 +564,7 @@ void ControlBox::enableMoveButtons(int row, int col)
   mvsrv_menu->clear();
   QString ss;
   for (int i = 0; i < services_list.size(); ++i) {
-    ss = services_list.at(i).objmap.value("Name").toString();
+    ss = getNickName(services_list.at(i).objpath);
     QAction* act = mvsrv_menu->addAction(ss);
     if (i == row) act->setDisabled(true);
     }
@@ -592,7 +592,7 @@ void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QStrin
         break;
       } // if
     } // for
-    ui.label_counter_service_name->setText(tr("<b>Service:</b> %1").arg(map.value("Name").toString()) );
+    ui.label_counter_service_name->setText(tr("<b>Service:</b> %1").arg(getNickName(qdb_objpath)) );
     ui.label_home_counter->setText(home_label);
     ui.label_roam_counter->setText(roam_label);
   }
@@ -781,7 +781,7 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
     if (services_list.count() > 0 ) {
         QMap<QString,QVariant> map = services_list.at(0).objmap;
         type = services_list.at(0).objmap.value("Type").toString();
-        name = services_list.at(0).objmap.value("Name").toString();
+        name = getNickName(services_list.at(0).objpath);
 
       // notification text and icons
       if (type == "wifi")
@@ -1251,7 +1251,7 @@ void ControlBox::wifiSubmenuTriggered(QAction* act)
 {
 	// find the wifi service associated with the action.
 	for (int i = 0; i < wifi_list.count(); ++i) {
-		if (wifi_list.at(i).objmap.value("Name").toString() == act->text() ) {
+		if (getNickName(wifi_list.at(i).objpath) == act->text() ) {
 			QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
 			iface_serv->setTimeout(1);
 			QString state = wifi_list.at(i).objmap.value("State").toString();
@@ -1275,7 +1275,7 @@ void ControlBox::vpnSubmenuTriggered(QAction* act)
 {
 	// find the VPN service associated with the action
 	for (int i = 0; i < vpn_list.count(); ++i) {
-		if (vpn_list.at(i).objmap.value("Name").toString() == act->text() ) {
+		if (getNickName(vpn_list.at(i).objpath) == act->text() ) {
 			QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
 			iface_serv->setTimeout(1);
 			QString state = vpn_list.at(i).objmap.value("State").toString();
@@ -1315,7 +1315,7 @@ void ControlBox::getServiceDetails(int index)
 
   //  Start building the string for the left label
   QString rs = tr("<br><b>Service Details:</b><br>");
-  if (map.value("Name").toString().isEmpty() ) b_editable = false;
+  if (getNickName(services_list.at(index).objpath).isEmpty() ) b_editable = false;
   rs.append(tr("Service Type: %1<br>").arg(TranslateStrings::cmtr(map.value("Type").toString())) );
   rs.append(tr("Service State: %1<br>").arg(TranslateStrings::cmtr(map.value("State").toString())) );
   rs.append(tr("Favorite: %1<br>").arg(map.value("Favorite").toBool() ? tr("Yes", "favorite") : tr("No", "favorite"))  );
@@ -1674,7 +1674,7 @@ void ControlBox::assembleTabDetails()
   if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
 	  // populate the combobox
 	  for (int row = 0; row < services_list.size(); ++row) {
-			QString ss = services_list.at(row).objmap.value("Name").toString();
+			QString ss = getNickName(services_list.at(row).objpath);
 				ui.comboBox_service->addItem(TranslateStrings::cmtr(ss) );
 	  } // services for loop
 	   ui.comboBox_service->setCurrentIndex(0);
@@ -1731,7 +1731,7 @@ void ControlBox::assembleTabWireless()
       ui.tableWidget_wifi->setRowCount(rowcount + 1);
 
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
-      qtwi00->setText(map.value("Name").toString() );
+      qtwi00->setText(getNickName(services_list.at(row).objpath) );
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_wifi->setItem(rowcount, 0, qtwi00);
 
@@ -1818,7 +1818,7 @@ void ControlBox::assembleTabVPN()
       extractMapData(providermap, services_list.at(row).objmap.value("Provider") );
       
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
-      qtwi00->setText(map.value("Name").toString() );
+      qtwi00->setText(getNickName(services_list.at(row).objpath) );
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_vpn->setItem(rowcount, 0, qtwi00);
 
@@ -1923,7 +1923,7 @@ void ControlBox::assembleTrayIcon()
         if (services_list.at(0).objmap.value("Type").toString() == "ethernet") {
           extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
           stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
-          stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
+          stt.append(tr("Service: %1<br>").arg(getNickName(services_list.at(0).objpath)) );
           stt.append(tr("Interface: %1").arg(TranslateStrings::cmtr(submap.value("Interface").toString())) );
           prelimicon = iconman->getIcon("connection_wired");
         } //  if wired connection
@@ -1931,7 +1931,7 @@ void ControlBox::assembleTrayIcon()
         else if (services_list.at(0).objmap.value("Type").toString() == "wifi") {
           stt.prepend(tr("WiFi Connection<br>","icon_tool_tip"));
           extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
-          stt.append(tr("SSID: %1<br>").arg(TranslateStrings::cmtr(services_list.at(0).objmap.value("Name").toString())) );
+          stt.append(tr("SSID: %1<br>").arg(getNickName(services_list.at(0).objpath)) );
           QStringList sl_tr;
 					for (int i = 0; i < services_list.at(0).objmap.value("Security").toStringList().size(); ++i) {
 						sl_tr << TranslateStrings::cmtr(services_list.at(0).objmap.value("Security").toStringList().at(i) );
@@ -2043,7 +2043,7 @@ void ControlBox::assembleTrayIcon()
   // info_submenu
   info_submenu->clear();
   for (int j = 0; j < services_list.count(); ++j) {
-    QAction* act = info_submenu->addAction(TranslateStrings::cmtr(services_list.at(j).objmap.value("Name").toString()) );
+    QAction* act = info_submenu->addAction(getNickName(services_list.at(j).objpath) );
 		if (services_list.at(j).objmap.value("Type").toString() == "ethernet" ) {
 		  if (services_list.at(j).objmap.value("State").toString() == "online")
 				act->setIcon(iconman->getIcon("connection_wired"));
@@ -2089,11 +2089,11 @@ void ControlBox::assembleTrayIcon()
   // wifi_submenu.  
   wifi_submenu->clear();
   for (int k = 0; k < wifi_list.count(); ++k) {
-    QAction* act = wifi_submenu->addAction(TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Name").toString()) );
+    QAction* act = wifi_submenu->addAction(getNickName(wifi_list.at(k).objpath) );
     act->setCheckable(true);
     QString state = wifi_list.at(k).objmap.value("State").toString();
 		if (state == "online" || state == "ready") act->setChecked(true);
-    QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Name").toString())) );
+    QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1</b></center>").arg(getNickName(wifi_list.at(k).objpath)) );
     ttstr.append(tr("Connection : %1").arg(TranslateStrings::cmtr(state)) );
     ttstr.append("<br>");
     ttstr.append(tr("Signal Strength: %1%").arg(wifi_list.at(k).objmap.value("Strength").toInt()) );
@@ -2109,11 +2109,11 @@ void ControlBox::assembleTrayIcon()
   // vpn_submenu
   vpn_submenu->clear();	
   for (int l = 0; l < vpn_list.count(); ++l) {
-    QAction* act = vpn_submenu->addAction(TranslateStrings::cmtr(vpn_list.at(l).objmap.value("Name").toString()) );
+    QAction* act = vpn_submenu->addAction(getNickName(vpn_list.at(l).objpath) );
     act->setCheckable(true);
     QString state = vpn_list.at(l).objmap.value("State").toString();
 		if (state == "ready") act->setChecked(true);
-    QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1</b></center>").arg(TranslateStrings::cmtr(vpn_list.at(l).objmap.value("Name").toString())) );
+    QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1</b></center>").arg(getNickName(vpn_list.at(l).objpath)) );
     ttstr.append(tr("Connection : %1").arg(TranslateStrings::cmtr(state)) );
     act->setToolTip(ttstr);
   } // l for
@@ -2651,9 +2651,10 @@ void ControlBox::clearCounters()
 }
 
 //
-// Function to return a nick name for a service
-// Typically return the Name property.  For wired ethernet and hidden
-// wifi networks this is blank.  In those cases return the nick name.
+// Function to return a nick name for a service. Typically return the 
+// Name property.  For wired ethernet Name comes back as Wired, and for
+// hidden wifi networks this is blank.  In those cases create a 
+// nickname and return it.
 QString ControlBox::getNickName(const QDBusObjectPath& objpath)
 {	
 	for (int i = 0; i < services_list.size(); ++i) {
