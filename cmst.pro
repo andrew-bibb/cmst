@@ -25,17 +25,19 @@ documentation.CONFIG = no_check_exist
 documentation.extra = gzip --force --keep ./misc/manpage/cmst.1
 INSTALLS += documentation
 
-# application icons - scalable icon (used internally), 48x48 provided
-# in case something else needs it
-exists(./images/application/cmst.png) 
-	icon48.path = /usr/share/icons/hicolor/48x48/apps
-	icon48.files = ./images/application/cmst.png
-	INSTALLS += icon48
-	exists(./images/application/cmst.svg) {
+# application icons - 
+exists(./images/application/cmst-icon.png) 
+	LIST = 16 20 22 24 32 36 40 48 64 72 96 128 192 256 384 512
+	for(a, LIST) {
+		icon$${a}.path = /usr/share/icons/hicolor/$${a}x$${a}/apps
+		icon$${a}.files = ./images/application/$${a}x$${a}/cmst.png
+		INSTALLS += icon$${a}
+	}
+	exists(./images/application/cmst-icon.svg) {
 		iconsvg.path = /usr/share/icons/hicolor/scalable/apps
-		iconsvg.files = ./images/application/cmst.svg
+		iconsvg.files = ./images/application/scalable/cmst.svg
 		INSTALLS += iconsvg
-}
+	}
 else {
 	system(sed -i 's/Icon=cmst/Icon=preferences-system-network/g' "./misc/desktop/cmst.desktop")
 	system(sed -i 's/Icon=cmst/Icon=preferences-system-network/g' "./misc/desktop/cmst-autostart.desktop")
