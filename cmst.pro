@@ -33,7 +33,7 @@ exists(./images/application/cmst-icon.png)
 		icon$${a}.files = ./images/application/$${a}x$${a}/cmst.png
 		INSTALLS += icon$${a}
 	}
-	exists(./images/application/cmst-icon.svg) {
+	exists(./images/application/scalable/cmst.svg) {
 		iconsvg.path = /usr/share/icons/hicolor/scalable/apps
 		iconsvg.files = ./images/application/scalable/cmst.svg
 		INSTALLS += iconsvg
