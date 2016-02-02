@@ -305,8 +305,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
     // connect some dbus signals to our slots
     QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
-    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
-    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PeersChanged", this, SLOT(dbsPeersChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
+    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
+    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PeersChanged", this, SLOT(dbsPeersChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
     QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
     QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
 
@@ -830,16 +830,16 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 // signaled through this slot.  This is also called when the sort order
 // of the services list changes.  It will not be called when a property
 // of a service object changes.  
-void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
-{	
-	// Demarshall the raw QDBusMessage instead of vmap as it is easier.
-  if (! vmap.isEmpty() ) {
+void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath> removed, QDBusMessage msg)
+{		
+	// Demarshall the raw QDBusMessage instead of vlist as it is easier..
+  if (! vlist.isEmpty() ) {
     QList<arrayElement> revised_list;
-    if (! getArray(revised_list, msg)) return;   
-      
+    if (! getArray(revised_list, msg)) return; 
+   
     // merge the existing services_list into the revised_list
     // first find the original element that matches the revised
-    for (int i = 0; i < revised_list.size(); ++i) {
+    for (int i = 0; i < revised_list.size(); ++i) {	
       arrayElement revised_element = revised_list.at(i);
       arrayElement original_element = {QDBusObjectPath(), QMap<QString,QVariant>()};
       for (int j = 0; j < services_list.size(); ++j) {
@@ -868,7 +868,7 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
     // now copy the revised list to services_list
     services_list.clear();
     services_list = revised_list;
-  } // vmap not empty
+  } // revised_list not empty
 
   // process removed services
   if (! removed.isEmpty() ) {
@@ -881,7 +881,12 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
    } // if we needed to remove something
     
   // clear the counters (if selected) and update the widgets
-	clearCounters();
+  clearCounters(); 
+  // Next line a bit of a hack, but I can find no evidence that service provider properties are changed via signals once a connection is
+  // made. This includes both the manager.servicesChanged() and services.propertyChanged() signals. Connecting a VPN seems to be a 
+  // black hole of signals (well except for vpn connection interface - but we're not using that).   
+  // This will force a service rescan which picks up some of these properties.
+  if (services_list.at(0).objmap.value("Type") == "vpn") managerRescan(CMST::Manager_Services);
 	updateDisplayWidgets();
 	
   return;  
@@ -890,13 +895,13 @@ void ControlBox::dbsServicesChanged(QMap<QString, QVariant> vmap, QList<QDBusObj
 //
 // Slot called whenever DBUS issues a Peerschanged signal.  See note above about
 // scan results being signaled here.
-void ControlBox::dbsPeersChanged(QMap<QString, QVariant> vmap, QList<QDBusObjectPath> removed, QDBusMessage msg)
+void ControlBox::dbsPeersChanged(QList<QVariant> vlist, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {
   // Set the update flag
   bool b_needupdate = false;
 
-  // Process changed peers. Demarshall the raw QDBusMessage instead of vmap as it is easier.
-  if (! vmap.isEmpty() ) {
+  // Process changed peers. Demarshall the raw QDBusMessage instead of vlist as it is easier.
+  if (! vlist.isEmpty() ) {
     QList<arrayElement> revised_list;
     if (! getArray(revised_list, msg)) return;
 
@@ -933,7 +938,7 @@ void ControlBox::dbsPeersChanged(QMap<QString, QVariant> vmap, QList<QDBusObject
     // now copy the revised list to peer_list
     peer_list.clear();
     peer_list = revised_list;
-  } // vmap not empty
+  } // vlist not empty
 
   // process removed peers
   if (! removed.isEmpty() ) {
@@ -2480,17 +2485,9 @@ bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg
     arrayElement ael;
     qdb_arg.beginStructure();
     qdb_arg >> ael.objpath >> ael.objmap;
-
-    // iterate over the objmap and replace connman text with translated text
-    QMapIterator<QString, QVariant> itr(ael.objmap);
-    while (itr.hasNext()) {
-      itr.next();
-      ael.objmap.insert(itr.key(), itr.value() );
-    } // map iterator
-
     qdb_arg.endStructure();
     r_list.append (ael);
-    }
+  }	// while
   qdb_arg.endArray();
 
   return true;

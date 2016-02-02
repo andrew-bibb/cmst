@@ -65,6 +65,7 @@ struct arrayElement
   QMap<QString,QVariant> objmap;
 };
 
+
 //
 // custom QFrame containing a QToolButton that will emit a button id
 class idButton : public QFrame
@@ -177,8 +178,8 @@ class ControlBox : public QDialog
     void disconnectPressed();
     void removePressed();
     void dbsPropertyChanged(QString,QDBusVariant);
-    void dbsServicesChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage);
-    void dbsPeersChanged(QMap<QString, QVariant>, QList<QDBusObjectPath>, QDBusMessage);
+    void dbsServicesChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage);
+    void dbsPeersChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage);
     void dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage);
     void dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage);
     void dbsTechnologyAdded(QDBusObjectPath, QVariantMap);
