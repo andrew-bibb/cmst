@@ -1872,8 +1872,9 @@ void ControlBox::assembleTabVPN()
 			ui.tableWidget_vpn->setCellWidget(rowcount, 3, ql03);
       
       QLabel* ql04 = new QLabel(ui.tableWidget_vpn);
-			ql04->setText(providermap.value("Domain").toString() );
-			ql04->setAlignment(Qt::AlignCenter);
+			QFileInfo fi = services_list.at(row).objpath.path();
+			ql04->setText(fi.baseName() );
+			ql04->setAlignment(Qt:: AlignCenter);
 			ui.tableWidget_vpn->setCellWidget(rowcount, 4, ql04);
 						     
       ++rowcount;
