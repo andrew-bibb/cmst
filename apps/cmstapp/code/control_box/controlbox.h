@@ -188,6 +188,7 @@ class ControlBox : public QDialog
     void toggleOfflineMode(bool);
     void toggleTrayIcon(bool);
     void togglePowered(QString, bool);
+    void toggleTethered(QString, bool);
     void minMaxWindow(QAction* = 0);
     void techSubmenuTriggered(QAction* = 0);
     void infoSubmenuTriggered(QAction* = 0);

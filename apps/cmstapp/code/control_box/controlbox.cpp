@@ -59,6 +59,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QPainter>
 # include <QImage>
 # include <QDesktopWidget>
+# include <QInputDialog>
 
 # include "../resource.h"
 # include "./controlbox.h"
@@ -1174,12 +1175,52 @@ void ControlBox::toggleTrayIcon(bool b_checked)
 void ControlBox::togglePowered(QString object_id, bool checkstate)
 {
   QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
+  QDBusMessage reply = iface_tech->call(QDBus::AutoDetect, "SetProperty", "Powered", QVariant::fromValue(QDBusVariant(checkstate)) );
 
-  QList<QVariant> vlist;
-  vlist.clear();
-  vlist << QVariant("Powered") << QVariant::fromValue(QDBusVariant(checkstate) );
+  // cleanup
+  iface_tech->deleteLater();
+  return;
+}
 
-  QDBusMessage reply = iface_tech->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
+//
+// Slot to toggle the tethering state of a technology
+//  Called when our custom idButton in the powered cell in the page 1 technology tableWidget is clicked
+void ControlBox::toggleTethered(QString object_id, bool checkstate)
+{
+	QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
+	
+	// See if this is a wifi technology
+	bool ok = true;
+  for (int row = 0; row < technologies_list.size(); ++row) {
+		if (technologies_list.at(row).objpath.path() == object_id) {
+			if(technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
+				QString sid = technologies_list.at(row).objmap.value("TetheringIdentifier").toString();
+				if (sid.isEmpty() ) {
+					sid = QInputDialog::getText(this, 
+							tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
+							tr("WiFi AP SSID that clients will have to join in order to gain internet connectivity."),
+							QLineEdit::Normal,
+							sid,
+							&ok);
+					if (ok) QDBusMessage reply01 = iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringIdentifier", QVariant::fromValue(QDBusVariant(sid)) );		
+				}	// if sid.isEmpty
+				QString spw = technologies_list.at(row).objmap.value("TetheringPassphrase").toString();
+				if (ok && spw.isEmpty() ) {
+					spw = QInputDialog::getText(this, 
+							tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
+							tr("WPA pre-shared key clients will have to use in order to establish a connection."),
+							QLineEdit::Normal,
+							spw,
+							&ok);
+				if (ok) QDBusMessage reply02 = iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringPassphrase", QVariant::fromValue(QDBusVariant(spw)) );		
+			} // if spw is empty
+			if (ok) break;
+			}	// if technology is wifi
+		}	// if object_id
+	}	// for
+
+	// Send message if everything is ok
+	if (ok) QDBusMessage reply = iface_tech->call(QDBus::AutoDetect, "SetProperty", "Tethering", QVariant::fromValue(QDBusVariant(checkstate)) );
 
   // cleanup
   iface_tech->deleteLater();
@@ -1582,14 +1623,13 @@ void ControlBox::assembleTabStatus()
       qtwi01->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 1, qtwi01);
 
-      bt = technologies_list.at(row).objmap.value("Powered").toBool();
       idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
       qpb02->setFixedSize(
         ui.tableWidget_technologies->horizontalHeader()->sectionSize(2),
         ui.tableWidget_technologies->verticalHeader()->sectionSize(0) );
       connect (qpb02, SIGNAL(clickedID(QString, bool)), this, SLOT(togglePowered(QString, bool)));
       QString padding = "     ";
-      if (bt ) {
+      if (technologies_list.at(row).objmap.value("Powered").toBool()) {
         qpb02->setText(tr("%1On%1%1", "powered").arg(padding));
         qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
         qpb02->setChecked(true);
@@ -1606,12 +1646,35 @@ void ControlBox::assembleTabStatus()
       qtwi03->setText( bt ? tr("Yes", "connected") : tr("No", "connected") );
       qtwi03->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 3, qtwi03);
-
-      QTableWidgetItem* qtwi04 = new QTableWidgetItem();
-      bt = technologies_list.at(row).objmap.value("Tethered").toBool();
-      qtwi04->setText( bt ? tr("Yes", "tethered") : tr("No", "tethered") );
-      qtwi04->setTextAlignment(Qt::AlignCenter);
-      ui.tableWidget_technologies->setItem(row, 4, qtwi04);
+ 
+      idButton* qpb04 = new idButton(this, technologies_list.at(row).objpath);
+      qpb04->setFixedSize(
+        ui.tableWidget_technologies->horizontalHeader()->sectionSize(4),
+        ui.tableWidget_technologies->verticalHeader()->sectionSize(0) );
+      connect (qpb04, SIGNAL(clickedID(QString, bool)), this, SLOT(toggleTethered(QString, bool)));
+      if (technologies_list.at(row).objmap.value("Tethering").toBool()) {
+        qpb04->setText(tr("%1On%1%1", "tethering").arg(padding));
+        qpb04->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
+        qpb04->setChecked(true);
+      }
+      else {
+        qpb04->setText(tr("%1Off%1%1", "tethering").arg(padding));
+        qpb04->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
+        qpb04->setChecked(false);
+        if (technologies_list.at(row).objmap.value("Type").toString() == "ethernet")
+					qpb04->setDisabled(true);
+      }
+			ui.tableWidget_technologies->setCellWidget(row, 4, qpb04); 
+	
+			QTableWidgetItem* qtwi05 = new QTableWidgetItem();
+      QString sid = technologies_list.at(row).objmap.value("TetheringIdentifier").toString();
+      QString spw = technologies_list.at(row).objmap.value("TetheringPassphrase").toString();
+      if (sid.isEmpty() ) sid = "--";
+      if (spw.isEmpty() ) spw = "--";
+      qtwi05->setText(QString("%1 : %2").arg(sid).arg(spw) );
+      qtwi05->setTextAlignment(Qt::AlignCenter);
+      ui.tableWidget_technologies->setItem(row, 5, qtwi05);
+ 	   
     } // technologies for loop
   } // technologies if no error
 

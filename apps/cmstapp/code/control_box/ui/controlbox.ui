@@ -26,7 +26,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="Status">
       <property name="layoutDirection">
@@ -235,6 +235,11 @@
             <column>
              <property name="text">
               <string>Tethering</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>ID:Pass</string>
              </property>
             </column>
            </widget>
