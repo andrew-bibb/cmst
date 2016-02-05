@@ -364,6 +364,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_change_log, SIGNAL(clicked()), this, SLOT(showChangeLog()));
   connect(ui.tableWidget_services, SIGNAL (cellClicked(int, int)), this, SLOT(enableMoveButtons(int, int)));
   connect(ui.checkBox_hidecnxn, SIGNAL (toggled(bool)), this, SLOT(updateDisplayWidgets()));
+  connect(ui.checkBox_hidetethering, SIGNAL (toggled(bool)), this, SLOT(updateDisplayWidgets()));
   connect(ui.checkBox_systemtraynotifications, SIGNAL (clicked(bool)), this, SLOT(trayNotifications(bool)));
   connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
   connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
@@ -1198,21 +1199,23 @@ void ControlBox::toggleTethered(QString object_id, bool checkstate)
 				if (sid.isEmpty() ) {
 					sid = QInputDialog::getText(this, 
 							tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
-							tr("WiFi AP SSID that clients will have to join in order to gain internet connectivity."),
+							tr("Please enter the WiFi AP SSID that clients will\nhave to join in order to gain internet connectivity."),
 							QLineEdit::Normal,
 							sid,
 							&ok);
 					if (ok) QDBusMessage reply01 = iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringIdentifier", QVariant::fromValue(QDBusVariant(sid)) );		
+				
 				}	// if sid.isEmpty
 				QString spw = technologies_list.at(row).objmap.value("TetheringPassphrase").toString();
 				if (ok && spw.isEmpty() ) {
 					spw = QInputDialog::getText(this, 
 							tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
-							tr("WPA pre-shared key clients will have to use in order to establish a connection."),
+							tr("Please enter the WPA pre-shared key clients will\nhave to use in order to establish a connection."),
 							QLineEdit::Normal,
 							spw,
 							&ok);
 				if (ok) QDBusMessage reply02 = iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringPassphrase", QVariant::fromValue(QDBusVariant(spw)) );		
+		
 			} // if spw is empty
 			if (ok) break;
 			}	// if technology is wifi
@@ -1609,6 +1612,16 @@ void ControlBox::assembleTabStatus()
     ui.tableWidget_technologies->clearContents();
     ui.tableWidget_technologies->setRowCount(technologies_list.size() );
     ui.tableWidget_technologies->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Fixed);
+    ui.tableWidget_technologies->horizontalHeader()->setSectionResizeMode(4, QHeaderView::Fixed);
+      
+		if (ui.checkBox_hidetethering->isChecked() ) {
+			ui.tableWidget_technologies->hideColumn(4);
+			ui.tableWidget_technologies->hideColumn(5);
+		}
+		else { 
+			ui.tableWidget_technologies->showColumn(4);
+			ui.tableWidget_technologies->showColumn(5);
+		}     
     for (int row = 0; row < technologies_list.size(); ++row) {
 
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
@@ -1674,8 +1687,14 @@ void ControlBox::assembleTabStatus()
       qtwi05->setText(QString("%1 : %2").arg(sid).arg(spw) );
       qtwi05->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 5, qtwi05);
- 	   
+       	   
     } // technologies for loop
+    
+		// resize the columns to contents
+		ui.tableWidget_technologies->resizeColumnToContents(0);
+		ui.tableWidget_technologies->resizeColumnToContents(1);
+		ui.tableWidget_technologies->resizeColumnToContents(3); 
+				 
   } // technologies if no error
 
   // Services
@@ -1683,6 +1702,14 @@ void ControlBox::assembleTabStatus()
     QString ss = QString();
     ui.tableWidget_services->clearContents();
     ui.tableWidget_services->setRowCount(services_list.size() );
+ 
+     if (ui.checkBox_hidecnxn->isChecked() ) {
+			ui.tableWidget_services->hideColumn(3);
+		}
+		else {
+			ui.tableWidget_services->showColumn(3);
+			ui.tableWidget_services->horizontalHeader()->resizeSection(1, ui.tableWidget_services->horizontalHeader()->defaultSectionSize());
+		}
     for (int row = 0; row < services_list.size(); ++row) {
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       ss = getNickName(services_list.at(row).objpath);
@@ -1707,17 +1734,10 @@ void ControlBox::assembleTabStatus()
       qtwi03->setText(fi.baseName() );
       qtwi03->setTextAlignment(Qt::AlignVCenter|Qt::AlignLeft);
       ui.tableWidget_services->setItem(row, 3, qtwi03);
-
-      if (ui.checkBox_hidecnxn->isChecked() ) {
-        ui.tableWidget_services->hideColumn(3);
-      }
-      else {
-        ui.tableWidget_services->showColumn(3);
-        ui.tableWidget_services->horizontalHeader()->resizeSection(1, ui.tableWidget_services->horizontalHeader()->defaultSectionSize());
-      }
+      
     } // services for loop
 
-    // resize the services column 0 to contents
+    // resize the services columns to contents
     ui.tableWidget_services->resizeColumnToContents(0);
     ui.tableWidget_services->resizeColumnToContents(1);
     ui.tableWidget_services->resizeColumnToContents(2);
@@ -2268,6 +2288,7 @@ void ControlBox::writeSettings()
   settings->setValue("retain_settings", ui.checkBox_usestartoptions->isChecked() );
   settings->setValue("retain_state", ui.checkBox_retainstate->isChecked() );
   settings->setValue("services_less", ui.checkBox_hidecnxn->isChecked() );
+  settings->setValue("technologies_less", ui.checkBox_hidetethering->isChecked() );
   settings->setValue("enable_interface_tooltips", ui.checkBox_enableinterfacetooltips->isChecked() );
   settings->setValue("enable_systemtray_tooltips", ui.checkBox_enablesystemtraytooltips->isChecked() );
   settings->setValue("enable_systemtray_notications", ui.checkBox_systemtraynotifications->isChecked() );
@@ -2316,6 +2337,7 @@ void ControlBox::readSettings()
   ui.checkBox_usestartoptions->setChecked(settings->value("retain_settings").toBool() );
   ui.checkBox_retainstate->setChecked(settings->value("retain_state").toBool() );
   ui.checkBox_hidecnxn->setChecked(settings->value("services_less").toBool() );
+  ui.checkBox_hidetethering->setChecked(settings->value("technologies_less").toBool() );
   ui.checkBox_enableinterfacetooltips->setChecked(settings->value("enable_interface_tooltips").toBool() );
   ui.checkBox_enablesystemtraytooltips->setChecked(settings->value("enable_systemtray_tooltips").toBool() );
   ui.checkBox_systemtraynotifications->setChecked(settings->value("enable_systemtray_notications").toBool() );
