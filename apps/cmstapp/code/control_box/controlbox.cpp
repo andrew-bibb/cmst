@@ -1676,6 +1676,8 @@ void ControlBox::assembleTabStatus()
         qpb04->setChecked(false);
         if (technologies_list.at(row).objmap.value("Type").toString() == "ethernet")
 					qpb04->setDisabled(true);
+				else 
+					qpb04->setEnabled(technologies_list.at(row).objmap.value("Powered").toBool() );	
       }
 			ui.tableWidget_technologies->setCellWidget(row, 4, qpb04); 
 	
