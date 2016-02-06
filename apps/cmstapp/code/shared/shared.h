@@ -1,8 +1,5 @@
-/**************************** tr_strings.h ***************************
-
-Class to manage and present strings that need to be translated. These
-are typically not inline strings, rather strings used globally or strings
-returned by third parties, for instance, Connman.
+/**************************** shared.h ***************************
+Functions shared across various classes
 
 Copyright (C) 2013-2016
 by: Andrew J. Bibb
@@ -27,20 +24,19 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/
 
-# ifndef TRANSLATE_STRINGS
-# define TRANSLATE_STRINGS
+# ifndef CMST_SHARED
+# define CMST_SHARED
 
-# include <QObject>
+# include <QMessageBox>
+# include <QtDBus/QDBusMessage>
+# include <QtDBus/QDBusArgument>
+# include <QString>
+# include <QVariant>
 
-class TranslateStrings : public QObject
-{
-  Q_OBJECT
+namespace shared {
 
-  public:
-  // members
-    TranslateStrings(QObject*);
-  
-  // functions
-		static inline QString cmtr(const QString& str, const char* disamb = 0) {return tr(qPrintable(str), disamb);}  
-};
+QDBusMessage::MessageType processReply(const QDBusMessage& reply);
+bool extractMapData(QMap<QString,QVariant>&,const QVariant&);
+
+}
 #endif

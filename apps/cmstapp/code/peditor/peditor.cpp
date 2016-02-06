@@ -30,10 +30,11 @@ DEALINGS IN THE SOFTWARE.
 # include <QRegularExpressionValidator>
 
 # include "./peditor.h"
+# include "./code/shared/shared.h"
 
 #define DBUS_SERVICE "net.connman"
 
-PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae, bool (*extractMapData) (QMap<QString,QVariant>&,const QVariant&))
+PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
     : QDialog(parent)
 {
   // Setup the user interface
@@ -70,9 +71,9 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae, bool
   ipv4map.clear();
   ipv6map.clear();
   proxmap.clear();
-  extractMapData(ipv4map, objmap.value("IPv4.Configuration") );
-  extractMapData(ipv6map, objmap.value("IPv6.Configuration") );
-  extractMapData(proxmap, objmap.value("Proxy.Configuration") );
+  shared::extractMapData(ipv4map, objmap.value("IPv4.Configuration") );
+  shared::extractMapData(ipv6map, objmap.value("IPv6.Configuration") );
+  shared::extractMapData(proxmap, objmap.value("Proxy.Configuration") );
 
   // Seed initial values in the dialog.
   ui.checkBox_autoconnect->setChecked(objmap.value("AutoConnect").toBool() );
@@ -207,8 +208,7 @@ void PropertiesEditor::updateConfiguration()
     vlist.clear();
     vlist << "AutoConnect";
     vlist << QVariant::fromValue(QDBusVariant(ui.checkBox_autoconnect->isChecked()) );
-    QDBusMessage reply00 = iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
-    //qDebug() << reply00;
+    shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
   }
 
   // QLineEdits (nameservers, timeservers and domains)
@@ -230,8 +230,7 @@ void PropertiesEditor::updateConfiguration()
       vlist.clear();
       vlist << slp.at(i);
       vlist << QVariant::fromValue(QDBusVariant(sl) );
-      QDBusMessage reply01 = iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
-      //qDebug() << reply01;
+      shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
     } // if
   } //for
 
@@ -259,8 +258,7 @@ void PropertiesEditor::updateConfiguration()
     } // for
 
     vlist << QVariant::fromValue(QDBusVariant(dict) );
-    QDBusMessage reply02 = iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
-    //qDebug() << reply02;
+    shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
   } // if ipv4 changed
 
   // ipv6
@@ -290,8 +288,7 @@ void PropertiesEditor::updateConfiguration()
     } // for
 
     vlist << QVariant::fromValue(QDBusVariant(dict) );
-    QDBusMessage reply03 = iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
-    //qDebug() << reply03;
+    shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
   } // if ipv6 changed
 
   // proxy
@@ -328,8 +325,7 @@ void PropertiesEditor::updateConfiguration()
 
     vlist << QVariant::fromValue(QDBusVariant(dict) );
     qDebug() << dict;
-    QDBusMessage reply04 = iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist);
-    //qDebug() << reply04;
+    shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
   } // if proxy changed
 
   // cleanup
