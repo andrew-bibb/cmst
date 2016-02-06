@@ -343,6 +343,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(moveGroup, SIGNAL(triggered(QAction*)), this, SLOT(moveButtonPressed(QAction*)));
   connect(mvsrv_menu, SIGNAL(triggered(QAction*)), this, SLOT(moveService(QAction*)));
   connect(ui.actionRescan, SIGNAL (triggered()), this, SLOT(scanWiFi()));
+  connect(ui.actionIDPass, SIGNAL (triggered()), this, SLOT(wifiIDPass()));
   connect(ui.actionOffline_Mode, SIGNAL(triggered(bool)), this, SLOT(toggleOfflineMode(bool)));
 
   //  connect signals and slots - ui elements
@@ -1136,6 +1137,48 @@ void ControlBox::scanWiFi()
   return;
 }
 
+//  Slot to loop through all WiFi technologies and set or reset the
+//  id and password.  Called from the ui.pushButton_IDPass and from this
+//  toggleTethered().
+void ControlBox::wifiIDPass(const QString& obj_path)
+{
+  // Make sure we got the technologies_list before we try to work with it.
+  if ( (q8_errors & CMST::Err_Technologies) != 0x00 ) return;
+
+	// Run through each technology looking for Wifi
+	for (int row = 0; row < technologies_list.size(); ++row) {
+		if (technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
+				if (technologies_list.at(row).objpath.path() == obj_path || obj_path.isEmpty() ) {
+					QString sid;
+					QString spw;
+					bool ok;
+					QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
+	
+					sid = QInputDialog::getText(this, 
+						tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
+						tr("<b>Technology: %1</b><p>Please enter the WiFi AP SSID that clients will<br>have to join in order to gain internet connectivity.").arg(technologies_list.at(row).objpath.path() ),
+						QLineEdit::Normal,
+						technologies_list.at(row).objmap.value("TetheringIdentifier").toString(),
+						&ok);
+					if (ok) QDBusMessage reply01 = iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringIdentifier", QVariant::fromValue(QDBusVariant(sid)) );		
+	
+					spw = QInputDialog::getText(this, 
+						tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
+						tr("<b>Technology: %1</b><p>Please enter the WPA pre-shared key clients will<br>have to use in order to establish a connection.").arg(technologies_list.at(row).objpath.path() ),
+						QLineEdit::Normal,
+						technologies_list.at(row).objmap.value("TetheringPassphrase").toString(),
+						&ok);
+					if (ok) QDBusMessage reply02 = iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringPassphrase", QVariant::fromValue(QDBusVariant(spw)) );		
+	 
+					// cleanup
+					iface_tech->deleteLater();
+				}	// if wifi match
+			}	// if tech is wifi
+		}	// for
+  
+  return;
+}
+
 //
 //  Slot to globally turn power off to all network adapters
 //  Called when ui.checkBox_devicesoff is clicked
@@ -1190,34 +1233,14 @@ void ControlBox::toggleTethered(QString object_id, bool checkstate)
 {
 	QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
 	
-	// See if this is a wifi technology
+	// See if this is a wifi technology, get the ID and Pass if necessary
 	bool ok = true;
   for (int row = 0; row < technologies_list.size(); ++row) {
 		if (technologies_list.at(row).objpath.path() == object_id) {
 			if(technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
 				QString sid = technologies_list.at(row).objmap.value("TetheringIdentifier").toString();
-				if (sid.isEmpty() ) {
-					sid = QInputDialog::getText(this, 
-							tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
-							tr("Please enter the WiFi AP SSID that clients will\nhave to join in order to gain internet connectivity."),
-							QLineEdit::Normal,
-							sid,
-							&ok);
-					if (ok) QDBusMessage reply01 = iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringIdentifier", QVariant::fromValue(QDBusVariant(sid)) );		
-				
-				}	// if sid.isEmpty
 				QString spw = technologies_list.at(row).objmap.value("TetheringPassphrase").toString();
-				if (ok && spw.isEmpty() ) {
-					spw = QInputDialog::getText(this, 
-							tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
-							tr("Please enter the WPA pre-shared key clients will\nhave to use in order to establish a connection."),
-							QLineEdit::Normal,
-							spw,
-							&ok);
-				if (ok) QDBusMessage reply02 = iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringPassphrase", QVariant::fromValue(QDBusVariant(spw)) );		
-		
-			} // if spw is empty
-			if (ok) break;
+				if (sid.isEmpty() || spw.isEmpty() ) wifiIDPass(object_id);
 			}	// if technology is wifi
 		}	// if object_id
 	}	// for
@@ -1617,13 +1640,15 @@ void ControlBox::assembleTabStatus()
 		if (ui.checkBox_hidetethering->isChecked() ) {
 			ui.tableWidget_technologies->hideColumn(4);
 			ui.tableWidget_technologies->hideColumn(5);
+			ui.pushButton_IDPass->setHidden(true);
 		}
 		else { 
 			ui.tableWidget_technologies->showColumn(4);
 			ui.tableWidget_technologies->showColumn(5);
-		}     
+			ui.pushButton_IDPass->setHidden(false);
+		} 
+		    
     for (int row = 0; row < technologies_list.size(); ++row) {
-
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       st = technologies_list.at(row).objmap.value("Name").toString();
       qtwi00->setText(TranslateStrings::cmtr(st) );

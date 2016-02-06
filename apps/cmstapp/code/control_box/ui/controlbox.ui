@@ -270,6 +270,16 @@
              </spacer>
             </item>
             <item>
+             <widget class="QPushButton" name="pushButton_IDPass">
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To edit the ID and Password of a tethered WiFi device select the Wifi service then click this button.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>ID:Pass</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QCheckBox" name="checkBox_hidetethering">
               <property name="whatsThis">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked the tethering columns will be hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1780,6 +1790,14 @@
     <string>Offline Mode</string>
    </property>
   </action>
+  <action name="actionIDPass">
+   <property name="text">
+    <string>IDPass</string>
+   </property>
+   <property name="toolTip">
+    <string>Set ID and Password for tethered wifi</string>
+   </property>
+  </action>
  </widget>
  <tabstops>
   <tabstop>tabWidget</tabstop>
@@ -1824,12 +1842,12 @@
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>82</x>
-     <y>190</y>
+     <x>105</x>
+     <y>128</y>
     </hint>
     <hint type="destinationlabel">
      <x>163</x>
-     <y>536</y>
+     <y>480</y>
     </hint>
    </hints>
   </connection>
@@ -1840,11 +1858,11 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>410</x>
+     <x>376</x>
      <y>199</y>
     </hint>
     <hint type="destinationlabel">
-     <x>578</x>
+     <x>524</x>
      <y>201</y>
     </hint>
    </hints>
@@ -1856,11 +1874,11 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>410</x>
+     <x>376</x>
      <y>228</y>
     </hint>
     <hint type="destinationlabel">
-     <x>578</x>
+     <x>524</x>
      <y>230</y>
     </hint>
    </hints>
@@ -1872,11 +1890,11 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>410</x>
+     <x>376</x>
      <y>257</y>
     </hint>
     <hint type="destinationlabel">
-     <x>578</x>
+     <x>524</x>
      <y>259</y>
     </hint>
    </hints>
@@ -1888,11 +1906,11 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>410</x>
+     <x>376</x>
      <y>286</y>
     </hint>
     <hint type="destinationlabel">
-     <x>578</x>
+     <x>524</x>
      <y>288</y>
     </hint>
    </hints>
@@ -1904,11 +1922,11 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>410</x>
+     <x>376</x>
      <y>145</y>
     </hint>
     <hint type="destinationlabel">
-     <x>578</x>
+     <x>524</x>
      <y>146</y>
     </hint>
    </hints>
@@ -1924,7 +1942,7 @@
      <y>73</y>
     </hint>
     <hint type="destinationlabel">
-     <x>336</x>
+     <x>302</x>
      <y>53</y>
     </hint>
    </hints>
@@ -1937,11 +1955,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>131</x>
-     <y>190</y>
+     <y>128</y>
     </hint>
     <hint type="destinationlabel">
-     <x>410</x>
-     <y>443</y>
+     <x>376</x>
+     <y>388</y>
     </hint>
    </hints>
   </connection>
@@ -1953,7 +1971,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>117</x>
-     <y>498</y>
+     <y>427</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -1969,7 +1987,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>203</x>
-     <y>498</y>
+     <y>427</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -1984,8 +2002,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>611</x>
-     <y>318</y>
+     <x>112</x>
+     <y>283</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -2000,8 +2018,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>567</x>
-     <y>54</y>
+     <x>535</x>
+     <y>64</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -2016,12 +2034,28 @@
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>107</x>
-     <y>190</y>
+     <x>130</x>
+     <y>128</y>
     </hint>
     <hint type="destinationlabel">
-     <x>209</x>
-     <y>540</y>
+     <x>249</x>
+     <y>480</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_IDPass</sender>
+   <signal>clicked()</signal>
+   <receiver>actionIDPass</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>424</x>
+     <y>272</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
     </hint>
    </hints>
   </connection>
