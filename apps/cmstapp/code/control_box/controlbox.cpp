@@ -649,9 +649,8 @@ void ControlBox::connectPressed()
 	}
 	else return;	// really not needed 
 	
-	// don't know why, but can't get the Agent until the timeout, set a short one 
-	iface_serv->setTimeout(5);
-	shared::processReply(iface_serv->call(QDBus::AutoDetect, "Connect") );
+	iface_serv->setTimeout(50);
+	iface_serv->call(QDBus::AutoDetect, "Connect");
 	iface_serv->deleteLater();
 	return;  
 }
