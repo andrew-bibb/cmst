@@ -643,15 +643,18 @@ void ControlBox::connectPressed()
 
   if (qtw == ui.tableWidget_wifi) { 
 		iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+		iface_serv->setTimeout(5);
 	}
 	else if (qtw == ui.tableWidget_vpn) { 
 		iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);	 
 	}
 	else return;	// really not needed 
 	
-	iface_serv->setTimeout(50);
-	iface_serv->call(QDBus::AutoDetect, "Connect");
+	iface_serv->setTimeout(5);	// need a short timeout to get the Agent
+	QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
+	if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);
 	iface_serv->deleteLater();
+
 	return;  
 }
 
