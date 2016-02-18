@@ -372,7 +372,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
   connect(ui.toolButton_colorize, SIGNAL(clicked()), this, SLOT(callColorDialog()));
   connect(ui.lineEdit_colorize, SIGNAL(textChanged(const QString&)), this, SLOT(iconColorChanged(const QString&)));
-  
 
   // tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon.
@@ -2851,3 +2850,4 @@ void ControlBox::iconColorChanged(const QString& col)
 	
 	return;
 }
+

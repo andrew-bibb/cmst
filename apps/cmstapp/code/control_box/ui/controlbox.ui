@@ -23,6 +23,9 @@
    <bool>true</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_11">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetFixedSize</enum>
+   </property>
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="sizePolicy">
@@ -42,6 +45,9 @@
        <string>&amp;Status</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_3">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
        <item row="1" column="0">
         <widget class="QGroupBox" name="groupBox_global_properties">
          <property name="whatsThis">
@@ -474,6 +480,9 @@
        <string>&amp;Details</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
        <item>
         <widget class="QLabel" name="label_service">
          <property name="font">
@@ -600,6 +609,9 @@
        <string>&amp;Wireless</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_5">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
        <item row="2" column="0">
         <widget class="QTableWidget" name="tableWidget_wifi">
          <property name="whatsThis">
@@ -743,6 +755,9 @@
        <string>&amp;VPN</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_13">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
        <item row="0" column="0">
         <widget class="QGroupBox" name="groupBox_vpn_utils">
          <property name="title">
@@ -869,6 +884,9 @@
        <string>&amp;Counters</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_7">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
        <item row="1" column="0">
         <widget class="QLabel" name="label_counter_service_name">
          <property name="whatsThis">
@@ -905,7 +923,7 @@
                <x>0</x>
                <y>0</y>
                <width>528</width>
-               <height>168</height>
+               <height>150</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -961,7 +979,7 @@
                <x>0</x>
                <y>0</y>
                <width>528</width>
-               <height>167</height>
+               <height>149</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1027,10 +1045,13 @@
        <string>&amp;Preferences</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_14">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
        <item row="0" column="0">
         <widget class="QGroupBox" name="groupBox_preferencesinterface">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1446,6 +1467,12 @@
        </item>
        <item row="1" column="0">
         <widget class="QGroupBox" name="groupBox_systemtray">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="whatsThis">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the system tray are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
@@ -1541,12 +1568,6 @@
        </item>
        <item row="3" column="1" rowspan="2">
         <widget class="QGroupBox" name="groupBox_process">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
          <property name="whatsThis">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line.&lt;/p&gt;&lt;p&gt;Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
@@ -1626,6 +1647,9 @@
        <string>&amp;Help</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_6">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
        <item row="0" column="0">
         <widget class="QGroupBox" name="groupBox_about">
          <property name="title">
