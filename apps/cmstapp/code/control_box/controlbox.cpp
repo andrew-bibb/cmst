@@ -1652,9 +1652,9 @@ void ControlBox::assembleTabStatus()
       st = technologies_list.at(row).objmap.value("Name").toString();
       qtwi00->setText(TranslateStrings::cmtr(st) );
       qtwi00->setTextAlignment(Qt::AlignCenter);
-      ui.tableWidget_technologies->setItem(row, 0, qtwi00) ;
+      ui.tableWidget_technologies->setItem(row, 0, qtwi00);
 
-      QTableWidgetItem* qtwi01 = new QTableWidgetItem();
+      QTableWidgetItem* qtwi01 
       st = technologies_list.at(row).objmap.value("Type").toString();
       qtwi01->setText(TranslateStrings::cmtr(st) );
       qtwi01->setTextAlignment(Qt::AlignCenter);
