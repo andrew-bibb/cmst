@@ -48,6 +48,11 @@ license.path = /usr/share/licenses/cmst
 license.files = ./text/LICENSE
 INSTALLS += license
 
+# appdata
+appdata.path = /usr/share/appdata
+appdata.files = ./misc/appdata/cmst.appdata.xml
+INSTALLS += appdata
+
 # desktop file
 desktop.path = /usr/share/applications
 desktop.files = ./misc/desktop/cmst.desktop
