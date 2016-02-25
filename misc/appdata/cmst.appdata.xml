@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2013-2016 Andrew J Bibb -->
+<application>
+  <id type="desktop">cmst.desktop</id>
+  <metadata_license>CC0</metadata_license>
+  <project_license>MIT (Expat)</project_license>
+  <name>cmst</name>
+  <summary>A Qt based GUI front end for the connman connection manager with systemtray icon</summary>
+  <description>
+    <p>
+      Qt GUI for Connman with system tray icon. The program provides graphical user interface to control the connman daemon.
+      The connman daemon must be started as you normally would, this program just interfaces with that daemon.
+      You can see what technologies and services connman has found, and for wifi services an agent is registered to assist in
+      obtaining the information from you necessary to logon the wifi service. 
+    </p>
+  </description>
+  <screenshots>
+    <screenshot type="default">https://cloud.githubusercontent.com/assets/6935544/6433029/c8f5428a-c032-11e4-8959-b7c2560d4c03.png</screenshot>
+    <screenshot>https://cloud.githubusercontent.com/assets/6935544/6433032/c90476f6-c032-11e4-9f07-897a075ddc25.png</screenshot>
+    <screenshot>https://cloud.githubusercontent.com/assets/6935544/6433031/c901205a-c032-11e4-9caf-af1d2176d9fc.png</screenshot>
+    <screenshot>https://cloud.githubusercontent.com/assets/6935544/10594662/5a4e4a9e-769d-11e5-87b7-a6238acd3983.png</screenshot>
+  </screenshots>
+  <url type="homepage">https://github.com/andrew-bibb/cmst</url>
+  <updatecontact>Andrew Bibb@email_address_hidden</updatecontact>
+  <kudos>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+    <kudo>Notifications</kudo>
+  </kudos>
+  <keywords>
+    <keyword>audio</keyword>
+    <keyword>music</keyword>
+    <keyword>player</keyword>
+    <keyword>tag</keyword>
+    <keyword>library</keyword>
+  </keywords>
+</application>
