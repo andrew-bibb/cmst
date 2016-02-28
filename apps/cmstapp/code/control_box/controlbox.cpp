@@ -126,9 +126,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // setup the user interface
   ui.setupUi(this);
 
-  // install global event filter (used to disable showing tooltips)
-  qApp->installEventFilter(this);
-
 	// We need this if someone is running the program from the tray popup menu.
 	// The main UI is fine without it, but if you call up the agent dialog and then
 	// close that seems to be treated as the last window.
@@ -372,7 +369,15 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
   connect(ui.toolButton_colorize, SIGNAL(clicked()), this, SLOT(callColorDialog()));
   connect(ui.lineEdit_colorize, SIGNAL(textChanged(const QString&)), this, SLOT(iconColorChanged(const QString&)));
+  connect(ui.checkBox_enablesystemtraytooltips, SIGNAL(clicked()), this, SLOT(updateDisplayWidgets()));
 
+  // Install an event filter on all child widgets. Used to control 
+	// tooltip visibility 
+	QList<QWidget*> childlist = ui.tabWidget->findChildren<QWidget*>();
+	for (int i = 0; i < childlist.count(); ++i) {
+		childlist.at(i)->installEventFilter(this);
+	}	 
+ 
   // tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon.
   trayicon = 0;
@@ -401,8 +406,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     else {
       this->showNormal();
       QTimer::singleShot(timeout, this, SLOT(createSystemTrayIcon()) );
-    } // else showNormal
-   } // else
+		} // else showNormal
+  } // else 
 }
 
 ////////////////////////////////////////////////// Public Functions //////////////////////////////////
@@ -450,7 +455,6 @@ void ControlBox::aboutIconSet()
           "<br>Attribution-Share Alike 3.0"
           "<br>Unported License"
           "<br><a href=\"url\">http://creativecommons.org/licenses/by-sa/3.0/legalcode</a>"
-          "<br><center>The CMST icon is a derivative work from the AwOken icon set."
                   ) );
 }
 
@@ -1451,17 +1455,9 @@ void ControlBox::keyPressEvent(QKeyEvent* e)
 // in eventFilters return true eats the event, false passes on it.
 bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
 {
+	(void) obj;
+	
   if (evn->type() == QEvent::ToolTip) {
-    // first check if the object is the system tray icon
-    QString objname = obj->metaObject()->className();
-    if (objname.contains("QSystemTrayIconSys") ) {
-      if (ui.checkBox_enablesystemtraytooltips->isChecked())
-        return false;
-      else
-        return true;
-    } // if obj is QSystemTrayIconSys
-
-    // now check all the other interface widgets
     if (ui.checkBox_enableinterfacetooltips->isChecked())
       return false;
     else
@@ -1761,6 +1757,7 @@ void ControlBox::assembleTabWireless()
       } // else ready or any other state
       ql02->setAlignment(Qt::AlignCenter);
       ql02->setToolTip(TranslateStrings::cmtr(map.value("State").toString()) );
+      ql02->installEventFilter(this);
       ui.tableWidget_wifi->setCellWidget(rowcount, 2, ql02);
 
       QTableWidgetItem* qtwi03 = new QTableWidgetItem();
@@ -1863,6 +1860,7 @@ void ControlBox::assembleTabVPN()
 				} // else any other state
 			  ql02->setAlignment(Qt::AlignCenter);
 				ql02->setToolTip(TranslateStrings::cmtr(map.value("State").toString()) );
+				ql02->installEventFilter(this);
 				ui.tableWidget_vpn->setCellWidget(rowcount, 2, ql02);
 			}	// else not association 
 			
@@ -2023,7 +2021,10 @@ void ControlBox::assembleTrayIcon()
   trayicon->setIcon(prelimicon);
 
   //  Set the tool tip (shown when mouse hovers over the systemtrayicon)
-  trayicon->setToolTip(stt);
+  if (ui.checkBox_enablesystemtraytooltips->isChecked() )
+		trayicon->setToolTip(stt);
+	else
+		trayicon->setToolTip(QString());	
 
 	// Don't continue if we can't get properties
 	if ( (q8_errors & CMST::Err_Properties & CMST::Err_Technologies & CMST::Err_Services) != 0x00 ) return;
@@ -2386,7 +2387,7 @@ void ControlBox::createSystemTrayIcon()
 
 	// Restore the desktopAware
 	qApp->setDesktopSettingsAware(b_dtaware);
-
+	
   // Lastly update the display widgets (since this is actually the last
   // line of the constructor.)
   this->updateDisplayWidgets();
