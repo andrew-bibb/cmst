@@ -1654,7 +1654,7 @@ void ControlBox::assembleTabStatus()
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 0, qtwi00);
 
-      QTableWidgetItem* qtwi01 
+      QTableWidgetItem* qtwi01; 
       st = technologies_list.at(row).objmap.value("Type").toString();
       qtwi01->setText(TranslateStrings::cmtr(st) );
       qtwi01->setTextAlignment(Qt::AlignCenter);
