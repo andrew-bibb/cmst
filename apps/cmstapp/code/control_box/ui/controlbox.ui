@@ -1055,7 +1055,7 @@
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-68</y>
+            <y>0</y>
             <width>633</width>
             <height>539</height>
            </rect>
@@ -1934,6 +1934,166 @@
     <hint type="destinationlabel">
      <x>109</x>
      <y>536</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_rescan</sender>
+   <signal>clicked()</signal>
+   <receiver>actionRescan</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>82</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_movebefore</sender>
+   <signal>clicked()</signal>
+   <receiver>actionMove_Before</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>442</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_moveafter</sender>
+   <signal>clicked()</signal>
+   <receiver>actionMove_After</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>173</x>
+     <y>442</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_waittime</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBox_waittime</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>308</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>68</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_usestartoptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBox_startoptions</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>182</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>314</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_systemicontheme</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lineEdit_icontheme</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>145</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>576</x>
+     <y>145</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_faketranparency</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBox_faketransparency</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>286</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>576</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_devicesoff</sender>
+   <signal>clicked()</signal>
+   <receiver>actionOffline_Mode</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>601</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_counterkb</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>spinBox_counterkb</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>228</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>576</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_counterseconds</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>spinBox_counterrate</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>257</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>576</x>
+     <y>258</y>
     </hint>
    </hints>
   </connection>
