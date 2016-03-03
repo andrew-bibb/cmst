@@ -162,7 +162,6 @@ class ControlBox : public QDialog
     bool getServices();
     bool getArray(QList<arrayElement>&, const QDBusMessage&);
     bool getMap(QMap<QString,QVariant>&, const QDBusMessage&); 
-    static bool extractMapData(QMap<QString,QVariant>&,const QVariant&);
     void logErrors(const quint8&);
     QString readResourceText(const char*);
     void clearCounters();
@@ -185,9 +184,11 @@ class ControlBox : public QDialog
     void dbsTechnologyAdded(QDBusObjectPath, QVariantMap);
     void dbsTechnologyRemoved(QDBusObjectPath);
     void scanWiFi();
+    void wifiIDPass(const QString& obj_path = QString() );
     void toggleOfflineMode(bool);
     void toggleTrayIcon(bool);
     void togglePowered(QString, bool);
+    void toggleTethered(QString, bool);
     void minMaxWindow(QAction* = 0);
     void techSubmenuTriggered(QAction* = 0);
     void infoSubmenuTriggered(QAction* = 0);

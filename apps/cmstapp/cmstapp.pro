@@ -41,6 +41,7 @@ HEADERS		+= ./code/vpn_agent/vpnagent.h
 HEADERS		+= ./code/vpn_agent/vpnagent_dialog.h
 HEADERS		+= ./code/vpn_agent/vpnagent_adaptor.h
 HEADERS		+= ./code/vpn_agent/vpnagent_interface.h
+HEADERS		+= ./code/shared/shared.h
 
 #	forms
 FORMS		+= ./code/control_box/ui/controlbox.ui
@@ -68,6 +69,7 @@ SOURCES += ./code/vpn_agent/vpnagent.cpp
 SOURCES += ./code/vpn_agent/vpnagent_dialog.cpp
 SOURCES	+= ./code/vpn_agent/vpnagent_adaptor.cpp
 SOURCES	+= ./code/vpn_agent/vpnagent_interface.cpp
+SOURCES += ./code/shared/shared.cpp
 
 #	resource files
 RESOURCES 	+= ../../cmst.qrc
