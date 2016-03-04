@@ -376,6 +376,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.toolButton_colorize, SIGNAL(clicked()), this, SLOT(callColorDialog()));
   connect(ui.lineEdit_colorize, SIGNAL(textChanged(const QString&)), this, SLOT(iconColorChanged(const QString&)));
   connect(ui.checkBox_enablesystemtraytooltips, SIGNAL(clicked()), this, SLOT(updateDisplayWidgets()));
+  connect(ui.pushButton_IDPass, SIGNAL(clicked()), this, SLOT(wifiIDPass()));
 
   // Install an event filter on all child widgets. Used to control 
 	// tooltip visibility 
@@ -1229,7 +1230,7 @@ void ControlBox::togglePowered(QString object_id, bool checkstate)
 
 //
 // Slot to toggle the tethering state of a technology
-//  Called when our custom idButton in the powered cell in the page 1 technology tableWidget is clicked
+//  Called when our custom idButton in the tethered cell in the page 1 technology tableWidget is clicked
 void ControlBox::toggleTethered(QString object_id, bool checkstate)
 {
 	QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
