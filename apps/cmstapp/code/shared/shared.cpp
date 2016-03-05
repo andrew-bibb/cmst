@@ -98,6 +98,7 @@ shared::ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
   // build the dialog
   label = new QLabel(this);
   lineedit = new QLineEdit(this);
+  lineedit->setClearButtonEnabled(true);
  
   buttonbox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
   buttonbox->button(QDialogButtonBox::Ok)->setDisabled(true);	// disable OK until input validates
@@ -128,8 +129,8 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
   QString s_int		= "[0-9]*";
   QString s_dom   = "[0-9a-zA-Z]*[\\.]?[0-9a-zA-Z]*";
   QString s_wd    = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
-  QString s_ch		= "[^\\s]";
-  QString s_start = (plural ? "\\s?|(" : "\\s?|^");
+  QString s_ch		= "\\S";
+  QString s_start = (plural ? "\\s?|(" : "^");
   QString s_end   = (plural ? "(\\s*[,|;|\\s]\\s*))+" : "$");
   
   switch (vd){
@@ -207,9 +208,11 @@ void shared::ValidatingDialog::textChanged()
 // Called when dialog finished() signal is triggered
 void shared::ValidatingDialog::initialize()
 {
+	lineedit->clear();
 	lineedit->setValidator(0);
 	lineedit->setInputMask(QString());
 	lineedit->setModified(false);
+	lineedit->setFocus(Qt::OtherFocusReason);
 	buttonbox->button(QDialogButtonBox::Ok)->setDisabled(true);
 	
 	return;
