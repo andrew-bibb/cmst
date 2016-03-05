@@ -30,7 +30,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QVBoxLayout>
 # include <QRegularExpression>
 # include <QRegularExpressionValidator>
-# include <QPushButton>
 
 # include "../resource.h"
 # include "./shared.h"
@@ -91,12 +90,15 @@ bool shared::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r_var
 
 //
 // Validating Dialog - an input dialog knockoff with a validated lineedit.
-// ValidatingDialog function
+// In addition to the usual input validation the dialog will only enable 
+// the OK button when the input is completely validated.. 
+// Constructor
 shared::ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
 {
   // build the dialog
   label = new QLabel(this);
   lineedit = new QLineEdit(this);
+ 
   buttonbox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
   buttonbox->button(QDialogButtonBox::Ok)->setDisabled(true);	// disable OK until input validates
   this->setSizeGripEnabled(true);
@@ -110,7 +112,8 @@ shared::ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
   // signals and slots
   connect(buttonbox, SIGNAL(accepted()), this, SLOT(accept()));
   connect(buttonbox, SIGNAL(rejected()), this, SLOT(reject()));
-  connect(lineedit, SIGNAL(textEdited(QString)), this, SLOT(textEdited()));
+  connect(lineedit, SIGNAL(textChanged(QString)), this, SLOT(textChanged()));
+  connect(lineedit, SIGNAL(returnPressed()), this, SLOT(accept()));
 }
 
 // Slot to set the lineedit validator. If plural is true multiple values can
@@ -170,11 +173,16 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
       QRegularExpressionValidator* lev_wd = new QRegularExpressionValidator(rxwd, this);
       lineedit->setValidator(lev_wd); }
       break;
-    case CMST::ValDialog_8Char: {
+    case CMST::ValDialog_min1ch: {
+			QRegularExpression rx1char(s_start + s_ch + "{1,}" + s_end);
+			QRegularExpressionValidator* lev_1char = new QRegularExpressionValidator(rx1char, this);
+			lineedit->setValidator(lev_1char); }
+			break;    
+		case CMST::ValDialog_min8ch: {
 			QRegularExpression rx8char(s_start + s_ch + "{8,}" + s_end);
 			QRegularExpressionValidator* lev_8char = new QRegularExpressionValidator(rx8char, this);
 			lineedit->setValidator(lev_8char); }
-			break;        
+			break; 
     default:
       lineedit->setValidator(0);
       break;
@@ -185,15 +193,24 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
 
 //
 // Slot to check if the text can be validated
-// Called when the lineedit emits a textEdited() signal
-void shared::ValidatingDialog::textEdited()
+// Called when the lineedit emits a textChanged() signal
+void shared::ValidatingDialog::textChanged()
 {
 	// enable OK button if text can be validated
-	if (lineedit->hasAcceptableInput() )
-		buttonbox->button(QDialogButtonBox::Ok)->setEnabled(true);	
-
-
+	buttonbox->button(QDialogButtonBox::Ok)->setEnabled(lineedit->hasAcceptableInput() );
+	
 	return;
 }
 
-
+//
+// Slot to initialize the dialog children
+// Called when dialog finished() signal is triggered
+void shared::ValidatingDialog::initialize()
+{
+	lineedit->setValidator(0);
+	lineedit->setInputMask(QString());
+	lineedit->setModified(false);
+	buttonbox->button(QDialogButtonBox::Ok)->setDisabled(true);
+	
+	return;
+}

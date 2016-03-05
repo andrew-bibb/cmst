@@ -91,7 +91,8 @@ namespace CMST
     ValDialog_Int			= 0x06,
     ValDialog_Dom     = 0x07,
     ValDialog_Wd      = 0x08,
-    ValDialog_8Char		= 0x09,
+    ValDialog_min1ch	= 0x09,
+    ValDialog_min8ch	= 0x0a,
     
   };	// enum
 } // namespace CMST

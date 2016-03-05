@@ -36,6 +36,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QDialogButtonBox>
 # include <QLineEdit>
 # include <QLabel>
+# include <QPushButton>
 
 namespace shared {
 //
@@ -48,12 +49,14 @@ class ValidatingDialog : public QDialog
     ValidatingDialog(QWidget*);
     inline void setLabel(const QString& s) {label->setText(s);}
     void setValidator(const int&, bool plural = false);
-    inline QString getText() {return lineedit->text();}
-    inline void clear() {lineedit->clear();}
+    inline QString getText() {return lineedit->text().trimmed();}
+    inline void setText(const QString& s) {lineedit->setText(s);}
+    inline void clear() {initialize();}
     inline bool isPlural() {return plural;}
     
   private slots:
-		void textEdited();
+		void textChanged();
+		void initialize();
   
   private:  
     // members

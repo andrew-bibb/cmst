@@ -1150,26 +1150,29 @@ void ControlBox::wifiIDPass(const QString& obj_path)
 	for (int row = 0; row < technologies_list.size(); ++row) {
 		if (technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
 				if (technologies_list.at(row).objpath.path() == obj_path || obj_path.isEmpty() ) {
-					QString sid;
-					QString spw;
-					bool ok;
 					QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
 	
-					sid = QInputDialog::getText(this, 
-						tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
-						tr("<b>Technology: %1</b><p>Please enter the WiFi AP SSID that clients will<br>have to join in order to gain internet connectivity.").arg(technologies_list.at(row).objpath.path() ),
-						QLineEdit::Normal,
-						technologies_list.at(row).objmap.value("TetheringIdentifier").toString(),
-						&ok);
-					if (ok) {
-						shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringIdentifier", QVariant::fromValue(QDBusVariant(sid))) );		
-					}	// if ok
-	
-					shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
-					vd->setLabel(tr("<b>Technology: %1</b><p>Please enter the WPA pre-shared key clients will<br>have to use in order to establish a connection.<p>PSK length: minimum of 8 characters.").arg(technologies_list.at(row).objpath.path()) );
-					vd->setValidator(CMST::ValDialog_8Char);
-					if (vd->exec() == QDialog::Accepted) 
-						shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringPassphrase", QVariant::fromValue(QDBusVariant(spw))) );		
+					shared::ValidatingDialog* vd01 = new shared::ValidatingDialog(this);
+					vd01->setLabel(tr("<b>Technology: %1</b><p>Please enter the WiFi AP SSID that clients will<br>have to join in order to gain internet connectivity.").arg(technologies_list.at(row).objpath.path()) ),
+					vd01->setValidator(CMST::ValDialog_min1ch);					
+					vd01->setText(technologies_list.at(row).objmap.value("TetheringIdentifier").toString() );
+					if (vd01->exec() == QDialog::Accepted) {
+						if (vd01->getText() !=  technologies_list.at(row).objmap.value("TetheringIdentifier").toString()) {
+							shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringIdentifier", QVariant::fromValue(QDBusVariant(vd01->getText()))) );		
+						}
+					}	// if accepted
+					vd01->deleteLater();
+					
+					if (! technologies_list.at(row).objmap.value("TetheringIdentifier").toString().isEmpty() ) {
+						shared::ValidatingDialog* vd02 = new shared::ValidatingDialog(this);
+						vd02->setLabel(tr("<b>Technology: %1</b><p>Please enter the WPA pre-shared key clients will<br>have to use in order to establish a connection.<p>PSK length: minimum of 8 characters.").arg(technologies_list.at(row).objpath.path()) );
+						vd02->setValidator(CMST::ValDialog_min8ch);
+						vd02->setText(technologies_list.at(row).objmap.value("TetheringPassphrase").toString() );
+						if (vd02->exec() == QDialog::Accepted) 
+							if (vd02->getText() != technologies_list.at(row).objmap.value("TetheringPassphrase").toString() )
+								shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringPassphrase", QVariant::fromValue(QDBusVariant(vd02->getText()))) );		
+						vd02->deleteLater();
+					}	// if 
 					
 					// cleanup
 					iface_tech->deleteLater();
