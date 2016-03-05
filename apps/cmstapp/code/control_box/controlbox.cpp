@@ -36,7 +36,7 @@ DEALINGS IN THE SOFTWARE.
  * 
 ***********************************************************************/																								 
 
-# include <QtCore/QDebug>
+
 # include <QDBusArgument>
 
 # include <QTableWidget>
@@ -1165,15 +1165,11 @@ void ControlBox::wifiIDPass(const QString& obj_path)
 						shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringIdentifier", QVariant::fromValue(QDBusVariant(sid))) );		
 					}	// if ok
 	
-					spw = QInputDialog::getText(this, 
-						tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
-						tr("<b>Technology: %1</b><p>Please enter the WPA pre-shared key clients will<br>have to use in order to establish a connection.<p>PSK length: minimum of 8 characters.").arg(technologies_list.at(row).objpath.path() ),
-						QLineEdit::Normal,
-						technologies_list.at(row).objmap.value("TetheringPassphrase").toString(),
-						&ok);
-					if (ok) {
+					shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
+					vd->setLabel(tr("<b>Technology: %1</b><p>Please enter the WPA pre-shared key clients will<br>have to use in order to establish a connection.<p>PSK length: minimum of 8 characters.").arg(technologies_list.at(row).objpath.path()) );
+					vd->setValidator(CMST::ValDialog_8Char);
+					if (vd->exec() == QDialog::Accepted) 
 						shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringPassphrase", QVariant::fromValue(QDBusVariant(spw))) );		
-					}	// if ok
 					
 					// cleanup
 					iface_tech->deleteLater();

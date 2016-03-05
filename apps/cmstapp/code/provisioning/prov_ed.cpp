@@ -26,8 +26,6 @@ DEALINGS IN THE SOFTWARE.
 ***********************************************************************/
 
 # include <QtCore/QDebug>
-# include <QRegularExpression>
-# include <QRegularExpressionValidator>
 # include <QDBusMessage>
 # include <QDBusConnection>
 # include <QDBusInterface>
@@ -42,90 +40,9 @@ DEALINGS IN THE SOFTWARE.
 # include "./prov_ed.h"
 # include "../resource.h"
 # include "./code/trstring/tr_strings.h"
-
-ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
-{
-  // build the dialog
-  label = new QLabel(this);
-  lineedit = new QLineEdit(this);
-  buttonbox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
-  this->setSizeGripEnabled(true);
-  
-  QVBoxLayout* vboxlayout = new QVBoxLayout;
-  vboxlayout->addWidget(label);
-  vboxlayout->addWidget(lineedit);
-  vboxlayout->addWidget(buttonbox);
-  this->setLayout(vboxlayout);
-
-  // signals and slots
-  connect(buttonbox, SIGNAL(accepted()), this, SLOT(accept()));
-  connect(buttonbox, SIGNAL(rejected()), this, SLOT(reject()));
-}
-
-// Slot to set the lineedit validator
-void ValidatingDialog::setValidator(const int& vd, bool plural)
-{
-  // setup a switch to set the validator
-  QString s_ip4   = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
-  QString s_ip6   = "(?:[0-9a-fA-F]{1,4})";
-  QString s_mac   = "(?:[0-9a-fA-F]{1,2})";
-  QString s_hex   = "[0-9a-fA-F]*";
-  QString s_int		= "[0-9]*";
-  QString s_dom   = "[0-9a-zA-Z]*[\\.]?[0-9a-zA-Z]*";
-  QString s_wd    = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
-  QString s_start = (plural ? "\\s?|(" : "\\s?|^");
-  QString s_end   = (plural ? "(\\s*[,|;|\\s]\\s*))+" : "$");
-  
-  switch (vd){
-    case CMST::ProvEd_Vd_IPv4: {
-      QRegularExpression rx4(s_start + s_ip4 + "(?:\\." + s_ip4 + "){3}" + s_end);
-      QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
-      lineedit->setValidator(lev_4); }
-      break;
-    case CMST::ProvEd_Vd_IPv6: {
-      QRegularExpression rx6(s_start + s_ip6 + "(?::" + s_ip6 + "){7}" + s_end);
-      QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
-      lineedit->setValidator(lev_6); }
-      break;
-    case CMST::ProvEd_Vd_MAC: {
-      QRegularExpression rxm(s_start + s_mac + "(?::" + s_mac + "){5}" + s_end);
-      QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rxm, this); 
-      lineedit->setValidator(lev_m); }
-      break;
-    case CMST::ProvEd_Vd_46: {
-      QRegularExpression rx46(s_start + "(" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})" + s_end);    
-      QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);  
-      lineedit->setValidator(lev_46); }
-      break;  
-    case CMST::ProvEd_Vd_Hex: {
-      QRegularExpression rxh(s_start + s_hex + s_end);
-      QRegularExpressionValidator* lev_h = new QRegularExpressionValidator(rxh, this);
-      lineedit->setValidator(lev_h); }
-      break;
-    case CMST::ProvEd_Vd_Int: {
-			QRegularExpression rxint(s_start + s_int + s_end);
-      QRegularExpressionValidator* lev_int = new QRegularExpressionValidator(rxint, this);
-      lineedit->setValidator(lev_int); }
-      break;		  
-    case CMST::ProvEd_Vd_Dom: {
-      QRegularExpression rxdom(s_start + s_dom + s_end);
-      QRegularExpressionValidator* lev_dom = new QRegularExpressionValidator(rxdom, this);
-      lineedit->setValidator(lev_dom); }
-      break;
-    case CMST::ProvEd_Vd_Wd: {
-      QRegularExpression rxwd(s_start + s_wd + s_end);
-      QRegularExpressionValidator* lev_wd = new QRegularExpressionValidator(rxwd, this);
-      lineedit->setValidator(lev_wd); }
-      break;        
-    default:
-      lineedit->setValidator(0);
-      break;
-    } // switch     
-    
-  return;
-}
-   
-
+# include "./code/shared/shared.h"
+//
+// Provisioning Editor constructor
 ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
 {
   // Setup the user interface
@@ -301,16 +218,16 @@ void ProvisioningEditor::inputValidated(QAction* act)
   QString key = act->text();
   
   // create the dialog
-  ValidatingDialog* vd = new ValidatingDialog(this);
+  shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
   
   // create some prompts and set validator
-  if (act == ui.actionServiceMAC) {vd->setLabel(tr("MAC address.")); vd->setValidator(CMST::ProvEd_Vd_MAC);}
-  if (act == ui.actionWifiSSID) {vd->setLabel(tr("SSID: hexadecimal representation of an 802.11 SSID")); vd->setValidator(CMST:: ProvEd_Vd_Hex);}
-  if (act == ui.actionServiceNameServers) {vd->setLabel(tr("List of Nameservers")); vd->setValidator(CMST::ProvEd_Vd_46, true);}
-  if (act == ui.actionServiceTimeServers) {vd->setLabel(tr("List of Timeservers")); vd->setValidator(CMST::ProvEd_Vd_46, true);}
-  if (act == ui.actionServiceSearchDomains) {vd->setLabel(tr("List of DNS Search Domains")); vd->setValidator(CMST::ProvEd_Vd_Dom, true);}
-  if (act == ui.actionServiceDomain) {vd->setLabel(tr("Domain name to be used")); vd->setValidator(CMST::ProvEd_Vd_Dom);}
-  if (act == ui.actionWifiName) {vd->setLabel(tr("Enter the string representation of an 802.11 SSID.")); vd->setValidator(CMST::ProvEd_Vd_Wd);}
+  if (act == ui.actionServiceMAC) {vd->setLabel(tr("MAC address.")); vd->setValidator(CMST::ValDialog_MAC);}
+  if (act == ui.actionWifiSSID) {vd->setLabel(tr("SSID: hexadecimal representation of an 802.11 SSID")); vd->setValidator(CMST:: ValDialog_Hex);}
+  if (act == ui.actionServiceNameServers) {vd->setLabel(tr("List of Nameservers")); vd->setValidator(CMST::ValDialog_46, true);}
+  if (act == ui.actionServiceTimeServers) {vd->setLabel(tr("List of Timeservers")); vd->setValidator(CMST::ValDialog_46, true);}
+  if (act == ui.actionServiceSearchDomains) {vd->setLabel(tr("List of DNS Search Domains")); vd->setValidator(CMST::ValDialog_Dom, true);}
+  if (act == ui.actionServiceDomain) {vd->setLabel(tr("Domain name to be used")); vd->setValidator(CMST::ValDialog_Dom);}
+  if (act == ui.actionWifiName) {vd->setLabel(tr("Enter the string representation of an 802.11 SSID.")); vd->setValidator(CMST::ValDialog_Wd);}
   
   // if accepted put an entry in the textedit
   if (vd->exec() == QDialog::Accepted) {
@@ -425,19 +342,19 @@ void ProvisioningEditor::ipv4Triggered(QAction* act)
                                         "<p>Press OK when you are ready to proceed."),
                                         QMessageBox::Ok | QMessageBox::Abort,QMessageBox::Ok);
     if (but == QMessageBox::Ok) {
-      ValidatingDialog* vd = new ValidatingDialog(this);
+      shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
       vd->setLabel(tr("IPv4 Address"));
-      vd->setValidator(CMST::ProvEd_Vd_IPv4);
+      vd->setValidator(CMST::ValDialog_IPv4);
       if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
         val = vd->getText();
         vd->clear();
         vd->setLabel(tr("IPv4 Netmask")); 
-        vd->setValidator(CMST::ProvEd_Vd_IPv4);
+        vd->setValidator(CMST::ValDialog_IPv4);
         if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
           val.append("/" + vd->getText() );
           vd->clear();
           vd->setLabel(tr("IPv4 Gateway (This is an optional entry)")); 
-          vd->setValidator(CMST::ProvEd_Vd_IPv4);
+          vd->setValidator(CMST::ValDialog_IPv4);
           if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) { 
             val.append("/" + vd->getText() );
           } // if gateway accpted
@@ -470,9 +387,9 @@ void ProvisioningEditor::ipv6Triggered(QAction* act)
                                         "<p>Press OK when you are ready to proceed."),
                                         QMessageBox::Ok | QMessageBox::Abort,QMessageBox::Ok);
     if (but == QMessageBox::Ok) {
-      ValidatingDialog* vd = new ValidatingDialog(this);
+      shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
       vd->setLabel(tr("IPv6 Address"));
-      vd->setValidator(CMST::ProvEd_Vd_IPv6);
+      vd->setValidator(CMST::ValDialog_IPv6);
       if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
         val = vd->getText();
         int i = QInputDialog::getInt(this,
@@ -482,9 +399,9 @@ void ProvisioningEditor::ipv6Triggered(QAction* act)
           &ok);
         if (ok) {
           val.append(QString("/%1").arg(i) );
-          ValidatingDialog* vd = new ValidatingDialog(this);
+          shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
           vd->setLabel(tr("IPv6 Gateway (This is an optional entry)")); 
-          vd->setValidator(CMST::ProvEd_Vd_IPv6);
+          vd->setValidator(CMST::ValDialog_IPv6);
           if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
             val.append(QString("/" + vd->getText()) );
           } // if gateway was accepted

@@ -41,9 +41,9 @@ DEALINGS IN THE SOFTWARE.
 # include <QProcessEnvironment>
 
 # include "./vpn_ed.h"
-# include "./code/provisioning/prov_ed.h"	// use ValidatingDialog from ProvEd
 # include "../resource.h"
 # include "./code/trstring/tr_strings.h"
+# include "./code/shared/shared.h"
    
 //
 // This class is derived from the ProvisioningEditor class, and in fact
@@ -398,28 +398,28 @@ void VPN_Editor::inputValidated(QAction* act, QString key)
   if (key.isEmpty() ) key = act->text();
   
   // create the dialog
-  ValidatingDialog* vd = new ValidatingDialog(this);
+  shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
   
   // create some prompts and set validator
-  if (key == "Host") {vd->setLabel(tr("VPN server IP address (ex: 1.2.3.4)")), vd->setValidator(CMST::ProvEd_Vd_46, false);}
+  if (key == "Host") {vd->setLabel(tr("VPN server IP address (ex: 1.2.3.4)")), vd->setValidator(CMST::ValDialog_46, false);}
   else vd->setLabel(act->toolTip() );
   
-  if (act == ui.actionPPPD_EchoFailure) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-	if (act == ui.actionPPPD_EchoInterval) vd->setValidator(CMST::ProvEd_Vd_Int, false);	  
-  if (act == ui.actionL2TP_BPS) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-  if (act == ui.actionL2TP_TXBPS) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-  if (act == ui.actionL2TP_RXBPS) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-  if (act == ui.actionL2TP_TunnelRWS) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-  if (act == ui.actionL2TP_RedialTImeout) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-  if (act == ui.actionL2TP_MaxRedials) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-  if (act == ui.actionL2TP_ListenAddr) vd->setValidator(CMST::ProvEd_Vd_46, false);
-  if (act == ui.actionVPNC_LocalPort) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-  if (act == ui.actionVPNC_CiscoPort) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-  if (act == ui.actionVPNC_DPDTimeout) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-  if (act == ui.actionOpenVPN_MTU) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-  if (act == ui.actionOpenVPN_Port) vd->setValidator(CMST::ProvEd_Vd_Int, false);
-  if (act == ui.actionOpenConnect_ServerCert) vd->setValidator(CMST:: ProvEd_Vd_Hex, false);
-  if (act == ui.actionOpenConnect_VPNHost) vd->setValidator(CMST::ProvEd_Vd_46, false);
+  if (act == ui.actionPPPD_EchoFailure) vd->setValidator(CMST::ValDialog_Int, false);
+	if (act == ui.actionPPPD_EchoInterval) vd->setValidator(CMST::ValDialog_Int, false);	  
+  if (act == ui.actionL2TP_BPS) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionL2TP_TXBPS) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionL2TP_RXBPS) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionL2TP_TunnelRWS) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionL2TP_RedialTImeout) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionL2TP_MaxRedials) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionL2TP_ListenAddr) vd->setValidator(CMST::ValDialog_46, false);
+  if (act == ui.actionVPNC_LocalPort) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionVPNC_CiscoPort) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionVPNC_DPDTimeout) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionOpenVPN_MTU) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionOpenVPN_Port) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionOpenConnect_ServerCert) vd->setValidator(CMST:: ValDialog_Hex, false);
+  if (act == ui.actionOpenConnect_VPNHost) vd->setValidator(CMST::ValDialog_46, false);
 
   // if accepted put an entry in the textedit
   if (vd->exec() == QDialog::Accepted) {

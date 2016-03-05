@@ -1,3 +1,4 @@
+
 /**************************** shared.h ***************************
 Functions shared across various classes
 
@@ -32,8 +33,35 @@ DEALINGS IN THE SOFTWARE.
 # include <QtDBus/QDBusArgument>
 # include <QString>
 # include <QVariant>
+# include <QDialogButtonBox>
+# include <QLineEdit>
+# include <QLabel>
 
 namespace shared {
+//
+// Class for an QInputDialog knockoff with validator
+class ValidatingDialog : public QDialog
+{
+  Q_OBJECT
+  
+  public:
+    ValidatingDialog(QWidget*);
+    inline void setLabel(const QString& s) {label->setText(s);}
+    void setValidator(const int&, bool plural = false);
+    inline QString getText() {return lineedit->text();}
+    inline void clear() {lineedit->clear();}
+    inline bool isPlural() {return plural;}
+    
+  private slots:
+		void textEdited();
+  
+  private:  
+    // members
+    QLabel* label;
+    QLineEdit* lineedit;
+    QDialogButtonBox* buttonbox;
+    bool plural;
+};
 
 QDBusMessage::MessageType processReply(const QDBusMessage& reply);
 bool extractMapData(QMap<QString,QVariant>&,const QVariant&);

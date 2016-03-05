@@ -35,38 +35,11 @@ DEALINGS IN THE SOFTWARE.
 # include <QStatusBar>
 # include <QActionGroup>
 # include <QButtonGroup>
-# include <QLabel>
-# include <QLineEdit>
-# include <QDialogButtonBox>
 # include <QString>
 # include <QStringList>
 # include <QtDBus/QtDBus>
 
 # include "ui_provisioning_editor.h"
-
-
-//
-// Class for an QInputDialog knockoff with validator
-class ValidatingDialog : public QDialog
-{
-  Q_OBJECT
-  
-  public:
-    ValidatingDialog(QWidget*);
-    inline void setLabel(const QString& s) {label->setText(s);}
-    inline QString getText() {return lineedit->text();}
-    inline void clear() {lineedit->clear();}
-    void setValidator(const int&, bool plural = false);
-    inline bool isPlural() {return plural;}
-  
-  private:
-    // members
-    QLabel* label;
-    QLineEdit* lineedit;
-    QDialogButtonBox* buttonbox;
-    bool plural;
-};
-
 
 //  The class to control the properties editor UI based on a QDialog
 class ProvisioningEditor : public QDialog

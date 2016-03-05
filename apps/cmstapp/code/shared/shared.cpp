@@ -19,13 +19,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
 OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+LIABILITY, WHETHER IN AN ACTION OF C
+* ONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/
 
+# include <QtCore/QDebug>
 # include <QCoreApplication>
+# include <QVBoxLayout>
+# include <QRegularExpression>
+# include <QRegularExpressionValidator>
+# include <QPushButton>
 
+# include "../resource.h"
 # include "./shared.h"
 # include "./code/trstring/tr_strings.h"
 
@@ -80,6 +87,113 @@ bool shared::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r_var
 
     qdba.endMap();
     return true;
+}
+
+//
+// Validating Dialog - an input dialog knockoff with a validated lineedit.
+// ValidatingDialog function
+shared::ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
+{
+  // build the dialog
+  label = new QLabel(this);
+  lineedit = new QLineEdit(this);
+  buttonbox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
+  buttonbox->button(QDialogButtonBox::Ok)->setDisabled(true);	// disable OK until input validates
+  this->setSizeGripEnabled(true);
+  
+  QVBoxLayout* vboxlayout = new QVBoxLayout;
+  vboxlayout->addWidget(label);
+  vboxlayout->addWidget(lineedit);
+  vboxlayout->addWidget(buttonbox);
+  this->setLayout(vboxlayout);
+
+  // signals and slots
+  connect(buttonbox, SIGNAL(accepted()), this, SLOT(accept()));
+  connect(buttonbox, SIGNAL(rejected()), this, SLOT(reject()));
+  connect(lineedit, SIGNAL(textEdited(QString)), this, SLOT(textEdited()));
+}
+
+// Slot to set the lineedit validator. If plural is true multiple values can
+// be supplied separated by comma, semi-colon or white space
+void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
+{
+  // setup a switch to set the validator
+  QString s_ip4   = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
+  QString s_ip6   = "(?:[0-9a-fA-F]{1,4})";
+  QString s_mac   = "(?:[0-9a-fA-F]{1,2})";
+  QString s_hex   = "[0-9a-fA-F]*";
+  QString s_int		= "[0-9]*";
+  QString s_dom   = "[0-9a-zA-Z]*[\\.]?[0-9a-zA-Z]*";
+  QString s_wd    = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
+  QString s_ch		= "[^\\s]";
+  QString s_start = (plural ? "\\s?|(" : "\\s?|^");
+  QString s_end   = (plural ? "(\\s*[,|;|\\s]\\s*))+" : "$");
+  
+  switch (vd){
+    case CMST::ValDialog_IPv4: {
+      QRegularExpression rx4(s_start + s_ip4 + "(?:\\." + s_ip4 + "){3}" + s_end);
+      QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
+      lineedit->setValidator(lev_4); }
+      break;
+    case CMST::ValDialog_IPv6: {
+      QRegularExpression rx6(s_start + s_ip6 + "(?::" + s_ip6 + "){7}" + s_end);
+      QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
+      lineedit->setValidator(lev_6); }
+      break;
+    case CMST::ValDialog_MAC: {
+      QRegularExpression rxm(s_start + s_mac + "(?::" + s_mac + "){5}" + s_end);
+      QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rxm, this); 
+      lineedit->setValidator(lev_m); }
+      break;
+    case CMST::ValDialog_46: {
+      QRegularExpression rx46(s_start + "(" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})" + s_end);    
+      QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);  
+      lineedit->setValidator(lev_46); }
+      break;  
+    case CMST::ValDialog_Hex: {
+      QRegularExpression rxh(s_start + s_hex + s_end);
+      QRegularExpressionValidator* lev_h = new QRegularExpressionValidator(rxh, this);
+      lineedit->setValidator(lev_h); }
+      break;
+    case CMST::ValDialog_Int: {
+			QRegularExpression rxint(s_start + s_int + s_end);
+      QRegularExpressionValidator* lev_int = new QRegularExpressionValidator(rxint, this);
+      lineedit->setValidator(lev_int); }
+      break;		  
+    case CMST::ValDialog_Dom: {
+      QRegularExpression rxdom(s_start + s_dom + s_end);
+      QRegularExpressionValidator* lev_dom = new QRegularExpressionValidator(rxdom, this);
+      lineedit->setValidator(lev_dom); }
+      break;
+    case CMST::ValDialog_Wd: {
+      QRegularExpression rxwd(s_start + s_wd + s_end);
+      QRegularExpressionValidator* lev_wd = new QRegularExpressionValidator(rxwd, this);
+      lineedit->setValidator(lev_wd); }
+      break;
+    case CMST::ValDialog_8Char: {
+			QRegularExpression rx8char(s_start + s_ch + "{8,}" + s_end);
+			QRegularExpressionValidator* lev_8char = new QRegularExpressionValidator(rx8char, this);
+			lineedit->setValidator(lev_8char); }
+			break;        
+    default:
+      lineedit->setValidator(0);
+      break;
+    } // switch     
+    
+  return;
+}
+
+//
+// Slot to check if the text can be validated
+// Called when the lineedit emits a textEdited() signal
+void shared::ValidatingDialog::textEdited()
+{
+	// enable OK button if text can be validated
+	if (lineedit->hasAcceptableInput() )
+		buttonbox->button(QDialogButtonBox::Ok)->setEnabled(true);	
+
+
+	return;
 }
 
 

@@ -81,16 +81,18 @@ namespace CMST
     ProvEd_File_Delete  = (1 << 1),
     ProvEd_File_Write   = (1 << 2),
     
-    // provisioning editor validator input
-    ProvEd_Vd_None    = 0x00,
-    ProvEd_Vd_IPv4    = 0x01,
-    ProvEd_Vd_IPv6    = 0x02,
-    ProvEd_Vd_MAC     = 0x03,
-    ProvEd_Vd_46      = 0x04,
-    ProvEd_Vd_Hex     = 0x05,
-    ProvEd_Vd_Int			= 0x06,
-    ProvEd_Vd_Dom     = 0x07,
-    ProvEd_Vd_Wd      = 0x08,
+    // validating dialog validator input
+    ValDialog_None    = 0x00,
+    ValDialog_IPv4    = 0x01,
+    ValDialog_IPv6    = 0x02,
+    ValDialog_MAC     = 0x03,
+    ValDialog_46      = 0x04,
+    ValDialog_Hex     = 0x05,
+    ValDialog_Int			= 0x06,
+    ValDialog_Dom     = 0x07,
+    ValDialog_Wd      = 0x08,
+    ValDialog_8Char		= 0x09,
+    
   };	// enum
 } // namespace CMST
 
