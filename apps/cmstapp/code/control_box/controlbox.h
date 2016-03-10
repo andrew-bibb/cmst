@@ -112,7 +112,7 @@ class ControlBox : public QDialog
   private:
   // members 
     Ui::ControlBox ui;
-    quint8 q8_errors;
+    quint16 q16_errors;
     QMap<QString,QVariant>  properties_map;
     QList<arrayElement>   services_list;
     QList<arrayElement>   technologies_list;

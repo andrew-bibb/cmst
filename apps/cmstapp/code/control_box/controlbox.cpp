@@ -137,7 +137,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   setWindowTitle(TranslateStrings::cmtr("connman system tray"));
   
   // data members
-  q8_errors = CMST::No_Errors;
+  q16_errors = CMST::No_Errors;
   properties_map.clear();
   services_list.clear();
   technologies_list.clear();
@@ -491,11 +491,11 @@ void ControlBox::showChangeLog()
 //  Slot to update all of our display widgets
 void ControlBox::updateDisplayWidgets()
 {
-  // each assemble function will check q8_errors to make sure it can
+  // each assemble function will check q16_errors to make sure it can
   // get the information it needs.  Only check for major errors since we
   // can't run the assemble functions if there are.
 
-  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Con_Iface)) == 0x00 ) {
+  if ( ((q16_errors & CMST::Err_No_DBus) | (q16_errors & CMST::Err_Invalid_Con_Iface)) == 0x00 ) {
     //  rebuild our pages
     this->assembleTabStatus();
     this->assembleTabDetails();
@@ -1117,7 +1117,7 @@ void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue
 void ControlBox::scanWiFi()
 {
   // Make sure we got the technologies_list before we try to work with it.
-  if ( (q8_errors & CMST::Err_Technologies) != 0x00 ) return;
+  if ( (q16_errors & CMST::Err_Technologies) != 0x00 ) return;
 
   // Run through each technology and do a scan for any wifi
   for (int row = 0; row < technologies_list.size(); ++row) {
@@ -1144,7 +1144,7 @@ void ControlBox::scanWiFi()
 void ControlBox::wifiIDPass(const QString& obj_path)
 {
   // Make sure we got the technologies_list before we try to work with it.
-  if ( (q8_errors & CMST::Err_Technologies) != 0x00 ) return;
+  if ( (q16_errors & CMST::Err_Technologies) != 0x00 ) return;
 
 	// Run through each technology looking for Wifi
 	for (int row = 0; row < technologies_list.size(); ++row) {
@@ -1188,7 +1188,7 @@ void ControlBox::wifiIDPass(const QString& obj_path)
 //  Called when ui.checkBox_devicesoff is clicked
 void ControlBox::toggleOfflineMode(bool checked)
 {
-  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Con_Iface)) != 0x00 ) return;
+  if ( ((q16_errors & CMST::Err_No_DBus) | (q16_errors & CMST::Err_Invalid_Con_Iface)) != 0x00 ) return;
 
   shared::processReply(con_manager->call(QDBus::AutoDetect, "SetProperty", "OfflineMode", QVariant::fromValue(QDBusVariant(checked ? true : false))) );
 
@@ -1542,13 +1542,13 @@ bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
 // as an initial scan.
 int ControlBox::managerRescan(const int& srv)
 {
-  if ( ((q8_errors & CMST::Err_No_DBus) | (q8_errors & CMST::Err_Invalid_Con_Iface)) == 0x00 ) {
+  if ( ((q16_errors & CMST::Err_No_DBus) | (q16_errors & CMST::Err_Invalid_Con_Iface)) == 0x00 ) {
 
     // Reset the getXX errors, always a chance we could read them after
     // a previous error. Don't actually believe it, but just in case.
-    q8_errors &= ~CMST::Err_Properties;
-    q8_errors &= ~CMST::Err_Technologies;
-    q8_errors &= ~CMST::Err_Services;
+    q16_errors &= ~CMST::Err_Properties;
+    q16_errors &= ~CMST::Err_Technologies;
+    q16_errors &= ~CMST::Err_Services;
 
     // Access connman.manager to retrieve the data
     if (srv & CMST::Manager_Technologies) {
@@ -1583,7 +1583,7 @@ int ControlBox::managerRescan(const int& srv)
 
   } // if
 
-  return (q8_errors & CMST::Err_Properties) | (q8_errors & CMST::Err_Technologies) | (q8_errors & CMST::Err_Services);
+  return (q16_errors & CMST::Err_Properties) | (q16_errors & CMST::Err_Technologies) | (q16_errors & CMST::Err_Services);
 }
 
 //
@@ -1591,7 +1591,7 @@ int ControlBox::managerRescan(const int& srv)
 void ControlBox::assembleTabStatus()
 {
   // Global Properties
-  if ( (q8_errors & CMST::Err_Properties) == 0x00 ) {
+  if ( (q16_errors & CMST::Err_Properties) == 0x00 ) {
     QString s1 = properties_map.value("State").toString();
     if (s1 == "online") {	
 			ui.label_state_pix->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
@@ -1624,7 +1624,7 @@ void ControlBox::assembleTabStatus()
   } // properties if no error
 
   // Technologies
-  if ( (q8_errors & CMST::Err_Technologies) == 0x00 ) {
+  if ( (q16_errors & CMST::Err_Technologies) == 0x00 ) {
     QString st = QString();
     bool bt;
     ui.tableWidget_technologies->clearContents();
@@ -1720,7 +1720,7 @@ void ControlBox::assembleTabStatus()
   } // technologies if no error
 
   // Services
-  if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
+  if ( (q16_errors & CMST::Err_Services) == 0x00 ) {
     QString ss = QString();
     ui.tableWidget_services->clearContents();
     ui.tableWidget_services->setRowCount(services_list.size() );
@@ -1781,7 +1781,7 @@ void ControlBox::assembleTabDetails()
   ui.label_details_right->clear();
 
   //  services details
-  if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
+  if ( (q16_errors & CMST::Err_Services) == 0x00 ) {
 	  // populate the combobox
 	  for (int row = 0; row < services_list.size(); ++row) {
 			QString ss = getNickName(services_list.at(row).objpath);
@@ -1803,10 +1803,10 @@ void ControlBox::assembleTabWireless()
   int rowcount = 0;
 
   // Make sure we got the services_list before we try to work with it.
-  if ( (q8_errors & CMST::Err_Services) != 0x00 ) return;
+  if ( (q16_errors & CMST::Err_Services) != 0x00 ) return;
 
   // Run through the technologies again, this time only look for wifi
-  if ( (q8_errors & CMST::Err_Technologies) == 0x00 ) {
+  if ( (q16_errors & CMST::Err_Technologies) == 0x00 ) {
     int i_wifidevices= 0;
     int i_wifipowered = 0;
     for (int row = 0; row < technologies_list.size(); ++row) {
@@ -1914,9 +1914,15 @@ void ControlBox::assembleTabVPN()
   ui.tableWidget_vpn->clearContents();
   ui.tableWidget_vpn->setRowCount(0);
   int rowcount = 0;
+  
+  // Make sure we've been able to communicate with the connman-vpn daemon
+  if ( (q16_errors & CMST::Err_Invalid_VPN_Iface) != 0x00) {
+		ui.VPN->setDisabled(true);
+		return;
+	}
 
   // Make sure we got the services_list before we try to work with it.
-  if ( (q8_errors & CMST::Err_Services) != 0x00 ) return;	
+  if ( (q16_errors & CMST::Err_Services ) != 0x00 ) return;			
   
 // Run through each service_list looking for wifi services
   vpn_list.clear();
@@ -2024,14 +2030,14 @@ void ControlBox::assembleTrayIcon()
   int readycount = 0;
   QIcon prelimicon;
   
-  if ( (q8_errors & CMST::Err_Properties & CMST::Err_Services) == 0x00 ) {
+  if ( (q16_errors & CMST::Err_Properties & CMST::Err_Services) == 0x00 ) {
     // count how many services are in the ready state
     for (int i = 0; i < services_list.count(); ++i) {
       if (services_list.at(i).objmap.value("State").toString() == "ready")  ++readycount;
     } // readycount for loop
     if ((properties_map.value("State").toString() == "online") ||
         (properties_map.value("State").toString() == "ready" && readycount == 1) ) {
-      if ( (q8_errors & CMST::Err_Services) == 0x00 ) {
+      if ( (q16_errors & CMST::Err_Services) == 0x00 ) {
         QMap<QString,QVariant> submap;
         if (services_list.at(0).objmap.value("Type").toString() == "ethernet") {
           shared::extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
@@ -2136,7 +2142,7 @@ void ControlBox::assembleTrayIcon()
 		trayicon->setToolTip(QString());	
 
 	// Don't continue if we can't get properties
-	if ( (q8_errors & CMST::Err_Properties & CMST::Err_Technologies & CMST::Err_Services) != 0x00 ) return;
+	if ( (q16_errors & CMST::Err_Properties & CMST::Err_Technologies & CMST::Err_Services) != 0x00 ) return;
 	
   // Assemble the submenus for the context menu
   // tech_submenu.  
@@ -2647,7 +2653,7 @@ bool ControlBox::getMap(QMap<QString,QVariant>& r_map, const QDBusMessage& r_msg
 void ControlBox::logErrors(const quint8& err)
 {
   //  store the error in a data element
-  q8_errors |= err;
+  q16_errors |= err;
 
   //  Log the error in the system log
   //  LOG_PID   Include PID with each message
