@@ -18,9 +18,12 @@ The [Wiki](https://github.com/andrew-bibb/cmst/wiki) has been started and announ
 
 There is a PKGBUILD for this project in the Arch Linux AUR.
 
-If you are not on Arch download the release and extract the files.  Then run:
+The Provisioning Editor and VPN Provisioning Editor both register a root helper to assist in editing files in directories owned by root (/var/lib/connman and /var/lib/connman-vpn).  In order to use the root helper you must be a member of the proper group, and this group varies by distribution.  To get the proper file for your distribution you need to provide it on the qmake line. Currently there are files for Arch Linux, Slackware, and Debian.  If you are on Arch you don't actually need to supply the distro as that is the default if one is not supplied, but it is not wrong to do so. 
 
-    qmake
+If you are not on Arch or don't choose to use the AUR download the release and extract the files.  Then run:
+
+    qmake DISTRO=xxxx
     make
     make install (as root)
 
+Where xxx is one of [arch, debian, slackware). Distro names are case sensitive.
