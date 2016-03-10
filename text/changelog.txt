@@ -8,6 +8,7 @@
 <li>Improvements to internal layouts.</li>
 <li>Added appdata xml file.</li>
 <li>Added ability to tether a technology.</li>
+<li>Can reposition tabs in the main dialog.</li>
 </ul>
 <b>2016.01.26</b>
 <ul>

@@ -1917,7 +1917,7 @@ void ControlBox::assembleTabVPN()
   
   // Make sure we've been able to communicate with the connman-vpn daemon
   if ( (q16_errors & CMST::Err_Invalid_VPN_Iface) != 0x00) {
-		ui.VPN->setDisabled(true);
+		ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
 		return;
 	}
 
@@ -2691,6 +2691,11 @@ void ControlBox::logErrors(const quint8& err)
       QMessageBox::warning(this, tr("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
         tr("There was an error reading or parsing the reply from method connman.Manager.GetServices.<br><br>Some portion of %1 may still be functional.").arg(TranslateStrings::cmtr("cmst")) );
       break;
+    case  CMST::Err_Invalid_VPN_Iface:
+      syslog(LOG_ERR, "%s",tr("Could not create an interface to connman-vpn on the system bus").toUtf8().constData());
+      QMessageBox::critical(this, tr("%1 - Critical Error").arg(TranslateStrings::cmtr("cmst")),
+        tr("Unable to create an interface to connman-vpn on the system bus.<br><br>%1 will not be able to communicate with the connman vpn daemon.").arg(TranslateStrings::cmtr("cmst")) );
+      break;    
     default:
       break;
     }
