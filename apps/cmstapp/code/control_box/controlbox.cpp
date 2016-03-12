@@ -897,7 +897,9 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
   // made. This includes both the manager.servicesChanged() and services.propertyChanged() signals. Connecting a VPN seems to be a 
   // black hole of signals (well except for vpn connection interface - but we're not using that).   
   // This will force a service rescan which picks up some of these properties.
-  if (services_list.at(0).objmap.value("Type") == "vpn") managerRescan(CMST::Manager_Services);
+	if (services_list.count() > 0) {
+		if (services_list.at(0).objmap.value("Type") == "vpn") managerRescan(CMST::Manager_Services);
+	}
 	updateDisplayWidgets();
 	
   return;  
