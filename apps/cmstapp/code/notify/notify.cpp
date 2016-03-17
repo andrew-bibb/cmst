@@ -36,9 +36,9 @@ DEALINGS IN THE SOFTWARE.
 
 # include "./notify.h"
                      
-#define DBUS_SERVICE "org.freedesktop.Notifications"
-#define DBUS_PATH "/org/freedesktop/Notifications"
-#define DBUS_INTERFACE "org.freedesktop.Notifications"
+#define DBUS_NOTIFY_SERVICE "org.freedesktop.Notifications"
+#define DBUS_NOTIFY_PATH "/org/freedesktop/Notifications"
+#define DBUS_NOTIFY_INTERFACE "org.freedesktop.Notifications"
 
 //  constructor
 NotifyClient::NotifyClient(QObject* parent)
@@ -78,13 +78,13 @@ void NotifyClient::connectToServer()
 	// return now if we already have a valid connection
   if (b_validconnection) return;
     
-  notifyclient = new QDBusInterface(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, QDBusConnection::sessionBus(), this); 
+  notifyclient = new QDBusInterface(DBUS_NOTIFY_SERVICE, DBUS_NOTIFY_PATH, DBUS_NOTIFY_INTERFACE, QDBusConnection::sessionBus(), this); 
   if (notifyclient->isValid() ) {
     b_validconnection = true;
     getServerInformation();
     getCapabilities();  
-    QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "NotificationClosed", this, SLOT(notificationClosed(quint32, quint32)));
-    QDBusConnection::sessionBus().connect(DBUS_SERVICE, DBUS_PATH, DBUS_INTERFACE, "ActionInvoked", this, SLOT(actionInvoked(quint32, QString)));
+    QDBusConnection::sessionBus().connect(DBUS_NOTIFY_SERVICE, DBUS_NOTIFY_PATH, DBUS_NOTIFY_INTERFACE, "NotificationClosed", this, SLOT(notificationClosed(quint32, quint32)));
+    QDBusConnection::sessionBus().connect(DBUS_NOTIFY_SERVICE, DBUS_NOTIFY_PATH, DBUS_NOTIFY_INTERFACE, "ActionInvoked", this, SLOT(actionInvoked(quint32, QString)));
     } // if connection is valid 
   else {
     notifyclient->deleteLater();
