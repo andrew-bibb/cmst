@@ -202,17 +202,20 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // Set icon theme if provided on the command line or in the settings
   if (parser.isSet("icon-theme") ) {
-		parser.value("icon-theme").isEmpty()		?
-			QIcon::setThemeName(INTERNAL_THEME) 	:
+		if (parser.value("icon-theme").isEmpty() && QIcon::themeName().isEmpty() )
+				QIcon::setThemeName(INTERNAL_THEME);
+		else
 			QIcon::setThemeName(parser.value("icon-theme") );
-	}		
+	}	// if parser is set		
 	else {
-		if (b_so && ui.checkBox_systemicontheme->isChecked() )
-			ui.lineEdit_icontheme->text().isEmpty()		?
-				QIcon::setThemeName(INTERNAL_THEME) 		:
+		if (b_so && ui.checkBox_systemicontheme->isChecked() ) {
+			if (ui.lineEdit_icontheme->text().isEmpty() && QIcon::themeName().isEmpty() )
+				QIcon::setThemeName(INTERNAL_THEME);
+			else 
 				QIcon::setThemeName(ui.lineEdit_icontheme->text() );
+		}	// if 	
 		else QIcon::setThemeName(INTERNAL_THEME);
-	}	
+	}	// else
 	// Set the window icon.  If an icon was installed to /usr/share/icons/hicolor/48x48/apps
 	// use that, otherwise use a freedesktop.org named one
 	if (QFile::exists("/usr/share/icons/hicolor/48x48/apps/cmst.png") )
