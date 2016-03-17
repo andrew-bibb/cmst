@@ -202,15 +202,17 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // Set icon theme if provided on the command line or in the settings
   if (parser.isSet("icon-theme") ) {
-		if (parser.value("icon-theme").isEmpty() && QIcon::themeName().isEmpty() )
-				QIcon::setThemeName(INTERNAL_THEME);
+		if (parser.value("icon-theme").isEmpty() ) {
+			if (QIcon::themeName().isEmpty() ) QIcon::setThemeName(INTERNAL_THEME);
+		}	// if
 		else
 			QIcon::setThemeName(parser.value("icon-theme") );
 	}	// if parser is set		
 	else {
 		if (b_so && ui.checkBox_systemicontheme->isChecked() ) {
-			if (ui.lineEdit_icontheme->text().isEmpty() && QIcon::themeName().isEmpty() )
-				QIcon::setThemeName(INTERNAL_THEME);
+			if (ui.lineEdit_icontheme->text().isEmpty() ) {
+				if (QIcon::themeName().isEmpty() ) QIcon::setThemeName(INTERNAL_THEME);
+			}	// if
 			else 
 				QIcon::setThemeName(ui.lineEdit_icontheme->text() );
 		}	// if 	
