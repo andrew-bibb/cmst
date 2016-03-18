@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
   QCommandLineOption useIconTheme(QStringList() << "i" << "icon-theme",
 		QCoreApplication::translate("main.cpp", "Use an icon theme from your system."),
 		QCoreApplication::translate("main.cpp", "Icon Theme Name"),
-		QString() );
+		QString("") );
   parser.addOption(useIconTheme);
 
   QCommandLineOption logInputRequest(QStringList() << "l" << "log-input-request",
