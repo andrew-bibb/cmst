@@ -613,8 +613,8 @@ void ControlBox::enableMoveButtons(int row, int col)
   mvsrv_menu->addAction(tr("Cancel"));
 
   // enable the buttons if source and target both valid
-  ui.pushButton_movebefore->setEnabled(b_validsource & b_validtarget);
-  ui.pushButton_moveafter->setEnabled(b_validsource & b_validtarget);
+  ui.pushButton_movebefore->setEnabled(b_validsource && b_validtarget);
+  ui.pushButton_moveafter->setEnabled(b_validsource && b_validtarget);
 
   return;
 }

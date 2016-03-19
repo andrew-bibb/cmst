@@ -9,6 +9,7 @@
 <li>Added appdata xml file.</li>
 <li>Added ability to tether a technology.</li>
 <li>Can reposition tabs in the main dialog.</li>
+<li>Revise move before/after to only be active for and show services which can actually be moved.</li>
 </ul>
 <b>2016.01.26</b>
 <ul>
