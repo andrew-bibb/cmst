@@ -28,13 +28,13 @@ DEALINGS IN THE SOFTWARE.
 
 /**********************************************************************
  * NOTE TO PEOPLE HACKING ON THE CODE
- * 
+ *
  * Prior to 2015.11.12 text returned by connman was translated and then
  * stored in the various maps.  After that date the code was revised so
  * that text is stored in the maps exactly as connman returns it and
  * is then translated when it needs to be displayed.
- * 
-***********************************************************************/																								 
+ *
+***********************************************************************/
 
 
 # include <QDBusArgument>
@@ -79,7 +79,7 @@ DEALINGS IN THE SOFTWARE.
 # define DBUS_CON_SERVICE "net.connman"
 # define DBUS_VPN_SERVICE "net.connman.vpn"
 # define DBUS_CON_MANAGER "net.connman.Manager"
-# define DBUS_VPN_MANAGER	"net.connman.vpn.Manager"
+# define DBUS_VPN_MANAGER "net.connman.vpn.Manager"
 
 // Custom push button, used in the technology box for powered on/off
 // This is really a single use button, after it is clicked all idButtons
@@ -128,14 +128,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // setup the user interface
   ui.setupUi(this);
 
-	// We need this if someone is running the program from the tray popup menu.
-	// The main UI is fine without it, but if you call up the agent dialog and then
-	// close that seems to be treated as the last window.
-	qApp->setQuitOnLastWindowClosed(false);
-  
+  // We need this if someone is running the program from the tray popup menu.
+  // The main UI is fine without it, but if you call up the agent dialog and then
+  // close that seems to be treated as the last window.
+  qApp->setQuitOnLastWindowClosed(false);
+
   // set the window title
   setWindowTitle(TranslateStrings::cmtr("connman system tray"));
-  
+
   // data members
   q16_errors = CMST::No_Errors;
   properties_map.clear();
@@ -151,7 +151,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   tech_submenu = new QMenu(tr("Technologies"), this);
   info_submenu = new QMenu(tr("Service Details"), this);
   wifi_submenu = new QMenu(tr("WiFi Connections"), this);
-  vpn_submenu	 = new QMenu(tr("VPN Connections"), this);
+  vpn_submenu  = new QMenu(tr("VPN Connections"), this);
   mvsrv_menu = new QMenu(this);
   settings = new QSettings(ORG, APP, this);
   notifyclient = 0;
@@ -164,71 +164,71 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // Read saved settings which will set the ui controls in the preferences tab.
   this->readSettings();
-  
+
   // Set the iconmanager color
   iconman->setIconColor(QColor(ui.lineEdit_colorize->text()) );
-  
+
   // Constructor scope bool, set to true if we are using start options
   bool b_so = (! parser.isSet("bypass-start-options") && ui.checkBox_usestartoptions->isChecked() );
-  
+
   // Enable or disable preferences group box (changed via ui signal/slot after the constructor)
   ui.groupBox_startoptions->setEnabled(ui.checkBox_usestartoptions->isChecked());
-  
+
   // Restore window if retain_state is checked and we have not bypassed it on the command line
-	if (! parser.isSet("bypass-restore-state") && settings->value("CheckBoxes/retain_state").toBool() ) {
-		settings->beginGroup("MainWindow");
-		resize(settings->value("size", QSize(700, 550)).toSize() );
-		move(settings->value("pos", QPoint(200, 200)).toPoint() );
-		ui.tabWidget->setCurrentIndex(settings->value("current_page").toInt() );
-		settings->endGroup();
-	}
-	
-	// Make sure the controlbox will fit onto small acreens
-	QSize sz_target = (qApp->desktop()->availableGeometry(this)).size();
-	QSize sz_source = this->sizeHint();
-	sz_target.scale(sz_target.width() - 100, sz_target.height() - 100, Qt::KeepAspectRatio); // give me a little buffer
-	if (sz_source.width() > sz_target.width() || sz_source.height() > sz_target.height() ) {
-		sz_source.scale(sz_target.width(), sz_target.height(), Qt::KeepAspectRatio);
-		resize(sz_source);
-		move(25, 25);
-	}
-		
+  if (! parser.isSet("bypass-restore-state") && settings->value("CheckBoxes/retain_state").toBool() ) {
+    settings->beginGroup("MainWindow");
+    resize(settings->value("size", QSize(700, 550)).toSize() );
+    move(settings->value("pos", QPoint(200, 200)).toPoint() );
+    ui.tabWidget->setCurrentIndex(settings->value("current_page").toInt() );
+    settings->endGroup();
+  }
+
+  // Make sure the controlbox will fit onto small acreens
+  QSize sz_target = (qApp->desktop()->availableGeometry(this)).size();
+  QSize sz_source = this->sizeHint();
+  sz_target.scale(sz_target.width() - 100, sz_target.height() - 100, Qt::KeepAspectRatio); // give me a little buffer
+  if (sz_source.width() > sz_target.width() || sz_source.height() > sz_target.height() ) {
+    sz_source.scale(sz_target.width(), sz_target.height(), Qt::KeepAspectRatio);
+    resize(sz_source);
+    move(25, 25);
+  }
+
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request"));
   vpnagent->setLogInputRequest(parser.isSet("log-input-request"));
   QDir d(IPT_REQ_LOG_PATH);
-	d.mkpath(IPT_REQ_LOG_PATH);
-	if (d.exists(IPT_REQ_LOG_FILE)) d.remove(IPT_REQ_LOG_FILE);
+  d.mkpath(IPT_REQ_LOG_PATH);
+  if (d.exists(IPT_REQ_LOG_FILE)) d.remove(IPT_REQ_LOG_FILE);
 
   // Set icon theme if provided on the command line or in the settings
   if (parser.isSet("icon-theme") ) {
-		if (parser.value("icon-theme").isEmpty() ) {
-			if (QIcon::themeName().isEmpty() ) QIcon::setThemeName(INTERNAL_THEME);
-		}	// if
-		else
-			QIcon::setThemeName(parser.value("icon-theme") );
-	}	// if parser is set		
-	else {
-		if (b_so && ui.checkBox_systemicontheme->isChecked() ) {
-			if (ui.lineEdit_icontheme->text().isEmpty() ) {
-				if (QIcon::themeName().isEmpty() ) QIcon::setThemeName(INTERNAL_THEME);
-			}	// if
-			else 
-				QIcon::setThemeName(ui.lineEdit_icontheme->text() );
-		}	// if 	
-		else QIcon::setThemeName(INTERNAL_THEME);
-	}	// else
-	// Set the window icon.  If an icon was installed to /usr/share/icons/hicolor/48x48/apps
-	// use that, otherwise use a freedesktop.org named one
-	if (QFile::exists("/usr/share/icons/hicolor/48x48/apps/cmst.png") )
-		this->setWindowIcon(QIcon("/usr/share/icons/hicolor/48x48/apps/cmst.png") );
-	else
-		this->setWindowIcon(QIcon::fromTheme("preferences-system-network") );
-	
-	// Set the whatsthis icons
-	ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));
-	agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
-	vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
+    if (parser.value("icon-theme").isEmpty() ) {
+      if (QIcon::themeName().isEmpty() ) QIcon::setThemeName(INTERNAL_THEME);
+    } // if
+    else
+      QIcon::setThemeName(parser.value("icon-theme") );
+  } // if parser is set
+  else {
+    if (b_so && ui.checkBox_systemicontheme->isChecked() ) {
+      if (ui.lineEdit_icontheme->text().isEmpty() ) {
+        if (QIcon::themeName().isEmpty() ) QIcon::setThemeName(INTERNAL_THEME);
+      } // if
+      else
+        QIcon::setThemeName(ui.lineEdit_icontheme->text() );
+    } // if
+    else QIcon::setThemeName(INTERNAL_THEME);
+  } // else
+  // Set the window icon.  If an icon was installed to /usr/share/icons/hicolor/48x48/apps
+  // use that, otherwise use a freedesktop.org named one
+  if (QFile::exists("/usr/share/icons/hicolor/48x48/apps/cmst.png") )
+    this->setWindowIcon(QIcon("/usr/share/icons/hicolor/48x48/apps/cmst.png") );
+  else
+    this->setWindowIcon(QIcon::fromTheme("preferences-system-network") );
+
+  // Set the whatsthis icons
+  ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));
+  agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
+  vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
 
   // set a flag is we want to use XFCE or MATE custom code.
   // Currently (as of 2014.11.24) this is only used to get around a bug between QT5.3 and the XFCE system tray
@@ -243,33 +243,33 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     if (! ok) trayiconbackground = QColor();
   } // if parser set
   else
-		if (b_so && ui.checkBox_faketranparency->isChecked() ) {
-			trayiconbackground = QColor(ui.spinBox_faketransparency->value() );
-		}	// if
-		else trayiconbackground = QColor();
-	
+    if (b_so && ui.checkBox_faketranparency->isChecked() ) {
+      trayiconbackground = QColor(ui.spinBox_faketransparency->value() );
+    } // if
+    else trayiconbackground = QColor();
+
   // set counter update params from command line options if available otherwise
   // default params specified in main.cpp are used.  Set a minimum value for
   // each to maintain program response.
   uint minval = 256;
   uint setval = 0;
   if (parser.isSet("counter-update-kb") ) {
-		bool ok;
+    bool ok;
     setval = parser.value("counter-update-kb").toUInt(&ok, 10);
     if (! ok) setval = minval;
-	}	// if parser set
+  } // if parser set
   else if (b_so && ui.checkBox_counterkb->isChecked() ) {
     setval = ui.spinBox_counterkb->value();
-	}	// else if
-	counter_accuracy = setval > minval ? setval : minval; // number of kb for counter updates
+  } // else if
+  counter_accuracy = setval > minval ? setval : minval; // number of kb for counter updates
 
   minval = 5;
   setval = 0;
   if (parser.isSet("counter-update-rate") ) {
-		bool ok;
+    bool ok;
     setval = parser.value("counter-update-rate").toUInt(&ok, 10);
     if (! ok) setval = minval;
-	}	// if parser set
+  } // if parser set
   else if (b_so && ui.checkBox_counterseconds->isChecked() ) {
     setval = ui.spinBox_counterrate->value();
   }
@@ -300,34 +300,34 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       this->managerRescan(CMST::Manager_All);
 
       // register the agent
-      shared::processReply(con_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT))) );      
-      
-      // if counters are enabled connect signal to slot and register the counter 
+      shared::processReply(con_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT))) );
+
+      // if counters are enabled connect signal to slot and register the counter
       if (! parser.isSet("disable-counters") && (b_so ? (! ui.checkBox_disablecounters->isChecked()) : true ) ) {
         QList<QVariant> vlist_counter;
         vlist_counter.clear();
         vlist_counter << QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT)) << counter_accuracy << counter_period;
         QDBusMessage reply = con_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterCounter", vlist_counter);
         if (shared::processReply(reply) == QDBusMessage::ReplyMessage)
-					connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
+          connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
       }
 
-	    // connect some dbus signals to our slots
-	    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
-	    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
-	    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PeersChanged", this, SLOT(dbsPeersChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
-	    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
-	    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
-	
-	    // clear the counters if selected
-	    this->clearCounters();
-	    
-	    // VPN manager
-			vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
-	    if (! vpn_manager->isValid() ) logErrors(CMST::Err_Invalid_VPN_Iface);
-	    else {
-				shared::processReply(vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
-			}	// else register agent
+      // connect some dbus signals to our slots
+      QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
+      QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
+      QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PeersChanged", this, SLOT(dbsPeersChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
+      QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
+      QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
+
+      // clear the counters if selected
+      this->clearCounters();
+
+      // VPN manager
+      vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
+      if (! vpn_manager->isValid() ) logErrors(CMST::Err_Invalid_VPN_Iface);
+      else {
+        shared::processReply(vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
+      } // else register agent
     } // else have valid connection
   } // else have connected systemBus
 
@@ -342,7 +342,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   moveGroup = new QActionGroup(this);
   moveGroup->addAction(ui.actionMove_Before);
   moveGroup->addAction(ui.actionMove_After);
-    
+
   //  connect signals and slots - actions and action groups
   connect(minMaxGroup, SIGNAL(triggered(QAction*)), this, SLOT(minMaxWindow(QAction*)));
   connect(tech_submenu, SIGNAL(triggered(QAction*)), this, SLOT(techSubmenuTriggered(QAction*)));
@@ -388,13 +388,13 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.checkBox_enablesystemtraytooltips, SIGNAL(clicked()), this, SLOT(updateDisplayWidgets()));
   connect(ui.pushButton_IDPass, SIGNAL(clicked()), this, SLOT(wifiIDPass()));
 
-  // Install an event filter on all child widgets. Used to control 
-	// tooltip visibility 
-	QList<QWidget*> childlist = ui.tabWidget->findChildren<QWidget*>();
-	for (int i = 0; i < childlist.count(); ++i) {
-		childlist.at(i)->installEventFilter(this);
-	}	 
- 
+  // Install an event filter on all child widgets. Used to control
+  // tooltip visibility
+  QList<QWidget*> childlist = ui.tabWidget->findChildren<QWidget*>();
+  for (int i = 0; i < childlist.count(); ++i) {
+    childlist.at(i)->installEventFilter(this);
+  }
+
   // tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon.
   trayicon = 0;
@@ -407,10 +407,10 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     const short mintrigger = 100; // Minimum time (milliseconds) to wait before starting the tray icon.  We advertise zero, but not really.
     int timeout = 0;
     if (parser.isSet("wait-time") ) {
-			bool ok;
+      bool ok;
       timeout = parser.value("wait-time").toInt(&ok, 10);
       if (! ok) timeout = 0;
-		}	// if parser set
+    } // if parser set
     else if (b_so && ui.checkBox_waittime->isChecked() ) {
       timeout = ui.spinBox_waittime->value();
     }
@@ -423,8 +423,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     else {
       this->showNormal();
       QTimer::singleShot(timeout, this, SLOT(createSystemTrayIcon()) );
-		} // else showNormal
-  } // else 
+    } // else showNormal
+  } // else
 }
 
 ////////////////////////////////////////////////// Public Functions //////////////////////////////////
@@ -452,13 +452,13 @@ void ControlBox::aboutCMST()
                   "<center>Ilya Shestopalov (Russian)"
                   "<br><center><b>Build Information:</b>"
                   "<center>Compiled using QT version %5"
-                  /*"<center>Built %6 - %7"*/)	.arg(TranslateStrings::cmtr("cmst"))
-																						.arg(VERSION)
-																						.arg(RELEASE_DATE)
-																						.arg(COPYRIGHT_DATE)
-																						.arg(QT_VERSION_STR)
-																						/*.arg(__DATE__)
-																						.arg(__TIME__)*/ );
+                  /*"<center>Built %6 - %7"*/)  .arg(TranslateStrings::cmtr("cmst"))
+                                            .arg(VERSION)
+                                            .arg(RELEASE_DATE)
+                                            .arg(COPYRIGHT_DATE)
+                                            .arg(QT_VERSION_STR)
+                                            /*.arg(__DATE__)
+                                            .arg(__TIME__)*/ );
 }
 
 //
@@ -513,6 +513,9 @@ void ControlBox::updateDisplayWidgets()
     this->assembleTabVPN();
     this->assembleTabCounters();
     if (trayicon != 0 ) this->assembleTrayIcon();
+    
+    ui.pushButton_movebefore->setEnabled(false);
+		ui.pushButton_moveafter->setEnabled(false);
   } // if there were no major errors
 
   return;
@@ -530,7 +533,7 @@ void ControlBox::moveService(QAction* act)
     ss = getNickName(services_list.at(i).objpath);
     // the items in mvsrv_menu are in the same order as services_list
     if (ss == act->text() ) {
-      targetobj = QDBusObjectPath(services_list.at(i).objpath.path());
+			targetobj = QDBusObjectPath(services_list.at(i).objpath.path());
       break;
     } // if
   } // for
@@ -571,26 +574,47 @@ void ControlBox::moveButtonPressed(QAction* act)
 }
 
 //
-//  Slot to enable the movebefore and moveafter buttons, and to prepare the poupup menu
+// Slot to enable the movebefore and moveafter buttons, and to prepare the poupup menu
+// Called when a cell is clicked in ui.tableWidget_services
 void ControlBox::enableMoveButtons(int row, int col)
 {
-	(void)col;
-  // enable the buttons
-  ui.pushButton_movebefore->setEnabled(true);
-  ui.pushButton_moveafter->setEnabled(true);
+  (void)col;
+
+  // variables
+  bool b_validsource = false;
+  bool b_validtarget = false;
 
   // create the menu to show if a user selects one of the buttons
   mvsrv_menu->clear();
-  QString ss;
   for (int i = 0; i < services_list.size(); ++i) {
-    ss = getNickName(services_list.at(i).objpath);
-    QAction* act = mvsrv_menu->addAction(ss);
-    if (i == row) act->setDisabled(true);
-    }
+    QAction* act = mvsrv_menu->addAction(getNickName(services_list.at(i).objpath) );
+
+    // inspect the service, can only move if service is favorite, ready or online, and not vpn
+    if (services_list.at(i).objmap.value("Favorite").toBool() &&
+       (services_list.at(i).objmap.value("State").toString() == "online" || services_list.at(i).objmap.value("State").toString() == "ready") &&
+       services_list.at(i).objmap.value("Type").toString() != "vpn") {
+
+      if (i == row) {
+        act->setDisabled(true); // can't move onto itself
+        b_validsource = true;
+      }
+      else {
+        act->setEnabled(true);
+        b_validtarget = true;
+      } // else
+    } // if
+    
+    else 			
+			act->setDisabled(true);
+   }  // for
 
   // add a cancel option
   mvsrv_menu->addSeparator();
   mvsrv_menu->addAction(tr("Cancel"));
+
+  // enable the buttons if source and target both valid
+  ui.pushButton_movebefore->setEnabled(b_validsource & b_validtarget);
+  ui.pushButton_moveafter->setEnabled(b_validsource & b_validtarget);
 
   return;
 }
@@ -631,12 +655,12 @@ void ControlBox::counterUpdated(const QDBusObjectPath& qdb_objpath, const QStrin
 // a service for us.
 void ControlBox::connectPressed()
 {
-	// Process wifi or vpn depending on who sent the signal
-	QTableWidget* qtw = NULL;
-	if (sender() == ui.pushButton_connect) qtw = ui.tableWidget_wifi;
-		else if (sender() == ui.pushButton_vpn_connect) qtw = ui.tableWidget_vpn;
-			else 	return;
-	
+  // Process wifi or vpn depending on who sent the signal
+  QTableWidget* qtw = NULL;
+  if (sender() == ui.pushButton_connect) qtw = ui.tableWidget_wifi;
+    else if (sender() == ui.pushButton_vpn_connect) qtw = ui.tableWidget_vpn;
+      else  return;
+
   // If there is only one row select it
   if (qtw->rowCount() == 1 ) {
     QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(0, 0, 0, qtw->columnCount() - 1);
@@ -652,25 +676,25 @@ void ControlBox::connectPressed()
       tr("You need to select a service before pressing the connect button.") );
     return;
   }
-  
-  //	send the connect message to the service.  TableWidget only allows single selection so list can only have 0 or 1 elments
+
+  //  send the connect message to the service.  TableWidget only allows single selection so list can only have 0 or 1 elments
   QDBusInterface* iface_serv = NULL;
 
-  if (qtw == ui.tableWidget_wifi) { 
-		iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-		iface_serv->setTimeout(5);
-	}
-	else if (qtw == ui.tableWidget_vpn) { 
-		iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);	 
-	}
-	else return;	// really not needed 
-	
-	iface_serv->setTimeout(5);	// need a short timeout to get the Agent
-	QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
-	if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);
-	iface_serv->deleteLater();
+  if (qtw == ui.tableWidget_wifi) {
+    iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+    iface_serv->setTimeout(5);
+  }
+  else if (qtw == ui.tableWidget_vpn) {
+    iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+  }
+  else return;  // really not needed
 
-	return;  
+  iface_serv->setTimeout(5);  // need a short timeout to get the Agent
+  QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
+  if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);
+  iface_serv->deleteLater();
+
+  return;
 }
 
 //
@@ -678,46 +702,46 @@ void ControlBox::connectPressed()
 // or ui.pushBotton_vpn_disconnect is pressed
 void ControlBox::disconnectPressed()
 {
-	// Process wifi or vpn depending on who sent the signal
-	QTableWidget* qtw = NULL;
-	if (sender() == ui.pushButton_disconnect) qtw = ui.tableWidget_wifi;
-		else if (sender() == ui.pushButton_vpn_disconnect) qtw = ui.tableWidget_vpn;
-			else 	return;
-	
-	// If there is no item is selected run through the list looking for
-  // services in "online" or "ready" state. If more than one is found 
+  // Process wifi or vpn depending on who sent the signal
+  QTableWidget* qtw = NULL;
+  if (sender() == ui.pushButton_disconnect) qtw = ui.tableWidget_wifi;
+    else if (sender() == ui.pushButton_vpn_disconnect) qtw = ui.tableWidget_vpn;
+      else  return;
+
+  // If there is no item is selected run through the list looking for
+  // services in "online" or "ready" state. If more than one is found
   // break as we will have to use the one currently selected.
   int cntr_connected = 0;
-	int row_connected = -1;
+  int row_connected = -1;
   if (qtw->selectedItems().isEmpty() ) {
-	  int itemcount = 0;
-	  QMap<QString,QVariant> map;
-	  if (qtw == ui.tableWidget_wifi)	itemcount = wifi_list.size();
-			else if (qtw == ui.tableWidget_vpn)  itemcount = vpn_list.size();
-				else return;	// line is not really needed
-		 
-	  for (int row = 0; row < itemcount; ++row) {
-			if (qtw == ui.tableWidget_wifi) map = wifi_list.at(row).objmap;
-				else if (qtw == ui.tableWidget_vpn)  map = vpn_list.at(row).objmap;
-					else return; // line is not really needed
-	
-	    if (map.value("State").toString() == "online" || map.value("State").toString() == "ready" ) {
-	       ++cntr_connected;
-	       row_connected = row;
-	     }
-	     if (cntr_connected > 1 ) break;
-	  } // for
-	  
-		// Nothing selected, online or ready so return now
-		if (cntr_connected == 0) return;	
-  
-		// If only one entry is connected or online, select it
-		if (cntr_connected == 1 ) {
-			QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row_connected, 0, row_connected, qtw->columnCount() - 1);
-			qtw->setRangeSelected(qtwsr, true);
-		}	// cntr_connected == 1		
-	}	// if there are no currently selected items
-  
+    int itemcount = 0;
+    QMap<QString,QVariant> map;
+    if (qtw == ui.tableWidget_wifi) itemcount = wifi_list.size();
+      else if (qtw == ui.tableWidget_vpn)  itemcount = vpn_list.size();
+        else return;  // line is not really needed
+
+    for (int row = 0; row < itemcount; ++row) {
+      if (qtw == ui.tableWidget_wifi) map = wifi_list.at(row).objmap;
+        else if (qtw == ui.tableWidget_vpn)  map = vpn_list.at(row).objmap;
+          else return; // line is not really needed
+
+      if (map.value("State").toString() == "online" || map.value("State").toString() == "ready" ) {
+         ++cntr_connected;
+         row_connected = row;
+       }
+       if (cntr_connected > 1 ) break;
+    } // for
+
+    // Nothing selected, online or ready so return now
+    if (cntr_connected == 0) return;
+
+    // If only one entry is connected or online, select it
+    if (cntr_connected == 1 ) {
+      QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(row_connected, 0, row_connected, qtw->columnCount() - 1);
+      qtw->setRangeSelected(qtwsr, true);
+    } // cntr_connected == 1
+  } // if there are no currently selected items
+
   // If no row selected return
   QList<QTableWidgetItem*> list;
   list.clear();
@@ -730,22 +754,22 @@ void ControlBox::disconnectPressed()
 
   // Send the disconnect message to the service.  TableWidget only allows single selection so list can only have 0 or 1 elments
   QDBusInterface* iface_serv = NULL;
-  if (qtw == ui.tableWidget_wifi) 
-		iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-	else if (qtw == ui.tableWidget_vpn) 
-		iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-	else return;	// this line really not needed 
-	
-	shared::processReply(iface_serv->call(QDBus::AutoDetect, "Disconnect") );
-	iface_serv->deleteLater();
-	return;
+  if (qtw == ui.tableWidget_wifi)
+    iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+  else if (qtw == ui.tableWidget_vpn)
+    iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+  else return;  // this line really not needed
+
+  shared::processReply(iface_serv->call(QDBus::AutoDetect, "Disconnect") );
+  iface_serv->deleteLater();
+  return;
 }
 
 //
 // Slot to remove (unset the Favorite property, clear passphrase if one exists) of a Wifi service
 // Called when ui.pushButton_remove is pressed
 void ControlBox::removePressed()
-{			
+{
   // if no row selected return
   QList<QTableWidgetItem*> list;
   list.clear();
@@ -759,10 +783,10 @@ void ControlBox::removePressed()
   //  send the Remove message to the service
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
   QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Remove");
-  shared::processReply(reply); 
+  shared::processReply(reply);
   iface_serv->deleteLater();
 
-  return; 	
+  return;
 }
 
 //  dbs slots are slots to receive DBus Signals
@@ -788,7 +812,7 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
       notifyclient->setSummary(tr("Offline Mode Disabled"));
       notifyclient->setIcon(iconman->getIconName("offline_mode_disengaged") );
     }
-    this->sendNotifications();  
+    this->sendNotifications();
   } // if contains offlinemode
 
   if (prop =="State") {
@@ -806,30 +830,30 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 
       // notification text and icons
       if (type == "wifi")
-				iconpath = iconman->getIconName("connection_wireless");
-      else 
-				iconpath = iconman->getIconName("connection_wired");
+        iconpath = iconman->getIconName("connection_wireless");
+      else
+        iconpath = iconman->getIconName("connection_wired");
 
       notifyclient->init();
       notifyclient->setSummary(tr("%1 (%2) Network").arg(type).arg(name) );
       notifyclient->setBody(tr("Connection: %1").arg(state) );
       notifyclient->setIcon(iconpath);
-      
+
       this->sendNotifications();
-      
+
       // execute external program if specified
       if (! ui.lineEdit_afterconnect->text().isEmpty()  ) {
-				if( (state == "ready" || state == "online") &&
-					(oldstate != "ready" && oldstate != "online") ) {
-					QString text = ui.lineEdit_afterconnect->text();	
-					text = text.simplified();
-					QStringList args = text.split(' ');
-					QString cmd = args.first();
-					args.removeFirst();
-					QProcess* proc = new QProcess(this);
-					proc->startDetached(cmd, args);	
-				}	// if online or ready and not online before		  
-			}	// if lineedit not empty
+        if( (state == "ready" || state == "online") &&
+          (oldstate != "ready" && oldstate != "online") ) {
+          QString text = ui.lineEdit_afterconnect->text();
+          text = text.simplified();
+          QStringList args = text.split(' ');
+          QString cmd = args.first();
+          args.removeFirst();
+          QProcess* proc = new QProcess(this);
+          proc->startDetached(cmd, args);
+        } // if online or ready and not online before
+      } // if lineedit not empty
     } // if services count > 0
 
     // no services listed
@@ -850,17 +874,17 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 // Scan method is called on a technology the results of that scan are
 // signaled through this slot.  This is also called when the sort order
 // of the services list changes.  It will not be called when a property
-// of a service object changes.  
+// of a service object changes.
 void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath> removed, QDBusMessage msg)
-{		
-	// Demarshall the raw QDBusMessage instead of vlist as it is easier..
+{
+  // Demarshall the raw QDBusMessage instead of vlist as it is easier..
   if (! vlist.isEmpty() ) {
     QList<arrayElement> revised_list;
-    if (! getArray(revised_list, msg)) return; 
-   
+    if (! getArray(revised_list, msg)) return;
+
     // merge the existing services_list into the revised_list
     // first find the original element that matches the revised
-    for (int i = 0; i < revised_list.size(); ++i) {	
+    for (int i = 0; i < revised_list.size(); ++i) {
       arrayElement revised_element = revised_list.at(i);
       arrayElement original_element = {QDBusObjectPath(), QMap<QString,QVariant>()};
       for (int j = 0; j < services_list.size(); ++j) {
@@ -880,9 +904,9 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
 
         // now insert the element into the revised list
         QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, original_element.objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
-				revised_list.replace(i, original_element);
-				QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, revised_element.objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));       
-        
+        revised_list.replace(i, original_element);
+        QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, revised_element.objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+
       } // if original element is not empty
     } // i for
 
@@ -895,24 +919,24 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
   if (! removed.isEmpty() ) {
     for (int i = 0; i < services_list.count(); ++i) {
       if (removed.contains(services_list.at(i).objpath) ) {
-				QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+        QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
         services_list.removeAt(i);
-			}	// if
+      } // if
      } // for
    } // if we needed to remove something
-    
+
   // clear the counters (if selected) and update the widgets
-  clearCounters(); 
+  clearCounters();
   // Next line a bit of a hack, but I can find no evidence that service provider properties are changed via signals once a connection is
-  // made. This includes both the manager.servicesChanged() and services.propertyChanged() signals. Connecting a VPN seems to be a 
-  // black hole of signals (well except for vpn connection interface - but we're not using that).   
+  // made. This includes both the manager.servicesChanged() and services.propertyChanged() signals. Connecting a VPN seems to be a
+  // black hole of signals (well except for vpn connection interface - but we're not using that).
   // This will force a service rescan which picks up some of these properties.
-	if (services_list.count() > 0) {
-		if (services_list.at(0).objmap.value("Type") == "vpn") managerRescan(CMST::Manager_Services);
-	}
-	updateDisplayWidgets();
-	
-  return;  
+  if (services_list.count() > 0) {
+    if (services_list.at(0).objmap.value("Type") == "vpn") managerRescan(CMST::Manager_Services);
+  }
+  updateDisplayWidgets();
+
+  return;
 }
 
 //
@@ -1072,30 +1096,30 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
     } //
     else if (s_path == onlineobjectpath) {
       onlineobjectpath.clear();
-		} // else if object went offline
-		// Send notification if vpn changed
-		for (int i = 0; i < vpn_list.count(); ++i) {
-			if (s_path == vpn_list.at(i).objpath.path() ) {
-				notifyclient->init();
-				if (value.toString() == "ready") {
-					notifyclient->setSummary(QString(tr("VPN Engaged")) );
-					notifyclient->setIcon(iconman->getIconName("connection_vpn") );
-				}
-				else {
-					notifyclient->setSummary(QString(tr("VPN Disengaged")) );
-					notifyclient->setIcon(iconman->getIconName("onnection_not_ready") );
-				}
-				notifyclient->setBody(QString(tr("Object Path: %1")).arg(s_path) );
-				notifyclient->setUrgency(Nc::UrgencyNormal);
-				this->sendNotifications();
-				break;
-			} // if
-		}	// for
-	} // if property contains State 
+    } // else if object went offline
+    // Send notification if vpn changed
+    for (int i = 0; i < vpn_list.count(); ++i) {
+      if (s_path == vpn_list.at(i).objpath.path() ) {
+        notifyclient->init();
+        if (value.toString() == "ready") {
+          notifyclient->setSummary(QString(tr("VPN Engaged")) );
+          notifyclient->setIcon(iconman->getIconName("connection_vpn") );
+        }
+        else {
+          notifyclient->setSummary(QString(tr("VPN Disengaged")) );
+          notifyclient->setIcon(iconman->getIconName("onnection_not_ready") );
+        }
+        notifyclient->setBody(QString(tr("Object Path: %1")).arg(s_path) );
+        notifyclient->setUrgency(Nc::UrgencyNormal);
+        this->sendNotifications();
+        break;
+      } // if
+    } // for
+  } // if property contains State
 
-	// update the widgets
+  // update the widgets
   updateDisplayWidgets();
-  
+
   return;
 }
 
@@ -1151,47 +1175,47 @@ void ControlBox::scanWiFi()
 }
 
 //  Slot to loop through all WiFi technologies and set or reset the
-//  id and password.  Called from the ui.pushButton_IDPass and from 
+//  id and password.  Called from the ui.pushButton_IDPass and from
 //  toggleTethered().
 void ControlBox::wifiIDPass(const QString& obj_path)
 {
   // Make sure we got the technologies_list before we try to work with it.
   if ( (q16_errors & CMST::Err_Technologies) != 0x00 ) return;
 
-	// Run through each technology looking for Wifi
-	for (int row = 0; row < technologies_list.size(); ++row) {
-		if (technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
-				if (technologies_list.at(row).objpath.path() == obj_path || obj_path.isEmpty() ) {
-					QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
-	
-					shared::ValidatingDialog* vd01 = new shared::ValidatingDialog(this);
-					vd01->setLabel(tr("<b>Technology: %1</b><p>Please enter the WiFi AP SSID that clients will<br>have to join in order to gain internet connectivity.").arg(technologies_list.at(row).objpath.path()) ),
-					vd01->setValidator(CMST::ValDialog_min1ch);					
-					vd01->setText(technologies_list.at(row).objmap.value("TetheringIdentifier").toString() );
-					if (vd01->exec() == QDialog::Accepted) {
-						if (vd01->getText() !=  technologies_list.at(row).objmap.value("TetheringIdentifier").toString()) {
-							shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringIdentifier", QVariant::fromValue(QDBusVariant(vd01->getText()))) );		
-						}
-					}	// if accepted
-					vd01->deleteLater();
-					
-					if (! technologies_list.at(row).objmap.value("TetheringIdentifier").toString().isEmpty() ) {
-						shared::ValidatingDialog* vd02 = new shared::ValidatingDialog(this);
-						vd02->setLabel(tr("<b>Technology: %1</b><p>Please enter the WPA pre-shared key clients will<br>have to use in order to establish a connection.<p>PSK length: minimum of 8 characters.").arg(technologies_list.at(row).objpath.path()) );
-						vd02->setValidator(CMST::ValDialog_min8ch);
-						vd02->setText(technologies_list.at(row).objmap.value("TetheringPassphrase").toString() );
-						if (vd02->exec() == QDialog::Accepted) 
-							if (vd02->getText() != technologies_list.at(row).objmap.value("TetheringPassphrase").toString() )
-								shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringPassphrase", QVariant::fromValue(QDBusVariant(vd02->getText()))) );		
-						vd02->deleteLater();
-					}	// if 
-					
-					// cleanup
-					iface_tech->deleteLater();
-				}	// if wifi match
-			}	// if tech is wifi
-		}	// for
-  
+  // Run through each technology looking for Wifi
+  for (int row = 0; row < technologies_list.size(); ++row) {
+    if (technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
+        if (technologies_list.at(row).objpath.path() == obj_path || obj_path.isEmpty() ) {
+          QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
+
+          shared::ValidatingDialog* vd01 = new shared::ValidatingDialog(this);
+          vd01->setLabel(tr("<b>Technology: %1</b><p>Please enter the WiFi AP SSID that clients will<br>have to join in order to gain internet connectivity.").arg(technologies_list.at(row).objpath.path()) ),
+          vd01->setValidator(CMST::ValDialog_min1ch);
+          vd01->setText(technologies_list.at(row).objmap.value("TetheringIdentifier").toString() );
+          if (vd01->exec() == QDialog::Accepted) {
+            if (vd01->getText() !=  technologies_list.at(row).objmap.value("TetheringIdentifier").toString()) {
+              shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringIdentifier", QVariant::fromValue(QDBusVariant(vd01->getText()))) );
+            }
+          } // if accepted
+          vd01->deleteLater();
+
+          if (! technologies_list.at(row).objmap.value("TetheringIdentifier").toString().isEmpty() ) {
+            shared::ValidatingDialog* vd02 = new shared::ValidatingDialog(this);
+            vd02->setLabel(tr("<b>Technology: %1</b><p>Please enter the WPA pre-shared key clients will<br>have to use in order to establish a connection.<p>PSK length: minimum of 8 characters.").arg(technologies_list.at(row).objpath.path()) );
+            vd02->setValidator(CMST::ValDialog_min8ch);
+            vd02->setText(technologies_list.at(row).objmap.value("TetheringPassphrase").toString() );
+            if (vd02->exec() == QDialog::Accepted)
+              if (vd02->getText() != technologies_list.at(row).objmap.value("TetheringPassphrase").toString() )
+                shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringPassphrase", QVariant::fromValue(QDBusVariant(vd02->getText()))) );
+            vd02->deleteLater();
+          } // if
+
+          // cleanup
+          iface_tech->deleteLater();
+        } // if wifi match
+      } // if tech is wifi
+    } // for
+
   return;
 }
 
@@ -1244,24 +1268,24 @@ void ControlBox::togglePowered(QString object_id, bool checkstate)
 //  Called when our custom idButton in the tethered cell in the page 1 technology tableWidget is clicked
 void ControlBox::toggleTethered(QString object_id, bool checkstate)
 {
-	QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
-	
-	// See if this is a wifi technology, get the ID and Pass if necessary
-	bool ok = true;
-  for (int row = 0; row < technologies_list.size(); ++row) {
-		if (technologies_list.at(row).objpath.path() == object_id) {
-			if(technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
-				QString sid = technologies_list.at(row).objmap.value("TetheringIdentifier").toString();
-				QString spw = technologies_list.at(row).objmap.value("TetheringPassphrase").toString();
-				if (sid.isEmpty() || spw.isEmpty() ) wifiIDPass(object_id);
-			}	// if technology is wifi
-		}	// if object_id
-	}	// for
+  QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
 
-	// Send message if everything is ok
-	if (ok) {
-		shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "Tethering", QVariant::fromValue(QDBusVariant(checkstate))) );
-	}
+  // See if this is a wifi technology, get the ID and Pass if necessary
+  bool ok = true;
+  for (int row = 0; row < technologies_list.size(); ++row) {
+    if (technologies_list.at(row).objpath.path() == object_id) {
+      if(technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
+        QString sid = technologies_list.at(row).objmap.value("TetheringIdentifier").toString();
+        QString spw = technologies_list.at(row).objmap.value("TetheringPassphrase").toString();
+        if (sid.isEmpty() || spw.isEmpty() ) wifiIDPass(object_id);
+      } // if technology is wifi
+    } // if object_id
+  } // for
+
+  // Send message if everything is ok
+  if (ok) {
+    shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "Tethering", QVariant::fromValue(QDBusVariant(checkstate))) );
+  }
 
   // cleanup
   iface_tech->deleteLater();
@@ -1305,14 +1329,14 @@ void ControlBox::minMaxWindow(QAction* act)
 // are to power and unpower technologies
 void ControlBox::techSubmenuTriggered(QAction* act)
 {
-	// find the techology associated with the action and toggle its powered state 
-	for (int i = 0; i < technologies_list.count(); ++i) {
-		if (technologies_list.at(i).objmap.value("Name").toString() == act->text() ) {
-			togglePowered(technologies_list.at(i).objpath.path(), act->isChecked() );
-			break;
-		}	// if
-	}	// for
-	
+  // find the techology associated with the action and toggle its powered state
+  for (int i = 0; i < technologies_list.count(); ++i) {
+    if (technologies_list.at(i).objmap.value("Name").toString() == act->text() ) {
+      togglePowered(technologies_list.at(i).objpath.path(), act->isChecked() );
+      break;
+    } // if
+  } // for
+
   return;
 }
 
@@ -1323,10 +1347,10 @@ void ControlBox::techSubmenuTriggered(QAction* act)
 // information on the service.
 void ControlBox::infoSubmenuTriggered(QAction* act)
 {
-	ui.tabWidget->setCurrentIndex(1);
+  ui.tabWidget->setCurrentIndex(1);
   ui.comboBox_service->setCurrentIndex(ui.comboBox_service->findText(act->text()) );
   this->showNormal();
-  
+
   return;
 }
 
@@ -1336,21 +1360,21 @@ void ControlBox::infoSubmenuTriggered(QAction* act)
 // connect to a wifi service.
 void ControlBox::wifiSubmenuTriggered(QAction* act)
 {
-	// find the wifi service associated with the action.
-	for (int i = 0; i < wifi_list.count(); ++i) {
-		if (getNickName(wifi_list.at(i).objpath) == act->text() ) {
-			QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-			iface_serv->setTimeout(1);
-			QString state = wifi_list.at(i).objmap.value("State").toString();
-			if (state == "online" || state == "ready") 
-				shared::processReply(iface_serv->call(QDBus::AutoDetect, "Disconnect") );
-			else 
-				shared::processReply(iface_serv->call(QDBus::AutoDetect, "Connect") );
-			iface_serv->deleteLater();
-			break;
-		}	// if
-	} 	// for
-	
+  // find the wifi service associated with the action.
+  for (int i = 0; i < wifi_list.count(); ++i) {
+    if (getNickName(wifi_list.at(i).objpath) == act->text() ) {
+      QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+      iface_serv->setTimeout(1);
+      QString state = wifi_list.at(i).objmap.value("State").toString();
+      if (state == "online" || state == "ready")
+        shared::processReply(iface_serv->call(QDBus::AutoDetect, "Disconnect") );
+      else
+        shared::processReply(iface_serv->call(QDBus::AutoDetect, "Connect") );
+      iface_serv->deleteLater();
+      break;
+    } // if
+  }   // for
+
   return;
 }
 
@@ -1360,22 +1384,22 @@ void ControlBox::wifiSubmenuTriggered(QAction* act)
 // to a VPN service.
 void ControlBox::vpnSubmenuTriggered(QAction* act)
 {
-	// find the VPN service associated with the action
-	for (int i = 0; i < vpn_list.count(); ++i) {
-		if (getNickName(vpn_list.at(i).objpath) == act->text() ) {
-			QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-			iface_serv->setTimeout(1);
-			QString state = vpn_list.at(i).objmap.value("State").toString();
-			if (state == "ready")
-				shared::processReply(iface_serv->call(QDBus::AutoDetect, "Disconnect") );
-			else 
-				shared::processReply(iface_serv->call(QDBus::AutoDetect, "Connect") );
-			iface_serv->deleteLater();
-			break;
-		}	// if
-	} 	// for
+  // find the VPN service associated with the action
+  for (int i = 0; i < vpn_list.count(); ++i) {
+    if (getNickName(vpn_list.at(i).objpath) == act->text() ) {
+      QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
+      iface_serv->setTimeout(1);
+      QString state = vpn_list.at(i).objmap.value("State").toString();
+      if (state == "ready")
+        shared::processReply(iface_serv->call(QDBus::AutoDetect, "Disconnect") );
+      else
+        shared::processReply(iface_serv->call(QDBus::AutoDetect, "Connect") );
+      iface_serv->deleteLater();
+      break;
+    } // if
+  }   // for
 
-	return;
+  return;
 }
 
 //
@@ -1464,12 +1488,12 @@ void ControlBox::getServiceDetails(int index)
   rs.append(tr("<br><b>Wireless</b><br>"));
   QStringList sl_tr;
   for (int i = 0; i < map.value("Security").toStringList().size(); ++i) {
-		sl_tr << TranslateStrings::cmtr(map.value("Security").toStringList().at(i) );
-	}	// for
+    sl_tr << TranslateStrings::cmtr(map.value("Security").toStringList().at(i) );
+  } // for
   rs.append(tr("Security: %1<br>").arg(sl_tr.join(',')) );
   if (! map.value("Strength").toString().isEmpty() ) rs.append(tr("Strength: %1<br>").arg(map.value("Strength").value<quint8>()) );
   rs.append(tr("Roaming: %1<br>").arg(map.value("Roaming").toBool() ? tr("Yes", "roaming") : tr("No", "roaming")) );
-  
+
   rs.append(tr("<br><b>VPN Provider</b><br>"));
   shared::extractMapData(submap, services_list.at(index).objmap.value("Provider") );
   rs.append(tr("Host: %1<br>").arg(submap.value("Host").toString()) );
@@ -1503,14 +1527,14 @@ void ControlBox::showWhatsThis()
 // visible then close the program.
 void ControlBox::closeEvent(QCloseEvent* e)
 {
-	if (trayicon != 0 ) {
-		if (trayicon->isVisible() ){
-			this->hide();
-			e->ignore();
-		}	// if visible
-	}	// if there is a tray icon
-	else
-		e->accept();
+  if (trayicon != 0 ) {
+    if (trayicon->isVisible() ){
+      this->hide();
+      e->ignore();
+    } // if visible
+  } // if there is a tray icon
+  else
+    e->accept();
   return;
 }
 
@@ -1519,12 +1543,12 @@ void ControlBox::closeEvent(QCloseEvent* e)
 // applicable.
 void ControlBox::keyPressEvent(QKeyEvent* e)
 {
-	if (e->key() == Qt::Key_Escape &&
-	    trayicon != 0 &&
-	    trayicon->isVisible()) {
-		this->hide();
-		return;
-	}
+  if (e->key() == Qt::Key_Escape &&
+      trayicon != 0 &&
+      trayicon->isVisible()) {
+    this->hide();
+    return;
+  }
         QDialog::keyPressEvent(e);
 }
 
@@ -1533,8 +1557,8 @@ void ControlBox::keyPressEvent(QKeyEvent* e)
 // in eventFilters return true eats the event, false passes on it.
 bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
 {
-	(void) obj;
-	
+  (void) obj;
+
   if (evn->type() == QEvent::ToolTip) {
     if (ui.checkBox_enableinterfacetooltips->isChecked())
       return false;
@@ -1548,7 +1572,7 @@ bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
 //////////////////////////////////////////// Private Functions ////////////////////////////////////
 //
 // Function to rescan connman properties, technologies and services
-// Int return value is the errors encountered  
+// Int return value is the errors encountered
 // This function is now really misnamed.  Originally we called it a lot, but now
 // everything is dealt with using DBus signals so it is only called at startup
 // as an initial scan.
@@ -1584,7 +1608,7 @@ int ControlBox::managerRescan(const int& srv)
       else {
         for (int i = 0; i < services_list.size(); ++i) {
           QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
-          QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));       
+          QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
         } // for
       } // else
     } // if services
@@ -1605,21 +1629,21 @@ void ControlBox::assembleTabStatus()
   // Global Properties
   if ( (q16_errors & CMST::Err_Properties) == 0x00 ) {
     QString s1 = properties_map.value("State").toString();
-    if (s1 == "online") {	
-			ui.label_state_pix->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
+    if (s1 == "online") {
+      ui.label_state_pix->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
     } // if online
     else {
       if (s1 == "ready") {
-				ui.label_state_pix->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
-				      } // if ready
+        ui.label_state_pix->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
+              } // if ready
       else {
-				ui.label_state_pix->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
+        ui.label_state_pix->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
       } // else any other state
     } //  else ready or any other state
     s1 = TranslateStrings::cmtr(s1);
     s1.prepend(tr("State: ") );
     ui.label_state->setText(s1);
-   
+
     bool b1 = properties_map.value("OfflineMode").toBool();
     QString s2 = QString();
     if (b1) {
@@ -1643,18 +1667,18 @@ void ControlBox::assembleTabStatus()
     ui.tableWidget_technologies->setRowCount(technologies_list.size() );
     ui.tableWidget_technologies->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Fixed);
     ui.tableWidget_technologies->horizontalHeader()->setSectionResizeMode(4, QHeaderView::Fixed);
-      
-		if (ui.checkBox_hidetethering->isChecked() ) {
-			ui.tableWidget_technologies->hideColumn(4);
-			ui.tableWidget_technologies->hideColumn(5);
-			ui.pushButton_IDPass->setHidden(true);
-		}
-		else { 
-			ui.tableWidget_technologies->showColumn(4);
-			ui.tableWidget_technologies->showColumn(5);
-			ui.pushButton_IDPass->setHidden(false);
-		} 
-		    
+
+    if (ui.checkBox_hidetethering->isChecked() ) {
+      ui.tableWidget_technologies->hideColumn(4);
+      ui.tableWidget_technologies->hideColumn(5);
+      ui.pushButton_IDPass->setHidden(true);
+    }
+    else {
+      ui.tableWidget_technologies->showColumn(4);
+      ui.tableWidget_technologies->showColumn(5);
+      ui.pushButton_IDPass->setHidden(false);
+    }
+
     for (int row = 0; row < technologies_list.size(); ++row) {
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       st = technologies_list.at(row).objmap.value("Name").toString();
@@ -1691,7 +1715,7 @@ void ControlBox::assembleTabStatus()
       qtwi03->setText( bt ? tr("Yes", "connected") : tr("No", "connected") );
       qtwi03->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 3, qtwi03);
- 
+
       idButton* qpb04 = new idButton(this, technologies_list.at(row).objpath);
       qpb04->setFixedSize(
         ui.tableWidget_technologies->horizontalHeader()->sectionSize(4),
@@ -1707,13 +1731,13 @@ void ControlBox::assembleTabStatus()
         qpb04->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
         qpb04->setChecked(false);
         if (technologies_list.at(row).objmap.value("Type").toString() == "ethernet")
-					qpb04->setDisabled(true);
-				else 
-					qpb04->setEnabled(technologies_list.at(row).objmap.value("Powered").toBool() );	
+          qpb04->setDisabled(true);
+        else
+          qpb04->setEnabled(technologies_list.at(row).objmap.value("Powered").toBool() );
       }
-			ui.tableWidget_technologies->setCellWidget(row, 4, qpb04); 
-	
-			QTableWidgetItem* qtwi05 = new QTableWidgetItem();
+      ui.tableWidget_technologies->setCellWidget(row, 4, qpb04);
+
+      QTableWidgetItem* qtwi05 = new QTableWidgetItem();
       QString sid = technologies_list.at(row).objmap.value("TetheringIdentifier").toString();
       QString spw = technologies_list.at(row).objmap.value("TetheringPassphrase").toString();
       if (sid.isEmpty() ) sid = "--";
@@ -1721,14 +1745,14 @@ void ControlBox::assembleTabStatus()
       qtwi05->setText(QString("%1 : %2").arg(sid).arg(spw) );
       qtwi05->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_technologies->setItem(row, 5, qtwi05);
-       	   
+
     } // technologies for loop
-    
-		// resize the columns to contents
-		ui.tableWidget_technologies->resizeColumnToContents(0);
-		ui.tableWidget_technologies->resizeColumnToContents(1);
-		ui.tableWidget_technologies->resizeColumnToContents(3); 
-				 
+
+    // resize the columns to contents
+    ui.tableWidget_technologies->resizeColumnToContents(0);
+    ui.tableWidget_technologies->resizeColumnToContents(1);
+    ui.tableWidget_technologies->resizeColumnToContents(3);
+
   } // technologies if no error
 
   // Services
@@ -1736,21 +1760,21 @@ void ControlBox::assembleTabStatus()
     QString ss = QString();
     ui.tableWidget_services->clearContents();
     ui.tableWidget_services->setRowCount(services_list.size() );
- 
+
      if (ui.checkBox_hidecnxn->isChecked() ) {
-			ui.tableWidget_services->hideColumn(3);
-		}
-		else {
-			ui.tableWidget_services->showColumn(3);
-			ui.tableWidget_services->horizontalHeader()->resizeSection(1, ui.tableWidget_services->horizontalHeader()->defaultSectionSize());
-		}
+      ui.tableWidget_services->hideColumn(3);
+    }
+    else {
+      ui.tableWidget_services->showColumn(3);
+      ui.tableWidget_services->horizontalHeader()->resizeSection(1, ui.tableWidget_services->horizontalHeader()->defaultSectionSize());
+    }
     for (int row = 0; row < services_list.size(); ++row) {
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       ss = getNickName(services_list.at(row).objpath);
       qtwi00->setText(TranslateStrings::cmtr(ss) );
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_services->setItem(row, 0, qtwi00);
-      
+
       QTableWidgetItem* qtwi01 = new QTableWidgetItem();
       ss = services_list.at(row).objmap.value("Type").toString();
       qtwi01->setText(TranslateStrings::cmtr(ss) );
@@ -1768,7 +1792,7 @@ void ControlBox::assembleTabStatus()
       qtwi03->setText(fi.baseName() );
       qtwi03->setTextAlignment(Qt::AlignVCenter|Qt::AlignLeft);
       ui.tableWidget_services->setItem(row, 3, qtwi03);
-      
+
     } // services for loop
 
     // resize the services columns to contents
@@ -1794,12 +1818,12 @@ void ControlBox::assembleTabDetails()
 
   //  services details
   if ( (q16_errors & CMST::Err_Services) == 0x00 ) {
-	  // populate the combobox
-	  for (int row = 0; row < services_list.size(); ++row) {
-			QString ss = getNickName(services_list.at(row).objpath);
-				ui.comboBox_service->addItem(TranslateStrings::cmtr(ss) );
-	  } // services for loop
-	   ui.comboBox_service->setCurrentIndex(0);
+    // populate the combobox
+    for (int row = 0; row < services_list.size(); ++row) {
+      QString ss = getNickName(services_list.at(row).objpath);
+        ui.comboBox_service->addItem(TranslateStrings::cmtr(ss) );
+    } // services for loop
+     ui.comboBox_service->setCurrentIndex(0);
   } // services if no error
 
   return;
@@ -1833,19 +1857,19 @@ void ControlBox::assembleTabWireless()
   // Run through each service_list looking for wifi services
   wifi_list.clear();
 
-	// set the stylesheet for signalbars
-	QFile f0(":/stylesheets/stylesheets/signal_bar.qss");
-	QString qss;
-	if (f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
-		qss = QString(f0.readAll());
-		if (QColor(ui.lineEdit_colorize->text()).isValid() ) {
-			qss = qss.left(qss.lastIndexOf('}') );
-			qss.append(QString("background-color: %1;").arg(ui.lineEdit_colorize->text()) );
-			qss.append('}'); 
-		}
-		f0.close();
-	}
-  
+  // set the stylesheet for signalbars
+  QFile f0(":/stylesheets/stylesheets/signal_bar.qss");
+  QString qss;
+  if (f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    qss = QString(f0.readAll());
+    if (QColor(ui.lineEdit_colorize->text()).isValid() ) {
+      qss = qss.left(qss.lastIndexOf('}') );
+      qss.append(QString("background-color: %1;").arg(ui.lineEdit_colorize->text()) );
+      qss.append('}');
+    }
+    f0.close();
+  }
+
   for (int row = 0; row < services_list.size(); ++row) {
     QMap<QString,QVariant> map = services_list.at(row).objmap;
     if (map.value("Type").toString() == "wifi") {
@@ -1859,21 +1883,21 @@ void ControlBox::assembleTabWireless()
 
       QLabel* ql01 = new QLabel(ui.tableWidget_wifi);
       if (map.value("Favorite").toBool() ) {
-				ql01->setPixmap(iconman->getIcon("favorite").pixmap(QSize(16,16)) );
+        ql01->setPixmap(iconman->getIcon("favorite").pixmap(QSize(16,16)) );
       }
       ql01->setAlignment(Qt::AlignCenter);
       ui.tableWidget_wifi->setCellWidget(rowcount, 1, ql01);
- 
+
       QLabel* ql02 = new QLabel(ui.tableWidget_wifi);
       if (map.value("State").toString() == "online") {
-				ql02->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
+        ql02->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
       } // if online
       else {
         if (map.value("State").toString() == "ready") {
-					ql02->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
+          ql02->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
         } // if ready
         else {
-					ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
+          ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
         } // else any other state
       } // else ready or any other state
       ql02->setAlignment(Qt::AlignCenter);
@@ -1884,17 +1908,17 @@ void ControlBox::assembleTabWireless()
       QTableWidgetItem* qtwi03 = new QTableWidgetItem();
       QStringList sl_tr;
       for (int i = 0; i < map.value("Security").toStringList().size(); ++i) {
-				sl_tr << TranslateStrings::cmtr(map.value("Security").toStringList().at(i) );
-			}	// for
-			qtwi03->setText(sl_tr.join(',') );
+        sl_tr << TranslateStrings::cmtr(map.value("Security").toStringList().at(i) );
+      } // for
+      qtwi03->setText(sl_tr.join(',') );
       qtwi03->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_wifi->setItem(rowcount, 3, qtwi03);
 
       QProgressBar* pb04 = new QProgressBar(ui.tableWidget_wifi);
       pb04->setMinimum(0);
-			pb04->setMaximum(100);
-			pb04->setOrientation( Qt::Horizontal);
-			pb04->setStyleSheet(qss);
+      pb04->setMaximum(100);
+      pb04->setOrientation( Qt::Horizontal);
+      pb04->setStyleSheet(qss);
       pb04->setValue(map.value("Strength").value<quint8>() );
       ui.tableWidget_wifi->setCellWidget(rowcount, 4, pb04);
 
@@ -1926,99 +1950,99 @@ void ControlBox::assembleTabVPN()
   ui.tableWidget_vpn->clearContents();
   ui.tableWidget_vpn->setRowCount(0);
   int rowcount = 0;
-  
+
   // Make sure we've been able to communicate with the connman-vpn daemon
   if ( (q16_errors & CMST::Err_Invalid_VPN_Iface) != 0x00) {
-		ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
-		return;
-	}
+    ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
+    return;
+  }
 
   // Make sure we got the services_list before we try to work with it.
-  if ( (q16_errors & CMST::Err_Services ) != 0x00 ) return;			
-  
-// Run through each service_list looking for wifi services
+  if ( (q16_errors & CMST::Err_Services ) != 0x00 ) return;
+
+// Run through each service_list looking for vpn services
   vpn_list.clear();
   for (int row = 0; row < services_list.size(); ++row) {
     QMap<QString,QVariant> map = services_list.at(row).objmap;
     if (map.value("Type").toString() == "vpn") {
       vpn_list.append(services_list.at(row));
-      ui.tableWidget_vpn->setRowCount(rowcount + 1);    
+      ui.tableWidget_vpn->setRowCount(rowcount + 1);
       QMap<QString,QVariant> providermap;
       shared::extractMapData(providermap, services_list.at(row).objmap.value("Provider") );
-      
+
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       qtwi00->setText(getNickName(services_list.at(row).objpath) );
       qtwi00->setTextAlignment(Qt::AlignCenter);
       ui.tableWidget_vpn->setItem(rowcount, 0, qtwi00);
 
       QLabel* ql01 = new QLabel(ui.tableWidget_vpn);
-			ql01->setText(TranslateStrings::cmtr(providermap.value("Type").toString()) );
-			ql01->setAlignment(Qt::AlignCenter);
-			ui.tableWidget_vpn->setCellWidget(rowcount, 1, ql01);    
- 
-			if (map.value("State").toString() == "association") {
-				QProgressBar* pb02 = new QProgressBar(ui.tableWidget_vpn);
-				pb02->setMinimum(0);
-				pb02->setMaximum(0);
-				pb02->setOrientation( Qt::Horizontal);
-				pb02->setFormat("Connecting");
-				// set the stylesheet on pb02
-				QFile f0(":/stylesheets/stylesheets/vpn_connecting.qss");
-				if (f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
-					QString qss = QString(f0.readAll());
-					if (QColor(ui.lineEdit_colorize->text()).isValid() ) {
-						qss = qss.left(qss.lastIndexOf('}') );
-						qss.append(QString("background-color: %1;").arg(ui.lineEdit_colorize->text()) );
-						qss.append('}'); 
-					}
-					f0.close();
-					pb02->setStyleSheet(qss);
-				}
+      ql01->setText(TranslateStrings::cmtr(providermap.value("Type").toString()) );
+      ql01->setAlignment(Qt::AlignCenter);
+      ui.tableWidget_vpn->setCellWidget(rowcount, 1, ql01);
 
-				ui.tableWidget_vpn->setCellWidget(rowcount, 2, pb02);
-			} // if association
-			else {
-				QLabel* ql02 = new QLabel(ui.tableWidget_vpn);
-				if (map.value("State").toString() == "ready") {
-				ql02->setPixmap(iconman->getIcon("state_vpn_connected").pixmap(QSize(16,16)) );
-				} // if ready
-				else {
-					ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
-				} // else any other state
-			  ql02->setAlignment(Qt::AlignCenter);
-				ql02->setToolTip(TranslateStrings::cmtr(map.value("State").toString()) );
-				ql02->installEventFilter(this);
-				ui.tableWidget_vpn->setCellWidget(rowcount, 2, ql02);
-			}	// else not association 
-			
+      if (map.value("State").toString() == "association") {
+        QProgressBar* pb02 = new QProgressBar(ui.tableWidget_vpn);
+        pb02->setMinimum(0);
+        pb02->setMaximum(0);
+        pb02->setOrientation( Qt::Horizontal);
+        pb02->setFormat("Connecting");
+        // set the stylesheet on pb02
+        QFile f0(":/stylesheets/stylesheets/vpn_connecting.qss");
+        if (f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
+          QString qss = QString(f0.readAll());
+          if (QColor(ui.lineEdit_colorize->text()).isValid() ) {
+            qss = qss.left(qss.lastIndexOf('}') );
+            qss.append(QString("background-color: %1;").arg(ui.lineEdit_colorize->text()) );
+            qss.append('}');
+          }
+          f0.close();
+          pb02->setStyleSheet(qss);
+        }
+
+        ui.tableWidget_vpn->setCellWidget(rowcount, 2, pb02);
+      } // if association
+      else {
+        QLabel* ql02 = new QLabel(ui.tableWidget_vpn);
+        if (map.value("State").toString() == "ready") {
+        ql02->setPixmap(iconman->getIcon("state_vpn_connected").pixmap(QSize(16,16)) );
+        } // if ready
+        else {
+          ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
+        } // else any other state
+        ql02->setAlignment(Qt::AlignCenter);
+        ql02->setToolTip(TranslateStrings::cmtr(map.value("State").toString()) );
+        ql02->installEventFilter(this);
+        ui.tableWidget_vpn->setCellWidget(rowcount, 2, ql02);
+      } // else not association
+
       QLabel* ql03 = new QLabel(ui.tableWidget_vpn);
       ql03->setText(providermap.value("Host").toString() );
-			ql03->setAlignment(Qt::AlignCenter);
-			ui.tableWidget_vpn->setCellWidget(rowcount, 3, ql03);
-      
+      ql03->setAlignment(Qt::AlignCenter);
+      ui.tableWidget_vpn->setCellWidget(rowcount, 3, ql03);
+
       QLabel* ql04 = new QLabel(ui.tableWidget_vpn);
-			QFileInfo fi = services_list.at(row).objpath.path();
-			ql04->setText(fi.baseName() );
-			ql04->setAlignment(Qt:: AlignCenter);
-			ui.tableWidget_vpn->setCellWidget(rowcount, 4, ql04);
-						     
+      QFileInfo fi = services_list.at(row).objpath.path();
+      ql04->setText(fi.baseName() );
+      ql04->setAlignment(Qt:: AlignCenter);
+      ui.tableWidget_vpn->setCellWidget(rowcount, 4, ql04);
+
       ++rowcount;
     } //  if vpn cnxn
-  } // services for loop 
-  
+  } // services for loop
+
   // resize the services column 0 to 3 to contents
   ui.tableWidget_vpn->resizeColumnToContents(0);
   ui.tableWidget_vpn->resizeColumnToContents(1);
   ui.tableWidget_vpn->resizeColumnToContents(2);
   ui.tableWidget_vpn->resizeColumnToContents(3);
-  
+
   // enable the control buttons if there is at least on line in the table
   bool b_enable = false;
   if ( vpn_list.count() > 0 ) b_enable = true;
   ui.pushButton_vpn_connect->setEnabled(b_enable);
   ui.pushButton_vpn_disconnect->setEnabled(b_enable);
-	
-	return;
+
+  return;
 }
 
 //
@@ -2041,7 +2065,7 @@ void ControlBox::assembleTrayIcon()
   QString stt = QString();
   int readycount = 0;
   QIcon prelimicon;
-  
+
   if ( (q16_errors & CMST::Err_Properties & CMST::Err_Services) == 0x00 ) {
     // count how many services are in the ready state
     for (int i = 0; i < services_list.count(); ++i) {
@@ -2064,28 +2088,28 @@ void ControlBox::assembleTrayIcon()
           shared::extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
           stt.append(tr("SSID: %1<br>").arg(getNickName(services_list.at(0).objpath)) );
           QStringList sl_tr;
-					for (int i = 0; i < services_list.at(0).objmap.value("Security").toStringList().size(); ++i) {
-						sl_tr << TranslateStrings::cmtr(services_list.at(0).objmap.value("Security").toStringList().at(i) );
-					}	// for
+          for (int i = 0; i < services_list.at(0).objmap.value("Security").toStringList().size(); ++i) {
+            sl_tr << TranslateStrings::cmtr(services_list.at(0).objmap.value("Security").toStringList().at(i) );
+          } // for
           stt.append(tr("Security: %1<br>").arg(sl_tr.join(',')) );
           stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
           stt.append(tr("Interface: %1").arg(TranslateStrings::cmtr(submap.value("Interface").toString())) );
           quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
           if (str > 80 ) prelimicon = iconman->getIcon("connection_wifi_100");
-          else if (str > 60 ) prelimicon = iconman->getIcon("connection_wifi_075");  
+          else if (str > 60 ) prelimicon = iconman->getIcon("connection_wifi_075");
             else if (str > 40 )   prelimicon = iconman->getIcon("connection_wifi_050");
               else if (str > 20 )   prelimicon = iconman->getIcon("connection_wifi_025");
                 else prelimicon = iconman->getIcon("connection_wifi_000");
         } // else if wifi connection
-        
+
         else if (services_list.at(0).objmap.value("Type").toString() == "vpn") {
-					shared::extractMapData(submap, services_list.at(0).objmap.value("Provider") );
+          shared::extractMapData(submap, services_list.at(0).objmap.value("Provider") );
           stt.prepend(tr("VPN Connection<br>","icon_tool_tip"));
           stt.append(tr("Type: %1<br>").arg(TranslateStrings::cmtr(submap.value("Type").toString())) );
           stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
           stt.append(tr("Host: %1<br>").arg(TranslateStrings::cmtr(submap.value("Host").toString())) );
           prelimicon = iconman->getIcon("connection_vpn");
-				}	// else if vpn connection     
+        } // else if vpn connection
       } //  services if no error
     } //  if the state is online
 
@@ -2112,19 +2136,19 @@ void ControlBox::assembleTrayIcon()
 
     // else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"
     else {
-			prelimicon = iconman->getIcon("connection_not_ready");
+      prelimicon = iconman->getIcon("connection_not_ready");
       stt.append(tr("Not Connected", "icon_tool_tip"));
     } // else any other connection sate
   } // properties if no error
 
   // could not get any properties
   else {
-		prelimicon = iconman->getIcon("connection_error");
+    prelimicon = iconman->getIcon("connection_error");
     stt.append(tr("Error retrieving properties via Dbus"));
     stt.append(tr("Connection status is unknown"));
   }
 
-  // Set the tray icon.  If the trayiconbackground color is valid and 
+  // Set the tray icon.  If the trayiconbackground color is valid and
   // there is a valid alpha channel convert the alpha to the background
   // color to get our fake transparency.  Fake transparency can be set as a command
   // line option so trayiconbackground is set up in the constructor.
@@ -2132,101 +2156,101 @@ void ControlBox::assembleTrayIcon()
   // for the icons to display in Plasma5.
   // First convert from a QIcon through QPixmap to QImage
   QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
-  QImage src = pxm.toImage();  
- 	QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);
-	QPainter painter(&dest); 
+  QImage src = pxm.toImage();
+  QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);
+  QPainter painter(&dest);
   if (trayiconbackground.isValid() && src.hasAlphaChannel() ) {
-		painter.setCompositionMode(QPainter::CompositionMode_Source);
-		painter.fillRect(dest.rect(), trayiconbackground);
-		painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
-	}	// if img has alpha channel and background color valid
-	else {
-		painter.setCompositionMode(QPainter::CompositionMode_Source);
-	}	// else just make an ARGB32 copy	
-	painter.drawImage(0, 0, src);
-	prelimicon = QIcon(QPixmap::fromImage(dest));
+    painter.setCompositionMode(QPainter::CompositionMode_Source);
+    painter.fillRect(dest.rect(), trayiconbackground);
+    painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
+  } // if img has alpha channel and background color valid
+  else {
+    painter.setCompositionMode(QPainter::CompositionMode_Source);
+  } // else just make an ARGB32 copy
+  painter.drawImage(0, 0, src);
+  prelimicon = QIcon(QPixmap::fromImage(dest));
   trayicon->setIcon(prelimicon);
 
   //  Set the tool tip (shown when mouse hovers over the systemtrayicon)
   if (ui.checkBox_enablesystemtraytooltips->isChecked() )
-		trayicon->setToolTip(stt);
-	else
-		trayicon->setToolTip(QString());	
+    trayicon->setToolTip(stt);
+  else
+    trayicon->setToolTip(QString());
 
-	// Don't continue if we can't get properties
-	if ( (q16_errors & CMST::Err_Properties & CMST::Err_Technologies & CMST::Err_Services) != 0x00 ) return;
-	
+  // Don't continue if we can't get properties
+  if ( (q16_errors & CMST::Err_Properties & CMST::Err_Technologies & CMST::Err_Services) != 0x00 ) return;
+
   // Assemble the submenus for the context menu
-  // tech_submenu.  
+  // tech_submenu.
   tech_submenu->clear();
   for (int i = 0; i < technologies_list.count(); ++i) {
-		QAction* act = tech_submenu->addAction(technologies_list.at(i).objmap.value("Name").toString() );
-		act->setCheckable(true);
-		act->setChecked(technologies_list.at(i).objmap.value("Powered").toBool() );
-		QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(technologies_list.at(i).objmap.value("Name").toString())) );
-		ttstr.append(tr("Type: %1").arg(technologies_list.at(i).objmap.value("Type").toString()) );
-		ttstr.append(tr("<br>Powered "));
-		technologies_list.at(i).objmap.value("Powered").toBool() ? ttstr.append(tr("On")) : ttstr.append(tr("Off"));
-		ttstr.append("<br>");
-		technologies_list.at(i).objmap.value("Connected").toBool() ? ttstr.append(tr("Connected")) : ttstr.append(tr("Not Connected"));	
-		ttstr.append(tr("<br>Tethering "));
-		technologies_list.at(i).objmap.value("Tethering").toBool() ? ttstr.append(tr("Enabled")) : ttstr.append(tr("Disabled"));	
-		act->setToolTip(ttstr);
-	}	// i for
-  
+    QAction* act = tech_submenu->addAction(technologies_list.at(i).objmap.value("Name").toString() );
+    act->setCheckable(true);
+    act->setChecked(technologies_list.at(i).objmap.value("Powered").toBool() );
+    QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1 Properties</b></center>").arg(TranslateStrings::cmtr(technologies_list.at(i).objmap.value("Name").toString())) );
+    ttstr.append(tr("Type: %1").arg(technologies_list.at(i).objmap.value("Type").toString()) );
+    ttstr.append(tr("<br>Powered "));
+    technologies_list.at(i).objmap.value("Powered").toBool() ? ttstr.append(tr("On")) : ttstr.append(tr("Off"));
+    ttstr.append("<br>");
+    technologies_list.at(i).objmap.value("Connected").toBool() ? ttstr.append(tr("Connected")) : ttstr.append(tr("Not Connected"));
+    ttstr.append(tr("<br>Tethering "));
+    technologies_list.at(i).objmap.value("Tethering").toBool() ? ttstr.append(tr("Enabled")) : ttstr.append(tr("Disabled"));
+    act->setToolTip(ttstr);
+  } // i for
+
   // info_submenu
   info_submenu->clear();
   for (int j = 0; j < services_list.count(); ++j) {
     QAction* act = info_submenu->addAction(getNickName(services_list.at(j).objpath) );
-		if (services_list.at(j).objmap.value("Type").toString() == "ethernet" ) {
-		  if (services_list.at(j).objmap.value("State").toString() == "online")
-				act->setIcon(iconman->getIcon("connection_wired"));
-			else
-				if(services_list.at(j).objmap.value("State").toString() == "ready")
-					act->setIcon(iconman->getIcon("connection_ready"));
-				else
-					act->setIcon(iconman->getIcon("connection_not_ready"));
-		}	// if wired
-		
-		else if (services_list.at(j).objmap.value("Type").toString() == "wifi" ) {
-			if (services_list.at(j).objmap.value("State").toString() == "online" ||
-					(properties_map.value("State").toString() != "online" &&
-					(services_list.at(j).objmap.value("State").toString() == "ready" && readycount == 1)) ) {
-				quint8 str = services_list.at(j).objmap.value("Strength").value<quint8>();
-				if (str > 80 ) act->setIcon(iconman->getIcon("connection_wifi_100") );
-				else if (str > 60 ) act->setIcon(iconman->getIcon("connection_wifi_075") );  
-					else if (str > 40 )   act->setIcon(iconman->getIcon("connection_wifi_050") );
-						else if (str > 20 )   act->setIcon(iconman->getIcon("connection_wifi_025") );
-							else act->setIcon(iconman->getIcon("connection_wifi_000") );
-			}	// if we want to show a wifi signal symbol
-			else
-				if(services_list.at(j).objmap.value("State").toString() == "ready")
-					act->setIcon(iconman->getIcon("connection_ready"));
-				else
-					act->setIcon(iconman->getIcon("connection_not_ready"));
-		}	// else if wifi
-		
-		else if (services_list.at(j).objmap.value("Type").toString() == "vpn" ) {
-			if (services_list.at(j).objmap.value("State").toString() == "ready")
-				act->setIcon(iconman->getIcon("connection_vpn"));
-			else if (services_list.at(j).objmap.value("State").toString() == "association")
-				act->setIcon(iconman->getIcon("connection_vpn_acquiring"));				
-			else	
-				act->setIcon(iconman->getIcon("connection_not_ready"));
-		}	// else if vpn
-		
-		else if (services_list.at(j).objmap.value("State").toString() == "ready") act->setIcon(iconman->getIcon("connection_ready"));
-			else if (services_list.at(j).objmap.value("State").toString() == "failure" ) act->setIcon(iconman->getIcon("connection_failure"));
-				else act->setIcon(iconman->getIcon("connection_not_ready"));
+    if (services_list.at(j).objmap.value("Type").toString() == "ethernet" ) {
+      if (services_list.at(j).objmap.value("State").toString() == "online")
+        act->setIcon(iconman->getIcon("connection_wired"));
+      else
+        if(services_list.at(j).objmap.value("State").toString() == "ready")
+          act->setIcon(iconman->getIcon("connection_ready"));
+        else
+          act->setIcon(iconman->getIcon("connection_not_ready"));
+    } // if wired
+
+    else if (services_list.at(j).objmap.value("Type").toString() == "wifi" ) {
+      if (services_list.at(j).objmap.value("State").toString() == "online" ||
+          (properties_map.value("State").toString() != "online" &&
+          (services_list.at(j).objmap.value("State").toString() == "ready" && readycount == 1)) ) {
+        quint8 str = services_list.at(j).objmap.value("Strength").value<quint8>();
+        if (str > 80 ) act->setIcon(iconman->getIcon("connection_wifi_100") );
+        else if (str > 60 ) act->setIcon(iconman->getIcon("connection_wifi_075") );
+          else if (str > 40 )   act->setIcon(iconman->getIcon("connection_wifi_050") );
+            else if (str > 20 )   act->setIcon(iconman->getIcon("connection_wifi_025") );
+              else act->setIcon(iconman->getIcon("connection_wifi_000") );
+      } // if we want to show a wifi signal symbol
+      else
+        if(services_list.at(j).objmap.value("State").toString() == "ready")
+          act->setIcon(iconman->getIcon("connection_ready"));
+        else
+          act->setIcon(iconman->getIcon("connection_not_ready"));
+    } // else if wifi
+
+    else if (services_list.at(j).objmap.value("Type").toString() == "vpn" ) {
+      if (services_list.at(j).objmap.value("State").toString() == "ready")
+        act->setIcon(iconman->getIcon("connection_vpn"));
+      else if (services_list.at(j).objmap.value("State").toString() == "association")
+        act->setIcon(iconman->getIcon("connection_vpn_acquiring"));
+      else
+        act->setIcon(iconman->getIcon("connection_not_ready"));
+    } // else if vpn
+
+    else if (services_list.at(j).objmap.value("State").toString() == "ready") act->setIcon(iconman->getIcon("connection_ready"));
+      else if (services_list.at(j).objmap.value("State").toString() == "failure" ) act->setIcon(iconman->getIcon("connection_failure"));
+        else act->setIcon(iconman->getIcon("connection_not_ready"));
   } // j for
-  
-  // wifi_submenu.  
+
+  // wifi_submenu.
   wifi_submenu->clear();
   for (int k = 0; k < wifi_list.count(); ++k) {
     QAction* act = wifi_submenu->addAction(getNickName(wifi_list.at(k).objpath) );
     act->setCheckable(true);
     QString state = wifi_list.at(k).objmap.value("State").toString();
-		if (state == "online" || state == "ready") act->setChecked(true);
+    if (state == "online" || state == "ready") act->setChecked(true);
     QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1</b></center>").arg(getNickName(wifi_list.at(k).objpath)) );
     ttstr.append(tr("Connection : %1").arg(TranslateStrings::cmtr(state)) );
     ttstr.append("<br>");
@@ -2239,19 +2263,19 @@ void ControlBox::assembleTrayIcon()
     wifi_list.at(k).objmap.value("AutoConnect").toBool() ? ttstr.append(tr("Enabled")) : ttstr.append(tr("Disabled"));
     act->setToolTip(ttstr);
   } // k for
-  
+
   // vpn_submenu
-  vpn_submenu->clear();	
+  vpn_submenu->clear();
   for (int l = 0; l < vpn_list.count(); ++l) {
     QAction* act = vpn_submenu->addAction(getNickName(vpn_list.at(l).objpath) );
     act->setCheckable(true);
     QString state = vpn_list.at(l).objmap.value("State").toString();
-		if (state == "ready") act->setChecked(true);
+    if (state == "ready") act->setChecked(true);
     QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1</b></center>").arg(getNickName(vpn_list.at(l).objpath)) );
     ttstr.append(tr("Connection : %1").arg(TranslateStrings::cmtr(state)) );
     act->setToolTip(ttstr);
   } // l for
-  
+
   return;
 }
 
@@ -2343,10 +2367,10 @@ void ControlBox::writeSettings()
   settings->setValue("retry_failed", ui.checkBox_retryfailed->isChecked() );
   settings->setValue("run_on_startup", ui.checkBox_runonstartup->isChecked());
   settings->endGroup();
-  
+
   settings->beginGroup("LineEdits");
   settings->setValue("colorize_icons", ui.lineEdit_colorize->text() );
-  settings->endGroup();  
+  settings->endGroup();
 
   settings->beginGroup("StartOptions");
   settings->setValue("disable_counters", ui.checkBox_disablecounters->isChecked() );
@@ -2364,11 +2388,11 @@ void ControlBox::writeSettings()
   settings->setValue("desktop_xfce", ui.radioButton_desktopxfce->isChecked() );
   settings->setValue("desktop_mate", ui.radioButton_desktopmate->isChecked() );
   settings->endGroup();
-  
+
   settings->beginGroup("ExternalPrograms");
   settings->setValue("run_after_connect", ui.lineEdit_afterconnect->text() );
   settings->endGroup();
-  
+
   return;
 }
 
@@ -2392,11 +2416,11 @@ void ControlBox::readSettings()
   ui.checkBox_retryfailed->setChecked(settings->value("retry_failed").toBool() );
   ui.checkBox_runonstartup->setChecked(settings->value("run_on_startup").toBool());
   settings->endGroup();
- 
+
   settings->beginGroup("LineEdits");
   ui.lineEdit_colorize->setText(settings->value("colorize_icons").toString() );
   settings->endGroup();
-  
+
 
   settings->beginGroup("StartOptions");
   ui.checkBox_disablecounters->setChecked(settings->value("disable_counters").toBool() );
@@ -2414,11 +2438,11 @@ void ControlBox::readSettings()
   ui.radioButton_desktopxfce->setChecked(settings->value("desktop_xfce").toBool() );
   ui.radioButton_desktopmate->setChecked(settings->value("desktop_mate").toBool() );
   settings->endGroup();
-  
+
   settings->beginGroup("ExternalPrograms");
   ui.lineEdit_afterconnect->setText(settings->value("run_after_connect").toString() );
   settings->endGroup();
-  
+
   return;
 }
 
@@ -2427,10 +2451,10 @@ void ControlBox::readSettings()
 // and called by a single shot QTimer.
 void ControlBox::createSystemTrayIcon()
 {
-	// Search for a tray icon, don't read XDG_CURRENT_DESKTOP for the tray type
-	bool b_dtaware = qApp->desktopSettingsAware();
-	qApp->setDesktopSettingsAware(false);
-	
+  // Search for a tray icon, don't read XDG_CURRENT_DESKTOP for the tray type
+  bool b_dtaware = qApp->desktopSettingsAware();
+  qApp->setDesktopSettingsAware(false);
+
   // We still need to make sure there is a tray available
   if (QSystemTrayIcon::isSystemTrayAvailable() ) {
 
@@ -2446,25 +2470,25 @@ void ControlBox::createSystemTrayIcon()
     info_submenu->setToolTipsVisible(true);
     wifi_submenu->setToolTipsVisible(true);
     vpn_submenu->setToolTipsVisible(true);
-    
+
     trayiconmenu->addMenu(tech_submenu);
     trayiconmenu->addMenu(info_submenu);
     trayiconmenu->addMenu(wifi_submenu);
     trayiconmenu->addMenu(vpn_submenu);
     trayiconmenu->addSeparator();
-    
+
     trayiconmenu->addAction(ui.actionRescan);
-		trayiconmenu->addAction(ui.actionOffline_Mode);
-		trayiconmenu->addSeparator();
-	
-		trayiconmenu->addAction(maximizeAction);
-		trayiconmenu->addAction(minimizeAction);
-		trayiconmenu->addSeparator();
-		trayiconmenu->addAction(tr("Cancel"), this, SLOT(closeSystemTrayTearOffMenu()) );
-		trayiconmenu->addAction(exitAction);
-   
-		trayicon->setContextMenu(trayiconmenu);
-    
+    trayiconmenu->addAction(ui.actionOffline_Mode);
+    trayiconmenu->addSeparator();
+
+    trayiconmenu->addAction(maximizeAction);
+    trayiconmenu->addAction(minimizeAction);
+    trayiconmenu->addSeparator();
+    trayiconmenu->addAction(tr("Cancel"), this, SLOT(closeSystemTrayTearOffMenu()) );
+    trayiconmenu->addAction(exitAction);
+
+    trayicon->setContextMenu(trayiconmenu);
+
     connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
 
     // Assemble the tray icon (set the icon to display)
@@ -2514,9 +2538,9 @@ void ControlBox::createSystemTrayIcon()
     this->showNormal();
   } // else
 
-	// Restore the desktopAware
-	qApp->setDesktopSettingsAware(b_dtaware);
-	
+  // Restore the desktopAware
+  qApp->setDesktopSettingsAware(b_dtaware);
+
   // Lastly update the display widgets (since this is actually the last
   // line of the constructor.)
   this->updateDisplayWidgets();
@@ -2621,7 +2645,7 @@ bool ControlBox::getArray(QList<arrayElement>& r_list, const QDBusMessage& r_msg
     qdb_arg >> ael.objpath >> ael.objmap;
     qdb_arg.endStructure();
     r_list.append (ael);
-  }	// while
+  } // while
   qdb_arg.endArray();
 
   return true;
@@ -2707,7 +2731,7 @@ void ControlBox::logErrors(const quint8& err)
       syslog(LOG_ERR, "%s",tr("Could not create an interface to connman-vpn on the system bus").toUtf8().constData());
       QMessageBox::critical(this, tr("%1 - Critical Error").arg(TranslateStrings::cmtr("cmst")),
         tr("Unable to create an interface to connman-vpn on the system bus.<br><br>%1 will not be able to communicate with the connman vpn daemon.").arg(TranslateStrings::cmtr("cmst")) );
-      break;    
+      break;
     default:
       break;
     }
@@ -2749,31 +2773,31 @@ void ControlBox::clearCounters()
 }
 
 //
-// Function to return a nick name for a service. Typically return the 
+// Function to return a nick name for a service. Typically return the
 // Name property.  For wired ethernet Name comes back as Wired, and for
-// hidden wifi networks this is blank.  In those cases create a 
+// hidden wifi networks this is blank.  In those cases create a
 // nickname and return it.
 QString ControlBox::getNickName(const QDBusObjectPath& objpath)
-{	
-	for (int i = 0; i < services_list.size(); ++i) {
-		if (services_list.at(i).objpath == objpath) {
-			QMap<QString,QVariant> submap;
-			if (services_list.at(i).objmap.value("Type").toString() == "ethernet") {
-				shared::extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );
-				if (submap.value("Interface").toString().isEmpty() )
-					return services_list.at(i).objmap.value("Name").toString();
-				else	
-					return QString(TranslateStrings::cmtr(services_list.at(i).objmap.value("Name").toString()) + " [%1]").arg(submap.value("Interface").toString() );				
-			}	// if type ethernet
-			
-			else if ( services_list.at(i).objmap.value("Type").toString() == "wifi" && services_list.at(i).objmap.value("Name").toString().isEmpty() ) 
-				return tr("[Hidden Wifi]");
-			else 
-				return  services_list.at(i).objmap.value("Name").toString();
-		}	// if objpath matches
-	}	// for
-	
-	return QString();
+{
+  for (int i = 0; i < services_list.size(); ++i) {
+    if (services_list.at(i).objpath == objpath) {
+      QMap<QString,QVariant> submap;
+      if (services_list.at(i).objmap.value("Type").toString() == "ethernet") {
+        shared::extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );
+        if (submap.value("Interface").toString().isEmpty() )
+          return services_list.at(i).objmap.value("Name").toString();
+        else
+          return QString(TranslateStrings::cmtr(services_list.at(i).objmap.value("Name").toString()) + " [%1]").arg(submap.value("Interface").toString() );
+      } // if type ethernet
+
+      else if ( services_list.at(i).objmap.value("Type").toString() == "wifi" && services_list.at(i).objmap.value("Name").toString().isEmpty() )
+        return tr("[Hidden Wifi]");
+      else
+        return  services_list.at(i).objmap.value("Name").toString();
+    } // if objpath matches
+  } // for
+
+  return QString();
 }
 
 
@@ -2847,7 +2871,7 @@ void ControlBox::configureService()
   PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()) );
 
   // Set the whatsthis button icon
-	peditor->setWhatsThisIcon(iconman->getIcon("whats_this"));
+  peditor->setWhatsThisIcon(iconman->getIcon("whats_this"));
 
   // call then clean up
   peditor->exec();
@@ -2862,29 +2886,29 @@ void ControlBox::configureService()
 // is pressed.
 void ControlBox::provisionService()
 {
-	if (qobject_cast<QPushButton*>(sender()) == ui.pushButton_provisioning_editor) {
-		ProvisioningEditor* peditor = new ProvisioningEditor(this);
-		
-		// Set the whatsthis button icon
-		peditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
-  
-		// call then clean up
-		peditor->exec();
-		peditor->deleteLater();
-	}
-	
-	else if (qobject_cast<QPushButton*>(sender()) == ui.pushButton_vpn_editor) {
-		VPN_Editor* veditor = new VPN_Editor(this);
-				
-		// Set the whatsthis button icon
-		veditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
-  
-		// call then clean up
-		veditor->exec();
-		veditor->deleteLater();	
-	}
-	
-	return;
+  if (qobject_cast<QPushButton*>(sender()) == ui.pushButton_provisioning_editor) {
+    ProvisioningEditor* peditor = new ProvisioningEditor(this);
+
+    // Set the whatsthis button icon
+    peditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
+
+    // call then clean up
+    peditor->exec();
+    peditor->deleteLater();
+  }
+
+  else if (qobject_cast<QPushButton*>(sender()) == ui.pushButton_vpn_editor) {
+    VPN_Editor* veditor = new VPN_Editor(this);
+
+    // Set the whatsthis button icon
+    veditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
+
+    // call then clean up
+    veditor->exec();
+    veditor->deleteLater();
+  }
+
+  return;
 }
 
 //
@@ -2906,45 +2930,45 @@ void ControlBox::cleanUp()
 
   // write settings
   this->writeSettings();
-  
+
   // unregister objects
   if (con_manager->isValid() ) {
-	  // agent
-	  shared::processReply(con_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT))) );
-		// counter - only have a signal-slot connection if the counter was able to be registered
-		if (counter->cnxns() > 0) {
-			shared::processReply(con_manager->call(QDBus::AutoDetect, "UnregisterCounter", QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT))) ); 
-		}	// if counters are connected to anything
-	}	// if con_manager isValid
-	
-			
-	if (vpn_manager->isValid() ) {
-	  shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
-	}	// ivpn_manager isValid
+    // agent
+    shared::processReply(con_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT))) );
+    // counter - only have a signal-slot connection if the counter was able to be registered
+    if (counter->cnxns() > 0) {
+      shared::processReply(con_manager->call(QDBus::AutoDetect, "UnregisterCounter", QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT))) );
+    } // if counters are connected to anything
+  } // if con_manager isValid
+
+
+  if (vpn_manager->isValid() ) {
+    shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
+  } // ivpn_manager isValid
 
   return;
 }
-	
-// 
+
+//
 // Slot to open the color selection dialog and request input.
 void ControlBox::callColorDialog()
 {
-	QColor color = QColorDialog::getColor(QColor(ui.lineEdit_colorize->text()), this, tr("Colorize Icons"));
-	if (color.isValid() ) ui.lineEdit_colorize->setText(color.name() );
-	
-	return;
-}	
+  QColor color = QColorDialog::getColor(QColor(ui.lineEdit_colorize->text()), this, tr("Colorize Icons"));
+  if (color.isValid() ) ui.lineEdit_colorize->setText(color.name() );
+
+  return;
+}
 
 //
 // Slot to process things when the user changes the icon color
 void ControlBox::iconColorChanged(const QString& col)
 {
-	iconman->setIconColor(QColor(col) );
-	this->updateDisplayWidgets();
-	ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));
-	agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
-	vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
-	
-	return;
+  iconman->setIconColor(QColor(col) );
+  this->updateDisplayWidgets();
+  ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));
+  agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
+  vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
+
+  return;
 }
 
