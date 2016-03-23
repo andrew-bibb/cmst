@@ -97,7 +97,10 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   ui.lineEdit_ipv6address->setText(ipv6map.value("Address").toString() );
   ui.lineEdit_ipv6gateway->setText(ipv6map.value("Gateway").toString() );
   if (! ipv6map.value("Privacy").toString().isEmpty() ) {
-    ui.comboBox_ipv6privacy->setCurrentIndex(ui.comboBox_ipv6privacy->findText(ipv6map.value("Privacy").toString(), Qt::MatchFixedString) );
+		if (ipv6map.value("Privacy").toString() == "prefered")
+			ui.comboBox_ipv6privacy->setCurrentIndex(ui.comboBox_ipv6privacy->findText("preferred", Qt::MatchFixedString) );
+		else	
+			ui.comboBox_ipv6privacy->setCurrentIndex(ui.comboBox_ipv6privacy->findText(ipv6map.value("Privacy").toString(), Qt::MatchFixedString) );
   }
 
   // proxy page
@@ -276,6 +279,9 @@ void PropertiesEditor::updateConfiguration()
     vlist << "IPv6.Configuration";
     dict.insert("Method", ui.comboBox_ipv6method->currentText().toLower() );
     dict.insert("PrefixLength", QVariant::fromValue(static_cast<quint8>(ui.spinBox_ipv6prefixlength->value())) );
+    // preferred needs to be misspelled as prefered for connman
+    QString spr = ui.comboBox_ipv6privacy->currentText().toLower();
+    if (spr == "preferred") spr = "prefered";
     dict.insert("Privacy", ui.comboBox_ipv6privacy->currentText().toLower() );
 
     lep << ui.lineEdit_ipv6address <<  ui.lineEdit_ipv6gateway;
