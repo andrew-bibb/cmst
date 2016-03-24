@@ -170,8 +170,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>154</width>
-        <height>132</height>
+        <width>279</width>
+        <height>166</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -215,6 +215,9 @@
          </item>
          <item row="0" column="1">
           <widget class="QComboBox" name="comboBox_ipv4method">
+           <property name="currentText">
+            <string notr="true">DHCP</string>
+           </property>
            <item>
             <property name="text">
              <string>DHCP</string>
@@ -261,8 +264,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>194</width>
-        <height>161</height>
+        <width>279</width>
+        <height>166</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -276,6 +279,9 @@
         <layout class="QGridLayout" name="gridLayout">
          <item row="0" column="1">
           <widget class="QComboBox" name="comboBox_ipv6method">
+           <property name="currentText">
+            <string notr="true">Auto</string>
+           </property>
            <item>
             <property name="text">
              <string>Auto</string>
@@ -336,6 +342,9 @@
          </item>
          <item row="4" column="1">
           <widget class="QComboBox" name="comboBox_ipv6privacy">
+           <property name="currentText">
+            <string notr="true">Disabled</string>
+           </property>
            <item>
             <property name="text">
              <string>Disabled</string>
@@ -382,7 +391,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>146</width>
+        <width>265</width>
         <height>168</height>
        </rect>
       </property>
@@ -404,6 +413,9 @@
          </item>
          <item row="0" column="1">
           <widget class="QComboBox" name="comboBox_proxymethod">
+           <property name="currentText">
+            <string notr="true">Direct</string>
+           </property>
            <item>
             <property name="text">
              <string>Direct</string>
