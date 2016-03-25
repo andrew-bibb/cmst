@@ -68,8 +68,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>279</width>
-        <height>166</height>
+        <width>98</width>
+        <height>46</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -102,8 +102,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>279</width>
-        <height>166</height>
+        <width>98</width>
+        <height>46</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -136,8 +136,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>279</width>
-        <height>166</height>
+        <width>98</width>
+        <height>46</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -170,8 +170,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>279</width>
-        <height>166</height>
+        <width>153</width>
+        <height>132</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -216,23 +216,8 @@
          <item row="0" column="1">
           <widget class="QComboBox" name="comboBox_ipv4method">
            <property name="currentText">
-            <string notr="true">DHCP</string>
+            <string/>
            </property>
-           <item>
-            <property name="text">
-             <string>DHCP</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Manual</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Off</string>
-            </property>
-           </item>
           </widget>
          </item>
          <item row="0" column="0">
@@ -264,8 +249,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>279</width>
-        <height>166</height>
+        <width>179</width>
+        <height>161</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -280,23 +265,8 @@
          <item row="0" column="1">
           <widget class="QComboBox" name="comboBox_ipv6method">
            <property name="currentText">
-            <string notr="true">Auto</string>
+            <string notr="true"/>
            </property>
-           <item>
-            <property name="text">
-             <string>Auto</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Manual</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Off</string>
-            </property>
-           </item>
           </widget>
          </item>
          <item row="3" column="0">
@@ -321,7 +291,11 @@
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QLineEdit" name="lineEdit_ipv6address"/>
+          <widget class="QLineEdit" name="lineEdit_ipv6address">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </item>
          <item row="4" column="0">
           <widget class="QLabel" name="label_6">
@@ -343,23 +317,8 @@
          <item row="4" column="1">
           <widget class="QComboBox" name="comboBox_ipv6privacy">
            <property name="currentText">
-            <string notr="true">Disabled</string>
+            <string notr="true"/>
            </property>
-           <item>
-            <property name="text">
-             <string>Disabled</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Preferred</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Enabled</string>
-            </property>
-           </item>
           </widget>
          </item>
          <item row="0" column="0">
@@ -414,23 +373,8 @@
          <item row="0" column="1">
           <widget class="QComboBox" name="comboBox_proxymethod">
            <property name="currentText">
-            <string notr="true">Direct</string>
+            <string notr="true"/>
            </property>
-           <item>
-            <property name="text">
-             <string>Direct</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Auto</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Manual</string>
-            </property>
-           </item>
           </widget>
          </item>
          <item row="1" column="0" colspan="2">

@@ -31,6 +31,7 @@ DEALINGS IN THE SOFTWARE.
 
 # include "./peditor.h"
 # include "./code/shared/shared.h"
+# include "./code/trstring/tr_strings.h"
 
 #define DBUS_SERVICE "net.connman"
 
@@ -43,6 +44,25 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   // Data members
   objpath = ae.objpath;
   objmap = ae.objmap;
+  sl_ipv4_method << "dhcp" << "manual" << "off"; 
+	sl_ipv6_method << "auto" << "manual" << "off";
+	sl_ipv6_privacy << "disabled" << "enabled" << "prefered";	// misspelling prefered is necessary
+	sl_proxy_method << "direct" << "auto" << "manual";
+	
+	// Setup comboboxes
+	int i;
+	for (i = 0; i < sl_ipv4_method.count(); ++i) {
+		ui.comboBox_ipv4method->addItem(TranslateStrings::cmtr(sl_ipv4_method.at(i)) );
+	}
+		for (i = 0; i < sl_ipv6_method.count(); ++i) {
+		ui.comboBox_ipv6method->addItem(TranslateStrings::cmtr(sl_ipv6_method.at(i)) );
+	}
+	for (i = 0; i < sl_ipv6_privacy.count(); ++i) {
+		ui.comboBox_ipv6privacy->addItem(TranslateStrings::cmtr(sl_ipv6_privacy.at(i)) );
+	}
+	for (i = 0; i < sl_proxy_method.count(); ++i) {
+		ui.comboBox_proxymethod->addItem(TranslateStrings::cmtr(sl_proxy_method.at(i)) );
+	}
 
   // Setup the address validator and apply it to any ui QLineEdit.
   // The lev validator will validate an IP address or up to one white space character (to allow
@@ -83,7 +103,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
 
   // ipv4 page
   if (! ipv4map.value("Method").toString().isEmpty() ) {
-    ui.comboBox_ipv4method->setCurrentIndex(ui.comboBox_ipv4method->findText(ipv4map.value("Method").toString(), Qt::MatchFixedString) );
+    ui.comboBox_ipv4method->setCurrentIndex(sl_ipv4_method.indexOf(QRegExp(ipv4map.value("Method").toString())) );
   }
   ui.lineEdit_ipv4address->setText(ipv4map.value("Address").toString() );
   ui.lineEdit_ipv4netmask->setText(ipv4map.value("Netmask").toString() );
@@ -91,21 +111,18 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
 
   // ipv6 page
   if (! ipv6map.value("Method").toString().isEmpty() ) {
-    ui.comboBox_ipv6method->setCurrentIndex(ui.comboBox_ipv6method->findText(ipv6map.value("Method").toString(), Qt::MatchFixedString) );
+    ui.comboBox_ipv6method->setCurrentIndex(sl_ipv6_method.indexOf(QRegExp(ipv6map.value("Method").toString())) );
   }
   ui.spinBox_ipv6prefixlength->setValue(ipv6map.value("PrefixLength").toUInt() );
   ui.lineEdit_ipv6address->setText(ipv6map.value("Address").toString() );
   ui.lineEdit_ipv6gateway->setText(ipv6map.value("Gateway").toString() );
-  if (! ipv6map.value("Privacy").toString().isEmpty() ) {
-		if (ipv6map.value("Privacy").toString() == "prefered")
-			ui.comboBox_ipv6privacy->setCurrentIndex(ui.comboBox_ipv6privacy->findText("preferred", Qt::MatchFixedString) );
-		else	
-			ui.comboBox_ipv6privacy->setCurrentIndex(ui.comboBox_ipv6privacy->findText(ipv6map.value("Privacy").toString(), Qt::MatchFixedString) );
+  if (! ipv6map.value("Privacy").toString().isEmpty() ) {	
+		ui.comboBox_ipv6privacy->setCurrentIndex(sl_ipv6_privacy.indexOf(QRegExp(ipv6map.value("Privacy").toString())) );
   }
 
   // proxy page
   if (! proxmap.value("Method").toString().isEmpty() ) {
-    ui.comboBox_proxymethod->setCurrentIndex(ui.comboBox_proxymethod->findText(proxmap.value("Method").toString(), Qt::MatchFixedString) );
+    ui.comboBox_proxymethod->setCurrentIndex(sl_proxy_method.indexOf(QRegExp(proxmap.value("Method").toString())) );
   }
   ui.lineEdit_proxyservers->setText(proxmap.value("Servers").toStringList().join("\n") );
   ui.lineEdit_proxyexcludes->setText(proxmap.value("Excludes").toStringList().join("\n") );
@@ -239,17 +256,17 @@ void PropertiesEditor::updateConfiguration()
 
   // ipv4
   // Only update if an entry has changed.
-  if (! ui.comboBox_ipv4method->currentText().contains(ipv4map.value("Method").toString(), Qt::CaseInsensitive) |
-      ! ui.lineEdit_ipv4address->text().contains(ipv4map.value("Address").toString(), Qt::CaseInsensitive)        |
-      ! ui.lineEdit_ipv4netmask->text().contains(ipv4map.value("Netmask").toString(), Qt::CaseInsensitive)        |
-      ! ui.lineEdit_ipv4gateway->text().contains(ipv4map.value("Gateway").toString(), Qt::CaseInsensitive) ) {
+  if ((ui.comboBox_ipv4method->currentText() != TranslateStrings::cmtr(ipv4map.value("Method").toString()) )	|
+      (ui.lineEdit_ipv4address->text() != TranslateStrings::cmtr(ipv4map.value("Address").toString()) )      	|
+      (ui.lineEdit_ipv4netmask->text() != TranslateStrings::cmtr(ipv4map.value("Netmask").toString()) )				|
+      (ui.lineEdit_ipv4gateway->text() != TranslateStrings::cmtr(ipv4map.value("Gateway").toString())) )			{
 
     vlist.clear();
     lep.clear();
     slp.clear();
     dict.clear();
     vlist << "IPv4.Configuration";
-    dict.insert("Method", ui.comboBox_ipv4method->currentText().toLower() );
+    dict.insert("Method", sl_ipv4_method.at(ui.comboBox_ipv4method->currentIndex()) );
 
     lep << ui.lineEdit_ipv4address << ui.lineEdit_ipv4netmask << ui.lineEdit_ipv4gateway;
     slp << "Address" << "Netmask" << "Gateway";
@@ -266,23 +283,20 @@ void PropertiesEditor::updateConfiguration()
 
   // ipv6
   // Only update if an entry has changed.
-  if (! ui.comboBox_ipv6method->currentText().contains(ipv6map.value("Method").toString(), Qt::CaseInsensitive) |
-      (static_cast<uint>(ui.spinBox_ipv6prefixlength->value()) != ipv6map.value("PrefixLength").toUInt())      |
-      ! ui.lineEdit_ipv6address->text().contains(ipv6map.value("Address").toString(), Qt::CaseInsensitive)      |
-      ! ui.lineEdit_ipv6gateway->text().contains(ipv6map.value("Gateway").toString(), Qt::CaseInsensitive)      |
-      ! ui.comboBox_ipv6privacy->currentText().contains(ipv6map.value("Privacy").toString(), Qt::CaseInsensitive)) {
+  if ((ui.comboBox_ipv6method->currentText() != TranslateStrings::cmtr(ipv6map.value("Method").toString()) ) 		|
+      (static_cast<uint>(ui.spinBox_ipv6prefixlength->value()) != ipv6map.value("PrefixLength").toUInt() )    	|
+      (ui.lineEdit_ipv6address->text() != TranslateStrings::cmtr(ipv6map.value("Address").toString()) )    	    |
+      (ui.lineEdit_ipv6gateway->text() != TranslateStrings::cmtr(ipv6map.value("Gateway").toString()) )				  |
+      (ui.comboBox_ipv6privacy->currentText() != TranslateStrings::cmtr(ipv6map.value("Privacy").toString())) ) {
 
     vlist.clear();
     lep.clear();
     slp.clear();
     dict.clear();
     vlist << "IPv6.Configuration";
-    dict.insert("Method", ui.comboBox_ipv6method->currentText().toLower() );
+    dict.insert("Method", sl_ipv6_method.at(ui.comboBox_ipv6method->currentIndex()) );
     dict.insert("PrefixLength", QVariant::fromValue(static_cast<quint8>(ui.spinBox_ipv6prefixlength->value())) );
-    // preferred needs to be misspelled as prefered for connman
-    QString spr = ui.comboBox_ipv6privacy->currentText().toLower();
-    if (spr == "preferred") spr = "prefered";
-    dict.insert("Privacy", ui.comboBox_ipv6privacy->currentText().toLower() );
+    dict.insert("Privacy", sl_ipv6_privacy.at(ui.comboBox_ipv6privacy->currentIndex()) );
 
     lep << ui.lineEdit_ipv6address <<  ui.lineEdit_ipv6gateway;
     slp << "Address" << "Gateway";
@@ -299,17 +313,17 @@ void PropertiesEditor::updateConfiguration()
 
   // proxy
   // Only update if an entry has changed.
-  if (! ui.comboBox_proxymethod->currentText().contains(proxmap.value("Method").toString(), Qt::CaseInsensitive)            |
-      ! ui.lineEdit_proxyservers->text().contains(proxmap.value("Servers").toStringList().join("\n"), Qt::CaseInsensitive)  |
-      ! ui.lineEdit_proxyexcludes->text().contains(proxmap.value("Excludes").toStringList().join("\n"), Qt::CaseInsensitive)|
-      ! ui.lineEdit_proxyurl->text().contains(proxmap.value("URL").toString(), Qt::CaseInsensitive)) {
+  if ((ui.comboBox_proxymethod->currentText() != TranslateStrings::cmtr(proxmap.value("Method").toString()) )	|
+      (ui.lineEdit_proxyservers->text() != proxmap.value("Servers").toStringList().join("\n") )								|
+      (ui.lineEdit_proxyexcludes->text() != proxmap.value("Excludes").toStringList().join("\n") )							|
+      (ui.lineEdit_proxyurl->text() != proxmap.value("URL").toString()) )																			{
 
     vlist.clear();
     lep.clear();
     slp.clear();
     dict.clear();
     vlist << "Proxy.Configuration";
-    dict.insert("Method", ui.comboBox_proxymethod->currentText().toLower() );
+    dict.insert("Method", sl_proxy_method.at(ui.comboBox_proxymethod->currentIndex()) );
 
     lep << ui.lineEdit_proxyurl << ui.lineEdit_proxyservers << ui.lineEdit_proxyexcludes;
     slp << "URL" << "Servers" << "Excludes";

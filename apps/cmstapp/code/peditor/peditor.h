@@ -55,6 +55,10 @@ class PropertiesEditor : public QDialog
 		QMap<QString,QVariant> ipv4map; 
 		QMap<QString,QVariant> ipv6map;
 		QMap<QString,QVariant> proxmap;
+		QStringList sl_ipv4_method;
+		QStringList sl_ipv6_method;
+		QStringList sl_ipv6_privacy;
+		QStringList sl_proxy_method;
 		
 	// functions
 		   
