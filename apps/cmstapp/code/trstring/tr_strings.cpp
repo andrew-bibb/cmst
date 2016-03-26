@@ -27,7 +27,6 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/
 
-# include <QStringList>
 
 # include "./tr_strings.h"
 
@@ -122,4 +121,17 @@ TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent)
 	return;
 }
 
+//
+// Function to return a stringlist with entries translated
+QStringList TranslateStrings::cmtr_sl(const QStringList& sl_src)
+{
+	QStringList sl_rtn;
+	sl_rtn.clear();
+	
+	for (int i = 0; i < sl_src.count(); ++i) {
+		sl_rtn << TranslateStrings::cmtr(sl_src.at(i) );
+	}
+	
+	return sl_rtn;
+}
 

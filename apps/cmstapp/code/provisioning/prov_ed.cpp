@@ -36,6 +36,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QAction>
 # include <QFile>
 # include <QFileDialog>
+# include <QRegularExpression>
 
 # include "./prov_ed.h"
 # include "../resource.h"
@@ -266,18 +267,19 @@ void ProvisioningEditor::inputComboBox(QAction* act)
   if (act == ui.actionWifiPrivateKeyPassphraseType) {str = tr("Private key passphrase type."); sl << "fsid";}
   if (act == ui.actionWifiSecurity) {str = tr("Network security type."); sl << "psk" << "ieee8021x" << "wep" << "none";}
   if (act == ui.actionWifiHidden) {str = tr("Hidden network"); sl << "true" << "false";}
-  if (act == ui.actionServiceIPv6Privacy) {str = tr("IPv6 Privacy"); sl << "disabled" << "enabled" << "preferred";}
+  if (act == ui.actionServiceIPv6Privacy) {str = tr("IPv6 Privacy"); sl << "disabled" << "enabled" << "prefered";}	// intentional misspelling prefered
   
+  QStringList sl_tr = TranslateStrings::cmtr_sl(sl);
   QString item = QInputDialog::getItem(this,
     tr("%1 - Item Input").arg(TranslateStrings::cmtr("cmst")),
     str,
-    sl,
+    sl_tr,
     0,
     false,
     &ok);
     
   key.append(" = %1\n");
-  if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(item));
+  if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(sl.at(sl_tr.indexOf(QRegularExpression(item)))) );
   
   return;
 }

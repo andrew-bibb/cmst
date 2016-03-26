@@ -31,6 +31,8 @@ DEALINGS IN THE SOFTWARE.
 # define TRANSLATE_STRINGS
 
 # include <QObject>
+# include <QString>
+# include <QStringList>
 
 class TranslateStrings : public QObject
 {
@@ -42,5 +44,6 @@ class TranslateStrings : public QObject
   
   // functions
 		static inline QString cmtr(const QString& str, const char* disamb = 0) {return tr(qPrintable(str), disamb);}  
+		static QStringList cmtr_sl(const QStringList&);
 };
 #endif

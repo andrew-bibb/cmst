@@ -50,19 +50,10 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
 	sl_proxy_method << "direct" << "auto" << "manual";
 	
 	// Setup comboboxes
-	int i;
-	for (i = 0; i < sl_ipv4_method.count(); ++i) {
-		ui.comboBox_ipv4method->addItem(TranslateStrings::cmtr(sl_ipv4_method.at(i)) );
-	}
-		for (i = 0; i < sl_ipv6_method.count(); ++i) {
-		ui.comboBox_ipv6method->addItem(TranslateStrings::cmtr(sl_ipv6_method.at(i)) );
-	}
-	for (i = 0; i < sl_ipv6_privacy.count(); ++i) {
-		ui.comboBox_ipv6privacy->addItem(TranslateStrings::cmtr(sl_ipv6_privacy.at(i)) );
-	}
-	for (i = 0; i < sl_proxy_method.count(); ++i) {
-		ui.comboBox_proxymethod->addItem(TranslateStrings::cmtr(sl_proxy_method.at(i)) );
-	}
+	ui.comboBox_ipv4method->addItems(TranslateStrings::cmtr_sl(sl_ipv4_method) );
+	ui.comboBox_ipv6method->addItems(TranslateStrings::cmtr_sl(sl_ipv6_method) );
+	ui.comboBox_ipv6privacy->addItems(TranslateStrings::cmtr_sl(sl_ipv6_privacy) );
+	ui.comboBox_proxymethod->addItems(TranslateStrings::cmtr_sl(sl_proxy_method) );
 
   // Setup the address validator and apply it to any ui QLineEdit.
   // The lev validator will validate an IP address or up to one white space character (to allow
@@ -111,18 +102,18 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
 
   // ipv6 page
   if (! ipv6map.value("Method").toString().isEmpty() ) {
-    ui.comboBox_ipv6method->setCurrentIndex(sl_ipv6_method.indexOf(QRegExp(ipv6map.value("Method").toString())) );
+    ui.comboBox_ipv6method->setCurrentIndex(sl_ipv6_method.indexOf(QRegularExpression(ipv6map.value("Method").toString())) );
   }
   ui.spinBox_ipv6prefixlength->setValue(ipv6map.value("PrefixLength").toUInt() );
   ui.lineEdit_ipv6address->setText(ipv6map.value("Address").toString() );
   ui.lineEdit_ipv6gateway->setText(ipv6map.value("Gateway").toString() );
   if (! ipv6map.value("Privacy").toString().isEmpty() ) {	
-		ui.comboBox_ipv6privacy->setCurrentIndex(sl_ipv6_privacy.indexOf(QRegExp(ipv6map.value("Privacy").toString())) );
+		ui.comboBox_ipv6privacy->setCurrentIndex(sl_ipv6_privacy.indexOf(QRegularExpression(ipv6map.value("Privacy").toString())) );
   }
 
   // proxy page
   if (! proxmap.value("Method").toString().isEmpty() ) {
-    ui.comboBox_proxymethod->setCurrentIndex(sl_proxy_method.indexOf(QRegExp(proxmap.value("Method").toString())) );
+    ui.comboBox_proxymethod->setCurrentIndex(sl_proxy_method.indexOf(QRegularExpression(proxmap.value("Method").toString())) );
   }
   ui.lineEdit_proxyservers->setText(proxmap.value("Servers").toStringList().join("\n") );
   ui.lineEdit_proxyexcludes->setText(proxmap.value("Excludes").toStringList().join("\n") );

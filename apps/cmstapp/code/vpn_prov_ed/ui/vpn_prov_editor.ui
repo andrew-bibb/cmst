@@ -149,12 +149,12 @@
   </layout>
   <action name="actionGlobal">
    <property name="text">
-    <string>[global]</string>
+    <string notr="true">[global]</string>
    </property>
   </action>
   <action name="actionGlobalName">
    <property name="text">
-    <string>Name</string>
+    <string notr="true">Name</string>
    </property>
    <property name="toolTip">
     <string>Name of the network.</string>
@@ -162,7 +162,7 @@
   </action>
   <action name="actionGlobalDescription">
    <property name="text">
-    <string>Description</string>
+    <string notr="true">Description</string>
    </property>
    <property name="toolTip">
     <string>Description of the network.</string>
@@ -170,32 +170,32 @@
   </action>
   <action name="actionProviderPPTP">
    <property name="text">
-    <string>Provider PPTP</string>
+    <string notr="true">Provider PPTP</string>
    </property>
   </action>
   <action name="actionProviderL2TP">
    <property name="text">
-    <string>Provider L2TP</string>
+    <string notr="true">Provider L2TP</string>
    </property>
   </action>
   <action name="actionProviderVPNC">
    <property name="text">
-    <string>Provider VPNC</string>
+    <string notr="true">Provider VPNC</string>
    </property>
   </action>
   <action name="actionProviderOpenVPN">
    <property name="text">
-    <string>Provider OpenVPN</string>
+    <string notr="true">Provider OpenVPN</string>
    </property>
   </action>
   <action name="actionProviderOpenConnect">
    <property name="text">
-    <string>Provider OpenConnect</string>
+    <string notr="true">Provider OpenConnect</string>
    </property>
   </action>
   <action name="actionPPTP_User">
    <property name="text">
-    <string>PPTP.User</string>
+    <string notr="true">PPTP.User</string>
    </property>
    <property name="toolTip">
     <string>PPTP User Name.</string>
@@ -203,7 +203,7 @@
   </action>
   <action name="actionPPTP_Password">
    <property name="text">
-    <string>PPTP.Password</string>
+    <string notr="true">PPTP.Password</string>
    </property>
    <property name="toolTip">
     <string>PPTP Password.</string>
@@ -211,7 +211,7 @@
   </action>
   <action name="actionPPPD_EchoFailure">
    <property name="text">
-    <string>PPPD.EchoFailure</string>
+    <string notr="true">PPPD.EchoFailure</string>
    </property>
    <property name="toolTip">
     <string>Set the maximum number of LCP configure-NAKs returned
@@ -220,7 +220,7 @@ before starting to send configure-Rejects (default is 10).</string>
   </action>
   <action name="actionPPPD_EchoInterval">
    <property name="text">
-    <string>PPPD.EchoInterval</string>
+    <string notr="true">PPPD.EchoInterval</string>
    </property>
    <property name="toolTip">
     <string>Send an LCP echo-request frame to the peer every n seconds.
@@ -230,7 +230,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_Debug">
    <property name="text">
-    <string>PPPD.Debug</string>
+    <string notr="true">PPPD.Debug</string>
    </property>
    <property name="toolTip">
     <string>Debug level.</string>
@@ -238,7 +238,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_RefuseEAP">
    <property name="text">
-    <string>PPPD.RefuseEAP</string>
+    <string notr="true">PPPD.RefuseEAP</string>
    </property>
    <property name="toolTip">
     <string>Deny EAP authorization?</string>
@@ -246,7 +246,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_RefusePAP">
    <property name="text">
-    <string>PPPD.RefusePAP</string>
+    <string notr="true">PPPD.RefusePAP</string>
    </property>
    <property name="toolTip">
     <string>Deny PAP authorization?</string>
@@ -254,7 +254,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_RefuseCHAP">
    <property name="text">
-    <string>PPPD.RefuseCHAP</string>
+    <string notr="true">PPPD.RefuseCHAP</string>
    </property>
    <property name="toolTip">
     <string>Deny CHAP authorization?</string>
@@ -262,7 +262,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_RefuseMSCHAP">
    <property name="text">
-    <string>PPPD.RefuseMSCHAP</string>
+    <string notr="true">PPPD.RefuseMSCHAP</string>
    </property>
    <property name="toolTip">
     <string>Deny MSCHAP authorization?</string>
@@ -270,7 +270,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_RefuseMSCHAP2">
    <property name="text">
-    <string>PPPD.RefuseMSCHAP2</string>
+    <string notr="true">PPPD.RefuseMSCHAP2</string>
    </property>
    <property name="toolTip">
     <string>Deny MSCHAPV2 authorization?</string>
@@ -278,7 +278,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_NoBSDComp">
    <property name="text">
-    <string>PPPD.NoBSDComp</string>
+    <string notr="true">PPPD.NoBSDComp</string>
    </property>
    <property name="toolTip">
     <string>Disables BSD compression?</string>
@@ -286,7 +286,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_NoDeflate">
    <property name="text">
-    <string>PPPD.NoDeflate</string>
+    <string notr="true">PPPD.NoDeflate</string>
    </property>
    <property name="toolTip">
     <string>Disable deflate compression?</string>
@@ -294,7 +294,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_RequirMPPE">
    <property name="text">
-    <string>PPPD.RequirMPPE</string>
+    <string notr="true">PPPD.RequirMPPE</string>
    </property>
    <property name="toolTip">
     <string>Require the use of MPPE?</string>
@@ -302,7 +302,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_RequirMPPE40">
    <property name="text">
-    <string>PPPD.RequirMPPE40</string>
+    <string notr="true">PPPD.RequirMPPE40</string>
    </property>
    <property name="toolTip">
     <string>Require the use of MPPE 40 bit?</string>
@@ -310,7 +310,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_RequirMPPE128">
    <property name="text">
-    <string>PPPD.RequirMPPE128</string>
+    <string notr="true">PPPD.RequirMPPE128</string>
    </property>
    <property name="toolTip">
     <string>Require the use of MPPE 128 bit?</string>
@@ -318,7 +318,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_RequirMPPEStateful">
    <property name="text">
-    <string>PPPD.RequireMPPEStateful</string>
+    <string notr="true">PPPD.RequireMPPEStateful</string>
    </property>
    <property name="toolTip">
     <string>Allow MPPE to use stateful mode?</string>
@@ -326,7 +326,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_NoVJ">
    <property name="text">
-    <string>PPPD.NoVJ</string>
+    <string notr="true">PPPD.NoVJ</string>
    </property>
    <property name="toolTip">
     <string>Disable Van Jacobson compression?</string>
@@ -334,7 +334,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_User">
    <property name="text">
-    <string>L2TP.User</string>
+    <string notr="true">L2TP.User</string>
    </property>
    <property name="toolTip">
     <string>L2TP User Name.</string>
@@ -342,7 +342,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_Password">
    <property name="text">
-    <string>L2TP.Password</string>
+    <string notr="true">L2TP.Password</string>
    </property>
    <property name="toolTip">
     <string>L2TP Password.</string>
@@ -350,7 +350,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_BPS">
    <property name="text">
-    <string>L2TP.BPS</string>
+    <string notr="true">L2TP.BPS</string>
    </property>
    <property name="toolTip">
     <string>Maximum bandwidth to use.</string>
@@ -358,7 +358,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_TXBPS">
    <property name="text">
-    <string>L2TP.TXBPS</string>
+    <string notr="true">L2TP.TXBPS</string>
    </property>
    <property name="toolTip">
     <string>Maximum transmit bandwidth to use.</string>
@@ -366,7 +366,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_RXBPS">
    <property name="text">
-    <string>L2TP.RXBPS</string>
+    <string notr="true">L2TP.RXBPS</string>
    </property>
    <property name="toolTip">
     <string>Maximum receive bandwidth to use.</string>
@@ -374,7 +374,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_LengthBit">
    <property name="text">
-    <string>L2TP.LengthBit</string>
+    <string notr="true">L2TP.LengthBit</string>
    </property>
    <property name="toolTip">
     <string>Use length bit?</string>
@@ -382,7 +382,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_Challenge">
    <property name="text">
-    <string>L2TP.Challenge</string>
+    <string notr="true">L2TP.Challenge</string>
    </property>
    <property name="toolTip">
     <string>Use challenge authentication?</string>
@@ -390,7 +390,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_DefaultRoute">
    <property name="text">
-    <string>L2TP.DefaultRoute</string>
+    <string notr="true">L2TP.DefaultRoute</string>
    </property>
    <property name="toolTip">
     <string>Add a default route to the system routing tables, using the peer as the gatewa?</string>
@@ -398,7 +398,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_FlowBit">
    <property name="text">
-    <string>L2TP.FlowBit</string>
+    <string notr="true">L2TP.FlowBit</string>
    </property>
    <property name="toolTip">
     <string>Sequence numbers included in the communication?</string>
@@ -406,7 +406,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_TunnelRWS">
    <property name="text">
-    <string>L2TP.TunnelRWS</string>
+    <string notr="true">L2TP.TunnelRWS</string>
    </property>
    <property name="toolTip">
     <string>The window size of the control channel (number of unacknowledged packets, not bytes)</string>
@@ -414,7 +414,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_Exclusive">
    <property name="text">
-    <string>L2TP.Exclusive</string>
+    <string notr="true">L2TP.Exclusive</string>
    </property>
    <property name="toolTip">
     <string>Use only one control channel?</string>
@@ -422,7 +422,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_Redial">
    <property name="text">
-    <string>L2TP.Redial</string>
+    <string notr="true">L2TP.Redial</string>
    </property>
    <property name="toolTip">
     <string>Redial if disconnected?</string>
@@ -430,7 +430,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_RedialTImeout">
    <property name="text">
-    <string>L2TP.RedialTImeout</string>
+    <string notr="true">L2TP.RedialTImeout</string>
    </property>
    <property name="toolTip">
     <string>Wait n seconds before redial.</string>
@@ -438,7 +438,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_MaxRedials">
    <property name="text">
-    <string>L2TP.MaxRedials</string>
+    <string notr="true">L2TP.MaxRedials</string>
    </property>
    <property name="toolTip">
     <string>Give up redial tries after X attempts.</string>
@@ -446,7 +446,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_RequirePAP">
    <property name="text">
-    <string>L2TP.RequirePAP</string>
+    <string notr="true">L2TP.RequirePAP</string>
    </property>
    <property name="toolTip">
     <string>Require the remote peer to get authenticated via PAP?</string>
@@ -454,7 +454,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_RequireCHAP">
    <property name="text">
-    <string>L2TP.RequireCHAP</string>
+    <string notr="true">L2TP.RequireCHAP</string>
    </property>
    <property name="toolTip">
     <string>Require the remote peer to get authenticated via CHAP?</string>
@@ -462,7 +462,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_ReqAuth">
    <property name="text">
-    <string>L2TP.ReqAuth</string>
+    <string notr="true">L2TP.ReqAuth</string>
    </property>
    <property name="toolTip">
     <string>Require the remote peer to authenticate itself?</string>
@@ -470,7 +470,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_AccessControl">
    <property name="text">
-    <string>L2TP.AccessControl</string>
+    <string notr="true">L2TP.AccessControl</string>
    </property>
    <property name="toolTip">
     <string>Only accept connections from specified peer addresses?</string>
@@ -478,7 +478,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_AuthFile">
    <property name="text">
-    <string>L2TP.AuthFile</string>
+    <string notr="true">L2TP.AuthFile</string>
    </property>
    <property name="toolTip">
     <string>Authentication file location.</string>
@@ -486,7 +486,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_ListenAddr">
    <property name="text">
-    <string>L2TP.ListenAddr</string>
+    <string notr="true">L2TP.ListenAddr</string>
    </property>
    <property name="toolTip">
     <string>The IP address of the interface on which the daemon listens.</string>
@@ -494,7 +494,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_IPsecSaref">
    <property name="text">
-    <string>L2TP.IPsecSaref</string>
+    <string notr="true">L2TP.IPsecSaref</string>
    </property>
    <property name="toolTip">
     <string>Use IPsec Security Association tracking?</string>
@@ -502,7 +502,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionL2TP_Port">
    <property name="text">
-    <string>L2TP.Port</string>
+    <string notr="true">L2TP.Port</string>
    </property>
    <property name="toolTip">
     <string>Specify which UDP port should be used.</string>
@@ -510,7 +510,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_NoPcomp">
    <property name="text">
-    <string>PPPD.NoPcomp</string>
+    <string notr="true">PPPD.NoPcomp</string>
    </property>
    <property name="toolTip">
     <string>Disable protocol compression?</string>
@@ -518,7 +518,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_UseAccomp">
    <property name="text">
-    <string>PPPD.UseAccomp</string>
+    <string notr="true">PPPD.UseAccomp</string>
    </property>
    <property name="toolTip">
     <string>Disable address/control compression?</string>
@@ -526,7 +526,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_ReqMPPE">
    <property name="text">
-    <string>PPPD.ReqMPPE</string>
+    <string notr="true">PPPD.ReqMPPE</string>
    </property>
    <property name="toolTip">
     <string>Require the use of MPPE?</string>
@@ -534,7 +534,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_ReqMPPE40">
    <property name="text">
-    <string>PPPD.ReqMPPE40</string>
+    <string notr="true">PPPD.ReqMPPE40</string>
    </property>
    <property name="toolTip">
     <string>Require the use of MPPE 40 bit?</string>
@@ -542,7 +542,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_ReqMPPE128">
    <property name="text">
-    <string>PPPD.ReqMPPE128</string>
+    <string notr="true">PPPD.ReqMPPE128</string>
    </property>
    <property name="toolTip">
     <string>Require the use of MPPE 128 bit?</string>
@@ -550,7 +550,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionPPPD_ReqMPPEStateful">
    <property name="text">
-    <string>PPPD.ReqMPPEStateful</string>
+    <string notr="true">PPPD.ReqMPPEStateful</string>
    </property>
    <property name="toolTip">
     <string>Allow MPPE to use stateful mode?</string>
@@ -558,7 +558,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_IPSec_ID">
    <property name="text">
-    <string>VPNC.IPSec.ID</string>
+    <string notr="true">VPNC.IPSec.ID</string>
    </property>
    <property name="toolTip">
     <string>Your Group username.</string>
@@ -566,7 +566,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_IPSec_Secret">
    <property name="text">
-    <string>VPNC.IPSec.Secret</string>
+    <string notr="true">VPNC.IPSec.Secret</string>
    </property>
    <property name="toolTip">
     <string>Your group password (cleartext).</string>
@@ -574,7 +574,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_Xauth_Username">
    <property name="text">
-    <string>VPNC.Xauth.Username</string>
+    <string notr="true">VPNC.Xauth.Username</string>
    </property>
    <property name="toolTip">
     <string>Your username.</string>
@@ -582,7 +582,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_Xauth_Password">
    <property name="text">
-    <string>VPNC.Xauth.Password</string>
+    <string notr="true">VPNC.Xauth.Password</string>
    </property>
    <property name="toolTip">
     <string>Your password (cleartext).</string>
@@ -590,7 +590,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_IKE_Authmode">
    <property name="text">
-    <string>VPNC.IKE.Authmode</string>
+    <string notr="true">VPNC.IKE.Authmode</string>
    </property>
    <property name="toolTip">
     <string>IKE authentication mode.</string>
@@ -598,7 +598,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_IKE_DHGroup">
    <property name="text">
-    <string>VPNC.IKE.DHGroup</string>
+    <string notr="true">VPNC.IKE.DHGroup</string>
    </property>
    <property name="toolTip">
     <string>Name of the IKE DH Group.</string>
@@ -606,7 +606,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_PFS">
    <property name="text">
-    <string>VPNC.PFS</string>
+    <string notr="true">VPNC.PFS</string>
    </property>
    <property name="toolTip">
     <string>DH gropup to use for perfect forward secrecy. </string>
@@ -614,7 +614,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_Domain">
    <property name="text">
-    <string>VPNC.Domain</string>
+    <string notr="true">VPNC.Domain</string>
    </property>
    <property name="toolTip">
     <string>Domain name for authentication.</string>
@@ -622,7 +622,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_Vendor">
    <property name="text">
-    <string>VPNC.Vendor</string>
+    <string notr="true">VPNC.Vendor</string>
    </property>
    <property name="toolTip">
     <string>Vendor of your IPSec gateway.</string>
@@ -630,7 +630,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_LocalPort">
    <property name="text">
-    <string>VPNC.LocalPort</string>
+    <string notr="true">VPNC.LocalPort</string>
    </property>
    <property name="toolTip">
     <string>Local ISAKMP port to use.</string>
@@ -638,7 +638,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_CiscoPort">
    <property name="text">
-    <string>VPNC.CiscoPort</string>
+    <string notr="true">VPNC.CiscoPort</string>
    </property>
    <property name="toolTip">
     <string>Local UDP port number to use.</string>
@@ -646,7 +646,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_AppVersion">
    <property name="text">
-    <string>VPNC.AppVersion</string>
+    <string notr="true">VPNC.AppVersion</string>
    </property>
    <property name="toolTip">
     <string>Application version to report.</string>
@@ -654,7 +654,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_NATTMode">
    <property name="text">
-    <string>VPNC.NATTMode</string>
+    <string notr="true">VPNC.NATTMode</string>
    </property>
    <property name="toolTip">
     <string>NAT-Traversal method to employ.</string>
@@ -662,7 +662,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_DPDTimeout">
    <property name="text">
-    <string>VPNC.DPDTimeout</string>
+    <string notr="true">VPNC.DPDTimeout</string>
    </property>
    <property name="toolTip">
     <string>Send DPD packet after not receiving anything for n seconds</string>
@@ -670,7 +670,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_SingleDES">
    <property name="text">
-    <string>VPNC.SingleDES</string>
+    <string notr="true">VPNC.SingleDES</string>
    </property>
    <property name="toolTip">
     <string>Enable single DES encryption.</string>
@@ -678,7 +678,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionVPNC_NoEncryption">
    <property name="text">
-    <string>VPNC.NoEncryption</string>
+    <string notr="true">VPNC.NoEncryption</string>
    </property>
    <property name="toolTip">
     <string>Enables using no encryption for data traffic.</string>
@@ -686,7 +686,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_CACert">
    <property name="text">
-    <string>OpenVPN.CACert</string>
+    <string notr="true">OpenVPN.CACert</string>
    </property>
    <property name="toolTip">
     <string>Certificate authority file.</string>
@@ -694,7 +694,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_Cert">
    <property name="text">
-    <string>OpenVPN.Cert</string>
+    <string notr="true">OpenVPN.Cert</string>
    </property>
    <property name="toolTip">
     <string>File containing peer's signed certificate.</string>
@@ -702,7 +702,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_Key">
    <property name="text">
-    <string>OpenVPN.Key</string>
+    <string notr="true">OpenVPN.Key</string>
    </property>
    <property name="toolTip">
     <string>File containing local peer's private key.</string>
@@ -710,7 +710,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_MTU">
    <property name="text">
-    <string>OpenVPN.MTU</string>
+    <string notr="true">OpenVPN.MTU</string>
    </property>
    <property name="toolTip">
     <string>MTU of the tunnel.</string>
@@ -718,7 +718,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_NSCertType">
    <property name="text">
-    <string>OpenVPN.NSCertType</string>
+    <string notr="true">OpenVPN.NSCertType</string>
    </property>
    <property name="toolTip">
     <string>Peer certificate type (server/client).</string>
@@ -726,7 +726,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_Proto">
    <property name="text">
-    <string>OpenVPN.Proto</string>
+    <string notr="true">OpenVPN.Proto</string>
    </property>
    <property name="toolTip">
     <string>Protocol type (udp/tcp-client/tcp-server).</string>
@@ -734,7 +734,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_Port">
    <property name="text">
-    <string>OpenVPN.Port</string>
+    <string notr="true">OpenVPN.Port</string>
    </property>
    <property name="toolTip">
     <string>TCP/UDP port number.</string>
@@ -742,7 +742,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_AuthUserPass">
    <property name="text">
-    <string>OpenVPN.AuthUserPass</string>
+    <string notr="true">OpenVPN.AuthUserPass</string>
    </property>
    <property name="toolTip">
     <string>File containing the user:password credentials.</string>
@@ -750,7 +750,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_AskPass">
    <property name="text">
-    <string>OpenVPN.AskPass</string>
+    <string notr="true">OpenVPN.AskPass</string>
    </property>
    <property name="toolTip">
     <string>Get certificate password from console or file?</string>
@@ -758,7 +758,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_AuthNoCache">
    <property name="text">
-    <string>OpenVPN.AuthNoCache</string>
+    <string notr="true">OpenVPN.AuthNoCache</string>
    </property>
    <property name="toolTip">
     <string>Don't cache --askpass or --auth-user-pass values?</string>
@@ -766,7 +766,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_Cipher">
    <property name="text">
-    <string>OpenVPN.Cipher</string>
+    <string notr="true">OpenVPN.Cipher</string>
    </property>
    <property name="toolTip">
     <string>Encrypt packets with cipher algorithm:</string>
@@ -774,7 +774,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_Auth">
    <property name="text">
-    <string>OpenVPN.Auth</string>
+    <string notr="true">OpenVPN.Auth</string>
    </property>
    <property name="toolTip">
     <string>Authenticate packets using algorithm:</string>
@@ -782,7 +782,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_CompLZO">
    <property name="text">
-    <string>OpenVPN.CompLZO</string>
+    <string notr="true">OpenVPN.CompLZO</string>
    </property>
    <property name="toolTip">
     <string>Use fast LZO compression (yes/no/adaptive).</string>
@@ -790,7 +790,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_RemoteCertTls">
    <property name="text">
-    <string>OpenVPN.RemoteCertTls</string>
+    <string notr="true">OpenVPN.RemoteCertTls</string>
    </property>
    <property name="toolTip">
     <string>Require peer certificate signed (client/server).</string>
@@ -798,7 +798,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_ConfigFile">
    <property name="text">
-    <string>OpenVPN.ConfigFile</string>
+    <string notr="true">OpenVPN.ConfigFile</string>
    </property>
    <property name="toolTip">
     <string>OpenVPN config file that can contain extra options.</string>
@@ -806,7 +806,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenConnect_ServerCert">
    <property name="text">
-    <string>OpenConnect.ServerCert</string>
+    <string notr="true">OpenConnect.ServerCert</string>
    </property>
    <property name="toolTip">
     <string>SHA1 certificate fingerprint of the final VPN server.</string>
@@ -814,7 +814,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenConnect_CACert">
    <property name="text">
-    <string>OpenConnect.CACert</string>
+    <string notr="true">OpenConnect.CACert</string>
    </property>
    <property name="toolTip">
     <string>File containing other certificate authorities.</string>
@@ -822,7 +822,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenConnect_ClientCert">
    <property name="text">
-    <string>OpenConnect.ClientCert</string>
+    <string notr="true">OpenConnect.ClientCert</string>
    </property>
    <property name="toolTip">
     <string>Client certificate file, if needed for web authentication. </string>
@@ -830,7 +830,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenConnect_MTU">
    <property name="text">
-    <string>OpenConnect.MTU</string>
+    <string notr="true">OpenConnect.MTU</string>
    </property>
    <property name="toolTip">
     <string>Request MTU from server to use as MTU of tunnel?</string>
@@ -838,7 +838,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenConnect_Cookie">
    <property name="text">
-    <string>OpenConnect.Cookie</string>
+    <string notr="true">OpenConnect.Cookie</string>
    </property>
    <property name="toolTip">
     <string>Read cookie from standard input?</string>
@@ -846,7 +846,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenConnect_VPNHost">
    <property name="text">
-    <string>OpenConnect.VPNHost</string>
+    <string notr="true">OpenConnect.VPNHost</string>
    </property>
    <property name="toolTip">
     <string>The final VPN server to use after completing web authentication.</string>
@@ -854,7 +854,7 @@ that the peer is no longer connected.</string>
   </action>
   <action name="actionOpenVPN_Import">
    <property name="text">
-    <string>Import Configuration</string>
+    <string notr="true">Import Configuration</string>
    </property>
   </action>
  </widget>

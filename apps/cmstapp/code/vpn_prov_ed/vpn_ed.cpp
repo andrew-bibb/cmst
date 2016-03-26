@@ -27,7 +27,6 @@ DEALINGS IN THE SOFTWARE.
 
 # include <QtCore/QDebug>
 # include <QRegularExpression>
-# include <QRegularExpressionValidator>
 # include <QDBusMessage>
 # include <QDBusConnection>
 # include <QDBusInterface>
@@ -46,13 +45,12 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/shared/shared.h"
    
 //
-// This class is derived from the ProvisioningEditor class, and in fact
-// it uses validating code from there.  There are a few improvements
+// This class is derived from the ProvisioningEditor class,  There are a few improvements
 // mainly in more efficient packaging of the text data into each QAction.
 //
 // In this class:
 // QAction->text() contains the key for the Connman config file and display
-// text for the menus.
+// text for the menus. NOTE: This text cannot be translated.  
 // QAction->toolTip() contains the text displayed in dialogs
 //
 // I've also removed the template section since the new group_provider actions
@@ -463,17 +461,17 @@ void VPN_Editor::inputComboBox(QAction* act)
   if (act == ui.actionOpenVPN_CompLZO) sl << "adaptive" << "yes" << "no";
   if (act == ui.actionOpenVPN_RemoteCertTls) sl << "client" << "server";
   
+  QStringList sl_tr = TranslateStrings::cmtr_sl(sl);
   QString item = QInputDialog::getItem(this,
     tr("%1 - Item Input").arg(TranslateStrings::cmtr("cmst")),
     str,
-    sl,
+    sl_tr,
     0,
     false,
     &ok);
     
   key.append(" = %1\n");
-  if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(item));
-  
+  if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(sl.at(sl_tr.indexOf(QRegularExpression(item)))) );   
   return;
 }
 
