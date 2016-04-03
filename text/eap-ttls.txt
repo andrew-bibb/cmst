@@ -1,0 +1,7 @@
+[service_ttls]
+Type = wifi_OR_ethernet
+Name = ttls_ssid
+EAP = ttls
+CACertFile = /path/to/ca.pem
+Phase2 = MSCHAPV2
+Identity = yourusername

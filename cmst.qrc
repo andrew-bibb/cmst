@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="text">
+    <file>text/eap-peap.txt</file>
+    <file>text/eap-tls.txt</file>
+    <file>text/eap-ttls.txt</file>
     <file>text/changelog.txt</file>
     <file>text/icon_def.txt</file>
     <file>text/eduroam_long.txt</file>

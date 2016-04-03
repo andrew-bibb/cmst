@@ -1,5 +1,5 @@
 [service_eduroam]
-Type=wifi
+Type=wifi_OR_ethernet
 Name=eduroam
 EAP=peap
 CACertFile=/etc/ssl/certs/ca-certificates.crt

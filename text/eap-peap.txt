@@ -1,0 +1,8 @@
+[service_peap]
+Type = wifi_OR_ethernet
+Name = peap_ssid
+EAP = peap
+CACertFile = /path/to/ca.pem
+Phase2 = MSCHAPV2
+Identity = yourusername
+

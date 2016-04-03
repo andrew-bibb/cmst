@@ -1,0 +1,9 @@
+[service_tls]
+Type = wifi_OR_ethernet
+Name = tls_ssid
+EAP = tls
+CACertFile = /path/to/ca.pem
+ClientCertFile = /path/to/client.pem
+PrivateKeyFile = /path/to/client.fsid.pem
+PrivateKeyPassphraseType = fsid
+Identity = yourusername

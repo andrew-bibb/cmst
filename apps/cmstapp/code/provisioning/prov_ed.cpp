@@ -69,6 +69,9 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   group_template = new QActionGroup(this);
   group_template->addAction(ui.actionTemplateEduroamLong);
   group_template->addAction(ui.actionTemplateEduroamShort);
+  group_template->addAction(ui.actionTemplateeap_peap);
+  group_template->addAction(ui.actionTemplateeap_tls);
+  group_template->addAction(ui.actionTemplateeap_ttls);
   
   group_freeform = new QActionGroup(this);
   group_freeform->addAction(ui.actionGlobal);
@@ -162,6 +165,10 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   menu_template = new QMenu(tr("Templates"), this);menu_template->addAction(ui.actionTemplateEduroamShort);
   menu_template->addAction(ui.actionTemplateEduroamLong);
   menu_template->addAction(ui.actionTemplateEduroamShort);
+  menu_template->addSeparator();
+  menu_template->addAction(ui.actionTemplateeap_peap);
+  menu_template->addAction(ui.actionTemplateeap_tls);
+  menu_template->addAction(ui.actionTemplateeap_ttls);
   
   // add menus to UI
   menubar->addMenu(menu_global);
@@ -427,14 +434,18 @@ void ProvisioningEditor::templateTriggered(QAction* act)
   // get the source string depending on the action
   if (act == ui.actionTemplateEduroamLong) source = ":/text/text/eduroam_long.txt";
   else if (act == ui.actionTemplateEduroamShort) source = ":/text/text/eduroam_short.txt";
-  
+		else if (act == ui.actionTemplateeap_peap) source = ":/text/text/eap-peap.txt";
+			else if (act == ui.actionTemplateeap_tls) source = ":/text/text/eap-tls.txt";
+				else if (act == ui.actionTemplateeap_ttls) source = ":/text/text/eap-ttls.txt";
+					else return;
+
   // get the text
   QFile file(source);
   if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {  
     QByteArray ba = file.readAll();
     
-    // seed the textedit with the template
-    this->seedTextEdit(QString(ba));
+    // append the template to the textedit
+    ui.plainTextEdit_main->appendPlainText(QString(ba) );
   } // if 
   
 
@@ -592,8 +603,7 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
 
 //
 // Slot to seed the QTextEdit window with data read from file.  Connected to
-// fileReadCompleted signal in root helper.  Also called directly from
-// the templateTriggered slot. 
+// fileReadCompleted signal in root helper. 
 void ProvisioningEditor::seedTextEdit(const QString& data)
 {
   // clear the text edit and seed it with the read data

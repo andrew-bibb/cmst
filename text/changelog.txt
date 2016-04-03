@@ -1,6 +1,6 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b>In Progress</b>
+<b>2016.04.03</b>
 <ul>
 <li>Removed unnecessary calls to managerReacan from servicePropertyChanged slot.<li>
 <li>Added nicknames for display to wired and hidden wifi connections.</li>
@@ -10,6 +10,7 @@
 <li>Added ability to tether a technology.</li>
 <li>Can reposition tabs in the main dialog.</li>
 <li>Revise move before/after to only be active for and show services which can actually be moved.</li>
+<li>Added three templates (EAP) to provisioning editor.</li>
 </ul>
 <b>2016.01.26</b>
 <ul>

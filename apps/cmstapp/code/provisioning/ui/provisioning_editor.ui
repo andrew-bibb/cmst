@@ -370,6 +370,30 @@
     <string>IPv6.Privacy</string>
    </property>
   </action>
+  <action name="actionTemplateeap_peap">
+   <property name="text">
+    <string>EAP-PEAP</string>
+   </property>
+   <property name="toolTip">
+    <string>EAP-PEAP</string>
+   </property>
+  </action>
+  <action name="actionTemplateeap_tls">
+   <property name="text">
+    <string>EAP-TLS</string>
+   </property>
+   <property name="toolTip">
+    <string>EAP-TLS</string>
+   </property>
+  </action>
+  <action name="actionTemplateeap_ttls">
+   <property name="text">
+    <string>EAP-TTLS</string>
+   </property>
+   <property name="toolTip">
+    <string>EAP-TTLS</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>
