@@ -106,6 +106,10 @@ int main(int argc, char *argv[])
   QCommandLineOption startMinimized(QStringList() << "m" << "minimized",
 		QCoreApplication::translate("main.cpp", "Start the GUI minimized in the system tray.") );
   parser.addOption(startMinimized);
+  
+  QCommandLineOption disableVPN(QStringList() << "n" << "disable-vpn",
+		QCoreApplication::translate("main.cpp", "Disable VPN support.") );
+  parser.addOption(disableVPN);  
 
   parser.addVersionOption();
 

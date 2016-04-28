@@ -247,7 +247,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       trayiconbackground = QColor(ui.spinBox_faketransparency->value() );
     } // if
     else trayiconbackground = QColor();
-
+    
   // set counter update params from command line options if available otherwise
   // default params specified in main.cpp are used.  Set a minimum value for
   // each to maintain program response.
@@ -322,12 +322,26 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       // clear the counters if selected
       this->clearCounters();
 
-      // VPN manager
-      vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
-      if (! vpn_manager->isValid() ) logErrors(CMST::Err_Invalid_VPN_Iface);
-      else {
-        shared::processReply(vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
-      } // else register agent
+      // VPN manager. Disable if commandline or option is set
+		  vpn_manager = NULL;
+		  if (parser.isSet("disable-vpn") ) {
+		    ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
+		    ui.pushButton_vpn_editor->setDisabled(true);
+		  } // if parser set
+		  else
+		    if (b_so && ui.checkBox_disablevpn->isChecked() ) {
+		     ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
+		     ui.pushButton_vpn_editor->setDisabled(true);
+		    } // if
+		    else {
+				ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), true);
+		    ui.pushButton_vpn_editor->setEnabled(true);
+				vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
+				if (! vpn_manager->isValid() ) logErrors(CMST::Err_Invalid_VPN_Iface);
+				else {
+					shared::processReply(vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
+				} // else register agent
+      }	// else normal vpn manager  
     } // else have valid connection
   } // else have connected systemBus
 
@@ -2375,6 +2389,7 @@ void ControlBox::writeSettings()
   settings->beginGroup("StartOptions");
   settings->setValue("disable_counters", ui.checkBox_disablecounters->isChecked() );
   settings->setValue("disable_tray_icon", ui.checkBox_disabletrayicon->isChecked() );
+  settings->setValue("disable_vpn", ui.checkBox_disablevpn->isChecked() );
   settings->setValue("use_icon_theme", ui.checkBox_systemicontheme->isChecked() );
   settings->setValue("icon_theme", ui.lineEdit_icontheme->text() );
   settings->setValue("start_minimized", ui.checkBox_startminimized->isChecked() );
@@ -2425,6 +2440,7 @@ void ControlBox::readSettings()
   settings->beginGroup("StartOptions");
   ui.checkBox_disablecounters->setChecked(settings->value("disable_counters").toBool() );
   ui.checkBox_disabletrayicon->setChecked(settings->value("disable_tray_icon").toBool() );
+  ui.checkBox_disablevpn->setChecked(settings->value("disable_vpn").toBool() );
   ui.checkBox_systemicontheme->setChecked(settings->value("use_icon_theme").toBool() );
   ui.lineEdit_icontheme->setText(settings->value("icon_theme").toString() );
   ui.checkBox_startminimized->setChecked(settings->value("start_minimized").toBool() );
@@ -2941,10 +2957,11 @@ void ControlBox::cleanUp()
     } // if counters are connected to anything
   } // if con_manager isValid
 
-
-  if (vpn_manager->isValid() ) {
-    shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
-  } // ivpn_manager isValid
+	if (vpn_manager != NULL) {
+		if (vpn_manager->isValid() ) {
+			shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
+		} // ivpn_manager isValid
+	}	// not null
 
   return;
 }

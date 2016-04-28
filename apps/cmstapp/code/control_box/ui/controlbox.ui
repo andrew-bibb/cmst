@@ -1166,7 +1166,7 @@
               <string>Start Options</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_9">
-              <item row="7" column="1">
+              <item row="8" column="1">
                <widget class="QSpinBox" name="spinBox_counterrate">
                 <property name="enabled">
                  <bool>false</bool>
@@ -1202,7 +1202,7 @@
                 </property>
                </widget>
               </item>
-              <item row="6" column="0">
+              <item row="7" column="0">
                <widget class="QCheckBox" name="checkBox_counterkb">
                 <property name="enabled">
                  <bool>false</bool>
@@ -1218,7 +1218,7 @@
                 </property>
                </widget>
               </item>
-              <item row="5" column="1">
+              <item row="6" column="1">
                <widget class="QSpinBox" name="spinBox_waittime">
                 <property name="enabled">
                  <bool>false</bool>
@@ -1237,7 +1237,7 @@
                 </property>
                </widget>
               </item>
-              <item row="6" column="1">
+              <item row="7" column="1">
                <widget class="QSpinBox" name="spinBox_counterkb">
                 <property name="enabled">
                  <bool>false</bool>
@@ -1262,7 +1262,7 @@
                 </property>
                </widget>
               </item>
-              <item row="3" column="0">
+              <item row="4" column="0">
                <widget class="QCheckBox" name="checkBox_startminimized">
                 <property name="toolTip">
                  <string/>
@@ -1276,7 +1276,7 @@
                 </property>
                </widget>
               </item>
-              <item row="2" column="0">
+              <item row="3" column="0">
                <widget class="QCheckBox" name="checkBox_systemicontheme">
                 <property name="toolTip">
                  <string/>
@@ -1289,7 +1289,7 @@
                 </property>
                </widget>
               </item>
-              <item row="5" column="0">
+              <item row="6" column="0">
                <widget class="QCheckBox" name="checkBox_waittime">
                 <property name="whatsThis">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
@@ -1311,7 +1311,7 @@
                 </property>
                </widget>
               </item>
-              <item row="7" column="0">
+              <item row="8" column="0">
                <widget class="QCheckBox" name="checkBox_counterseconds">
                 <property name="toolTip">
                  <string/>
@@ -1325,7 +1325,7 @@
                 </property>
                </widget>
               </item>
-              <item row="8" column="0">
+              <item row="9" column="0">
                <widget class="QCheckBox" name="checkBox_faketranparency">
                 <property name="toolTip">
                  <string/>
@@ -1339,7 +1339,7 @@
                 </property>
                </widget>
               </item>
-              <item row="8" column="1">
+              <item row="9" column="1">
                <widget class="QSpinBox" name="spinBox_faketransparency">
                 <property name="enabled">
                  <bool>false</bool>
@@ -1361,7 +1361,7 @@
                 </property>
                </widget>
               </item>
-              <item row="2" column="1">
+              <item row="3" column="1">
                <widget class="QLineEdit" name="lineEdit_icontheme">
                 <property name="enabled">
                  <bool>false</bool>
@@ -1374,7 +1374,7 @@
                 </property>
                </widget>
               </item>
-              <item row="10" column="0" colspan="2">
+              <item row="11" column="0" colspan="2">
                <widget class="QGroupBox" name="groupBox_process">
                 <property name="whatsThis">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line.&lt;/p&gt;&lt;p&gt;Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1406,7 +1406,7 @@
                 </layout>
                </widget>
               </item>
-              <item row="11" column="0">
+              <item row="12" column="0">
                <spacer name="verticalSpacer">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
@@ -1419,7 +1419,7 @@
                 </property>
                </spacer>
               </item>
-              <item row="9" column="0" colspan="2">
+              <item row="10" column="0" colspan="2">
                <widget class="QGroupBox" name="groupBox_2">
                 <property name="whatsThis">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use code specific for the selected desktop environment.&lt;/p&gt;&lt;p&gt;As of 2014.11.24 there seems to be a problem with QT5.3 and some system trays. There is code in the program to try and work around this issue, and selecting one of these buttons will invoke the code specific to the desktop.&lt;/p&gt;&lt;p&gt;If the bug gets fixed these options will remain so that start up scripts do not break, but the options will do nothing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1471,6 +1471,16 @@
                   </widget>
                  </item>
                 </layout>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QCheckBox" name="checkBox_disablevpn">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Disable VPN</string>
+                </property>
                </widget>
               </item>
              </layout>
@@ -1903,8 +1913,8 @@
      <y>193</y>
     </hint>
     <hint type="destinationlabel">
-     <x>432</x>
-     <y>435</y>
+     <x>508</x>
+     <y>512</y>
     </hint>
    </hints>
   </connection>
@@ -1919,8 +1929,8 @@
      <y>198</y>
     </hint>
     <hint type="destinationlabel">
-     <x>208</x>
-     <y>532</y>
+     <x>246</x>
+     <y>601</y>
     </hint>
    </hints>
   </connection>
@@ -1935,8 +1945,8 @@
      <y>202</y>
     </hint>
     <hint type="destinationlabel">
-     <x>109</x>
-     <y>536</y>
+     <x>149</x>
+     <y>601</y>
     </hint>
    </hints>
   </connection>
@@ -1995,12 +2005,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>308</x>
-     <y>68</y>
+     <x>384</x>
+     <y>235</y>
     </hint>
     <hint type="destinationlabel">
-     <x>308</x>
-     <y>68</y>
+     <x>546</x>
+     <y>237</y>
     </hint>
    </hints>
   </connection>
@@ -2027,12 +2037,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>433</x>
-     <y>145</y>
+     <x>475</x>
+     <y>181</y>
     </hint>
     <hint type="destinationlabel">
-     <x>576</x>
-     <y>145</y>
+     <x>632</x>
+     <y>182</y>
     </hint>
    </hints>
   </connection>
@@ -2043,12 +2053,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>433</x>
-     <y>286</y>
+     <x>475</x>
+     <y>322</y>
     </hint>
     <hint type="destinationlabel">
-     <x>576</x>
-     <y>287</y>
+     <x>632</x>
+     <y>324</y>
     </hint>
    </hints>
   </connection>
@@ -2075,12 +2085,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>433</x>
-     <y>228</y>
+     <x>475</x>
+     <y>264</y>
     </hint>
     <hint type="destinationlabel">
-     <x>576</x>
-     <y>229</y>
+     <x>632</x>
+     <y>266</y>
     </hint>
    </hints>
   </connection>
@@ -2091,12 +2101,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>433</x>
-     <y>257</y>
+     <x>475</x>
+     <y>293</y>
     </hint>
     <hint type="destinationlabel">
-     <x>576</x>
-     <y>258</y>
+     <x>632</x>
+     <y>295</y>
     </hint>
    </hints>
   </connection>
