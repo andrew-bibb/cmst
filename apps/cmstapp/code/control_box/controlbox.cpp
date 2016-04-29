@@ -1378,13 +1378,18 @@ void ControlBox::wifiSubmenuTriggered(QAction* act)
   for (int i = 0; i < wifi_list.count(); ++i) {
     if (getNickName(wifi_list.at(i).objpath) == act->text() ) {
       QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-      iface_serv->setTimeout(1);
+      iface_serv->setTimeout(5);
+      QDBusMessage reply;
       QString state = wifi_list.at(i).objmap.value("State").toString();
-      if (state == "online" || state == "ready")
-        shared::processReply(iface_serv->call(QDBus::AutoDetect, "Disconnect") );
-      else
-        shared::processReply(iface_serv->call(QDBus::AutoDetect, "Connect") );
-      iface_serv->deleteLater();
+      if (state == "online" || state == "ready") {
+        reply = iface_serv->call(QDBus::AutoDetect, "Disconnect");
+        if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);
+			}
+      else {
+      	QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
+				if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);
+			}
+			iface_serv->deleteLater();
       break;
     } // if
   }   // for
@@ -1966,6 +1971,7 @@ void ControlBox::assembleTabVPN()
   int rowcount = 0;
 
   // Make sure we've been able to communicate with the connman-vpn daemon
+  if (vpn_manager == NULL) return;
   if ( (q16_errors & CMST::Err_Invalid_VPN_Iface) != 0x00) {
     ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
     return;

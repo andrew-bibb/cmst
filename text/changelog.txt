@@ -3,6 +3,7 @@
 <b> In Progress</b>
 <ul>
 <li>New commandline option to disable VPN support (issue #144).</li>
+<li>Fixed showing error dialog when connect is selected from the tray icon (issue #143).</li>
 </ul>
 <b>2016.04.03</b>
 <ul>
