@@ -2277,7 +2277,12 @@ void ControlBox::assembleTrayIcon()
     ttstr.append(tr("Signal Strength: %1%").arg(wifi_list.at(k).objmap.value("Strength").toInt()) );
     ttstr.append("<br>");
     wifi_list.at(k).objmap.value("Favorite").toBool() ? ttstr.append(tr("Favorite Connection")) : ttstr.append(tr("Never Connected"));
-    ttstr.append(tr("<br>Security : %1").arg(wifi_list.at(k).objmap.value("Security").toString()) );
+    ttstr.append("<br>");
+    QStringList sl_tr;
+    for (int m = 0; m < wifi_list.at(k).objmap.value("Security").toStringList().size(); ++m) {
+			sl_tr << TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Security").toStringList().at(m) );
+    } // for    
+    ttstr.append(tr("Security: %1").arg(sl_tr.join(',')) );
     if (wifi_list.at(k).objmap.value("Roaming").toBool() ) ttstr.append(tr("<br>Roaming"));
     ttstr.append(tr("<br>Autoconnect is "));
     wifi_list.at(k).objmap.value("AutoConnect").toBool() ? ttstr.append(tr("Enabled")) : ttstr.append(tr("Disabled"));
