@@ -1378,14 +1378,12 @@ void ControlBox::wifiSubmenuTriggered(QAction* act)
   for (int i = 0; i < wifi_list.count(); ++i) {
     if (getNickName(wifi_list.at(i).objpath) == act->text() ) {
       QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-      iface_serv->setTimeout(5);
-      QDBusMessage reply;
       QString state = wifi_list.at(i).objmap.value("State").toString();
       if (state == "online" || state == "ready") {
-        reply = iface_serv->call(QDBus::AutoDetect, "Disconnect");
-        if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);
+        shared::processReply(iface_serv->call(QDBus::AutoDetect, "Disconnect") );
 			}
       else {
+      	iface_serv->setTimeout(5);
       	QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
 				if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);
 			}
@@ -2290,6 +2288,10 @@ void ControlBox::assembleTrayIcon()
   } // k for
 
   // vpn_submenu
+  if (vpn_manager == NULL) {
+		vpn_submenu->setDisabled(true);
+		return;
+	}
   vpn_submenu->clear();
   for (int l = 0; l < vpn_list.count(); ++l) {
     QAction* act = vpn_submenu->addAction(getNickName(vpn_list.at(l).objpath) );
