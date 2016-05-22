@@ -76,7 +76,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");
   QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rx46, this);
   ui.lineEdit_nameservers->setValidator(lev_m);
-  ui.lineEdit_timeservers->setValidator(lev_m);
+  //ui.lineEdit_timeservers->setValidator(lev_m);
 
   // initialize and populate submaps
   ipv4map.clear();
