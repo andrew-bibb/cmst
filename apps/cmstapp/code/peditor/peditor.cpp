@@ -60,7 +60,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   // editing of the line edit).
   const QString s_ip4 = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
   const QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
-  const QString s_dom = "[0-9a-zA-Z\\.\\-]*";
+  const QString s_dom = "((?!-)[A-Za-z0-9-]{1,63}(?<!-)\\.)+[A-Za-z]{2,6}";
 
   // QLineEdits that allow single address
   QRegularExpression rx4("\\s?|^" + s_ip4 + "(?:\\." + s_ip4 + "){3}" + "$");

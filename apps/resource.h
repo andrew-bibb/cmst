@@ -35,7 +35,7 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation) 
-#define VERSION "2016.05.24-2"
+#define VERSION "2016.05.25-1"
 
 #define RELEASE_DATE "3 April 2016"
 #define COPYRIGHT_DATE "2013-2016"
@@ -93,6 +93,7 @@ namespace CMST
     ValDialog_Wd      = 0x08,
     ValDialog_min1ch	= 0x09,
     ValDialog_min8ch	= 0x0a,
+    ValDialog_46d			= 0x0b,
     
   };	// enum
 } // namespace CMST

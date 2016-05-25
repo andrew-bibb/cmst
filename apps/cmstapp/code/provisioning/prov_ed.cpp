@@ -231,8 +231,8 @@ void ProvisioningEditor::inputValidated(QAction* act)
   // create some prompts and set validator
   if (act == ui.actionServiceMAC) {vd->setLabel(tr("MAC address.")); vd->setValidator(CMST::ValDialog_MAC);}
   if (act == ui.actionWifiSSID) {vd->setLabel(tr("SSID: hexadecimal representation of an 802.11 SSID")); vd->setValidator(CMST:: ValDialog_Hex);}
-  if (act == ui.actionServiceNameServers) {vd->setLabel(tr("List of Nameservers")); vd->setValidator(CMST::ValDialog_46, true);}
-  if (act == ui.actionServiceTimeServers) {vd->setLabel(tr("List of Timeservers")); vd->setValidator(CMST::ValDialog_46, true);}
+  if (act == ui.actionServiceNameServers) {vd->setLabel(tr("List of Nameservers")); vd->setValidator(CMST::ValDialog_46d, true);}
+  if (act == ui.actionServiceTimeServers) {vd->setLabel(tr("List of Timeservers")); vd->setValidator(CMST::ValDialog_46d, true);}
   if (act == ui.actionServiceSearchDomains) {vd->setLabel(tr("List of DNS Search Domains")); vd->setValidator(CMST::ValDialog_Dom, true);}
   if (act == ui.actionServiceDomain) {vd->setLabel(tr("Domain name to be used")); vd->setValidator(CMST::ValDialog_Dom);}
   if (act == ui.actionWifiName) {vd->setLabel(tr("Enter the string representation of an 802.11 SSID.")); vd->setValidator(CMST::ValDialog_Wd);}

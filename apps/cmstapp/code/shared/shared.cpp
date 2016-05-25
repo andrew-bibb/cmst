@@ -127,11 +127,11 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
   const QString s_mac   = "(?:[0-9a-fA-F]{1,2})";
   const QString s_hex   = "[0-9a-fA-F]*";
   const QString s_int   = "[0-9]*";
-  const QString s_dom   = "[0-9a-zA-Z\\.]*";
+  const QString s_dom   = "((?!-)[A-Za-z0-9-]{1,63}(?<!-)\\.)+[A-Za-z]{2,6}";
   const QString s_wd    = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
   const QString s_ch    = "\\S";
   const QString s_start = (plural ? "\\s?|(" : "^");
-  const QString s_end   = (plural ? "(\\s*[,|;|\\s]\\s*))+" : "$");
+  const QString s_end   = (plural ? "(\\s*|[,|;|\\s]\\s*|$))+" : "$");
 
   switch (vd){
     case CMST::ValDialog_IPv4: {
@@ -184,6 +184,11 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
       QRegularExpressionValidator* lev_8char = new QRegularExpressionValidator(rx8char, this);
       lineedit->setValidator(lev_8char); }
       break;
+    case CMST::ValDialog_46d: {
+      QRegularExpression rx46d(s_start + "(" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7}|" + s_dom + ")" + s_end);
+      QRegularExpressionValidator* lev_46d = new QRegularExpressionValidator(rx46d, this);
+      lineedit->setValidator(lev_46d); }
+      break;      
     default:
       lineedit->setValidator(0);
       break;
