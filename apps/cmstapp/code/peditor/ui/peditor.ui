@@ -110,7 +110,7 @@
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The list of manually configured time servers.&lt;/p&gt;&lt;p&gt;The first entry in the list represents the timeserver with the highest priority.&lt;/p&gt;&lt;p&gt;When using manual configuration this setting is useful to override all the other timeserver settings. This is service specific, hence only the values for the default service are used.&lt;/p&gt;&lt;p&gt;Changes to this property will result in restart of NTP query.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses.  Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <attribute name="label">
-       <string>&amp;TImeservers</string>
+       <string>&amp;Timeservers</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>

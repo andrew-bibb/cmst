@@ -58,8 +58,9 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   // Setup the address validator and apply it to any ui QLineEdit.
   // The lev validator will validate an IP address or up to one white space character (to allow
   // editing of the line edit).
-  QString s_ip4 = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
-  QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
+  const QString s_ip4 = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
+  const QString s_ip6 = "(?:[0-9a-fA-F]{1,4})";
+  const QString s_dom = "[0-9a-zA-Z\\.]*";
 
   // QLineEdits that allow single address
   QRegularExpression rx4("\\s?|^" + s_ip4 + "(?:\\." + s_ip4 + "){3}" + "$");
@@ -73,10 +74,10 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   ui.lineEdit_ipv6gateway->setValidator(lev_6);
 
   // now QLineEdits that allow multiple addresses
-  QRegularExpression rx46("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})(\\s*[,|;|\\s]\\s*))+");
-  QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rx46, this);
+  QRegularExpression rx46d("\\s?|((" + s_ip4 + "(?:\\." + s_ip4 + "){3}|"+ s_ip6 + "(?::" + s_ip6 + "){7}|" + s_dom + ")(\\s*[,|;|\\s]\\s*))+");
+  QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rx46d, this);
   ui.lineEdit_nameservers->setValidator(lev_m);
-  //ui.lineEdit_timeservers->setValidator(lev_m);
+  ui.lineEdit_timeservers->setValidator(lev_m);
 
   // initialize and populate submaps
   ipv4map.clear();

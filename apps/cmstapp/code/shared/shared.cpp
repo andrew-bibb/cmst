@@ -39,17 +39,17 @@ DEALINGS IN THE SOFTWARE.
 // Function to process the reply from a dbus call.
 QDBusMessage::MessageType shared::processReply(const QDBusMessage& reply)
 {
-	if (reply.type() != QDBusMessage::ReplyMessage) {
-		QMessageBox::warning(0,
-				QString(TranslateStrings::cmtr("cmst") + qApp->translate("processReply", " Warning") ),
+  if (reply.type() != QDBusMessage::ReplyMessage) {
+    QMessageBox::warning(0,
+        QString(TranslateStrings::cmtr("cmst") + qApp->translate("processReply", " Warning") ),
         qApp->translate("processReply",
-					"<center><b>We received a DBUS reply message indicating an error.</b></center>"
-					"<br><br>Error Name: %1<br><br>Error Message: %2")
-						.arg(reply.errorName())
-						.arg(TranslateStrings::cmtr(reply.errorMessage())) );
-   } // if reply is something other than a normal reply message	
-	
-	return reply.type();
+          "<center><b>We received a DBUS reply message indicating an error.</b></center>"
+          "<br><br>Error Name: %1<br><br>Error Message: %2")
+            .arg(reply.errorName())
+            .arg(TranslateStrings::cmtr(reply.errorMessage())) );
+   } // if reply is something other than a normal reply message
+
+  return reply.type();
 }
 
 //
@@ -67,7 +67,7 @@ bool shared::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r_var
   //  make sure we can convert the QVariant into a QDBusArgument
   if (! r_var.canConvert<QDBusArgument>() ) return false;
   const QDBusArgument qdba =  r_var.value<QDBusArgument>();
-  
+
   // make sure the QDBusArgument holds a map
   if (qdba.currentType() != QDBusArgument::MapType ) return false;
 
@@ -90,8 +90,8 @@ bool shared::extractMapData(QMap<QString,QVariant>& r_map, const QVariant& r_var
 
 //
 // Validating Dialog - an input dialog knockoff with a validated lineedit.
-// In addition to the usual input validation the dialog will only enable 
-// the OK button when the input is completely validated.. 
+// In addition to the usual input validation the dialog will only enable
+// the OK button when the input is completely validated..
 // Constructor
 shared::ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
 {
@@ -99,11 +99,11 @@ shared::ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
   label = new QLabel(this);
   lineedit = new QLineEdit(this);
   lineedit->setClearButtonEnabled(true);
- 
+
   buttonbox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
-  buttonbox->button(QDialogButtonBox::Ok)->setDisabled(true);	// disable OK until input validates
+  buttonbox->button(QDialogButtonBox::Ok)->setDisabled(true); // disable OK until input validates
   this->setSizeGripEnabled(true);
-  
+
   QVBoxLayout* vboxlayout = new QVBoxLayout;
   vboxlayout->addWidget(label);
   vboxlayout->addWidget(lineedit);
@@ -122,17 +122,17 @@ shared::ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
 void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
 {
   // setup a switch to set the validator
-  QString s_ip4   = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
-  QString s_ip6   = "(?:[0-9a-fA-F]{1,4})";
-  QString s_mac   = "(?:[0-9a-fA-F]{1,2})";
-  QString s_hex   = "[0-9a-fA-F]*";
-  QString s_int		= "[0-9]*";
-  QString s_dom   = "[0-9a-zA-Z]*[\\.]?[0-9a-zA-Z]*";
-  QString s_wd    = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
-  QString s_ch		= "\\S";
-  QString s_start = (plural ? "\\s?|(" : "^");
-  QString s_end   = (plural ? "(\\s*[,|;|\\s]\\s*))+" : "$");
-  
+  const QString s_ip4   = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
+  const QString s_ip6   = "(?:[0-9a-fA-F]{1,4})";
+  const QString s_mac   = "(?:[0-9a-fA-F]{1,2})";
+  const QString s_hex   = "[0-9a-fA-F]*";
+  const QString s_int   = "[0-9]*";
+  const QString s_dom   = "[0-9a-zA-Z\\.]*";
+  const QString s_wd    = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
+  const QString s_ch    = "\\S";
+  const QString s_start = (plural ? "\\s?|(" : "^");
+  const QString s_end   = (plural ? "(\\s*[,|;|\\s]\\s*))+" : "$");
+
   switch (vd){
     case CMST::ValDialog_IPv4: {
       QRegularExpression rx4(s_start + s_ip4 + "(?:\\." + s_ip4 + "){3}" + s_end);
@@ -146,24 +146,24 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
       break;
     case CMST::ValDialog_MAC: {
       QRegularExpression rxm(s_start + s_mac + "(?::" + s_mac + "){5}" + s_end);
-      QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rxm, this); 
+      QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rxm, this);
       lineedit->setValidator(lev_m); }
       break;
     case CMST::ValDialog_46: {
-      QRegularExpression rx46(s_start + "(" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})" + s_end);    
-      QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);  
+      QRegularExpression rx46(s_start + "(" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})" + s_end);
+      QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);
       lineedit->setValidator(lev_46); }
-      break;  
+      break;
     case CMST::ValDialog_Hex: {
       QRegularExpression rxh(s_start + s_hex + s_end);
       QRegularExpressionValidator* lev_h = new QRegularExpressionValidator(rxh, this);
       lineedit->setValidator(lev_h); }
       break;
     case CMST::ValDialog_Int: {
-			QRegularExpression rxint(s_start + s_int + s_end);
+      QRegularExpression rxint(s_start + s_int + s_end);
       QRegularExpressionValidator* lev_int = new QRegularExpressionValidator(rxint, this);
       lineedit->setValidator(lev_int); }
-      break;		  
+      break;
     case CMST::ValDialog_Dom: {
       QRegularExpression rxdom(s_start + s_dom + s_end);
       QRegularExpressionValidator* lev_dom = new QRegularExpressionValidator(rxdom, this);
@@ -175,20 +175,20 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
       lineedit->setValidator(lev_wd); }
       break;
     case CMST::ValDialog_min1ch: {
-			QRegularExpression rx1char(s_start + s_ch + "{1,}" + s_end);
-			QRegularExpressionValidator* lev_1char = new QRegularExpressionValidator(rx1char, this);
-			lineedit->setValidator(lev_1char); }
-			break;    
-		case CMST::ValDialog_min8ch: {
-			QRegularExpression rx8char(s_start + s_ch + "{8,}" + s_end);
-			QRegularExpressionValidator* lev_8char = new QRegularExpressionValidator(rx8char, this);
-			lineedit->setValidator(lev_8char); }
-			break; 
+      QRegularExpression rx1char(s_start + s_ch + "{1,}" + s_end);
+      QRegularExpressionValidator* lev_1char = new QRegularExpressionValidator(rx1char, this);
+      lineedit->setValidator(lev_1char); }
+      break;
+    case CMST::ValDialog_min8ch: {
+      QRegularExpression rx8char(s_start + s_ch + "{8,}" + s_end);
+      QRegularExpressionValidator* lev_8char = new QRegularExpressionValidator(rx8char, this);
+      lineedit->setValidator(lev_8char); }
+      break;
     default:
       lineedit->setValidator(0);
       break;
-    } // switch     
-    
+    } // switch
+
   return;
 }
 
@@ -197,10 +197,10 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
 // Called when the lineedit emits a textChanged() signal
 void shared::ValidatingDialog::textChanged()
 {
-	// enable OK button if text can be validated
-	buttonbox->button(QDialogButtonBox::Ok)->setEnabled(lineedit->hasAcceptableInput() );
-	
-	return;
+  // enable OK button if text can be validated
+  buttonbox->button(QDialogButtonBox::Ok)->setEnabled(lineedit->hasAcceptableInput() );
+
+  return;
 }
 
 //
@@ -208,12 +208,12 @@ void shared::ValidatingDialog::textChanged()
 // Called when dialog finished() signal is triggered
 void shared::ValidatingDialog::initialize()
 {
-	lineedit->clear();
-	lineedit->setValidator(0);
-	lineedit->setInputMask(QString());
-	lineedit->setModified(false);
-	lineedit->setFocus(Qt::OtherFocusReason);
-	buttonbox->button(QDialogButtonBox::Ok)->setDisabled(true);
-	
-	return;
+  lineedit->clear();
+  lineedit->setValidator(0);
+  lineedit->setInputMask(QString());
+  lineedit->setModified(false);
+  lineedit->setFocus(Qt::OtherFocusReason);
+  buttonbox->button(QDialogButtonBox::Ok)->setDisabled(true);
+
+  return;
 }
