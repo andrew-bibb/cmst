@@ -2063,22 +2063,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_devicesoff</sender>
-   <signal>clicked()</signal>
-   <receiver>actionOffline_Mode</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>601</x>
-     <y>64</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>checkBox_counterkb</sender>
    <signal>clicked(bool)</signal>
    <receiver>spinBox_counterkb</receiver>
@@ -2107,6 +2091,22 @@
     <hint type="destinationlabel">
      <x>632</x>
      <y>295</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOffline_Mode</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>checkBox_devicesoff</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>600</x>
+     <y>64</y>
     </hint>
    </hints>
   </connection>

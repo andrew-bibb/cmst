@@ -164,7 +164,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // Read saved settings which will set the ui controls in the preferences tab.
   this->readSettings();
-
+  
   // Set the iconmanager color
   iconman->setIconColor(QColor(ui.lineEdit_colorize->text()) );
 
@@ -323,25 +323,25 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       this->clearCounters();
 
       // VPN manager. Disable if commandline or option is set
-		  vpn_manager = NULL;
-		  if (parser.isSet("disable-vpn") ) {
-		    ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
-		    ui.pushButton_vpn_editor->setDisabled(true);
-		  } // if parser set
-		  else
-		    if (b_so && ui.checkBox_disablevpn->isChecked() ) {
-		     ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
-		     ui.pushButton_vpn_editor->setDisabled(true);
-		    } // if
-		    else {
-				ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), true);
-		    ui.pushButton_vpn_editor->setEnabled(true);
-				vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
-				if (! vpn_manager->isValid() ) logErrors(CMST::Err_Invalid_VPN_Iface);
-				else {
-					shared::processReply(vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
-				} // else register agent
-      }	// else normal vpn manager  
+      vpn_manager = NULL;
+      if (parser.isSet("disable-vpn") ) {
+        ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
+        ui.pushButton_vpn_editor->setDisabled(true);
+      } // if parser set
+      else
+        if (b_so && ui.checkBox_disablevpn->isChecked() ) {
+         ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
+         ui.pushButton_vpn_editor->setDisabled(true);
+        } // if
+        else {
+        ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), true);
+        ui.pushButton_vpn_editor->setEnabled(true);
+        vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
+        if (! vpn_manager->isValid() ) logErrors(CMST::Err_Invalid_VPN_Iface);
+        else {
+          shared::processReply(vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
+        } // else register agent
+      } // else normal vpn manager  
     } // else have valid connection
   } // else have connected systemBus
 
@@ -368,7 +368,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(mvsrv_menu, SIGNAL(triggered(QAction*)), this, SLOT(moveService(QAction*)));
   connect(ui.actionRescan, SIGNAL (triggered()), this, SLOT(scanWiFi()));
   connect(ui.actionIDPass, SIGNAL (triggered()), this, SLOT(wifiIDPass()));
-  connect(ui.actionOffline_Mode, SIGNAL(triggered(bool)), this, SLOT(toggleOfflineMode(bool)));
+  connect(ui.checkBox_devicesoff, SIGNAL(clicked(bool)), ui.actionOffline_Mode, SLOT(setChecked(bool)));
+  connect(ui.actionOffline_Mode, SIGNAL(toggled(bool)), this, SLOT(toggleOfflineMode(bool)));
 
   //  connect signals and slots - ui elements
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
@@ -409,7 +410,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     childlist.at(i)->installEventFilter(this);
   }
 
-  // tray icon - disable it if we specifiy that option on the commandline or in
+  // Tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon.
   trayicon = 0;
   if (parser.isSet("disable-tray-icon") || (b_so && ui.checkBox_disabletrayicon->isChecked()) ) {
@@ -529,7 +530,7 @@ void ControlBox::updateDisplayWidgets()
     if (trayicon != 0 ) this->assembleTrayIcon();
     
     ui.pushButton_movebefore->setEnabled(false);
-		ui.pushButton_moveafter->setEnabled(false);
+    ui.pushButton_moveafter->setEnabled(false);
   } // if there were no major errors
 
   return;
@@ -547,7 +548,7 @@ void ControlBox::moveService(QAction* act)
     ss = getNickName(services_list.at(i).objpath);
     // the items in mvsrv_menu are in the same order as services_list
     if (ss == act->text() ) {
-			targetobj = QDBusObjectPath(services_list.at(i).objpath.path());
+      targetobj = QDBusObjectPath(services_list.at(i).objpath.path());
       break;
     } // if
   } // for
@@ -618,8 +619,8 @@ void ControlBox::enableMoveButtons(int row, int col)
       } // else
     } // if
     
-    else 			
-			act->setDisabled(true);
+    else      
+      act->setDisabled(true);
    }  // for
 
   // add a cancel option
@@ -1241,8 +1242,8 @@ void ControlBox::toggleOfflineMode(bool checked)
   if ( ((q16_errors & CMST::Err_No_DBus) | (q16_errors & CMST::Err_Invalid_Con_Iface)) != 0x00 ) return;
 
   shared::processReply(con_manager->call(QDBus::AutoDetect, "SetProperty", "OfflineMode", QVariant::fromValue(QDBusVariant(checked ? true : false))) );
-
-  return;
+	
+	return;
 }
 
 //
@@ -1381,13 +1382,13 @@ void ControlBox::wifiSubmenuTriggered(QAction* act)
       QString state = wifi_list.at(i).objmap.value("State").toString();
       if (state == "online" || state == "ready") {
         shared::processReply(iface_serv->call(QDBus::AutoDetect, "Disconnect") );
-			}
+      }
       else {
-      	iface_serv->setTimeout(5);
-      	QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
-				if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);
-			}
-			iface_serv->deleteLater();
+        iface_serv->setTimeout(5);
+        QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
+        if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);
+      }
+      iface_serv->deleteLater();
       break;
     } // if
   }   // for
@@ -2278,7 +2279,7 @@ void ControlBox::assembleTrayIcon()
     ttstr.append("<br>");
     QStringList sl_tr;
     for (int m = 0; m < wifi_list.at(k).objmap.value("Security").toStringList().size(); ++m) {
-			sl_tr << TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Security").toStringList().at(m) );
+      sl_tr << TranslateStrings::cmtr(wifi_list.at(k).objmap.value("Security").toStringList().at(m) );
     } // for    
     ttstr.append(tr("Security: %1").arg(sl_tr.join(',')) );
     if (wifi_list.at(k).objmap.value("Roaming").toBool() ) ttstr.append(tr("<br>Roaming"));
@@ -2289,9 +2290,9 @@ void ControlBox::assembleTrayIcon()
 
   // vpn_submenu
   if (vpn_manager == NULL) {
-		vpn_submenu->setDisabled(true);
-		return;
-	}
+    vpn_submenu->setDisabled(true);
+    return;
+  }
   vpn_submenu->clear();
   for (int l = 0; l < vpn_list.count(); ++l) {
     QAction* act = vpn_submenu->addAction(getNickName(vpn_list.at(l).objpath) );
@@ -2569,6 +2570,11 @@ void ControlBox::createSystemTrayIcon()
 
   // Restore the desktopAware
   qApp->setDesktopSettingsAware(b_dtaware);
+  
+  // sync offlinemode checkbox and action b1ased on the saved value from settings
+  if (settings->value("CheckBoxes/devices_off").toBool() ) {
+		ui.actionOffline_Mode->trigger();
+	}
 
   // Lastly update the display widgets (since this is actually the last
   // line of the constructor.)
@@ -2970,11 +2976,11 @@ void ControlBox::cleanUp()
     } // if counters are connected to anything
   } // if con_manager isValid
 
-	if (vpn_manager != NULL) {
-		if (vpn_manager->isValid() ) {
-			shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
-		} // ivpn_manager isValid
-	}	// not null
+  if (vpn_manager != NULL) {
+    if (vpn_manager->isValid() ) {
+      shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
+    } // ivpn_manager isValid
+  } // not null
 
   return;
 }

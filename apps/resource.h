@@ -1,4 +1,4 @@
-	/**************************** resource.h *******************************
+  /**************************** resource.h *******************************
 
 Header file that contains program #defines.  It used to be that we kept
 all program update and version information in this single file.  Now
@@ -35,15 +35,15 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation) 
-#define VERSION "2016.05.27-1"
+#define VERSION "2016.06.05-1"
 
 #define RELEASE_DATE "3 April 2016"
 #define COPYRIGHT_DATE "2013-2016"
 
 // Program Values:
-//	QApplication (not user visible)
+//  QApplication (not user visible)
 //  QSettings (visible in filesystem only)
-//	System Logging (visible in system logs only)
+//  System Logging (visible in system logs only)
 #define LONG_NAME "CMST - Connman System Tray"
 #define ORG "cmst"
 #define APP "cmst"
@@ -61,13 +61,13 @@ namespace CMST
 {
   enum {
     // errors
-    No_Errors         		= 0x00,
-    Err_No_DBus       		= (1 << 0), // Can't find DBus 
-    Err_Invalid_Con_Iface	= (1 << 1), // Invalid interface
-    Err_Properties    		= (1 << 2), // There was an error reading connman.Manager.GetProperties
-    Err_Technologies  		= (1 << 3), // There was an error reading connman.Manager.GetTechnologies       
-    Err_Services      		= (1 << 4), // There was an error reading connman.Manager.GetServices 
-    Err_Invalid_VPN_Iface	= (1 << 5), // Invalid interface 
+    No_Errors             = 0x00,
+    Err_No_DBus           = (1 << 0), // Can't find DBus 
+    Err_Invalid_Con_Iface = (1 << 1), // Invalid interface
+    Err_Properties        = (1 << 2), // There was an error reading connman.Manager.GetProperties
+    Err_Technologies      = (1 << 3), // There was an error reading connman.Manager.GetTechnologies       
+    Err_Services          = (1 << 4), // There was an error reading connman.Manager.GetServices 
+    Err_Invalid_VPN_Iface = (1 << 5), // Invalid interface 
     
     // methods
     Manager_Properties    = (1 << 1), // scan for properties
@@ -88,14 +88,14 @@ namespace CMST
     ValDialog_MAC     = 0x03,
     ValDialog_46      = 0x04,
     ValDialog_Hex     = 0x05,
-    ValDialog_Int			= 0x06,
+    ValDialog_Int     = 0x06,
     ValDialog_Dom     = 0x07,
     ValDialog_Wd      = 0x08,
-    ValDialog_min1ch	= 0x09,
-    ValDialog_min8ch	= 0x0a,
-    ValDialog_46d			= 0x0b,
+    ValDialog_min1ch  = 0x09,
+    ValDialog_min8ch  = 0x0a,
+    ValDialog_46d     = 0x0b,
     
-  };	// enum
+  };  // enum
 } // namespace CMST
 
 #endif
