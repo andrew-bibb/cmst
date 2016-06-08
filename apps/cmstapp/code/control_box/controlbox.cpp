@@ -275,6 +275,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   }
   counter_period = setval > minval ? setval : minval; // number of seconds for counter updates
 
+	// Hide the minimize button requested 
+	if (parser.isSet("disable-minimize") || (b_so && ui.checkBox_disableminimized->isChecked()) )
+		ui.pushButton_minimize->hide();
 
   // operate on settings not dealt with elsewhere
   ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
@@ -2407,6 +2410,7 @@ void ControlBox::writeSettings()
   settings->setValue("use_icon_theme", ui.checkBox_systemicontheme->isChecked() );
   settings->setValue("icon_theme", ui.lineEdit_icontheme->text() );
   settings->setValue("start_minimized", ui.checkBox_startminimized->isChecked() );
+  settings->setValue("disable_minimized", ui.checkBox_disableminimized->isChecked() );
   settings->setValue("use_wait_time", ui.checkBox_waittime->isChecked() );
   settings->setValue("wait_time", ui.spinBox_waittime->value() );
   settings->setValue("use_counter_update_rate", ui.checkBox_counterseconds->isChecked() );
@@ -2458,6 +2462,7 @@ void ControlBox::readSettings()
   ui.checkBox_systemicontheme->setChecked(settings->value("use_icon_theme").toBool() );
   ui.lineEdit_icontheme->setText(settings->value("icon_theme").toString() );
   ui.checkBox_startminimized->setChecked(settings->value("start_minimized").toBool() );
+  ui.checkBox_disableminimized->setChecked(settings->value("disable_minimized").toBool() );
   ui.checkBox_waittime->setChecked(settings->value("use_wait_time").toBool() );
   ui.spinBox_waittime->setValue(settings->value("wait_time").toInt() );
   ui.checkBox_counterseconds->setChecked(settings->value("use_counter_update_rate").toBool() );

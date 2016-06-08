@@ -32,7 +32,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>5</number>
      </property>
      <property name="movable">
       <bool>true</bool>
@@ -523,8 +523,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>647</width>
-            <height>353</height>
+            <width>98</width>
+            <height>60</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -895,8 +895,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>647</width>
-            <height>431</height>
+            <width>112</width>
+            <height>286</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -935,8 +935,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>603</width>
-                   <height>141</height>
+                   <width>98</width>
+                   <height>46</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -991,8 +991,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>603</width>
-                   <height>140</height>
+                   <width>98</width>
+                   <height>46</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1060,7 +1060,7 @@
             <x>0</x>
             <y>0</y>
             <width>633</width>
-            <height>539</height>
+            <height>561</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_8">
@@ -1166,7 +1166,7 @@
               <string>Start Options</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_9">
-              <item row="8" column="1">
+              <item row="9" column="1">
                <widget class="QSpinBox" name="spinBox_counterrate">
                 <property name="enabled">
                  <bool>false</bool>
@@ -1202,7 +1202,7 @@
                 </property>
                </widget>
               </item>
-              <item row="7" column="0">
+              <item row="8" column="0">
                <widget class="QCheckBox" name="checkBox_counterkb">
                 <property name="enabled">
                  <bool>false</bool>
@@ -1218,7 +1218,7 @@
                 </property>
                </widget>
               </item>
-              <item row="6" column="1">
+              <item row="7" column="1">
                <widget class="QSpinBox" name="spinBox_waittime">
                 <property name="enabled">
                  <bool>false</bool>
@@ -1237,7 +1237,7 @@
                 </property>
                </widget>
               </item>
-              <item row="7" column="1">
+              <item row="8" column="1">
                <widget class="QSpinBox" name="spinBox_counterkb">
                 <property name="enabled">
                  <bool>false</bool>
@@ -1289,7 +1289,7 @@
                 </property>
                </widget>
               </item>
-              <item row="6" column="0">
+              <item row="7" column="0">
                <widget class="QCheckBox" name="checkBox_waittime">
                 <property name="whatsThis">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
@@ -1311,7 +1311,7 @@
                 </property>
                </widget>
               </item>
-              <item row="8" column="0">
+              <item row="9" column="0">
                <widget class="QCheckBox" name="checkBox_counterseconds">
                 <property name="toolTip">
                  <string/>
@@ -1325,7 +1325,7 @@
                 </property>
                </widget>
               </item>
-              <item row="9" column="0">
+              <item row="10" column="0">
                <widget class="QCheckBox" name="checkBox_faketranparency">
                 <property name="toolTip">
                  <string/>
@@ -1339,7 +1339,7 @@
                 </property>
                </widget>
               </item>
-              <item row="9" column="1">
+              <item row="10" column="1">
                <widget class="QSpinBox" name="spinBox_faketransparency">
                 <property name="enabled">
                  <bool>false</bool>
@@ -1374,7 +1374,7 @@
                 </property>
                </widget>
               </item>
-              <item row="11" column="0" colspan="2">
+              <item row="12" column="0" colspan="2">
                <widget class="QGroupBox" name="groupBox_process">
                 <property name="whatsThis">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line.&lt;/p&gt;&lt;p&gt;Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1406,7 +1406,7 @@
                 </layout>
                </widget>
               </item>
-              <item row="12" column="0">
+              <item row="13" column="0">
                <spacer name="verticalSpacer">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
@@ -1419,7 +1419,7 @@
                 </property>
                </spacer>
               </item>
-              <item row="10" column="0" colspan="2">
+              <item row="11" column="0" colspan="2">
                <widget class="QGroupBox" name="groupBox_2">
                 <property name="whatsThis">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use code specific for the selected desktop environment.&lt;/p&gt;&lt;p&gt;As of 2014.11.24 there seems to be a problem with QT5.3 and some system trays. There is code in the program to try and work around this issue, and selecting one of these buttons will invoke the code specific to the desktop.&lt;/p&gt;&lt;p&gt;If the bug gets fixed these options will remain so that start up scripts do not break, but the options will do nothing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1480,6 +1480,16 @@
                 </property>
                 <property name="text">
                  <string>Disable VPN</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QCheckBox" name="checkBox_disableminimized">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Disable Minimized</string>
                 </property>
                </widget>
               </item>
@@ -1737,8 +1747,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>537</width>
-            <height>431</height>
+            <width>98</width>
+            <height>412</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
