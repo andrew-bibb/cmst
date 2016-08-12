@@ -23,7 +23,7 @@
    <item>
     <widget class="QToolBox" name="toolBox_peditor">
      <property name="currentIndex">
-      <number>0</number>
+      <number>6</number>
      </property>
      <widget class="QWidget" name="general">
       <property name="geometry">
@@ -68,8 +68,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>98</width>
-        <height>46</height>
+        <width>279</width>
+        <height>166</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -102,8 +102,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>98</width>
-        <height>46</height>
+        <width>279</width>
+        <height>166</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -136,8 +136,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>98</width>
-        <height>46</height>
+        <width>279</width>
+        <height>166</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -380,7 +380,7 @@
          <item row="1" column="0" colspan="2">
           <widget class="QStackedWidget" name="stackedWidget_proxy01">
            <property name="currentIndex">
-            <number>2</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="page_0"/>
            <widget class="QWidget" name="page_1">

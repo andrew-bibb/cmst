@@ -113,14 +113,20 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   }
 
   // proxy page
-  if (! proxmap.value("Method").toString().isEmpty() ) {
-    ui.comboBox_proxymethod->setCurrentIndex(sl_proxy_method.indexOf(QRegularExpression(proxmap.value("Method").toString())) );
-  }
+  if (proxmap.value("Method").toString().isEmpty() )
+		ui.comboBox_proxymethod->setCurrentIndex(-1);
+	else
+		ui.comboBox_proxymethod->setCurrentIndex(sl_proxy_method.indexOf(QRegularExpression(proxmap.value("Method").toString())) );	
+
   ui.lineEdit_proxyservers->setText(proxmap.value("Servers").toStringList().join("\n") );
   ui.lineEdit_proxyexcludes->setText(proxmap.value("Excludes").toStringList().join("\n") );
   ui.lineEdit_proxyurl->setText(proxmap.value("URL").toString() );
-
-
+  
+  if (ui.comboBox_proxymethod->currentIndex() < 0)
+		ui.stackedWidget_proxy01->setCurrentIndex(0);
+	else	
+		ui.stackedWidget_proxy01->setCurrentIndex(ui.comboBox_proxymethod->currentIndex() );
+	
   // connect signals to slots
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
   connect(ui.pushButton_resetpage, SIGNAL(clicked()), this, SLOT(resetPage()));
@@ -336,7 +342,7 @@ void PropertiesEditor::updateConfiguration()
     } // for
 
     vlist << QVariant::fromValue(QDBusVariant(dict) );
-    qDebug() << dict;
+    //qDebug() << dict;
     shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
   } // if proxy changed
 
