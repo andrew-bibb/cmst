@@ -290,7 +290,7 @@
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_5">
                  <item>
-                  <widget class="QPushButton" name="pushButton_rescan">
+                  <widget class="QPushButton" name="pushButton_rescanwifi01">
                    <property name="whatsThis">
                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
@@ -523,8 +523,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>60</height>
+            <width>647</width>
+            <height>353</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -721,6 +721,16 @@
            </widget>
           </item>
           <item>
+           <widget class="QPushButton" name="pushButton_rescanwifi02">
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Resc&amp;an</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLabel" name="label_wifi_state">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -895,8 +905,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>112</width>
-            <height>286</height>
+            <width>647</width>
+            <height>431</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -935,8 +945,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>98</width>
-                   <height>46</height>
+                   <width>603</width>
+                   <height>141</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -991,8 +1001,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>98</width>
-                   <height>46</height>
+                   <width>603</width>
+                   <height>140</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1747,8 +1757,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>412</height>
+            <width>537</width>
+            <height>431</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1961,7 +1971,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_rescan</sender>
+   <sender>pushButton_rescanwifi01</sender>
    <signal>clicked()</signal>
    <receiver>actionRescan</receiver>
    <slot>trigger()</slot>
@@ -2117,6 +2127,22 @@
     <hint type="destinationlabel">
      <x>600</x>
      <y>64</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_rescanwifi02</sender>
+   <signal>clicked()</signal>
+   <receiver>actionRescan</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
     </hint>
    </hints>
   </connection>

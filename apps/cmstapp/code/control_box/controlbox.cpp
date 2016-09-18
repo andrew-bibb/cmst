@@ -952,6 +952,7 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
   if (services_list.count() > 0) {
     if (services_list.at(0).objmap.value("Type") == "vpn") managerRescan(CMST::Manager_Services);
   }
+  
   updateDisplayWidgets();
 
   return;
@@ -1164,8 +1165,9 @@ void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue
   return;
 }
 
-//  Slot to rescan all WiFi technologies.  Called from the
-//  ui.pushButton_rescan control.
+//  Slot to rescan all WiFi technologies.  Called when ui.actionRescan
+//  is triggered.  Action is called from rescanwifi buttons and from
+//	the context menu.
 //  Results signaled by manager.ServicesChanged(), except for peer
 //  services which will be signaled by manager.PeersChanged()
 void ControlBox::scanWiFi()
@@ -1177,13 +1179,12 @@ void ControlBox::scanWiFi()
   for (int row = 0; row < technologies_list.size(); ++row) {
     if (technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
       if (technologies_list.at(row).objmap.value("Powered").toBool() ) {
-        ui.pushButton_rescan->setDisabled(true);
+				setStateRescan(false);
         ui.tableWidget_services->setCurrentIndex(QModelIndex()); // first cell becomes selected once pushbutton is disabled
         qApp->processEvents();  // needed to promply disable the button
         QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
         iface_tech->setTimeout( 8 * 1000);  // full 25 second timeout is a bit much when there is a problem
         QDBusMessage reply = iface_tech->call(QDBus::AutoDetect, "Scan");
-        if (shared::processReply(reply) != QDBusMessage::InvalidMessage) ui.pushButton_rescan->setEnabled(true);
         iface_tech->deleteLater();
       } // if the wifi was powered
     } // if the list item is wifi
@@ -1699,7 +1700,7 @@ void ControlBox::assembleTabStatus()
       ui.tableWidget_technologies->showColumn(5);
       ui.pushButton_IDPass->setHidden(false);
     }
-
+    
     for (int row = 0; row < technologies_list.size(); ++row) {
       QTableWidgetItem* qtwi00 = new QTableWidgetItem();
       st = technologies_list.at(row).objmap.value("Name").toString();
@@ -1959,6 +1960,7 @@ void ControlBox::assembleTabWireless()
   ui.pushButton_connect->setEnabled(b_enable);
   ui.pushButton_disconnect->setEnabled(b_enable);
   ui.pushButton_remove->setEnabled(b_enable);
+  setStateRescan(b_enable);	
 
   return;
 }
@@ -3013,3 +3015,14 @@ void ControlBox::iconColorChanged(const QString& col)
   return;
 }
 
+//
+// Slot to set the enabled/disabled state of the rescan wifi controls
+void ControlBox::setStateRescan(bool state)
+{
+	ui.pushButton_rescanwifi01->setEnabled(state);
+	ui.pushButton_rescanwifi02->setEnabled(state);
+	ui.actionRescan->setEnabled(state);
+	
+	return;
+}
+	

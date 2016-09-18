@@ -5,6 +5,8 @@
 <li>New commandline option to disable VPN support (issue #144).</li>
 <li>Fixed showing error dialog when connect is selected from the tray icon (issue #143).</li>
 <li>Provisioning editor and properties editor nameserver and timeserver fields will now accept domain names in addition to IPv4 and IPv6 addresses (issue #146).</li>
+<li>Added wifi rescan button to Wifi tab (issue #151).</li>
+<li>Wifi rescan controls disabled during scans and if there is no powered Wifi technology found.</li>
 </ul>
 <b>2016.04.03</b>
 <ul>

@@ -211,6 +211,7 @@ class ControlBox : public QDialog
     void cleanUp();
     void callColorDialog();
     void iconColorChanged(const QString&);
+    void setStateRescan(bool);
 };
 
 #endif
