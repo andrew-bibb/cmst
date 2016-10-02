@@ -945,14 +945,8 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
 
   // clear the counters (if selected) and update the widgets
   clearCounters();
-  // Next line a bit of a hack, but I can find no evidence that service provider properties are changed via signals once a connection is
-  // made. This includes both the manager.servicesChanged() and services.propertyChanged() signals. Connecting a VPN seems to be a
-  // black hole of signals (well except for vpn connection interface - but we're not using that).
-  // This will force a service rescan which picks up some of these properties.
-  if (services_list.count() > 0) {
-    if (services_list.at(0).objmap.value("Type") == "vpn") managerRescan(CMST::Manager_Services);
-  }
   
+  // update the widgets  
   updateDisplayWidgets();
 
   return;
@@ -966,7 +960,7 @@ void ControlBox::dbsPeersChanged(QList<QVariant> vlist, QList<QDBusObjectPath> r
   // Set the update flag
   bool b_needupdate = false;
 
-  // Process changed peers. Demarshall the raw QDBusMessage instead of vlist as it is easier.
+  // Process changed peers. Demarshal the raw QDBusMessage instead of vlist as it is easier.
   if (! vlist.isEmpty() ) {
     QList<arrayElement> revised_list;
     if (! getArray(revised_list, msg)) return;
