@@ -802,7 +802,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1535"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cummulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cumulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;通常，统计信息会一直累计，连接时间和接收、传送计数会保留直到下一次启动。 &lt;/p&gt;&lt;p&gt;当勾选上时，每次cmst或connman启动时统计信息会清零。 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>

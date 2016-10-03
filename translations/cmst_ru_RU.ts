@@ -777,7 +777,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1535"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cummulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cumulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Обычно счётчики ведут учёт нарастающим итогом, а также сохраняют время подключения и число TX и RX между загрузками. &lt;/p&gt;&lt;p&gt;Когда этот флажок установлен, то счетчики будут сбрасываться до нуля каждый раз, когда CMST запускается, и если CMST выполняется каждый раз, когда запущена служба Connman. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
