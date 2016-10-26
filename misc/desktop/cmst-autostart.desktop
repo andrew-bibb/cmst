@@ -10,6 +10,7 @@ Exec=cmst -w5
 Terminal=false
 StartupNotify=false
 X-GNOME-Autostart-enabled=true
+Keywords=Network;Wireless;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Bluetooth;vpn;DNS;
 
 Name[de]=Netzwerk-Konfiguration
 
