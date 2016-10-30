@@ -2771,8 +2771,6 @@ void ControlBox::logErrors(const quint16& err)
       break;
     case  CMST::Err_Invalid_VPN_Iface:
       syslog(LOG_ERR, "%s",tr("Could not create an interface to connman-vpn on the system bus").toUtf8().constData());
-      QMessageBox::critical(this, tr("%1 - Critical Error").arg(TranslateStrings::cmtr("cmst")),
-        tr("Unable to create an interface to connman-vpn on the system bus.<br><br>%1 will not be able to communicate with the connman vpn daemon.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     default:
       break;
