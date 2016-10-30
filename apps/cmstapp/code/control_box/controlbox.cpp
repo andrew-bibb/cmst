@@ -161,6 +161,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   socketserver->listen(SOCKET_NAME);
   trayiconbackground = QColor();
   trayicon = new QSystemTrayIcon(this);
+  
   iconman = new IconManager(this);
 
   // Read saved settings which will set the ui controls in the preferences tab.
@@ -421,8 +422,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // Tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon.
-  trayicon = NULL;
   if (parser.isSet("disable-tray-icon") || (b_so && ui.checkBox_disabletrayicon->isChecked()) ) {
+		trayicon = NULL;
     ui.checkBox_hideIcon->setDisabled(true);
     this->updateDisplayWidgets();
     this->showNormal(); // no place to minimize to, so showMaximized
@@ -1255,7 +1256,7 @@ void ControlBox::toggleOfflineMode(bool checked)
 //  Called when ui.checkBox_hideIcon is clicked
 void ControlBox::toggleTrayIcon(bool b_checked)
 {
-  if (trayicon != 0 ) {
+  if (trayicon != NULL ) {
     if (b_checked) {
       trayicon->setVisible(false);
       ui.pushButton_minimize->setDisabled(true);
@@ -1566,7 +1567,7 @@ void ControlBox::closeEvent(QCloseEvent* e)
 void ControlBox::keyPressEvent(QKeyEvent* e)
 {
   if (e->key() == Qt::Key_Escape &&
-      trayicon != 0 &&
+      trayicon != NULL &&
       trayicon->isVisible()) {
     this->hide();
     return;
@@ -2494,73 +2495,70 @@ void ControlBox::createSystemTrayIcon()
 
   // We still need to make sure there is a tray available
   if (QSystemTrayIcon::isSystemTrayAvailable() ) {
-
-    // Create the systemtrayicon
-    trayicon = new QSystemTrayIcon(this);
-
-    // Create the outline of the context menu.  Submenu contents are defined in the
-    // assembletrayIcon() function.
-    trayiconmenu->clear();
-    trayiconmenu->setTearOffEnabled(true);
-    trayiconmenu->setToolTipsVisible(true);
-    tech_submenu->setToolTipsVisible(true);
-    info_submenu->setToolTipsVisible(true);
-    wifi_submenu->setToolTipsVisible(true);
-    vpn_submenu->setToolTipsVisible(true);
-
-    trayiconmenu->addMenu(tech_submenu);
-    trayiconmenu->addMenu(info_submenu);
-    trayiconmenu->addMenu(wifi_submenu);
-    trayiconmenu->addMenu(vpn_submenu);
-    trayiconmenu->addSeparator();
-
-    trayiconmenu->addAction(ui.actionRescan);
-    trayiconmenu->addAction(ui.actionOffline_Mode);
-    trayiconmenu->addSeparator();
-
-    trayiconmenu->addAction(maximizeAction);
-    trayiconmenu->addAction(minimizeAction);
-    trayiconmenu->addSeparator();
-    trayiconmenu->addAction(tr("Cancel"), this, SLOT(closeSystemTrayTearOffMenu()) );
-    trayiconmenu->addAction(exitAction);
-
-    trayicon->setContextMenu(trayiconmenu);
-
-    connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
-
-    // Assemble the tray icon (set the icon to display)
-    assembleTrayIcon();
-
-    // QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
-    // maxtries to get a valid icon geometry.
-    // QT5.4 update, may be fixed but leave option in for now
-    if (b_usexfce || b_usemate) {
-      const int maxtries = 125;
-      int i;
-      for (i = 0; i < maxtries; ++i) {
-        trayicon->setVisible(true);
-        //qDebug() << "icon geometry: " << trayicon->geometry();
-        if ((trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) && trayicon->geometry().width() > 1) break;
-        trayicon->setVisible(false);
-        qApp->processEvents();
-      }   // hammer loop
-      if (i == maxtries - 1) {
-        qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
-        ui.pushButton_minimize->setDisabled(true);
-        trayicon = 0; // reinitialize the pointer
-      } // if we hit the end of the loop
-    } // if use xfce
-
-    // Sync the visibility to the checkbox
-    ui.checkBox_hideIcon->setEnabled(true);
-    trayicon->setVisible(true);
+	
+		// Create the outline of the context menu.  Submenu contents are defined in the
+		// assembletrayIcon() function.
+		trayiconmenu->clear();
+		trayiconmenu->setTearOffEnabled(true);
+		trayiconmenu->setToolTipsVisible(true);
+		tech_submenu->setToolTipsVisible(true);
+		info_submenu->setToolTipsVisible(true);
+		wifi_submenu->setToolTipsVisible(true);
+		vpn_submenu->setToolTipsVisible(true);
+	
+		trayiconmenu->addMenu(tech_submenu);
+		trayiconmenu->addMenu(info_submenu);
+		trayiconmenu->addMenu(wifi_submenu);
+		trayiconmenu->addMenu(vpn_submenu);
+		trayiconmenu->addSeparator();
+	
+		trayiconmenu->addAction(ui.actionRescan);
+		trayiconmenu->addAction(ui.actionOffline_Mode);
+		trayiconmenu->addSeparator();
+	
+		trayiconmenu->addAction(maximizeAction);
+		trayiconmenu->addAction(minimizeAction);
+		trayiconmenu->addSeparator();
+		trayiconmenu->addAction(tr("Cancel"), this, SLOT(closeSystemTrayTearOffMenu()) );
+		trayiconmenu->addAction(exitAction);
+	
+		trayicon->setContextMenu(trayiconmenu);
+	
+		connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
+	
+		// Assemble the tray icon (set the icon to display)
+		assembleTrayIcon();
+	
+	    // QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
+	    // maxtries to get a valid icon geometry.
+	    // QT5.4 update, may be fixed but leave option in for now
+	    if (b_usexfce || b_usemate) {
+	      const int maxtries = 125;
+	      int i;
+	      for (i = 0; i < maxtries; ++i) {
+	        trayicon->setVisible(true);
+	        //qDebug() << "icon geometry: " << trayicon->geometry();
+	        if ((trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) && trayicon->geometry().width() > 1) break;
+	        trayicon->setVisible(false);
+	        qApp->processEvents();
+	      }   // hammer loop
+	      if (i == maxtries - 1) {
+	        qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
+	        ui.pushButton_minimize->setDisabled(true);
+	        trayicon = 0; // reinitialize the pointer
+	      } // if we hit the end of the loop
+	    } // if use xfce
+	
+	    // Sync the visibility to the checkbox
+	    ui.checkBox_hideIcon->setEnabled(true);
+	    trayicon->setVisible(true);
 
   } // if there is a systemtray available
 
   // else no systemtray available
   else {
     ui.checkBox_hideIcon->setDisabled(true);
-    trayicon = 0;
+    trayicon = NULL;
 
     QMessageBox::warning(this,
       QString(TranslateStrings::cmtr("cmst")) + tr(" Warning"),
@@ -2770,6 +2768,10 @@ void ControlBox::logErrors(const quint16& err)
         tr("There was an error reading or parsing the reply from method connman.Manager.GetServices.<br><br>Some portion of %1 may still be functional.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     case  CMST::Err_Invalid_VPN_Iface:
+			// NOTE: this error is logged to the system log only, no message is presented to the user (issue #155).  Done
+			// this way because it will happen when someone does not compile ConnMan with VPN support, or if they don't
+			// have the connman-vpn daemon running.  We're figuring this would be more than likely intentional and not an
+			// error the user would need to be concerned about.  If he is the error will show in the system log.
       syslog(LOG_ERR, "%s",tr("Could not create an interface to connman-vpn on the system bus").toUtf8().constData());
       break;
     default:
