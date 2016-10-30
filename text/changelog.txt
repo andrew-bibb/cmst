@@ -4,6 +4,8 @@
 <ul>
 <li>Added Keywords to .desktop files (PR from klausenbusk).</li>
 <li>Fixed missing send destination in dbus policy file (PR from Klausenbusk).</li>
+<li>Fixed segfault where system tray icon could be used uninitialized.</li>
+<li>Disable vpn tab and vpn icon menu if we cannot connect to the connman-vpn daemon (issue #155).</li> 
 </ul>
 <b> 2016.10.02</b>
 <ul>

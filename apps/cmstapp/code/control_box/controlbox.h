@@ -162,7 +162,7 @@ class ControlBox : public QDialog
     bool getServices();
     bool getArray(QList<arrayElement>&, const QDBusMessage&);
     bool getMap(QMap<QString,QVariant>&, const QDBusMessage&); 
-    void logErrors(const quint8&);
+    void logErrors(const quint16&);
     QString readResourceText(const char*);
     void clearCounters();
     QString getNickName(const QDBusObjectPath&);

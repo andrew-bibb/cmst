@@ -160,6 +160,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   socketserver->removeServer(SOCKET_NAME);  // remove any files that may have been left after a crash
   socketserver->listen(SOCKET_NAME);
   trayiconbackground = QColor();
+  trayicon = new QSystemTrayIcon(this);
   iconman = new IconManager(this);
 
   // Read saved settings which will set the ui controls in the preferences tab.
@@ -337,11 +338,16 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
          ui.pushButton_vpn_editor->setDisabled(true);
         } // if
         else {
-        ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), true);
-        ui.pushButton_vpn_editor->setEnabled(true);
+
         vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
-        if (! vpn_manager->isValid() ) logErrors(CMST::Err_Invalid_VPN_Iface);
+        if (! vpn_manager->isValid() ) {
+					ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
+					ui.pushButton_vpn_editor->setDisabled(true);
+					logErrors(CMST::Err_Invalid_VPN_Iface);
+				}
         else {
+					ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), true);
+					ui.pushButton_vpn_editor->setEnabled(true);
           shared::processReply(vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
         } // else register agent
       } // else normal vpn manager  
@@ -415,7 +421,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // Tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon.
-  trayicon = 0;
+  trayicon = NULL;
   if (parser.isSet("disable-tray-icon") || (b_so && ui.checkBox_disabletrayicon->isChecked()) ) {
     ui.checkBox_hideIcon->setDisabled(true);
     this->updateDisplayWidgets();
@@ -530,7 +536,7 @@ void ControlBox::updateDisplayWidgets()
     this->assembleTabWireless();
     this->assembleTabVPN();
     this->assembleTabCounters();
-    if (trayicon != 0 ) this->assembleTrayIcon();
+    if (trayicon != NULL ) this->assembleTrayIcon();
     
     ui.pushButton_movebefore->setEnabled(false);
     ui.pushButton_moveafter->setEnabled(false);
@@ -1315,7 +1321,7 @@ void ControlBox::minMaxWindow(QAction* act)
 {
   if (act == minimizeAction ) {
     this->writeSettings();
-    if (trayicon != 0 ) trayicon->isVisible() ? this->hide() : this->showMinimized();
+    if (trayicon != NULL ) trayicon->isVisible() ? this->hide() : this->showMinimized();
     else this->showMinimized();
   } // if minimizeAction
 
@@ -1543,7 +1549,7 @@ void ControlBox::showWhatsThis()
 // visible then close the program.
 void ControlBox::closeEvent(QCloseEvent* e)
 {
-  if (trayicon != 0 ) {
+  if (trayicon != NULL ) {
     if (trayicon->isVisible() ){
       this->hide();
       e->ignore();
@@ -1969,8 +1975,7 @@ void ControlBox::assembleTabVPN()
   int rowcount = 0;
 
   // Make sure we've been able to communicate with the connman-vpn daemon
-  if (vpn_manager == NULL) return;
-  if ( (q16_errors & CMST::Err_Invalid_VPN_Iface) != 0x00) {
+  if ( ((q16_errors & CMST::Err_Invalid_VPN_Iface) != 0x00) | (vpn_manager == NULL) ) {
     ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
     return;
   }
@@ -2154,9 +2159,9 @@ void ControlBox::assembleTrayIcon()
 
     // else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"
     else {
-      prelimicon = iconman->getIcon("connection_not_ready");
+			prelimicon = iconman->getIcon("connection_not_ready");
       stt.append(tr("Not Connected", "icon_tool_tip"));
-    } // else any other connection sate
+    } // else any other connection state
   } // properties if no error
 
   // could not get any properties
@@ -2185,6 +2190,7 @@ void ControlBox::assembleTrayIcon()
   else {
     painter.setCompositionMode(QPainter::CompositionMode_Source);
   } // else just make an ARGB32 copy
+  
   painter.drawImage(0, 0, src);
   prelimicon = QIcon(QPixmap::fromImage(dest));
   trayicon->setIcon(prelimicon);
@@ -2261,7 +2267,7 @@ void ControlBox::assembleTrayIcon()
       else if (services_list.at(j).objmap.value("State").toString() == "failure" ) act->setIcon(iconman->getIcon("connection_failure"));
         else act->setIcon(iconman->getIcon("connection_not_ready"));
   } // j for
-
+  
   // wifi_submenu.
   wifi_submenu->clear();
   for (int k = 0; k < wifi_list.count(); ++k) {
@@ -2288,7 +2294,7 @@ void ControlBox::assembleTrayIcon()
   } // k for
 
   // vpn_submenu
-  if (vpn_manager == NULL) {
+  if ( (q16_errors & CMST::Err_Invalid_VPN_Iface) != 0x00 || vpn_manager == NULL) {
     vpn_submenu->setDisabled(true);
     return;
   }
@@ -2301,7 +2307,7 @@ void ControlBox::assembleTrayIcon()
     QString ttstr = QString(tr("<p style='white-space:pre'><center><b>%1</b></center>").arg(getNickName(vpn_list.at(l).objpath)) );
     ttstr.append(tr("Connection : %1").arg(TranslateStrings::cmtr(state)) );
     act->setToolTip(ttstr);
-  } // l for
+  } //  for
 
   return;
 }
@@ -2722,7 +2728,7 @@ bool ControlBox::getMap(QMap<QString,QVariant>& r_map, const QDBusMessage& r_msg
 //
 // Function to log errors to the system log.  Functionallity provided
 // by syslog.h and friends.
-void ControlBox::logErrors(const quint8& err)
+void ControlBox::logErrors(const quint16& err)
 {
   //  store the error in a data element
   q16_errors |= err;
