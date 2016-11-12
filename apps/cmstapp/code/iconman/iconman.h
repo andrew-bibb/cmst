@@ -74,6 +74,7 @@ class IconManager : public QObject
 		QString extractValue(const QString&);
 		QString extractKey(const QString&);
 		QPixmap processArt(const QString&, const QColor&);
+		QString findQualifiedName(const QString&, const QStringList& = QStringList() );
   
 };
 #endif

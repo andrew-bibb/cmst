@@ -832,10 +832,12 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
     if (dbvalue.variant().toBool()) {
       notifyclient->setSummary(tr("Offline Mode Engaged"));
       notifyclient->setIcon(iconman->getIconName("offline_mode_engaged") );
+      notifyclient->setBody(tr("All network devices are powered off, now in Airplane mode.") );
     }
     else {
       notifyclient->setSummary(tr("Offline Mode Disabled"));
       notifyclient->setIcon(iconman->getIconName("offline_mode_disengaged") );
+      notifyclient->setBody(tr("Power has been restored to all previously powered network devices.") );
     }
     this->sendNotifications();
   } // if contains offlinemode

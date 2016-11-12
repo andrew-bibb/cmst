@@ -39,6 +39,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QSettings>
 # include <QMessageBox>
 # include <QProcessEnvironment>
+# include <QDirIterator>
 
 // Constructor
 IconManager::IconManager(QObject* parent) : QObject(parent) 
@@ -132,7 +133,7 @@ QIcon IconManager::getIcon(const QString& name)
 }
 
 //
-// Function to return a QString containing the icon theme name or resource path
+// Function to return a QString containing the fully qualified icon name or resource path
 QString IconManager::getIconName(const QString& name)
 {
 	// Data members
@@ -150,16 +151,22 @@ QString IconManager::getIconName(const QString& name)
 	if (ie.theme_names.size() > 0 ) {
 		for (int i = 0; i < ie.theme_names.size(); ++i) {
 			QString theme_icon = ie.theme_names.at(i).section('|', 0, 0).simplified(); 
-			if (QIcon::hasThemeIcon(theme_icon) )
-				return theme_icon;
+			if (QIcon::hasThemeIcon(theme_icon) ) {
+				QStringList filter_list;
+				filter_list << "24x24" << "22x22" << "16x16"; 
+				return findQualifiedName(theme_icon, filter_list);
+			}	// if has ThemeIcon
 		}	// for		
 	}	// if namelist contains entries
 	
 	// Next look for a freedesktop.org named icon
 	if (! ie.fdo_name.isEmpty() ) {
 		QString theme_icon = ie.fdo_name.section('|', 0, 0).simplified();
-		if (QIcon::hasThemeIcon(theme_icon) )
-			return theme_icon;
+		if (QIcon::hasThemeIcon(theme_icon) ) {
+			QStringList filter_list;
+			filter_list << "24x24" << "22x22" << "16x16"; 
+			return findQualifiedName(theme_icon, filter_list);
+		}	// if has ThemeIcon
 	}	// if freedesktop name not empty
 		
 	// Then look for hardcoded name in the users config dir
@@ -463,4 +470,42 @@ QPixmap IconManager::processArt(const QString& res, const QColor& color)
 	}
 	
 	return QPixmap::fromImage(dest);
+}
+
+//
+// Function to find an icon file somewhere in the system.  Return value is
+// the fully qualified path to the icon file if found, a null string otherwise.
+// 
+// iconname - the icon name to search for
+// filter - a string list containing an order preference for subdirectory names to return 
+// to search for,
+//
+// Called from the getIconName function
+QString IconManager::findQualifiedName(const QString& iconname, const QStringList& sl_filter)
+{
+	// variables
+	QStringList sl_results = QStringList();
+	
+	// get search paths
+	QStringList sl_dirs = QIcon::themeSearchPaths();
+	if (sl_dirs.size() < 1) return QString();
+	
+	// iterate over the search paths 
+	for (int i = 0; i < sl_dirs.size(); ++i) { 
+		QDirIterator dit(QString(sl_dirs.at(i) + '/' + QIcon::themeName()) , QDirIterator::Subdirectories);
+		while (dit.hasNext()) {
+			QFileInfo fi(dit.next());
+			if (fi.completeBaseName() == iconname) sl_results << fi.canonicalFilePath();
+		}	// while
+	}	// for
+	
+	// search the list for icons matching the filter list and return first found
+	if (sl_results.size() < 1) return QString();
+	if (sl_filter.size() < 1) return sl_results.at(0);
+	for (int i = 0; i < sl_filter.size(); ++i) {
+		if (sl_results.contains(sl_filter.at(i)) ) return sl_results.filter(sl_filter.at(i)).at(0);
+	}	// for
+	
+	// if no filter matches
+	return sl_results.at(0);
 }
