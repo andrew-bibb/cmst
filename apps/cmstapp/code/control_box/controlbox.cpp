@@ -843,20 +843,26 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
   } // if contains offlinemode
 
 	// state property 
-  if (prop =="State") {
+  if (prop == "State") {
     // local variables
     QString state = dbvalue.variant().toString();
-    
+        
     // send notification if state is not ready or online
-    if(state != "ready" && state != "online") {
-			notifyclient->init();
-			notifyclient->setSummary(tr("Network Services:") );
+    notifyclient->init();
+    notifyclient->setSummary(tr("Network Services:") );
+    if (state == "ready" || state == "online") {
+			if  (oldstate != "ready" && oldstate != "online") {
+			notifyclient->setBody(tr("The system is online.") );
+			notifyclient->setIcon(iconman->getIconName("state_online") );
+			this->sendNotifications();
+			}	// if
+		}	// if
+		else {
 			notifyclient->setBody(tr("The system is offline.") );
-			qDebug() << iconman->getIconName("state_not_ready" );
 			notifyclient->setIcon(iconman->getIconName("state_not_ready") );
 			this->sendNotifications();
-		}	// if
-  
+		}	// else
+		  
 		// execute external program if specified
 		if (! ui.lineEdit_afterconnect->text().isEmpty()  ) {
 			if( (state == "ready" || state == "online") &&
@@ -884,6 +890,17 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 // of a service object changes.
 void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {
+  // process removed services
+  if (! removed.isEmpty() ) {
+    for (int i = 0; i < services_list.count(); ++i) {
+      if (removed.contains(services_list.at(i).objpath) ) {
+        QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+        services_list.removeAt(i);
+      } // if
+     } // for
+   } // if we needed to remove something
+
+  // process added or changed servcies
   // Demarshall the raw QDBusMessage instead of vlist as it is easier..
   if (! vlist.isEmpty() ) {
     QList<arrayElement> revised_list;
@@ -921,16 +938,6 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
     services_list.clear();
     services_list = revised_list;
   } // revised_list not empty
-
-  // process removed services
-  if (! removed.isEmpty() ) {
-    for (int i = 0; i < services_list.count(); ++i) {
-      if (removed.contains(services_list.at(i).objpath) ) {
-        QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
-        services_list.removeAt(i);
-      } // if
-     } // for
-   } // if we needed to remove something
 
   // clear the counters (if selected) and update the widgets
   clearCounters();
@@ -1091,10 +1098,10 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
     this->sendNotifications();
   }
 
-  // if state property changed sync the online data members
+  // if state property changed sync the online data members.  
   if (property == "State") {
     if (value.toString() == "online") {
-      onlineobjectpath = s_path;
+      onlineobjectpath = s_path;    
     } //
     else if (s_path == onlineobjectpath) {
       onlineobjectpath.clear();
@@ -1120,32 +1127,6 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
     } // for
   } // if property contains State
   
-  
-      //// send notifications
-    //notifyclient->init();
-    //if (state == "online" ) { 
-			//notifyclient->setSummary(tr("Network Services:") );
-			//notifyclient->setBody(tr("The system has a verified connection to the internet.") );
-			//qDebug() << iconman->getIconName("state_online" );
-			//notifyclient->setIcon(iconman->getIconName("state_online") );
-		//}
-		//else if (state == "ready" ) { 
-			//notifyclient->setSummary(tr("Network Services:") );
-			//notifyclient->setBody(tr("System is in the ready state.  It may be possible to get onto the internet.") );
-			//notifyclient->setIcon(iconman->getIconName("state_ready") );
-		//}
-		//else {	
-			//notifyclient->setSummary(tr("Network Services:") );
-			//notifyclient->setBody(tr("The system is offline.") );
-			//qDebug() << iconman->getIconName("state_not_ready" );
-			//notifyclient->setIcon(iconman->getIconName("state_not_ready") );
-		//}
-    //this->sendNotifications();
-  
-  
-  
-  
-
   // update the widgets
   updateDisplayWidgets();
 
