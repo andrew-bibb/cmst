@@ -142,7 +142,7 @@ QString IconManager::getIconName(const QString& name)
 	// If the internal theme is being used (and the user has not
 	// messed up the local config file) use that first.
 	if (QIcon::themeName() == INTERNAL_THEME ) {
-		const QString res_path = ie.resource_path.section('|', 0, 0).simplified();
+		const QString res_path = ie.resource_path.section(' ', 0, 0).simplified();
 		if (QFileInfo(res_path).exists() )
 			return res_path;
 	}	// if using internal theme
@@ -171,13 +171,13 @@ QString IconManager::getIconName(const QString& name)
 		
 	// Then look for hardcoded name in the users config dir
 	if (! ie.resource_path.isEmpty() ) {
-		const QString res_path = ie.fdo_name.section('|', 0, 0).simplified();
+		const QString res_path = ie.fdo_name.section(' ', 0, 0).simplified();
 		if (QFileInfo(res_path).exists() )
 			return  res_path;
 	}
 	
 	// Last stop is our fallback hard coded into the program
-	const QString res_path = getFallback(name).section('|', 0, 0).simplified();
+	const QString res_path = getFallback(name).section(' ', 0, 0).simplified();
 	return res_path;
  }
 
@@ -503,8 +503,10 @@ QString IconManager::findQualifiedName(const QString& iconname, const QStringLis
 	if (sl_results.size() < 1) return QString();
 	if (sl_filter.size() < 1) return sl_results.at(0);
 	for (int i = 0; i < sl_filter.size(); ++i) {
-		if (sl_results.contains(sl_filter.at(i)) ) return sl_results.filter(sl_filter.at(i)).at(0);
-	}	// for
+		for (int j = 0; j < sl_results.size(); ++j) {	
+			if (sl_results.at(j).contains(sl_filter.at(i)) ) return sl_results.filter(sl_filter.at(i)).at(0);
+		}	// j for
+	}	// i for
 	
 	// if no filter matches
 	return sl_results.at(0);

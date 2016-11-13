@@ -86,18 +86,21 @@ icon_name = state_ready
 resource = :/icons/images/raw_art/network-idle.png
 colorize = yes
 fdo_name = network-idle
+theme_names = network-idle, network-connect
 
 [icon]
 icon_name = state_online
 resource = :/icons/images/raw_art/network-transmit-receive.png
 colorize = yes
 fdo_name = network-transmit-receive
+theme_names = network-transmit-receive, network-connect
 
 [icon]
 icon_name = state_not_ready
 resource = :/icons/images/raw_art/network-offline.png :/icons/images/overlay/overlay-warningnet9.png
 colorize = yes
 fdo_name = network-offline
+theme_names = network-offline, network-disconnect
 
 [icon]
 icon_name = state_vpn_connected
@@ -140,12 +143,14 @@ icon_name = connection_ready
 resource = :/icons/images/raw_art/network-idle.png
 colorize = yes
 fdo_name = network-idle
+theme_names = network-idle, network-connect
 
 [icon]
 icon_name = connection_not_ready
 resource = :/icons/images/raw_art/network-offline.png :/icons/images/overlay/overlay-warningnet9.png
 colorize = yes
 fdo_name = network-offline
+theme_names = network-offline, network-disconnect
 
 [icon]
 icon_name = connection_wired
