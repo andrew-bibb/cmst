@@ -154,7 +154,8 @@ QString IconManager::getIconName(const QString& name)
 			if (QIcon::hasThemeIcon(theme_icon) ) {
 				QStringList filter_list;
 				filter_list << "24x24" << "22x22" << "16x16"; 
-				return findQualifiedName(theme_icon, filter_list);
+				QString rtn = findQualifiedName(theme_icon, filter_list);
+				if (! rtn.isEmpty() ) return rtn;
 			}	// if has ThemeIcon
 		}	// for		
 	}	// if namelist contains entries
@@ -489,7 +490,7 @@ QString IconManager::findQualifiedName(const QString& iconname, const QStringLis
 	// get search paths
 	QStringList sl_dirs = QIcon::themeSearchPaths();
 	if (sl_dirs.size() < 1) return QString();
-	
+
 	// iterate over the search paths 
 	for (int i = 0; i < sl_dirs.size(); ++i) { 
 		QDirIterator dit(QString(sl_dirs.at(i) + '/' + QIcon::themeName()) , QDirIterator::Subdirectories);
