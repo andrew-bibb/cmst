@@ -166,7 +166,8 @@ QString IconManager::getIconName(const QString& name)
 		if (QIcon::hasThemeIcon(theme_icon) ) {
 			QStringList filter_list;
 			filter_list << "24x24" << "22x22" << "16x16"; 
-			return findQualifiedName(theme_icon, filter_list);
+			QString rtn = findQualifiedName(theme_icon, filter_list);
+			if (! rtn.isEmpty() ) return rtn;
 		}	// if has ThemeIcon
 	}	// if freedesktop name not empty
 		
