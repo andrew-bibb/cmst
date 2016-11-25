@@ -7,6 +7,7 @@
 <li>Fixed segfault where system tray icon could be used uninitialized.</li>
 <li>Disable vpn tab and vpn icon menu if we cannot connect to the connman-vpn daemon (issue #155).</li> 
 <li>Notifications use system theme icons if available (issue #157).</li>
+<li>New local icon for wifi tab (wifi_tab_state_not_ready) used to address issue #157.</li>
 </ul>
 <b> 2016.10.02</b>
 <ul>
