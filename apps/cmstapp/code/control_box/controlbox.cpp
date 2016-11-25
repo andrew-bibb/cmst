@@ -1910,7 +1910,7 @@ void ControlBox::assembleTabWireless()
           ql02->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
         } // if ready
         else {
-          ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
+          ql02->setPixmap(iconman->getIcon("wifi_tab_state_not_ready").pixmap(QSize(16,16)) );
         } // else any other state
       } // else ready or any other state
       ql02->setAlignment(Qt::AlignCenter);

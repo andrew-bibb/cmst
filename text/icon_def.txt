@@ -103,6 +103,17 @@ fdo_name = network-offline
 theme_names = network-offline, network-disconnect
 
 [icon]
+# This icon is only used in the wifi tab, not elsewhere.  Default is to same as state_not_ready 
+# If you would prefer not to see any icon in the connected column uncomment the resource blank.png
+# line and remove the as shipped resource, colorize, fdo_name, and theme_names lines  
+icon_name = wifi_tab_state_not_ready
+#resource = :/icons/images/raw_art/blank.png
+resource = :/icons/images/raw_art/network-offline.png :/icons/images/overlay/overlay-warningnet9.png
+colorize = yes
+fdo_name = network-offline
+theme_names = network-offline, network-disconnect
+
+[icon]
 icon_name = state_vpn_connected
 resource = :/icons/images/raw_art/stock_lock.png
 colorize = yes
