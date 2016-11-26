@@ -56,7 +56,6 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/iconman/iconman.h"
 # include "./code/vpn_agent/vpnagent.h"
 
-
 //  Two of the connman.Manager query functions will return an array of structures.
 //  This struct provides a receiving element we can use to collect the return data.
 struct arrayElement
