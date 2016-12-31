@@ -2,7 +2,7 @@
 
 Code to manage the Properties Editor dialog.
 
-Copyright (C) 2013-2016
+Copyright (C) 2013-2017
 by: Andrew J. Bibb
 License: MIT 
 
