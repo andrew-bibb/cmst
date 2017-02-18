@@ -50,7 +50,7 @@ AgentDialog::AgentDialog(QWidget* parent)
   cli_browsers.clear();	  
  	cli_browsers << "lynx" << "w3m" << "links" << "elinks";
  	gui_browsers.clear();
-	gui_browsers << "google-chrome" << "google-chrome-unstable" << "chromium" << "opera";									// blink based 	  
+	gui_browsers << "google-chrome" << "google-chrome-unstable" << "chromium" << "opera" << "brave";			// blink based 	  
 	gui_browsers << "firefox" << "seamonkey";																															// gecko based 	  
 	gui_browsers << "qupzilla" << "luakit" << "dwb" << "jumanji" << "midoir" << "surf" << "vimprobable";	// webkit based 	  
 	gui_browsers << "konqueror" << "dillo" << "xdg-open";																									// other	 	  
