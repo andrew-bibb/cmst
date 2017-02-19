@@ -250,6 +250,7 @@ void AgentDialog::updateBrowserChoice(const QModelIndex & current, const QModelI
 	
 	ui.lineEdit_browser->setText(current.data().toString());
 }
+
 //
 //  Slot to clear selection in the browser list view
 //  Called when ui.lineEdit_browser textEdited() signal is emitted
@@ -257,6 +258,7 @@ void AgentDialog::enteringBrowser()
 {
 	ui.listView_browsers->selectionModel()->clearSelection();
 }
+
 //
 //	Slot to launch the selected browser
 //	Called when ui.pushButton_launch_browser is pressed
@@ -300,4 +302,6 @@ void AgentDialog::launchBrowser()
 	} else {
 		process->startDetached(chosenBrowser, QStringList(ui.lineEdit_url->text()) );	
 	}
+	
+	return;
 }

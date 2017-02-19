@@ -2574,7 +2574,7 @@ void ControlBox::createSystemTrayIcon()
   // Lastly update the display widgets (since this is actually the last
   // line of the constructor.)
   this->updateDisplayWidgets();
-
+  
   return;
 }
 

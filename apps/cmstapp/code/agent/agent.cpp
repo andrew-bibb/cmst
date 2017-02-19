@@ -59,6 +59,7 @@ ConnmanAgent::ConnmanAgent(QObject* parent)
 	//	Create Adaptor and register this Agent on the system bus.  
 	new AgentAdaptor(this);
 	QDBusConnection::systemBus().registerObject(AGENT_OBJECT, this);
+	
 }
 
 /////////////////////////////////////// PUBLIC Q_SLOTS////////////////////////////////
