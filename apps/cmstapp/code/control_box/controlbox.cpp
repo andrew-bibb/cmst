@@ -1870,19 +1870,6 @@ void ControlBox::assembleTabWireless()
   // Run through each service_list looking for wifi services
   wifi_list.clear();
 
-  // set the stylesheet for signalbars
-  QFile f0(":/stylesheets/stylesheets/signal_bar.qss");
-  QString qss;
-  if (f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
-    qss = QString(f0.readAll());
-    if (QColor(ui.lineEdit_colorize->text()).isValid() ) {
-      qss = qss.left(qss.lastIndexOf('}') );
-      qss.append(QString("background-color: %1;").arg(ui.lineEdit_colorize->text()) );
-      qss.append('}');
-    }
-    f0.close();
-  }
-
   for (int row = 0; row < services_list.size(); ++row) {
     QMap<QString,QVariant> map = services_list.at(row).objmap;
     if (map.value("Type").toString() == "wifi") {
@@ -1931,10 +1918,16 @@ void ControlBox::assembleTabWireless()
       pb04->setMinimum(0);
       pb04->setMaximum(100);
       pb04->setOrientation( Qt::Horizontal);
-      pb04->setStyleSheet(qss);
       pb04->setValue(map.value("Strength").value<quint8>() );
-      ui.tableWidget_wifi->setCellWidget(rowcount, 4, pb04);
-
+      
+      QWidget* w04 = new QWidget(ui.tableWidget_wifi);
+			QHBoxLayout* l04 = new QHBoxLayout(w04);
+			l04->addWidget(pb04);
+			w04->setLayout(l04);
+			l04->setAlignment(Qt::AlignCenter);
+      l04->setContentsMargins(7, 5, 11, 5);
+      ui.tableWidget_wifi->setCellWidget(rowcount, 4, w04);
+      
       ++rowcount;
     } //  if wifi cnxn
   } // services for loop
