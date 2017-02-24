@@ -1919,7 +1919,12 @@ void ControlBox::assembleTabWireless()
       pb04->setMaximum(100);
       pb04->setOrientation( Qt::Horizontal);
       pb04->setValue(map.value("Strength").value<quint8>() );
-      
+			if (QColor(ui.lineEdit_colorize->text()).isValid() ) {
+				QPalette pl = pb04->palette();
+				pl.setColor(QPalette::Active, QPalette::Highlight, QColor(ui.lineEdit_colorize->text()) );
+				pb04->setPalette(pl);
+			}
+    
       QWidget* w04 = new QWidget(ui.tableWidget_wifi);
 			QHBoxLayout* l04 = new QHBoxLayout(w04);
 			l04->addWidget(pb04);
