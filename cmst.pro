@@ -57,8 +57,11 @@ INSTALLS += appdata
 desktop.path = /usr/share/applications
 desktop.files = ./misc/desktop/cmst.desktop
 desktop.extra = gtk-update-icon-cache /usr/share/icons/hicolor
+!isEmpty(DESTDIR) {
+	desktop.extra = gtk-update-icon-cache /usr/share/icons/hicolor
+}
 INSTALLS += desktop
-
+ 
 # autostart desktop file
 autostart.path = /usr/share/cmst/autostart
 autostart.files = ./misc/desktop/cmst-autostart.desktop

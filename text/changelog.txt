@@ -8,6 +8,7 @@
 <li>Disable vpn tab and vpn icon menu if we cannot connect to the connman-vpn daemon (issue #155).</li> 
 <li>Notifications use system theme icons if available (issue #157).</li>
 <li>New local icon for wifi tab (wifi_tab_state_not_ready) used to address issue #157.</li>
+<li>Modify cmst.pro for Fedora build (issue #160 and applied submitted patch).</li> 
 </ul>
 <b> 2016.10.02</b>
 <ul>
