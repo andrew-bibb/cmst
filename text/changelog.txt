@@ -1,6 +1,6 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b> In Progress</b>
+<b> 2017.03.18</b>
 <ul>
 <li>Added Keywords to .desktop files (PR from klausenbusk).</li>
 <li>Fixed missing send destination in dbus policy file (PR from Klausenbusk).</li>
