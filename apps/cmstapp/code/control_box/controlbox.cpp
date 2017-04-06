@@ -98,13 +98,15 @@ idButton::idButton(QWidget* parent, const QDBusObjectPath& id) :
   button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
   obj_id = id;
   button->setCheckable(true);
+  button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
   connect (button, SIGNAL(clicked(bool)), this, SLOT(buttonClicked(bool)));
 
   // create the box
   QHBoxLayout* layout = new QHBoxLayout(this);
   layout->setContentsMargins(m_left, m_top, m_right, m_bottom);
+  layout->setAlignment(Qt::AlignCenter);
   layout->addWidget(button, 0, 0);
-
+  
   return;
 }
 
@@ -1706,18 +1708,14 @@ void ControlBox::assembleTabStatus()
       ui.tableWidget_technologies->setItem(row, 1, qtwi01);
 
       idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
-      qpb02->setFixedSize(
-        ui.tableWidget_technologies->horizontalHeader()->sectionSize(2),
-        ui.tableWidget_technologies->verticalHeader()->sectionSize(0) );
       connect (qpb02, SIGNAL(clickedID(QString, bool)), this, SLOT(togglePowered(QString, bool)));
-      QString padding = "     ";
       if (technologies_list.at(row).objmap.value("Powered").toBool()) {
-        qpb02->setText(tr("%1On%1%1", "powered").arg(padding));
+        qpb02->setText(tr("On", "powered") );
         qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
         qpb02->setChecked(true);
       }
       else {
-        qpb02->setText(tr("%1Off%1%1", "powered").arg(padding));
+        qpb02->setText(tr("Off", "powered") );
         qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
         qpb02->setChecked(false);
       }
@@ -1730,17 +1728,14 @@ void ControlBox::assembleTabStatus()
       ui.tableWidget_technologies->setItem(row, 3, qtwi03);
 
       idButton* qpb04 = new idButton(this, technologies_list.at(row).objpath);
-      qpb04->setFixedSize(
-        ui.tableWidget_technologies->horizontalHeader()->sectionSize(4),
-        ui.tableWidget_technologies->verticalHeader()->sectionSize(0) );
       connect (qpb04, SIGNAL(clickedID(QString, bool)), this, SLOT(toggleTethered(QString, bool)));
       if (technologies_list.at(row).objmap.value("Tethering").toBool()) {
-        qpb04->setText(tr("%1On%1%1", "tethering").arg(padding));
+        qpb04->setText(tr("On", "tethering") );
         qpb04->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
         qpb04->setChecked(true);
       }
       else {
-        qpb04->setText(tr("%1Off%1%1", "tethering").arg(padding));
+        qpb04->setText(tr("Off", "tethering") );
         qpb04->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
         qpb04->setChecked(false);
         if (technologies_list.at(row).objmap.value("Type").toString() == "ethernet")
