@@ -1520,7 +1520,6 @@ void ControlBox::getServiceDetails(int index)
   ui.label_details_right->setText(rs);
 
   // enable or disable the editor button
-  if (map.value("Type").toString() == "vpn") b_editable = false; // can't edit vpn connections
   ui.pushButton_configuration->setEnabled(b_editable);
 
   return;

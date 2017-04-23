@@ -3,6 +3,7 @@
 <b> In Progress</b>
 <ul>
 <li>Removed padding hack (issue #166) from id buttons.</li>
+<li>Allow configuration of VPN services from the Details tab.</li>
 </ul>
 <b> 2017.03.18</b>
 <ul>
