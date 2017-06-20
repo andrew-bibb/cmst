@@ -129,12 +129,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // setup the user interface
   ui.setupUi(this);
-
-  // We need this if someone is running the program from the tray popup menu.
-  // The main UI is fine without it, but if you call up the agent dialog and then
-  // close that seems to be treated as the last window.
-  qApp->setQuitOnLastWindowClosed(false);
-
+  
   // set the window title
   setWindowTitle(TranslateStrings::cmtr("connman system tray"));
 
@@ -428,6 +423,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 		trayicon = NULL;
     ui.checkBox_hideIcon->setDisabled(true);
     this->updateDisplayWidgets();
+    qApp->setQuitOnLastWindowClosed(true); // not running systemtray icon so normal close
     this->showNormal(); // no place to minimize to, so showMaximized
   } // if
   else {
@@ -2507,6 +2503,11 @@ void ControlBox::createSystemTrayIcon()
 		trayicon->setContextMenu(trayiconmenu);
 	
 		connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
+	
+		// We need this if someone is running the program from the tray popup menu.
+		// The main UI is fine without it, but if you call up the agent dialog and then
+		// close that seems to be treated as the last window.
+		qApp->setQuitOnLastWindowClosed(false);
 	
 		// Assemble the tray icon (set the icon to display)
 		assembleTrayIcon();
