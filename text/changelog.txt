@@ -5,6 +5,9 @@
 <li>Removed padding hack (issue #166) from id buttons.</li>
 <li>Allow configuration of VPN services from the Details tab.</li>
 <li>Allow CMST to close from window decoration if not running in system tray (issue #169).<li>
+<li>Fix appdata.xml install location (issue #176).</li>
+<li>Fixed No Reply popup starting VPN from system tray menu (issue #175).</li>
+<li>Technologies and Services splitter state retained (issue #173).</li>
 </ul>
 <b> 2017.03.18</b>
 <ul>
