@@ -251,10 +251,10 @@ void PropertiesEditor::updateConfiguration()
       shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
     } // if
   } //for
-
+  
   // ipv4
   // Only update if an entry has changed.
-  if ((ui.comboBox_ipv4method->currentText() != TranslateStrings::cmtr(ipv4map.value("Method").toString()) )	|
+	if ((ui.comboBox_ipv4method->currentText() != TranslateStrings::cmtr(ipv4map.value("Method").toString()) )	|
       (ui.lineEdit_ipv4address->text() != TranslateStrings::cmtr(ipv4map.value("Address").toString()) )      	|
       (ui.lineEdit_ipv4netmask->text() != TranslateStrings::cmtr(ipv4map.value("Netmask").toString()) )				|
       (ui.lineEdit_ipv4gateway->text() != TranslateStrings::cmtr(ipv4map.value("Gateway").toString())) )			{
@@ -263,23 +263,26 @@ void PropertiesEditor::updateConfiguration()
     lep.clear();
     slp.clear();
     dict.clear();
-    vlist << "IPv4.Configuration";
-    dict.insert("Method", sl_ipv4_method.at(ui.comboBox_ipv4method->currentIndex()) );
 
-    lep << ui.lineEdit_ipv4address << ui.lineEdit_ipv4netmask << ui.lineEdit_ipv4gateway;
-    slp << "Address" << "Netmask" << "Gateway";
-    for (int i = 0; i < lep.count(); ++i) {
-      s = lep.at(i)->text();
-      s = s.simplified(); // really should not be needed with the validator
-      if (s.isEmpty() ) s.clear();
-      dict.insert(slp.at(i), s);
-    } // for
+		if (ui.comboBox_ipv4method->currentIndex() >= 0) {	
+			vlist << "IPv4.Configuration";
+			dict.insert("Method", sl_ipv4_method.at(ui.comboBox_ipv4method->currentIndex()) );
+			lep << ui.lineEdit_ipv4address << ui.lineEdit_ipv4netmask << ui.lineEdit_ipv4gateway;
+			slp << "Address" << "Netmask" << "Gateway";
+    
+			for (int i = 0; i < lep.count(); ++i) {
+				s = lep.at(i)->text();
+				s = s.simplified(); // really should not be needed with the validator
+				if (s.isEmpty() ) s.clear();
+				dict.insert(slp.at(i), s);
+			} // for
 
-    vlist << QVariant::fromValue(QDBusVariant(dict) );
-    shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
+			vlist << QVariant::fromValue(QDBusVariant(dict) );
+			shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
+		} // if there is a valid index
   } // if ipv4 changed
 
-  // ipv6
+  // iqv6
   // Only update if an entry has changed.
   if ((ui.comboBox_ipv6method->currentText() != TranslateStrings::cmtr(ipv6map.value("Method").toString()) ) 		|
       (static_cast<uint>(ui.spinBox_ipv6prefixlength->value()) != ipv6map.value("PrefixLength").toUInt() )    	|
@@ -291,18 +294,21 @@ void PropertiesEditor::updateConfiguration()
     lep.clear();
     slp.clear();
     dict.clear();
-    vlist << "IPv6.Configuration";
-    dict.insert("Method", sl_ipv6_method.at(ui.comboBox_ipv6method->currentIndex()) );
-    dict.insert("PrefixLength", QVariant::fromValue(static_cast<quint8>(ui.spinBox_ipv6prefixlength->value())) );
-    dict.insert("Privacy", sl_ipv6_privacy.at(ui.comboBox_ipv6privacy->currentIndex()) );
+    
+    if (ui.comboBox_ipv6method->currentIndex() >= 0) {
+			vlist << "IPv6.Configuration";
+			dict.insert("Method", sl_ipv6_method.at(ui.comboBox_ipv6method->currentIndex()) );
+			dict.insert("PrefixLength", QVariant::fromValue(static_cast<quint8>(ui.spinBox_ipv6prefixlength->value())) );
+			dict.insert("Privacy", sl_ipv6_privacy.at(ui.comboBox_ipv6privacy->currentIndex()) );
 
-    lep << ui.lineEdit_ipv6address <<  ui.lineEdit_ipv6gateway;
-    slp << "Address" << "Gateway";
-    for (int i = 0; i < lep.count(); ++i) {
-      s = lep.at(i)->text();
-      s = s.simplified(); // really should not be needed with the validator
-      if (s.isEmpty() ) s.clear();
-      dict.insert(slp.at(i), s);
+			lep << ui.lineEdit_ipv6address <<  ui.lineEdit_ipv6gateway;
+			slp << "Address" << "Gateway";
+			for (int i = 0; i < lep.count(); ++i) {
+				s = lep.at(i)->text();
+				s = s.simplified(); // really should not be needed with the validator
+				if (s.isEmpty() ) s.clear();
+				dict.insert(slp.at(i), s);
+			} // if there is a valid index
     } // for
 
     vlist << QVariant::fromValue(QDBusVariant(dict) );

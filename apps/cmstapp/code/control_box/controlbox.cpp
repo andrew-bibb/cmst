@@ -541,7 +541,7 @@ void ControlBox::updateDisplayWidgets()
     ui.pushButton_movebefore->setEnabled(false);
     ui.pushButton_moveafter->setEnabled(false);
   } // if there were no major errors
-
+  
   return;
 }
 //

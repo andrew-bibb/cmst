@@ -8,6 +8,7 @@
 <li>Fix appdata.xml install location (issue #176).</li>
 <li>Fixed No Reply popup starting VPN from system tray menu (issue #175).</li>
 <li>Technologies and Services splitter state retained (issue #173).</li>
+<li>Fixed segfault with ipv4 and ipv6 fields in VPN details.</li>
 </ul>
 <b> 2017.03.18</b>
 <ul>
