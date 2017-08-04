@@ -49,8 +49,8 @@ license.files = ./text/LICENSE
 INSTALLS += license
 
 # appdata
-appdata.path = /usr/share/appdata
-appdata.files = ./misc/appdata/cmst.appdata.xml
+appdata.path = /usr/share/metainfo
+appdata.files = ./misc/appdata/org.cmst.cmst.appdata.xml
 INSTALLS += appdata
 
 # desktop file
