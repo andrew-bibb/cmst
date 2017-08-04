@@ -2916,14 +2916,14 @@ void ControlBox::configureService()
 void ControlBox::provisionService()
 {
   if (qobject_cast<QPushButton*>(sender()) == ui.pushButton_provisioning_editor) {
-    ProvisioningEditor* peditor = new ProvisioningEditor(this);
+    ProvisioningEditor* reditor = new ProvisioningEditor(this);
 
     // Set the whatsthis button icon
-    peditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
+    reditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
 
     // call then clean up
-    peditor->exec();
-    peditor->deleteLater();
+    reditor->exec();
+    reditor->deleteLater();
   }
 
   else if (qobject_cast<QPushButton*>(sender()) == ui.pushButton_vpn_editor) {
