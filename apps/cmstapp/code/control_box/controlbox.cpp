@@ -178,6 +178,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     settings->beginGroup("MainWindow");
     resize(settings->value("size", QSize(700, 550)).toSize() );
     move(settings->value("pos", QPoint(200, 200)).toPoint() );
+    ui.splitter01->restoreState(settings->value("splitter_01").toByteArray() );
     ui.tabWidget->setCurrentIndex(settings->value("current_page").toInt() );
     settings->endGroup();
   }
@@ -2363,6 +2364,7 @@ void ControlBox::writeSettings()
   settings->setValue("size", this->size() );
   settings->setValue("pos", this->pos() );
   settings->setValue("current_page", ui.tabWidget->currentIndex());
+  settings->setValue("splitter_01", ui.splitter01->saveState());
   settings->endGroup();
 
   settings->beginGroup("CheckBoxes");

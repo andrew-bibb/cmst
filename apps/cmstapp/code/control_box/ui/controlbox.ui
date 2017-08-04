@@ -56,7 +56,7 @@
             <x>0</x>
             <y>0</y>
             <width>647</width>
-            <height>431</height>
+            <height>437</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
@@ -190,7 +190,7 @@
             </widget>
            </item>
            <item row="2" column="0">
-            <widget class="QSplitter" name="splitter">
+            <widget class="QSplitter" name="splitter01">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
              </property>
@@ -524,7 +524,7 @@
             <x>0</x>
             <y>0</y>
             <width>647</width>
-            <height>353</height>
+            <height>356</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -906,7 +906,7 @@
             <x>0</x>
             <y>0</y>
             <width>647</width>
-            <height>431</height>
+            <height>437</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -946,7 +946,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>603</width>
-                   <height>141</height>
+                   <height>142</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1002,7 +1002,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>603</width>
-                   <height>140</height>
+                   <height>141</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1070,7 +1070,7 @@
             <x>0</x>
             <y>0</y>
             <width>633</width>
-            <height>561</height>
+            <height>578</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_8">
@@ -1758,7 +1758,7 @@
             <x>0</x>
             <y>0</y>
             <width>537</width>
-            <height>431</height>
+            <height>437</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
