@@ -716,7 +716,6 @@ void ControlBox::connectPressed()
   QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
   if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);
   iface_serv->deleteLater();
-
   return;
 }
 
@@ -1399,17 +1398,20 @@ void ControlBox::vpnSubmenuTriggered(QAction* act)
   for (int i = 0; i < vpn_list.count(); ++i) {
     if (getNickName(vpn_list.at(i).objpath) == act->text() ) {
       QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(i).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-      iface_serv->setTimeout(1);
+      iface_serv->setTimeout(5);
       QString state = vpn_list.at(i).objmap.value("State").toString();
+      QDBusMessage reply;
       if (state == "ready")
-        shared::processReply(iface_serv->call(QDBus::AutoDetect, "Disconnect") );
+        reply = iface_serv->call(QDBus::AutoDetect, "Disconnect");
       else
-        shared::processReply(iface_serv->call(QDBus::AutoDetect, "Connect") );
+        reply = iface_serv->call(QDBus::AutoDetect, "Connect" );
+        
+      if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);  
       iface_serv->deleteLater();
       break;
     } // if
   }   // for
-
+  
   return;
 }
 
