@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013-2016 Andrew J Bibb -->
-<application>
-  <id type="desktop">cmst.desktop</id>
-  <metadata_license>CC0</metadata_license>
-  <project_license>MIT (Expat)</project_license>
+<component type="desktop">
+  <id>cmst.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+
+  <!--FIXME: convert to an SPDX license string-->
+  <project_license>MIT</project_license>
   <name>cmst</name>
   <summary>A Qt based GUI front end for the connman connection manager with systemtray icon</summary>
   <description>
@@ -15,13 +17,25 @@
     </p>
   </description>
   <screenshots>
-    <screenshot type="default">https://cloud.githubusercontent.com/assets/6935544/13554586/d6b3febe-e379-11e5-92d1-b66c9918c5ff.png</screenshot>
-    <screenshot>https://cloud.githubusercontent.com/assets/6935544/6433032/c90476f6-c032-11e4-9f07-897a075ddc25.png</screenshot>
-    <screenshot>https://cloud.githubusercontent.com/assets/6935544/6433031/c901205a-c032-11e4-9caf-af1d2176d9fc.png</screenshot>
-    <screenshot>https://cloud.githubusercontent.com/assets/6935544/10594662/5a4e4a9e-769d-11e5-87b7-a6238acd3983.png</screenshot>
+    <screenshot type="default">
+      <image>https://cloud.githubusercontent.com/assets/6935544/13554586/d6b3febe-e379-11e5-92d1-b66c9918c5ff.png</image>
+      <caption/>
+    </screenshot>
+    <screenshot>
+      <image>https://cloud.githubusercontent.com/assets/6935544/6433032/c90476f6-c032-11e4-9f07-897a075ddc25.png</image>
+      <caption/>
+    </screenshot>
+    <screenshot>
+      <image>https://cloud.githubusercontent.com/assets/6935544/6433031/c901205a-c032-11e4-9caf-af1d2176d9fc.png</image>
+      <caption/>
+    </screenshot>
+    <screenshot>
+      <image>https://cloud.githubusercontent.com/assets/6935544/10594662/5a4e4a9e-769d-11e5-87b7-a6238acd3983.png</image>
+      <caption/>
+    </screenshot>
   </screenshots>
   <url type="homepage">https://github.com/andrew-bibb/cmst</url>
-  <updatecontact>Andrew Bibb@email_address_hidden</updatecontact>
+  <update_contact>Andrew Bibb@email_address_hidden</update_contact>
   <kudos>
     <kudo>HiDpiIcon</kudo>
     <kudo>ModernToolkit</kudo>
@@ -34,4 +48,10 @@
     <keyword>tag</keyword>
     <keyword>library</keyword>
   </keywords>
-</application>
+  <developer_name>Andrew J. Bibb</developer_name>
+  <url type="homepage">https://github.com/andrew-bibb/cmst</url>
+  <url type="help">https://github.com/andrew-bibb/cmst/wiki/</url>
+  <url type="bugtracker">https://github.com/andrew-bibb/cmst/issues</url>
+  <url type="donation"/>
+  <url type="translate">https://github.com/andrew-bibb/cmst/issues/73</url>
+</component>
