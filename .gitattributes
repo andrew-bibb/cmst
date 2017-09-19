@@ -15,3 +15,8 @@
 /build export-ignore
 /temp  export-ignore
 /tmp   export-ignore
+
+# We don't want to export README.md and
+# building_and_installing.txt
+./README.md export-ignore
+./building_and_installing.txt export-ignore
