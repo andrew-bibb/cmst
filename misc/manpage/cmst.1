@@ -1,4 +1,4 @@
-.TH	CMST 1 "29 April 2016" "Version: 2016.04.29"
+.TH	CMST 1 "20 October 2017" "Version: 2017.10.20"
 .SH NAME
 CMST - Connman System Tray
 .SH SYNOPSIS
@@ -6,6 +6,12 @@ Usage: cmst [options]
 .SH DESCRIPTION
 A QT5 based GUI front end for the Connman network daemon
 .SH OPTIONS
+.TP
+\fB-b, --bypass-restore-state\fP
+If restore state is specified in the settings file this take precedence over that setting and not restore the state when starting.
+.TP
+\fB-B, --bypass-start-options\fP
+Ignore completely any start options specified in the settings file.
 .TP
 \fB-c, --disable-counters [Experimental] \fP
 Disable the counters.  May be used to minimize load on your system.
@@ -26,6 +32,9 @@ Log the Connman inputRequest for debugging purposes.
 .TP
 \fB-m, --minimized\fP
 Start the GUI minimized in the system tray.
+.TP
+\fB-M, --disable-minimize
+Disable the minimize button.  Use when you want the window manager to have sole control in minimizing the interface.
 .TP
 \fB-n, --disable-vpn\fP
 Disable VPN support.  This will disable (grey out) the VPN tab and the VPN editor button.  More importantly it will also bypass

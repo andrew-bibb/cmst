@@ -306,7 +306,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       shared::processReply(con_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT))) );
 
       // if counters are enabled connect signal to slot and register the counter
-			if (parser.isSet("enable-counters") ? true : (b_so & ui.checkBox_enablecounters->isChecked()) ) { 	
+			if (parser.isSet("enable-counters") ? true : (b_so && ui.checkBox_enablecounters->isChecked()) ) { 	
         QList<QVariant> vlist_counter;
         vlist_counter.clear();
         vlist_counter << QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT)) << counter_accuracy << counter_period;
