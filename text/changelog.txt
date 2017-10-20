@@ -1,5 +1,9 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<b> In Progress</b>
+<ul>
+<li>Counters disabled by default, changed command line option -c to enable.</li>
+</ul>
 <b> 2017.09.1</b>
 <ul>
 <li>Removed padding hack (issue #166) from id buttons.</li>

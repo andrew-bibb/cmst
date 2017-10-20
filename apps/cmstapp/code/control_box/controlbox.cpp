@@ -306,14 +306,17 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       shared::processReply(con_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT))) );
 
       // if counters are enabled connect signal to slot and register the counter
-      if (! parser.isSet("disable-counters") && (b_so ? (! ui.checkBox_disablecounters->isChecked()) : true ) ) {
+			if (parser.isSet("enable-counters") ? true : (b_so & ui.checkBox_enablecounters->isChecked()) ) { 	
         QList<QVariant> vlist_counter;
         vlist_counter.clear();
         vlist_counter << QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT)) << counter_accuracy << counter_period;
         QDBusMessage reply = con_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterCounter", vlist_counter);
         if (shared::processReply(reply) == QDBusMessage::ReplyMessage)
           connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
-      }
+      }	// enable counters
+      else {
+				ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.Counters), false);
+			}
 
       // connect some dbus signals to our slots
       QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
@@ -2389,7 +2392,7 @@ void ControlBox::writeSettings()
   settings->endGroup();
 
   settings->beginGroup("StartOptions");
-  settings->setValue("disable_counters", ui.checkBox_disablecounters->isChecked() );
+  settings->setValue("enable_counters", ui.checkBox_enablecounters->isChecked() );
   settings->setValue("disable_tray_icon", ui.checkBox_disabletrayicon->isChecked() );
   settings->setValue("disable_vpn", ui.checkBox_disablevpn->isChecked() );
   settings->setValue("use_icon_theme", ui.checkBox_systemicontheme->isChecked() );
@@ -2441,7 +2444,15 @@ void ControlBox::readSettings()
 
 
   settings->beginGroup("StartOptions");
-  ui.checkBox_disablecounters->setChecked(settings->value("disable_counters").toBool() );
+  // Changed disable counters to enable counters.  Figure out what the user wanted
+  // and adjust accordingly
+  if (settings->contains("disable_counters") ) {
+		ui.checkBox_enablecounters->setChecked(! settings->value("disable_counters").toBool() );
+		settings->remove("disable_counters");
+	}
+	else {
+		ui.checkBox_enablecounters->setChecked(settings->value("enable_counters").toBool() );
+	}
   ui.checkBox_disabletrayicon->setChecked(settings->value("disable_tray_icon").toBool() );
   ui.checkBox_disablevpn->setChecked(settings->value("disable_vpn").toBool() );
   ui.checkBox_systemicontheme->setChecked(settings->value("use_icon_theme").toBool() );

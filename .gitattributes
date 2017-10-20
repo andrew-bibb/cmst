@@ -18,5 +18,5 @@
 
 # We don't want to export README.md and
 # building_and_installing.txt
-./README.md export-ignore
-./building_and_installing.txt export-ignore
+README.md export-ignore
+building_and_installing.txt export-ignore
