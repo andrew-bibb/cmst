@@ -218,6 +218,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     } // if
     else QIcon::setThemeName(INTERNAL_THEME);
   } // else
+  
   // Set the window icon.  If an icon was installed to /usr/share/icons/hicolor/48x48/apps
   // use that, otherwise use a freedesktop.org named one
   if (QFile::exists("/usr/share/icons/hicolor/48x48/apps/cmst.png") )
@@ -233,8 +234,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // set a flag is we want to use XFCE or MATE custom code.
   // Currently (as of 2014.11.24) this is only used to get around a bug between QT5.3 and the XFCE system tray
   // Even then the fix may not work, but for now keep it in.
-  b_usexfce = (parser.isSet("use-xfce") || (b_so && ui.radioButton_desktopxfce->isChecked()) );
-  b_usemate = (parser.isSet("use-mate") || (b_so && ui.radioButton_desktopmate->isChecked()) );
+  b_usexfce = (parser.isSet("use-xfce") ? true : (b_so && ui.radioButton_desktopxfce->isChecked()) );
+  b_usemate = (parser.isSet("use-mate") ? true : (b_so && ui.radioButton_desktopmate->isChecked()) );
 
   // Fake transparency
   if (parser.isSet("fake-transparency") ) {
@@ -251,7 +252,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // set counter update params from command line options if available otherwise
   // default params specified in main.cpp are used.  Set a minimum value for
   // each to maintain program response.
-  uint minval = 256;
+  uint minval = ui.spinBox_counterkb->minimum();
   uint setval = 0;
   if (parser.isSet("counter-update-kb") ) {
     bool ok;
@@ -263,7 +264,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   } // else if
   counter_accuracy = setval > minval ? setval : minval; // number of kb for counter updates
 
-  minval = 5;
+  minval = ui.spinBox_counterrate->minimum();
   setval = 0;
   if (parser.isSet("counter-update-rate") ) {
     bool ok;
@@ -276,7 +277,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   counter_period = setval > minval ? setval : minval; // number of seconds for counter updates
 
 	// Hide the minimize button requested 
-	if (parser.isSet("disable-minimize") || (b_so && ui.checkBox_disableminimized->isChecked()) )
+	if (parser.isSet("disable-minimize") ? true : (b_so && ui.checkBox_disableminimized->isChecked()) )
 		ui.pushButton_minimize->hide();
 
   // operate on settings not dealt with elsewhere
@@ -330,18 +331,12 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
       // VPN manager. Disable if commandline or option is set
       vpn_manager = NULL;
-      if (parser.isSet("disable-vpn") ) {
+      if (parser.isSet("disable-vpn") ? true : (b_so && ui.checkBox_disablevpn->isChecked()) ) {
         ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
         ui.pushButton_vpn_editor->setDisabled(true);
       } // if parser set
-      else
-        if (b_so && ui.checkBox_disablevpn->isChecked() ) {
-         ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
-         ui.pushButton_vpn_editor->setDisabled(true);
-        } // if
-        else {
-
-        vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
+      else {
+				vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
         if (! vpn_manager->isValid() ) {
 					ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
 					ui.pushButton_vpn_editor->setDisabled(true);
@@ -423,7 +418,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // Tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon.
-  if (parser.isSet("disable-tray-icon") || (b_so && ui.checkBox_disabletrayicon->isChecked()) ) {
+  if (parser.isSet("disable-tray-icon") ? true : (b_so && ui.checkBox_disabletrayicon->isChecked()) ) {
 		trayicon = NULL;
     ui.checkBox_hideIcon->setDisabled(true);
     this->updateDisplayWidgets();
@@ -444,7 +439,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
     timeout *= 1000;
     if (timeout < mintrigger) timeout = mintrigger;
-    if (parser.isSet("minimized") || (b_so && ui.checkBox_startminimized->isChecked()) ) {
+    if (parser.isSet("minimized") ? true : (b_so && ui.checkBox_startminimized->isChecked()) ) {
       QTimer::singleShot(timeout, this, SLOT(createSystemTrayIcon()) );
     } // if showMinimized
     else {
