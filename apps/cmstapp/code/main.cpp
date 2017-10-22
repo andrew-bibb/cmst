@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
 		QCoreApplication::translate("main.cpp", "[Experimental] Enable data counters.") );
   parser.addOption(disableCounters);
 
-  QCommandLineOption disableTrayIcon(QStringList() << "d" << "disable-tray-kcon",
+  QCommandLineOption disableTrayIcon(QStringList() << "d" << "disable-tray-icon",
 		QCoreApplication::translate("main.cpp", "Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.") );
   parser.addOption(disableTrayIcon);
   

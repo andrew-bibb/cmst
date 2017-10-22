@@ -160,6 +160,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   trayicon = new QSystemTrayIcon(this);
   
   iconman = new IconManager(this);
+  
+  // set a stylesheet on the tab widget - used to hide disabled tabs
+	QFile f0(":/stylesheets/stylesheets/tabwidget.qss");
+	if (f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
+		QString qss = QString(f0.readAll());
+		f0.close();
+		ui.tabWidget->setStyleSheet(qss);
+	}
 
   // Read saved settings which will set the ui controls in the preferences tab.
   this->readSettings();
@@ -231,7 +239,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
   vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
 
-  // set a flag is we want to use XFCE or MATE custom code.
+  // set a flag if we want to use XFCE or MATE custom code.
   // Currently (as of 2014.11.24) this is only used to get around a bug between QT5.3 and the XFCE system tray
   // Even then the fix may not work, but for now keep it in.
   b_usexfce = (parser.isSet("use-xfce") ? true : (b_so && ui.radioButton_desktopxfce->isChecked()) );

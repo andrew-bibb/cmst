@@ -3,6 +3,7 @@
 <b> In Progress</b>
 <ul>
 <li>Counters disabled by default, changed command line option -c to enable.</li>
+<li>Disabled tabs are now hidden from view.</li>
 </ul>
 <b> 2017.09.1</b>
 <ul>

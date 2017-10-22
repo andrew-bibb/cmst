@@ -10,6 +10,7 @@
     <file>text/license.txt</file>
   </qresource>
   <qresource prefix="stylesheets">
+    <file>stylesheets/tabwidget.qss</file>
     <file>stylesheets/vpn_connecting.qss</file>
   </qresource>
   <qresource prefix="translations">
