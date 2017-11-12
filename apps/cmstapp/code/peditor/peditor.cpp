@@ -358,7 +358,6 @@ void PropertiesEditor::updateConfiguration()
     } // for
 
     vlist << QVariant::fromValue(QDBusVariant(dict) );
-    //qDebug() << dict;
     shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
   } // if proxy changed
 

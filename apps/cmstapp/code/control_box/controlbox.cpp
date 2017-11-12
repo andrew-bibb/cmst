@@ -1823,6 +1823,14 @@ void ControlBox::assembleTabStatus()
 //  by the getServiceDetails() slot whenever the comboBox index changes.
 void ControlBox::assembleTabDetails()
 {
+	// variables
+	int newidx = 0;
+	QString cursvc = QString();
+	
+	// if the details tab is up save the nick name of the service we are viewing
+	if (ui.tabWidget->currentIndex() == ui.tabWidget->indexOf(ui.Details) )
+		cursvc = ui.comboBox_service->currentText();
+		  
   // initilize the page2 display widgets
   ui.comboBox_service->clear();
   ui.label_details_left->clear();
@@ -1833,9 +1841,12 @@ void ControlBox::assembleTabDetails()
     // populate the combobox
     for (int row = 0; row < services_list.size(); ++row) {
       QString ss = getNickName(services_list.at(row).objpath);
-        ui.comboBox_service->addItem(TranslateStrings::cmtr(ss) );
+      ui.comboBox_service->addItem(TranslateStrings::cmtr(ss) );
+      if (TranslateStrings::cmtr(ss) == cursvc)
+				newidx = row;
     } // services for loop
-     ui.comboBox_service->setCurrentIndex(0);
+    
+    ui.comboBox_service->setCurrentIndex(newidx);
   } // services if no error
 
   return;
