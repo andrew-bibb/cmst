@@ -4,7 +4,7 @@
 <ul>
 <li>Counters disabled by default, changed command line option -c to enable.</li>
 <li>Disabled tabs are now hidden from view.</li>
-<li>If Details tab is up do not change the visible service if a service changes.</li> 
+<li>Do not change the visible service in the details tab if a service property changes and the service still exists.</li> 
 </ul>
 <b> 2017.09.1</b>
 <ul>

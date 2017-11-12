@@ -1827,8 +1827,8 @@ void ControlBox::assembleTabDetails()
 	int newidx = 0;
 	QString cursvc = QString();
 	
-	// if the details tab is up save the nick name of the service we are viewing
-	if (ui.tabWidget->currentIndex() == ui.tabWidget->indexOf(ui.Details) )
+	// if the combobox has any items in it save the nick name of the service we are viewing
+	if (ui.comboBox_service->count() > 0)
 		cursvc = ui.comboBox_service->currentText();
 		  
   // initilize the page2 display widgets
