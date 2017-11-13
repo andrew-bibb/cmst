@@ -95,7 +95,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
 
   // ipv4 page
   if (! ipv4map.value("Method").toString().isEmpty() ) {
-    ui.comboBox_ipv4method->setCurrentIndex(sl_ipv4_method.indexOf(QRegExp(ipv4map.value("Method").toString())) );
+    ui.comboBox_ipv4method->setCurrentIndex(sl_ipv4_method.indexOf(QRegularExpression(ipv4map.value("Method").toString())) );
   }
   ui.lineEdit_ipv4address->setText(ipv4map.value("Address").toString() );
   ui.lineEdit_ipv4netmask->setText(ipv4map.value("Netmask").toString() );
@@ -280,7 +280,7 @@ void PropertiesEditor::updateConfiguration()
 				for (int i = 0; i < lep.count(); ++i) {
 					s = lep.at(i)->text();
 					s = s.simplified(); // really should not be needed with the validator
-					if (s.isEmpty() ) s.clear();
+					if (s.isEmpty() ) break;
 					dict.insert(slp.at(i), s);
 				} // for
 		
