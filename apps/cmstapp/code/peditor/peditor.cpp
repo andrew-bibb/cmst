@@ -96,6 +96,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   // ipv4 page
   if (! ipv4map.value("Method").toString().isEmpty() ) {
     ui.comboBox_ipv4method->setCurrentIndex(sl_ipv4_method.indexOf(QRegularExpression(ipv4map.value("Method").toString())) );
+    ipv4Method(ui.comboBox_ipv4method->currentIndex() );
   }
   ui.lineEdit_ipv4address->setText(ipv4map.value("Address").toString() );
   ui.lineEdit_ipv4netmask->setText(ipv4map.value("Netmask").toString() );
@@ -132,6 +133,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   connect(ui.pushButton_resetpage, SIGNAL(clicked()), this, SLOT(resetPage()));
   connect(ui.pushButton_resetall, SIGNAL(clicked()), this, SLOT(resetAll()));
   connect(ui.pushButton_ok, SIGNAL(clicked()), this, SLOT(updateConfiguration()));
+  connect(ui.comboBox_ipv4method, SIGNAL(currentIndexChanged(int)), this, SLOT(ipv4Method(int)));
   
   // disable pages not needed for a service (mainly vpn)
   if (objmap.value("Type").toString() == "vpn") {
@@ -364,4 +366,29 @@ void PropertiesEditor::updateConfiguration()
   // cleanup
   iface_serv->deleteLater();
   this->accept();
+}
+
+//
+//	Slot to hide or show boxes based on ipv4 method
+void PropertiesEditor::ipv4Method(int idx)
+{
+	// variables
+	if (idx == 1 ) { // index 1 is manual
+		ui.label_ipv4_address->show();
+		ui.label_ipv4_netmask->show();
+		ui.label_ipv4_gateway->show();
+		ui.lineEdit_ipv4address->show();
+		ui.lineEdit_ipv4netmask->show();
+		ui.lineEdit_ipv4gateway->show();
+	}
+	else {
+		ui.label_ipv4_address->hide();
+		ui.label_ipv4_netmask->hide();
+		ui.label_ipv4_gateway->hide();
+		ui.lineEdit_ipv4address->hide();
+		ui.lineEdit_ipv4netmask->hide();
+		ui.lineEdit_ipv4gateway->hide();
+	}
+	
+	return;
 }

@@ -67,6 +67,7 @@ class PropertiesEditor : public QDialog
 		void resetPage(int page = -1);
 		void resetAll();
 		void updateConfiguration();
+		void ipv4Method(int);
 				
 	public:
 		inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
