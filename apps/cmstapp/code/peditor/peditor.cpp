@@ -49,6 +49,13 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
 	sl_ipv6_privacy << "disabled" << "enabled" << "prefered";	// misspelling prefered is necessary
 	sl_proxy_method << "direct" << "auto" << "manual";
 	
+	// connect signals to slots
+  connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
+  connect(ui.pushButton_resetpage, SIGNAL(clicked()), this, SLOT(resetPage()));
+  connect(ui.pushButton_resetall, SIGNAL(clicked()), this, SLOT(resetAll()));
+  connect(ui.pushButton_ok, SIGNAL(clicked()), this, SLOT(updateConfiguration()));
+  connect(ui.comboBox_ipv4method, SIGNAL(currentIndexChanged(int)), this, SLOT(ipv4Method(int)));
+	
 	// Setup comboboxes
 	ui.comboBox_ipv4method->addItems(TranslateStrings::cmtr_sl(sl_ipv4_method) );
 	ui.comboBox_ipv6method->addItems(TranslateStrings::cmtr_sl(sl_ipv6_method) );
@@ -96,7 +103,6 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   // ipv4 page
   if (! ipv4map.value("Method").toString().isEmpty() ) {
     ui.comboBox_ipv4method->setCurrentIndex(sl_ipv4_method.indexOf(QRegularExpression(ipv4map.value("Method").toString())) );
-    ipv4Method(ui.comboBox_ipv4method->currentIndex() );
   }
   ui.lineEdit_ipv4address->setText(ipv4map.value("Address").toString() );
   ui.lineEdit_ipv4netmask->setText(ipv4map.value("Netmask").toString() );
@@ -127,14 +133,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
 		ui.stackedWidget_proxy01->setCurrentIndex(0);
 	else	
 		ui.stackedWidget_proxy01->setCurrentIndex(ui.comboBox_proxymethod->currentIndex() );
-	
-  // connect signals to slots
-  connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
-  connect(ui.pushButton_resetpage, SIGNAL(clicked()), this, SLOT(resetPage()));
-  connect(ui.pushButton_resetall, SIGNAL(clicked()), this, SLOT(resetAll()));
-  connect(ui.pushButton_ok, SIGNAL(clicked()), this, SLOT(updateConfiguration()));
-  connect(ui.comboBox_ipv4method, SIGNAL(currentIndexChanged(int)), this, SLOT(ipv4Method(int)));
-  
+	  
   // disable pages not needed for a service (mainly vpn)
   if (objmap.value("Type").toString() == "vpn") {
 		ui.ipv4->setDisabled(true);
@@ -374,17 +373,17 @@ void PropertiesEditor::ipv4Method(int idx)
 {
 	// variables
 	if (idx == 1 ) { // index 1 is manual
-		ui.label_ipv4_address->show();
-		ui.label_ipv4_netmask->show();
-		ui.label_ipv4_gateway->show();
+		ui.label_ipv4address->show();
+		ui.label_ipv4netmask->show();
+		ui.label_ipv4gateway->show();
 		ui.lineEdit_ipv4address->show();
 		ui.lineEdit_ipv4netmask->show();
 		ui.lineEdit_ipv4gateway->show();
 	}
 	else {
-		ui.label_ipv4_address->hide();
-		ui.label_ipv4_netmask->hide();
-		ui.label_ipv4_gateway->hide();
+		ui.label_ipv4address->hide();
+		ui.label_ipv4netmask->hide();
+		ui.label_ipv4gateway->hide();
 		ui.lineEdit_ipv4address->hide();
 		ui.lineEdit_ipv4netmask->hide();
 		ui.lineEdit_ipv4gateway->hide();

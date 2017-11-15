@@ -5,6 +5,8 @@
 <li>Counters disabled by default, changed command line option -c to enable.</li>
 <li>Disabled tabs are now hidden from view.</li>
 <li>Do not change the visible service in the details tab if a service property changes and the service still exists.</li> 
+<li>Properties editor fixed to allow an empty gateway field in IPv4 and IPv6 connections (issue #148a)</li>
+<li>Revise and enhance the properties editor dialog.</li>
 </ul>
 <b> 2017.09.1</b>
 <ul>
