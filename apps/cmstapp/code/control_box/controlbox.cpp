@@ -619,11 +619,10 @@ void ControlBox::enableMoveButtons(int row, int col)
   for (int i = 0; i < services_list.size(); ++i) {
     QAction* act = mvsrv_menu->addAction(getNickName(services_list.at(i).objpath) );
 
-    // inspect the service, can only move if service is favorite, ready or online, and not vpn
+    // inspect the service, can only move if service is favorite, ready or online
+    // vpn services can be moved (I was wrong thinking they could not), see https://01.org/jira/browse/CM-620
     if (services_list.at(i).objmap.value("Favorite").toBool() &&
-       (services_list.at(i).objmap.value("State").toString() == "online" || services_list.at(i).objmap.value("State").toString() == "ready") &&
-       services_list.at(i).objmap.value("Type").toString() != "vpn") {
-
+       (services_list.at(i).objmap.value("State").toString() == "online" || services_list.at(i).objmap.value("State").toString() == "ready") ) {
       if (i == row) {
         act->setDisabled(true); // can't move onto itself
         b_validsource = true;
