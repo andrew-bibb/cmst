@@ -149,7 +149,6 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   group_yes->addAction(ui.actionPPPD_ReqMPPEStateful);
   group_yes->addAction(ui.actionVPNC_SingleDES);
   group_yes->addAction(ui.actionVPNC_NoEncryption);
-  group_yes->addAction(ui.actionOpenVPN_AskPass);
   group_yes->addAction(ui.actionOpenVPN_AuthNoCache);
   group_yes->addAction(ui.actionOpenConnect_MTU);
   group_yes->addAction(ui.actionOpenConnect_Cookie);
@@ -182,6 +181,7 @@ VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
   group_selectfile->addAction(ui.actionOpenConnect_CACert);
   group_selectfile->addAction(ui.actionOpenConnect_ClientCert);
   group_selectfile->addAction(ui.actionOpenVPN_AuthUserPass);
+  group_selectfile->addAction(ui.actionOpenVPN_AskPass);
 
   // Add Actions from UI to menu's
   menu_global = new QMenu(tr("Global"), this);

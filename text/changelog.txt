@@ -7,6 +7,7 @@
 <li>Do not change the visible service in the details tab if a service property changes and the service still exists.</li> 
 <li>Properties editor fixed to allow an empty gateway field in IPv4 and IPv6 connections (issue #148a)</li>
 <li>Revise and enhance the properties editor dialog.</li>
+<li>In VPN editor OpenVPN.AskPass changed from yes/no to file selector.</li>
 </ul>
 <b> 2017.09.1</b>
 <ul>
