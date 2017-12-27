@@ -9,6 +9,7 @@
 <li>Revise and enhance the properties editor dialog.</li>
 <li>In VPN editor OpenVPN.AskPass changed from yes/no to file selector.</li>
 <li>Allow move before/after on connected VPN services (issue #167).</li>
+<li>Offline mode pixmap label now a pushbutton.</li>
 </ul>
 <b> 2017.09.1</b>
 <ul>

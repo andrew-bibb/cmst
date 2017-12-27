@@ -382,7 +382,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(mvsrv_menu, SIGNAL(triggered(QAction*)), this, SLOT(moveService(QAction*)));
   connect(ui.actionRescan, SIGNAL (triggered()), this, SLOT(scanWiFi()));
   connect(ui.actionIDPass, SIGNAL (triggered()), this, SLOT(wifiIDPass()));
-  connect(ui.checkBox_devicesoff, SIGNAL(clicked(bool)), ui.actionOffline_Mode, SLOT(setChecked(bool)));
   connect(ui.actionOffline_Mode, SIGNAL(toggled(bool)), this, SLOT(toggleOfflineMode(bool)));
 
   //  connect signals and slots - ui elements
@@ -1234,7 +1233,7 @@ void ControlBox::wifiIDPass(const QString& obj_path)
 
 //
 //  Slot to globally turn power off to all network adapters
-//  Called when ui.checkBox_devicesoff is clicked
+//  Called when ui.checkBox_devicesoff or ui.toolButton_offlinemode is clicked
 void ControlBox::toggleOfflineMode(bool checked)
 {
   if ( ((q16_errors & CMST::Err_No_DBus) | (q16_errors & CMST::Err_Invalid_Con_Iface)) != 0x00 ) return;
@@ -1666,12 +1665,12 @@ void ControlBox::assembleTabStatus()
     QString s2 = QString();
     if (b1) {
       s2 = tr("Engaged");
-      ui.label_offlinemode_pix->setPixmap(QPixmap (iconman->getIconName("offline_mode_engaged")) );
+      ui.toolButton_offlinemode->setIcon(iconman->getIcon("offline_mode_engaged") );
     } // if offline mode is engaged
 
     else {
       s2 = tr("Disabled");
-      ui.label_offlinemode_pix->setPixmap(QPixmap (iconman->getIconName("offline_mode_disengaged")) );
+      ui.toolButton_offlinemode->setIcon(iconman->getIcon("offline_mode_disengaged") );
     } //  else offlinemode disabled
     s2.prepend(tr("Offline Mode "));
     ui.label_offlinemode->setText(s2);
