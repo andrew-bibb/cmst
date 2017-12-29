@@ -397,6 +397,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   connect(ui.pushButton_remove, SIGNAL(clicked()), this, SLOT(removePressed()));
   connect(ui.pushButton_aboutCMST, SIGNAL(clicked()), this, SLOT(aboutCMST()));
   connect(ui.pushButton_aboutIconSet, SIGNAL(clicked()), this, SLOT(aboutIconSet()));
+  connect(ui.pushButton_aboutOtherArt, SIGNAL(clicked()), this, SLOT(aboutOtherArt()));
   connect(ui.pushButton_aboutQT, SIGNAL(clicked()), qApp, SLOT(aboutQt()));
   connect(qApp, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()));
   connect(ui.pushButton_license, SIGNAL(clicked()), this, SLOT(showLicense()));
@@ -501,7 +502,21 @@ void ControlBox::aboutIconSet()
           "<br>Attribution-Share Alike 3.0"
           "<br>Unported License"
           "<br><a href=\"url\">http://creativecommons.org/licenses/by-sa/3.0/legalcode</a>"
-                  ) );
+          ) );
+}
+
+//
+// slot to display an about box for the icons we used
+void ControlBox::aboutOtherArt()
+{
+ QMessageBox::about(this, tr("About Other Artwork"),
+       tr("<center>This program uses artwork from <b>Freepik</b> obtained from www.flaticon.com:"
+          "<br><br>Released under the Flaticon Basic License"
+          "<br><a href=\"url\">https://file000.flaticon.com/downloads/license/license.pdf</a>"
+          "<br><br><b>Artwork files:</b>"
+          "<li>radio.png</li>"
+          "<li>basic-plane.png</li>"
+          ) );
 }
 
 //

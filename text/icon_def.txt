@@ -127,13 +127,13 @@ fdo_name = emblem-favorite
 
 [icon]
 icon_name = offline_mode_engaged
-resource = :/icons/images/interface/golfball_green.png
-colorize = no
+resource = :/icons/images/interface/basic-plane.png
+colorize = yes
 
 [icon]
 icon_name = offline_mode_disengaged
-resource = :/icons/images/interface/golfball_red.png
-colorize = no
+resource = :/icons/images/interface/radio.png
+colorize = yes
 
 [icon]
 icon_name = whats_this

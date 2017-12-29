@@ -59,7 +59,7 @@
             <x>0</x>
             <y>0</y>
             <width>647</width>
-            <height>437</height>
+            <height>466</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
@@ -169,6 +169,12 @@
               </item>
               <item row="2" column="0">
                <widget class="QToolButton" name="toolButton_offlinemode">
+                <property name="minimumSize">
+                 <size>
+                  <width>24</width>
+                  <height>23</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string>...</string>
                 </property>
@@ -521,7 +527,7 @@
             <x>0</x>
             <y>0</y>
             <width>647</width>
-            <height>356</height>
+            <height>385</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -912,7 +918,7 @@
             <x>0</x>
             <y>0</y>
             <width>647</width>
-            <height>437</height>
+            <height>466</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -952,7 +958,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>603</width>
-                   <height>142</height>
+                   <height>156</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1011,7 +1017,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>603</width>
-                   <height>141</height>
+                   <height>156</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1705,7 +1711,14 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display a dialog box containing information about the Icon set used in this program. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>&amp;AwOken</string>
+             <string>Aw&amp;Oken</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_aboutOtherArt">
+            <property name="text">
+             <string>A&amp;rtwork</string>
             </property>
            </widget>
           </item>
@@ -1766,7 +1779,7 @@
             <x>0</x>
             <y>0</y>
             <width>537</width>
-            <height>437</height>
+            <height>466</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">

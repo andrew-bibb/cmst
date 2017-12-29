@@ -22,6 +22,8 @@
     <file>translations/cmst_en_US.qm</file>
   </qresource>
   <qresource prefix="icons">
+    <file>images/interface/radio.png</file>
+    <file>images/interface/basic-plane.png</file>
     <file>images/raw_art/blank.png</file>
     <file>images/raw_art/network-vpn-acquiring.png</file>
     <file>images/raw_art/stock_lock.png</file>

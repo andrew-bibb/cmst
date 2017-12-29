@@ -100,6 +100,7 @@ class ControlBox : public QDialog
   public slots:  
     void aboutCMST();
     void aboutIconSet();
+    void aboutOtherArt();
     void showLicense();
     void showChangeLog();
     
