@@ -169,6 +169,20 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 		ui.tabWidget->setStyleSheet(qss);
 	}
 
+  // set a stylesheet on the offlinemode toolbutton. Until 2017.12 this
+  // was a label to display a pixmap. It is now a QToolButton, but I want the
+  // picture to show the current state (transmitting or airplane), not the
+  // state that will happen if you push the button, for instance typical
+  // play/pause behavior in a media player.  If I advertise this is a button
+  // I'll get complaints that the pictures are backwards, so hide that fact
+  // by making it look like a label with the stylesheet.
+	QFile f1(":/stylesheets/stylesheets/airplane.qss");
+	if (f1.open(QIODevice::ReadOnly | QIODevice::Text)) {
+		QString qss = QString(f1.readAll());
+		f1.close();
+		ui.toolButton_offlinemode->setStyleSheet(qss);
+	}
+	
   // Read saved settings which will set the ui controls in the preferences tab.
   this->readSettings();
   
@@ -1689,6 +1703,7 @@ void ControlBox::assembleTabStatus()
     } //  else offlinemode disabled
     s2.prepend(tr("Offline Mode "));
     ui.label_offlinemode->setText(s2);
+    
   } // properties if no error
 
   // Technologies

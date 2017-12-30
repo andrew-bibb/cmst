@@ -169,11 +169,8 @@
               </item>
               <item row="2" column="0">
                <widget class="QToolButton" name="toolButton_offlinemode">
-                <property name="minimumSize">
-                 <size>
-                  <width>24</width>
-                  <height>23</height>
-                 </size>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string>...</string>
