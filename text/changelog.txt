@@ -1,6 +1,6 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b> In Progress</b>
+<b> 2018.01.06</b>
 <ul>
 <li>Counters disabled by default, changed command line option -c to enable.</li>
 <li>Disabled tabs are now hidden from view.</li>
