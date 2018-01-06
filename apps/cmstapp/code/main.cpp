@@ -83,9 +83,9 @@ int main(int argc, char *argv[])
 		QCoreApplication::translate("main.cpp", "Bypass restoring any start options in the settings file.") );
   parser.addOption(bypassStartOptions);
 
-  QCommandLineOption disableCounters(QStringList() << "c" << "enable-counters",
+  QCommandLineOption enableCounters(QStringList() << "c" << "enable-counters",
 		QCoreApplication::translate("main.cpp", "[Experimental] Enable data counters.") );
-  parser.addOption(disableCounters);
+  parser.addOption(enableCounters);
 
   QCommandLineOption disableTrayIcon(QStringList() << "d" << "disable-tray-icon",
 		QCoreApplication::translate("main.cpp", "Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.") );
