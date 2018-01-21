@@ -1,5 +1,9 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<b> In Progress</b>
+<ul>
+<li>Fixed segfaul on close when running without Connman.</li>
+</ul>
 <b> 2018.01.06</b>
 <ul>
 <li>Counters disabled by default, changed command line option -c to enable.</li>

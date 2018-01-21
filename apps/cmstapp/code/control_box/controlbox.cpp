@@ -2681,8 +2681,9 @@ bool ControlBox::getTechnologies()
 }
 
 //
-//  Function to query connman.manager.GetServices
-//  Return a bool, true on success, false otherwise
+// Function to query connman.manager.GetServices
+// Return a bool, true on success, false otherwise
+// Called from managerRescan()
 bool ControlBox::getServices()
 {
   // call connman and GetServices
@@ -3021,13 +3022,15 @@ void ControlBox::cleanUp()
     if (counter->cnxns() > 0) {
       shared::processReply(con_manager->call(QDBus::AutoDetect, "UnregisterCounter", QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT))) );
     } // if counters are connected to anything
-  } // if con_manager isValid
 
-  if (vpn_manager != NULL) {
-    if (vpn_manager->isValid() ) {
-      shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
-    } // ivpn_manager isValid
-  } // not null
+
+	  if (vpn_manager != NULL) { 
+	    if (vpn_manager->isValid() ) {
+	      shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
+	    } // ivpn_manager isValid
+	  } // not null
+   
+   } // if con_manager isValid
 
   return;
 }
