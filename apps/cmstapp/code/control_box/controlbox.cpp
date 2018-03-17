@@ -317,6 +317,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   QTimer::singleShot(8 * 1000, this, SLOT(connectNotifyClient()));
 
   // setup the dbus interface to connman.manager
+  con_manager = NULL;
+  vpn_manager = NULL;
   if (! QDBusConnection::systemBus().isConnected() ) logErrors(CMST::Err_No_DBus);
   else {
     con_manager = new QDBusInterface(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, QDBusConnection::systemBus(), this);
@@ -352,7 +354,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       this->clearCounters();
 
       // VPN manager. Disable if commandline or option is set
-      vpn_manager = NULL;
       if (parser.isSet("disable-vpn") ? true : (b_so && ui.checkBox_disablevpn->isChecked()) ) {
         ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
         ui.pushButton_vpn_editor->setDisabled(true);
