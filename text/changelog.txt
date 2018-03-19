@@ -3,6 +3,7 @@
 <b> In Progress</b>
 <ul>
 <li>Fixed segfaul on close when running without Connman.</li>
+<li>Revert network group to "netdev" in Slackware and Debian.</li>
 </ul>
 <b> 2018.01.06</b>
 <ul>
