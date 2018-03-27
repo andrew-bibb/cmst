@@ -1149,7 +1149,7 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
         }
         else {
           notifyclient->setSummary(QString(tr("VPN Disengaged")) );
-          notifyclient->setIcon(iconman->getIconName("onnection_not_ready") );
+          notifyclient->setIcon(iconman->getIconName("connection_not_ready") );
         }
         notifyclient->setBody(QString(tr("Object Path: %1")).arg(s_path) );
         notifyclient->setUrgency(Nc::UrgencyNormal);
