@@ -205,15 +205,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     settings->endGroup();
   }
 
-  // Make sure the controlbox will fit onto small acreens
+  // Make sure the controlbox will fit onto small screens (& resize to sizeHint() for HiDPI screens)
   QSize sz_target = (qApp->desktop()->availableGeometry(this)).size();
   QSize sz_source = this->sizeHint();
-  sz_target.scale(sz_target.width() - 100, sz_target.height() - 100, Qt::KeepAspectRatio); // give me a little buffer
   if (sz_source.width() > sz_target.width() || sz_source.height() > sz_target.height() ) {
-    sz_source.scale(sz_target.width(), sz_target.height(), Qt::KeepAspectRatio);
-    resize(sz_source);
-    move(25, 25);
+    sz_source.scale(sz_target.width() - 100, sz_target.height() - 100, Qt::KeepAspectRatio); // keep min. 100 pixels around dialog
   }
+  resize(sz_source);
+  move((sz_target.width() - this->width()) / 2, (sz_target.height() - this->height()) / 2); // re-centre if needed
 
   // set a flag if we sent a commandline option to log the connman inputrequest
   agent->setLogInputRequest(parser.isSet("log-input-request"));
