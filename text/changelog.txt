@@ -4,7 +4,8 @@
 <ul>
 <li>Fixed segfaul on close when running without Connman.</li>
 <li>Revert network group to "netdev" in Slackware and Debian.</li>
-<li>Pull request #183 (fixed typo in notification icon name)</li>
+<li>Pull request #183 (fixed typo in notification icon name).</li>
+<li>Pull request #184 (correct dialog size on high DPI monitors).</li> 
 </ul>
 <b> 2018.01.06</b>
 <ul>
