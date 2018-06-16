@@ -307,13 +307,17 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   ui.groupBox_process->setVisible(ui.checkBox_advanced->isChecked() );
   enableRunOnStartup(ui.checkBox_runonstartup->isChecked() );
 
-  // Create the notifyclient, make four tries; first immediately in constructor, then
-  // at 1/2 second, 2 seconds and finally at 8 seconds
+  // Create the notifyclient.
   notifyclient = new NotifyClient(this);
-  this->connectNotifyClient();
-  QTimer::singleShot(500, this, SLOT(connectNotifyClient()));
-  QTimer::singleShot(2 * 1000, this, SLOT(connectNotifyClient()));
-  QTimer::singleShot(8 * 1000, this, SLOT(connectNotifyClient()));
+  // Only try to connect to the notifyclient if we actually need it
+  if(this->settings->value("enable_daemon_notifications").toBool()) {
+    // Make four tries; first immediately, then
+    // at 1/2 second, 2 seconds and finally at 8 seconds
+    this->connectNotifyClient();
+    QTimer::singleShot(500, this, SLOT(connectNotifyClient()));
+    QTimer::singleShot(2 * 1000, this, SLOT(connectNotifyClient()));
+    QTimer::singleShot(8 * 1000, this, SLOT(connectNotifyClient()));
+  }
 
   // setup the dbus interface to connman.manager
   con_manager = NULL;
