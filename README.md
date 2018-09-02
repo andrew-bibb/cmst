@@ -1,5 +1,9 @@
 cmst
 ====
+NOTE: 1 September 2018.  I have not abandoned this program.  For a variety of reasons it has been almost impossible to find any time to really work on it this year.  Just last week when I thought I might be able to do a few things I discovered my development computer has bit the dust.  September is looking bad with huge amounts of travel scheduled, both for work and family matters, so it is not likely I'll be doing a lot until October at the earliest.  
+
+Thanks
+A-
 
 QT GUI for Connman with system tray icon.
 
