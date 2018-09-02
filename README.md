@@ -26,6 +26,6 @@ If you are not on Arch or don't choose to use the AUR download the release and e
     make
     make install (as root)
 
-Where xxx is one of [arch, debian, slackware). Distro names are case sensitive.
+Where xxx is one of [arch, debian, slackware]. Distro names are case sensitive.
 
 Development Status:  The program is really kind of feature complete as of October 2016.  There are several ConnMan features we've not implemented but they are all currently marked experimental.  As a rule we've tried to avoid these, although we have made exceptions.  I still subscribe to the ConnMan developer mailing list to keep an eye on what is happening there and will update this program accordingly.  If there is a feature you need or want, either a ConnMan feature or in the CMST UI, please do not hesitate to open up an issue about it.     
