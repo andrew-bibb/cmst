@@ -1,5 +1,7 @@
 cmst
 ====
+NOTE: 10 December 2018.  Well so much for October.  Good news is my development computer is back up.  Travel has not lessened, however it seems there may be an end in sight to some of it on the 28th of this month.  Bad news for this program is I do have a kid getting married in August, so my free time window is somewhat limited by that.  
+
 NOTE: 1 September 2018.  I have not abandoned this program.  For a variety of reasons it has been almost impossible to find any time to really work on it this year.  Just last week when I thought I might be able to do a few things I discovered my development computer has bit the dust.  September is looking bad with huge amounts of travel scheduled, both for work and family matters, so it is not likely I'll be doing a lot until October at the earliest.  
 
 Thanks
