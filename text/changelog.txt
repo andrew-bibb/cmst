@@ -6,6 +6,8 @@
 <li>Revert network group to "netdev" in Slackware and Debian.</li>
 <li>Pull request #183 (fixed typo in notification icon name).</li>
 <li>Pull request #184 (correct dialog size on high DPI monitors).</li> 
+<li>PUll request #197 (add Spanish translation).</li>
+<li>Fixed #188 missing README in tarball</li>
 </ul>
 <b> 2018.01.06</b>
 <ul>
