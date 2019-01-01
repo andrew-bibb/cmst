@@ -59,9 +59,6 @@ NotifyClient::NotifyClient(QObject* parent)
   // Create our client and try to connect to the notify server
   if (! QDBusConnection::sessionBus().isConnected() )
     qCritical("CMST - Cannot connect to the session bus.");
-  // else try to connect to a notification server
-  else 
-		connectToServer();
 		
 	// Signals and slots
 	connect(qApp, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()));	
@@ -77,7 +74,7 @@ void NotifyClient::connectToServer()
 {
 	// return now if we already have a valid connection
   if (b_validconnection) return;
-    
+
   notifyclient = new QDBusInterface(DBUS_NOTIFY_SERVICE, DBUS_NOTIFY_PATH, DBUS_NOTIFY_INTERFACE, QDBusConnection::sessionBus(), this); 
   if (notifyclient->isValid() ) {
     b_validconnection = true;
