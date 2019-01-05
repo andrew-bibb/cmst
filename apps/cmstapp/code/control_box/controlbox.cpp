@@ -3,7 +3,7 @@
 Code to manage the primary user interface to include the QDialog the
 user interfaces with and the system tray icon.
 
-Copyright (C) 2013-2018
+Copyright (C) 2013-2019
 by: Andrew J. Bibb
 License: MIT
 
