@@ -1,6 +1,6 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b> In Progress</b>
+<b> 2019.01.13</b>
 <ul>
 <li>Fixed segfaul on close when running without Connman.</li>
 <li>Revert network group to "netdev" in Slackware and Debian.</li>

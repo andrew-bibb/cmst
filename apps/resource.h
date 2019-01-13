@@ -35,9 +35,9 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation) 
-#define VERSION "2019.01.05-1"
+#define VERSION "2019.01.13-1"
 
-#define RELEASE_DATE "5 January 2019"
+#define RELEASE_DATE "13 January 2019"
 #define COPYRIGHT_DATE "2013-2019"
 
 // Program Values:
