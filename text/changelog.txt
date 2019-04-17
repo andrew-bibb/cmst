@@ -1,8 +1,12 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<b> In Progress</b>
+<ul>
+<li>Move offline checkbox in tab 1 (issue # 201)</li>
+</ul>
 <b> 2019.01.13</b>
 <ul>
-<li>Fixed segfaul on close when running without Connman.</li>
+<li>Fixed segfault on close when running without Connman.</li>
 <li>Revert network group to "netdev" in Slackware and Debian.</li>
 <li>Pull request #183 (fixed typo in notification icon name).</li>
 <li>Pull request #184 (correct dialog size on high DPI monitors).</li> 
