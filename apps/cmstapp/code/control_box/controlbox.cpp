@@ -493,6 +493,7 @@ void ControlBox::aboutCMST()
                   "<center>Jianfeng Zhang (Chinese)"
                   "<center>sqozz (German)"
                   "<center>Ilya Shestopalov (Russian)"
+                  "<center>Heimen Stoffels (Dutch)"
                   "<br><center><b>Build Information:</b>"
                   "<center>Compiled using QT version %5"
                   /*"<center>Built %6 - %7"*/)  .arg(TranslateStrings::cmtr("cmst"))
