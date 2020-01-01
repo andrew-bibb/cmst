@@ -3,7 +3,7 @@
 Code for the connection counter registered on DBus.  When registered the
 connman daemon will communicate to this object with signals.
 
-Copyright (C) 2013-2019
+Copyright (C) 2013-2020
 by: Andrew J. Bibb
 License: MIT 
 

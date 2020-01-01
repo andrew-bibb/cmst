@@ -3,7 +3,7 @@
 Code for the user agent registered on DBus.  When the connman daemon
 needs to communicate with the user it does so through this agent.
 
-Copyright (C) 2013-2019
+Copyright (C) 2013-2020
 by: Andrew J. Bibb
 License: MIT 
 

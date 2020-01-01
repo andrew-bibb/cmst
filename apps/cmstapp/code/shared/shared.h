@@ -2,7 +2,7 @@
 /**************************** shared.h ***************************
 Functions shared across various classes
 
-Copyright (C) 2013-2019
+Copyright (C) 2013-2020
 by: Andrew J. Bibb
 License: MIT
 
