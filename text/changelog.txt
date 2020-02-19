@@ -4,6 +4,7 @@
 <ul>
 <li>Move offline checkbox in tab 1 (issue # 201)</li>
 <li>Translation to Dutch by Heimen Stoffels.</li>
+<li>Add mDNS status to the details tab.</li>
 </ul>
 <b> 2019.01.13</b>
 <ul>

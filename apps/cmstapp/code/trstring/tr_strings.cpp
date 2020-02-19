@@ -34,17 +34,17 @@ DEALINGS IN THE SOFTWARE.
 // Constructor
 TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent) 
 {
-	// The stringlist is not actually used for anything other than a means
-	// to mark strings for translation.  
-	QStringList sl;
-	sl.clear();
+// The stringlist is not actually used for anything other than a means
+// to mark strings for translation.  
+  QStringList sl;
+  sl.clear();
 	
-	// Global strings
-	sl << tr("connman system tray", "Main Window Title");
-	sl << tr("cmst", "Abbreviated Program Name - used for QMessageBox titles");
+// Global strings
+  sl << tr("connman system tray", "Main Window Title");
+  sl << tr("cmst", "Abbreviated Program Name - used for QMessageBox titles");
 	
-	// Connman strings
-	sl << tr("idle", "connman state string");
+// Connman strings
+  sl << tr("idle", "connman state string");
   sl << tr("association", "connman state string");
   sl << tr("configuration", "connman state string");
   sl << tr("ready", "connman state string");
@@ -73,6 +73,7 @@ TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent)
   sl << tr("none", "connman security string");
   sl << tr("wep", "connman security string");
   sl << tr("wps", "connman security string");
+  sl << tr("wps_advertising", "connman security string");
   
   sl << tr("Invalid arguments", "connman error string");
   sl << tr("Permission denied", "connman error string");

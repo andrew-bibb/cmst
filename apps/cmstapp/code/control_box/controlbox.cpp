@@ -1512,6 +1512,9 @@ void ControlBox::getServiceDetails(int index)
     rs.append(tr("Excludes:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Excludes").toStringList().join("<br>&nbsp;&nbsp;")) );
   }
 
+  rs.append(tr("<br><b>mDNS</b><br>"));
+  rs.append(tr("Support Enabled: %1<br>").arg(map.value("mDNS").toBool() ? tr("Yes", "mdns") : tr("No", "mdns")) );
+  
   //  write the text to the left display label
   ui.label_details_left->setText(rs);
 
