@@ -119,7 +119,6 @@ TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent)
   sl << tr("l2tp", "connman vpn connection type");
   sl << tr("pptp", "connman vpn connection type");
   
-  	
 	return;
 }
 
@@ -127,12 +126,12 @@ TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent)
 // Function to return a stringlist with entries translated
 QStringList TranslateStrings::cmtr_sl(const QStringList& sl_src)
 {
-	QStringList sl_rtn;
-	sl_rtn.clear();
-	for (int i = 0; i < sl_src.count(); ++i) {
-		sl_rtn << TranslateStrings::cmtr(sl_src.at(i) );
-	}
+  QStringList sl_rtn;
+  sl_rtn.clear();
+  for (int i = 0; i < sl_src.count(); ++i) {
+	  sl_rtn << TranslateStrings::cmtr(sl_src.at(i) );
+  }
 
-	return sl_rtn;
+  return sl_rtn;
 }
 

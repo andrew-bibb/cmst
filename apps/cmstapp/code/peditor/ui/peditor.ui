@@ -28,7 +28,7 @@
         <x>0</x>
         <y>0</y>
         <width>288</width>
-        <height>192</height>
+        <height>163</height>
        </rect>
       </property>
       <attribute name="label">
@@ -66,7 +66,7 @@
         <x>0</x>
         <y>0</y>
         <width>288</width>
-        <height>192</height>
+        <height>163</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -100,7 +100,7 @@
         <x>0</x>
         <y>0</y>
         <width>288</width>
-        <height>192</height>
+        <height>163</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -134,7 +134,7 @@
         <x>0</x>
         <y>0</y>
         <width>288</width>
-        <height>192</height>
+        <height>163</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -168,7 +168,7 @@
         <x>0</x>
         <y>0</y>
         <width>288</width>
-        <height>192</height>
+        <height>163</height>
        </rect>
       </property>
       <attribute name="label">
@@ -265,7 +265,7 @@
         <x>0</x>
         <y>0</y>
         <width>288</width>
-        <height>192</height>
+        <height>163</height>
        </rect>
       </property>
       <attribute name="label">
@@ -426,7 +426,7 @@
         <x>0</x>
         <y>0</y>
         <width>288</width>
-        <height>192</height>
+        <height>163</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -435,7 +435,7 @@
       <attribute name="label">
        <string>&amp;Proxy</string>
       </attribute>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>1</x>
@@ -544,6 +544,27 @@
          </widget>
         </item>
        </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="mDNS">
+      <attribute name="label">
+       <string>&amp;mDNS</string>
+      </attribute>
+      <widget class="QCheckBox" name="checkBox_mdns">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>281</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check to enable mDNS.  Note that mDNS requires a DNS backend which supports it.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>Enable mDNS </string>
+       </property>
       </widget>
      </widget>
     </widget>
