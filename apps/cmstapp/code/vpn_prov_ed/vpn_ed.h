@@ -63,6 +63,7 @@ class VPN_Editor : public QDialog
     QMenu* menu_VPNC;
     QMenu* menu_L2TP;
     QMenu* menu_PPTP;
+    QMenu* menu_WireGuard;
     QActionGroup* group_provider;
     QActionGroup* group_freeform;
     QActionGroup* group_combobox;

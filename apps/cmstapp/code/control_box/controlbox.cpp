@@ -1518,13 +1518,13 @@ void ControlBox::getServiceDetails(int index)
   }
 
   // mDNS was added in connman 1.38
-  if (f_connmanversion > (1.37f)) {
+  if (f_connmanversion > 1.37f) {
     rs.append(tr("<br><b>mDNS</b><br>"));
     rs.append(tr("Support Enabled: %1<br>").arg(map.value("mDNS").toBool() ? tr("Yes", "mdns") : tr("No", "mdns")) );
   } // connman version
 
   // LastAddressConflict was added in connman 1.38
-  if (this->f_connmanversion> (1.37f)) {
+  if (this->f_connmanversion > 1.37f) {
     shared::extractMapData(submap, services_list.at(index).objmap.value("LastAddressConflict") );
     if (submap.value("Timestamp").toLongLong() > 0.0) {
       // a map for the maps embedded in submap (IPv4 and Ethernet)
@@ -2997,7 +2997,7 @@ void ControlBox::configureService()
 
   // Create a new properties editor
   PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()) );
-  if (f_connmanversion <= (1.37f)) peditor->setItemEnabled(7, false);
+  if (f_connmanversion <= 1.37f) peditor->setItemEnabled(7, false);
 
   // Set the whatsthis button icon
   peditor->setWhatsThisIcon(iconman->getIcon("whats_this"));

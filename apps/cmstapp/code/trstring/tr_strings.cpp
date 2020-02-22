@@ -118,6 +118,7 @@ TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent)
   sl << tr("vpnc", "connman vpn connection type");
   sl << tr("l2tp", "connman vpn connection type");
   sl << tr("pptp", "connman vpn connection type");
+  sl << tr("wireguard", "connman vpn connection type");
   
 	return;
 }

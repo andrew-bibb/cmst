@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>418</width>
+    <width>434</width>
     <height>574</height>
    </rect>
   </property>
@@ -855,6 +855,91 @@ that the peer is no longer connected.</string>
   <action name="actionOpenVPN_Import">
    <property name="text">
     <string notr="true">Import Configuration</string>
+   </property>
+  </action>
+  <action name="actionProviderWireGuard">
+   <property name="text">
+    <string>Provider WireGuard</string>
+   </property>
+   <property name="toolTip">
+    <string>Provider Wire Guard</string>
+   </property>
+  </action>
+  <action name="actionVPNC_DeviceType">
+   <property name="text">
+    <string>VPNC.DeviceType</string>
+   </property>
+  </action>
+  <action name="actionWireGuard_Address">
+   <property name="text">
+    <string>WireGuard.Address</string>
+   </property>
+   <property name="toolTip">
+    <string>Internal IP Address</string>
+   </property>
+  </action>
+  <action name="actionWireGuard_ListPort">
+   <property name="text">
+    <string>WireGuard.ListPort</string>
+   </property>
+   <property name="toolTip">
+    <string>Local listen port (optional).</string>
+   </property>
+  </action>
+  <action name="actionWireGuard_DNS">
+   <property name="text">
+    <string>WireGuard.DNS</string>
+   </property>
+   <property name="toolTip">
+    <string>A comma separated list of name servers (optional).</string>
+   </property>
+  </action>
+  <action name="actionWireGuard_PrivateKey">
+   <property name="text">
+    <string>WireGuard.PrivateKey</string>
+   </property>
+   <property name="toolTip">
+    <string>Private key of the interface.</string>
+   </property>
+  </action>
+  <action name="actionWireGuard_PublicKey">
+   <property name="text">
+    <string>WireGuard.PublicKey</string>
+   </property>
+   <property name="toolTip">
+    <string>Public key of peer.</string>
+   </property>
+  </action>
+  <action name="actionWireGuard_PresharedKey">
+   <property name="text">
+    <string>WireGuard.PresharedKey</string>
+   </property>
+   <property name="toolTip">
+    <string>Preshared key of peer (optional).</string>
+   </property>
+  </action>
+  <action name="actionWireGuard_AllowedIPs">
+   <property name="text">
+    <string>WireGuard.AllowedIPs</string>
+   </property>
+   <property name="toolTip">
+    <string>See cryptokey routing.</string>
+   </property>
+  </action>
+  <action name="actionWireGuard_EndpointPort">
+   <property name="text">
+    <string>WireGuard.EndpointPort</string>
+   </property>
+   <property name="toolTip">
+    <string>Endpoint listen port (optional).</string>
+   </property>
+  </action>
+  <action name="actionWireGuard_PersistentKeepalive">
+   <property name="text">
+    <string>WireGuard.PersistentKeepalive</string>
+   </property>
+   <property name="toolTip">
+    <string>Keep alive in seconds (optional).</string>
    </property>
   </action>
  </widget>

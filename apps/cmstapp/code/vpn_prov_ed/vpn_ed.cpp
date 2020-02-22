@@ -86,7 +86,8 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   group_provider->addAction(ui.actionProviderVPNC);
   group_provider->addAction(ui.actionProviderL2TP);
   group_provider->addAction(ui.actionProviderPPTP);
-  
+  group_provider->addAction(ui.actionProviderWireGuard);
+ 
   group_freeform = new QActionGroup(this);
   group_freeform->addAction(ui.actionGlobal);
   group_freeform->addAction(ui.actionGlobalName);
@@ -104,6 +105,11 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   group_freeform->addAction(ui.actionVPNC_AppVersion);
   group_freeform->addAction(ui.actionOpenVPN_Cipher);
   group_freeform->addAction(ui.actionOpenVPN_Auth);
+  group_freeform->addAction(ui.actionWireGuard_Address);
+  group_freeform->addAction(ui.actionWireGuard_PrivateKey);
+  group_freeform->addAction(ui.actionWireGuard_PublicKey);
+  group_freeform->addAction(ui.actionWireGuard_PresharedKey);
+  group_freeform->addAction(ui.actionWireGuard_AllowedIPs);
     
   group_combobox = new QActionGroup(this);
   group_combobox->addAction(ui.actionVPNC_IKE_Authmode);
@@ -111,12 +117,12 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   group_combobox->addAction(ui.actionVPNC_PFS);
   group_combobox->addAction(ui.actionVPNC_Vendor);
   group_combobox->addAction(ui.actionVPNC_NATTMode);
+  group_combobox->addAction(ui.actionVPNC_DeviceType);
   group_combobox->addAction(ui.actionOpenVPN_NSCertType);
   group_combobox->addAction(ui.actionOpenVPN_Proto);
   group_combobox->addAction(ui.actionOpenVPN_CompLZO);
   group_combobox->addAction(ui.actionOpenVPN_RemoteCertTls);
        
-    
   group_yes = new QActionGroup(this);
   group_yes->addAction(ui.actionPPPD_RefuseEAP);
   group_yes->addAction(ui.actionPPPD_RefusePAP);
@@ -171,7 +177,11 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   group_validated->addAction(ui.actionOpenVPN_Port);
   group_validated->addAction(ui.actionOpenConnect_ServerCert);
   group_validated->addAction(ui.actionOpenConnect_VPNHost);
-       
+  group_validated->addAction(ui.actionWireGuard_ListPort);
+  group_validated->addAction(ui.actionWireGuard_DNS);
+  group_validated->addAction(ui.actionWireGuard_EndpointPort);
+  group_validated->addAction(ui.actionWireGuard_PersistentKeepalive);
+     
   group_selectfile = new QActionGroup(this);
   group_selectfile->addAction(ui.actionL2TP_AuthFile);
   group_selectfile->addAction(ui.actionOpenVPN_CACert);
@@ -248,10 +258,13 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   menu_VPNC->addSeparator();
   menu_VPNC->addAction(ui.actionVPNC_SingleDES);
   menu_VPNC->addAction(ui.actionVPNC_NoEncryption);
+  if (ver > 1.37f) {
+    menu_VPNC->addSeparator();
+    menu_VPNC->addAction(ui.actionVPNC_DeviceType);
+  }
 
   menu_L2TP = new QMenu(tr("L2TP"), this);
   menu_L2TP->addAction(ui.actionProviderL2TP);
-  menu_L2TP->addSeparator();
   menu_L2TP->addSeparator();
   menu_L2TP->addAction(ui.actionL2TP_User);
   menu_L2TP->addAction(ui.actionL2TP_Password);
@@ -327,7 +340,20 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   menu_PPTP->addAction(ui.actionPPPD_RequirMPPE128);
   menu_PPTP->addAction(ui.actionPPPD_RequirMPPEStateful);
     
-  
+  menu_WireGuard = new QMenu(tr("WireGuard"), this);
+  menu_WireGuard->addAction(ui.actionProviderWireGuard);
+  menu_WireGuard->addSeparator();
+  menu_WireGuard->addAction(ui.actionWireGuard_Address);
+  menu_WireGuard->addAction(ui.actionWireGuard_ListPort);
+  menu_WireGuard->addAction(ui.actionWireGuard_DNS);
+  menu_WireGuard->addSeparator();
+  menu_WireGuard->addAction(ui.actionWireGuard_PrivateKey);
+  menu_WireGuard->addAction(ui.actionWireGuard_PublicKey);
+  menu_WireGuard->addAction(ui.actionWireGuard_PresharedKey);
+  menu_WireGuard->addAction(ui.actionWireGuard_AllowedIPs);
+  menu_WireGuard->addAction(ui.actionWireGuard_EndpointPort);
+  menu_WireGuard->addAction(ui.actionWireGuard_PersistentKeepalive);
+
   // add menus to UI
   menubar->addMenu(menu_global);
   menubar->addMenu(menu_OpenConnect);
@@ -335,6 +361,9 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   menubar->addMenu(menu_VPNC);
   menubar->addMenu(menu_L2TP);
   menubar->addMenu(menu_PPTP);
+  if (ver > 1.37f) {
+    menubar->addMenu(menu_WireGuard);
+  }
   
   // connect signals to slots
   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
@@ -418,7 +447,10 @@ void VPN_Editor::inputValidated(QAction* act, QString key)
   if (act == ui.actionOpenVPN_Port) vd->setValidator(CMST::ValDialog_Int, false);
   if (act == ui.actionOpenConnect_ServerCert) vd->setValidator(CMST:: ValDialog_Hex, false);
   if (act == ui.actionOpenConnect_VPNHost) vd->setValidator(CMST::ValDialog_46, false);
-
+  if (act == ui.actionWireGuard_ListPort) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionWireGuard_DNS) vd->setValidator(CMST::ValDialog_46, true);
+  if (act == ui.actionWireGuard_EndpointPort) vd->setValidator(CMST::ValDialog_Int, false);
+  if (act == ui.actionWireGuard_PersistentKeepalive) vd->setValidator(CMST::ValDialog_Int, false);
   // if accepted put an entry in the textedit
   if (vd->exec() == QDialog::Accepted) {
     QString s = vd->getText();
@@ -456,11 +488,12 @@ void VPN_Editor::inputComboBox(QAction* act)
   if (act == ui.actionVPNC_PFS) sl << "nopfs" << "dh1" << "dh2" << "dh5" << "server";
   if (act == ui.actionVPNC_Vendor) sl << "cisco" << "netscreen";
   if (act == ui.actionVPNC_NATTMode) sl << "natt" << "none" << "force-natt" << "cisco-udp";
+  if (act == ui.actionVPNC_DeviceType) sl << "tun" << "tap";
   if (act == ui.actionOpenVPN_NSCertType) sl << "client" << "server";
   if (act == ui.actionOpenVPN_Proto) sl << "udp" << "tcp-client" << "tcp-server";
   if (act == ui.actionOpenVPN_CompLZO) sl << "adaptive" << "yes" << "no";
   if (act == ui.actionOpenVPN_RemoteCertTls) sl << "client" << "server";
-  
+    
   QStringList sl_tr = TranslateStrings::cmtr_sl(sl);
   QString item = QInputDialog::getItem(this,
     tr("%1 - Item Input").arg(TranslateStrings::cmtr("cmst")),
@@ -503,10 +536,13 @@ void VPN_Editor::inputFreeForm(QAction* act, QString key)
   // create some prompts
   if (key == "Name") str = tr("User defined name for the VPN");
   else if (key == "Domain") str = tr("Domain name for the VPN Service\n(example: corporate.com)");
-  else if (key == "Networks") str = tr("Networks behing the VPN link, if more than one separate by a comma.\n"
+  else if (key == "Networks") str = tr("Networks behind the VPN link, if more than one separate by a comma.\n"
                                         "Format is network/netmask/gateway, and gateway can be omitted.\n"
                                         "Ex: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:Ldb8::1/16\n\n"
                                         "Networks = entry is optional and may be left blank.");
+  else if (act == ui.actionWireGuard_Address) str = tr("Network address in the form address/netmask/peer.\n"
+				        "Ex: 10.2.0.2/24" );
+  
   else str = act->toolTip();
   
   if (act == ui.actionGlobal) {
@@ -752,6 +788,7 @@ void VPN_Editor::createProvider(QAction* act)
       else if (act == ui.actionProviderVPNC) ui.plainTextEdit_main->insertPlainText("\n[provider_vpnc]\nType = VPNC\n");
         else if (act == ui.actionProviderL2TP) ui.plainTextEdit_main->insertPlainText("\n[provider_l2tp]\nType = L2TP\n");
           else if (act == ui.actionProviderPPTP) ui.plainTextEdit_main->insertPlainText("\n[provider_pptp]\nType = PPTP\n");
+	    else if (act == ui.actionProviderWireGuard) ui.plainTextEdit_main->insertPlainText("\n[provider_wireguard]\nType = WireGuard\n");
   inputFreeForm(act, "Name");
   inputValidated(act, "Host");
   inputFreeForm(act, "Domain");
