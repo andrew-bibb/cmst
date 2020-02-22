@@ -96,8 +96,7 @@ class ControlBox : public QDialog
 
   public:
     ControlBox(const QCommandLineParser&, QWidget* parent = 0);
-    inline float getConnmanVersion() {return connmanversion;}
-
+    
   public slots:  
     void aboutCMST();
     void aboutIconSet();
@@ -148,7 +147,7 @@ class ControlBox : public QDialog
     QLocalServer* socketserver;
     QColor trayiconbackground;
     IconManager* iconman;
-    float connmanversion;
+    float f_connmanversion;
   
   // functions
     int managerRescan(const int& srv = 0);

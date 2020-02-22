@@ -160,7 +160,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   socketserver->listen(SOCKET_NAME);
   trayiconbackground = QColor();
   trayicon = new QSystemTrayIcon(this);
-  connmanversion = 0.0;
+  f_connmanversion = 0.0;
   
   iconman = new IconManager(this);
   
@@ -363,7 +363,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       QProcess qp;
       qp.start("connmand -v");
       qp.waitForFinished();
-      connmanversion = qp.readAllStandardOutput().toFloat();
+      f_connmanversion = qp.readAllStandardOutput().toFloat();
 
       // VPN manager. Disable if commandline or option is set
       if (parser.isSet("disable-vpn") ? true : (b_so && ui.checkBox_disablevpn->isChecked()) ) {
@@ -1521,16 +1521,18 @@ void ControlBox::getServiceDetails(int index)
     rs.append(tr("Excludes:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Excludes").toStringList().join("<br>&nbsp;&nbsp;")) );
   }
 
-  if (this->getConnmanVersion() > (1.37 + 0.0001)) {
+  // mDNS was added in connman 1.38
+  if (f_connmanversion > (1.37 + 0.0001)) {
     rs.append(tr("<br><b>mDNS</b><br>"));
     rs.append(tr("Support Enabled: %1<br>").arg(map.value("mDNS").toBool() ? tr("Yes", "mdns") : tr("No", "mdns")) );
   } // connman version
 
-  if (this->getConnmanVersion() > (1.37 + 0.0001)) {
-    // a map for the maps embedded in submap (IPv4 and Ethernet)
-    QMap<QString,QVariant> subsubmap;
+  // LastAddressConflict was added in connman 1.38
+  if (this->f_connmanversion> (1.37 + 0.0001)) {
     shared::extractMapData(submap, services_list.at(index).objmap.value("LastAddressConflict") );
     if (submap.value("Timestamp").toLongLong() > 0.0) {
+      // a map for the maps embedded in submap (IPv4 and Ethernet)
+      QMap<QString,QVariant> subsubmap;
       rs.append(tr("<br><b>Last Address Conflict</b><br>"));
       shared::extractMapData(subsubmap, submap.value("IPv4") );
       rs.append(tr("IP Address: %1<br>").arg(subsubmap.value("Address").toString()) );
@@ -2982,6 +2984,7 @@ void ControlBox::configureService()
 
   // Create a new properties editor
   PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()) );
+  if (f_connmanversion < (1.37 + .0001)) peditor->setItemEnabled(7, false);
 
   // Set the whatsthis button icon
   peditor->setWhatsThisIcon(iconman->getIcon("whats_this"));
