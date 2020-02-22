@@ -3027,7 +3027,7 @@ void ControlBox::provisionService()
   }
 
   else if (qobject_cast<QPushButton*>(sender()) == ui.pushButton_vpn_editor) {
-    VPN_Editor* veditor = new VPN_Editor(this);
+    VPN_Editor* veditor = new VPN_Editor(this, f_connmanversion);
 
     // Set the whatsthis button icon
     veditor->setWhatsThisIcon(iconman->getIcon("whats_this") );

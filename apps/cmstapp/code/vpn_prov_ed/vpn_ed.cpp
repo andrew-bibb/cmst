@@ -58,7 +58,7 @@ DEALINGS IN THE SOFTWARE.
 
 //
 //  Constructor  
-VPN_Editor::VPN_Editor(QWidget* parent) : QDialog(parent)
+VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
 {
   // Setup the user interface
   ui.setupUi(this);

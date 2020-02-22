@@ -28,7 +28,7 @@ DEALINGS IN THE SOFTWARE.
 
 
 # ifndef CONNMAN_VPN_AGENT
-#	define CONNMAN_VPN_AGENT
+# define CONNMAN_VPN_AGENT
 
 # include <QObject>
 # include <QString>
@@ -50,8 +50,8 @@ class ConnmanVPNAgent : public QObject, protected QDBusContext
     Q_CLASSINFO("D-Bus Interface", VPN_AGENT_INTERFACE)
  
     public:
-			ConnmanVPNAgent(QObject*);			
-			inline void setLogInputRequest(bool b) {b_loginputrequest = b;}
+      ConnmanVPNAgent(QObject*);      
+      inline void setLogInputRequest(bool b) {b_loginputrequest = b;}
  
     public Q_SLOTS:
       void Release();
@@ -60,13 +60,13 @@ class ConnmanVPNAgent : public QObject, protected QDBusContext
       void Cancel();
      
     private:
-	    VPNAgentDialog* uiDialog;   
-	    QMap<QString,QString> input_map;
-	    bool b_loginputrequest;    
-	    void createInputMap(const QMap<QString,QVariant>&); 
-	    
-	  public:
-			inline void setWhatsThisIcon(QIcon icon) {uiDialog->setWhatsThisIcon(icon);}  
+      VPNAgentDialog* uiDialog;   
+      QMap<QString,QString> input_map;
+      bool b_loginputrequest;    
+      void createInputMap(const QMap<QString,QVariant>&); 
+      
+    public:
+      inline void setWhatsThisIcon(QIcon icon) {uiDialog->setWhatsThisIcon(icon);}  
 };    
 
 #endif

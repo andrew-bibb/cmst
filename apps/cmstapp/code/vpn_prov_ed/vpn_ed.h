@@ -50,7 +50,7 @@ class VPN_Editor : public QDialog
   Q_OBJECT
 
   public:
-    VPN_Editor(QWidget*);
+    VPN_Editor(QWidget*, const float&);
     
   private:  
   // members
