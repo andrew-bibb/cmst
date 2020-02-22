@@ -4,7 +4,12 @@
 <ul>
 <li>Move offline checkbox in tab 1 (issue # 201)</li>
 <li>Translation to Dutch by Heimen Stoffels.</li>
+<li>Additons for Connman 1.38</li>
+<ul>
 <li>Add mDNS status to the details tab.</li>
+<li>Added mDNS enable or disable tab to provisioning editor.</li>
+<li>Add Last Address Conflict information to details tab.</li>
+</ul>
 </ul>
 <b> 2019.01.13</b>
 <ul>
