@@ -60,6 +60,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QImage>
 # include <QDesktopWidget>
 # include <QInputDialog>
+# include <QDateTime>
+# include <QProcess>
 
 # include "../resource.h"
 # include "./controlbox.h"
@@ -158,16 +160,17 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   socketserver->listen(SOCKET_NAME);
   trayiconbackground = QColor();
   trayicon = new QSystemTrayIcon(this);
+  connmanversion = 0.0;
   
   iconman = new IconManager(this);
   
   // set a stylesheet on the tab widget - used to hide disabled tabs
-	QFile f0(":/stylesheets/stylesheets/tabwidget.qss");
-	if (f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
-		QString qss = QString(f0.readAll());
-		f0.close();
-		ui.tabWidget->setStyleSheet(qss);
-	}
+  QFile f0(":/stylesheets/stylesheets/tabwidget.qss");
+  if (f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    QString qss = QString(f0.readAll());
+    f0.close();
+    ui.tabWidget->setStyleSheet(qss);
+  }
 
   // set a stylesheet on the offlinemode toolbutton. Until 2017.12 this
   // was a label to display a pixmap. It is now a QToolButton, but I want the
@@ -176,13 +179,13 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // play/pause behavior in a media player.  If I advertise this is a button
   // I'll get complaints that the pictures are backwards, so hide that fact
   // by making it look like a label with the stylesheet.
-	QFile f1(":/stylesheets/stylesheets/airplane.qss");
-	if (f1.open(QIODevice::ReadOnly | QIODevice::Text)) {
-		QString qss = QString(f1.readAll());
-		f1.close();
-		ui.toolButton_offlinemode->setStyleSheet(qss);
-	}
-	
+  QFile f1(":/stylesheets/stylesheets/airplane.qss");
+  if (f1.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    QString qss = QString(f1.readAll());
+    f1.close();
+    ui.toolButton_offlinemode->setStyleSheet(qss);
+  }
+  
   // Read saved settings which will set the ui controls in the preferences tab.
   this->readSettings();
   
@@ -297,9 +300,9 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   }
   counter_period = setval > minval ? setval : minval; // number of seconds for counter updates
 
-	// Hide the minimize button requested 
-	if (parser.isSet("disable-minimize") ? true : (b_so && ui.checkBox_disableminimized->isChecked()) )
-		ui.pushButton_minimize->hide();
+  // Hide the minimize button requested 
+  if (parser.isSet("disable-minimize") ? true : (b_so && ui.checkBox_disableminimized->isChecked()) )
+    ui.pushButton_minimize->hide();
 
   // operate on settings not dealt with elsewhere
   ui.pushButton_provisioning_editor->setVisible(ui.checkBox_advanced->isChecked() );
@@ -334,17 +337,17 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       shared::processReply(con_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT))) );
 
       // if counters are enabled connect signal to slot and register the counter
-			if (parser.isSet("enable-counters") ? true : (b_so && ui.checkBox_enablecounters->isChecked()) ) { 	
+      if (parser.isSet("enable-counters") ? true : (b_so && ui.checkBox_enablecounters->isChecked()) ) {  
         QList<QVariant> vlist_counter;
         vlist_counter.clear();
         vlist_counter << QVariant::fromValue(QDBusObjectPath(CNTR_OBJECT)) << counter_accuracy << counter_period;
         QDBusMessage reply = con_manager->callWithArgumentList(QDBus::AutoDetect, "RegisterCounter", vlist_counter);
         if (shared::processReply(reply) == QDBusMessage::ReplyMessage)
           connect(counter, SIGNAL(usageUpdated(QDBusObjectPath, QString, QString)), this, SLOT(counterUpdated(QDBusObjectPath, QString, QString)));
-      }	// enable counters
+      } // enable counters
       else {
-				ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.Counters), false);
-			}
+        ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.Counters), false);
+      }
 
       // connect some dbus signals to our slots
       QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
@@ -356,21 +359,27 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       // clear the counters if selected
       this->clearCounters();
 
+      // find the connman version we are running
+      QProcess qp;
+      qp.start("connmand -v");
+      qp.waitForFinished();
+      connmanversion = qp.readAllStandardOutput().toFloat();
+
       // VPN manager. Disable if commandline or option is set
       if (parser.isSet("disable-vpn") ? true : (b_so && ui.checkBox_disablevpn->isChecked()) ) {
         ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
         ui.pushButton_vpn_editor->setDisabled(true);
       } // if parser set
       else {
-				vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
+        vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
         if (! vpn_manager->isValid() ) {
-					ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
-					ui.pushButton_vpn_editor->setDisabled(true);
-					logErrors(CMST::Err_Invalid_VPN_Iface);
-				}
+          ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
+          ui.pushButton_vpn_editor->setDisabled(true);
+          logErrors(CMST::Err_Invalid_VPN_Iface);
+        }
         else {
-					ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), true);
-					ui.pushButton_vpn_editor->setEnabled(true);
+          ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), true);
+          ui.pushButton_vpn_editor->setEnabled(true);
           shared::processReply(vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
         } // else register agent
       } // else normal vpn manager  
@@ -445,7 +454,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // Tray icon - disable it if we specifiy that option on the commandline or in
   // the settings, otherwise set a singleshot timer to create the tray icon.
   if (parser.isSet("disable-tray-icon") ? true : (b_so && ui.checkBox_disabletrayicon->isChecked()) ) {
-		trayicon = NULL;
+    trayicon = NULL;
     ui.checkBox_hideIcon->setDisabled(true);
     this->updateDisplayWidgets();
     qApp->setQuitOnLastWindowClosed(true); // not running systemtray icon so normal close
@@ -873,7 +882,7 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
     this->sendNotifications();
   } // if contains offlinemode
 
-	// state property 
+  // state property 
   if (prop == "State") {
     // local variables
     QString state = dbvalue.variant().toString();
@@ -882,31 +891,31 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
     notifyclient->init();
     notifyclient->setSummary(tr("Network Services:") );
     if (state == "ready" || state == "online") {
-			if  (oldstate != "ready" && oldstate != "online") {
-			notifyclient->setBody(tr("The system is online.") );
-			notifyclient->setIcon(iconman->getIconName("state_online") );
-			this->sendNotifications();
-			}	// if
-		}	// if
-		else {
-			notifyclient->setBody(tr("The system is offline.") );
-			notifyclient->setIcon(iconman->getIconName("state_not_ready") );
-			this->sendNotifications();
-		}	// else
-		  
-		// execute external program if specified
-		if (! ui.lineEdit_afterconnect->text().isEmpty()  ) {
-			if( (state == "ready" || state == "online") &&
-				(oldstate != "ready" && oldstate != "online") ) {
-				QString text = ui.lineEdit_afterconnect->text();
-				text = text.simplified();
-				QStringList args = text.split(' ');
-				QString cmd = args.first();
-				args.removeFirst();
-				QProcess* proc = new QProcess(this);
-				proc->startDetached(cmd, args);
-			} // if online or ready and not online before
-		} // if lineedit not empty
+      if  (oldstate != "ready" && oldstate != "online") {
+      notifyclient->setBody(tr("The system is online.") );
+      notifyclient->setIcon(iconman->getIconName("state_online") );
+      this->sendNotifications();
+      } // if
+    } // if
+    else {
+      notifyclient->setBody(tr("The system is offline.") );
+      notifyclient->setIcon(iconman->getIconName("state_not_ready") );
+      this->sendNotifications();
+    } // else
+      
+    // execute external program if specified
+    if (! ui.lineEdit_afterconnect->text().isEmpty()  ) {
+      if( (state == "ready" || state == "online") &&
+        (oldstate != "ready" && oldstate != "online") ) {
+        QString text = ui.lineEdit_afterconnect->text();
+        text = text.simplified();
+        QStringList args = text.split(' ');
+        QString cmd = args.first();
+        args.removeFirst();
+        QProcess* proc = new QProcess(this);
+        proc->startDetached(cmd, args);
+      } // if online or ready and not online before
+    } // if lineedit not empty
   
   } // if state change
 
@@ -1189,7 +1198,7 @@ void ControlBox::dbsTechnologyPropertyChanged(QString name, QDBusVariant dbvalue
 
 //  Slot to rescan all WiFi technologies.  Called when ui.actionRescan
 //  is triggered.  Action is called from rescanwifi buttons and from
-//	the context menu.
+//  the context menu.
 //  Results signaled by manager.ServicesChanged(), except for peer
 //  services which will be signaled by manager.PeersChanged()
 void ControlBox::scanWiFi()
@@ -1201,7 +1210,7 @@ void ControlBox::scanWiFi()
   for (int row = 0; row < technologies_list.size(); ++row) {
     if (technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
       if (technologies_list.at(row).objmap.value("Powered").toBool() ) {
-				setStateRescan(false);
+        setStateRescan(false);
         ui.tableWidget_services->setCurrentIndex(QModelIndex()); // first cell becomes selected once pushbutton is disabled
         qApp->processEvents();  // needed to promply disable the button
         QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, technologies_list.at(row).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
@@ -1268,8 +1277,8 @@ void ControlBox::toggleOfflineMode(bool checked)
   if ( ((q16_errors & CMST::Err_No_DBus) | (q16_errors & CMST::Err_Invalid_Con_Iface)) != 0x00 ) return;
 
   shared::processReply(con_manager->call(QDBus::AutoDetect, "SetProperty", "OfflineMode", QVariant::fromValue(QDBusVariant(checked ? true : false))) );
-	
-	return;
+  
+  return;
 }
 
 //
@@ -1512,9 +1521,27 @@ void ControlBox::getServiceDetails(int index)
     rs.append(tr("Excludes:<br>&nbsp;&nbsp;%1<br>").arg(submap.value("Excludes").toStringList().join("<br>&nbsp;&nbsp;")) );
   }
 
-  rs.append(tr("<br><b>mDNS</b><br>"));
-  rs.append(tr("Support Enabled: %1<br>").arg(map.value("mDNS").toBool() ? tr("Yes", "mdns") : tr("No", "mdns")) );
-  
+  if (this->getConnmanVersion() > (1.37 + 0.0001)) {
+    rs.append(tr("<br><b>mDNS</b><br>"));
+    rs.append(tr("Support Enabled: %1<br>").arg(map.value("mDNS").toBool() ? tr("Yes", "mdns") : tr("No", "mdns")) );
+  } // connman version
+
+  if (this->getConnmanVersion() > (1.37 + 0.0001)) {
+    // a map for the maps embedded in submap (IPv4 and Ethernet)
+    QMap<QString,QVariant> subsubmap;
+    shared::extractMapData(submap, services_list.at(index).objmap.value("LastAddressConflict") );
+    if (submap.value("Timestamp").toLongLong() > 0.0) {
+      rs.append(tr("<br><b>Last Address Conflict</b><br>"));
+      shared::extractMapData(subsubmap, submap.value("IPv4") );
+      rs.append(tr("IP Address: %1<br>").arg(subsubmap.value("Address").toString()) );
+      shared::extractMapData(subsubmap, submap.value("Ethernet") );
+      rs.append(tr("MAC Address: %1<br>").arg(submap.value("Address").toString()) );
+      rs.append(tr("Conflict detected on: %1<br>").arg(QDateTime::fromMSecsSinceEpoch(submap.value("Timestamp").toLongLong() / 1000.0, Qt::LocalTime).toString()) );
+      rs.append(tr("Resolved: %1<br>").arg(submap.value("Resolved").toBool() ? tr("Yes", "last_address_conflict") : tr("No", "last_address_conflict")) );
+    } // if there has never been a confict
+  } // connman version
+
+
   //  write the text to the left display label
   ui.label_details_left->setText(rs);
 
@@ -1854,14 +1881,14 @@ void ControlBox::assembleTabStatus()
 //  by the getServiceDetails() slot whenever the comboBox index changes.
 void ControlBox::assembleTabDetails()
 {
-	// variables
-	int newidx = 0;
-	QString cursvc = QString();
-	
-	// if the combobox has any items in it save the nick name of the service we are viewing
-	if (ui.comboBox_service->count() > 0)
-		cursvc = ui.comboBox_service->currentText();
-		  
+  // variables
+  int newidx = 0;
+  QString cursvc = QString();
+  
+  // if the combobox has any items in it save the nick name of the service we are viewing
+  if (ui.comboBox_service->count() > 0)
+    cursvc = ui.comboBox_service->currentText();
+      
   // initilize the page2 display widgets
   ui.comboBox_service->clear();
   ui.label_details_left->clear();
@@ -1874,7 +1901,7 @@ void ControlBox::assembleTabDetails()
       QString ss = getNickName(services_list.at(row).objpath);
       ui.comboBox_service->addItem(TranslateStrings::cmtr(ss) );
       if (TranslateStrings::cmtr(ss) == cursvc)
-				newidx = row;
+        newidx = row;
     } // services for loop
     
     ui.comboBox_service->setCurrentIndex(newidx);
@@ -1960,17 +1987,17 @@ void ControlBox::assembleTabWireless()
       pb04->setMaximum(100);
       pb04->setOrientation( Qt::Horizontal);
       pb04->setValue(map.value("Strength").value<quint8>() );
-			if (QColor(ui.lineEdit_colorize->text()).isValid() ) {
-				QPalette pl = pb04->palette();
-				pl.setColor(QPalette::Active, QPalette::Highlight, QColor(ui.lineEdit_colorize->text()) );
-				pb04->setPalette(pl);
-			}
+      if (QColor(ui.lineEdit_colorize->text()).isValid() ) {
+        QPalette pl = pb04->palette();
+        pl.setColor(QPalette::Active, QPalette::Highlight, QColor(ui.lineEdit_colorize->text()) );
+        pb04->setPalette(pl);
+      }
     
       QWidget* w04 = new QWidget(ui.tableWidget_wifi);
-			QHBoxLayout* l04 = new QHBoxLayout(w04);
-			l04->addWidget(pb04);
-			w04->setLayout(l04);
-			l04->setAlignment(Qt::AlignCenter);
+      QHBoxLayout* l04 = new QHBoxLayout(w04);
+      l04->addWidget(pb04);
+      w04->setLayout(l04);
+      l04->setAlignment(Qt::AlignCenter);
       l04->setContentsMargins(7, 5, 11, 5);
       ui.tableWidget_wifi->setCellWidget(rowcount, 4, w04);
       
@@ -1990,7 +2017,7 @@ void ControlBox::assembleTabWireless()
   ui.pushButton_connect->setEnabled(b_enable);
   ui.pushButton_disconnect->setEnabled(b_enable);
   ui.pushButton_remove->setEnabled(b_enable);
-  setStateRescan(b_enable);	
+  setStateRescan(b_enable); 
 
   return;
 }
@@ -2189,7 +2216,7 @@ void ControlBox::assembleTrayIcon()
 
     // else anything else, states in this case should be "idle", "association", "configuration", or "disconnect"
     else {
-			prelimicon = iconman->getIcon("connection_not_ready");
+      prelimicon = iconman->getIcon("connection_not_ready");
       stt.append(tr("Not Connected", "icon_tool_tip"));
     } // else any other connection state
   } // properties if no error
@@ -2492,12 +2519,12 @@ void ControlBox::readSettings()
   // Changed disable counters to enable counters.  Figure out what the user wanted
   // and adjust accordingly
   if (settings->contains("disable_counters") ) {
-		ui.checkBox_enablecounters->setChecked(! settings->value("disable_counters").toBool() );
-		settings->remove("disable_counters");
-	}
-	else {
-		ui.checkBox_enablecounters->setChecked(settings->value("enable_counters").toBool() );
-	}
+    ui.checkBox_enablecounters->setChecked(! settings->value("disable_counters").toBool() );
+    settings->remove("disable_counters");
+  }
+  else {
+    ui.checkBox_enablecounters->setChecked(settings->value("enable_counters").toBool() );
+  }
   ui.checkBox_disabletrayicon->setChecked(settings->value("disable_tray_icon").toBool() );
   ui.checkBox_disablevpn->setChecked(settings->value("disable_vpn").toBool() );
   ui.checkBox_systemicontheme->setChecked(settings->value("use_icon_theme").toBool() );
@@ -2533,68 +2560,68 @@ void ControlBox::createSystemTrayIcon()
 
   // We still need to make sure there is a tray available
   if (QSystemTrayIcon::isSystemTrayAvailable() ) {
-	
-		// Create the outline of the context menu.  Submenu contents are defined in the
-		// assembletrayIcon() function.
-		trayiconmenu->clear();
-		trayiconmenu->setTearOffEnabled(true);
-		trayiconmenu->setToolTipsVisible(true);
-		tech_submenu->setToolTipsVisible(true);
-		info_submenu->setToolTipsVisible(true);
-		wifi_submenu->setToolTipsVisible(true);
-		vpn_submenu->setToolTipsVisible(true);
-	
-		trayiconmenu->addMenu(tech_submenu);
-		trayiconmenu->addMenu(info_submenu);
-		trayiconmenu->addMenu(wifi_submenu);
-		trayiconmenu->addMenu(vpn_submenu);
-		trayiconmenu->addSeparator();
-	
-		trayiconmenu->addAction(ui.actionRescan);
-		trayiconmenu->addAction(ui.actionOffline_Mode);
-		trayiconmenu->addSeparator();
-	
-		trayiconmenu->addAction(maximizeAction);
-		trayiconmenu->addAction(minimizeAction);
-		trayiconmenu->addSeparator();
-		trayiconmenu->addAction(tr("Cancel"), this, SLOT(closeSystemTrayTearOffMenu()) );
-		trayiconmenu->addAction(exitAction);
-	
-		trayicon->setContextMenu(trayiconmenu);
-	
-		connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
-	
-		// We need this if someone is running the program from the tray popup menu.
-		// The main UI is fine without it, but if you call up the agent dialog and then
-		// close that seems to be treated as the last window.
-		qApp->setQuitOnLastWindowClosed(false);
-	
-		// Assemble the tray icon (set the icon to display)
-		assembleTrayIcon();
-	
-	    // QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
-	    // maxtries to get a valid icon geometry.
-	    // QT5.4 update, may be fixed but leave option in for now
-	    if (b_usexfce || b_usemate) {
-	      const int maxtries = 125;
-	      int i;
-	      for (i = 0; i < maxtries; ++i) {
-	        trayicon->setVisible(true);
-	        //qDebug() << "icon geometry: " << trayicon->geometry();
-	        if ((trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) && trayicon->geometry().width() > 1) break;
-	        trayicon->setVisible(false);
-	        qApp->processEvents();
-	      }   // hammer loop
-	      if (i == maxtries - 1) {
-	        qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
-	        ui.pushButton_minimize->setDisabled(true);
-	        trayicon = 0; // reinitialize the pointer
-	      } // if we hit the end of the loop
-	    } // if use xfce
-	
-	    // Sync the visibility to the checkbox
-	    ui.checkBox_hideIcon->setEnabled(true);
-	    trayicon->setVisible(true);
+  
+    // Create the outline of the context menu.  Submenu contents are defined in the
+    // assembletrayIcon() function.
+    trayiconmenu->clear();
+    trayiconmenu->setTearOffEnabled(true);
+    trayiconmenu->setToolTipsVisible(true);
+    tech_submenu->setToolTipsVisible(true);
+    info_submenu->setToolTipsVisible(true);
+    wifi_submenu->setToolTipsVisible(true);
+    vpn_submenu->setToolTipsVisible(true);
+  
+    trayiconmenu->addMenu(tech_submenu);
+    trayiconmenu->addMenu(info_submenu);
+    trayiconmenu->addMenu(wifi_submenu);
+    trayiconmenu->addMenu(vpn_submenu);
+    trayiconmenu->addSeparator();
+  
+    trayiconmenu->addAction(ui.actionRescan);
+    trayiconmenu->addAction(ui.actionOffline_Mode);
+    trayiconmenu->addSeparator();
+  
+    trayiconmenu->addAction(maximizeAction);
+    trayiconmenu->addAction(minimizeAction);
+    trayiconmenu->addSeparator();
+    trayiconmenu->addAction(tr("Cancel"), this, SLOT(closeSystemTrayTearOffMenu()) );
+    trayiconmenu->addAction(exitAction);
+  
+    trayicon->setContextMenu(trayiconmenu);
+  
+    connect(trayicon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(iconActivated(QSystemTrayIcon::ActivationReason)));
+  
+    // We need this if someone is running the program from the tray popup menu.
+    // The main UI is fine without it, but if you call up the agent dialog and then
+    // close that seems to be treated as the last window.
+    qApp->setQuitOnLastWindowClosed(false);
+  
+    // Assemble the tray icon (set the icon to display)
+    assembleTrayIcon();
+  
+      // QT5.3 and XFCE don't play nicely.  Hammer the XFCE tray up to
+      // maxtries to get a valid icon geometry.
+      // QT5.4 update, may be fixed but leave option in for now
+      if (b_usexfce || b_usemate) {
+        const int maxtries = 125;
+        int i;
+        for (i = 0; i < maxtries; ++i) {
+          trayicon->setVisible(true);
+          //qDebug() << "icon geometry: " << trayicon->geometry();
+          if ((trayicon->geometry().left() > 0 || trayicon->geometry().top() > 0) && trayicon->geometry().width() > 1) break;
+          trayicon->setVisible(false);
+          qApp->processEvents();
+        }   // hammer loop
+        if (i == maxtries - 1) {
+          qDebug() << QString("Failed to get a valid icon from the systemtray in %1 tries").arg(maxtries);
+          ui.pushButton_minimize->setDisabled(true);
+          trayicon = 0; // reinitialize the pointer
+        } // if we hit the end of the loop
+      } // if use xfce
+  
+      // Sync the visibility to the checkbox
+      ui.checkBox_hideIcon->setEnabled(true);
+      trayicon->setVisible(true);
 
   } // if there is a systemtray available
 
@@ -2621,8 +2648,8 @@ void ControlBox::createSystemTrayIcon()
   
   // sync offlinemode checkbox and action b1ased on the saved value from settings
   if (settings->value("CheckBoxes/devices_off").toBool() ) {
-		ui.actionOffline_Mode->trigger();
-	}
+    ui.actionOffline_Mode->trigger();
+  }
 
   // Lastly update the display widgets (since this is actually the last
   // line of the constructor.)
@@ -2812,10 +2839,10 @@ void ControlBox::logErrors(const quint16& err)
         tr("There was an error reading or parsing the reply from method connman.Manager.GetServices.<br><br>Some portion of %1 may still be functional.").arg(TranslateStrings::cmtr("cmst")) );
       break;
     case  CMST::Err_Invalid_VPN_Iface:
-			// NOTE: this error is logged to the system log only, no message is presented to the user (issue #155).  Done
-			// this way because it will happen when someone does not compile ConnMan with VPN support, or if they don't
-			// have the connman-vpn daemon running.  We're figuring this would be more than likely intentional and not an
-			// error the user would need to be concerned about.  If he is the error will show in the system log.
+      // NOTE: this error is logged to the system log only, no message is presented to the user (issue #155).  Done
+      // this way because it will happen when someone does not compile ConnMan with VPN support, or if they don't
+      // have the connman-vpn daemon running.  We're figuring this would be more than likely intentional and not an
+      // error the user would need to be concerned about.  If he is the error will show in the system log.
       syslog(LOG_ERR, "%s",tr("Could not create an interface to connman-vpn on the system bus").toUtf8().constData());
       break;
     default:
@@ -3027,11 +3054,11 @@ void ControlBox::cleanUp()
     } // if counters are connected to anything
 
 
-	  if (vpn_manager != NULL) { 
-	    if (vpn_manager->isValid() ) {
-	      shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
-	    } // ivpn_manager isValid
-	  } // not null
+    if (vpn_manager != NULL) { 
+      if (vpn_manager->isValid() ) {
+        shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
+      } // ivpn_manager isValid
+    } // not null
    
    } // if con_manager isValid
 
@@ -3065,10 +3092,10 @@ void ControlBox::iconColorChanged(const QString& col)
 // Slot to set the enabled/disabled state of the rescan wifi controls
 void ControlBox::setStateRescan(bool state)
 {
-	ui.pushButton_rescanwifi01->setEnabled(state);
-	ui.pushButton_rescanwifi02->setEnabled(state);
-	ui.actionRescan->setEnabled(state);
-	
-	return;
+  ui.pushButton_rescanwifi01->setEnabled(state);
+  ui.pushButton_rescanwifi02->setEnabled(state);
+  ui.actionRescan->setEnabled(state);
+  
+  return;
 }
-	
+  
