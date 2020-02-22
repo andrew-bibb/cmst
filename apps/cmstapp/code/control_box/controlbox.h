@@ -167,6 +167,7 @@ class ControlBox : public QDialog
     QString readResourceText(const char*);
     void clearCounters();
     QString getNickName(const QDBusObjectPath&);
+    void findConnmanVersion();
 
   private slots:
     void updateDisplayWidgets();

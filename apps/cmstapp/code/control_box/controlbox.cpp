@@ -61,7 +61,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QDesktopWidget>
 # include <QInputDialog>
 # include <QDateTime>
-# include <QProcess>
 
 # include "../resource.h"
 # include "./controlbox.h"
@@ -360,11 +359,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       this->clearCounters();
 
       // find the connman version we are running
-      QProcess qp;
-      qp.start("connmand -v");
-      qp.waitForFinished();
-      f_connmanversion = qp.readAllStandardOutput().toFloat();
-
+      findConnmanVersion();
+      
       // VPN manager. Disable if commandline or option is set
       if (parser.isSet("disable-vpn") ? true : (b_so && ui.checkBox_disablevpn->isChecked()) ) {
         ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
@@ -1522,13 +1518,13 @@ void ControlBox::getServiceDetails(int index)
   }
 
   // mDNS was added in connman 1.38
-  if (f_connmanversion > (1.37 + 0.0001)) {
+  if (f_connmanversion > (1.37f)) {
     rs.append(tr("<br><b>mDNS</b><br>"));
     rs.append(tr("Support Enabled: %1<br>").arg(map.value("mDNS").toBool() ? tr("Yes", "mdns") : tr("No", "mdns")) );
   } // connman version
 
   // LastAddressConflict was added in connman 1.38
-  if (this->f_connmanversion> (1.37 + 0.0001)) {
+  if (this->f_connmanversion> (1.37f)) {
     shared::extractMapData(submap, services_list.at(index).objmap.value("LastAddressConflict") );
     if (submap.value("Timestamp").toLongLong() > 0.0) {
       // a map for the maps embedded in submap (IPv4 and Ethernet)
@@ -2915,7 +2911,24 @@ QString ControlBox::getNickName(const QDBusObjectPath& objpath)
   return QString();
 }
 
+// Function to find the version of connman running on the local machine.
+// This function stores f_connmanversion which is a float containing the 
+// version. Use to enable, disable, hide features of CMST based on what is
+// availabe from connman.  Set to -1.0 if not able to determine a version.
+void ControlBox::findConnmanVersion()
 
+{
+  QProcess qps;
+  bool b_ok = false;
+
+  qps.start("connmand -v");
+  qps.waitForFinished();
+  f_connmanversion = qps.readAllStandardOutput().toFloat(&b_ok);
+  if (! b_ok) f_connmanversion = -1.0; 
+
+  return;
+}
+ 
 // Slot to connect to the notification client. Called from QTimers to give time for the notification server
 // to start up if this program is started automatically at boot.  We make four attempts at finding the
 // notification server.  First is in the constructor of NotifyClient, following we call the connectToServer()
@@ -2984,7 +2997,7 @@ void ControlBox::configureService()
 
   // Create a new properties editor
   PropertiesEditor* peditor = new PropertiesEditor(this, services_list.at(ui.comboBox_service->currentIndex()) );
-  if (f_connmanversion < (1.37 + .0001)) peditor->setItemEnabled(7, false);
+  if (f_connmanversion <= (1.37f)) peditor->setItemEnabled(7, false);
 
   // Set the whatsthis button icon
   peditor->setWhatsThisIcon(iconman->getIcon("whats_this"));

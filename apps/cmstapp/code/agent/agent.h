@@ -28,7 +28,7 @@ DEALINGS IN THE SOFTWARE.
 
 
 # ifndef CONNMANAGENT
-#	define CONNMANAGENT
+# define CONNMANAGENT
 
 # include <QObject>
 # include <QString>
@@ -51,9 +51,9 @@ class ConnmanAgent : public QObject, protected QDBusContext
 
  
     public:
-			ConnmanAgent(QObject*);
-			
-			inline void setLogInputRequest(bool b) {b_loginputrequest = b;}
+      ConnmanAgent(QObject*);
+      
+      inline void setLogInputRequest(bool b) {b_loginputrequest = b;}
  
     public Q_SLOTS:
       void Release();
@@ -63,14 +63,14 @@ class ConnmanAgent : public QObject, protected QDBusContext
       void Cancel();
      
     private:
-	    AgentDialog* uiDialog;   
-	    QMap<QString,QString> input_map;
-	    bool b_loginputrequest;
-	    
-	    void createInputMap(const QMap<QString,QVariant>&); 
-	    
-	  public:
-			inline void setWhatsThisIcon(QIcon icon) {uiDialog->setWhatsThisIcon(icon);}  
+      AgentDialog* uiDialog;   
+      QMap<QString,QString> input_map;
+      bool b_loginputrequest;
+      
+      void createInputMap(const QMap<QString,QVariant>&); 
+      
+    public:
+      inline void setWhatsThisIcon(QIcon icon) {uiDialog->setWhatsThisIcon(icon);}  
 };    
 
 #endif
