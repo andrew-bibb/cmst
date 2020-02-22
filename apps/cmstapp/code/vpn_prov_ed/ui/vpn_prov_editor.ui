@@ -869,6 +869,9 @@ that the peer is no longer connected.</string>
    <property name="text">
     <string>VPNC.DeviceType</string>
    </property>
+   <property name="toolTip">
+    <string>Wheher the VPN should use tun or tap.</string>
+   </property>
   </action>
   <action name="actionWireGuard_Address">
    <property name="text">
@@ -940,6 +943,14 @@ that the peer is no longer connected.</string>
    </property>
    <property name="toolTip">
     <string>Keep alive in seconds (optional).</string>
+   </property>
+  </action>
+  <action name="actionOpenVPN_DeviceType">
+   <property name="text">
+    <string>OpenVPN.DeviceType</string>
+   </property>
+   <property name="toolTip">
+    <string>Wheher the VPN should use tun or tap.</string>
    </property>
   </action>
  </widget>

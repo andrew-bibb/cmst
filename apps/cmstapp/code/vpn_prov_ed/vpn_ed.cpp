@@ -122,7 +122,8 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   group_combobox->addAction(ui.actionOpenVPN_Proto);
   group_combobox->addAction(ui.actionOpenVPN_CompLZO);
   group_combobox->addAction(ui.actionOpenVPN_RemoteCertTls);
-       
+  group_combobox->addAction(ui.actionOpenVPN_DeviceType);
+    
   group_yes = new QActionGroup(this);
   group_yes->addAction(ui.actionPPPD_RefuseEAP);
   group_yes->addAction(ui.actionPPPD_RefusePAP);
@@ -235,7 +236,10 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   menu_OpenVPN->addAction(ui.actionOpenVPN_RemoteCertTls); 
   menu_OpenVPN->addSeparator();  
   menu_OpenVPN->addAction(ui.actionOpenVPN_ConfigFile);
-  
+  if (ver > 1.37f) {
+    menu_OpenVPN->addSeparator();
+    menu_OpenVPN->addAction(ui.actionOpenVPN_DeviceType);
+  }
   menu_VPNC = new QMenu(tr("VPNC"), this);
   menu_VPNC->addAction(ui.actionProviderVPNC);
   menu_VPNC->addSeparator();
@@ -493,7 +497,8 @@ void VPN_Editor::inputComboBox(QAction* act)
   if (act == ui.actionOpenVPN_Proto) sl << "udp" << "tcp-client" << "tcp-server";
   if (act == ui.actionOpenVPN_CompLZO) sl << "adaptive" << "yes" << "no";
   if (act == ui.actionOpenVPN_RemoteCertTls) sl << "client" << "server";
-    
+  if (act == ui.actionOpenVPN_DeviceType) sl << "tun" << "tap";
+ 
   QStringList sl_tr = TranslateStrings::cmtr_sl(sl);
   QString item = QInputDialog::getItem(this,
     tr("%1 - Item Input").arg(TranslateStrings::cmtr("cmst")),

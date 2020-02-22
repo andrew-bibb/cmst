@@ -10,7 +10,8 @@
 <li>Added mDNS enable or disable tool to provisioning editor.</li>
 <li>Add Last Address Conflict information to details tab.</li>
 <li>Added VPNC.DeviceType to VPN provisioning editor.</li>
-<li>Added WireGuard to VPN Provisioning editor.</li>
+<li>Added WireGuard configuration options to VPN Provisioning editor.</li>
+<li>Added OpenVPN.DeviceType to VPN provisioning editor.</li>
 </ul>
 </ul>
 <b> 2019.01.13</b>
