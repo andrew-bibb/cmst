@@ -110,6 +110,7 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   group_freeform->addAction(ui.actionWireGuard_PublicKey);
   group_freeform->addAction(ui.actionWireGuard_PresharedKey);
   group_freeform->addAction(ui.actionWireGuard_AllowedIPs);
+  group_freeform->addAction(ui.actionOpenConnect_Usergroup);
     
   group_combobox = new QActionGroup(this);
   group_combobox->addAction(ui.actionVPNC_IKE_Authmode);
@@ -123,7 +124,12 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   group_combobox->addAction(ui.actionOpenVPN_CompLZO);
   group_combobox->addAction(ui.actionOpenVPN_RemoteCertTls);
   group_combobox->addAction(ui.actionOpenVPN_DeviceType);
-    
+  group_combobox->addAction(ui.actionOpenConnect_AllowSelfSignedCert);
+  group_combobox->addAction(ui.actionOpenConnect_AuthType);
+  group_combobox->addAction(ui.actionOpenConnect_DisableIPv6);
+  group_combobox->addAction(ui.actionOpenConnect_NoDTLS);
+  group_combobox->addAction(ui.actionOpenConnect_NoHTTPKeepalive);
+
   group_yes = new QActionGroup(this);
   group_yes->addAction(ui.actionPPPD_RefuseEAP);
   group_yes->addAction(ui.actionPPPD_RefusePAP);
@@ -193,6 +199,8 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   group_selectfile->addAction(ui.actionOpenConnect_ClientCert);
   group_selectfile->addAction(ui.actionOpenVPN_AuthUserPass);
   group_selectfile->addAction(ui.actionOpenVPN_AskPass);
+  group_selectfile->addAction(ui.actionOpenConnect_PKCSClientCert);
+  group_selectfile->addAction(ui.actionOpenConnect_UserPrivateKey);
 
   // Add Actions from UI to menu's
   menu_global = new QMenu(tr("Global"), this);
@@ -212,6 +220,17 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   menu_OpenConnect->addAction(ui.actionOpenConnect_Cookie);
   menu_OpenConnect->addSeparator();
   menu_OpenConnect->addAction(ui.actionOpenConnect_VPNHost);  
+  if (ver > 1.36f) {
+    menu_OpenConnect->addSeparator();
+    menu_OpenConnect->addAction(ui.actionOpenConnect_AllowSelfSignedCert);
+    menu_OpenConnect->addAction(ui.actionOpenConnect_AuthType);
+    menu_OpenConnect->addAction(ui.actionOpenConnect_DisableIPv6);
+    menu_OpenConnect->addAction(ui.actionOpenConnect_NoDTLS);
+    menu_OpenConnect->addAction(ui.actionOpenConnect_NoHTTPKeepalive);
+    menu_OpenConnect->addAction(ui.actionOpenConnect_PKCSClientCert);
+    menu_OpenConnect->addAction(ui.actionOpenConnect_Usergroup);
+    menu_OpenConnect->addAction(ui.actionOpenConnect_UserPrivateKey);
+  }
      
   menu_OpenVPN = new QMenu(tr("OpenVPN"), this);
   menu_OpenVPN->addAction(ui.actionProviderOpenVPN);
@@ -401,10 +420,11 @@ void VPN_Editor::inputSelectFile(QAction* act)
   if (act == ui.actionOpenVPN_Key) filterstring = tr("Key Files (*.key *.ca *.cert *.crt *.pem);;All Files (*.*)");
   if (act == ui.actionOpenVPN_ConfigFile) filterstring = tr("Config Files (*.ovpn *.conf *.config);;All Files (*.*)");
   
-  filepath = "/etc/openvpn";  
+  filepath = "/etc/openconnect";  
   if (act == ui.actionOpenConnect_CACert) filterstring = tr("Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
   if (act == ui.actionOpenConnect_ClientCert) filterstring = tr("Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
-  
+  if (act == ui.actionOpenConnect_PKCSClientCert) filterstring = tr("Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
+  if (act == ui.actionOpenConnect_UserPrivateKey) filterstring = tr("Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)");
   
   QString fname = QFileDialog::getOpenFileName(this, act->toolTip(),
                       filepath,
@@ -498,7 +518,12 @@ void VPN_Editor::inputComboBox(QAction* act)
   if (act == ui.actionOpenVPN_CompLZO) sl << "adaptive" << "yes" << "no";
   if (act == ui.actionOpenVPN_RemoteCertTls) sl << "client" << "server";
   if (act == ui.actionOpenVPN_DeviceType) sl << "tun" << "tap";
- 
+  if (act == ui.actionOpenConnect_AllowSelfSignedCert) sl << "false" << "true";
+  if (act == ui.actionOpenConnect_AuthType) sl << "cookie" << "cookie_with_userpass" << "userpass" << "publickey" << "pkcs";
+  if (act == ui.actionOpenConnect_DisableIPv6) sl << "false" << "true";
+  if (act == ui.actionOpenConnect_NoDTLS) sl << "false" << "true";
+  if (act == ui.actionOpenConnect_NoHTTPKeepalive) sl << "false" << "true";
+
   QStringList sl_tr = TranslateStrings::cmtr_sl(sl);
   QString item = QInputDialog::getItem(this,
     tr("%1 - Item Input").arg(TranslateStrings::cmtr("cmst")),
@@ -526,7 +551,7 @@ void VPN_Editor::inputYes(QAction* act)
   
   return;
 }
-//
+
 // Slot called when a member of the QActionGroup group_freeform is triggered
 // Freeform strings may have spaces in them.  For strings that cannot have spaces
 // use validated text and set b_multiple to false.

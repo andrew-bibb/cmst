@@ -953,6 +953,70 @@ that the peer is no longer connected.</string>
     <string>Wheher the VPN should use tun or tap.</string>
    </property>
   </action>
+  <action name="actionOpenConnect_AllowSelfSignedCert">
+   <property name="text">
+    <string>OpenConnect.AllowSelfSignedCert</string>
+   </property>
+   <property name="toolTip">
+    <string>Define if self signed server certificates are allowed.</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_AuthType">
+   <property name="text">
+    <string>OpenConnect.AuthType</string>
+   </property>
+   <property name="toolTip">
+    <string>Type of authentication used.</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_DisableIPv6">
+   <property name="text">
+    <string>OpenConnect.DisableIPv6</string>
+   </property>
+   <property name="toolTip">
+    <string>Do not ask for IPv6 connectivity.</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_NoDTLS">
+   <property name="text">
+    <string>OpenConnect.NoDTLS</string>
+   </property>
+   <property name="toolTip">
+    <string>Disable DTLS and ESP.</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_NoHTTPKeepalive">
+   <property name="text">
+    <string>OpenConnect.NoHTTPKeepalive</string>
+   </property>
+   <property name="toolTip">
+    <string>Disable HTTP connection re-use.</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_PKCSClientCert">
+   <property name="text">
+    <string>OpenConnect.PKCSClientCert</string>
+   </property>
+   <property name="toolTip">
+    <string>Certificate and privatekey in a PKCS#1/PKCS#8/PKCS#12 structure.</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_Usergroup">
+   <property name="text">
+    <string>OpenConnect.Usergroup</string>
+   </property>
+   <property name="toolTip">
+    <string>Set login usergroup on remote server.</string>
+   </property>
+  </action>
+  <action name="actionOpenConnect_UserPrivateKey">
+   <property name="text">
+    <string>OpenConnect.UserPrivateKey</string>
+   </property>
+   <property name="toolTip">
+    <string>SSL private key file needed by web authentication.</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>
