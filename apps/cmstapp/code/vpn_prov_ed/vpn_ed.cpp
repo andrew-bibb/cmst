@@ -220,7 +220,7 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   menu_OpenConnect->addAction(ui.actionOpenConnect_Cookie);
   menu_OpenConnect->addSeparator();
   menu_OpenConnect->addAction(ui.actionOpenConnect_VPNHost);  
-  if (ver > 1.36f) {
+  if (ver > 1.37f) {
     menu_OpenConnect->addSeparator();
     menu_OpenConnect->addAction(ui.actionOpenConnect_AllowSelfSignedCert);
     menu_OpenConnect->addAction(ui.actionOpenConnect_AuthType);

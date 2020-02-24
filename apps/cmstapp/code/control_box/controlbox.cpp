@@ -489,25 +489,24 @@ void ControlBox::aboutCMST()
 {
  QMessageBox::about(this, tr("About %1").arg(TranslateStrings::cmtr("cmst")),
       tr("<center>%1 is a program to interface with the Connman daemon and to provide a system tray control."
-      "<br><center>Version <b>%2</b>"
-                  "<center>Release date: %3"
-                  "<center>Copyright c %4<center>by"
-                  "<center>Andrew J. Bibb"
-                  "<center>Vermont, USA"
-                  "<br><center><b>Translations:</b>"
-                  "<center>Jianfeng Zhang (Chinese)"
-                  "<center>sqozz (German)"
-                  "<center>Ilya Shestopalov (Russian)"
-                  "<center>Heimen Stoffels (Dutch)"
-                  "<br><center><b>Build Information:</b>"
-                  "<center>Compiled using QT version %5"
-                  /*"<center>Built %6 - %7"*/)  .arg(TranslateStrings::cmtr("cmst"))
-                                            .arg(VERSION)
-                                            .arg(RELEASE_DATE)
-                                            .arg(COPYRIGHT_DATE)
-                                            .arg(QT_VERSION_STR)
-                                            /*.arg(__DATE__)
-                                            .arg(__TIME__)*/ );
+	"<br><center>Version <b>%2</b>"
+	 "<center>Release date: %3"
+	 "<center>Copyright c %4<center>by"
+	 "<center>Andrew J. Bibb"
+	 "<center>Vermont, USA"
+	 "<br><center><b>Translations:</b>"
+	 "<center>Jianfeng Zhang (Chinese)"
+	 "<center>sqozz (German)"
+	 "<center>Ilya Shestopalov (Russian)"
+	 "<center>Heimen Stoffels (Dutch)"
+	 "<br><center><b>Build Information:</b>"
+	 "<center>Compiled using QT version %5")
+	  .arg(TranslateStrings::cmtr("cmst"))
+	  .arg(VERSION)
+	  .arg(RELEASE_DATE)
+	  .arg(COPYRIGHT_DATE)
+	  .arg(QT_VERSION_STR)
+	   );
 }
 
 //

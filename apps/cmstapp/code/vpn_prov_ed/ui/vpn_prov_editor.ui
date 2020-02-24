@@ -950,7 +950,7 @@ that the peer is no longer connected.</string>
     <string>OpenVPN.DeviceType</string>
    </property>
    <property name="toolTip">
-    <string>Wheher the VPN should use tun or tap.</string>
+    <string>Whether the VPN should use tun or tap.</string>
    </property>
   </action>
   <action name="actionOpenConnect_AllowSelfSignedCert">
