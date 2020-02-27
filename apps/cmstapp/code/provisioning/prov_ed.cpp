@@ -44,7 +44,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/shared/shared.h"
 //
 // Provisioning Editor constructor
-ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
+ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDialog(parent)
 {
   // Setup the user interface
   ui.setupUi(this);
@@ -90,7 +90,8 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   group_combobox->addAction(ui.actionWifiSecurity);
   group_combobox->addAction(ui.actionWifiHidden);
   group_combobox->addAction(ui.actionServiceIPv6Privacy);
-  
+  group_combobox->addAction(ui.actionServiceIPv4);
+
   group_validated = new QActionGroup(this);
   group_validated->addAction(ui.actionServiceMAC);
   group_validated->addAction(ui.actionWifiSSID);
@@ -105,11 +106,6 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   group_selectfile->addAction(ui.actionWifiClientCertFile);
   group_selectfile->addAction(ui.actionWifiPrivateKeyFile);
   
-  group_ipv4 = new QActionGroup(this);
-  group_ipv4->addAction(ui.actionServiceIPv4Off);
-  group_ipv4->addAction(ui.actionServiceIPV4DHCP);
-  group_ipv4->addAction(ui.actionServiceIPv4Address);
-
   group_ipv6 = new QActionGroup(this);
   group_ipv6->addAction(ui.actionServiceIPv6Off);
   group_ipv6->addAction(ui. actionServiceIPv6Auto);
@@ -129,9 +125,7 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   menu_service->addAction(ui.actionServiceDomain);
   menu_service->addAction(ui.actionServiceMAC);
   menu_service->addSeparator();
-  menu_service->addAction(ui.actionServiceIPv4Off);
-  menu_service->addAction(ui.actionServiceIPV4DHCP);
-  menu_service->addAction(ui.actionServiceIPv4Address);
+  menu_service->addAction(ui.actionServiceIPv4);
   menu_service->addSeparator();
   menu_service->addAction(ui.actionServiceIPv6Off);
   menu_service->addAction(ui. actionServiceIPv6Auto);
@@ -185,7 +179,6 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent) : QDialog(parent)
   connect(group_combobox, SIGNAL(triggered(QAction*)), this, SLOT(inputComboBox(QAction*)));
   connect(group_validated, SIGNAL(triggered(QAction*)), this, SLOT(inputValidated(QAction*)));
   connect(group_selectfile, SIGNAL(triggered(QAction*)), this, SLOT(inputSelectFile(QAction*)));
-  connect(group_ipv4, SIGNAL(triggered(QAction*)), this, SLOT(ipv4Triggered(QAction*)));
   connect(group_ipv6, SIGNAL(triggered(QAction*)), this, SLOT(ipv6Triggered(QAction*)));
 }
 
@@ -275,7 +268,8 @@ void ProvisioningEditor::inputComboBox(QAction* act)
   if (act == ui.actionWifiSecurity) {str = tr("Network security type."); sl << "psk" << "ieee8021x" << "wep" << "none";}
   if (act == ui.actionWifiHidden) {str = tr("Hidden network"); sl << "true" << "false";}
   if (act == ui.actionServiceIPv6Privacy) {str = tr("IPv6 Privacy"); sl << "disabled" << "enabled" << "preferred";}	
-  
+  if (act == ui.actionServiceIPv4) {str = tr("IPv4 Settings"); sl << "off" << "dhcp";}  
+
   QStringList sl_tr = TranslateStrings::cmtr_sl(sl);
   QString item = QInputDialog::getItem(this,
     tr("%1 - Item Input").arg(TranslateStrings::cmtr("cmst")),
@@ -288,6 +282,7 @@ void ProvisioningEditor::inputComboBox(QAction* act)
   key.append(" = %1\n");
   if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(sl.at(sl_tr.indexOf(QRegularExpression(item)))) );
   
+  if (act == ui.actionServiceIPv4) ipv4Triggered(item);
   return;
 }
 //
@@ -335,16 +330,14 @@ void ProvisioningEditor::inputFreeForm(QAction* act)
 
 //
 //  Slot called when a member of the QActionGroup group_ipv4 is triggered
-void ProvisioningEditor::ipv4Triggered(QAction* act)
+void ProvisioningEditor::ipv4Triggered(const QString& item)
 {
   // variables
   QString s = "IPv4 = %1\n";
   QString val;
 
-  // process action
-  if (act == ui.actionServiceIPv4Off) ui.plainTextEdit_main->insertPlainText(s.arg("off") );
-  if (act == ui.actionServiceIPV4DHCP) ui.plainTextEdit_main->insertPlainText(s.arg("dhcp") );
-  if (act == ui.actionServiceIPv4Address) {
+  // process string item
+  if (item == "DHCP") {
     QMessageBox::StandardButton but = QMessageBox::information(this, 
                                         QString(TranslateStrings::cmtr("cmst")) + tr(" Information"),
                                         tr("The IPv4 <b>Address</b>, <b>Netmask</b>, and optionally <b>Gateway</b> need to be provided."  \
@@ -372,7 +365,7 @@ void ProvisioningEditor::ipv4Triggered(QAction* act)
       } // if address accepted 
       vd->deleteLater();
     } // we pressed OK on the information dialog
-  } // act == actionServiceIPv4Address
+  } // item = dhcp
   
   return;
 }
@@ -416,7 +409,7 @@ void ProvisioningEditor::ipv6Triggered(QAction* act)
           } // if gateway was accepted
           ui.plainTextEdit_main->insertPlainText(s.arg(val) );
         } // if prefix provided 
-      } // if address accepted
+      } // if tddress accepted
       vd->deleteLater();
     } // we pressed OK on the informaion dialog
   } // act == actionServiceIPv6Address

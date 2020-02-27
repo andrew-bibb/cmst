@@ -47,7 +47,7 @@ class ProvisioningEditor : public QDialog
   Q_OBJECT
 
   public:
-    ProvisioningEditor(QWidget*);
+    ProvisioningEditor(QWidget*, const float&);
     
   private:  
   // members
@@ -63,7 +63,6 @@ class ProvisioningEditor : public QDialog
     QActionGroup* group_combobox;
     QActionGroup* group_validated;
     QActionGroup* group_selectfile;
-    QActionGroup* group_ipv4;
     QActionGroup* group_ipv6;
     QButtonGroup* bg01;
     QStatusBar* statusbar;
@@ -75,7 +74,7 @@ class ProvisioningEditor : public QDialog
     void inputValidated(QAction*);
     void inputComboBox(QAction*);
     void inputFreeForm(QAction*);
-    void ipv4Triggered(QAction*);
+    void ipv4Triggered(const QString&);
     void ipv6Triggered(QAction*);
     void templateTriggered(QAction*);
     void showWhatsThis();

@@ -317,28 +317,12 @@
     <string>Eduroam (short)</string>
    </property>
   </action>
-  <action name="actionServiceIPv4Address">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
+  <action name="actionServiceIPv4">
    <property name="text">
-    <string>IPv4 Address</string>
+    <string>IPv4</string>
    </property>
-  </action>
-  <action name="actionServiceIPv4Off">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>IPv4 Off</string>
-   </property>
-  </action>
-  <action name="actionServiceIPV4DHCP">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>IPV4 DHCP</string>
+   <property name="toolTip">
+    <string>Set IPv4 to &quot;off&quot; or &quot;dhcp&quot;</string>
    </property>
   </action>
   <action name="actionServiceIPv6Address">
