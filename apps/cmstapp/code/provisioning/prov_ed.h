@@ -74,7 +74,7 @@ class ProvisioningEditor : public QDialog
     void inputValidated(QAction*);
     void inputComboBox(QAction*);
     void inputFreeForm(QAction*);
-    void ipv4Triggered(const QString&);
+    void ipv4Address();
     void ipv6Triggered(QAction*);
     void templateTriggered(QAction*);
     void showWhatsThis();

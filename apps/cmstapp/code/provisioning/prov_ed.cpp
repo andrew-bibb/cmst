@@ -268,7 +268,7 @@ void ProvisioningEditor::inputComboBox(QAction* act)
   if (act == ui.actionWifiSecurity) {str = tr("Network security type."); sl << "psk" << "ieee8021x" << "wep" << "none";}
   if (act == ui.actionWifiHidden) {str = tr("Hidden network"); sl << "true" << "false";}
   if (act == ui.actionServiceIPv6Privacy) {str = tr("IPv6 Privacy"); sl << "disabled" << "enabled" << "preferred";}	
-  if (act == ui.actionServiceIPv4) {str = tr("IPv4 Settings"); sl << "off" << "dhcp";}  
+  if (act == ui.actionServiceIPv4) {str = tr("IPv4 Settings"); sl << "off" << "dhcp" << "address";}  
 
   QStringList sl_tr = TranslateStrings::cmtr_sl(sl);
   QString item = QInputDialog::getItem(this,
@@ -278,12 +278,15 @@ void ProvisioningEditor::inputComboBox(QAction* act)
     0,
     false,
     &ok);
-    
-  key.append(" = %1\n");
-  if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(sl.at(sl_tr.indexOf(QRegularExpression(item)))) );
-  
-  if (act == ui.actionServiceIPv4) ipv4Triggered(item);
-  return;
+   
+  // if we need ipv4 address information go there
+  if (act == ui.actionServiceIPv4 && sl.at(sl_tr.indexOf(QRegularExpression(item))) == "address" ) ipv4Address();
+  else { 
+    key.append(" = %1\n");
+    if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(sl.at(sl_tr.indexOf(QRegularExpression(item)))) );
+ } 
+
+    return;
 }
 //
 // Slot called when a member of the QActionGroup group_freeform is triggered
@@ -329,44 +332,43 @@ void ProvisioningEditor::inputFreeForm(QAction* act)
 }
 
 //
-//  Slot called when a member of the QActionGroup group_ipv4 is triggered
-void ProvisioningEditor::ipv4Triggered(const QString& item)
+//  Not a real slot anymore as we only call this directly when we need to get ipv4 address/netmask/gateway
+//  information from the user.
+void ProvisioningEditor::ipv4Address()
 {
   // variables
   QString s = "IPv4 = %1\n";
   QString val;
 
   // process string item
-  if (item == "DHCP") {
     QMessageBox::StandardButton but = QMessageBox::information(this, 
                                         QString(TranslateStrings::cmtr("cmst")) + tr(" Information"),
                                         tr("The IPv4 <b>Address</b>, <b>Netmask</b>, and optionally <b>Gateway</b> need to be provided."  \
                                         "<p>Press OK when you are ready to proceed."),
                                         QMessageBox::Ok | QMessageBox::Abort,QMessageBox::Ok);
-    if (but == QMessageBox::Ok) {
-      shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
-      vd->setLabel(tr("IPv4 Address"));
+  if (but == QMessageBox::Ok) {
+    shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
+    vd->setLabel(tr("IPv4 Address"));
+    vd->setValidator(CMST::ValDialog_IPv4);
+    if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
+      val = vd->getText();
+      vd->clear();
+      vd->setLabel(tr("IPv4 Netmask")); 
       vd->setValidator(CMST::ValDialog_IPv4);
       if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
-        val = vd->getText();
-        vd->clear();
-        vd->setLabel(tr("IPv4 Netmask")); 
-        vd->setValidator(CMST::ValDialog_IPv4);
-        if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
-          val.append("/" + vd->getText() );
-          vd->clear();
-          vd->setLabel(tr("IPv4 Gateway (This is an optional entry)")); 
-          vd->setValidator(CMST::ValDialog_IPv4);
-          if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) { 
-            val.append("/" + vd->getText() );
-          } // if gateway accpted
-          ui.plainTextEdit_main->insertPlainText(s.arg(val) );
-        } // if netmask accepted
-      } // if address accepted 
-      vd->deleteLater();
-    } // we pressed OK on the information dialog
-  } // item = dhcp
-  
+	val.append("/" + vd->getText() );
+	vd->clear();
+	vd->setLabel(tr("IPv4 Gateway.<br><br>This is an optional entry, press cancel if there is no entry for gateway")); 
+	vd->setValidator(CMST::ValDialog_IPv4);
+	if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) { 
+	  val.append("/" + vd->getText() );
+	} // if gateway accpted
+	ui.plainTextEdit_main->insertPlainText(s.arg(val) );
+      } // if netmask accepted
+    } // if address accepted 
+    vd->deleteLater();
+  } // we pressed OK on the information dialog
+
   return;
 }
 

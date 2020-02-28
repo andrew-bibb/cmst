@@ -107,6 +107,7 @@ TranslateStrings::TranslateStrings(QObject* parent) : QObject(parent)
   sl << tr("manual", "connman ipv4 method string");
   sl << tr("off", "connman ipv4 method string");
   sl << tr("fixed", "connman ipv4 method string");
+  sl << tr("address", "connamn ipv4 method string");
   
   sl << tr("auto", "connman ipv6 method string");
   sl << tr("manual", "connman ipv6 method string");
