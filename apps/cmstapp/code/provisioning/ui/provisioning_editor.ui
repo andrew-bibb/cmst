@@ -322,31 +322,15 @@
     <string>IPv4</string>
    </property>
    <property name="toolTip">
-    <string>Set IPv4 to &quot;off&quot; or &quot;dhcp&quot;</string>
+    <string>Set IPv4 to &quot;off&quot;, &quot;dhcp&quot;, or enter IPV4 address information</string>
    </property>
   </action>
-  <action name="actionServiceIPv6Address">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
+  <action name="actionServiceIPv6">
    <property name="text">
-    <string>IPv6 Address</string>
+    <string>IPv6</string>
    </property>
-  </action>
-  <action name="actionServiceIPv6Off">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>IPv6 Off</string>
-   </property>
-  </action>
-  <action name="actionServiceIPv6Auto">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>IPv6 Auto</string>
+   <property name="toolTip">
+    <string>Set IPv6 to &quot;off, &quot;auto&quot;, or enter IPv6 address information</string>
    </property>
   </action>
   <action name="actionServiceIPv6Privacy">

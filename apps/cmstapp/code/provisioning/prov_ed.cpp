@@ -91,6 +91,7 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   group_combobox->addAction(ui.actionWifiHidden);
   group_combobox->addAction(ui.actionServiceIPv6Privacy);
   group_combobox->addAction(ui.actionServiceIPv4);
+  group_combobox->addAction(ui.actionServiceIPv6);
 
   group_validated = new QActionGroup(this);
   group_validated->addAction(ui.actionServiceMAC);
@@ -105,11 +106,6 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   group_selectfile->addAction(ui.actionWifiCACertFile);
   group_selectfile->addAction(ui.actionWifiClientCertFile);
   group_selectfile->addAction(ui.actionWifiPrivateKeyFile);
-  
-  group_ipv6 = new QActionGroup(this);
-  group_ipv6->addAction(ui.actionServiceIPv6Off);
-  group_ipv6->addAction(ui. actionServiceIPv6Auto);
-  group_ipv6->addAction(ui.actionServiceIPv6Address);
   
   // Add Actions from UI to menu's
   menu_global = new QMenu(tr("Global"), this);
@@ -127,9 +123,7 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   menu_service->addSeparator();
   menu_service->addAction(ui.actionServiceIPv4);
   menu_service->addSeparator();
-  menu_service->addAction(ui.actionServiceIPv6Off);
-  menu_service->addAction(ui. actionServiceIPv6Auto);
-  menu_service->addAction(ui.actionServiceIPv6Address);
+  menu_service->addAction(ui.actionServiceIPv6);
   menu_service->addAction(ui.actionServiceIPv6Privacy);
   menu_service->addSeparator();
   menu_service->addAction(ui.actionServiceNameServers);
@@ -179,7 +173,6 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   connect(group_combobox, SIGNAL(triggered(QAction*)), this, SLOT(inputComboBox(QAction*)));
   connect(group_validated, SIGNAL(triggered(QAction*)), this, SLOT(inputValidated(QAction*)));
   connect(group_selectfile, SIGNAL(triggered(QAction*)), this, SLOT(inputSelectFile(QAction*)));
-  connect(group_ipv6, SIGNAL(triggered(QAction*)), this, SLOT(ipv6Triggered(QAction*)));
 }
 
 /////////////////////////////////////////////// Private Slots /////////////////////////////////////////////
@@ -269,6 +262,7 @@ void ProvisioningEditor::inputComboBox(QAction* act)
   if (act == ui.actionWifiHidden) {str = tr("Hidden network"); sl << "true" << "false";}
   if (act == ui.actionServiceIPv6Privacy) {str = tr("IPv6 Privacy"); sl << "disabled" << "enabled" << "preferred";}	
   if (act == ui.actionServiceIPv4) {str = tr("IPv4 Settings"); sl << "off" << "dhcp" << "address";}  
+  if (act == ui.actionServiceIPv6) {str = tr("IPv6 Settings"); sl << "off" << "auto" << "address";}
 
   QStringList sl_tr = TranslateStrings::cmtr_sl(sl);
   QString item = QInputDialog::getItem(this,
@@ -279,13 +273,15 @@ void ProvisioningEditor::inputComboBox(QAction* act)
     false,
     &ok);
    
-  // if we need ipv4 address information go there
+  // if we need ipv4  or ipv6 address information go there
   if (act == ui.actionServiceIPv4 && sl.at(sl_tr.indexOf(QRegularExpression(item))) == "address" ) ipv4Address();
-  else { 
-    key.append(" = %1\n");
+  else{ 
+    if (act == ui.actionServiceIPv6 && sl.at(sl_tr.indexOf(QRegularExpression(item))) == "address" ) ipv6Address();
+    else { 
+      key.append(" = %1\n");
     if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(sl.at(sl_tr.indexOf(QRegularExpression(item)))) );
- } 
-
+    }  // else not ipv4 or ipv6
+  } //else not ipv4
     return;
 }
 //
@@ -341,20 +337,14 @@ void ProvisioningEditor::ipv4Address()
   QString val;
 
   // process string item
-    QMessageBox::StandardButton but = QMessageBox::information(this, 
-                                        QString(TranslateStrings::cmtr("cmst")) + tr(" Information"),
-                                        tr("The IPv4 <b>Address</b>, <b>Netmask</b>, and optionally <b>Gateway</b> need to be provided."  \
-                                        "<p>Press OK when you are ready to proceed."),
-                                        QMessageBox::Ok | QMessageBox::Abort,QMessageBox::Ok);
-  if (but == QMessageBox::Ok) {
-    shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
-    vd->setLabel(tr("IPv4 Address"));
+  shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
+    vd->setLabel(tr("IPv4 Address. <br><br>Enter the IPv4 network address in the form xxx.xxx.xxx.xxx"));
     vd->setValidator(CMST::ValDialog_IPv4);
     if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
       val = vd->getText();
       vd->clear();
-      vd->setLabel(tr("IPv4 Netmask")); 
-      vd->setValidator(CMST::ValDialog_IPv4);
+      vd->setLabel(tr("IPv4 Netmask. <br><br>The entry can be a mask length (example 24) or in the form xxx:xxx:xxx:xxx")); 
+      vd->setValidator(CMST::ValDialog_nmask);
       if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
 	val.append("/" + vd->getText() );
 	vd->clear();
@@ -367,14 +357,14 @@ void ProvisioningEditor::ipv4Address()
       } // if netmask accepted
     } // if address accepted 
     vd->deleteLater();
-  } // we pressed OK on the information dialog
 
   return;
 }
 
 //
-// Slot called when a member of the QActonGroup group_ipv6 is triggered
-void ProvisioningEditor::ipv6Triggered(QAction* act)
+//  Not a real slot anymore as we only call this directly when we need to get ipv6 address/prefix/gateway
+//  information from the user.
+void ProvisioningEditor::ipv6Address()
 {
   // variables
   QString s = "IPv6 = %1\n";
@@ -382,40 +372,36 @@ void ProvisioningEditor::ipv6Triggered(QAction* act)
   QString val;
 
   // process action
-  if (act == ui.actionServiceIPv6Off) ui.plainTextEdit_main->insertPlainText(s.arg("off") );
-  if (act == ui.actionServiceIPv6Auto) ui.plainTextEdit_main->insertPlainText(s.arg("auto") );
-  if (act == ui.actionServiceIPv6Address) {
     QMessageBox::StandardButton but = QMessageBox::information(this, 
                                         QString(TranslateStrings::cmtr("cmst")) + tr(" Information"),
                                         tr("The IPv6 <b>Address</b>, <b>Prefix Length</b>, and optionally <b>Gateway</b> need to be provided."  \
                                         "<p>Press OK when you are ready to proceed."),
                                         QMessageBox::Ok | QMessageBox::Abort,QMessageBox::Ok);
-    if (but == QMessageBox::Ok) {
-      shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
-      vd->setLabel(tr("IPv6 Address"));
-      vd->setValidator(CMST::ValDialog_IPv6);
-      if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
-        val = vd->getText();
-        int i = QInputDialog::getInt(this,
-          tr("%1 - Integer Input").arg(TranslateStrings::cmtr("cmst")),
-          tr("Enter the IPv6 prefix length"),
-          0, 0, 255, 1,
-          &ok);
-        if (ok) {
-          val.append(QString("/%1").arg(i) );
-          shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
-          vd->setLabel(tr("IPv6 Gateway (This is an optional entry)")); 
-          vd->setValidator(CMST::ValDialog_IPv6);
-          if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
-            val.append(QString("/" + vd->getText()) );
-          } // if gateway was accepted
-          ui.plainTextEdit_main->insertPlainText(s.arg(val) );
-        } // if prefix provided 
-      } // if tddress accepted
-      vd->deleteLater();
-    } // we pressed OK on the informaion dialog
-  } // act == actionServiceIPv6Address
-  
+  if (but == QMessageBox::Ok) {
+    shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
+    vd->setLabel(tr("IPv6 Address"));
+    vd->setValidator(CMST::ValDialog_IPv6);
+    if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
+      val = vd->getText();
+      int i = QInputDialog::getInt(this,
+	tr("%1 - Integer Input").arg(TranslateStrings::cmtr("cmst")),
+	tr("Enter the IPv6 prefix length"),
+	0, 0, 255, 1,
+	&ok);
+      if (ok) {
+	val.append(QString("/%1").arg(i) );
+	shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
+	vd->setLabel(tr("IPv6 Gateway .<br><br>This is an optional entry, press cancel if there is no entry for gateway")); 
+	vd->setValidator(CMST::ValDialog_IPv6);
+	if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
+	  val.append(QString("/" + vd->getText()) );
+	} // if gateway was accepted
+	ui.plainTextEdit_main->insertPlainText(s.arg(val) );
+      } // if prefix provided 
+    } // if tddress accepted
+    vd->deleteLater();
+  } // we pressed OK on the informaion dialog
+
   return;
 }
 

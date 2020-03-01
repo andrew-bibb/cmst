@@ -63,7 +63,6 @@ class ProvisioningEditor : public QDialog
     QActionGroup* group_combobox;
     QActionGroup* group_validated;
     QActionGroup* group_selectfile;
-    QActionGroup* group_ipv6;
     QButtonGroup* bg01;
     QStatusBar* statusbar;
     int statustimeout;
@@ -75,7 +74,7 @@ class ProvisioningEditor : public QDialog
     void inputComboBox(QAction*);
     void inputFreeForm(QAction*);
     void ipv4Address();
-    void ipv6Triggered(QAction*);
+    void ipv6Address();
     void templateTriggered(QAction*);
     void showWhatsThis();
     void resetPage();

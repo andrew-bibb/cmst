@@ -123,6 +123,7 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
 {
   // setup a switch to set the validator
   const QString s_ip4   = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
+  const QString s_nmask	= "(?:8|16|24)";
   const QString s_ip6   = "(?:[0-9a-fA-F]{1,4})";
   const QString s_mac   = "(?:[0-9a-fA-F]{1,2})";
   const QString s_hex   = "[0-9a-fA-F]*";
@@ -137,57 +138,74 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
     case CMST::ValDialog_IPv4: {
       QRegularExpression rx4(s_start + s_ip4 + "(?:\\." + s_ip4 + "){3}" + s_end);
       QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
-      lineedit->setValidator(lev_4); }
+      lineedit->setValidator(lev_4); 
+      lev_4->deleteLater(); }
+      break;
+    case CMST::ValDialog_nmask: {
+      QRegularExpression nmsk(s_start +  "(" + s_nmask + "|" + s_ip4 + "(?:\\." + s_ip4 + "){3})" + s_end);
+      QRegularExpressionValidator* lev_nmask = new QRegularExpressionValidator(nmsk, this);
+      lineedit->setValidator(lev_nmask);
+      lev_nmask->deleteLater(); }
       break;
     case CMST::ValDialog_IPv6: {
       QRegularExpression rx6(s_start + s_ip6 + "(?::" + s_ip6 + "){7}" + s_end);
       QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
-      lineedit->setValidator(lev_6); }
+      lineedit->setValidator(lev_6);
+      lev_6->deleteLater(); }
       break;
     case CMST::ValDialog_MAC: {
       QRegularExpression rxm(s_start + s_mac + "(?::" + s_mac + "){5}" + s_end);
       QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rxm, this);
-      lineedit->setValidator(lev_m); }
+      lineedit->setValidator(lev_m);
+      lev_m->deleteLater(); }
       break;
     case CMST::ValDialog_46: {
       QRegularExpression rx46(s_start + "(" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7})" + s_end);
       QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);
-      lineedit->setValidator(lev_46); }
+      lineedit->setValidator(lev_46);
+      lev_46->deleteLater(); }
       break;
     case CMST::ValDialog_Hex: {
       QRegularExpression rxh(s_start + s_hex + s_end);
       QRegularExpressionValidator* lev_h = new QRegularExpressionValidator(rxh, this);
-      lineedit->setValidator(lev_h); }
+      lineedit->setValidator(lev_h);
+      lev_h->deleteLater(); }
       break;
     case CMST::ValDialog_Int: {
       QRegularExpression rxint(s_start + s_int + s_end);
       QRegularExpressionValidator* lev_int = new QRegularExpressionValidator(rxint, this);
-      lineedit->setValidator(lev_int); }
+      lineedit->setValidator(lev_int);
+      lev_int->deleteLater(); }
       break;
     case CMST::ValDialog_Dom: {
       QRegularExpression rxdom(s_start + s_dom + s_end);
       QRegularExpressionValidator* lev_dom = new QRegularExpressionValidator(rxdom, this);
-      lineedit->setValidator(lev_dom); }
+      lineedit->setValidator(lev_dom);
+      lev_dom->deleteLater(); }
       break;
     case CMST::ValDialog_Wd: {
       QRegularExpression rxwd(s_start + s_wd + s_end);
       QRegularExpressionValidator* lev_wd = new QRegularExpressionValidator(rxwd, this);
-      lineedit->setValidator(lev_wd); }
+      lineedit->setValidator(lev_wd);
+      lev_wd->deleteLater(); }
       break;
     case CMST::ValDialog_min1ch: {
       QRegularExpression rx1char(s_start + s_ch + "{1,}" + s_end);
       QRegularExpressionValidator* lev_1char = new QRegularExpressionValidator(rx1char, this);
-      lineedit->setValidator(lev_1char); }
+      lineedit->setValidator(lev_1char);
+      lev_1char->deleteLater(); }
       break;
     case CMST::ValDialog_min8ch: {
       QRegularExpression rx8char(s_start + s_ch + "{8,}" + s_end);
       QRegularExpressionValidator* lev_8char = new QRegularExpressionValidator(rx8char, this);
-      lineedit->setValidator(lev_8char); }
+      lineedit->setValidator(lev_8char);
+      lev_8char->deleteLater(); }
       break;
     case CMST::ValDialog_46d: {
       QRegularExpression rx46d(s_start + "(" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7}|" + s_dom + ")" + s_end);
       QRegularExpressionValidator* lev_46d = new QRegularExpressionValidator(rx46d, this);
-      lineedit->setValidator(lev_46d); }
+      lineedit->setValidator(lev_46d);
+      lev_46d->deleteLater(); }
       break;      
     default:
       lineedit->setValidator(0);
