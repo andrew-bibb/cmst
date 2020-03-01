@@ -2724,24 +2724,54 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="325"/>
-        <source>Set IPv4 to &quot;off&quot; or &quot;dhcp&quot;</source>
+        <source>Set IPv4 to &quot;off&quot;, &quot;dhcp&quot;, or enter IPV4 address information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="330"/>
+        <source>IPv6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="333"/>
+        <source>Set IPv6 to &quot;off, &quot;auto&quot;, or enter IPv6 address information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="367"/>
+        <source>DeviceName</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="370"/>
+        <source>Interface name where this provisioning applies (ex: eth0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="375"/>
+        <source>mDNS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="378"/>
+        <source>True if mDNS domains can be resolved and the hostname registered.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="343"/>
+        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="346"/>
+        <source>EAP-PEAP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="351"/>
+        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="354"/>
+        <source>EAP-TLS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="359"/>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="362"/>
-        <source>EAP-PEAP</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="367"/>
-        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="370"/>
-        <source>EAP-TLS</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="375"/>
-        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="378"/>
         <source>EAP-TTLS</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2754,22 +2784,19 @@
         <translation type="vanished">IPv4 关</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="333"/>
         <source>IPv6 Address</source>
-        <translation>IPv6 地址</translation>
+        <translation type="vanished">IPv6 地址</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="341"/>
         <source>IPv6 Off</source>
-        <translation>IPv6 关</translation>
+        <translation type="vanished">IPv6 关</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="349"/>
         <source>IPv6 Auto</source>
-        <translation>IPv6 自动</translation>
+        <translation type="vanished">IPv6 自动</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="354"/>
+        <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="338"/>
         <source>IPv6.Privacy</source>
         <translation>IPv6 隐私</translation>
     </message>
@@ -2777,12 +2804,12 @@
 <context>
     <name>ProvisioningEditor</name>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="115"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="113"/>
         <source>Global</source>
         <translation>全局</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="121"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="119"/>
         <source>Service</source>
         <translation>服务</translation>
     </message>
@@ -2797,165 +2824,190 @@
         <translation>模板</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="194"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="193"/>
         <source>File Path to the CA Certificate File</source>
         <translation>CA证书文件路径</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="195"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="194"/>
         <source>File Path to the Client Certificate File</source>
         <translation>客户端证书文件路径</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="196"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="195"/>
         <source>File path to the Client Private Key File</source>
         <translation>私钥文件路径</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="201"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="200"/>
         <source>Key Files (*.pem);;All Files (*.*)</source>
         <translation>密钥文件 (*.pem);;全部文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="225"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="224"/>
         <source>MAC address.</source>
         <translation>MAC 地址。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="226"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="225"/>
         <source>SSID: hexadecimal representation of an 802.11 SSID</source>
         <translation>SSID: 802.11 SSID 的十六进制表示</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="227"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="226"/>
         <source>List of Nameservers</source>
         <translation>DNS服务器列表</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="228"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="227"/>
         <source>List of Timeservers</source>
         <translation>时间服务器列表</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="229"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="228"/>
         <source>List of DNS Search Domains</source>
         <translation>DNS搜索域列表</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="230"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="229"/>
         <source>Domain name to be used</source>
         <translation>所使用的域名</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="231"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="230"/>
         <source>Enter the string representation of an 802.11 SSID.</source>
         <translation>输入 802.11 SSID 的字符串表示。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="265"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="264"/>
         <source>Service type.</source>
         <translation>服务类型。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="266"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="265"/>
         <source>EAP type.</source>
         <translation>EAP 类型。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="267"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="266"/>
         <source>Private key passphrase type.</source>
         <translation>私钥密码类型。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="268"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="267"/>
         <source>Network security type.</source>
         <translation>网络安全类型。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="269"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="268"/>
         <source>Hidden network</source>
         <translation>隐藏网络</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="270"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="269"/>
         <source>IPv6 Privacy</source>
         <translation>IPv6 隐私</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="271"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="270"/>
         <source>IPv4 Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="275"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="271"/>
+        <source>IPv6 Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="272"/>
+        <source>mDNS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="276"/>
         <source>%1 - Item Input</source>
         <translation>%1 - 项目输入</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="304"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="307"/>
         <source>Tag which will replace the * with&lt;br&gt;an identifier unique to the config file.</source>
         <translation>替换 * 的标签名&lt;br&gt;配置文件的唯一标识。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="305"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="308"/>
         <source>Enter the network name.</source>
         <translation>输入网络名称。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="306"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="309"/>
         <source>Enter a description of the network.</source>
         <translation>输入网络的描述。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="307"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="310"/>
         <source>Password/Passphrase for the private key file.</source>
         <translation>私钥文件的密码。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="308"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="311"/>
         <source>Identity string for EAP.</source>
         <translation>EAP的身份字符串。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="309"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="312"/>
         <source>RSN/WPA/WPA2 Passphrase</source>
         <translation>RSN/WPA/WPA2 密码</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="310"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="313"/>
         <source>Phase 2 (inner authentication with TLS tunnel)&lt;br&gt;authentication method.</source>
         <translation>阶段 2 （通过TLS隧道进行内部身份验证）&lt;br&gt;验证方式。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="322"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="314"/>
+        <source>The interface name in which to  apply the provisioning (ex. eth0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="326"/>
         <source>%1 - Text Input</source>
         <translation>%1 - 文本输入</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="345"/>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="389"/>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="506"/>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="545"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="349"/>
+        <source>IPv4 Address. &lt;br&gt;&lt;br&gt;Enter the IPv4 network address in the form xxx.xxx.xxx.xxx</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="354"/>
+        <source>IPv4 Netmask. &lt;br&gt;&lt;br&gt;The entry can be a mask length (example 24) or in the form xxx:xxx:xxx:xxx</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="395"/>
+        <source>IPv6 Gateway .&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="492"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="531"/>
         <source> Information</source>
         <translation>信息</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="346"/>
         <source>The IPv4 &lt;b&gt;Address&lt;/b&gt;, &lt;b&gt;Netmask&lt;/b&gt;, and optionally &lt;b&gt;Gateway&lt;/b&gt; need to be provided.&lt;p&gt;Press OK when you are ready to proceed.</source>
-        <translation>输入IPv4 的&lt;b&gt;地址&lt;/b&gt;、&lt;b&gt;子网掩码&lt;/b&gt;，和可选的&lt;b&gt;网关&lt;/b&gt;。&lt;p&gt;准备就绪时，按确定。</translation>
+        <translation type="vanished">输入IPv4 的&lt;b&gt;地址&lt;/b&gt;、&lt;b&gt;子网掩码&lt;/b&gt;，和可选的&lt;b&gt;网关&lt;/b&gt;。&lt;p&gt;准备就绪时，按确定。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="351"/>
         <source>IPv4 Address</source>
-        <translation>IPv4 地址</translation>
+        <translation type="vanished">IPv4 地址</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="356"/>
         <source>IPv4 Netmask</source>
-        <translation>IPv4 子网掩码</translation>
+        <translation type="vanished">IPv4 子网掩码</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="361"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="359"/>
         <source>IPv4 Gateway.&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2964,109 +3016,107 @@
         <translation type="vanished">IPv4 网关 （可选）</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="390"/>
         <source>The IPv6 &lt;b&gt;Address&lt;/b&gt;, &lt;b&gt;Prefix Length&lt;/b&gt;, and optionally &lt;b&gt;Gateway&lt;/b&gt; need to be provided.&lt;p&gt;Press OK when you are ready to proceed.</source>
-        <translation>输入IPv6 的&lt;b&gt;地址&lt;/b&gt;、&lt;b&gt;前缀长度&lt;/b&gt;，和可选的&lt;b&gt;网关&lt;/b&gt;。&lt;p&gt;准备就绪时，按确定。</translation>
+        <translation type="vanished">输入IPv6 的&lt;b&gt;地址&lt;/b&gt;、&lt;b&gt;前缀长度&lt;/b&gt;，和可选的&lt;b&gt;网关&lt;/b&gt;。&lt;p&gt;准备就绪时，按确定。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="395"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="383"/>
         <source>IPv6 Address</source>
         <translation>IPv6 地址</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="400"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="388"/>
         <source>%1 - Integer Input</source>
         <translation>%1 - 数字输入</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="401"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="389"/>
         <source>Enter the IPv6 prefix length</source>
         <translation>输入IPv6前缀长度</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="407"/>
         <source>IPv6 Gateway (This is an optional entry)</source>
-        <translation>IPv6 网关 （可选）</translation>
+        <translation type="vanished">IPv6 网关 （可选）</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="507"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="493"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;You may use this dialog to create one.</source>
         <translation>&lt;center&gt;没有找到配置文件。&lt;br&gt;你可以用这个对话框创建一个。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="513"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="499"/>
         <source>%1 - Information</source>
         <translation>%1 - 信息</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="514"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="500"/>
         <source>&lt;center&gt;Reading configuration file: %1</source>
         <translation>&lt;center&gt;读取配置文件： %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="521"/>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="552"/>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="573"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="507"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="538"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="559"/>
         <source>%1 - Select File</source>
         <translation>%1 - 选择文件</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="522"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="508"/>
         <source>Select a file to load.</source>
         <translation>选择要加载的文件。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="546"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="532"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;Nothing will be deleted.</source>
         <translation>&lt;center&gt;没有找到配置文件。&lt;br&gt;不会删除任何东西。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="553"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="539"/>
         <source>Select a file to be deleted.</source>
         <translation>选择要删除的文件。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="574"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="560"/>
         <source>Enter a new file name or select&lt;br&gt;an existing file to overwrite.</source>
         <translation>输入新的文件名或选择并&lt;br&gt;替换一个已经存在的文件。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="609"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="595"/>
         <source>File read completed</source>
         <translation>文件读取完成</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="621"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="607"/>
         <source>File deleted</source>
         <translation>文件已删除</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="623"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="609"/>
         <source>Error encountered deleting.</source>
         <translation>删除时发生了错误。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="637"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="623"/>
         <source>File save failed.</source>
         <translation>文件保存失败。</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="640"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="626"/>
         <source>%L1 KB written</source>
         <translation>%L1 KB 已写入</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="642"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="628"/>
         <source>%L1 Bytes written</source>
         <translation>%L1 Bytes 已写入</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="654"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="640"/>
         <source> Critical</source>
         <translation>严重错误</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="655"/>
+        <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="641"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
         <translation>&lt;b&gt;DBus 错误 名称:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;字符串:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;消息:&lt;/b&gt; %3</translation>
     </message>
@@ -3511,6 +3561,18 @@
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="122"/>
         <source>wireguard</source>
         <comment>connman vpn connection type</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="124"/>
+        <source>true</source>
+        <comment>connman mdns setting</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="125"/>
+        <source>false</source>
+        <comment>connman mdns setting</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -4,6 +4,7 @@
 <ul>
 <li>Move offline checkbox in tab 1 (issue # 201)</li>
 <li>Translation to Dutch by Heimen Stoffels.</li>
+<li>Cleaned up the IPv4 and IPv6 entries in the provisioning editor.</li>
 <li>Additions for Connman 1.38</li>
 <ul>
 <li>Add mDNS status to the details tab.</li>
@@ -12,7 +13,9 @@
 <li>Added VPNC.DeviceType to VPN provisioning editor.</li>
 <li>Added WireGuard configuration options to VPN Provisioning editor.</li>
 <li>Added OpenVPN.DeviceType to VPN provisioning editor.</li>
-<li>Added eight new OpenConnect items to provisioning editor.</li> 
+<li>Added eight new OpenConnect items to VPN provisioning editor.</li> 
+<li>Added mDNS setting to the provisioning editor.</li>
+<li>added DeviceName field to the provisioning editor.<li>
 </ul>
 </ul>
 <b> 2019.01.13</b>

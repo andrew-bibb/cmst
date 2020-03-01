@@ -362,6 +362,22 @@
     <string>EAP-TTLS</string>
    </property>
   </action>
+  <action name="actionServiceDeviceName">
+   <property name="text">
+    <string>DeviceName</string>
+   </property>
+   <property name="toolTip">
+    <string>Interface name where this provisioning applies (ex: eth0)</string>
+   </property>
+  </action>
+  <action name="actionServicemDNS">
+   <property name="text">
+    <string>mDNS</string>
+   </property>
+   <property name="toolTip">
+    <string>True if mDNS domains can be resolved and the hostname registered.</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>

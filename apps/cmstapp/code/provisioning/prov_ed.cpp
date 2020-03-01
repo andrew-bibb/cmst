@@ -82,6 +82,7 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   group_freeform->addAction(ui.actionWifiIdentity);
   group_freeform->addAction(ui.actionWifiPassphrase); 
   group_freeform->addAction(ui.actionWifiPhase2);
+  group_freeform->addAction(ui.actionServiceDeviceName);
   
   group_combobox = new QActionGroup(this);
   group_combobox->addAction(ui.actionServiceType);
@@ -92,6 +93,7 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   group_combobox->addAction(ui.actionServiceIPv6Privacy);
   group_combobox->addAction(ui.actionServiceIPv4);
   group_combobox->addAction(ui.actionServiceIPv6);
+  group_combobox->addAction(ui.actionServicemDNS);
 
   group_validated = new QActionGroup(this);
   group_validated->addAction(ui.actionServiceMAC);
@@ -120,6 +122,10 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   menu_service->addAction(ui.actionServiceType);
   menu_service->addAction(ui.actionServiceDomain);
   menu_service->addAction(ui.actionServiceMAC);
+  if (ver > 1.37f) {
+    menu_service->addAction(ui.actionServiceDeviceName);
+    menu_service->addAction(ui.actionServicemDNS);
+  }
   menu_service->addSeparator();
   menu_service->addAction(ui.actionServiceIPv4);
   menu_service->addSeparator();
@@ -263,6 +269,7 @@ void ProvisioningEditor::inputComboBox(QAction* act)
   if (act == ui.actionServiceIPv6Privacy) {str = tr("IPv6 Privacy"); sl << "disabled" << "enabled" << "preferred";}	
   if (act == ui.actionServiceIPv4) {str = tr("IPv4 Settings"); sl << "off" << "dhcp" << "address";}  
   if (act == ui.actionServiceIPv6) {str = tr("IPv6 Settings"); sl << "off" << "auto" << "address";}
+  if (act == ui.actionServicemDNS) {str = tr("mDNS"); sl << "false" << "true";}
 
   QStringList sl_tr = TranslateStrings::cmtr_sl(sl);
   QString item = QInputDialog::getItem(this,
@@ -304,6 +311,7 @@ void ProvisioningEditor::inputFreeForm(QAction* act)
   if (act == ui.actionWifiIdentity) str = tr("Identity string for EAP.");
   if (act == ui.actionWifiPassphrase) str = tr("RSN/WPA/WPA2 Passphrase");
   if (act == ui.actionWifiPhase2) str = tr("Phase 2 (inner authentication with TLS tunnel)<br>authentication method.");   
+  if (act == ui.actionServiceDeviceName) str = tr("The interface name in which to  apply the provisioning (ex. eth0)") ; 
   
   if (act == ui.actionGlobal) {
     key.append("\n");
@@ -371,14 +379,7 @@ void ProvisioningEditor::ipv6Address()
   bool ok;
   QString val;
 
-  // process action
-    QMessageBox::StandardButton but = QMessageBox::information(this, 
-                                        QString(TranslateStrings::cmtr("cmst")) + tr(" Information"),
-                                        tr("The IPv6 <b>Address</b>, <b>Prefix Length</b>, and optionally <b>Gateway</b> need to be provided."  \
-                                        "<p>Press OK when you are ready to proceed."),
-                                        QMessageBox::Ok | QMessageBox::Abort,QMessageBox::Ok);
-  if (but == QMessageBox::Ok) {
-    shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
+  shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
     vd->setLabel(tr("IPv6 Address"));
     vd->setValidator(CMST::ValDialog_IPv6);
     if (vd->exec() == QDialog::Accepted && ! vd->getText().isEmpty() ) {
@@ -400,7 +401,6 @@ void ProvisioningEditor::ipv6Address()
       } // if prefix provided 
     } // if tddress accepted
     vd->deleteLater();
-  } // we pressed OK on the informaion dialog
 
   return;
 }
