@@ -80,6 +80,8 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   group_freeform->addAction(ui.actionService);
   group_freeform->addAction(ui.actionWifiPrivateKeyPassphrase);
   group_freeform->addAction(ui.actionWifiIdentity);
+  group_freeform->addAction(ui.actionWifiAnonymousIdentity);
+  group_freeform->addAction(ui.actionWifiSubjectMatch);
   group_freeform->addAction(ui.actionWifiPassphrase); 
   group_freeform->addAction(ui.actionWifiPhase2);
   group_freeform->addAction(ui.actionServiceDeviceName);
@@ -148,6 +150,10 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   menu_wifi->addSeparator();
   menu_wifi->addAction(ui.actionWifiEAP);
   menu_wifi->addAction(ui.actionWifiIdentity);  
+  if (ver > 1.37f) {
+  menu_wifi->addAction(ui.actionWifiAnonymousIdentity);
+  menu_wifi->addAction(ui.actionWifiSubjectMatch);
+  }
   menu_wifi->addSeparator();
   menu_wifi->addAction(ui.actionWifiCACertFile);
   menu_wifi->addAction(ui.actionWifiClientCertFile);
@@ -269,7 +275,7 @@ void ProvisioningEditor::inputComboBox(QAction* act)
   if (act == ui.actionServiceIPv6Privacy) {str = tr("IPv6 Privacy"); sl << "disabled" << "enabled" << "preferred";}	
   if (act == ui.actionServiceIPv4) {str = tr("IPv4 Settings"); sl << "off" << "dhcp" << "address";}  
   if (act == ui.actionServiceIPv6) {str = tr("IPv6 Settings"); sl << "off" << "auto" << "address";}
-  if (act == ui.actionServicemDNS) {str = tr("mDNS"); sl << "false" << "true";}
+  if (act == ui.actionServicemDNS) {str = tr("Enable mDNS"); sl << "false" << "true";}
 
   QStringList sl_tr = TranslateStrings::cmtr_sl(sl);
   QString item = QInputDialog::getItem(this,
@@ -311,7 +317,7 @@ void ProvisioningEditor::inputFreeForm(QAction* act)
   if (act == ui.actionWifiIdentity) str = tr("Identity string for EAP.");
   if (act == ui.actionWifiPassphrase) str = tr("RSN/WPA/WPA2 Passphrase");
   if (act == ui.actionWifiPhase2) str = tr("Phase 2 (inner authentication with TLS tunnel)<br>authentication method.");   
-  if (act == ui.actionServiceDeviceName) str = tr("The interface name in which to  apply the provisioning (ex. eth0)") ; 
+  if (act == ui.actionServiceDeviceName) str = tr("The interface name in which to apply the provisioning (ex. eth0)") ; 
   
   if (act == ui.actionGlobal) {
     key.append("\n");

@@ -15,7 +15,9 @@
 <li>Added OpenVPN.DeviceType to VPN provisioning editor.</li>
 <li>Added eight new OpenConnect items to VPN provisioning editor.</li> 
 <li>Added mDNS setting to the provisioning editor.</li>
-<li>added DeviceName field to the provisioning editor.<li>
+<li>Added DeviceName field to the provisioning editor.<li>
+<li>Added AnonymousIdentity field to the wifi secion of the provisioning editor.<li>
+<li>Added SubjectMatch field to the wifi section of the provisioning editor. <li>
 </ul>
 </ul>
 <b> 2019.01.13</b>

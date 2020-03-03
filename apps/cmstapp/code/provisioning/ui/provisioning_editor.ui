@@ -375,7 +375,23 @@
     <string>mDNS</string>
    </property>
    <property name="toolTip">
-    <string>True if mDNS domains can be resolved and the hostname registered.</string>
+    <string>Set to true if mDNS domains can be resolved and the hostname registered.</string>
+   </property>
+  </action>
+  <action name="actionWifiAnonymousIdentity">
+   <property name="text">
+    <string>AnonymousIdentity</string>
+   </property>
+   <property name="toolTip">
+    <string>Anonymous identity string for EAP</string>
+   </property>
+  </action>
+  <action name="actionWifiSubjectMatch">
+   <property name="text">
+    <string>SubjectMatch</string>
+   </property>
+   <property name="toolTip">
+    <string>Substring to be matched against the subject of the authentication server certificate for EAP</string>
    </property>
   </action>
  </widget>
