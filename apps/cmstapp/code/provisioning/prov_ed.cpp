@@ -81,7 +81,6 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   group_freeform->addAction(ui.actionWifiPrivateKeyPassphrase);
   group_freeform->addAction(ui.actionWifiIdentity);
   group_freeform->addAction(ui.actionWifiAnonymousIdentity);
-  group_freeform->addAction(ui.actionWifiSubjectMatch);
   group_freeform->addAction(ui.actionWifiPassphrase); 
   group_freeform->addAction(ui.actionWifiPhase2);
   group_freeform->addAction(ui.actionServiceDeviceName);
@@ -105,6 +104,10 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   group_validated->addAction(ui.actionServiceSearchDomains);
   group_validated->addAction(ui.actionServiceDomain);
   group_validated->addAction(ui.actionWifiName);
+  group_validated->addAction(ui.actionWifiSubjectMatch);
+  group_validated->addAction(ui.actionWifiAltSubjectMatch);
+  group_validated->addAction(ui.actionWifiDomainMatch);
+  group_validated->addAction(ui.actionWifiDomainSuffixMatch);
   
   group_selectfile = new QActionGroup(this);
   group_selectfile->addAction(ui.actionWifiCACertFile);
@@ -153,6 +156,9 @@ ProvisioningEditor::ProvisioningEditor(QWidget* parent, const float& ver) : QDia
   if (ver > 1.37f) {
   menu_wifi->addAction(ui.actionWifiAnonymousIdentity);
   menu_wifi->addAction(ui.actionWifiSubjectMatch);
+  menu_wifi->addAction(ui.actionWifiAltSubjectMatch);
+  menu_wifi->addAction(ui.actionWifiDomainMatch);
+  menu_wifi->addAction(ui.actionWifiDomainSuffixMatch);
   }
   menu_wifi->addSeparator();
   menu_wifi->addAction(ui.actionWifiCACertFile);
@@ -222,6 +228,7 @@ void ProvisioningEditor::inputValidated(QAction* act)
 {
   // variables
   QString key = act->text();
+  QChar delim(','); // default delim character for plurals
   
   // create the dialog
   shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
@@ -233,7 +240,11 @@ void ProvisioningEditor::inputValidated(QAction* act)
   if (act == ui.actionServiceTimeServers) {vd->setLabel(tr("List of Timeservers")); vd->setValidator(CMST::ValDialog_46d, true);}
   if (act == ui.actionServiceSearchDomains) {vd->setLabel(tr("List of DNS Search Domains")); vd->setValidator(CMST::ValDialog_Dom, true);}
   if (act == ui.actionServiceDomain) {vd->setLabel(tr("Domain name to be used")); vd->setValidator(CMST::ValDialog_Dom);}
-  if (act == ui.actionWifiName) {vd->setLabel(tr("Enter the string representation of an 802.11 SSID.")); vd->setValidator(CMST::ValDialog_Wd);}
+  if (act == ui.actionWifiName) {vd->setLabel(tr("Enter the string representation of an 802.11 SSID.")); vd->setValidator(CMST::ValDialog_Word);}
+  if (act == ui.actionWifiSubjectMatch) { vd->setLabel(tr("Substring to be matched against the subject of the authentication server")); vd->setValidator(CMST::ValDialog_Word);}
+  if (act == ui.actionWifiAltSubjectMatch) {vd->setLabel(tr("List of entries to be matched against the alternative subject name.")); vd->setValidator(CMST::ValDialog_Word, true); delim=';';}
+  if (act == ui.actionWifiDomainMatch) {vd->setLabel(tr("A fully qualified domain name used as a full match requirement for the authentication server")); vd->setValidator(CMST::ValDialog_Dom);}
+  if (act == ui.actionWifiDomainSuffixMatch) {vd->setLabel(tr("A fully qualified domain name used as a suffix match requirement for the authentication server")); vd->setValidator(CMST::ValDialog_Dom);}
   
   // if accepted put an entry in the textedit
   if (vd->exec() == QDialog::Accepted) {
@@ -245,7 +256,7 @@ void ProvisioningEditor::inputValidated(QAction* act)
       s.replace(',', ' ');
       s.replace(';', ' ');
       s = s.simplified();
-      s.replace(' ', ',');
+      s.replace(' ', delim);
     }
     
     ui.plainTextEdit_main->insertPlainText(key.arg(s) );
@@ -315,6 +326,7 @@ void ProvisioningEditor::inputFreeForm(QAction* act)
   if (act == ui.actionGlobalDescription)  str = tr("Enter a description of the network.");
   if (act == ui.actionWifiPrivateKeyPassphrase) str = tr("Password/Passphrase for the private key file.");
   if (act == ui.actionWifiIdentity) str = tr("Identity string for EAP.");
+  if (act == ui.actionWifiAnonymousIdentity) str = tr("Anonymous identity string for EAP.");
   if (act == ui.actionWifiPassphrase) str = tr("RSN/WPA/WPA2 Passphrase");
   if (act == ui.actionWifiPhase2) str = tr("Phase 2 (inner authentication with TLS tunnel)<br>authentication method.");   
   if (act == ui.actionServiceDeviceName) str = tr("The interface name in which to apply the provisioning (ex. eth0)") ; 

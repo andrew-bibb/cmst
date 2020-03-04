@@ -565,7 +565,7 @@ void VPN_Editor::inputFreeForm(QAction* act, QString key)
   
   // create some prompts
   if (key == "Name") str = tr("User defined name for the VPN");
-  else if (key == "Domain") str = tr("Domain name for the VPN Service\n(example: corporate.com)");
+  else if (key == "Domain") str = tr("Domain name for the VPN Service\n(ex: corporate.com)");
   else if (key == "Networks") str = tr("Networks behind the VPN link, if more than one separate by a comma.\n"
                                         "Format is network/netmask/gateway, and gateway can be omitted.\n"
                                         "Ex: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:Ldb8::1/16\n\n"

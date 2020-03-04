@@ -394,6 +394,30 @@
     <string>Substring to be matched against the subject of the authentication server certificate for EAP</string>
    </property>
   </action>
+  <action name="actionWifiAltSubjectMatch">
+   <property name="text">
+    <string>AltSubjectMatch</string>
+   </property>
+   <property name="toolTip">
+    <string>Semicolon separated string of entries to be matched against the alternative subject name of the authentication server certificate for EAP</string>
+   </property>
+  </action>
+  <action name="actionWifiDomainSuffixMatch">
+   <property name="text">
+    <string>DomainSuffixMatch</string>
+   </property>
+   <property name="toolTip">
+    <string>A FQDN used as a suffix match requirement for the authentication server.</string>
+   </property>
+  </action>
+  <action name="actionWifiDomainMatch">
+   <property name="text">
+    <string>DomainMatch</string>
+   </property>
+   <property name="toolTip">
+    <string>A FQDN used as a full match requirement for the authentication server.</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>
