@@ -894,7 +894,7 @@ that the peer is no longer connected.</string>
     <string>WireGuard.DNS</string>
    </property>
    <property name="toolTip">
-    <string>A comma separated list of name servers (optional).</string>
+    <string>List of name servers (optional).</string>
    </property>
   </action>
   <action name="actionWireGuard_PrivateKey">

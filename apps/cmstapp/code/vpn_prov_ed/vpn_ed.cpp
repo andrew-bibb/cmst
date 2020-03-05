@@ -105,13 +105,9 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   group_freeform->addAction(ui.actionVPNC_AppVersion);
   group_freeform->addAction(ui.actionOpenVPN_Cipher);
   group_freeform->addAction(ui.actionOpenVPN_Auth);
-  group_freeform->addAction(ui.actionWireGuard_Address);
-  group_freeform->addAction(ui.actionWireGuard_PrivateKey);
-  group_freeform->addAction(ui.actionWireGuard_PublicKey);
-  group_freeform->addAction(ui.actionWireGuard_PresharedKey);
-  group_freeform->addAction(ui.actionWireGuard_AllowedIPs);
   group_freeform->addAction(ui.actionOpenConnect_Usergroup);
-    
+  group_freeform->addAction(ui.actionWireGuard_Address);
+      
   group_combobox = new QActionGroup(this);
   group_combobox->addAction(ui.actionVPNC_IKE_Authmode);
   group_combobox->addAction(ui.actionVPNC_IKE_DHGroup);
@@ -186,6 +182,10 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
   group_validated->addAction(ui.actionOpenConnect_VPNHost);
   group_validated->addAction(ui.actionWireGuard_ListPort);
   group_validated->addAction(ui.actionWireGuard_DNS);
+  group_validated->addAction(ui.actionWireGuard_PrivateKey);
+  group_validated->addAction(ui.actionWireGuard_PublicKey);
+  group_validated->addAction(ui.actionWireGuard_PresharedKey);
+  group_validated->addAction(ui.actionWireGuard_AllowedIPs);
   group_validated->addAction(ui.actionWireGuard_EndpointPort);
   group_validated->addAction(ui.actionWireGuard_PersistentKeepalive);
      
@@ -446,6 +446,7 @@ void VPN_Editor::inputSelectFile(QAction* act)
 void VPN_Editor::inputValidated(QAction* act, QString key)
 {
   // variables
+  QChar delim(','); // default delim character for plurals
   if (key.isEmpty() ) key = act->text();
   
   // create the dialog
@@ -473,9 +474,14 @@ void VPN_Editor::inputValidated(QAction* act, QString key)
   if (act == ui.actionOpenConnect_VPNHost) vd->setValidator(CMST::ValDialog_46, false);
   if (act == ui.actionWireGuard_ListPort) vd->setValidator(CMST::ValDialog_Int, false);
   if (act == ui.actionWireGuard_DNS) vd->setValidator(CMST::ValDialog_46, true);
+  if (act == ui.actionWireGuard_PrivateKey) vd->setValidator(CMST::ValDialog_Word, false);
+  if (act == ui.actionWireGuard_PublicKey) vd->setValidator(CMST::ValDialog_Word, false);
+  if (act == ui.actionWireGuard_PresharedKey) vd->setValidator(CMST::ValDialog_Word, false);
+  if (act == ui.actionWireGuard_AllowedIPs) vd->setValidator(CMST::ValDialog_46, true);
   if (act == ui.actionWireGuard_EndpointPort) vd->setValidator(CMST::ValDialog_Int, false);
   if (act == ui.actionWireGuard_PersistentKeepalive) vd->setValidator(CMST::ValDialog_Int, false);
-  // if accepted put an entry in the textedit
+
+// if accepted put an entry in the textedit
   if (vd->exec() == QDialog::Accepted) {
     QString s = vd->getText();
     key.append(" = %1\n");
@@ -485,7 +491,7 @@ void VPN_Editor::inputValidated(QAction* act, QString key)
       s.replace(',', ' ');
       s.replace(';', ' ');
       s = s.simplified();
-      s.replace(' ', ',');
+      s.replace(' ', delim); 
     }
     
     ui.plainTextEdit_main->insertPlainText(key.arg(s) );
