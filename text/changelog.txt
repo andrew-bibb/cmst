@@ -1,10 +1,11 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b> In Progress</b>
+<b> 2020.03.07</b>
 <ul>
 <li>Move offline checkbox in tab 1 (issue # 201)</li>
 <li>Translation to Dutch by Heimen Stoffels.</li>
 <li>Cleaned up the IPv4 and IPv6 entries in the provisioning editor.</li>
+<li>Fixed retain state not working for window size and position.<li>
 <li>Additions for Connman 1.38</li>
 <ul>
 <li>Add mDNS status to the details tab.</li>
