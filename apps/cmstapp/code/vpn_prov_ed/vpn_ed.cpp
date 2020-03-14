@@ -490,6 +490,7 @@ void VPN_Editor::inputValidated(QAction* act, QString key)
     if (vd->isPlural() ) {
       s.replace(',', ' ');
       s.replace(';', ' ');
+      s.replace('|', ' ');
       s = s.simplified();
       s.replace(' ', delim); 
     }
