@@ -258,7 +258,7 @@ void PropertiesEditor::updateConfiguration()
   } //for
   
   // ipv4
-  if (ui.ipv4->isEnabled() ) { 
+  if (ui.ipv4 == ui.toolBox_peditor->currentWidget() ) { 
     // Only update if an entry has changed.
     if ((ui.comboBox_ipv4method->currentText() != TranslateStrings::cmtr(ipv4map.value("Method").toString()) )      |
       (ui.lineEdit_ipv4address->text() != TranslateStrings::cmtr(ipv4map.value("Address").toString()) )       |
@@ -286,17 +286,17 @@ void PropertiesEditor::updateConfiguration()
       vlist << QVariant::fromValue(QDBusVariant(dict) );
       shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
     } // if there is a valid index
-                } // if ipv4 changed
+   } // if ipv4 changed
   }// ipv4 page is enabled
 
-  // iqv6
-  if (ui.ipv6->isEnabled() ) {
+  // ipv6
+  if (ui.ipv6 == ui.toolBox_peditor->currentWidget() ) {
     // Only update if an entry has changed.
     if ((ui.comboBox_ipv6method->currentText() != TranslateStrings::cmtr(ipv6map.value("Method").toString()) )            |
       (static_cast<uint>(ui.spinBox_ipv6prefixlength->value()) != ipv6map.value("PrefixLength").toUInt() )      |
-      (ui.lineEdit_ipv6gateway->text() != TranslateStrings::cmtr(ipv6map.value("Privacy").toString()) )                           |
+      (ui.lineEdit_ipv6gateway->text() != TranslateStrings::cmtr(ipv6map.value("Gateway").toString()) )                           |
       (ui.lineEdit_ipv6address->text() != TranslateStrings::cmtr(ipv6map.value("Address").toString()) )             |
-      (ui.comboBox_ipv6privacy->currentText() != TranslateStrings::cmtr(ipv6map.value("Gateway").toString())) ) {
+      (ui.comboBox_ipv6privacy->currentText() != TranslateStrings::cmtr(ipv6map.value("Privacy").toString())) ) {
         
       vlist.clear();
       lep.clear();
