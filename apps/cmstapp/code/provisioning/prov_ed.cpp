@@ -389,7 +389,7 @@ void ProvisioningEditor::ipv4Address()
 }
 
 //
-//  Not a real slot anymore as we only call this directly when we need to get tpv6 address/prefix/gateway
+//  Not a real slot anymore as we only call this directly when we need to get ipv6 address/prefix/gateway
 //  information from the user.
 void ProvisioningEditor::ipv6Address()
 {

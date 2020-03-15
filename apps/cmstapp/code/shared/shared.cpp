@@ -139,7 +139,7 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
   const QString s_hex   = "[0-9a-fA-F]*";
   const QString s_int   = "[0-9]*";
   const QString s_dom   = "((?!-)[A-Za-z0-9-]{1,63}(?<!-)\\.)+[A-Za-z]{2,6}";
-  const QString s_word    = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
+  const QString s_word  = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
   const QString s_ch    = "\\S";
   const QString s_start = (plural ? "^(" : "^");
   const QString s_end   = (plural ? "([,;|\\s]\\s*|$))+" : "$");
