@@ -7,6 +7,7 @@
 <li>Peditor now uses the shared validator instead of its own.</li>
 <li>Fixed update problems in details tab.</li>
 <li>Fixed VPN tray icon not always showing (possibly issue #198).</li>
+<li>Fixed connection to notification daemon when reading from settings.</li>
 </ul>
 <b> 2020.03.07</b>
 <ul>

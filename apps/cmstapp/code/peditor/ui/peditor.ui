@@ -65,8 +65,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>288</width>
-        <height>163</height>
+        <width>98</width>
+        <height>47</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -103,8 +103,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>288</width>
-        <height>163</height>
+        <width>98</width>
+        <height>47</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -141,8 +141,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>288</width>
-        <height>163</height>
+        <width>98</width>
+        <height>47</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -179,8 +179,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>288</width>
-        <height>163</height>
+        <width>159</width>
+        <height>136</height>
        </rect>
       </property>
       <attribute name="label">
@@ -291,8 +291,8 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>288</width>
-        <height>163</height>
+        <width>172</width>
+        <height>155</height>
        </rect>
       </property>
       <attribute name="label">
@@ -463,8 +463,8 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>288</width>
-        <height>163</height>
+        <width>98</width>
+        <height>28</height>
        </rect>
       </property>
       <property name="whatsThis">
@@ -594,8 +594,8 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>288</width>
-        <height>163</height>
+        <width>98</width>
+        <height>28</height>
        </rect>
       </property>
       <property name="whatsThis">

@@ -187,7 +187,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   
   // Read saved settings which will set the ui controls in the preferences tab.
   this->readSettings();
-  
+    
+
   // Set the iconmanager color
   iconman->setIconColor(QColor(ui.lineEdit_colorize->text()) );
 
@@ -312,7 +313,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   // Create the notifyclient.
   notifyclient = new NotifyClient(this);
   // Only try to connect to the notifyclient if we actually need it
-  if(this->settings->value("enable_daemon_notifications").toBool()) {
+  if(this->settings->value("CheckBoxes/enable_daemon_notifications").toBool()) {
     // Make four tries; first immediately, then
     // at 1/2 second, 2 seconds and finally at 8 seconds
     this->connectNotifyClient();
@@ -320,6 +321,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     QTimer::singleShot(2 * 1000, this, SLOT(connectNotifyClient()));
     QTimer::singleShot(8 * 1000, this, SLOT(connectNotifyClient()));
   }
+  else ui.label_serverstatus->clear();
 
   // setup the dbus interface to connman.manager
   con_manager = NULL;
@@ -2500,7 +2502,7 @@ void ControlBox::readSettings()
   ui.checkBox_runonstartup->setChecked(settings->value("run_on_startup").toBool());
   settings->endGroup();
 
-  settings->beginGroup("LineEdits");
+ settings->beginGroup("LineEdits");
   ui.lineEdit_colorize->setText(settings->value("colorize_icons").toString() );
   settings->endGroup();
 
@@ -2535,7 +2537,6 @@ void ControlBox::readSettings()
   settings->beginGroup("ExternalPrograms");
   ui.lineEdit_afterconnect->setText(settings->value("run_after_connect").toString() );
   settings->endGroup();
-
   return;
 }
 
@@ -2930,7 +2931,6 @@ void ControlBox::connectNotifyClient()
    //initialize the counter
    static short count = 0;
    ++count;
-
   if (count > 1 ) {
     // if we have a valid notifyclient return now
     if (notifyclient->isValid() )
