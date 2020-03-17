@@ -152,7 +152,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   vpn_submenu  = new QMenu(tr("VPN Connections"), this);
   mvsrv_menu = new QMenu(this);
   settings = new QSettings(ORG, APP, this);
-  notifyclient = 0;
+  notifyclient = NULL;
   onlineobjectpath.clear();
   socketserver = new QLocalServer(this);
   socketserver->removeServer(SOCKET_NAME);  // remove any files that may have been left after a crash
@@ -312,19 +312,13 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
   // Create the notifyclient.
   notifyclient = new NotifyClient(this);
-  // Only try to connect to the notifyclient if we actually need it
-  if(this->settings->value("CheckBoxes/enable_daemon_notifications").toBool()) {
-    // Make four tries; first immediately, then
-    // at 1/2 second, 2 seconds and finally at 8 seconds
-    this->connectNotifyClient();
-    QTimer::singleShot(500, this, SLOT(connectNotifyClient()));
-    QTimer::singleShot(2 * 1000, this, SLOT(connectNotifyClient()));
-    QTimer::singleShot(8 * 1000, this, SLOT(connectNotifyClient()));
-  }
-  else{
-    ui.label_serverstatus->clear();
-    ui.label_serverstatus->setDisabled(true);
-  }
+  // Try to connect to the notify client. Make four tries; first immediately, then
+  // at 1/2 second, 2 seconds and finally at 8 seconds.  This only makes the connection
+  // the decision to use it or not is made in the function 
+  this->connectNotifyClient();
+  QTimer::singleShot(500, this, SLOT(connectNotifyClient()));
+  QTimer::singleShot(2 * 1000, this, SLOT(connectNotifyClient()));
+  QTimer::singleShot(8 * 1000, this, SLOT(connectNotifyClient()));
 
   // setup the dbus interface to connman.manager
   con_manager = NULL;
