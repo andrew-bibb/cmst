@@ -321,7 +321,10 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
     QTimer::singleShot(2 * 1000, this, SLOT(connectNotifyClient()));
     QTimer::singleShot(8 * 1000, this, SLOT(connectNotifyClient()));
   }
-  else ui.label_serverstatus->clear();
+  else{
+    ui.label_serverstatus->clear();
+    ui.label_serverstatus->setDisabled(true);
+  }
 
   // setup the dbus interface to connman.manager
   con_manager = NULL;
@@ -2965,8 +2968,6 @@ void ControlBox::connectNotifyClient()
       ui.checkBox_notifydaemon->setChecked(false);
       ui.checkBox_notifydaemon->setEnabled(false);
     } // else last time
-  ui.groupBox_notifications->setToolTip("");
-  ui.groupBox_notifications->setWhatsThis("");
   } // else we don't have a valid client.
 
   return;
