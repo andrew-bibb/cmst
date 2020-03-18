@@ -484,8 +484,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>647</width>
-            <height>385</height>
+            <width>98</width>
+            <height>60</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -875,8 +875,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>647</width>
-            <height>466</height>
+            <width>112</width>
+            <height>290</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -915,8 +915,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>603</width>
-                   <height>156</height>
+                   <width>98</width>
+                   <height>47</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -974,8 +974,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>603</width>
-                   <height>156</height>
+                   <width>98</width>
+                   <height>47</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1511,9 +1511,6 @@
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
-                <property name="whatsThis">
-                 <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
                 <property name="text">
                  <string>Notification Daemon</string>
                 </property>
@@ -1739,8 +1736,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>537</width>
-            <height>466</height>
+            <width>98</width>
+            <height>414</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1931,8 +1928,8 @@
      <y>198</y>
     </hint>
     <hint type="destinationlabel">
-     <x>246</x>
-     <y>601</y>
+     <x>245</x>
+     <y>619</y>
     </hint>
    </hints>
   </connection>
@@ -1959,8 +1956,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>82</x>
-     <y>291</y>
+     <x>93</x>
+     <y>183</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -1975,8 +1972,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>85</x>
-     <y>442</y>
+     <x>120</x>
+     <y>183</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -1991,8 +1988,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>173</x>
-     <y>442</y>
+     <x>129</x>
+     <y>183</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -2107,8 +2104,8 @@
      <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>600</x>
-     <y>64</y>
+     <x>129</x>
+     <y>84</y>
     </hint>
    </hints>
   </connection>
@@ -2119,8 +2116,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>329</x>
-     <y>83</y>
+     <x>119</x>
+     <y>74</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -2139,8 +2136,8 @@
      <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>55</x>
-     <y>151</y>
+     <x>81</x>
+     <y>84</y>
     </hint>
    </hints>
   </connection>
@@ -2151,8 +2148,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>600</x>
-     <y>66</y>
+     <x>129</x>
+     <y>84</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -2167,8 +2164,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>55</x>
-     <y>151</y>
+     <x>81</x>
+     <y>84</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
