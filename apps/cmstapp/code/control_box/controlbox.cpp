@@ -2927,6 +2927,7 @@ void ControlBox::connectNotifyClient()
 {
    //initialize the counter
    static short count = 0;
+   const short maxtries = 4;  // this needs to match the tries in the constructor
    ++count;
   if (count > 1 ) {
     // if we have a valid notifyclient return now
@@ -2952,15 +2953,15 @@ void ControlBox::connectNotifyClient()
     ui.label_serverstatus->setDisabled(true);
     ui.groupBox_notifications->setToolTip(lab);
   }
-  // not successful, try again or abandon if counter is at limit
+  //  not successful, try again or abandon if counter is at limit
   else {
-    if (count < 4) {
-      ui.label_serverstatus->setText(tr("Attempt %1 of 4 looking for notification server.").arg(count));
+    if (count < maxtries) {
+      ui.label_serverstatus->setText(tr("Attempt %1 of %2 looking for notification server.").arg(count).arg(maxtries) );
     } // try again
     else {
-      ui.label_serverstatus->setText(tr("Unable to find or connect to a Notification server."));
+      ui.label_serverstatus->setText(tr("Unable to connect to a notification server after %1 tries.").arg(count) );
       ui.checkBox_notifydaemon->setChecked(false);
-      ui.checkBox_notifydaemon->setEnabled(false);
+      ui.checkBox_notifydaemon->setDisabled(true);
     } // else last time
   } // else we don't have a valid client.
 
