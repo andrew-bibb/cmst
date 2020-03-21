@@ -573,6 +573,7 @@ void ControlBox::updateDisplayWidgets()
     this->assembleTabWireless();
     this->assembleTabVPN();
     this->assembleTabCounters();
+    this->assembleTabPreferences();
     if (trayicon != NULL ) this->assembleTrayIcon();
     
     ui.pushButton_movebefore->setEnabled(false);
@@ -727,7 +728,7 @@ void ControlBox::connectPressed()
     qtw->setRangeSelected(qtwsr, true);
   }
 
-  // If no row is selected then return(
+  // If no row is selected then return
   QList<QTableWidgetItem*> list;
   list.clear();
   list = qtw->selectedItems();
@@ -737,12 +738,27 @@ void ControlBox::connectPressed()
     return;
   }
 
+  // execute external program if specified
+  if (! ui.lineEdit_beforeconnect->text().isEmpty() ) {
+    if (list.at(0)->text() == ui.comboBox_beforeconnectserviceslist->currentText() ) {
+      QString text = ui.lineEdit_beforeconnect->text();
+      text = text.simplified();
+      QStringList args = text.split(' ');
+      QString cmd = args.first();
+      args.removeFirst();
+      if (! ui.checkBox_modifyservicefile->isChecked()) {
+	QProcess* proc = new QProcess(this);
+	proc->startDetached(cmd, args);
+      } // program does not require root helper
+    } // if service is correct 
+  } // if there is a command to execute
+  return;
+
   //  send the connect message to the service.  TableWidget only allows single selection so list can only have 0 or 1 elments
   QDBusInterface* iface_serv = NULL;
 
   if (qtw == ui.tableWidget_wifi) {
     iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-    iface_serv->setTimeout(5);
   }
   else if (qtw == ui.tableWidget_vpn) {
     iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
@@ -900,14 +916,14 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
     // execute external program if specified
     if (! ui.lineEdit_afterconnect->text().isEmpty()  ) {
       if( (state == "ready" || state == "online") &&
-  (oldstate != "ready" && oldstate != "online") ) {
-  QString text = ui.lineEdit_afterconnect->text();
-  text = text.simplified();
-  QStringList args = text.split(' ');
-  QString cmd = args.first();
-  args.removeFirst();
-  QProcess* proc = new QProcess(this);
-  proc->startDetached(cmd, args);
+	(oldstate != "ready" && oldstate != "online") ) {
+	QString text = ui.lineEdit_afterconnect->text();
+	text = text.simplified();
+	QStringList args = text.split(' ');
+	QString cmd = args.first();
+	args.removeFirst();
+	QProcess* proc = new QProcess(this);
+	proc->startDetached(cmd, args);
       } // if online or ready and not online before
     } // if lineedit not empty
   
@@ -1922,8 +1938,8 @@ void ControlBox::assembleTabWireless()
     int i_wifipowered = 0;
     for (int row = 0; row < technologies_list.size(); ++row) {
       if (technologies_list.at(row).objmap.value("Type").toString() == "wifi" ) {
-  ++i_wifidevices;
-  if (technologies_list.at(row).objmap.value("Powered").toBool() ) ++i_wifipowered;
+	++i_wifidevices;
+	if (technologies_list.at(row).objmap.value("Powered").toBool() ) ++i_wifipowered;
       } // if census
     } // for loop
     ui.label_wifi_state->setText(tr("  WiFi Technologies:<br>  %1 Found, %2 Powered").arg(i_wifidevices).arg(i_wifipowered) );
@@ -1945,22 +1961,22 @@ void ControlBox::assembleTabWireless()
 
       QLabel* ql01 = new QLabel(ui.tableWidget_wifi);
       if (map.value("Favorite").toBool() ) {
-  ql01->setPixmap(iconman->getIcon("favorite").pixmap(QSize(16,16)) );
+	ql01->setPixmap(iconman->getIcon("favorite").pixmap(QSize(16,16)) );
       }
       ql01->setAlignment(Qt::AlignCenter);
       ui.tableWidget_wifi->setCellWidget(rowcount, 1, ql01);
 
       QLabel* ql02 = new QLabel(ui.tableWidget_wifi);
       if (map.value("State").toString() == "online") {
-  ql02->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
+	ql02->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
       } // if online
       else {
-  if (map.value("State").toString() == "ready") {
-    ql02->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
-  } // if ready
-  else {
-    ql02->setPixmap(iconman->getIcon("wifi_tab_state_not_ready").pixmap(QSize(16,16)) );
-  } // else any other state
+	if (map.value("State").toString() == "ready") {
+	  ql02->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
+	} // if ready
+	else {
+	  ql02->setPixmap(iconman->getIcon("wifi_tab_state_not_ready").pixmap(QSize(16,16)) );
+	} // else any other state
       } // else ready or any other state
       ql02->setAlignment(Qt::AlignCenter);
       ql02->setToolTip(TranslateStrings::cmtr(map.value("State").toString()) );
@@ -1970,7 +1986,7 @@ void ControlBox::assembleTabWireless()
       QTableWidgetItem* qtwi03 = new QTableWidgetItem();
       QStringList sl_tr;
       for (int i = 0; i < map.value("Security").toStringList().size(); ++i) {
-  sl_tr << TranslateStrings::cmtr(map.value("Security").toStringList().at(i) );
+	sl_tr << TranslateStrings::cmtr(map.value("Security").toStringList().at(i) );
       } // for
       qtwi03->setText(sl_tr.join(',') );
       qtwi03->setTextAlignment(Qt::AlignCenter);
@@ -1982,9 +1998,9 @@ void ControlBox::assembleTabWireless()
       pb04->setOrientation( Qt::Horizontal);
       pb04->setValue(map.value("Strength").value<quint8>() );
       if (QColor(ui.lineEdit_colorize->text()).isValid() ) {
-  QPalette pl = pb04->palette();
-  pl.setColor(QPalette::Active, QPalette::Highlight, QColor(ui.lineEdit_colorize->text()) );
-  pb04->setPalette(pl);
+	QPalette pl = pb04->palette();
+	pl.setColor(QPalette::Active, QPalette::Highlight, QColor(ui.lineEdit_colorize->text()) );
+	pb04->setPalette(pl);
       }
     
       QWidget* w04 = new QWidget(ui.tableWidget_wifi);
@@ -2127,6 +2143,40 @@ void ControlBox::assembleTabCounters()
   ui.label_counter_settings->setText(tr("Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.")   \
       .arg(counter_accuracy)  \
       .arg(counter_period) );
+
+  return;
+}
+
+//
+// Function to assemble the preferences tab of the dialog
+void ControlBox::assembleTabPreferences()
+{
+  if ( (q16_errors & CMST::Err_Services) == 0x00 ) {
+  
+    // Fill in the combobox for before connect services list
+    QString curtext = ui.comboBox_beforeconnectserviceslist->currentText();
+    ui.comboBox_beforeconnectserviceslist->clear();
+    for (int row = 0; row < services_list.size(); ++row) {
+      QMap<QString,QVariant> map = services_list.at(row).objmap;
+      if (map.value("Type").toString() == "wifi" || map.value("Type").toString() == "vpn") {
+	QString ss = getNickName(services_list.at(row).objpath);
+	ui.comboBox_beforeconnectserviceslist->addItem(TranslateStrings::cmtr(ss) );
+      } // if
+    } // services for loop
+    ui.comboBox_beforeconnectserviceslist->setCurrentText(curtext);
+
+    // Fill in the combobox for before connect service files
+    curtext = ui.comboBox_beforeconnectservicefile->currentText();
+    ui.comboBox_beforeconnectservicefile->clear();
+    const QStringList dirlist = { "/var/lib/connman", "/var/lib/connman-vpn"};
+    const QStringList filters("*.cmst.config");
+    for (int i = 0; i < dirlist.size() ; ++i) {
+      QDir dir = QDir(dirlist.at(i) );
+      ui.comboBox_beforeconnectservicefile->addItems(dir.entryList(filters, QDir::Files, QDir::Name));
+    } // for loop
+    ui.comboBox_beforeconnectservicefile->setCurrentText(curtext);
+
+  } // services if no error
 
   return;
 }
@@ -2473,6 +2523,10 @@ void ControlBox::writeSettings()
 
   settings->beginGroup("ExternalPrograms");
   settings->setValue("run_after_connect", ui.lineEdit_afterconnect->text() );
+  settings->setValue("modify_service_file", ui.checkBox_modifyservicefile->isChecked() );
+  settings->setValue("run_before_connect", ui.lineEdit_beforeconnect->text() );
+  settings->setValue("before_connect_service", ui.comboBox_beforeconnectserviceslist->currentText() );
+  settings->setValue("before_connect_service_file", ui.comboBox_beforeconnectservicefile->currentText() );
   settings->endGroup();
 
   return;
@@ -2533,6 +2587,11 @@ void ControlBox::readSettings()
 
   settings->beginGroup("ExternalPrograms");
   ui.lineEdit_afterconnect->setText(settings->value("run_after_connect").toString() );
+  ui.checkBox_modifyservicefile->setChecked(settings->value("modify_service_file").toBool() );
+  ui.lineEdit_beforeconnect->setText(settings->value("run_before_connect").toString() );
+  ui.comboBox_beforeconnectserviceslist->addItem(settings->value("before_connect_service").toString() );
+  ui.comboBox_beforeconnectservicefile->addItem(settings->value("before_connect_service_file").toString() );
+  ui.comboBox_beforeconnectservicefile->setEnabled(settings->value("modify_service_file").toBool() );
   settings->endGroup();
   return;
 }

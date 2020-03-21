@@ -82,8 +82,8 @@ void RootHelper::startHelper()
 // by CMST.  These files will end in .cmst.config
 QStringList RootHelper::getFileList(const QString& path)
 { 
-	// make sure the path is allowed
-	if (! pathAllowed(path) ) return QStringList();
+  // make sure the path is allowed
+  if (! pathAllowed(path) ) return QStringList();
 	
   // variables
   QDir dir = QDir(path);
@@ -98,8 +98,8 @@ QStringList RootHelper::getFileList(const QString& path)
 // Slot to read a file from disk
 QString RootHelper::readFile(const QString& path, const QString& fn)
 { 
-	// make sure the path is allowed
-	if (! pathAllowed(path) ) return QString();
+  // make sure the path is allowed
+  if (! pathAllowed(path) ) return QString();
 	
   // open the file for reading  
   QFile infile(QString(path + "/%1.cmst.config").arg(sanitizeInput(fn)) ); 
@@ -118,8 +118,8 @@ QString RootHelper::readFile(const QString& path, const QString& fn)
 // Slot to delete a disk file
 bool RootHelper::deleteFile(const QString& path, const QString& fn)
 {
-	// make sure the path is allowed
-	if (! pathAllowed(path) ) return false;
+  // make sure the path is allowed
+  if (! pathAllowed(path) ) return false;
 	
   // delete the file and emit a signal with the result
   return QFile::remove(QString(path + "/%1.cmst.config").arg(sanitizeInput(fn)) );
@@ -129,8 +129,8 @@ bool RootHelper::deleteFile(const QString& path, const QString& fn)
 // Slot to write the file to disk
 qint64 RootHelper::saveFile(const QString& path, const QString& fn, const QString& data)
 { 
-	// make sure the path is allowed
-	if (! pathAllowed(path) ) return -1;
+  // make sure the path is allowed
+  if (! pathAllowed(path) ) return -1;
 	
   // open the file for writing
   QFile outfile(QString(path + "/%1.cmst.config").arg(sanitizeInput(fn)) );
@@ -162,9 +162,9 @@ QString RootHelper::sanitizeInput(QString instr)
 // Function to determine if the path is allowed
 bool RootHelper::pathAllowed(QString path)
 {
-	if (path == "/var/lib/connman") return true;
-	else if (path == "/var/lib/connman-vpn") return true;
-	
-	return false;	
+  if (path == "/var/lib/connman") return true;
+  else if (path == "/var/lib/connman-vpn") return true;
+  
+  return false;	
 }
 

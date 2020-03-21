@@ -644,7 +644,7 @@ void VPN_Editor::requestFileList(QAbstractButton* button)
 }
 
 //
-// Slot to process the file list from /var/lib/connman.  Connected to
+// Slot to process the file list from /var/lib/connman-vpn.  Connected to
 // the obtainedFileList signal in roothelper
 void VPN_Editor::processFileList(const QStringList& sl_conf)
 {
@@ -684,7 +684,8 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
         if (ok) filename = item;    
         break;
       } // switch 
-    // if we have a filename try to open the file
+
+  // if we have a filename try to open the file
     if (! filename.isEmpty() ) {
       vlist.clear();
       vlist << QVariant::fromValue(vpn_path);

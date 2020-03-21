@@ -156,6 +156,7 @@ class ControlBox : public QDialog
     void assembleTabWireless();
     void assembleTabVPN();
     void assembleTabCounters();
+    void assembleTabPreferences();
     void assembleTrayIcon();
     void sendNotifications();
     bool getProperties();
