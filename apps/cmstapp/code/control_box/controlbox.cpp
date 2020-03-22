@@ -70,6 +70,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/vpn_prov_ed/vpn_ed.h"
 # include "./code/trstring/tr_strings.h"
 # include "./code/shared/shared.h"
+# include "./code/gen_conf_ed/gen_conf_ed.h"
 
 //  headers for system logging
 # include <stdio.h>
@@ -667,7 +668,7 @@ void ControlBox::enableMoveButtons(int row, int col)
     
     else      
       act->setDisabled(true);
-   }  // for
+   }  // fog
 
   // add a cancel option
   mvsrv_menu->addSeparator();
@@ -718,8 +719,8 @@ void ControlBox::connectPressed()
 {
   // Process wifi or vpn depending on who sent the signal
   QTableWidget* qtw = NULL;
-  if (sender() == ui.pushButton_connect) qtw = ui.tableWidget_wifi;
-    else if (sender() == ui.pushButton_vpn_connect) qtw = ui.tableWidget_vpn;
+  if (sender() == ui.pushButton_connect)  qtw = ui.tableWidget_wifi;
+    else if (sender() == ui.pushButton_vpn_connect)  qtw = ui.tableWidget_vpn;
       else  return;
 
   // If there is only one row select it
@@ -746,15 +747,22 @@ void ControlBox::connectPressed()
       QStringList args = text.split(' ');
       QString cmd = args.first();
       args.removeFirst();
-      if (! ui.checkBox_modifyservicefile->isChecked()) {
+      if (ui.checkBox_modifyservicefile->isChecked()) {
+	GEN_Editor* gened = new GEN_Editor(this);
+	gened->editInPlace(ui.comboBox_beforeconnectservicefile->currentText(), cmd, args);
+	//delete gened;	  
+      } // program does require a root helper 
+      else {
 	QProcess* proc = new QProcess(this);
 	proc->startDetached(cmd, args);
+	proc->waitForFinished(); // could be dangerous - will block until finished or timeout at 30 seconds
+	delete proc;
       } // program does not require root helper
     } // if service is correct 
   } // if there is a command to execute
-  return;
+     
 
-  //  send the connect message to the service.  TableWidget only allows single selection so list can only have 0 or 1 elments
+  // now request the connection.  Because of single selection mode list can only have 0 or 1 items in it.
   QDBusInterface* iface_serv = NULL;
 
   if (qtw == ui.tableWidget_wifi) {

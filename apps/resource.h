@@ -35,7 +35,7 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation) 
-#define VERSION "2020.03.18-1"
+#define VERSION "2020.03.22-1"
 
 #define RELEASE_DATE "7 March 2020"
 #define COPYRIGHT_DATE "2013-2020"
@@ -95,7 +95,7 @@ namespace CMST
     ValDialog_min1ch  = 0x0a,
     ValDialog_min8ch  = 0x0b,
     ValDialog_46d     = 0x0c,
-    
+   
   };  // enum
 } // namespace CMST
 

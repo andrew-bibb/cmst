@@ -45,7 +45,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/shared/shared.h"
    
 //
-// This class is derived from the ProvisioningEditor class,  There are a few improvements
+// This class is based on the ProvisioningEditor class,  There are a few improvements
 // mainly in more efficient packaging of the text data into each QAction.
 //
 // In this class:
@@ -645,7 +645,7 @@ void VPN_Editor::requestFileList(QAbstractButton* button)
 
 //
 // Slot to process the file list from /var/lib/connman-vpn.  Connected to
-// the obtainedFileList signal in roothelper
+// the callWithCallback signal in requestFileList() 
 void VPN_Editor::processFileList(const QStringList& sl_conf)
 {
   // variables

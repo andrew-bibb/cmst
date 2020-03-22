@@ -148,6 +148,7 @@ class ControlBox : public QDialog
     QColor trayiconbackground;
     IconManager* iconman;
     float f_connmanversion;
+    int conn_type;
   
   // functions
     int managerRescan(const int& srv = 0);

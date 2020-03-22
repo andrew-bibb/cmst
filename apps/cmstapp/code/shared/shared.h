@@ -38,6 +38,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QLabel>
 # include <QPushButton>
 # include <QValidator>
+# include <QDBusInterface>
 
 namespace shared {
 //
@@ -66,10 +67,11 @@ class ValidatingDialog : public QDialog
     QLineEdit* lineedit;
     QDialogButtonBox* buttonbox;
     bool plural;
-};
+}; // class
 
 QDBusMessage::MessageType processReply(const QDBusMessage& reply);
 bool extractMapData(QMap<QString,QVariant>&,const QVariant&);
 
-}
+
+} // namespace
 #endif

@@ -493,7 +493,7 @@ void ProvisioningEditor::requestFileList(QAbstractButton* button)
 
 //
 // Slot to process the file list from /var/lib/connman.  Connected to
-// the obtainedFileList signal in roothelper
+// the callWithCallback signal in requestFileList()
 void ProvisioningEditor::processFileList(const QStringList& sl_conf)
 {
   // variables
