@@ -155,6 +155,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   settings = new QSettings(ORG, APP, this);
   notifyclient = NULL;
   onlineobjectpath.clear();
+  pendingobjectpath.clear();
   socketserver = new QLocalServer(this);
   socketserver->removeServer(SOCKET_NAME);  // remove any files that may have been left after a crash
   socketserver->listen(SOCKET_NAME);
@@ -739,6 +740,11 @@ void ControlBox::connectPressed()
     return;
   }
 
+//Because of single selection mode list can only have 0 or 1 items in it.
+  if (qtw == ui.tableWidget_wifi) pendingobjectpath = wifi_list.at(list.at(0)->row()).objpath.path();
+    else if (qtw == ui.tableWidget_vpn) pendingobjectpath = vpn_list.at(list.at(0)->row()).objpath.path();
+      else pendingobjectpath.clear();
+
   // execute external program if specified
   if (! ui.lineEdit_beforeconnect->text().isEmpty() ) {
     if (list.at(0)->text() == ui.comboBox_beforeconnectserviceslist->currentText() ) {
@@ -750,29 +756,30 @@ void ControlBox::connectPressed()
       if (ui.checkBox_modifyservicefile->isChecked()) {
 	GEN_Editor* gened = new GEN_Editor(this);
 	gened->editInPlace(ui.comboBox_beforeconnectservicefile->currentText(), cmd, args);
-	//delete gened;	  
+	connect (gened, SIGNAL(finished(int)), this, SLOT(requestConnection()));
+//	gened->deleteLater();
       } // program does require a root helper 
       else {
 	QProcess* proc = new QProcess(this);
 	proc->startDetached(cmd, args);
-	proc->waitForFinished(); // could be dangerous - will block until finished or timeout at 30 seconds
-	delete proc;
+	connect (proc, SIGNAL(finished(int)), this, SLOT(requestConnection()));
+//	proc->deleteLater();
       } // program does not require root helper
     } // if service is correct 
   } // if there is a command to execute
-     
 
-  // now request the connection.  Because of single selection mode list can only have 0 or 1 items in it.
+  // else request the connection now
+  else requestConnection();
+
+  return;
+}     
+
+//
+// Slot to actually request a connection via DBUS.  Called from the connectPressed() slot
+void ControlBox::requestConnection() {
   QDBusInterface* iface_serv = NULL;
 
-  if (qtw == ui.tableWidget_wifi) {
-    iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-  }
-  else if (qtw == ui.tableWidget_vpn) {
-    iface_serv = new QDBusInterface(DBUS_CON_SERVICE, vpn_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
-  }
-  else return;  // really not needed
-
+  iface_serv = new QDBusInterface(DBUS_CON_SERVICE, pendingobjectpath, "net.connman.Service", QDBusConnection::systemBus(), this);
   iface_serv->setTimeout(5);  // need a short timeout to get the Agent
   QDBusMessage reply = iface_serv->call(QDBus::AutoDetect, "Connect");
   if (reply.errorName() != "org.freedesktop.DBus.Error.NoReply") shared::processReply(reply);

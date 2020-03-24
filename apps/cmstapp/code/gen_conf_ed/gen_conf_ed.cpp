@@ -36,7 +36,15 @@ DEALINGS IN THE SOFTWARE.
 # include "./gen_conf_ed.h"
 # include "../resource.h"
 # include "./code/trstring/tr_strings.h"
-  
+
+// Function to execute a process which may modify a /cmst/config file
+// in /var/lib/connman or /var/lib/connman-vpn.  It will send a finished(int) 
+// signal when completed.  Exit codes:
+//  negative number = this function never really executed
+//  0 = everything completed normally
+//  1 = one of the DBUS calls failed to complete
+//  2 = the external process failed to start 
+//  3 = the external process returned a nonzero exit code
 //
 //  Constructor  
 GEN_Editor::GEN_Editor(QWidget* parent) : QWidget(parent)
@@ -47,12 +55,12 @@ GEN_Editor::GEN_Editor(QWidget* parent) : QWidget(parent)
   path.clear();
   process.clear();
   args.clear();
-  filecontents.clear();
-  finished = false;
+  filecontents.clear();\
+  proc = NULL;
   
   // signals and slots
   connect(this, SIGNAL(readCompleted()), this, SLOT(executeProcess()));
-  connect(this, SIGNAL(processCompleted()), this, SLOT(editContents())); 
+  
   return;
  }
 
@@ -131,49 +139,65 @@ void GEN_Editor::storeContents(const QString& data)
 }
 
 //
-// Slot to execute the process.  This blocks untill the the process is complete or timeouts
-// connected to the readCompleted signal emited by storeContents
+// Slot to execute the process.  
 void GEN_Editor::executeProcess()
 {
-  QProcess* proc = new QProcess(this);
+  proc = new QProcess(this);
   proc->start(process, args);
-  if (! proc->waitForStarted() ) return;
+  if (! proc->waitForStarted() ) {
+    emit finished(2);
+    return;
+  }
 
-  if (! proc->waitForFinished()) return;
-
-  changed = QString(proc->readAll()).split('\n');
-  emit processCompleted();
+  connect (proc, SIGNAL(finished(int)), this, SLOT(processExitCode(int)));
 
   return; 
+
 }
 
 //
-//  Slot to edit the contents of the config file.  Connected to the processCompleted
-//  signal emited by executeProcess
-void GEN_Editor::editContents()
+// Slot to process the return codes from executeProcess
+void GEN_Editor::processExitCode(int exitcode)
 {
-  if (changed.size() <= 0 ) return;
+  if (exitcode == 0) {
+    changed = QString(proc->readAll()).split('\n');
+    editBuffer();   
+  }
+  else
+    emit (finished(3));
 
-  for (int i = 0; i < filecontents.size(); ++i) {
-    if (filecontents.at(i).size() == 0) {
-      filecontents.removeAt(i);
-      continue;
-      }
-    for (int j = 0; j < changed.size(); ++j) {
-      if (changed.at(j).size() == 0) {
-	changed.removeAt(j);
+  return;
+}
+ 
+
+//
+//  Slot to edit the buffer containing the contents of the config file.  Connected to  processExitCode() function
+void GEN_Editor::editBuffer()
+{
+  if (changed.size() > 0 ) {
+    for (int i = 0; i < filecontents.size(); ++i) {
+      if (filecontents.at(i).size() == 0) {
+	filecontents.removeAt(i);
 	continue;
 	}
-      if(filecontents.at(i).split('=').at(0).simplified() == changed.at(j).split('=').at(0).simplified()) {
-	filecontents.removeAt(i);
-	filecontents.insert(i, changed.at(j));
-	changed.removeAt(j);
-      }	// if
-    }// j for
-  } // i for
-  if (changed.size() > 0) filecontents.append(changed);
-  
-  this->writeFile();
+      for (int j = 0; j < changed.size(); ++j) {
+	if (changed.at(j).size() == 0) {
+	  changed.removeAt(j);
+	  continue;
+	  }
+	if(filecontents.at(i).split('=').at(0).simplified() == changed.at(j).split('=').at(0).simplified()) {
+	  filecontents.removeAt(i);
+	  filecontents.insert(i, changed.at(j));
+	  changed.removeAt(j);
+	}	// if
+      }// j for
+    } // i for
+    if (changed.size() > 0) filecontents.append(changed);
+    
+    this->writeFile();
+  } // if we changed something
+
+  else emit finished(0);
 
   return;
 }
@@ -195,9 +219,7 @@ void GEN_Editor::writeCompleted(qint64 bytes)
       msg = tr("%L1 Bytes written").arg(bytes);
   }
   
-  finished = true;
-
-  qDebug() <<  msg;
+  emit finished(0);
 
   return;
 }
@@ -212,7 +234,7 @@ void GEN_Editor::callbackErrorHandler(QDBusError err)
     QMessageBox::Ok,
     QMessageBox::Ok);
  
-  finished = true;
+  emit finished(1);
 
   return;
 }

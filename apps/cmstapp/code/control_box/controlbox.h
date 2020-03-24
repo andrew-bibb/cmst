@@ -144,11 +144,11 @@ class ControlBox : public QDialog
     bool b_usemate;
     QSettings* settings;
     QString onlineobjectpath;
+    QString pendingobjectpath;
     QLocalServer* socketserver;
     QColor trayiconbackground;
     IconManager* iconman;
     float f_connmanversion;
-    int conn_type;
   
   // functions
     int managerRescan(const int& srv = 0);
@@ -178,6 +178,7 @@ class ControlBox : public QDialog
     void enableMoveButtons(int,int);
     void counterUpdated(const QDBusObjectPath&, const QString&, const QString&);
     void connectPressed();
+    void requestConnection();
     void disconnectPressed();
     void removePressed();
     void dbsPropertyChanged(QString,QDBusVariant);

@@ -42,7 +42,6 @@ class GEN_Editor : public QWidget
   public:
     GEN_Editor(QWidget*);
     void editInPlace(const QString&, const QString&, const QStringList&);
-    inline bool isFinished() {return finished;}
 
   private:  
   // members
@@ -52,7 +51,7 @@ class GEN_Editor : public QWidget
     QString process;
     QStringList args;
     QStringList changed;
-    bool finished;
+    QProcess* proc;
 
   //functions  
     void readFile();
@@ -61,13 +60,14 @@ class GEN_Editor : public QWidget
   private slots:
     void storeContents(const QString&);
     void executeProcess();
-    void editContents();
+    void processExitCode(int);
+    void editBuffer();
     void writeCompleted(qint64);
     void callbackErrorHandler(QDBusError);
 
   signals:
     void readCompleted();
-    void processCompleted();
+    void finished(int exitcode = -1);
         
 };
 
