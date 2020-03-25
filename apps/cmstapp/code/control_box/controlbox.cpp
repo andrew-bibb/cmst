@@ -70,7 +70,6 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/vpn_prov_ed/vpn_ed.h"
 # include "./code/trstring/tr_strings.h"
 # include "./code/shared/shared.h"
-# include "./code/gen_conf_ed/gen_conf_ed.h"
 
 //  headers for system logging
 # include <stdio.h>
@@ -162,7 +161,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   trayiconbackground = QColor();
   trayicon = new QSystemTrayIcon(this);
   f_connmanversion = 0.0;
-  
+  gened = NULL;
+  proc = NULL;
   iconman = new IconManager(this);
   
   // set a stylesheet on the tab widget - used to hide disabled tabs
@@ -740,7 +740,7 @@ void ControlBox::connectPressed()
     return;
   }
 
-//Because of single selection mode list can only have 0 or 1 items in it.
+  //Because of single selection mode list can only have 0 or 1 items in it.
   if (qtw == ui.tableWidget_wifi) pendingobjectpath = wifi_list.at(list.at(0)->row()).objpath.path();
     else if (qtw == ui.tableWidget_vpn) pendingobjectpath = vpn_list.at(list.at(0)->row()).objpath.path();
       else pendingobjectpath.clear();
@@ -754,18 +754,16 @@ void ControlBox::connectPressed()
       QString cmd = args.first();
       args.removeFirst();
       if (ui.checkBox_modifyservicefile->isChecked()) {
-	GEN_Editor* gened = new GEN_Editor(this);
+	gened = new GEN_Editor(this);
 	gened->editInPlace(ui.comboBox_beforeconnectservicefile->currentText(), cmd, args);
 	connect (gened, SIGNAL(finished(int)), this, SLOT(requestConnection()));
-//	gened->deleteLater();
       } // program does require a root helper 
       else {
-	QProcess* proc = new QProcess(this);
-	proc->startDetached(cmd, args);
+	proc = new QProcess(this);
+	proc->start(cmd, args);
 	connect (proc, SIGNAL(finished(int)), this, SLOT(requestConnection()));
-//	proc->deleteLater();
       } // program does not require root helper
-    } // if service is correct 
+    } // if selected service matches the one to modify
   } // if there is a command to execute
 
   // else request the connection now
@@ -777,6 +775,11 @@ void ControlBox::connectPressed()
 //
 // Slot to actually request a connection via DBUS.  Called from the connectPressed() slot
 void ControlBox::requestConnection() {
+  // only way here is when a finished() signal fires, delete the object that did it
+  if (proc)  delete proc;
+  if (gened) delete gened;
+
+  // data member
   QDBusInterface* iface_serv = NULL;
 
   iface_serv = new QDBusInterface(DBUS_CON_SERVICE, pendingobjectpath, "net.connman.Service", QDBusConnection::systemBus(), this);

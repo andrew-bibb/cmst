@@ -55,6 +55,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/notify/notify.h"
 # include "./code/iconman/iconman.h"
 # include "./code/vpn_agent/vpnagent.h"
+# include "./code/gen_conf_ed/gen_conf_ed.h"
 
 //  Two of the connman.Manager query functions will return an array of structures.
 //  This struct provides a receiving element we can use to collect the return data.
@@ -149,6 +150,8 @@ class ControlBox : public QDialog
     QColor trayiconbackground;
     IconManager* iconman;
     float f_connmanversion;
+    GEN_Editor* gened;
+    QProcess* proc;
   
   // functions
     int managerRescan(const int& srv = 0);

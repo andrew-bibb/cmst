@@ -55,7 +55,7 @@ GEN_Editor::GEN_Editor(QWidget* parent) : QWidget(parent)
   path.clear();
   process.clear();
   args.clear();
-  filecontents.clear();\
+  filecontents.clear();
   proc = NULL;
   
   // signals and slots

@@ -8,6 +8,7 @@
 <li>Fixed update problems in details tab.</li>
 <li>Fixed VPN tray icon not always showing (possibly issue #198).</li>
 <li>Fixed notification daemon working and starting.</li>
+<li>Added ability to execute a process prior to making a wifi or vpn connection.</li>
 </ul>
 <b> 2020.03.07</b>
 <ul>
