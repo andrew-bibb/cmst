@@ -1,6 +1,6 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b> In Progress</b>
+<b> 2020.04.12</b>
 <ul>
 <li>Fixed wrong validator on fields that accept either IPV4 or IPv6 addresses.</li>
 <li>Expanded IPv6 validator to accept most abbreviated addresses.</li>
@@ -8,7 +8,7 @@
 <li>Fixed update problems in details tab.</li>
 <li>Fixed VPN tray icon not always showing (possibly issue #198).</li>
 <li>Fixed notification daemon working and starting.</li>
-<li>Added ability to execute a process prior to making a wifi or vpn connection.</li>
+<li>Added ability to execute a process prior to making a wifi or vpn connection (issue #194).</li>
 </ul>
 <b> 2020.03.07</b>
 <ul>
