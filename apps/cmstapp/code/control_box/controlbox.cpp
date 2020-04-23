@@ -1011,7 +1011,6 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
   
   // update the widgets  
   updateDisplayWidgets();
-  
   return;
 }
 
@@ -1694,27 +1693,27 @@ int ControlBox::managerRescan(const int& srv)
     // Access connman.manager to retrieve the data
     if (srv & CMST::Manager_Technologies) {
       if (! getTechnologies() ) {
-  logErrors(CMST::Err_Technologies);
+	logErrors(CMST::Err_Technologies);
       } // if
       else {
-  // connect technology signals to slots
-  for (int i = 0; i < technologies_list.size(); ++i) {
-    QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
-    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
-  } // for
+      // connect technology signals to slots
+	for (int i = 0; i < technologies_list.size(); ++i) {
+	  QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
+	  QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
+	} // for
       } //else
     } // if technolgies
 
     if (srv & CMST::Manager_Services) {
       if (! getServices() ) {
-  logErrors(CMST::Err_Services);
+	logErrors(CMST::Err_Services);
       } // if
-      // connect service signals to slots
       else {
-  for (int i = 0; i < services_list.size(); ++i) {
-    QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
-    QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
-  } // for
+      // connect service signals to slots
+	for (int i = 0; i < services_list.size(); ++i) {
+	QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+	QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+	} // for
       } // else
     } // if services
 
