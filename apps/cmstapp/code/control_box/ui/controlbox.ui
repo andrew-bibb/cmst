@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>689</width>
-    <height>697</height>
+    <width>749</width>
+    <height>644</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -58,7 +58,7 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>647</width>
+            <width>707</width>
             <height>466</height>
            </rect>
           </property>
@@ -484,7 +484,7 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>647</width>
+            <width>707</width>
             <height>385</height>
            </rect>
           </property>
@@ -875,7 +875,7 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>647</width>
+            <width>707</width>
             <height>466</height>
            </rect>
           </property>
@@ -915,7 +915,7 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>603</width>
+                   <width>663</width>
                    <height>156</height>
                   </rect>
                  </property>
@@ -974,7 +974,7 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>603</width>
+                   <width>663</width>
                    <height>156</height>
                   </rect>
                  </property>
@@ -1041,9 +1041,9 @@
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-228</y>
-            <width>633</width>
-            <height>738</height>
+            <y>0</y>
+            <width>693</width>
+            <height>740</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_8">
@@ -1083,501 +1083,6 @@
                 </property>
                 <property name="text">
                  <string>Enable Autostart</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QGroupBox" name="groupBox_systemtray">
-             <property name="whatsThis">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the system tray are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="title">
-              <string>System Tray</string>
-             </property>
-             <layout class="QGridLayout" name="gridLayout">
-              <item row="0" column="0">
-               <widget class="QCheckBox" name="checkBox_hideIcon">
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked an icon will not be displayed in the system tray.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Hide Tray Icon</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QCheckBox" name="checkBox_enablesystemtraytooltips">
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray icon will popup a status message when you hover the mouse over it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Enable System Tray Popups</string>
-                </property>
-                <property name="checked">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QCheckBox" name="checkBox_systemtraynotifications">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>System Tray Notifications</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item row="0" column="1" rowspan="4">
-            <widget class="QGroupBox" name="groupBox_startoptions">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="whatsThis">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="title">
-              <string>Start Options</string>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_9">
-              <item row="9" column="1">
-               <widget class="QSpinBox" name="spinBox_counterrate">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="buttonSymbols">
-                 <enum>QAbstractSpinBox::PlusMinus</enum>
-                </property>
-                <property name="minimum">
-                 <number>5</number>
-                </property>
-                <property name="maximum">
-                 <number>86400</number>
-                </property>
-                <property name="singleStep">
-                 <number>10</number>
-                </property>
-                <property name="value">
-                 <number>10</number>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QCheckBox" name="checkBox_disabletrayicon">
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Disable Tray Icon</string>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="0">
-               <widget class="QCheckBox" name="checkBox_counterkb">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Counter Update KB</string>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="1">
-               <widget class="QSpinBox" name="spinBox_waittime">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="buttonSymbols">
-                 <enum>QAbstractSpinBox::PlusMinus</enum>
-                </property>
-                <property name="minimum">
-                 <number>1</number>
-                </property>
-                <property name="maximum">
-                 <number>60</number>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="1">
-               <widget class="QSpinBox" name="spinBox_counterkb">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="buttonSymbols">
-                 <enum>QAbstractSpinBox::PlusMinus</enum>
-                </property>
-                <property name="minimum">
-                 <number>256</number>
-                </property>
-                <property name="maximum">
-                 <number>32768</number>
-                </property>
-                <property name="singleStep">
-                 <number>64</number>
-                </property>
-                <property name="value">
-                 <number>1024</number>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="0">
-               <widget class="QCheckBox" name="checkBox_startminimized">
-                <property name="toolTip">
-                 <string/>
-                </property>
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Start Minimized</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="0">
-               <widget class="QCheckBox" name="checkBox_systemicontheme">
-                <property name="toolTip">
-                 <string/>
-                </property>
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Use Icon Theme</string>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="0">
-               <widget class="QCheckBox" name="checkBox_waittime">
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Wait Time</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QCheckBox" name="checkBox_enablecounters">
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Enable Counters</string>
-                </property>
-               </widget>
-              </item>
-              <item row="9" column="0">
-               <widget class="QCheckBox" name="checkBox_counterseconds">
-                <property name="toolTip">
-                 <string/>
-                </property>
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Counter Update Rate </string>
-                </property>
-               </widget>
-              </item>
-              <item row="10" column="0">
-               <widget class="QCheckBox" name="checkBox_faketranparency">
-                <property name="toolTip">
-                 <string/>
-                </property>
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB.  If the spedified color matches the tray background we've effectively created fake transparency. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Fake Transparency</string>
-                </property>
-               </widget>
-              </item>
-              <item row="10" column="1">
-               <widget class="QSpinBox" name="spinBox_faketransparency">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the background color as a hex number in the format: RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="buttonSymbols">
-                 <enum>QAbstractSpinBox::PlusMinus</enum>
-                </property>
-                <property name="accelerated">
-                 <bool>true</bool>
-                </property>
-                <property name="maximum">
-                 <number>16777215</number>
-                </property>
-                <property name="displayIntegerBase">
-                 <number>16</number>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <widget class="QLineEdit" name="lineEdit_icontheme">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon theme to use. For this theme to be used it must be installed on your system. If the theme is not installed, or if you spell the name wrong CMST will fall back to using its internal icon set.&lt;/p&gt;&lt;p&gt;If this box is blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="clearButtonEnabled">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item row="12" column="0" colspan="2">
-               <widget class="QGroupBox" name="groupBox_process">
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line. Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Two events are checked. &lt;span style=&quot; font-weight:600;&quot;&gt;Before Connecting&lt;/span&gt; events are called after the Connect button is pressed in either the Wireless or VPN tabs. The program or process in the Execute box will only be executed prior to making a connection for the service shown in the Service box.  It will not be called when connecting to any other service.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;After Connecting&lt;/span&gt; box will be called after Connman enters the ready or online state.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="title">
-                 <string>External Programs</string>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_11">
-                 <item row="0" column="0" colspan="2">
-                  <widget class="QGroupBox" name="groupBox">
-                   <property name="whatsThis">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This area is to specify a program or process to run after a wifi or vpn service button is pressed, but before the connect method is sent to ConnMan. This is mainly used to modify a .cmst.config file which seems useful to modify certain short lived entries for openConnect vpn connections.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;Execute&lt;/span&gt; box will only be executed prior to making a connection for the single service shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Service&lt;/span&gt; box. It will not be called when connecting to any other service. If a .cmst.config file is to be modified a check must in the &lt;span style=&quot; font-weight:600;&quot;&gt;Modify Service File&lt;/span&gt; box and the path and name of the file to be modified must be provided.&lt;/p&gt;&lt;p&gt;To modify a .cmst.config file CMST will read stdout of the program or process being called. Program output should be individual lines in KEY=VALUE format. If KEY exists in the .cmst.config file it will be replaced by the new VALUE. If KEY does not exist it will be appended. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
-                   <property name="title">
-                    <string>Before Connecting</string>
-                   </property>
-                   <layout class="QGridLayout" name="gridLayout_4">
-                    <item row="1" column="1" colspan="2">
-                     <widget class="QLineEdit" name="lineEdit_beforeconnect">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                        <horstretch>1</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="0">
-                     <widget class="QLabel" name="label_4">
-                      <property name="whatsThis">
-                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the program or process to be executed before Connman initiates a connection to the service listed in the box above. If left blank no program or process will be executed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                      </property>
-                      <property name="text">
-                       <string>Execute:</string>
-                      </property>
-                      <property name="buddy">
-                       <cstring>lineEdit_beforeconnect</cstring>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="1" colspan="2">
-                     <widget class="QComboBox" name="comboBox_beforeconnectserviceslist">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                        <horstretch>1</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="0">
-                     <widget class="QLabel" name="label_3">
-                      <property name="whatsThis">
-                       <string>Specify the service you are connecting to where you want a program or process to execute prior to initiating the connection.</string>
-                      </property>
-                      <property name="text">
-                       <string>Service:</string>
-                      </property>
-                      <property name="buddy">
-                       <cstring>comboBox_beforeconnectserviceslist</cstring>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="0" colspan="3">
-                     <layout class="QVBoxLayout" name="verticalLayout_13">
-                      <item>
-                       <widget class="QCheckBox" name="checkBox_modifyservicefile">
-                        <property name="whatsThis">
-                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the configuration file shown below will be modified by whatever output the program provides.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                        </property>
-                        <property name="text">
-                         <string>Modify Service File</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_10">
-                        <item>
-                         <widget class="QLabel" name="label_5">
-                          <property name="whatsThis">
-                           <string>Service configuration file to be modified by the program.</string>
-                          </property>
-                          <property name="text">
-                           <string>FIle: </string>
-                          </property>
-                          <property name="buddy">
-                           <cstring>comboBox_beforeconnectservicefile</cstring>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QComboBox" name="comboBox_beforeconnectservicefile">
-                          <property name="enabled">
-                           <bool>false</bool>
-                          </property>
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                     </layout>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QLineEdit" name="lineEdit_afterconnect">
-                   <property name="clearButtonEnabled">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <widget class="QLabel" name="label">
-                   <property name="whatsThis">
-                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enter the program or process to be executed after Connman enters the &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; state.  If left blank no program or process will be executed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
-                   <property name="text">
-                    <string>After Connecting</string>
-                   </property>
-                   <property name="buddy">
-                    <cstring>lineEdit_afterconnect</cstring>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item row="13" column="0">
-               <spacer name="verticalSpacer">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="11" column="0" colspan="2">
-               <widget class="QGroupBox" name="groupBox_2">
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use code specific for the selected desktop environment.&lt;/p&gt;&lt;p&gt;As of 2014.11.24 there seems to be a problem with QT5.3 and some system trays. There is code in the program to try and work around this issue, and selecting one of these buttons will invoke the code specific to the desktop.&lt;/p&gt;&lt;p&gt;If the bug gets fixed these options will remain so that start up scripts do not break, but the options will do nothing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="title">
-                 <string>Desktop Specific</string>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_12">
-                 <item>
-                  <widget class="QRadioButton" name="radioButton_desktopnone">
-                   <property name="toolTip">
-                    <string/>
-                   </property>
-                   <property name="whatsThis">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Default is no desktop specific code.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
-                   <property name="text">
-                    <string>None</string>
-                   </property>
-                   <property name="checked">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QRadioButton" name="radioButton_desktopxfce">
-                   <property name="toolTip">
-                    <string/>
-                   </property>
-                   <property name="whatsThis">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
-                   <property name="text">
-                    <string>XFCE</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QRadioButton" name="radioButton_desktopmate">
-                   <property name="toolTip">
-                    <string/>
-                   </property>
-                   <property name="whatsThis">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
-                   <property name="text">
-                    <string>MATE</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QCheckBox" name="checkBox_disablevpn">
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Disable VPN</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="0">
-               <widget class="QCheckBox" name="checkBox_disableminimized">
-                <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>Disable Minimized</string>
                 </property>
                </widget>
               </item>
@@ -1666,10 +1171,10 @@ p, li { white-space: pre-wrap; }
                  <bool>true</bool>
                 </property>
                 <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the Start Options set here will be read and used next time the program starts.  &lt;/p&gt;&lt;p&gt;Settings are stored in&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf  &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the Start Up Options in the right hand pane will be enabled. Start up options set in this pane will be read and used next time the program starts. Start up options are also available as command line switches and an option provided on the command line will take precedence over an option set in the right hand pane. The options in this pane are provided as a convienence to avoid the necessity of editing a systemd service or other start up file. &lt;/p&gt;&lt;p&gt;Settings are stored in&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>Use Start Options</string>
+                 <string>Enable Start Options from GUI (right hand pane)</string>
                 </property>
                 <property name="checked">
                  <bool>true</bool>
@@ -1741,6 +1246,505 @@ p, li { white-space: pre-wrap; }
               </item>
              </layout>
             </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="groupBox_systemtray">
+             <property name="whatsThis">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the system tray are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="title">
+              <string>System Tray</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="1" column="0">
+               <widget class="QCheckBox" name="checkBox_enablesystemtraytooltips">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray icon will popup a status message when you hover the mouse over it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Enable System Tray Popups</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="checkBox_hideIcon">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked an icon will not be displayed in the system tray.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Hide Tray Icon</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QCheckBox" name="checkBox_systemtraynotifications">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>System Tray Notifications</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1" rowspan="3">
+            <widget class="QGroupBox" name="groupBox_startoptions">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="whatsThis">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. Changing or setting these will only take effect at the next program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="title">
+              <string>Start Up Options</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_9">
+              <item row="10" column="1">
+               <widget class="QSpinBox" name="spinBox_faketransparency">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the background color as a hex number in the format: RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                </property>
+                <property name="accelerated">
+                 <bool>true</bool>
+                </property>
+                <property name="maximum">
+                 <number>16777215</number>
+                </property>
+                <property name="displayIntegerBase">
+                 <number>16</number>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="lineEdit_icontheme">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon theme to use. For this theme to be used it must be installed on your system. If the theme is not installed, or if you spell the name wrong CMST will fall back to using its internal icon set.&lt;/p&gt;&lt;p&gt;If this box is blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="clearButtonEnabled">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="checkBox_enablecounters">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Enable Counters</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QCheckBox" name="checkBox_disabletrayicon">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Disable Tray Icon</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="1">
+               <widget class="QSpinBox" name="spinBox_counterkb">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                </property>
+                <property name="minimum">
+                 <number>256</number>
+                </property>
+                <property name="maximum">
+                 <number>32768</number>
+                </property>
+                <property name="singleStep">
+                 <number>64</number>
+                </property>
+                <property name="value">
+                 <number>1024</number>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QCheckBox" name="checkBox_startminimized">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Start Minimized</string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="0">
+               <widget class="QCheckBox" name="checkBox_faketranparency">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB.  If the spedified color matches the tray background we've effectively created fake transparency. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Fake Transparency</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QCheckBox" name="checkBox_waittime">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Wait Time</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QCheckBox" name="checkBox_systemicontheme">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Use Icon Theme</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="1">
+               <widget class="QSpinBox" name="spinBox_counterrate">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                </property>
+                <property name="minimum">
+                 <number>5</number>
+                </property>
+                <property name="maximum">
+                 <number>86400</number>
+                </property>
+                <property name="singleStep">
+                 <number>10</number>
+                </property>
+                <property name="value">
+                 <number>10</number>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QCheckBox" name="checkBox_counterkb">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Counter Update KB</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QCheckBox" name="checkBox_disableminimized">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Disable Minimized</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QCheckBox" name="checkBox_disablevpn">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Disable VPN</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="0" colspan="2">
+               <widget class="QGroupBox" name="groupBox_2">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use code specific for the selected desktop environment.&lt;/p&gt;&lt;p&gt;As of 2014.11.24 there seems to be a problem with QT5.3 and some system trays. There is code in the program to try and work around this issue, and selecting one of these buttons will invoke the code specific to the desktop.&lt;/p&gt;&lt;p&gt;If the bug gets fixed these options will remain so that start up scripts do not break, but the options will do nothing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="title">
+                 <string>Desktop Specific</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_12">
+                 <item>
+                  <widget class="QRadioButton" name="radioButton_desktopnone">
+                   <property name="toolTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Default is no desktop specific code.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>None</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="radioButton_desktopxfce">
+                   <property name="toolTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>XFCE</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="radioButton_desktopmate">
+                   <property name="toolTip">
+                    <string/>
+                   </property>
+                   <property name="whatsThis">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>MATE</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QSpinBox" name="spinBox_waittime">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>60</number>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QCheckBox" name="checkBox_counterseconds">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Counter Update Rate </string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <layout class="QVBoxLayout" name="verticalLayout_14">
+             <item>
+              <widget class="QGroupBox" name="groupBox_process">
+               <property name="whatsThis">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line. Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Two events are checked. &lt;span style=&quot; font-weight:600;&quot;&gt;Before Connecting&lt;/span&gt; events are called after the Connect button is pressed in either the Wireless or VPN tabs. The program or process in the Execute box will only be executed prior to making a connection for the service shown in the Service box.  It will not be called when connecting to any other service.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;After Connecting&lt;/span&gt; box will be called after Connman enters the ready or online state.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="title">
+                <string>External Programs</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_11">
+                <item row="0" column="0" colspan="2">
+                 <widget class="QGroupBox" name="groupBox">
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This area is to specify a program or process to run after a wifi or vpn service button is pressed, but before the connect method is sent to ConnMan. This is mainly used to modify a .cmst.config file which seems useful to modify certain short lived entries for openConnect vpn connections.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;Execute&lt;/span&gt; box will only be executed prior to making a connection for the single service shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Service&lt;/span&gt; box. It will not be called when connecting to any other service. If a .cmst.config file is to be modified a check must in the &lt;span style=&quot; font-weight:600;&quot;&gt;Modify Service File&lt;/span&gt; box and the path and name of the file to be modified must be provided.&lt;/p&gt;&lt;p&gt;To modify a .cmst.config file CMST will read stdout of the program or process being called. Program output should be individual lines in KEY=VALUE format. If KEY exists in the .cmst.config file it will be replaced by the new VALUE. If KEY does not exist it will be appended. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="title">
+                   <string>Before Connecting</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_4">
+                   <item row="1" column="1" colspan="2">
+                    <widget class="QLineEdit" name="lineEdit_beforeconnect">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>1</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_4">
+                     <property name="whatsThis">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the program or process to be executed before Connman initiates a connection to the service listed in the box above. If left blank no program or process will be executed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="text">
+                      <string>Execute:</string>
+                     </property>
+                     <property name="buddy">
+                      <cstring>lineEdit_beforeconnect</cstring>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1" colspan="2">
+                    <widget class="QComboBox" name="comboBox_beforeconnectserviceslist">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                       <horstretch>1</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_3">
+                     <property name="whatsThis">
+                      <string>Specify the service you are connecting to where you want a program or process to execute prior to initiating the connection.</string>
+                     </property>
+                     <property name="text">
+                      <string>Service:</string>
+                     </property>
+                     <property name="buddy">
+                      <cstring>comboBox_beforeconnectserviceslist</cstring>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0" colspan="3">
+                    <layout class="QVBoxLayout" name="verticalLayout_13">
+                     <item>
+                      <widget class="QCheckBox" name="checkBox_modifyservicefile">
+                       <property name="whatsThis">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the configuration file shown below will be modified by whatever output the program provides.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                       <property name="text">
+                        <string>Modify Service File</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_10">
+                       <item>
+                        <widget class="QLabel" name="label_5">
+                         <property name="whatsThis">
+                          <string>Service configuration file to be modified by the program.</string>
+                         </property>
+                         <property name="text">
+                          <string>FIle: </string>
+                         </property>
+                         <property name="buddy">
+                          <cstring>comboBox_beforeconnectservicefile</cstring>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_beforeconnectservicefile">
+                         <property name="enabled">
+                          <bool>false</bool>
+                         </property>
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label">
+                  <property name="whatsThis">
+                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enter the program or process to be executed after Connman enters the &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; state.  If left blank no program or process will be executed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>After Connecting</string>
+                  </property>
+                  <property name="buddy">
+                   <cstring>lineEdit_afterconnect</cstring>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="lineEdit_afterconnect">
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0" colspan="2">
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
          </widget>
@@ -1842,7 +1846,7 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>537</width>
+            <width>597</width>
             <height>466</height>
            </rect>
           </property>
@@ -2007,22 +2011,6 @@ p, li { white-space: pre-wrap; }
   <include location="../../../../../cmst.qrc"/>
  </resources>
  <connections>
-  <connection>
-   <sender>checkBox_advanced</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>groupBox_process</receiver>
-   <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>103</x>
-     <y>-59</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>610</x>
-     <y>444</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>checkBox_advanced</sender>
    <signal>clicked(bool)</signal>
@@ -2292,6 +2280,22 @@ p, li { white-space: pre-wrap; }
     <hint type="destinationlabel">
      <x>452</x>
      <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_advanced</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>groupBox_process</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>103</x>
+     <y>-59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>

@@ -3,6 +3,8 @@
 <b> In Progress</b>
 <ul>
 <li>No longer extract key files from OpenVPN .opvn configurations.  Not needed.</li>
+<li>Fixed UI where Advanced options were in Start Options group box.</li>
+<li>Work on Prefereneces tab to make start options clearer (issue #210).</li>:
 </ul>
 <b> 2020.04.12</b>
 <ul>
