@@ -115,11 +115,11 @@ class ControlBox : public QDialog
     Ui::ControlBox ui;
     quint16 q16_errors;
     QMap<QString,QVariant>  properties_map;
-    QList<arrayElement>   services_list;
-    QList<arrayElement>   technologies_list;
-    QList<arrayElement>   wifi_list;
-    QList<arrayElement>   peer_list;
-    QList<arrayElement> 	vpn_list;
+    QList<arrayElement>	 services_list;
+    QList<arrayElement>	technologies_list;
+    QList<arrayElement>	wifi_list;
+    QList<arrayElement>	peer_list;
+    QList<arrayElement>	vpn_list;
     ConnmanAgent* agent;
     ConnmanVPNAgent* vpnagent;
     ConnmanCounter* counter;  
@@ -152,6 +152,7 @@ class ControlBox : public QDialog
     float f_connmanversion;
     GEN_Editor* gened;
     QProcess* proc;
+    bool b_userinitiated;
   
   // functions
     int managerRescan(const int& srv = 0);

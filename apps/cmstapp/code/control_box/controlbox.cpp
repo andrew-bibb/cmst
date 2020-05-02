@@ -164,6 +164,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
   gened = NULL;
   proc = NULL;
   iconman = new IconManager(this);
+  b_userinitiated = false;
   
   // set a stylesheet on the tab widget - used to hide disabled tabs
   QFile f0(":/stylesheets/stylesheets/tabwidget.qss");
@@ -958,12 +959,15 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 // of a service object changes.
 void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {
+  // save the current service at the top of the list, used for vpn internet kill switch
+  arrayElement topservice = services_list.at(0);
+
   // process removed services
   if (! removed.isEmpty() ) {
     for (int i = 0; i < services_list.count(); ++i) {
       if (removed.contains(services_list.at(i).objpath) ) {
-  QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
-  services_list.removeAt(i);
+	QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+	services_list.removeAt(i);
       } // if
      } // for
    } // if we needed to remove something
@@ -1001,6 +1005,7 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
       } // if original element is not empty
     } // i for
 
+    
     // now copy the revised list to services_list
     services_list.clear();
     services_list = revised_list;
@@ -1011,6 +1016,13 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
   
   // update the widgets  
   updateDisplayWidgets();
+
+  // see if we need to engage the vpn internet kill switch
+  qDebug() <<  "services changed called";
+  if (ui.checkBox_killswitch->isChecked() ) {
+    qDebug() <<  " Inside kill switch";
+  }
+
   return;
 }
 
