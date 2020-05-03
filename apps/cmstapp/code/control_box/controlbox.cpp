@@ -1020,7 +1020,13 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
   // see if we need to engage the vpn internet kill switch
   qDebug() <<  "services changed called";
   if (ui.checkBox_killswitch->isChecked() ) {
-    qDebug() <<  " Inside kill switch";
+    QMap<QString,QVariant> topmap = topservice.objmap;
+    qDebug() <<  "kill switch checked and inside";
+    qDebug() <<  "topmap.value" << topmap.value("Type").toString();
+    if (topmap.value("Type").toString() == "vpn") {
+      qDebug() <<  "inside topmap==vpn if";
+     ui.checkBox_devicesoff->animateClick();
+     }
   }
 
   return;
@@ -1294,7 +1300,8 @@ void ControlBox::wifiIDPass(const QString& obj_path)
       vd02->setText(technologies_list.at(row).objmap.value("TetheringPassphrase").toString() );
       if (vd02->exec() == QDialog::Accepted)
         if (vd02->getText() != technologies_list.at(row).objmap.value("TetheringPassphrase").toString() )
-    shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringPassphrase", QVariant::fromValue(QDBusVariant(vd02->getText()))) );
+	  shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "TetheringPassphrase", QVariant::fromValue(QDBusVariant(vd02->getText()))) );
+
       vd02->deleteLater();
     } // if
 
@@ -1315,7 +1322,7 @@ void ControlBox::toggleOfflineMode(bool checked)
   if ( ((q16_errors & CMST::Err_No_DBus) | (q16_errors & CMST::Err_Invalid_Con_Iface)) != 0x00 ) return;
 
   shared::processReply(con_manager->call(QDBus::AutoDetect, "SetProperty", "OfflineMode", QVariant::fromValue(QDBusVariant(checked ? true : false))) );
-  
+
   return;
 }
 
@@ -1812,14 +1819,14 @@ void ControlBox::assembleTabStatus()
       idButton* qpb02 = new idButton(this, technologies_list.at(row).objpath);
       connect (qpb02, SIGNAL(clickedID(QString, bool)), this, SLOT(togglePowered(QString, bool)));
       if (technologies_list.at(row).objmap.value("Powered").toBool()) {
-  qpb02->setText(tr("On", "powered") );
-  qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
-  qpb02->setChecked(true);
+	qpb02->setText(tr("On", "powered") );
+	qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
+	qpb02->setChecked(true);
       }
       else {
-  qpb02->setText(tr("Off", "powered") );
-  qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
-  qpb02->setChecked(false);
+	qpb02->setText(tr("Off", "powered") );
+	qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
+	qpb02->setChecked(false);
       }
       ui.tableWidget_technologies->setCellWidget(row, 2, qpb02);
 
