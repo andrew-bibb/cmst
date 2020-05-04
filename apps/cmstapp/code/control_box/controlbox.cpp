@@ -612,6 +612,9 @@ void ControlBox::moveService(QAction* act)
   list = ui.tableWidget_services->selectedItems();
   if (list.isEmpty() ) return;
 
+  // set user initiated flag (for vpn kill switch)
+  b_userinitiated = true;
+
   // apply the movebefore or moveafter message to the source object
   QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, services_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
   if (iface_serv->isValid() ) {
@@ -741,6 +744,9 @@ void ControlBox::connectPressed()
     return;
   }
 
+  // set the manual flag (for vpn kill switch)
+  b_userinitiated = true;
+
   //Because of single selection mode list can only have 0 or 1 items in it.
   if (qtw == ui.tableWidget_wifi) pendingobjectpath = wifi_list.at(list.at(0)->row()).objpath.path();
     else if (qtw == ui.tableWidget_vpn) pendingobjectpath = vpn_list.at(list.at(0)->row()).objpath.path();
@@ -812,16 +818,16 @@ void ControlBox::disconnectPressed()
     QMap<QString,QVariant> map;
     if (qtw == ui.tableWidget_wifi) itemcount = wifi_list.size();
       else if (qtw == ui.tableWidget_vpn)  itemcount = vpn_list.size();
-  else return;  // line is not really needed
+	else return;  // line is not really needed
 
     for (int row = 0; row < itemcount; ++row) {
       if (qtw == ui.tableWidget_wifi) map = wifi_list.at(row).objmap;
-  else if (qtw == ui.tableWidget_vpn)  map = vpn_list.at(row).objmap;
-    else return; // line is not really needed
+      else if (qtw == ui.tableWidget_vpn)  map = vpn_list.at(row).objmap;
+        else return; // line is not really needed
 
       if (map.value("State").toString() == "online" || map.value("State").toString() == "ready" ) {
-   ++cntr_connected;
-   row_connected = row;
+	++cntr_connected;
+	row_connected = row;
        }
        if (cntr_connected > 1 ) break;
     } // for
@@ -845,6 +851,9 @@ void ControlBox::disconnectPressed()
       tr("You need to select a service before pressing the disconnect button.") );
     return;
   }
+
+  // set user initiated flag (for vpn kill switch)
+  b_userinitiated = true;
 
   // Send the disconnect message to the service.  TableWidget only allows single selection so list can only have 0 or 1 elments
   QDBusInterface* iface_serv = NULL;
@@ -1014,20 +1023,24 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
   // clear the counters (if selected) and update the widgets
   clearCounters();
   
+  // see if we need to engage the vpn internet kill switch
+  // could probably animateClick the airplane mode checkbox or just call airplane mode via dBus, but I would prefer to look at each technology
+  // and power each one down.  
+  if (ui.checkBox_killswitch->isChecked() && ! b_userinitiated) {
+    QMap<QString,QVariant> topmap = topservice.objmap;
+    if (topmap.value("Type").toString() == "vpn" /*&& (topmap.value("State").toString() == "online" || topmap.value("State").toString() == "ready")*/ ) {
+      for (int i = 0; i < technologies_list.size(); ++i) {
+	if (technologies_list.at(i).objmap.value("Powered").toBool()) {
+	  QDBusInterface iface_tech(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
+	  shared::processReply(iface_tech.call(QDBus::AutoDetect, "SetProperty", "Powered", QVariant::fromValue(QDBusVariant(false))) );
+	} // if technology is currently powered
+      } // for each technology
+    } // if type == vpn
+  } // if kill swich
+  b_userinitiated = false;
+
   // update the widgets  
   updateDisplayWidgets();
-
-  // see if we need to engage the vpn internet kill switch
-  qDebug() <<  "services changed called";
-  if (ui.checkBox_killswitch->isChecked() ) {
-    QMap<QString,QVariant> topmap = topservice.objmap;
-    qDebug() <<  "kill switch checked and inside";
-    qDebug() <<  "topmap.value" << topmap.value("Type").toString();
-    if (topmap.value("Type").toString() == "vpn") {
-      qDebug() <<  "inside topmap==vpn if";
-     ui.checkBox_devicesoff->animateClick();
-     }
-  }
 
   return;
 }
@@ -1352,6 +1365,9 @@ void ControlBox::togglePowered(QString object_id, bool checkstate)
 {
   QDBusInterface* iface_tech = new QDBusInterface(DBUS_CON_SERVICE, object_id, "net.connman.Technology", QDBusConnection::systemBus(), this);
   shared::processReply(iface_tech->call(QDBus::AutoDetect, "SetProperty", "Powered", QVariant::fromValue(QDBusVariant(checkstate))) );
+
+  // set user initiated flag (for vpn kill switch)
+  b_userinitiated = true;
 
   // cleanup
   iface_tech->deleteLater();
