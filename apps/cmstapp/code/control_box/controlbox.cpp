@@ -969,7 +969,8 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {
   // save the current service at the top of the list, used for vpn internet kill switch
-  arrayElement topservice = services_list.at(0);
+  QMap<QString,QVariant> topmap;
+  if (services_list.size() > 0) topmap = services_list.at(0).objmap;
 
   // process removed services
   if (! removed.isEmpty() ) {
@@ -1027,15 +1028,18 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
   // could probably animateClick the airplane mode checkbox or just call airplane mode via dBus, but I would prefer to look at each technology
   // and power each one down.  
   if (ui.checkBox_killswitch->isChecked() && ! b_userinitiated) {
-    QMap<QString,QVariant> topmap = topservice.objmap;
-    if (topmap.value("Type").toString() == "vpn" /*&& (topmap.value("State").toString() == "online" || topmap.value("State").toString() == "ready")*/ ) {
-      for (int i = 0; i < technologies_list.size(); ++i) {
-	if (technologies_list.at(i).objmap.value("Powered").toBool()) {
+    if (topmap.value("Type").toString() == "vpn" ) {
+      QMap<QString,QVariant> curtopmap;
+      if (services_list.size() > 0) curtopmap = services_list.at(0).objmap;
+      if (curtopmap.value("Type").toString() != "vpn") {
+	for (int i = 0; i < technologies_list.size(); ++i) {
+	  if (technologies_list.at(i).objmap.value("Powered").toBool()) {
 	  QDBusInterface iface_tech(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", QDBusConnection::systemBus(), this);
 	  shared::processReply(iface_tech.call(QDBus::AutoDetect, "SetProperty", "Powered", QVariant::fromValue(QDBusVariant(false))) );
-	} // if technology is currently powered
-      } // for each technology
-    } // if type == vpn
+	  } // if technology is currently powered
+	} // for each technology
+      } // if curtopmap type = vpn
+    } // if topmap type == vpn
   } // if kill swich
   b_userinitiated = false;
 
@@ -2548,6 +2552,7 @@ void ControlBox::writeSettings()
   settings->setValue("advanced", ui.checkBox_advanced->isChecked() );
   settings->setValue("retry_failed", ui.checkBox_retryfailed->isChecked() );
   settings->setValue("run_on_startup", ui.checkBox_runonstartup->isChecked());
+  settings->setValue("vpn_kill_switch", ui.checkBox_killswitch->isChecked());
   settings->endGroup();
 
   settings->beginGroup("LineEdits");
@@ -2603,6 +2608,7 @@ void ControlBox::readSettings()
   ui.checkBox_advanced->setChecked(settings->value("advanced").toBool() );
   ui.checkBox_retryfailed->setChecked(settings->value("retry_failed").toBool() );
   ui.checkBox_runonstartup->setChecked(settings->value("run_on_startup").toBool());
+  ui.checkBox_killswitch->setChecked(settings->value("vpn_kill_switch").toBool());
   settings->endGroup();
 
  settings->beginGroup("LineEdits");
