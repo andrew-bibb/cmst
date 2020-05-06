@@ -363,21 +363,24 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    // find the connman version we are running
    findConnmanVersion();
    
-  // VPN manager. Disable if commandline or option is set
+  // VPN manager. Disable vpn options if commandline or option is set
   if (parser.isSet("disable-vpn") ? true : (b_so && ui.checkBox_disablevpn->isChecked()) ) {
     ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
     ui.pushButton_vpn_editor->setDisabled(true);
+    ui.checkBox_killswitch->setDisabled(true);
   } // if parser set
   else {
     vpn_manager = new QDBusInterface(DBUS_VPN_SERVICE, DBUS_PATH, DBUS_VPN_MANAGER, QDBusConnection::systemBus(), this);
     if (! vpn_manager->isValid() ) {
       ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
       ui.pushButton_vpn_editor->setDisabled(true);
+      ui.checkBox_killswitch->setDisabled(true);
       logErrors(CMST::Err_Invalid_VPN_Iface);
   }
   else {
     ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), true);
     ui.pushButton_vpn_editor->setEnabled(true);
+    ui.checkBox_killswitch->setEnabled(true);
     shared::processReply(vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
   } // else register agent
       } // else normal vpn manager  
@@ -1101,7 +1104,7 @@ void ControlBox::dbsPeersChanged(QList<QVariant> vlist, QList<QDBusObjectPath> r
   if (! removed.isEmpty() ) {
     for (int i = 0; i < peer_list.count(); ++i) {
       if (removed.contains(peer_list.at(i).objpath) )
-  peer_list.removeAt(i);
+	peer_list.removeAt(i);
       } // for
     } // if we needed to remove something
 
