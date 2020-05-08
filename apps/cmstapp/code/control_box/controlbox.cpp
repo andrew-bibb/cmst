@@ -1041,6 +1041,10 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
 	  shared::processReply(iface_tech.call(QDBus::AutoDetect, "SetProperty", "Powered", QVariant::fromValue(QDBusVariant(false))) );
 	  } // if technology is currently powered
 	} // for each technology
+	notifyclient->init();
+	notifyclient->setSummary(tr("VPN Kill Switch Engaged"));
+	notifyclient->setBody(tr("The connection to VPN service %1 was dropped and the VPN kill switch was engaged. All network devices are powered off.").arg(topmap.value("Name").toString()));
+	this->sendNotifications();
       } // if curtopmap type = vpn
     } // if topmap type == vpn
   } // if kill swich
@@ -3179,7 +3183,7 @@ void ControlBox::cleanUp()
 
     if (vpn_manager != NULL) { 
       if (vpn_manager->isValid() ) {
-  shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
+	shared::processReply(vpn_manager->call(QDBus::AutoDetect, "UnregisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
       } // ivpn_manager isValid
     } // not null
    

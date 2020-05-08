@@ -98,7 +98,7 @@ void NotifyClient::init()
   s_icon.clear();
   i_urgency = Nc::UrgencyNormal;
   i_expire_timeout = -1;
-  b_overwrite = true;
+  b_overwrite = false;
   
   return;
 }
@@ -173,20 +173,20 @@ void NotifyClient::sendNotification ()
   // process the icon, if we are using a fallback icon create a temporary file to hold it
     QTemporaryFile*  tempfileicon = NULL; 
     if (! s_icon.isEmpty() ) {   
-			if (QFile::exists(s_icon) ) {
-				tempfileicon = new QTemporaryFile(this);
-				tempfileicon->setAutoRemove(false);
-				if (tempfileicon->open() ) {
-					QPixmap px = QPixmap(s_icon);
-					px.save(tempfileicon->fileName(),"PNG");
-					app_icon =  tempfileicon->fileName().prepend("file://");
-				} // if tempfileicon could be opened
-			} // if s_icon exists as a disk file
+      if (QFile::exists(s_icon) ) {
+	      tempfileicon = new QTemporaryFile(this);
+	      tempfileicon->setAutoRemove(false);
+	      if (tempfileicon->open() ) {
+		      QPixmap px = QPixmap(s_icon);
+		      px.save(tempfileicon->fileName(),"PNG");
+		      app_icon =  tempfileicon->fileName().prepend("file://");
+	      } // if tempfileicon could be opened
+      } // if s_icon exists as a disk file
 
-			// assume s_icon exists as a theme icon, don't check it here.  That
-			// check needs to be done in the calling program.
-			else app_icon = s_icon;
-		} // if s_icon is not empty
+      // assume s_icon exists as a theme icon, don't check it here.  That
+      // check needs to be done in the calling program.
+      else app_icon = s_icon;
+    } // if s_icon is not empty
     
   QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
   
