@@ -662,15 +662,17 @@ void ControlBox::enableMoveButtons(int row, int col)
 
     // inspect the service, can only move if service is favorite, ready or online
     // vpn services can be moved (I was wrong thinking they could not), see https://01.org/jira/browse/CM-620
+    // 2020.05.08 - on further consideration moving vpn services is not a good idea, disable the ability to do so
     if (services_list.at(i).objmap.value("Favorite").toBool() &&
+       (services_list.at(i).objmap.value("Type").toString() != "vpn") &&
        (services_list.at(i).objmap.value("State").toString() == "online" || services_list.at(i).objmap.value("State").toString() == "ready") ) {
       if (i == row) {
-  act->setDisabled(true); // can't move onto itself
-  b_validsource = true;
+	act->setDisabled(true); // can't move onto itself
+	b_validsource = true;
       }
       else {
-  act->setEnabled(true);
-  b_validtarget = true;
+	act->setEnabled(true);
+	b_validtarget = true;
       } // else
     } // if
     
@@ -3008,17 +3010,17 @@ QString ControlBox::getNickName(const QDBusObjectPath& objpath)
     if (services_list.at(i).objpath == objpath) {
       QMap<QString,QVariant> submap;
       if (services_list.at(i).objmap.value("Type").toString() == "ethernet") {
-  shared::extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );
-  if (submap.value("Interface").toString().isEmpty() )
-    return services_list.at(i).objmap.value("Name").toString();
-  else
-    return QString(TranslateStrings::cmtr(services_list.at(i).objmap.value("Name").toString()) + " [%1]").arg(submap.value("Interface").toString() );
+	shared::extractMapData(submap, services_list.at(i).objmap.value("Ethernet") );
+	if (submap.value("Interface").toString().isEmpty() )
+	  return services_list.at(i).objmap.value("Name").toString();
+	else
+	  return QString(TranslateStrings::cmtr(services_list.at(i).objmap.value("Name").toString()) + " [%1]").arg(submap.value("Interface").toString() );
       } // if type ethernet
 
-      else if ( services_list.at(i).objmap.value("Type").toString() == "wifi" && services_list.at(i).objmap.value("Name").toString().isEmpty() )
-  return tr("[Hidden Wifi]");
-      else
-  return  services_list.at(i).objmap.value("Name").toString();
+    else if ( services_list.at(i).objmap.value("Type").toString() == "wifi" && services_list.at(i).objmap.value("Name").toString().isEmpty() )
+      return tr("[Hidden Wifi]");
+    else
+      return  services_list.at(i).objmap.value("Name").toString();
     } // if objpath matches
   } // for
 

@@ -1,13 +1,14 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b> In Progress</b>
+<b> 2020.05.09</b>
 <ul>
 <li>No longer extract key files from OpenVPN .opvn configurations.  Not needed.</li>
 <li>Fixed UI where Advanced options were in Start Options group box.</li>
 <li>Work on Prefereneces tab to make start options clearer (issue #210).</li>
 <li>Added VPN internet kill switch.</li>
+<li>Take VPN services out of move before/after menu.</li>
 </ul>
-b> 2020.04.12</b>
+<b> 2020.04.12</b>
 <ul>
 <li>Fixed wrong validator on fields that accept either IPV4 or IPv6 addresses.</li>
 <li>Expanded IPv6 validator to accept most abbreviated addresses.</li>
@@ -22,7 +23,7 @@ b> 2020.04.12</b>
 <li>Move offline checkbox in tab 1 (issue # 201)</li>
 <li>Translation to Dutch by Heimen Stoffels.</li>
 <li>Cleaned up the IPv4 and IPv6 entries in the provisioning editor.</li>
-<li>Fixed retain state not working for window size and position.<li>
+<li>Fixed retain state not working for window size and position.</li>
 <li>Additions for Connman 1.38</li>
 <ul>
 <li>Add mDNS status to the details tab.</li>
@@ -33,9 +34,9 @@ b> 2020.04.12</b>
 <li>Added OpenVPN.DeviceType to VPN provisioning editor.</li>
 <li>Added eight new OpenConnect items to VPN provisioning editor.</li> 
 <li>Added mDNS setting to the provisioning editor.</li>
-<li>Added DeviceName field to the provisioning editor.<li>
-<li>Added AnonymousIdentity field to the wifi section of the provisioning editor.<li>
-<li>Added SubjectMatch and AltSubjectMatch fields to the wifi section of the provisioning editor. <li>
+<li>Added DeviceName field to the provisioning editor.</li>
+<li>Added AnonymousIdentity field to the wifi section of the provisioning editor.</li>
+<li>Added SubjectMatch and AltSubjectMatch fields to the wifi section of the provisioning editor. </li>
 <li>Added DomainMatch and DomainSuffixMatch fields to the wifi section of the provisioning editor. </li>
 </ul>
 </ul>
@@ -64,7 +65,7 @@ b> 2020.04.12</b>
 <ul>
 <li>Removed padding hack (issue #166) from id buttons.</li>
 <li>Allow configuration of VPN services from the Details tab.</li>
-<li>Allow CMST to close from window decoration if not running in system tray (issue #169).<li>
+<li>Allow CMST to close from window decoration if not running in system tray (issue #169).</li>
 <li>Fix appdata.xml install location (issue #176).</li>
 <li>Fixed No Reply popup starting VPN from system tray menu (issue #175).</li>
 <li>Technologies and Services splitter state retained (issue #173).</li>

@@ -60,8 +60,8 @@ NotifyClient::NotifyClient(QObject* parent)
   if (! QDBusConnection::sessionBus().isConnected() )
     qCritical("CMST - Cannot connect to the session bus.");
 		
-	// Signals and slots
-	connect(qApp, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()));	
+  // Signals and slots
+  connect(qApp, SIGNAL(aboutToQuit()), this, SLOT(cleanUp()));	
     
   return;   
 }
@@ -82,7 +82,7 @@ void NotifyClient::connectToServer()
     getCapabilities();  
     QDBusConnection::sessionBus().connect(DBUS_NOTIFY_SERVICE, DBUS_NOTIFY_PATH, DBUS_NOTIFY_INTERFACE, "NotificationClosed", this, SLOT(notificationClosed(quint32, quint32)));
     QDBusConnection::sessionBus().connect(DBUS_NOTIFY_SERVICE, DBUS_NOTIFY_PATH, DBUS_NOTIFY_INTERFACE, "ActionInvoked", this, SLOT(actionInvoked(quint32, QString)));
-    } // if connection is valid 
+  } // if connection is valid 
   else {
     notifyclient->deleteLater();
     b_validconnection = false;
@@ -174,46 +174,46 @@ void NotifyClient::sendNotification ()
     QTemporaryFile*  tempfileicon = NULL; 
     if (! s_icon.isEmpty() ) {   
       if (QFile::exists(s_icon) ) {
-	      tempfileicon = new QTemporaryFile(this);
-	      tempfileicon->setAutoRemove(false);
-	      if (tempfileicon->open() ) {
-		      QPixmap px = QPixmap(s_icon);
-		      px.save(tempfileicon->fileName(),"PNG");
-		      app_icon =  tempfileicon->fileName().prepend("file://");
-	      } // if tempfileicon could be opened
+	tempfileicon = new QTemporaryFile(this);
+	tempfileicon->setAutoRemove(false);
+	if (tempfileicon->open() ) {
+	  QPixmap px = QPixmap(s_icon);
+	  px.save(tempfileicon->fileName(),"PNG");
+	  app_icon =  tempfileicon->fileName().prepend("file://");
+	} // if tempfileicon could be opened
       } // if s_icon exists as a disk file
 
       // assume s_icon exists as a theme icon, don't check it here.  That
       // check needs to be done in the calling program.
       else app_icon = s_icon;
     } // if s_icon is not empty
-    
+  
   QDBusReply<quint32> reply = notifyclient->call(QLatin1String("Notify"), app_name, replaces_id, app_icon, summary, body, actions, hints, expire_timeout);
-  
   if (reply.isValid() ) {
-		current_id = reply.value();
+    current_id = reply.value();
     if (file_map.contains(current_id) && tempfileicon != NULL) {
-			if (b_overwrite) {
-				file_map.value(current_id)->remove();
-				delete file_map.value(current_id);
-				file_map.remove(current_id);				
-			}	// if
-			else {
-				tempfileicon->remove();
-				delete tempfileicon;
-				tempfileicon = NULL;
-			}	// else
-		}	// if contains current_id and not NULL
-		if (tempfileicon != NULL) file_map[current_id] = tempfileicon;
-  }	// if reply is valid
+      if (b_overwrite) {
+	file_map.value(current_id)->remove();
+	delete file_map.value(current_id);
+	file_map.remove(current_id);				
+      } // if
+      else {
+	tempfileicon->remove();
+	delete tempfileicon;
+	tempfileicon = NULL;
+      } // else
+    } // if contains current_id and not NULL
+    if (tempfileicon != NULL) file_map[current_id] = tempfileicon;
+  } // if reply is valid
   
-  else
-	#if QT_VERSION >= 0x050400 
-		qCritical("CMST - Error reply received to the Notify method: %s", qUtf8Printable(reply.error().message()) );
+  else {
+  #if QT_VERSION >= 0x050400 
+    qCritical("CMST - Error reply received to the Notify method: %s", qUtf8Printable(reply.error().message()) );
   #else
     qCritical("CMST - Error reply received to the Notify method: %s", qPrintable(reply.error().message()) );
   #endif
-  
+ } 
+
   return;
 } 
   
