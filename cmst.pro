@@ -15,6 +15,7 @@ TRANSLATIONS += ./translations/cmst_it_IT.ts
 TRANSLATIONS += ./translations/cmst_es_ES.ts
 TRANSLATIONS += ./translations/cmst_es_CO.ts
 TRANSLATIONS += ./translations/cmst_fr_FR.ts
+TRANSLATIONS += ./translations/cmst_tr_TR.ts
 
 # non-application files which need to be installed
 #

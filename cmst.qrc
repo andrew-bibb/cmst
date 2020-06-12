@@ -21,6 +21,7 @@
     <file>translations/cmst_zh_CN.qm</file>
     <file>translations/cmst_ru_RU.qm</file>
     <file>translations/cmst_en_US.qm</file>
+    <file>translations/cmst_tr_TR.qm</file>
   </qresource>
   <qresource prefix="icons">
     <file>images/interface/radio.png</file>

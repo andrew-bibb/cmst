@@ -2,9 +2,11 @@
 Type=Application
 Version=1.0
 Name=Connman UI Setup
+Name[tr]=Connman Arayüz Kurulumu
 GenericName=Network Configuration
+GenericName[tr]=Ağ Yapılandırması
 Comment=QT GUI frontend for connman
-Categories=Settings;System;Qt;Network;
+Comment[tr]=Connman için QT arayüzü
 Icon=cmst
 Exec=cmst -w5
 Terminal=false
