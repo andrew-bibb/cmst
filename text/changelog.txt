@@ -91,7 +91,7 @@
 </ul>
 <b>2016.04.03</b>
 <ul>
-<li>Removed unnecessary calls to managerReacan from servicePropertyChanged slot.<li>
+<li>Removed unnecessary calls to managerReacan from servicePropertyChanged slot.</li>
 <li>Added nicknames for display to wired and hidden wifi connections.</li>
 <li>Install application icons in all sizes and scalable.</li>
 <li>Improvements to internal layouts.</li>
@@ -113,7 +113,7 @@
 <b>2015.12.03</b>
 <ul>
 <li>CMST icon by Progandy was reworked and made cleaner by Hagabaka.</li>
-<li>Added feature to run an external program automatically after a connect. The <i>Advanced Controls</i> checkbox must be checked to access this.<li>
+<li>Added feature to run an external program automatically after a connect. The <i>Advanced Controls</i> checkbox must be checked to access this.</li>
 <li>Expanded functionality of system tray icon menu to toggle power for technologies and to connect or disconnect wifi services.</li>
 <li>System tray menu can be torn off and live in its own window on the desktop.</li>
 <li>Internal icons can be colorized (color selector control on Preferences Tab).</li>
@@ -168,7 +168,7 @@
 </ul>
 <b>2014.10.15</b>
 <ul>
-<li>Connect, Disconnect, and Remove buttons in the Wifi tab are disabled if no Wifi services are available.<li>
+<li>Connect, Disconnect, and Remove buttons in the Wifi tab are disabled if no Wifi services are available.</li>
 <li>If only one WiFi service exists it is no longer necessary to select it first before pressing the Connect button.</li>
 <li>If only one WiFi service is connected it is no longer necessary to select it first before pressing the Disconnect button.</li>
 <li>Single instance code now checked using a local socket, not shared memory.</li>
