@@ -1,5 +1,9 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<b> In Progress</b>
+<ul>
+<li>Added translation to Turkish by  Yaşar Çiv.</li>
+</ul>
 <b> 2020.05.09</b>
 <ul>
 <li>No longer extract key files from OpenVPN .opvn configurations.  Not needed.</li>

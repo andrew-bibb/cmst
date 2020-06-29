@@ -504,6 +504,7 @@ void ControlBox::aboutCMST()
        "<center>sqozz (German)"
        "<center>Ilya Shestopalov (Russian)"
        "<center>Heimen Stoffels (Dutch)"
+       "<center> Yaşar Çiv (Turkish)"
        "<br><center><b>Build Information:</b>"
        "<center>Compiled using QT version %5")
         .arg(TranslateStrings::cmtr("cmst"))
