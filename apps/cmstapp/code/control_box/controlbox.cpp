@@ -2263,22 +2263,22 @@ void ControlBox::assembleTrayIcon()
 	QMap<QString,QVariant> submap;
 	if (services_list.at(0).objmap.value("Type").toString() == "ethernet") {
 	  shared::extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
-	  stt.prepend(tr("Ethernet Connection<br>","icon_tool_tip"));
-	  stt.append(tr("Service: %1<br>").arg(getNickName(services_list.at(0).objpath)) );
+	  stt.prepend(tr("Ethernet Connection\n","icon_tool_tip"));
+	  stt.append(tr("Service: %1\n").arg(getNickName(services_list.at(0).objpath)) );
 	  stt.append(tr("Interface: %1").arg(TranslateStrings::cmtr(submap.value("Interface").toString())) );
 	  prelimicon = iconman->getIcon("connection_wired");
 	} //  if wired connection
 
 	else if (services_list.at(0).objmap.value("Type").toString() == "wifi") {
-	  stt.prepend(tr("WiFi Connection<br>","icon_tool_tip"));
+	  stt.prepend(tr("WiFi Connection\n","icon_tool_tip"));
 	  shared::extractMapData(submap, services_list.at(0).objmap.value("Ethernet") );
-	  stt.append(tr("SSID: %1<br>").arg(getNickName(services_list.at(0).objpath)) );
+	  stt.append(tr("SSID: %1\n").arg(getNickName(services_list.at(0).objpath)) );
 	  QStringList sl_tr;
 	  for (int i = 0; i < services_list.at(0).objmap.value("Security").toStringList().size(); ++i) {
 	    sl_tr << TranslateStrings::cmtr(services_list.at(0).objmap.value("Security").toStringList().at(i) );
 	  } // for
-	  stt.append(tr("Security: %1<br>").arg(sl_tr.join(',')) );
-	  stt.append(tr("Strength: %1%<br>").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
+	  stt.append(tr("Security: %1\n").arg(sl_tr.join(',')) );
+	  stt.append(tr("Strength: %1%\n").arg(services_list.at(0).objmap.value("Strength").value<quint8>()) );
 	  stt.append(tr("Interface: %1").arg(TranslateStrings::cmtr(submap.value("Interface").toString())) );
 	  quint8 str = services_list.at(0).objmap.value("Strength").value<quint8>();
 	  if (str > 80 ) prelimicon = iconman->getIcon("connection_wifi_100");
@@ -2289,20 +2289,14 @@ void ControlBox::assembleTrayIcon()
 	} // else if wifi connection
 	else if (services_list.at(0).objmap.value("Type").toString() == "vpn") {
 	  shared::extractMapData(submap, services_list.at(0).objmap.value("Provider") );
-	  stt.prepend(tr("VPN Connection<br>","icon_tool_tip"));
-	  stt.append(tr("Type: %1<br>").arg(TranslateStrings::cmtr(submap.value("Type").toString())) );
-	  stt.append(tr("Service: %1<br>").arg(services_list.at(0).objmap.value("Name").toString()) );
-	  stt.append(tr("Host: %1<br>").arg(TranslateStrings::cmtr(submap.value("Host").toString())) );
+	  stt.prepend(tr("VPN Connection\n","icon_tool_tip"));
+	  stt.append(tr("Type: %1\n").arg(TranslateStrings::cmtr(submap.value("Type").toString())) );
+	  stt.append(tr("Service: %1\n").arg(services_list.at(0).objmap.value("Name").toString()) );
+	  stt.append(tr("Host: %1").arg(TranslateStrings::cmtr(submap.value("Host").toString())) );
 	  prelimicon = iconman->getIcon("connection_vpn");
 	} // else if vpn connection
       } //  services if no error
     } //  if the state is online
-
-    // else if state is ready
-    else if (properties_map.value("State").toString() == "ready") {
-  prelimicon = iconman->getIcon("connection_ready");
-      stt.append(tr("Connection is in the Ready State.", "icon_tool_tip"));
-    } // else if if ready
 
     // else if state is failure
     else if (properties_map.value("State").toString() == "failure") {
