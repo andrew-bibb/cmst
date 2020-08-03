@@ -106,7 +106,7 @@ idButton::idButton(QWidget* parent, const QDBusObjectPath& id) :
   QHBoxLayout* layout = new QHBoxLayout(this);
   layout->setContentsMargins(m_left, m_top, m_right, m_bottom);
   layout->setAlignment(Qt::AlignCenter);
-  layout->addWidget(button, 0, 0);
+  layout->addWidget(button, 0);
   
   return;
 }
@@ -3032,7 +3032,7 @@ void ControlBox::findConnmanVersion()
   QProcess qps;
   bool b_ok = false;
 
-  qps.start("connmand -v");
+  qps.start("connmand -v", QStringList());
   qps.waitForFinished();
   f_connmanversion = qps.readAllStandardOutput().toFloat(&b_ok);
   if (! b_ok) f_connmanversion = -1.0; 

@@ -33,6 +33,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QPixmap>
 # include <QTemporaryFile>
 # include <QFile>
+# include <QtGlobal>
 
 # include "./notify.h"
                      

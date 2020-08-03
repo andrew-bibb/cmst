@@ -40,6 +40,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QMessageBox>
 # include <QProcessEnvironment>
 # include <QDirIterator>
+# include <QtGlobal>
 
 // Constructor
 IconManager::IconManager(QObject* parent) : QObject(parent) 
@@ -72,22 +73,27 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 	QTextStream in(&f1);
 	QString line;
 	while (!in.atEnd()) {
-		line = in.readLine();
-		line = line.simplified();
-		if (line.startsWith("[icon]", Qt::CaseInsensitive) ) {
-			IconElement ie;
-			QString iconame;
-			do {
-				line = in.readLine();
-				if (line.startsWith("icon_name", Qt::CaseInsensitive) ) iconame = extractValue(line);
-					else if (line.startsWith("resource", Qt::CaseInsensitive) ) ie.resource_path = extractValue(line);
-						else if (line.startsWith("colorize", Qt::CaseInsensitive) ) ie.colorize = extractValue(line);
-							else if (line.startsWith("fdo_name", Qt::CaseInsensitive) ) ie.fdo_name = extractValue(line);
-								else if (line.startsWith("theme_names", Qt::CaseInsensitive) ) ie.theme_names = extractValue(line).split(',', QString::SkipEmptyParts) ;
-			} while ( ! line.isEmpty() );
-			icon_map[iconame] = ie;
-		}	// if [icon]
-	}	// while not atEnd()
+	  line = in.readLine();
+	  line = line.simplified();
+	  if (line.startsWith("[icon]", Qt::CaseInsensitive) ) {
+	    IconElement ie;
+	    QString iconame;
+	      do {
+	      line = in.readLine();
+		if (line.startsWith("icon_name", Qt::CaseInsensitive) ) iconame = extractValue(line);
+		  else if (line.startsWith("resource", Qt::CaseInsensitive) ) ie.resource_path = extractValue(line);
+		    else if (line.startsWith("colorize", Qt::CaseInsensitive) ) ie.colorize = extractValue(line);
+		      else if (line.startsWith("fdo_name", Qt::CaseInsensitive) ) ie.fdo_name = extractValue(line);
+			else if (line.startsWith("theme_names", Qt::CaseInsensitive) )
+			  #if QT_VERSION >= 0x050e00 
+			    ie.theme_names = extractValue(line).split(',', Qt::SkipEmptyParts) ;
+			  #else	
+			    ie.theme_names = extractValue(line).split(',', QString::SkipEmptyParts) ;
+			  #endif	
+	      } while ( ! line.isEmpty() );
+	      icon_map[iconame] = ie;
+	    }  // if [icon]
+	  }  // while not atEnd()
 	f1.close();
 	
 	return;
@@ -267,11 +273,11 @@ QString IconManager::getFallback(const QString& name)
 	QFile f0(qrc);	
 	if (!f0.open(QIODevice::ReadOnly | QIODevice::Text)) {
 	#if QT_VERSION >= 0x050400 
-		qCritical("Error opening resource file: %s", qUtf8Printable(qrc) );
+	  qCritical("Error opening resource file: %s", qUtf8Printable(qrc) );
 	#else	
-			qCritical("Error opening resource file: %s", qPrintable(qrc) );		
+	  qCritical("Error opening resource file: %s", qPrintable(qrc) );		
 	#endif	
-		return rtnstr;
+	  return rtnstr;
 	}
 	
 	// Look for icon in the resource file and extract the resource value

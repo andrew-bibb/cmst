@@ -4,6 +4,7 @@
 <ul>
 <li>Added translation to Turkish by  Yaşar Çiv.</li>
 <li>Work around for KDE no longer displaying rich text in system tray icon popups (issue #216).</li>
+<li>Fixed compiler warnings on QT depreciated functions.</li>
 </ul>
 <b> 2020.05.09</b>
 <ul>
