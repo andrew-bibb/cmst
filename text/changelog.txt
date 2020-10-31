@@ -1,6 +1,6 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b> In Progress</b>
+<b> 2020.11.01</b>
 <ul>
 <li>Added translation to Turkish by  Yaşar Çiv.</li>
 <li>Work around for KDE no longer displaying rich text in system tray icon popups (issue #216).</li>
