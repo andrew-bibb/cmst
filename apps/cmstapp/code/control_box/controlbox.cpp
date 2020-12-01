@@ -3032,7 +3032,7 @@ void ControlBox::findConnmanVersion()
   QProcess qps;
   bool b_ok = false;
 
-  qps.start("connmand -v", QStringList());
+  qps.start("connmand", {"-v"});
   qps.waitForFinished();
   f_connmanversion = qps.readAllStandardOutput().toFloat(&b_ok);
   if (! b_ok) f_connmanversion = -1.0; 
