@@ -1,5 +1,9 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<b>In Progress</b>
+<ul>
+<li>Pull Request #218 (Fix getting ConnMan version)</li>
+</ul>
 <b> 2020.11.01</b>
 <ul>
 <li>Added translation to Turkish by  Yaşar Çiv.</li>
@@ -38,7 +42,7 @@
 <li>Added VPNC.DeviceType to VPN provisioning editor.</li>
 <li>Added WireGuard configuration options to VPN Provisioning editor.</li>
 <li>Added OpenVPN.DeviceType to VPN provisioning editor.</li>
-<li>Added eight new OpenConnect items to VPN provisioning editor.</li> 
+<li>Added eight new OpenConnect items to VPN provisioning editor.</li>
 <li>Added mDNS setting to the provisioning editor.</li>
 <li>Added DeviceName field to the provisioning editor.</li>
 <li>Added AnonymousIdentity field to the wifi section of the provisioning editor.</li>
@@ -51,7 +55,7 @@
 <li>Fixed segfault on close when running without Connman.</li>
 <li>Revert network group to "netdev" in Slackware and Debian.</li>
 <li>Pull request #183 (fixed typo in notification icon name).</li>
-<li>Pull request #184 (correct dialog size on high DPI monitors).</li> 
+<li>Pull request #184 (correct dialog size on high DPI monitors).</li>
 <li>PUll request #197 (add Spanish translation).</li>
 <li>Fixed #188 missing README in tarball</li>
 </ul>
@@ -59,13 +63,13 @@
 <ul>
 <li>Counters disabled by default, changed command line option -c to enable.</li>
 <li>Disabled tabs are now hidden from view.</li>
-<li>Do not change the visible service in the details tab if a service property changes and the service still exists.</li> 
+<li>Do not change the visible service in the details tab if a service property changes and the service still exists.</li>
 <li>Properties editor fixed to allow an empty gateway field in IPv4 and IPv6 connections (issue #148a)</li>
 <li>Revise and enhance the properties editor dialog.</li>
 <li>In VPN editor OpenVPN.AskPass changed from yes/no to file selector.</li>
 <li>Allow move before/after on connected VPN services (issue #167).</li>
 <li>Offline mode pixmap label now a pushbutton.</li>
-<li>Offline mode engaged now shown as airplane, disengaged shown as radio.</li> 
+<li>Offline mode engaged now shown as airplane, disengaged shown as radio.</li>
 </ul>
 <b> 2017.09.1</b>
 <ul>
@@ -82,10 +86,10 @@
 <li>Added Keywords to .desktop files (PR from klausenbusk).</li>
 <li>Fixed missing send destination in dbus policy file (PR from Klausenbusk).</li>
 <li>Fixed segfault where system tray icon could be used uninitialized.</li>
-<li>Disable vpn tab and vpn icon menu if we cannot connect to the connman-vpn daemon (issue #155).</li> 
+<li>Disable vpn tab and vpn icon menu if we cannot connect to the connman-vpn daemon (issue #155).</li>
 <li>Notifications use system theme icons if available (issue #157).</li>
 <li>New local icon for wifi tab (wifi_tab_state_not_ready) used to address issue #157.</li>
-<li>Modify cmst.pro for Fedora build (issue #160 and applied submitted patch).</li> 
+<li>Modify cmst.pro for Fedora build (issue #160 and applied submitted patch).</li>
 </ul>
 <b> 2016.10.02</b>
 <ul>
@@ -178,7 +182,7 @@
 <li>If only one WiFi service exists it is no longer necessary to select it first before pressing the Connect button.</li>
 <li>If only one WiFi service is connected it is no longer necessary to select it first before pressing the Disconnect button.</li>
 <li>Single instance code now checked using a local socket, not shared memory.</li>
-<li>If an instance of CMST is started while one is running the running copy will be raised, and a message about a second instance trying to start will be printed to stderr.</li> 
+<li>If an instance of CMST is started while one is running the running copy will be raised, and a message about a second instance trying to start will be printed to stderr.</li>
 <li>Wifi signal strength bar and techonlogy buttons now have frames around them so that they do not fill an entire table cell</li>
 <li>Autoconnect property can be set or unset from the property editor.</li>
 <li>Fixed the IPv6 validator in the properties editor.</li>
@@ -195,7 +199,7 @@
 <li>Notifications can be sent to a notification server if present.</li>
 <li>Accomodate P2P technologies (display only)</li>
 <li>Scan WiFi button moved to Technologies box and renamed "Rescan". No change in function, just a more accurate representation of what the button does.</li>
-<li>Connections in the "Ready" state show ready with an appropriate icon in the system tray instead of showing disconnected.</li>   
+<li>Connections in the "Ready" state show ready with an appropriate icon in the system tray instead of showing disconnected.</li>
 </ul>
 <b>2014.07.01	</b>
 <ul>
@@ -218,7 +222,7 @@
 <li>Added an entry for the Counters tab in the Help tab, and added scroll bars to the help field.</li>
 <li>GUI settings can be saved and restored between sessions.</li>
 <li>Improved response when toggling the power state of a technology.</li>
-<li>Added Preferences tab, tooltips are now disabled by default, added checkbox in Preferences to enable them.</li> 
+<li>Added Preferences tab, tooltips are now disabled by default, added checkbox in Preferences to enable them.</li>
 <li>Forced small delay in starting the system tray icon.</li>
 <li>Limit the amount the dialog can shrink.</li>
 <li>Replaced Nuvola icons with AwOken icons.</li>
