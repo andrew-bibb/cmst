@@ -1,7 +1,7 @@
 /**************************** shared.cpp ***************************
 Functions shared across various classes
 
-Copyright (C) 2013-2020
+Copyright (C) 2013-2021
 by: Andrew J. Bibb
 License: MIT
 

@@ -3,7 +3,7 @@
 Code for the user agent registered on DBus.  When the connman vpn daemon
 needs to communicate with the user it does so through this agent.
 
-Copyright (C) 2016-2020
+Copyright (C) 2016-2021
 by: Andrew J. Bibb
 License: MIT 
 

@@ -3,7 +3,7 @@
 Class to manage icons and allow the user to provide substitutions based
 on the the system theme. 
 
-Copyright (C) 2015-2020
+Copyright (C) 2015-2021
 by: Andrew J. Bibb
 License: MIT
 

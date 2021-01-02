@@ -3,7 +3,7 @@
 Code to manage the primary user interface to include the QDialog the
 user interfaces with and the system tray icon.
 
-Copyright (C) 2013-2020
+Copyright (C) 2013-2021
 by: Andrew J. Bibb
 License: MIT
 
@@ -663,7 +663,7 @@ void ControlBox::enableMoveButtons(int row, int col)
 
     // inspect the service, can only move if service is favorite, ready or online
     // vpn services can be moved (I was wrong thinking they could not), see https://01.org/jira/browse/CM-620
-    // 2020.05.08 - on further consideration moving vpn services is not a good idea, disable the ability to do so
+    // 2021.05.08 - on further consideration moving vpn services is not a good idea, disable the ability to do so
     if (services_list.at(i).objmap.value("Favorite").toBool() &&
        (services_list.at(i).objmap.value("Type").toString() != "vpn") &&
        (services_list.at(i).objmap.value("State").toString() == "online" || services_list.at(i).objmap.value("State").toString() == "ready") ) {
