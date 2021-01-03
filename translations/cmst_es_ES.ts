@@ -1406,7 +1406,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="491"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;%1 es una interfaz del demonio de Conmann que ofrece un ícono en la bandeja del sistema.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Fecha de lanzamiento: %3&lt;center&gt;Copyright c %4&lt;center&gt;por&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Traducciones:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chino)&lt;center&gt;sqozz (Aleman)&lt;center&gt;Ilya Shestopalov (Ruso)&lt;center&gt;Heimen Stoffels (Holandés)&lt;br&gt;&lt;center&gt;&lt;b&gt;Información de la compilación:&lt;/b&gt;&lt;center&gt;Compilado usando QT version %5</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="530"/>
@@ -1581,12 +1581,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1521"/>
         <source>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1522"/>
         <source>Support Enabled: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Soporte activado: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1522"/>
