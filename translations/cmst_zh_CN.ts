@@ -40,7 +40,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="79"/>
         <source>O&amp;ld Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>O&amp;ld 密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="89"/>
@@ -145,12 +145,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="320"/>
         <source>Choose or enter a browser:</source>
-        <translation type="unfinished"></translation>
+        <translation>选择或进入浏览器：</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login. If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Browser Users:&lt;/span&gt; Note that Brave does not seem to accept a URL to start with. After the browser starts you will need to enter the URL manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login. If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Browser Users:&lt;/span&gt; Note that Brave does not seem to accept a URL to start with. After the browser starts you will need to enter the URL manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers we found are shown below as active. You may select any one browser to use it for the login. If your web browser is not shown active, or is not listed at all, select &lt;span style=&quot; font-weight:600;&quot;&gt;Other&lt;/span&gt; and type the command you would use to start your browser from a command line in the text box. To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown below:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -259,7 +259,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="299"/>
         <source>You have requested the %1 browser, but we cannot find a terminal program to open it with.  Currenty we can start %1 using these terminals: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;To continue you need to manually open a terminal and then enter: &quot;%1 %2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>您已请求％1浏览器，但是我们找不到用于打开它的终端程序。 当前，我们可以使用以下终端启动％1：&lt;b&gt; roxterm &lt;/ b&gt;和&lt;b&gt; xterm &lt;/ b&gt;。&lt;br&gt; &lt;br&gt;要继续操作，您需要手动打开终端，然后输入：“％1 ％2“</translation>
     </message>
     <message>
         <source>You have requested the %1 browser, but we cannot find a terminal program to open it with.  Currenty we can start %1 using these terminals: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;To continue you need to manually open a terminal and then enter: &quot;lynx %2&quot;</source>
@@ -376,22 +376,22 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation type="unfinished">Connman 错误</translation>
+        <translation>Connman 错误</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation type="unfinished">Connman 返回了以下错误：&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;是否重试？</translation>
+        <translation>Connman 返回了以下错误：&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;是否重试？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="119"/>
         <source>Agent Request Failed</source>
-        <translation type="unfinished">代理请求失败</translation>
+        <translation>代理请求失败</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="120"/>
         <source>The agent request failed before a reply was returned.</source>
-        <translation type="unfinished">在得到一个回应之前，代理请求失败了。</translation>
+        <translation>在得到一个回应之前，代理请求失败了。</translation>
     </message>
 </context>
 <context>
@@ -685,22 +685,22 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="862"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="902"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="445"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page will show the details of the service selected in the box at the top. If the selected service is not in the READY or ONLINE state then most of the details will be blank. &lt;/p&gt;&lt;p&gt;You may override service details by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Configuration&lt;/span&gt; button at the bottom right. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;此页面将显示在顶部框中选择的服务的详细信息。 如果所选服务未处于“就绪”或“在线”状态，则大多数详细信息将为空白。 &lt;/ p&gt; &lt;p&gt;您可以使用右下角的&lt;span style =“ font-weight：600;”&gt;配置&lt;/ span&gt;按钮覆盖服务详细信息。 &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="586"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;SIgnal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;此页面显示已知的WiFi服务。 &lt;/ p&gt; &lt;p&gt; &lt;span style =“ font-weight：600;”&gt;名称：&lt;/ span&gt;网络的SSID。&lt;/ p&gt; &lt;p&gt; &lt;span style =“ font-weight：600; “&gt;收藏夹：&lt;/ span&gt;此列中的心形符号表示该计算机以前已使用该服务连接到网络。&lt;/ p&gt; &lt;p&gt; &lt;span style =” font-weight：600;“&gt; 已连接：&lt;/ span&gt;显示此服务的连接状态。 将鼠标悬停在图标上可以弹出文本说明。 联机表示Internet连接可用并且已通过验证。 就绪表示已成功连接设备。 &lt;/ p&gt; &lt;p&gt; &lt;span style =“ font-weight：600;”&gt;安全性：&lt;/ span&gt;描述用于此服务的安全性类型。 可能的值为“ none”，“ wep”，“ psk”，“ ieee8021x”和“ wps”。&lt;/ p&gt; &lt;p&gt; &lt;span style =“ font-weight：600;”&gt; SIgnal 强度：&lt;/ span&gt; WiFi信号的强度，规格化为0到100。&lt;/ p&gt; &lt;p&gt; &lt;br/&gt; &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="790"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. . &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;此页面显示已配置的VPN服务。 表中的某些单元格只有在建立连接后才可用。 &lt;/ p&gt; &lt;p&gt; &lt;span style =“ font-weight：600;”&gt;名称：&lt;/ span&gt;设置文件中提供的名称。&lt;/ p&gt; &lt;p&gt; &lt;span style =“ font-weight： 600;“&gt; Type：&lt;/ span&gt; VPN类型（OpenConnect，OpenVPN，PPTP等）&lt;/ p&gt; &lt;p&gt; &lt;span style =” font-weight：600;“&gt;状态：&lt;/ span&gt;显示 该服务的连接状态。 将鼠标悬停在图标上可以弹出文本说明。 。 &lt;/ p&gt; &lt;p&gt; &lt;span style =“ font-weight：600;”&gt;主机：&lt;/ span&gt; VPN主机IP。&lt;/ p&gt; &lt;p&gt; &lt;span style =“ font-weight：600;”&gt; 域：&lt;/ span&gt; VPN域。&lt;br/&gt; &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="935"/>
@@ -741,53 +741,53 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1289"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;pre style =“ margin-top：12px; margin-bottom：12px; margin-left：0px; margin-right：0px; -qt-block-indent：0; text- indent：0px;“&gt; &lt;span style =” font-family：&apos;monospace&apos;;“&gt;命令行选项：&lt;/ span&gt; &lt;span style =” font-family：&apos;monospace&apos;; font-weight：600;“&gt; -c &lt;/ span&gt; &lt;span style =“ font-family：&apos;monospace&apos;;”&gt;或&lt;/ span&gt; &lt;span style =“ font-family：&apos;monospace&apos;; font-weight：600;”&gt;-启用 -counters &lt;/ span&gt; &lt;/ pre&gt; &lt;p&gt;启用Connman RX和TX计数器。 计数器在Connman中是试验性的，启用它们会将大量数据写入系统日志。&lt;/ p&gt; &lt;p&gt;计数器默认情况下处于关闭状态，并且与原来的方式有所不同。 默认情况下，2017.09.19版及更高版本的计数器已启用。 默认情况下，禁用该计数器之后的所有版本。&lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1292"/>
         <source>Enable Counters</source>
-        <translation type="unfinished"></translation>
+        <translation>启用计数器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1362"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line.&lt;/p&gt;&lt;p&gt;Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;在发生各种事件后要执行的程序或过程。&lt;/ p&gt; &lt;p&gt;如果程序或过程需要命令行参数，则在此处提供它们，就像您在 &lt;/ p&gt; &lt;p&gt;示例：&lt;/ p&gt; &lt;p&gt; &lt;span style =“ font-weight：600;”&gt; / path / to / program arg1 arg2 arg3 &lt;/ span&gt; &lt;/ p&gt; &lt; / body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1365"/>
         <source>External Programs</source>
-        <translation type="unfinished"></translation>
+        <translation>扩展程序</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1371"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1381"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the program or process to be executed after Connman enters the &amp;quot;Ready&amp;quot; or &amp;quot;Online&amp;quot; state.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;输入在Connman输入“ Ready”之后要执行的程序或过程。 或“在线” 状态。&lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1374"/>
         <source>After Connect</source>
-        <translation type="unfinished"></translation>
+        <translation>已经连接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1461"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;pre style =“ margin-top：12px; margin-bottom：12px; margin-left：0px; margin-right：0px; -qt-block-indent：0; text- indent：0px;“&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;;“&gt;命令行选项：&lt;/ span&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;; font- 重量：600；“&gt;-n &lt;/ span&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;;“&gt;或&lt;/ span&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos; ; font-weight：600;“&gt;-disable-vpn &lt;/ span&gt; &lt;/ pre&gt; &lt;p&gt;禁用VPN。 这将隐藏“ VPN”选项卡，并且还将跳过尝试与connman-vpn建立连接的尝试。 如果Connman是使用--disable-vpn功能构建的，则后者很有用。&lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1464"/>
         <source>Disable VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用 VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1471"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;pre style =“ margin-top：12px; margin-bottom：12px; margin-left：0px; margin-right：0px; -qt-block-indent：0; text- indent：0px;“&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;;“&gt;命令行选项：&lt;/ span&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;; font- 重量：600；“&gt;-M &lt;/ span&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;;“&gt;或&lt;/ span&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos; ; font-weight：600;“&gt;-禁用最小化&lt;/ span&gt; &lt;/ pre&gt; &lt;p&gt;禁用最小化按钮。 当您希望窗口管理器具有最小化界面的唯一控制权时使用。&lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1474"/>
         <source>Disable Minimized</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用最小化</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1525"/>
@@ -802,52 +802,52 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1563"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the Start Options set here will be read and used next time the program starts.  &lt;/p&gt;&lt;p&gt;Settings are stored in&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf  &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;如果选中此选项，则下次程序启动时将读取并使用此处设置的启动选项。 &lt;/ p&gt; &lt;p&gt;设置存储在&lt;span style =“ font-family：&apos;Courier New，courier&apos;;”&gt;：〜&lt;/ span&gt; &lt;span style =“ font-family：&apos;Courier New，courier&apos; ; font-weight：600;“&gt; /。config / cmst / cmst.conf &lt;/ span&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;;“&gt; &lt;br/&gt;这是标准的ini类型 文本文件。&lt;/ span&gt; &lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1566"/>
         <source>Use Start Options</source>
-        <translation type="unfinished"></translation>
+        <translation>使用开始选项</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1576"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the state of the GUI will be restored from settings saved on disk. Settings include the geometry and position of the dialog and the current tab. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p&gt;The settings file is: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;如果选中，则将从保存在磁盘上的设置中恢复GUI的状态。 设置包括对话框和当前选项卡的几何形状和位置。 &lt;/ p&gt; &lt;p&gt;这些设置将在下次启动时使用，以将用户界面恢复为关闭时的状态。&lt;/ p&gt; &lt;p&gt;设置文件为：〜&lt;span style =“ font-weight： 600;“&gt; /。config / cmst / cmst.conf &lt;/ span&gt; &lt;br/&gt;这是标准的ini型文本文件。&lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1579"/>
         <source>Retain State</source>
-        <translation type="unfinished"></translation>
+        <translation>保留状态</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1672"/>
         <source>Aw&amp;Oken</source>
-        <translation type="unfinished"></translation>
+        <translation>Aw&amp;Oken</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1679"/>
         <source>A&amp;rtwork</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;rtwork</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1861"/>
         <source>Rescan</source>
-        <translation type="unfinished"></translation>
+        <translation>再次扫描</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1869"/>
         <source>Offline Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>离线模式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1268"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;pre style =“ margin-top：12px; margin-bottom：12px; margin-left：0px; margin-right：0px; -qt-block-indent：0; text- indent：0px;“&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;;“&gt;命令行选项：&lt;/ span&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;; font- 重量：600；“&gt;-i &lt;/ span&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;;“&gt;或&lt;/ span&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos; ; font-weight：600;“&gt;-icon-theme &lt;/ span&gt; &lt;/ pre&gt; &lt;p&gt;使用系统中的图标主题。 您可以在右侧的框中指定主题，或者如果该框保留为空白，则CMST将尝试使用系统范围的图标主题（如果已定义）。&lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1271"/>
         <source>Use Icon Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>使用图标主题</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the GUI will be restored from settings saved on disk. Settings include the geometry of the dialog and the state of various check boxes, such as this one. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p style=&apos;white-space:pre&apos;&gt;The settings file is: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/cmst/cmst.conf  &lt;/span&gt;&lt;br&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -1018,7 +1018,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1435"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;pre style =“ margin-top：12px; margin-bottom：12px; margin-left：0px; margin-right：0px; -qt-block-indent：0; text- indent：0px;“&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;;“&gt;命令行选项：&lt;/ span&gt; &lt;span style =” font-family：&apos;Courier New，courier&apos;; font- 重量：600；“&gt;-use-xfce &lt;/ span&gt; &lt;/ pre&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1438"/>
@@ -1045,7 +1045,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="680"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to remove the service. &lt;/p&gt;&lt;p&gt;If a service has previously been successfully connected (Favorite is true) this button will remove the Favorite property. The service will also be disconnected if it is currently connected. If the service required a passphrase then the passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;If a connection attempt failed this can slso be used to reset the service.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt;在下表中选择一个wifi服务，然后按此按钮将其删除。 &lt;/ p&gt; &lt;p&gt;如果以前已成功连接服务（“收藏夹”为true），则此按钮将删除“收藏夹”属性。 如果该服务当前已连接，则也将断开连接。 如果服务需要密码，则密码将被清除并忘记。&lt;/ p&gt; &lt;p&gt;如果连接尝试失败，也可以用来重置服务。&lt;/ p&gt; &lt;/ body&gt; &lt;/ html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="736"/>
