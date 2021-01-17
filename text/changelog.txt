@@ -3,6 +3,7 @@
 <b>In Progress</b>
 <ul>
 <li>Pull Request #218 (Fix getting ConnMan version)</li>
+<li>Added translation to Bulgarian.</li>
 </ul>
 <b> 2020.11.01</b>
 <ul>
