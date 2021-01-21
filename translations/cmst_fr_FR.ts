@@ -214,7 +214,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="298"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation> Information</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="299"/>
@@ -227,12 +227,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur Connman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation type="unfinished"></translation>
+        <translation>Connman renvoi l&apos;erreur suivante :&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Voulez vous réessayer ?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="131"/>
@@ -257,19 +257,19 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="69"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="86"/>
         <source>%L1 KB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 Ko</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="71"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="88"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 Mo</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="73"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="90"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 Go</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="76"/>
@@ -302,33 +302,33 @@
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="111"/>
         <source>%n Day(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Jour</numerusform>
+            <numerusform>%n Jours</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="118"/>
         <source>%n Hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Heure</numerusform>
+            <numerusform>%n Heures</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="125"/>
         <source>%n Minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Minute</numerusform>
+            <numerusform>%n Minutes</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="131"/>
         <source>%n Second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Seconde</numerusform>
+            <numerusform>%n Secondes</numerusform>
         </translation>
     </message>
 </context>
@@ -337,12 +337,12 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur Connman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation type="unfinished"></translation>
+        <translation>Connman renvoi l&apos;erreur suivante :&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Voulez vous réessayer ?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="119"/>
