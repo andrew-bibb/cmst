@@ -2,7 +2,7 @@
 <b><center>Change Log</center></b>
 <b>In Progress</b>
 <ul>
-<li>Pull Requests #221,#222, #233 translations from Weblate.</li>
+<li>Pull Requests #221-,#224 translations from Weblate.</li>
 <li>Pull Request #218 (Fix getting ConnMan version)</li>
 <li>Added translation to Bulgarian.</li>
 </ul>
