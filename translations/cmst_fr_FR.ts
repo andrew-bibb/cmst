@@ -46,7 +46,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="102"/>
         <source>Hidden Network</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Réseau caché</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="108"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="436"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Annuler la connexion .&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="439"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="442"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Annuler</translation>
     </message>
 </context>
 <context>
@@ -285,8 +285,8 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="97"/>
         <source>%Ln Packet(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%Ln Paquet</numerusform>
+            <numerusform>%Ln Paquets</numerusform>
         </translation>
     </message>
     <message>
@@ -390,12 +390,12 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="862"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="902"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="72"/>
         <source>Global Properties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Paramètres généraux</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="80"/>
@@ -406,7 +406,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="83"/>
         <source>OfflineMode: Unavailable</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode Hors-Ligne : indisponible</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="90"/>
@@ -416,13 +416,13 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="93"/>
         <source>State: Unavailable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">État : Indisponible</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="166"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="149"/>
         <source>Technologies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Technologies</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="215"/>
@@ -430,7 +430,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="626"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="833"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="220"/>
@@ -449,12 +449,12 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="636"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2375"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Connecté</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="235"/>
         <source>Tethering</source>
-        <translation type="unfinished"></translation>
+        <translation>Partage de connexion</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="250"/>
@@ -476,13 +476,13 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="305"/>
         <source>Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Services</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="367"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="843"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">État</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="372"/>
@@ -494,13 +494,13 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="388"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1971"/>
         <source>Move Before</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer Avant</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="401"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1976"/>
         <source>Move After</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer après</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="421"/>
@@ -540,12 +540,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="567"/>
         <source>Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Configuration</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="580"/>
         <source>&amp;Wireless</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sans fil</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1092"/>
@@ -570,7 +570,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1187"/>
         <source>Enable Start Options from GUI (right hand pane)</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer les options de démarrage à partir de l&apos;interface graphique (volet de droite)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1314"/>
@@ -580,7 +580,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1317"/>
         <source>Start Up Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Options de démarrage</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1609"/>
@@ -595,7 +595,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1621"/>
         <source>Before Connecting</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avant de se connecter</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1637"/>
@@ -605,7 +605,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1640"/>
         <source>Execute:</source>
-        <translation type="unfinished"></translation>
+        <translation>Exécuter :</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1660"/>
@@ -659,12 +659,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="631"/>
         <source>Favorite</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Favoris</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="641"/>
         <source>Security</source>
-        <translation type="unfinished"></translation>
+        <translation>Sécurité</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="646"/>
@@ -706,7 +706,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="683"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Retirer</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="706"/>
@@ -716,12 +716,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="709"/>
         <source>Wifi State</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">État du Wifi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="736"/>
         <source>&amp;VPN</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="742"/>
@@ -741,7 +741,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="848"/>
         <source>Host</source>
-        <translation type="unfinished"></translation>
+        <translation>Hôte</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="865"/>
@@ -808,7 +808,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1017"/>
         <source>Settings:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres :</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1032"/>
@@ -829,7 +829,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1372"/>
         <source>Disable Tray Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Désactiver l&apos;Icone Tray</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1484"/>
@@ -844,7 +844,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1490"/>
         <source>Counter Update KB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mise à jour du compteur Ko</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1574"/>
@@ -865,7 +865,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1411"/>
         <source>Start Minimized</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Démarer réduit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1446"/>
@@ -875,7 +875,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1449"/>
         <source>Use Icon Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser le thème d&apos;icone</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1432"/>
@@ -908,7 +908,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1425"/>
         <source>Fake Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Simuler la transparence</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1326"/>
@@ -923,7 +923,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1612"/>
         <source>External Programs</source>
-        <translation type="unfinished"></translation>
+        <translation>Programes Externes</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1517"/>
@@ -943,7 +943,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1532"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1545"/>
@@ -953,7 +953,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1548"/>
         <source>XFCE</source>
-        <translation type="unfinished"></translation>
+        <translation>XFCE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1558"/>
@@ -963,7 +963,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1561"/>
         <source>MATE</source>
-        <translation type="unfinished"></translation>
+        <translation>MATE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1263"/>
@@ -973,7 +973,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1266"/>
         <source>System Tray</source>
-        <translation type="unfinished"></translation>
+        <translation>System Tray</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1285"/>
@@ -983,7 +983,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1288"/>
         <source>Hide Tray Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Masquer l&apos;Icone Tray</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1272"/>
@@ -1008,7 +1008,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1111"/>
         <source>Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Notifications</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1136"/>
@@ -1018,7 +1018,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1123"/>
         <source>Server Status</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Status du serveur</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="163"/>
