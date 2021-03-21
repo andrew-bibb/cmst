@@ -11,17 +11,17 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="27"/>
         <source>Passphrase</source>
-        <translation>Mot de passe</translation>
+        <translation>Phrase de passe</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="46"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si un ancien mot de passe est disponible, il sera affichée ici pour référence.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si une ancienne phrase de passe est disponible, elle sera affichée ici pour référence.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="56"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the passphrase here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Entrez le mot de passe ici.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Entrez la phrase de passe ici.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="69"/>
@@ -31,22 +31,22 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="72"/>
         <source>&amp;Hide Passphrase</source>
-        <translation type="unfinished">Cacher le mot de passe</translation>
+        <translation>Cac&amp;her la phrase de passe</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="79"/>
         <source>O&amp;ld Passphrase</source>
-        <translation type="unfinished">Ancien mot de passe</translation>
+        <translation>&amp;Ancienne phrase de passe</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="89"/>
         <source>&amp;Passphrase</source>
-        <translation type="unfinished">Mot de passe</translation>
+        <translation>&amp;Phrase de passe</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="102"/>
         <source>Hidden Network</source>
-        <translation type="unfinished">Réseau caché</translation>
+        <translation>Réseau caché</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="108"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="157"/>
         <source>Wireless Internet Service Provider roaming (WISPr)</source>
-        <translation type="unfinished">Itinérance du fournisseur d&apos;accès Internet sans fil (WISPr)</translation>
+        <translation>Itinérance du fournisseur d&apos;accès Internet sans fil (WISPr)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="163"/>
@@ -86,7 +86,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="183"/>
         <source>Passwor&amp;d</source>
-        <translation type="unfinished">Mot de passe</translation>
+        <translation>Mot &amp;de passe</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="193"/>
@@ -121,12 +121,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="246"/>
         <source>Use Push &amp;Button Authentication</source>
-        <translation type="unfinished">Utilisez le bouton d&apos;autentification</translation>
+        <translation>Utilisez le &amp;bouton d&apos;autentification</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="276"/>
         <source>&amp;WPS Pin</source>
-        <translation type="unfinished">Pin &amp;WPS</translation>
+        <translation>Pin &amp;WPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="292"/>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="364"/>
         <source>Launch &amp;Browser</source>
-        <translation type="unfinished">Lancer le Navigateur</translation>
+        <translation>Lancer le &amp;Navigateur</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="396"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="442"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">Annuler</translation>
+        <translation>&amp;Annuler</translation>
     </message>
 </context>
 <context>
@@ -365,7 +365,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="48"/>
         <source>&amp;Status</source>
-        <translation type="unfinished">&amp;Statut</translation>
+        <translation>&amp;Statut</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="100"/>
@@ -411,7 +411,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="90"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global connection state of the system.  Possible values are &amp;quot;offline&amp;quot;, &amp;quot;idle&amp;quot;, &amp;quot;ready&amp;quot;, and &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L&apos;état global de cla connexion du système.  Les valeurs possibles sont &amp;quot;offline&amp;quot;, &amp;quot;idle&amp;quot;, &amp;quot;ready&amp;quot;, et &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="93"/>
@@ -466,7 +466,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="253"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="693"/>
         <source>Resc&amp;an</source>
-        <translation type="unfinished"></translation>
+        <translation>Resc&amp;anner</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="302"/>
@@ -482,13 +482,13 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="367"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="843"/>
         <source>State</source>
-        <translation type="unfinished">État</translation>
+        <translation>État</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="372"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="853"/>
         <source>Connection</source>
-        <translation type="unfinished">Connexion</translation>
+        <translation>Connexion</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="388"/>
@@ -515,7 +515,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="445"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page will show the details of the service selected in the box at the top. If the selected service is not in the READY or ONLINE state then most of the details will be blank. &lt;/p&gt;&lt;p&gt;You may override service details by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Configuration&lt;/span&gt; button at the bottom right. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette page affichera les détails du service sélectionné dans la case en haut. Si le service sélectionné n&apos;est pas à l&apos;état READY ou ONLINE, la plupart des détails seront vides. &lt;/p&gt;&lt;p&gt;Vous pouvez remplacer les détails du service en utilisant le bouton &lt;span style=&quot; font-weight:600;&quot;&gt;Configuration&lt;/span&gt; en bas à droite. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="448"/>
@@ -525,7 +525,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="460"/>
         <source>Ser&amp;vice</source>
-        <translation type="unfinished">Ser&amp;vice</translation>
+        <translation>Ser&amp;vice</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="470"/>
@@ -540,22 +540,22 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="567"/>
         <source>Configuration</source>
-        <translation type="unfinished">Configuration</translation>
+        <translation>Configuration</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="580"/>
         <source>&amp;Wireless</source>
-        <translation type="unfinished">Sans fil</translation>
+        <translation>&amp;Sans fil</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1092"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will implement an internet kill switch for VPN connections. If a VPN connection drops while the kill switch is enabled all technologies will be powered off.&lt;/p&gt;&lt;p&gt;The way this works is the service order is monitored. If the topmost service is of type VPN and then if it changes to something other than VPN and if the change was not initiated by the user (for instance by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Disconnect&lt;/span&gt; button in the VPN tab), then CMST will cycle through all technologies powering each one down in turn. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si coché, CMST implémentera un kill switch Internet pour les connexions VPN. Si une connexion VPN tombe alors que le kill switch est activé, toutes les technologies seront désactivées.&lt;/p&gt;&lt;p&gt;La façon dont cela fonctionne est que l&apos;ordre de service est surveillé. Si le service le plus élevé est de type VPN, puis s&apos;il passe à autre chose que VPN et si le changement n&apos;a pas été initié par l&apos;utilisateur (par exemple en utilisant le bouton &lt;span style=&quot; font-weight:600;&quot;&gt;Déconnecter&lt;/span&gt; dans l&apos;onglet VPN), CMST passera en revue toutes les technologies, mettant chacune d&apos;entre elles hors tension à tour de rôle.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1095"/>
         <source>Enable VPN Internet Kill Switch</source>
-        <translation type="unfinished">Activer le commutateur d&apos;arrêt Internet VPN</translation>
+        <translation type="unfinished">Activer  VPN internet Kill Switch</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1108"/>
@@ -644,7 +644,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1727"/>
         <source>After Connecting</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Après la connexion</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1792"/>
@@ -793,7 +793,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="964"/>
         <source>Roaming</source>
-        <translation type="unfinished">Roaming</translation>
+        <translation type="unfinished">Itinérance</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1011"/>
@@ -849,12 +849,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1574"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spécifiez le temps d&apos;attente en secondes avant de démarrer l&apos;icône de la barre d&apos;état système (la valeur par défaut est de 0 seconde). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1382"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Spécifiez la quantité de données en Ko à transmettre avant la mise à jour des compteurs (la valeur par défaut est de 1024 Ko). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1407"/>
@@ -865,7 +865,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1411"/>
         <source>Start Minimized</source>
-        <translation type="unfinished">Démarer réduit</translation>
+        <translation>Démarer réduit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1446"/>
@@ -886,7 +886,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1436"/>
         <source>Wait Time</source>
-        <translation type="unfinished">Temps d&apos;attente</translation>
+        <translation>Temps d&apos;attente</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1593"/>
@@ -897,7 +897,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1597"/>
         <source>Counter Update Rate </source>
-        <translation type="unfinished">Fréquence de rafraichissement du compteur </translation>
+        <translation>Fréquence de rafraichissement du compteur </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1421"/>
@@ -908,7 +908,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1425"/>
         <source>Fake Transparency</source>
-        <translation type="unfinished">Simuler la transparence</translation>
+        <translation>Simuler la transparence</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1326"/>
@@ -978,7 +978,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1285"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked an icon will not be displayed in the system tray.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Si cochée, une icône ne sera pas affichée dans la barre d&apos;état système. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1288"/>
@@ -988,7 +988,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1272"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray icon will popup a status message when you hover the mouse over it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Si cochée, l&apos;icône de la barre d&apos;état système affichera un message d&apos;état lorsque vous passez la souris dessus. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1275"/>
@@ -1028,7 +1028,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="240"/>
         <source>ID:Password</source>
-        <translation type="unfinished">ID:Mot de passe</translation>
+        <translation>ID:Mot de passe</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="273"/>
@@ -1043,7 +1043,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="283"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked the tethering columns will be hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lorsque cette option est cochée, les colonnes de partage de connexion seront masquées. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="286"/>
@@ -1153,7 +1153,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1200"/>
         <source>Retain State</source>
-        <translation type="unfinished"></translation>
+        <translation>Conserver l&apos;état</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1207"/>
@@ -1163,17 +1163,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
         <source>Enable ToolTips (Interface)</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer les info-bulles (interface)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1225"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Color in #RGB format to colorize the internal icons with.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Couleur au format #RGB pour coloriser les icônes internes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1235"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the color selection dialog. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ouvrir la boîte de dialogue de sélection des couleurs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="135"/>
@@ -1194,12 +1194,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1767"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aide</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1773"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>À &amp;propos</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1779"/>
@@ -1209,7 +1209,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1782"/>
         <source>C&amp;MST</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;MST</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1789"/>
@@ -1234,7 +1234,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1819"/>
         <source>&amp;License</source>
-        <translation>&amp;License</translation>
+        <translation>&amp;Licence</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1826"/>
@@ -1244,7 +1244,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1829"/>
         <source>ChangeLo&amp;g</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Journal des modifications</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1867"/>
@@ -1254,7 +1254,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1903"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Qu&apos;est-ce que c&apos;est ?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1906"/>
@@ -1289,7 +1289,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1939"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Quitter</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1959"/>
@@ -1300,12 +1300,12 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1962"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="392"/>
         <source>Mi&amp;nimize</source>
-        <translation type="unfinished"></translation>
+        <translation>Mi&amp;nimiser</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1981"/>
         <source>Rescan</source>
-        <translation type="unfinished"></translation>
+        <translation>Réanalyser</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1989"/>
@@ -1345,7 +1345,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="396"/>
         <source>&amp;Exit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Quitter</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="495"/>
@@ -1360,17 +1360,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="553"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="561"/>
         <source>%1 change log is not available.</source>
-        <translation>Journal de changements %1 indisponnible</translation>
+        <translation>Journal de changements %1 indisponible.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="563"/>
         <source>ChangeLog</source>
-        <translation type="unfinished"></translation>
+        <translation>Journal des modifications</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="686"/>
@@ -1399,7 +1399,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="551"/>
         <source>%1 license is the MIT (Expat) license.</source>
-        <translation type="unfinished"></translation>
+        <translation>La licence %1 est la licence MIT (Expat).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="749"/>
@@ -1467,7 +1467,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2445"/>
         <source>Security: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sécurité : %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2743"/>
@@ -1477,7 +1477,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1556"/>
         <source>&lt;b&gt;Connection:&lt;/b&gt; %1</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Connexion :&lt;/b&gt; %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="536"/>
@@ -1522,7 +1522,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1559"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;Détails du service :&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1561"/>
@@ -1583,7 +1583,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
         <source>No</source>
         <comment>autoconnect</comment>
-        <translation type="unfinished"></translation>
+        <translation>Non</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1568"/>
@@ -1699,7 +1699,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
         <source>Resolved: %1&lt;br&gt;</source>
-        <translation type="unfinished">Resolu : %1&lt;br&gt;</translation>
+        <translation type="unfinished">Résolu : %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
@@ -1923,7 +1923,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2372"/>
         <source>&lt;br&gt;Powered </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;br&gt;Alimenté </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2373"/>
@@ -1975,7 +1975,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2446"/>
         <source>&lt;br&gt;Roaming</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;Itinérance</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2447"/>
@@ -2208,12 +2208,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="35"/>
         <source>&amp;General</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Général</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="44"/>
         <source>AutoConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Connexion Auto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="76"/>
@@ -2223,18 +2223,18 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="152"/>
         <source>&amp;Domains</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Domaines</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="187"/>
         <source>IPv&amp;4</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv&amp;4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="209"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="422"/>
         <source>Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresse</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="230"/>
@@ -2252,12 +2252,12 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="453"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="489"/>
         <source>Method</source>
-        <translation type="unfinished"></translation>
+        <translation>Méthode</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="299"/>
         <source>IPv&amp;6</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv&amp;6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="399"/>
@@ -2267,7 +2267,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="355"/>
         <source>Privacy</source>
-        <translation type="unfinished"></translation>
+        <translation>Confidentialité</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="471"/>
@@ -2277,7 +2277,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="474"/>
         <source>&amp;Proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Proxy</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="518"/>
@@ -2287,7 +2287,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="511"/>
         <source>URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="114"/>
@@ -2409,7 +2409,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="542"/>
         <source>Servers</source>
-        <translation type="unfinished"></translation>
+        <translation>Serveurs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="549"/>
@@ -2488,7 +2488,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="706"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="713"/>
@@ -2498,7 +2498,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="716"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
 </context>
 <context>
@@ -2521,7 +2521,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="35"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ouvrir</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="48"/>
@@ -2531,7 +2531,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Enregistrer</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="68"/>
@@ -2541,7 +2541,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Supprimer</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="94"/>
@@ -2571,23 +2571,23 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="140"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Quitter</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="152"/>
         <source>[global]</source>
-        <translation type="unfinished"></translation>
+        <translation>[global]</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="157"/>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="220"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="162"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Description</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="167"/>
@@ -2597,12 +2597,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="175"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="183"/>
         <source>MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>MAC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="191"/>
@@ -2622,12 +2622,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="215"/>
         <source>Domain</source>
-        <translation type="unfinished"></translation>
+        <translation>Domaine</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="228"/>
         <source>SSID</source>
-        <translation type="unfinished"></translation>
+        <translation>SSID</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="236"/>
@@ -2662,7 +2662,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="278"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Identité</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="286"/>
@@ -2672,17 +2672,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="291"/>
         <source>Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>Mot de passe</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="299"/>
         <source>Security</source>
-        <translation type="unfinished"></translation>
+        <translation>Sécurité</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="307"/>
         <source>Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Caché</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="312"/>
@@ -2697,7 +2697,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="322"/>
         <source>IPv4</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="325"/>
@@ -2707,7 +2707,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="330"/>
         <source>IPv6</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="333"/>
@@ -2805,7 +2805,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="338"/>
         <source>IPv6.Privacy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">IPv6.Confidentialité</translation>
     </message>
 </context>
 <context>
@@ -2813,7 +2813,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="118"/>
         <source>Global</source>
-        <translation type="unfinished"></translation>
+        <translation>Global</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="124"/>
@@ -2823,12 +2823,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="144"/>
         <source>WiFi</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="171"/>
         <source>Templates</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modèle</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="205"/>
@@ -3009,7 +3009,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="511"/>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="550"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation> Information</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="378"/>
@@ -3121,7 +3121,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="659"/>
         <source> Critical</source>
-        <translation type="unfinished"></translation>
+        <translation> Critique</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="660"/>
@@ -3147,7 +3147,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="14"/>
         <source>Scrollbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Boîte de défilement</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="38"/>
@@ -3167,31 +3167,31 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="44"/>
         <source>cmst</source>
         <comment>Abbreviated Program Name - used for QMessageBox titles</comment>
-        <translation type="unfinished"></translation>
+        <translation>cmst</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="47"/>
         <source>idle</source>
         <comment>connman state string</comment>
-        <translation type="unfinished"></translation>
+        <translation>inactif</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="48"/>
         <source>association</source>
         <comment>connman state string</comment>
-        <translation type="unfinished"></translation>
+        <translation>association</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="49"/>
         <source>configuration</source>
         <comment>connman state string</comment>
-        <translation type="unfinished"></translation>
+        <translation>configuration</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="50"/>
         <source>ready</source>
         <comment>connman state string</comment>
-        <translation type="unfinished"></translation>
+        <translation>Prêt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="51"/>
@@ -3203,61 +3203,61 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="52"/>
         <source>disconnect</source>
         <comment>connman state string</comment>
-        <translation type="unfinished"></translation>
+        <translation>déconnecter</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="53"/>
         <source>failure</source>
         <comment>connman state string</comment>
-        <translation type="unfinished"></translation>
+        <translation>échec</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="54"/>
         <source>offline</source>
         <comment>connman state string</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">hors-ligne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="56"/>
         <source>system</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>système</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="57"/>
         <source>ethernet</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>ethernet</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="58"/>
         <source>wifi</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>wifi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="59"/>
         <source>bluetooth</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>bluetooth</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="60"/>
         <source>cellular</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>cellulaire</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="61"/>
         <source>gps</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>gps</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="62"/>
         <source>vpn</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>vpn</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="63"/>
@@ -3269,31 +3269,31 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="64"/>
         <source>p2p</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>p2p</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="65"/>
         <source>wired</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>Filaire</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="67"/>
         <source>direct</source>
         <comment>connman proxy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>direct</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="68"/>
         <source>manual</source>
         <comment>connman proxy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>manuel</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="69"/>
         <source>auto</source>
         <comment>connman proxy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>auto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="71"/>
@@ -3311,7 +3311,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="73"/>
         <source>none</source>
         <comment>connman security string</comment>
-        <translation type="unfinished"></translation>
+        <translation>aucun</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="74"/>
@@ -3323,7 +3323,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="75"/>
         <source>wps</source>
         <comment>connman security string</comment>
-        <translation type="unfinished"></translation>
+        <translation>wps</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="76"/>
@@ -3347,7 +3347,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="80"/>
         <source>Passphrase required</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>Phrase de passe requise</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="81"/>
@@ -3449,13 +3449,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="98"/>
         <source>disabled</source>
         <comment>connman privacy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>désactivé</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="99"/>
         <source>enabled</source>
         <comment>connman privacy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>activé</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="100"/>
@@ -3473,19 +3473,19 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="103"/>
         <source>auto</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished"></translation>
+        <translation>auto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="104"/>
         <source>manual</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished"></translation>
+        <translation>manuelle</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="106"/>
         <source>dhcp</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>dhcp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="107"/>
@@ -3509,19 +3509,19 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="110"/>
         <source>address</source>
         <comment>connamn ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>adresse</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="112"/>
         <source>auto</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>auto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="113"/>
         <source>manual</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>manuelle</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="114"/>
@@ -3569,7 +3569,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="122"/>
         <source>wireguard</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>wireguard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="124"/>
@@ -3604,7 +3604,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="40"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Mot de passe</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="50"/>
@@ -3614,12 +3614,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="60"/>
         <source>Host</source>
-        <translation type="unfinished"></translation>
+        <translation>Hôte</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="74"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="88"/>
@@ -3639,7 +3639,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="118"/>
         <source>Cookie</source>
-        <translation type="unfinished"></translation>
+        <translation>Cookie</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="128"/>
@@ -3659,7 +3659,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="160"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="184"/>
@@ -3674,7 +3674,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="190"/>
         <source>O&amp;K</source>
-        <translation type="unfinished"></translation>
+        <translation>O&amp;K</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="197"/>
@@ -3689,7 +3689,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="203"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Annuler</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="225"/>
@@ -3750,7 +3750,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="366"/>
         <source>WireGuard</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="418"/>
@@ -3822,7 +3822,7 @@ Ex: 10.2.0.2/24</source>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="663"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="703"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation> information</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="664"/>
@@ -3899,7 +3899,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="812"/>
         <source> Critical</source>
-        <translation type="unfinished"></translation>
+        <translation> Critique</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="813"/>
@@ -3944,7 +3944,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="927"/>
         <source>User</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilisateur</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="928"/>
@@ -3954,7 +3954,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="933"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Mot de passe</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="934"/>
@@ -3997,7 +3997,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="35"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ouvrir</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="48"/>
@@ -4007,7 +4007,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Enregistrer</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="68"/>
@@ -4017,7 +4017,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Supprimer</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="94"/>
@@ -4047,7 +4047,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="140"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Quitter</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="160"/>
@@ -4738,7 +4738,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="128"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>Ko</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="133"/>
@@ -4771,12 +4771,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="44"/>
         <source> Warning</source>
-        <translation type="unfinished"></translation>
+        <translation> Avertissement</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="45"/>
         <source>&lt;center&gt;&lt;b&gt;We received a DBUS reply message indicating an error.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Error Name: %1&lt;br&gt;&lt;br&gt;Error Message: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;Nous avons reçu un message de réponse DBUS indiquant une erreur.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Nom de l&apos;erreur : %1&lt;br&gt;&lt;br&gt;Message d&apos;erreur : %2</translation>
     </message>
 </context>
 </TS>

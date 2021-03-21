@@ -166,7 +166,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="361"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to launch the selected browser. The browser will open at the page shown in the Login URL box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use este botão para iniciar o navegador selecionado. O navegador será aberto na página mostrada na caixa URL de login.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="364"/>
@@ -176,22 +176,22 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="396"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;O que é isso&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="399"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="423"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue o processo de conexão.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="426"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accept and use the answers you have provided in this dialog. &lt;/p&gt;&lt;p&gt;This will send your input to the connman daemon to continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aceite e use as respostas que você forneceu nesta caixa de diálogo.&lt;/p&gt;&lt;p&gt;Isso enviará sua entrada para o connman daemon para continuar o processo de conexão.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="429"/>
@@ -2164,7 +2164,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="214"/>
         <source>File save failed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Falha ao salvar arquivo.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="217"/>
@@ -2589,7 +2589,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="167"/>
         <source>[service_*]</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[service_*]</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="175"/>
@@ -2604,7 +2604,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="191"/>
         <source>Nameservers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nameservers</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="199"/>
