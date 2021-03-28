@@ -274,7 +274,7 @@
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="76"/>
         <source>&lt;b&gt;Transmit:&lt;/b&gt;&lt;br&gt;TX Total: %1 (%2),  TX Errors: %3,  TX Dropped: %4</source>
-        <translation type="unfinished">&lt;b&gt;Transmis :&lt;/b&gt;&lt;br&gt;TX Total : %1 (%2),  TX Erreurs : %3,  TX Déposé : %4</translation>
+        <translation type="unfinished">&lt;b&gt;Transmis&#xa0;:&lt;/b&gt;&lt;br&gt;TX Total&#xa0;: %1 (%2),  TX Erreurs&#xa0;: %3,  TX Déposé&#xa0;: %4</translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="77"/>
@@ -292,7 +292,7 @@
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="93"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Received:&lt;/b&gt;&lt;br&gt;RX Total: %1 (%2),  RX Errors: %3,  RX Dropped: %4</source>
-        <translation type="unfinished">&lt;br&gt;&lt;br&gt;&lt;b&gt;Reçus :&lt;/b&gt;&lt;br&gt;RX Total : %1 (%2),  RX Erreurs : %3,  RX Déposés : %4</translation>
+        <translation type="unfinished">&lt;br&gt;&lt;br&gt;&lt;b&gt;Reçus&#xa0;:&lt;/b&gt;&lt;br&gt;RX Total&#xa0;: %1 (%2),  RX Erreurs&#xa0;: %3,  RX Déposés&#xa0;: %4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="100"/>
@@ -585,7 +585,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1609"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line. Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Two events are checked. &lt;span style=&quot; font-weight:600;&quot;&gt;Before Connecting&lt;/span&gt; events are called after the Connect button is pressed in either the Wireless or VPN tabs. The program or process in the Execute box will only be executed prior to making a connection for the service shown in the Service box.  It will not be called when connecting to any other service.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;After Connecting&lt;/span&gt; box will be called after Connman enters the ready or online state.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programmes ou processus à exécuter après que divers événements se produisent.&lt;/p&gt;&lt;p&gt;Si le programme ou le processus nécessite des arguments de ligne de commande, fournissez-les ici comme si vous tapiez sur une ligne de commande. Exemple :&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/chemin/vers/le/programme arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Deux événements sont vérifiés. &lt;span style=&quot; font-weight:600;&quot;&gt;Avant de se connecter&lt;/span&gt; les événements sont appelés après avoir appuyé sur le bouton Connexion dans les onglets Sans fil ou VPN. Le programme ou processus dans la zone Exécuter ne sera exécuté qu&apos;avant d&apos;établir une connexion pour le service indiqué dans la zone Service. Il ne sera appelé lors de la connexion à aucun autre service.&lt;/p&gt;&lt;p&gt;Le programme ou processus dans la boite &lt;span style=&quot; font-weight:600;&quot;&gt;Après la connexion&lt;/span&gt;sera appelé après que Connman entre dans l&apos;état prêt ou en ligne.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programmes ou processus à exécuter après que divers événements se produisent.&lt;/p&gt;&lt;p&gt;Si le programme ou le processus nécessite des arguments de ligne de commande, fournissez-les ici comme si vous tapiez sur une ligne de commande. Exemple&#xa0;:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/chemin/vers/le/programme arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Deux événements sont vérifiés. &lt;span style=&quot; font-weight:600;&quot;&gt;Avant de se connecter&lt;/span&gt; les événements sont appelés après avoir appuyé sur le bouton Connexion dans les onglets Sans fil ou VPN. Le programme ou processus dans la zone Exécuter ne sera exécuté qu&apos;avant d&apos;établir une connexion pour le service indiqué dans la zone Service. Il ne sera appelé lors de la connexion à aucun autre service.&lt;/p&gt;&lt;p&gt;Le programme ou processus dans la boite &lt;span style=&quot; font-weight:600;&quot;&gt;Après la connexion&lt;/span&gt;sera appelé après que Connman entre dans l&apos;état prêt ou en ligne.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1618"/>
@@ -776,12 +776,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="586"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;SIgnal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette page affiche les services WiFi connus. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nom :&lt;/span&gt; Le SSID du réseau.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favoris :&lt;/span&gt; Un cœur dans cette colonne indique que cet ordinateur s&apos;est précédemment connecté au réseau à l&apos;aide de ce service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connecté :&lt;/span&gt; Affiche l&apos;état de connexion de ce service. Passer la souris sur l&apos;icône pour afficher une description textuelle. En ligne signale qu&apos;une connexion Internet est disponible et a été vérifiée. Prêt signale un appareil connecté avec succès. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Securité: &lt;/span&gt;Décris le type de securité utilisé pour ce service. Les valeurs possibles sont &amp;quot;aucune&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, et &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Force du signal :&lt;/span&gt; La force du signal WiFi, normalisée sur une échelle de 0 à 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette page affiche les services WiFi connus. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nom&#xa0;:&lt;/span&gt; Le SSID du réseau.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favoris&#xa0;:&lt;/span&gt; Un cœur dans cette colonne indique que cet ordinateur s&apos;est précédemment connecté au réseau à l&apos;aide de ce service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connecté&#xa0;:&lt;/span&gt; Affiche l&apos;état de connexion de ce service. Passer la souris sur l&apos;icône pour afficher une description textuelle. En ligne signale qu&apos;une connexion Internet est disponible et a été vérifiée. Prêt signale un appareil connecté avec succès. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Securité: &lt;/span&gt;Décris le type de securité utilisé pour ce service. Les valeurs possibles sont &amp;quot;aucune&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, et &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Force du signal&#xa0;:&lt;/span&gt; La force du signal WiFi, normalisée sur une échelle de 0 à 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="790"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. . &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette page affiche les services VPN provisionnés. Certaines cellules du tableau peuvent n&apos;être disponibles qu&apos;une fois la connexion établie. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nom :&lt;/span&gt; Le nom donné dans le fichier d&apos;approvisionnement.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type :&lt;/span&gt; Le type de VPN (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;État :&lt;/span&gt; Affiche l&apos;état de connexion de ce service. Passez la souris sur l&apos;icône pour afficher une description textuelle. .&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;IP du Hôte VPN.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domaine :&lt;/span&gt; Le domaine du VPN.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cette page affiche les services VPN provisionnés. Certaines cellules du tableau peuvent n&apos;être disponibles qu&apos;une fois la connexion établie. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nom&#xa0;:&lt;/span&gt; Le nom donné dans le fichier d&apos;approvisionnement.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type&#xa0;:&lt;/span&gt; Le type de VPN (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;État&#xa0;:&lt;/span&gt; Affiche l&apos;état de connexion de ce service. Passez la souris sur l&apos;icône pour afficher une description textuelle. .&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;IP du Hôte VPN.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domaine&#xa0;:&lt;/span&gt; Le domaine du VPN.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="935"/>
@@ -828,7 +828,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1368"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande&#xa0;: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Désactiver l&apos;icône de la barre d&apos;état système.&lt;/p&gt;&lt;p&gt;Peut être nécessaire pour les barres d&apos;état système non conformes aux spécifications de la zone de notification Freedesktop.org.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -865,7 +865,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1407"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande&#xa0;: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Démarrer le GUI réduit dans la barre d&apos;état système.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -876,7 +876,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1446"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Utilisez un thème d&apos;icônes de votre système. Vous pouvez spécifier le thème dans la case à droite, ou si la case est laissée vide, CMST essaiera d&apos;utiliser le thème d&apos;icônes à l&apos;échelle du système (s&apos;il y en a un défini).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande&#xa0;: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Utilisez un thème d&apos;icônes de votre système. Vous pouvez spécifier le thème dans la case à droite, ou si la case est laissée vide, CMST essaiera d&apos;utiliser le thème d&apos;icônes à l&apos;échelle du système (s&apos;il y en a un défini).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1449"/>
@@ -887,7 +887,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1432"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande&#xa0;: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spécifiez le temps d&apos;attente en secondes avant de démarrer l&apos;icône de la barre d&apos;état système (la valeur par défaut est 0 seconde).&lt;/p&gt;&lt;p&gt;Si CMST est démarré et tente de créer une icône de barre d&apos;état avant la création de la barre d&apos;état système elle-même, une boîte de dialogue s&apos;affiche pour l&apos;expliquer. Cela se produit parfois lorsque le programme est lancé automatiquement. Si vous savez que la barre d&apos;état existera une fois que le système sera en place, vous pouvez spécifier un temps d&apos;attente et CMST attendra ce nombre de secondes avant d&apos;essayer de créer l&apos;icône de barre d&apos;état. Il s&apos;agit de donner au gestionnaire de fenêtres ou au panneau le temps de créer la barre d&apos;état avant d&apos;essayer d&apos;y placer l&apos;icône.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -899,7 +899,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1593"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande&#xa0;: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spécifier la fréquence en secondes entre les mises à jour du compteur (la valeur par défaut est de 10 secondes). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -911,7 +911,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1421"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB.  If the spedified color matches the tray background we&apos;ve effectively created fake transparency. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande&#xa0;: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utilisé pour contourner un bogue QT où les icônes de la barre d&apos;état système s&apos;affichent avec un arrière-plan blanc ou noir au lieu d&apos;être transparentes.&lt;/p&gt;&lt;p&gt;Vous pouvez spécifier la couleur d&apos;arrière-plan de l&apos;icône ici. Le format est un nombre hexadécimal sous la forme RRGGBB. Si la couleur spécifiée correspond à l&apos;arrière-plan de la barre d&apos;état, nous avons effectivement créé une fausse transparence. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -957,7 +957,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1545"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande&#xa0;: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1548"/>
@@ -967,7 +967,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1558"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande&#xa0;: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1561"/>
@@ -1077,7 +1077,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1082"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will place an entry in the autostart directory for the current user, unchecking will remove said entry. This directory is typically: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST only add or remove the .desktop file from the autostart directory. Autostarting is typically dependent upon your Desktop Environment and must be enabled from there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si coché CMST placera une entrée dans le répertoire de démarrage automatique pour l&apos;utilisateur actuel, décocher supprimera cette entrée. Ce répertoire est généralement : &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST ajoute ou supprime uniquement le fichier .desktop du répertoire de démarrage automatique. Le démarrage automatique dépend généralement de votre environnement de bureau et doit être activé à partir de là.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si coché CMST placera une entrée dans le répertoire de démarrage automatique pour l&apos;utilisateur actuel, décocher supprimera cette entrée. Ce répertoire est généralement&#xa0;: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST ajoute ou supprime uniquement le fichier .desktop du répertoire de démarrage automatique. Le démarrage automatique dépend généralement de votre environnement de bureau et doit être activé à partir de là.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1085"/>
@@ -1097,7 +1097,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1358"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Option de ligne de commande : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Activez les compteurs Connman RX et TX. Les compteurs sont expérimentaux dans Connman et leur activation écrira une grande quantité de données dans les journaux système.&lt;/p&gt;&lt;p&gt;Les compteurs sont désactivés par défaut et représentent un changement par rapport à la façon dont ils étaient à l&apos;origine. Jusqu&apos;à la version 2017.09.19 incluse, les compteurs étaient activés par défaut. Toutes les versions ultérieures à ces compteurs sont désactivées par défaut.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Option de ligne de commande&#xa0;: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Activez les compteurs Connman RX et TX. Les compteurs sont expérimentaux dans Connman et leur activation écrira une grande quantité de données dans les journaux système.&lt;/p&gt;&lt;p&gt;Les compteurs sont désactivés par défaut et représentent un changement par rapport à la façon dont ils étaient à l&apos;origine. Jusqu&apos;à la version 2017.09.19 incluse, les compteurs étaient activés par défaut. Toutes les versions ultérieures à ces compteurs sont désactivées par défaut.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1361"/>
@@ -1107,7 +1107,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1507"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Désactiver le VPN. Cela masquera l&apos;onglet VPN et ignorera également toute tentative de connexion à connman-vpn. Ce dernier est utile si votre Connman a été construit avec la fonction --disable-vpn.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande&#xa0;: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Désactiver le VPN. Cela masquera l&apos;onglet VPN et ignorera également toute tentative de connexion à connman-vpn. Ce dernier est utile si votre Connman a été construit avec la fonction --disable-vpn.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1510"/>
@@ -1117,7 +1117,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1497"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande : &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Désactiver le bouton de réduction. À utiliser lorsque vous souhaitez que le gestionnaire de fenêtres ait le contrôle exclusif de la minimisation de l&apos;interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Option de ligne de commande&#xa0;: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Désactiver le bouton de réduction. À utiliser lorsque vous souhaitez que le gestionnaire de fenêtres ait le contrôle exclusif de la minimisation de l&apos;interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1500"/>
@@ -1157,7 +1157,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1197"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the state of the GUI will be restored from settings saved on disk. Settings include the geometry and position of the dialog and the current tab. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p&gt;The settings file is: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si coché, l&apos;état de l&apos;interface graphique sera restauré à partir des paramètres enregistrés sur le disque. Les paramètres incluent la géométrie et la position de la boîte de dialogue et l&apos;onglet actuel. &lt;/p&gt;&lt;p&gt;Ces paramètres seront utilisés au prochain démarrage pour restaurer l&apos;interface utilisateur telle qu&apos;elle était lors de l&apos;arrêt.&lt;/p&gt;&lt;p&gt;Le fichier de paramètres est : ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;C&apos;est un fichier texte de type ini standard.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si coché, l&apos;état de l&apos;interface graphique sera restauré à partir des paramètres enregistrés sur le disque. Les paramètres incluent la géométrie et la position de la boîte de dialogue et l&apos;onglet actuel. &lt;/p&gt;&lt;p&gt;Ces paramètres seront utilisés au prochain démarrage pour restaurer l&apos;interface utilisateur telle qu&apos;elle était lors de l&apos;arrêt.&lt;/p&gt;&lt;p&gt;Le fichier de paramètres est&#xa0;: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;C&apos;est un fichier texte de type ini standard.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1200"/>
@@ -1193,7 +1193,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1248"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Internal icons can be colorized. You may select a color using the button to the left, or you may type in the #RGB color yourself.&lt;/p&gt;&lt;p&gt;If you type the entry it must have leading # sign. Example: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Les icônes internes peuvent être colorisées. Vous pouvez sélectionner une couleur à l&apos;aide du bouton à gauche ou saisir vous-même la couleur #RGB.&lt;/p&gt;&lt;p&gt;Si vous tapez l&apos;entrée, elle doit être précédée du signe #. Exemple : # 22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Les icônes internes peuvent être colorisées. Vous pouvez sélectionner une couleur à l&apos;aide du bouton à gauche ou saisir vous-même la couleur #RGB.&lt;/p&gt;&lt;p&gt;Si vous tapez l&apos;entrée, elle doit être précédée du signe #. Exemple&#xa0;: # 22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1251"/>
@@ -1443,7 +1443,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1205"/>
         <source>Service Error: %1</source>
-        <translation>Erreur de service : %1</translation>
+        <translation>Erreur de service&#xa0;: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1206"/>
@@ -1476,7 +1476,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2445"/>
         <source>Security: %1</source>
-        <translation>Sécurité : %1</translation>
+        <translation>Sécurité&#xa0;: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2743"/>
@@ -1486,7 +1486,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1556"/>
         <source>&lt;b&gt;Connection:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;Connexion :&lt;/b&gt; %1</translation>
+        <translation>&lt;b&gt;Connexion&#xa0;:&lt;/b&gt; %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="536"/>
@@ -1496,7 +1496,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="537"/>
         <source>&lt;center&gt;This program uses artwork from &lt;b&gt;Freepik&lt;/b&gt; obtained from www.flaticon.com:&lt;br&gt;&lt;br&gt;Released under the Flaticon Basic License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;https://file000.flaticon.com/downloads/license/license.pdf&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Artwork files:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</source>
-        <translation>&lt;center&gt;Ce programme utilise des éléments graphiques de  &lt;b&gt;Freepik&lt;/b&gt; obtenus depuis www.flaticon.com :&lt;br&gt;&lt;br&gt;Publié sous la licence Flaticon Basic&lt;br&gt;&lt;a href=&quot;url&quot;&gt;https://file000.flaticon.com/downloads/license/license.pdf&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Fichier d&apos;éléments graphiques :&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</translation>
+        <translation>&lt;center&gt;Ce programme utilise des éléments graphiques de  &lt;b&gt;Freepik&lt;/b&gt; obtenus depuis www.flaticon.com&#xa0;:&lt;br&gt;&lt;br&gt;Publié sous la licence Flaticon Basic&lt;br&gt;&lt;a href=&quot;url&quot;&gt;https://file000.flaticon.com/downloads/license/license.pdf&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Fichier d&apos;éléments graphiques&#xa0;:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="919"/>
@@ -1531,22 +1531,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1559"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;Détails du service :&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt;Détails du service&#xa0;:&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1561"/>
         <source>Service Type: %1&lt;br&gt;</source>
-        <translation>Type de service : %1&lt;br&gt;</translation>
+        <translation>Type de service&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1562"/>
         <source>Service State: %1&lt;br&gt;</source>
-        <translation>État du service : %1&lt;br&gt;</translation>
+        <translation>État du service&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1563"/>
         <source>Favorite: %1&lt;br&gt;</source>
-        <translation>Favoris : %1&lt;br&gt;</translation>
+        <translation>Favoris&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1563"/>
@@ -1563,7 +1563,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1564"/>
         <source>External Configuration File: %1&lt;br&gt;</source>
-        <translation>Fichier de configuration externe : %1&lt;br&gt;</translation>
+        <translation>Fichier de configuration externe&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1564"/>
@@ -1580,7 +1580,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
         <source>Auto Connect: %1&lt;br&gt;</source>
-        <translation>Connexion auto : %1&lt;br&gt;</translation>
+        <translation>Connexion auto&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
@@ -1614,13 +1614,13 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1572"/>
         <source>IP Netmask: %1&lt;br&gt;</source>
-        <translation>Masque de réseau IP : %1&lt;br&gt;</translation>
+        <translation>Masque de réseau IP&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1573"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1584"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
-        <translation>Passerelle IP : %1&lt;br&gt;</translation>
+        <translation>Passerelle IP&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1575"/>
@@ -1636,17 +1636,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1581"/>
         <source>Prefix Length: &lt;br&gt;</source>
-        <translation>Longueur du préfixe : &lt;br&gt;</translation>
+        <translation>Longueur du préfixe&#xa0;: &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1583"/>
         <source>Prefix Length: %1&lt;br&gt;</source>
-        <translation>Longueur du préfixe : %1&lt;br&gt;</translation>
+        <translation>Longueur du préfixe&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1585"/>
         <source>Privacy: %1&lt;br&gt;</source>
-        <translation>Confidentialité : %1&lt;br&gt;</translation>
+        <translation>Confidentialité&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1587"/>
@@ -1676,7 +1676,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
         <source>Support Enabled: %1&lt;br&gt;</source>
-        <translation>Prise en charge activée : %1&lt;br&gt;</translation>
+        <translation>Prise en charge activée&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
@@ -1703,12 +1703,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1616"/>
         <source>Conflict detected on: %1&lt;br&gt;</source>
-        <translation>Conflit détecté sur : %1&lt;br&gt;</translation>
+        <translation>Conflit détecté sur&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
         <source>Resolved: %1&lt;br&gt;</source>
-        <translation type="unfinished">Résolu : %1&lt;br&gt;</translation>
+        <translation type="unfinished">Résolu&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
@@ -1755,7 +1755,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1639"/>
         <source>Device Address: %1&lt;br&gt;</source>
-        <translation>Adresse de l&apos;appareil : %1&lt;br&gt;</translation>
+        <translation>Adresse de l&apos;appareil&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1640"/>
@@ -1770,17 +1770,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1647"/>
         <source>Security: %1&lt;br&gt;</source>
-        <translation>Sécurité : %1&lt;br&gt;</translation>
+        <translation>Sécurité&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1648"/>
         <source>Strength: %1&lt;br&gt;</source>
-        <translation>Force : %1&lt;br&gt;</translation>
+        <translation>Force&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1649"/>
         <source>Roaming: %1&lt;br&gt;</source>
-        <translation>Itinérance : %1&lt;br&gt;</translation>
+        <translation>Itinérance&#xa0;: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1649"/>
@@ -1868,7 +1868,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2011"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
-        <translation>  Technologies WiFi : %1&lt;br&gt;  %1 Trouvé, %2 Alimenté</translation>
+        <translation>  Technologies WiFi&#xa0;: %1&lt;br&gt;  %1 Trouvé, %2 Alimenté</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2209"/>
@@ -2000,7 +2000,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="496"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5</source>
-        <translation>&lt;center&gt;%1 est un programme d&apos;interface avec le démon Connman et qui fourni un contrôle de la barre d&apos;état système.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Date de sortie : %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Traductions :&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinois)&lt;center&gt;sqozz (Allemand)&lt;center&gt;Ilya Shestopalov (Russe)&lt;center&gt;Heimen Stoffels (Néerlandais)&lt;center&gt; Yaşar Çiv (Turque)&lt;br&gt;&lt;center&gt;&lt;b&gt;Informations de build :&lt;/b&gt;&lt;center&gt;Compilé avec la version QT %5</translation>
+        <translation>&lt;center&gt;%1 est un programme d&apos;interface avec le démon Connman et qui fourni un contrôle de la barre d&apos;état système.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Date de sortie&#xa0;: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Traductions&#xa0;:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinois)&lt;center&gt;sqozz (Allemand)&lt;center&gt;Ilya Shestopalov (Russe)&lt;center&gt;Heimen Stoffels (Néerlandais)&lt;center&gt; Yaşar Çiv (Turque)&lt;br&gt;&lt;center&gt;&lt;b&gt;Informations de build&#xa0;:&lt;/b&gt;&lt;center&gt;Compilé avec la version QT %5</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="523"/>
@@ -2010,12 +2010,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1313"/>
         <source>&lt;b&gt;Technology: %1&lt;/b&gt;&lt;p&gt;Please enter the WiFi AP SSID that clients will&lt;br&gt;have to join in order to gain internet connectivity.</source>
-        <translation>&lt;b&gt;Technologie : %1&lt;/b&gt;&lt;p&gt;Veuillez saisir le SSID de l&apos;AP WiFi que les clients &lt;br&gt;doivent joindre pour obtenir une connectivité Internet.</translation>
+        <translation>&lt;b&gt;Technologie&#x202f;: %1&lt;/b&gt;&lt;p&gt;Veuillez saisir le SSID de l&apos;AP WiFi que les clients &lt;br&gt;doivent joindre pour obtenir une connectivité Internet.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1325"/>
         <source>&lt;b&gt;Technology: %1&lt;/b&gt;&lt;p&gt;Please enter the WPA pre-shared key clients will&lt;br&gt;have to use in order to establish a connection.&lt;p&gt;PSK length: minimum of 8 characters.</source>
-        <translation>&lt;b&gt;Technologie : %1&lt;/b&gt;&lt;p&gt;Veuillez saisir la clé pré-partagée WPA que les clients &lt;br&gt;doivent utiliser pour établir une connexion.&lt;p&gt;Longueur du PSK : minimum 8 caractères.</translation>
+        <translation>&lt;b&gt;Technologie&#xa0;: %1&lt;/b&gt;&lt;p&gt;Veuillez saisir la clé pré-partagée WPA que les clients &lt;br&gt;doivent utiliser pour établir une connexion.&lt;p&gt;Longueur du PSK&#xa0;: minimum 8 caractères.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2266"/>
@@ -2196,7 +2196,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="233"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation>&lt;b&gt;Nom de l&apos;erreur DBus :&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Chaîne :&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message :&lt;/b&gt; %3</translation>
+        <translation>&lt;b&gt;Nom de l&apos;erreur DBus&#xa0;:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Chaîne&#xa0;:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message&#xa0;:&lt;/b&gt; %3</translation>
     </message>
 </context>
 <context>
@@ -2402,15 +2402,15 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Activer ou désactiver l&apos;extension de confidentialité IPv6 comme décrit dans la RFC 4941,&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Désactivé&lt;/span&gt; :l&apos;extension de confidentialité est désactivée et les adresses de configuration automatique normales sont utilisées.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Activé&lt;/span&gt; : le système préfère utiliser des adresses publiques plutôt que des adresses temporaires.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Préféré&lt;/span&gt; : l&apos;extension de confidentialité est activée et le système préfère les adresses temporaires aux adresses publiques.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Désactivé&lt;/span&gt;&#xa0;:l&apos;extension de confidentialité est désactivée et les adresses de configuration automatique normales sont utilisées.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Activé&lt;/span&gt;&#xa0;: le système préfère utiliser des adresses publiques plutôt que des adresses temporaires.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Préféré&lt;/span&gt;&#xa0;: l&apos;extension de confidentialité est activée et le système préfère les adresses temporaires aux adresses publiques.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable or disable the IPv6 privacy extension as described in RFC 4941,&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Disabled&lt;/span&gt;: privacy extension is disabled and normal autoconf addresses are used.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled&lt;/span&gt;: the system prefers to use public addresses over temporary addresses.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prefered&lt;/span&gt;: privacy extension is enabled and the system prefers temporary addresses over public addresses.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activer ou désactiver l&apos;extension de confidentialité IPv6 comme décrit dans la RFC 4941,&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Désactivé&lt;/span&gt; :l&apos;extension de confidentialité est désactivée et les adresses de configuration automatique normales sont utilisées.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Activé&lt;/span&gt; : le système préfère utiliser des adresses publiques plutôt que des adresses temporaires.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Préféré&lt;/span&gt; : l&apos;extension de confidentialité est activée et le système préfère les adresses temporaires aux adresses publiques.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Activer ou désactiver l&apos;extension de confidentialité IPv6 comme décrit dans la RFC 4941,&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Désactivé&lt;/span&gt;&#xa0;:l&apos;extension de confidentialité est désactivée et les adresses de configuration automatique normales sont utilisées.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Activé&lt;/span&gt;&#xa0;: le système préfère utiliser des adresses publiques plutôt que des adresses temporaires.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Préféré&lt;/span&gt;&#xa0;: l&apos;extension de confidentialité est activée et le système préfère les adresses temporaires aux adresses publiques.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="366"/>
@@ -2758,7 +2758,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="370"/>
         <source>Interface name where this provisioning applies (ex: eth0)</source>
-        <translation>Nom de l&apos;interface où ce provisionnement s&apos;applique (ex : eth0)</translation>
+        <translation>Nom de l&apos;interface où ce provisionnement s&apos;applique (ex&#xa0;: eth0)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="375"/>
@@ -2894,7 +2894,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="238"/>
         <source>SSID: hexadecimal representation of an 802.11 SSID</source>
-        <translation>SSID : représentation hexadécimale d&apos;un SSID 802.11</translation>
+        <translation>SSID&#xa0;: représentation hexadécimale d&apos;un SSID 802.11</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="239"/>
@@ -3095,7 +3095,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="519"/>
         <source>&lt;center&gt;Reading configuration file: %1</source>
-        <translation>&lt;center&gt;Lecture du fichier de configuration : %1</translation>
+        <translation>&lt;center&gt;Lecture du fichier de configuration&#xa0;: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="526"/>
@@ -3162,7 +3162,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="660"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation>&lt;b&gt;Nom de l&apos;erreur DBus :&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Chaine :&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message :&lt;/b&gt; %3</translation>
+        <translation>&lt;b&gt;Nom de l&apos;erreur DBus&#xa0;:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Chaine&#xa0;:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message&#xa0;:&lt;/b&gt; %3</translation>
     </message>
 </context>
 <context>
@@ -3811,7 +3811,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="456"/>
         <source>VPN server IP address (ex: 1.2.3.4)</source>
-        <translation>Adresse IP du serveur VPN (ex : 1.2.3.4)</translation>
+        <translation>Adresse IP du serveur VPN (ex&#xa0;: 1.2.3.4)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="536"/>
@@ -3833,7 +3833,7 @@ p, li { white-space: pre-wrap; }
         <source>Domain name for the VPN Service
 (ex: corporate.com)</source>
         <translation>Nom de domaine du service VPN
-(ex : corporate.com)</translation>
+(ex&#xa0;: corporate.com)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="576"/>
@@ -3844,7 +3844,7 @@ Ex: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:Ldb8::1/16
 Networks = entry is optional and may be left blank.</source>
         <translation type="unfinished">Réseaux derrière le lien VPN, s&apos;il y en a plusieurs séparés par une virgule.
 Le format est réseau/masque de réseau/passerelle et la passerelle peut être omise.
-Ex : 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:Ldb8::1/16
+Ex&#xa0;: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:Ldb8::1/16
 
 Networks = l&apos;entrée est facultative et peut être laissée vide.</translation>
     </message>
@@ -3853,7 +3853,7 @@ Networks = l&apos;entrée est facultative et peut être laissée vide.</translat
         <source>Network address in the form address/netmask/peer.
 Ex: 10.2.0.2/24</source>
         <translation>Adresse réseau sous la forme adresse/masque de réseau/pair.
-Ex : 10.2.0.2/24</translation>
+Ex&#xa0;: 10.2.0.2/24</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="595"/>
@@ -3879,7 +3879,7 @@ Ex : 10.2.0.2/24</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="671"/>
         <source>&lt;center&gt;Reading configuration file: %1</source>
-        <translation>&lt;center&gt;Lecture du fichier de configuration : %1</translation>
+        <translation>&lt;center&gt;Lecture du fichier de configuration&#xa0;: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="678"/>
@@ -3946,7 +3946,7 @@ Ex : 10.2.0.2/24</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="813"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation>&lt;b&gt;Nom de l&apos;erreur DBus :&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Chaîne :&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message :&lt;/b&gt; %3</translation>
+        <translation>&lt;b&gt;Nom de l&apos;erreur DBus&#xa0;:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Chaîne&#xa0;:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message&#xa0;:&lt;/b&gt; %3</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="851"/>
@@ -3966,7 +3966,7 @@ Ex : 10.2.0.2/24</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="883"/>
         <source>The conf file will contain the &lt;b&gt;auth-user-pass&lt;/b&gt; entry which will require prompts sent to stdout and a reply on stdin.  This cannot be handled by Connman nor by CMST.&lt;p&gt;If this entry is removed you will need to create a &quot;user:pass&quot; file in order to have Connman make the VPN connection. In the next step you will be asked if you want to create this file and you will prompted for the user name and password.&lt;p&gt;&lt;b&gt;Do you wish to remove this entry?&lt;/b&gt;</source>
-        <translation>Le fichier conf contiendra l&apos;entrée &lt;b&gt;auth-user-pass&lt;/b&gt; qui nécessitera des invites envoyées à stdout et une réponse sur stdin.  Cela ne peut pas être géré par Connman ni par CMST.&lt;p&gt;Si cette entrée est supprimée, vous devrez créer un fichier &quot;user:pass&quot; afin que Connman établisse la connexion VPN. À l&apos;étape suivante, il vous sera demandé si vous souhaitez créer ce fichier et vous serez invité à entrer le nom d&apos;utilisateur et le mot de passe.&lt;p&gt;&lt;b&gt;Souhaitez-vous supprimer cette entrée ?&lt;/b&gt;</translation>
+        <translation>Le fichier conf contiendra l&apos;entrée &lt;b&gt;auth-user-pass&lt;/b&gt; qui nécessitera des invites envoyées à stdout et une réponse sur stdin.  Cela ne peut pas être géré par Connman ni par CMST.&lt;p&gt;Si cette entrée est supprimée, vous devrez créer un fichier &quot;user:pass&quot; afin que Connman établisse la connexion VPN. À l&apos;étape suivante, il vous sera demandé si vous souhaitez créer ce fichier et vous serez invité à entrer le nom d&apos;utilisateur et le mot de passe.&lt;p&gt;&lt;b&gt;Souhaitez-vous supprimer cette entrée&#xa0;?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="909"/>
@@ -3981,7 +3981,7 @@ Ex : 10.2.0.2/24</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="922"/>
         <source>Do you wish to create a user:password file for this connection?</source>
-        <translation>Souhaitez-vous créer un fichier user:password  pour cette connexion ?</translation>
+        <translation>Souhaitez-vous créer un fichier user:password  pour cette connexion&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="927"/>
@@ -4135,22 +4135,22 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="244"/>
         <source>Deny EAP authorization?</source>
-        <translation>Refuser l&apos;autorisation du PAE ?</translation>
+        <translation>Refuser l&apos;autorisation du PAE&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="252"/>
         <source>Deny PAP authorization?</source>
-        <translation>Refuser l&apos;autorisation PAP ?</translation>
+        <translation>Refuser l&apos;autorisation PAP&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="260"/>
         <source>Deny CHAP authorization?</source>
-        <translation>Refuser l&apos;autorisation CHAP ?</translation>
+        <translation>Refuser l&apos;autorisation CHAP&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="268"/>
         <source>Deny MSCHAP authorization?</source>
-        <translation>Refuser l&apos;autorisation MSCHAP ?</translation>
+        <translation>Refuser l&apos;autorisation MSCHAP&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="276"/>
@@ -4160,7 +4160,7 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="284"/>
         <source>Disables BSD compression?</source>
-        <translation>Désactiver la compression BSD ?</translation>
+        <translation>Désactiver la compression BSD&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="292"/>
@@ -4171,19 +4171,19 @@ que le pair n&apos;est plus connecté.</translation>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="300"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="532"/>
         <source>Require the use of MPPE?</source>
-        <translation>Besoin d&apos;utiliser MPPE ?</translation>
+        <translation>Besoin d&apos;utiliser MPPE&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="308"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="540"/>
         <source>Require the use of MPPE 40 bit?</source>
-        <translation>Besoin d&apos;utiliser MPPE 40 bit ?</translation>
+        <translation>Besoin d&apos;utiliser MPPE 40 bit&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="316"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="548"/>
         <source>Require the use of MPPE 128 bit?</source>
-        <translation>Besoin d&apos;utiliser MPPE 128 bit ?</translation>
+        <translation>Besoin d&apos;utiliser MPPE 128 bit&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="324"/>
@@ -4194,7 +4194,7 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="332"/>
         <source>Disable Van Jacobson compression?</source>
-        <translation>Désactiver la compression Van Jacobson ?</translation>
+        <translation>Désactiver la compression Van Jacobson&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="340"/>
@@ -4234,12 +4234,12 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="396"/>
         <source>Add a default route to the system routing tables, using the peer as the gatewa?</source>
-        <translation>Ajouter une route par défaut aux tableaux de routage du système, en utilisant le pair comme passerelle ?</translation>
+        <translation>Ajouter une route par défaut aux tableaux de routage du système, en utilisant le pair comme passerelle&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="404"/>
         <source>Sequence numbers included in the communication?</source>
-        <translation type="unfinished">Numéros de séquence inclus dans la comunication ?</translation>
+        <translation type="unfinished">Numéros de séquence inclus dans la comunication&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="412"/>
@@ -4249,12 +4249,12 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="420"/>
         <source>Use only one control channel?</source>
-        <translation>N&apos;utiliser qu&apos;un seul canal de contrôle ?</translation>
+        <translation>N&apos;utiliser qu&apos;un seul canal de contrôle&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="428"/>
         <source>Redial if disconnected?</source>
-        <translation>Recomposer si déconnecté ?</translation>
+        <translation>Recomposer si déconnecté&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="436"/>
@@ -4269,22 +4269,22 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="452"/>
         <source>Require the remote peer to get authenticated via PAP?</source>
-        <translation>Exiger que l&apos;homologue distant s&apos;authentifie via PAP ?</translation>
+        <translation>Exiger que l&apos;homologue distant s&apos;authentifie via PAP&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="460"/>
         <source>Require the remote peer to get authenticated via CHAP?</source>
-        <translation>Exiger que le pair distant s&apos;authentifie via CHAP ?</translation>
+        <translation>Exiger que le pair distant s&apos;authentifie via CHAP&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="468"/>
         <source>Require the remote peer to authenticate itself?</source>
-        <translation>Exiger que le pair distant s&apos;authentifie ?</translation>
+        <translation>Exiger que le pair distant s&apos;authentifie&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="476"/>
         <source>Only accept connections from specified peer addresses?</source>
-        <translation>Accepter uniquement les connexions des adresses de pair spécifiées ?</translation>
+        <translation>Accepter uniquement les connexions des adresses de pair spécifiées&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="484"/>
@@ -4299,7 +4299,7 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="500"/>
         <source>Use IPsec Security Association tracking?</source>
-        <translation>Utiliser le suivi IPsec Security Association ?</translation>
+        <translation>Utiliser le suivi IPsec Security Association&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="508"/>
@@ -4309,12 +4309,12 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="516"/>
         <source>Disable protocol compression?</source>
-        <translation>Désactiver la compression de protocole ?</translation>
+        <translation>Désactiver la compression de protocole&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="524"/>
         <source>Disable address/control compression?</source>
-        <translation>Désactiver la compression d&apos;adresse/contrôle ?</translation>
+        <translation>Désactiver la compression d&apos;adresse/contrôle&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="564"/>
@@ -4639,22 +4639,22 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="756"/>
         <source>Get certificate password from console or file?</source>
-        <translation>Obtenir le mot de passe du certificat depuis la console ou le fichier ?</translation>
+        <translation>Obtenir le mot de passe du certificat depuis la console ou le fichier&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="764"/>
         <source>Don&apos;t cache --askpass or --auth-user-pass values?</source>
-        <translation>Ne pas mettre en cache les valeurs --askpass ou --auth-user-pass ?</translation>
+        <translation>Ne pas mettre en cache les valeurs --askpass ou --auth-user-pass&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="772"/>
         <source>Encrypt packets with cipher algorithm:</source>
-        <translation>Crypter les paquets avec l&apos;algorithme de chiffrement :</translation>
+        <translation>Crypter les paquets avec l&apos;algorithme de chiffrement&#xa0;:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="780"/>
         <source>Authenticate packets using algorithm:</source>
-        <translation>Authentifier les paquets à l&apos;aide de l&apos;algorithme :</translation>
+        <translation>Authentifier les paquets à l&apos;aide de l&apos;algorithme&#xa0;:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="788"/>
@@ -4689,12 +4689,12 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="836"/>
         <source>Request MTU from server to use as MTU of tunnel?</source>
-        <translation>Demander le MTU du serveur à utiliser comme MTU du tunnel ?</translation>
+        <translation>Demander le MTU du serveur à utiliser comme MTU du tunnel&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="844"/>
         <source>Read cookie from standard input?</source>
-        <translation>Lire le cookie à partir de l&apos;entrée standard ?</translation>
+        <translation>Lire le cookie à partir de l&apos;entrée standard&#xa0;?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="852"/>
@@ -4793,7 +4793,7 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="140"/>
         <source>If tray icon fake transparency is required, specify the background color to use (format: 0xRRGGBB)</source>
-        <translation>Si une fausse transparence de l&apos;icône de la barre d&apos;état est requise, spécifiez la couleur d&apos;arrière-plan à utiliser (format : 0xRRGGBB)</translation>
+        <translation>Si une fausse transparence de l&apos;icône de la barre d&apos;état est requise, spécifiez la couleur d&apos;arrière-plan à utiliser (format&#xa0;: 0xRRGGBB)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="141"/>
@@ -4821,7 +4821,7 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="45"/>
         <source>&lt;center&gt;&lt;b&gt;We received a DBUS reply message indicating an error.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Error Name: %1&lt;br&gt;&lt;br&gt;Error Message: %2</source>
-        <translation>&lt;center&gt;&lt;b&gt;Nous avons reçu un message de réponse DBUS indiquant une erreur.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Nom de l&apos;erreur : %1&lt;br&gt;&lt;br&gt;Message d&apos;erreur : %2</translation>
+        <translation>&lt;center&gt;&lt;b&gt;Nous avons reçu un message de réponse DBUS indiquant une erreur.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Nom de l&apos;erreur&#xa0;: %1&lt;br&gt;&lt;br&gt;Message d&apos;erreur&#xa0;: %2</translation>
     </message>
 </context>
 </TS>

@@ -17,6 +17,7 @@ TRANSLATIONS += ./translations/cmst_it_IT.ts
 TRANSLATIONS += ./translations/cmst_nl_NL.ts
 TRANSLATIONS += ./translations/cmst_pl_PL.ts
 TRANSLATIONS += ./translations/cmst_ru_RU.ts
+TRANSLATIONS += ./translations/cmst_si.ts
 TRANSLATIONS += ./translations/cmst_tr_TR.ts
 TRANSLATIONS += ./translations/cmst_zh_CN.ts
 
