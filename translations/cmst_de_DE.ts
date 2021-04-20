@@ -40,7 +40,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="79"/>
         <source>O&amp;ld Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;lte Passphrase</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="89"/>
