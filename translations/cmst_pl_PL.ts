@@ -26,47 +26,47 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="69"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this box to obscure the password characters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zaznacz to pole, żeby ukryć wpisywane hasło.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="72"/>
         <source>&amp;Hide Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ukryj hasło</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="79"/>
         <source>O&amp;ld Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>S&amp;tare hasło</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="89"/>
         <source>&amp;Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hasło</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="102"/>
         <source>Hidden Network</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukryta sieć</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="108"/>
         <source>&amp;Name</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nazwa</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the name of the hidden network you wish to connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wprowadź nazwę ukrytej sieci, z którą chcesz się połączyć.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="131"/>
         <source>Service Set Identifier</source>
-        <translation type="unfinished"></translation>
+        <translation>Identyfikator sieci</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="137"/>
         <source>&amp;SSID</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;SSID</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="157"/>
@@ -76,22 +76,22 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="163"/>
         <source>&amp;Username</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa użytkownika</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="173"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nazwa użytkownika WISPr.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="183"/>
         <source>Passwor&amp;d</source>
-        <translation type="unfinished"></translation>
+        <translation>Hasło</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="193"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr password.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hasło WISPr.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="206"/>
@@ -106,12 +106,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="222"/>
         <source>&amp;Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Tożsamość</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="235"/>
         <source>WiFi Protected Setup (WPS)</source>
-        <translation type="unfinished"></translation>
+        <translation>WPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="243"/>
@@ -146,42 +146,42 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login. If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Browser Users:&lt;/span&gt; Note that Brave does not seem to accept a URL to start with. After the browser starts you will need to enter the URL manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan wymaga otwarcia przeglądarki w celu ukończenia procesu logowania.&lt;/p&gt;&lt;p&gt;Poniżej znajduje się lista wykrytych przez nas przeglądarek. Wybierz dowolną przeglądarkę, która zostanie użyta do logowania. Jeśli Twoja przeglądarka nie znajduje się na liście, możesz wpisać ją bezpośrednio w &lt;span style=&quot; font-weight:600;&quot;&gt; polu Wybierz lub wpisz przeglądarkę&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Aby uruchomić program, naciśnij przycisk &lt;span style=&quot; font-weight:600;&quot;&gt;Uruchom przeglądarkę&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;Jeśli chcesz zalogować się ręcznie, zamknij to okno, uruchom przeglądarkę internetową i wpisz adres widoczny w polu &lt;span style=&quot; font-weight:600;&quot;&gt;Adres URL logowania&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Użytkownicy przeglądarki Brave:&lt;/span&gt; Ponieważ przeglądarka Brave nie zezwala na wybranie startowego adresu, po uruchomieniu przeglądarki, należy skopiować adres widoczny w polu &lt;span style=&quot; font-weight:600;&quot;&gt;Adres URL logowania&lt;/span&gt; do paska adresu przeglądarki. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="342"/>
         <source>Login URL:</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres URL logowania:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="349"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting you continue login with a web browser. This box shows the URL that contains the login page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman wymaga logowania za pomocą przeglądarki internetowej. To pole zawiera adres URL strony logowania.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="361"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to launch the selected browser. The browser will open at the page shown in the Login URL box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Użyj tego przycisku, aby uruchomić wybraną przeglądarkę. Okno przeglądarki otworzy się na stronie logowania.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="364"/>
         <source>Launch &amp;Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Uruchom Przeglądarkę</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="396"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Co to jest&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="399"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="423"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kontynuuj łączenie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="426"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="436"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anuluj proces łączenia.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="439"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="442"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Anuluj</translation>
     </message>
 </context>
 <context>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="298"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation> Informacja</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="299"/>
