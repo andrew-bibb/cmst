@@ -115,7 +115,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="235"/>
         <source>WiFi Protected Setup (WPS)</source>
-        <translation>WiFi Protected Setup (WPS)</translation>
+        <translation type="unfinished">Wi-Fi Protected Setup (WPS)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="243"/>
