@@ -1505,7 +1505,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1206"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1233"/>
         <source>Object Path: %1</source>
-        <translation>Objectpad: %1</translation>
+        <translation>Objectlocatie: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1226"/>
@@ -2703,7 +2703,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="48"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Write the displayed data to a config file.&lt;/p&gt;&lt;p&gt;The combo box is seeded with a list of CMST created config files to provide an easy way to overwrite one. You may also type a name in the ComboBox.&lt;/p&gt;&lt;p&gt;It is not necessary to provide a path nor a file extension as both will be stripped out and replaced allowed values. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Schrijf de getoonde gegevens weg naar een configuratiebestand.&lt;/p&gt;&lt;p&gt;Het uitrolmenu bevat een lijst met door CMST aangemaakte configuratiebestanden. Ook kun je er een naam invoeren.&lt;/p&gt;&lt;p&gt;Je hoeft geen pad of bestandsextensie op te geven. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Schrijf de getoonde gegevens weg naar een configuratiebestand.&lt;/p&gt;&lt;p&gt;Het uitrolmenu bevat een lijst met door CMST aangemaakte configuratiebestanden. Ook kun je er een naam invoeren.&lt;/p&gt;&lt;p&gt;Je hoeft geen locatie of bestandsextensie op te geven. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="51"/>
@@ -3039,7 +3039,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="206"/>
         <source>File Path to the Client Certificate File</source>
-        <translation>Bestandspad naar het client-certificaatbestand</translation>
+        <translation>Bestandslocatie van het client-certificaatbestand</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="207"/>
@@ -4264,7 +4264,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="48"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Write the displayed data to a config file.&lt;/p&gt;&lt;p&gt;The combo box is seeded with a list of CMST created config files to provide an easy way to overwrite one. You may also type a name in the ComboBox.&lt;/p&gt;&lt;p&gt;It is not necessary to provide a path nor a file extension as both will be stripped out and replaced allowed values. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Schrijf de getoonde gegevens weg naar een configuratiebestand.&lt;/p&gt;&lt;p&gt;Het uitrolmenu bevat een lijst met door CMST aangemaakte configuratiebestanden. Ook kun je er een naam invoeren.&lt;/p&gt;&lt;p&gt;Je hoeft geen pad of bestandsextensie op te geven. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Schrijf de getoonde gegevens weg naar een configuratiebestand.&lt;/p&gt;&lt;p&gt;Het uitrolmenu bevat een lijst met door CMST aangemaakte configuratiebestanden. Ook kun je er een naam invoeren.&lt;/p&gt;&lt;p&gt;Je hoeft geen locatie of bestandsextensie op te geven. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="51"/>
