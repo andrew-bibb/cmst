@@ -381,17 +381,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="100"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This checkbox controls the global setting for switching all radios on or off. When checked all radios are powered down.&lt;/p&gt;&lt;p&gt;When the system is In offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Цей прапорець керує загальним налаштуванням ввімкнення або вимкнення всіх радіоприймачів. Коли обрано, всі радіоприймачі вимикаються.&lt;/p&gt;&lt;p&gt;Коли система знаходиться в автономному режимі, можна знову ввімкнути окремі пристрої. При виході з автономного режиму індивідуальна політика кожного пристрою визначає, чи передавач знову ввімкнено чи ні.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Цей прапорець керує загальним налаштуванням увімкнення або вимкнення всіх радіомодулів. Коли вибрано, всі радіомодулі вимикаються.&lt;/p&gt;&lt;p&gt;Коли система знаходиться в автономному режимі, можна знову ввімкнути окремі пристрої. Після виходу з автономного режиму індивідуальна політика кожного пристрою визначає, чи вмикати знову передавач.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="103"/>
         <source>All Devices &amp;Off</source>
-        <translation>Вимкнути всі пристр&amp;ої</translation>
+        <translation>Усі пристрої &amp;вимкнено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="69"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OfflineMode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The offline mode indicates the global setting for switching all radios on or off. Changing offline mode to true results in powering down all devices. When leaving offline mode the individual policy of each device decides to switch the radio back on or not. &lt;/p&gt;&lt;p&gt;During offline mode, it is still possible to switch certain technologies manually back on. For example the limited usage of WiFi or Bluetooth devices might be allowed in some situations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Автономний режим&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Автономний режим вказує загальному налаштуванню вмикати або вимикати всі радіоприймачі. Коли обрано автономний режим, всі радіоприймачі вимикаються. При виході з автономного режиму індивідуальна політика кожного пристрою визначає, чи передавач знову ввімкнено чи ні.&lt;/p&gt;&lt;p&gt;Під час автономного режиму існує можливість ввімкнути окремі пристрої. Наприклад, обмежене використання пристроїв WiFi або Bluetooth можна дозволити за окремих обставин.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Автономний режим&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Автономний режим вказує загальному налаштуванню вмикати або вимикати всі радіомодулі. Коли вибрано автономний режим, всі радіоприймачі вимикаються. Після виходу з автономного режиму індивідуальна політика кожного пристрою визначає, чи вмикати передавач знову.&lt;/p&gt;&lt;p&gt;В автономному режимі існує можливість увімкнути окремі пристрої. Наприклад, обмежене використання пристроїв Wi-Fi або Bluetooth можна дозволити за певних обставин.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="35"/>
@@ -412,7 +412,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="80"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="132"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Загальне налаштування ввімкнення або вимкнення всіх радіоприймачів. Коли обрано автономний режим всі радіоприймачі вимикаються.&lt;/p&gt;&lt;p&gt;Коли система знаходиться в автономному режимі, можна знову ввімкнути окремі пристрої. При виході з автономного режиму індивідуальна політика кожного пристрою визначає, чи передавач знову ввімкнено чи ні.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Загальне налаштування ввімкнення або вимкнення всіх радіомодулів. Коли вибрано автономний режим всі радіомодулі вимикаються.&lt;/p&gt;&lt;p&gt;Коли система знаходиться в автономному режимі, можна знову ввімкнути окремі пристрої. Після виходу з автономного режиму індивідуальна політика кожного пристрою визначає, чи вмикати передавач знову.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="83"/>
@@ -422,7 +422,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="90"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global connection state of the system.  Possible values are &amp;quot;offline&amp;quot;, &amp;quot;idle&amp;quot;, &amp;quot;ready&amp;quot;, and &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Загальний стан підключення системи.  Можливі значення &amp;quot;поза мережею&amp;quot;, &amp;quot;очікування&amp;quot;, &amp;quot;готовий&amp;quot;, and &amp;quot;в мережі&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Загальний стан під&apos;єднання системи.  Можливі значення &amp;quot;по за мережею&amp;quot;, &amp;quot;очікування&amp;quot;, &amp;quot;готовий&amp;quot;, and &amp;quot;в мережі&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="93"/>
@@ -476,12 +476,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="302"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This box lists all services that connman can connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;У цьому полі перелічено всі послуги, з якими може з&apos;єднатися connman.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;У цьому полі перелічено всі служби, з якими може з&apos;єднатися connman.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="305"/>
         <source>Services</source>
-        <translation>Послуги</translation>
+        <translation>Служби</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="367"/>
@@ -499,13 +499,13 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="388"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1971"/>
         <source>Move Before</source>
-        <translation type="unfinished"></translation>
+        <translation>Помістити перед</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="401"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1976"/>
         <source>Move After</source>
-        <translation type="unfinished"></translation>
+        <translation>Помістити після</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="421"/>
@@ -535,12 +535,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="470"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this Combobox to select the service for which you wish to view the detailed information.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Використовуйте це поле зі списком, щоб вибрати послугу, для якої ви хочете переглянути детальну інформацію.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Використовуйте цей спадний список, щоб вибрати службу, про яку хочете переглянути подробиці.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="564"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service  is a hidden wifi service.  It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Типовий метод налаштування для всіх послуг є автоматичний або DHCP. Цього буде достатьно для загального використання, але за потребою ця кнопка дозволить вручну налаштувати параметри Ethernet та IP для вибраної послуги.&lt;/p&gt;&lt;p&gt;Ця кнопка буде вимкнена, якщо послуга постачається із зовнішнім файлом налаштувань, або якщо Wi-Fi послуга є прихованою. Неможливо змінити властивості цих послуг.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Типовий метод налаштування для всіх служб — автоматичний або DHCP. Цього буде достатньо для загального використання, але за потреби ця кнопка дасть змогу вручну налаштувати параметри Ethernet та IP для вибраної служби.&lt;/p&gt;&lt;p&gt;Ця кнопка буде вимкнена, якщо служба постачається із зовнішнім файлом налаштувань, або якщо служба Wi-Fi прихована. Неможливо змінити властивості цих служб.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="567"/>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="654"/>
         <source>Wireless Services</source>
-        <translation>Бездротові послуги</translation>
+        <translation>Бездротові служби</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="660"/>
@@ -685,7 +685,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1981"/>
         <source>Rescan</source>
-        <translation>Пересканувати</translation>
+        <translation>Сканувати повторно</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1989"/>
@@ -706,12 +706,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="641"/>
         <source>Security</source>
-        <translation type="unfinished"></translation>
+        <translation>Безпека</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="646"/>
         <source>Signal Strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Сила сигналу</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="865"/>
@@ -721,13 +721,13 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="886"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The service being monitored by the counters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Послуга під наглядом лічильників.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Служба відстежується лічильниками.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="889"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1663"/>
         <source>Service:</source>
-        <translation>Послуга:</translation>
+        <translation>Служба:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="932"/>
@@ -818,7 +818,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1207"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the display of tooltips will be enabled for the interface widgets.&lt;/p&gt;&lt;p&gt;Tooltips are the small popups that appear when you hover the mouse pointer over an area of the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо позначено, відображення підказок буде ввімкнено для застосунків оболонки.&lt;/p&gt;&lt;p&gt;Підказки - це невеликі спливаючі вікна, які з’являються під час наведення вказівника миші на область оболонки. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо позначено, показ підказок буде ввімкнено для застосунків оболонки.&lt;/p&gt;&lt;p&gt;Підказки — це невеликі спливні вікна, які з’являються під час наведення вказівника миші на ділянку оболонки. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
@@ -869,7 +869,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1574"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вкажіть час очікування в секундах перед запуском піктограми у системному лотку (типово 0 секунд).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1382"/>
@@ -889,7 +889,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1372"/>
         <source>Disable Tray Icon</source>
-        <translation>Вимкнути значок лотка</translation>
+        <translation>Вимкнути піктограму в системному лотку</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1197"/>
@@ -970,7 +970,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="742"/>
         <source>VPN Services</source>
-        <translation>VPN послуги</translation>
+        <translation>Служби VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="751"/>
@@ -1015,12 +1015,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1285"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked an icon will not be displayed in the system tray.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо обрано значок не буде відображений у системному лотку.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо вибрано, піктограма з&apos;являтиметься в системному лотку.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1288"/>
         <source>Hide Tray Icon</source>
-        <translation>Сховати значок лотка</translation>
+        <translation>Сховати піктограму з системного лотка</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1272"/>
@@ -1186,12 +1186,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1678"/>
         <source>Modify Service File</source>
-        <translation>Змінити файл послуги</translation>
+        <translation>Змінити файл служби</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1687"/>
         <source>Service configuration file to be modified by the program.</source>
-        <translation>Файл налаштувань послуги буде змінений застосунком.</translation>
+        <translation>Файл налаштувань служби буде змінений застосунком.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1690"/>
@@ -1351,7 +1351,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="150"/>
         <source>Service Details</source>
-        <translation>Подробиці послуги</translation>
+        <translation>Подробиці служби</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="151"/>
@@ -1398,44 +1398,44 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="711"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="716"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;Послуга:&lt;/b&gt; %1</translation>
+        <translation>&lt;b&gt;Служба:&lt;/b&gt; %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="716"/>
         <source>Unable to determine service</source>
-        <translation>Неможливо визначити послугу</translation>
+        <translation>Неможливо визначити службу</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="748"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="856"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="887"/>
         <source>No Services Selected</source>
-        <translation>Послуги не обрані</translation>
+        <translation>Служби не вибрано</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="888"/>
         <source>You need to select a Wifi service before pressing the remove button.</source>
-        <translation>Потрібно обрати послугу WiFi, перш ніж натиснути кнопку видалення.</translation>
+        <translation>Потрібно вибрати службу Wi-Fi, перш ніж натиснути кнопку видалення.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="917"/>
         <source>Offline Mode Engaged</source>
-        <translation type="unfinished"></translation>
+        <translation>Автономний режим увімкнено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="922"/>
         <source>Offline Mode Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Автономний режим вимкнено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="936"/>
         <source>Network Services:</source>
-        <translation>Мережеві послуги:</translation>
+        <translation>Мережні служби:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1205"/>
         <source>Service Error: %1</source>
-        <translation>Помилка послуги: %1</translation>
+        <translation>Помилка служби: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1206"/>
@@ -1475,7 +1475,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2294"/>
         <source>Service: %1
 </source>
-        <translation>Послуга: %1
+        <translation>Служба: %1
 </translation>
     </message>
     <message>
@@ -1572,22 +1572,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1049"/>
         <source>The connection to VPN service %1 was dropped and the VPN kill switch was engaged. All network devices are powered off.</source>
-        <translation>З&apos;єднання з послугою VPN % 1 було скинуто, вимикач VPN не активний. Всі мережеві пристрої вимикаються.</translation>
+        <translation>З&apos;єднання зі службою VPN %1 було скинуто, вимикач VPN не активний. Усі мережеві пристрої вимкнено.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1559"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;Подробиці послуги:&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt;Подробиці про службу:&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1561"/>
         <source>Service Type: %1&lt;br&gt;</source>
-        <translation>Тип послуги: %1&lt;br&gt;</translation>
+        <translation>Тип служби: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1562"/>
         <source>Service State: %1&lt;br&gt;</source>
-        <translation>Стан послуги: %1&lt;br&gt;</translation>
+        <translation>Стан служби: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1563"/>
@@ -2151,22 +2151,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="749"/>
         <source>You need to select a service before pressing the connect button.</source>
-        <translation>Потрібно обрати послугу, перш ніж натиснути кнопку з&apos;єднання.</translation>
+        <translation>Потрібно вибрати службу, перш ніж натиснути кнопку з&apos;єднання.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="857"/>
         <source>You need to select a service before pressing the disconnect button.</source>
-        <translation>Потрібно обрати послугу, перш ніж натиснути кнопку роз&apos;єднання.</translation>
+        <translation>Потрібно вибрати службу, перш ніж натиснути кнопку роз&apos;єднання.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2370"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 Properties&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 Властивості&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2011"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
-        <translation type="unfinished"></translation>
+        <translation>  Технології Wi-Fi:&lt;br&gt;  %1 знайдено, %2 увімкнено</translation>
     </message>
 </context>
 <context>
@@ -2174,17 +2174,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="214"/>
         <source>File save failed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося зберегти файл.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="217"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished"></translation>
+        <translation>Записано %L1 кБ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="219"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished"></translation>
+        <translation>Записано %L1 байт</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="232"/>
@@ -2825,7 +2825,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="124"/>
         <source>Service</source>
-        <translation>Послуга</translation>
+        <translation>Служба</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="144"/>
@@ -2915,7 +2915,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="282"/>
         <source>Service type.</source>
-        <translation>Тип послуги.</translation>
+        <translation>Тип служби.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="283"/>
@@ -3210,7 +3210,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="52"/>
         <source>disconnect</source>
         <comment>connman state string</comment>
-        <translation>Роз&apos;єднання</translation>
+        <translation>від&apos;єднати</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="53"/>
@@ -3444,13 +3444,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="95"/>
         <source>Invalid service</source>
         <comment>connman error string</comment>
-        <translation>Недійсна послуга</translation>
+        <translation>Недійсна служба</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="96"/>
         <source>Invalid property</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>Недійсна властивість</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="98"/>
@@ -3818,7 +3818,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="575"/>
         <source>Domain name for the VPN Service
 (ex: corporate.com)</source>
-        <translation>Доменне ім&apos;я VPN послуги
+        <translation>Доменне ім&apos;я служби VPN
 (наприклад: corporate.com)</translation>
     </message>
     <message>
