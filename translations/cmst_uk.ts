@@ -2332,7 +2332,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="41"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked this service will auto-connect when no other connection is available. This is only available for services marked &amp;quot;Favorite&amp;quot;. &lt;/p&gt;&lt;p&gt;The service will not auto-connect while roaming.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо встановлено прапорець, ця служба автоматично підключатиметься, коли немає іншого з&apos;єднання. Це доступно лише для послуг, позначених як &amp;quot;Favorite&amp;quot; (Улюблені). &lt;/p&gt;&lt;p&gt;Служба не підключатиметься автоматично під час роумінгу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо встановлено прапорець, ця служба автоматично під&apos;єднуватиметься, коли немає іншого з&apos;єднання. Це доступно лише для служб, позначених &amp;quot;Favorite&amp;quot; (Улюблені). &lt;/p&gt;&lt;p&gt;Служба не під&apos;єднуватиметься автоматично у роумінгу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="73"/>
@@ -2347,7 +2347,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="149"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;List of manually configures search domains.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, vertical bar, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Перелік вручну налаштованих доменів пошуку.&lt;/p&gt;&lt;p&gt;Введіть одну або кілька IP-адрес. Кожну введену адресу відокремте комою, крапкою з двокрапкою, вертикальною смугою або пробілом.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Перелік вручну налаштованих доменів пошуку.&lt;/p&gt;&lt;p&gt;Введіть одну або кілька IP-адрес. Кожну введену адресу відокремте комою, крапкою з комою, вертикальним розділювачем або пробілом.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="195"/>
