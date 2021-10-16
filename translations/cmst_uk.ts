@@ -460,7 +460,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="636"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2375"/>
         <source>Connected</source>
-        <translation>З&apos;єднано</translation>
+        <translation>Під&apos;єднано</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="235"/>
@@ -555,7 +555,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="586"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;SIgnal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;На цій сторінці вказано відомі служби WiFi. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Назва:&lt;/span&gt; SSID (назва) мережі.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Обрані:&lt;/span&gt; Символ серця в цьому стовпчику вказує на те, що цей комп’ютер раніше підключався до мережі за допомогою цієї служби.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Під&apos;єднання:&lt;/span&gt; Показує стан підключення цієї служби. Наведіть курсор миші на піктограму, щоб сплив текстовий опис. &amp;quot;В мережі&amp;quot; вказує на те, що з&apos;єднання з Інтернет доступне та перевірено. &amp;quot;Готовність&amp;quot; вказує про успішно під&apos;єднаний пристрій. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Безпека: &lt;/span&gt;Вказує тип захисту, який використовується для цієї служби. Можливі значення &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, та &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Потужність сигналу:&lt;/span&gt; Потужність сигналу WiFi, нормалізована за шкалою від 0 до 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="654"/>
@@ -565,7 +565,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="660"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one wifi service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Оберіть службу WiFi у таблиці нижче та натисніть цю кнопку, щоб під&apos;єднати службу. &lt;/p&gt;&lt;p&gt;Якщо в таблиці є лише одна служба WiFi, натискання цієї кнопки автоматично обере цю службу та відбудеться спроба під&apos;єднання. &lt;/p&gt;&lt;p&gt;Якщо службі буде потрібна додаткова інформація, наприклад, кодова фраза, з&apos;явиться підказка. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="663"/>
@@ -576,7 +576,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="670"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one wifi service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Оберіть службу WiFi у таблиці нижче та натисніть цю кнопку, щоб роз&apos;єднати службу. &lt;/p&gt;&lt;p&gt;Якщо є лише одна служба WiFi зі статусом &amp;quot;ready&amp;quot; або &amp;quot;online&amp;quot;, натискання цієї кнопки автоматично обере цю службу та відбудеться роз&apos;єднання. &lt;/p&gt;&lt;p&gt;Це також може бути використано для припинення попередньої спроби під&apos;єднання.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="673"/>
@@ -592,7 +592,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="706"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This label shows the number of WiFi technologies (devices) that were found, and the number that are powered on. There must be at least one WiFi technology found and powered in order for the box below to show services.&lt;/p&gt;&lt;p&gt;To turn a technology on or off go to the &lt;span style=&quot; font-weight:600;&quot;&gt;Technologies&lt;/span&gt; box in the &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; tab and double click on the text that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ця мітка показує кількість технологій (пристроїв) WiFi, які були знайдені, а також кількість увімкнених. Щоб у вікні нижче відображалися служби, має бути знайдено та ввімкнено принаймні одну технологію WiFi.&lt;/p&gt;&lt;p&gt;Щоб увімкнути або вимкнути технологію, перейдіть до віконця &lt;span style=&quot; font-weight:600;&quot;&gt;Технології&lt;/span&gt; у вкладці &lt;span style=&quot; font-weight:600;&quot;&gt;Стан&lt;/span&gt; та двічі клацніть на тексті, що відображається у стовпчику &lt;span style=&quot; font-weight:600;&quot;&gt;Увімкнено&lt;/span&gt; для технології.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="709"/>
@@ -602,27 +602,27 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="790"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. . &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ця сторінка показує служби доступу до VPN. Деякі комірки в таблиці доступні лише після встановлення з&apos;єднання. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ім&apos;я:&lt;/span&gt; Ім&apos;я, вказане у файлі служби доступу до VPN.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Тип:&lt;/span&gt; Тип VPN (OpenConnect, OpenVPN, PPTP тощо)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Стан:&lt;/span&gt; Показує стан підключення цієї служби. Наведіть курсор миші на піктограму, щоб сплив текстовий опис. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Вузол: &lt;/span&gt;IP-адреса вузла VPN.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Домен:&lt;/span&gt; Домен VPN.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1092"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will implement an internet kill switch for VPN connections. If a VPN connection drops while the kill switch is enabled all technologies will be powered off.&lt;/p&gt;&lt;p&gt;The way this works is the service order is monitored. If the topmost service is of type VPN and then if it changes to something other than VPN and if the change was not initiated by the user (for instance by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Disconnect&lt;/span&gt; button in the VPN tab), then CMST will cycle through all technologies powering each one down in turn. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо встановлено прапорець, CMST застосує вимикач VPN з&apos;єднань. Якщо VPN з&apos;єднання розривається з активованим вимикачем, усі технології вимикаються.&lt;/p&gt;&lt;p&gt;Як це працює: відстежується замовлення на послугу. Якщо активна послуга має тип VPN, а потім вона змінюється на щось інше, ніж VPN, і ця зміна ініційована не користувачем (наприклад, за допомогою &lt;span style=&quot; font-weight:600;&quot;&gt;Роз&apos;єднати&lt;/span&gt; на вкладці VPN), тоді CMST буде по черзі переглядати всі технології та вимикати кожну з них. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1095"/>
         <source>Enable VPN Internet Kill Switch</source>
-        <translation>Увімкнути перемикач переривання VPN-з&apos;єднання</translation>
+        <translation>Увімкнути вимикач VPN-з&apos;єднання</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1108"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system notification daemon will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed. Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо встановлено прапорець, служба системних сповіщень передає сповіщення, як тільки відбудеться важлива подія, пов&apos;язана з connman.&lt;/p&gt;&lt;p&gt;Сповіщеннями можна керувати за допомогою піктограми системного лотка або за допомогою служби Notify, якщо вона встановлена. Обидві служби не можуть бути активними одночасно.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1184"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the Start Up Options in the right hand pane will be enabled. Start up options set in this pane will be read and used next time the program starts. Start up options are also available as command line switches and an option provided on the command line will take precedence over an option set in the right hand pane. The options in this pane are provided as a convienence to avoid the necessity of editing a systemd service or other start up file. &lt;/p&gt;&lt;p&gt;Settings are stored in&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо встановлено прапорець, на правій панелі будуть активовані параметри запуску. Параметри запуску, встановлені на цій панелі, будуть прочитані та використані під час наступного запуску програми. Параметри запуску також доступні з командного рядка, а опції, надані через командний рядок матимуть пріоритет над опціями, встановленими на правій панелі. Параметри на цій панелі надаються для зручності, щоб уникнути необхідності редагувати службу systemd або інший файл запуску. &lt;/p&gt;&lt;p&gt;Налаштування зберігаються у&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;Це стандартний текстовий файл типу ini.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1187"/>
@@ -632,7 +632,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1314"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. Changing or setting these will only take effect at the next program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ці записи керують різними параметрами запуску CMST. Зміни або налаштування набудуть чинності лише після наступного запуску програми. &lt;/p&gt;&lt;p&gt;Усі параметри доступні з командного рядка, і якщо надано параметр з командного рядка, він матиме пріоритет над цими налаштуваннями.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1317"/>
@@ -649,7 +649,8 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1432"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Параметр командного рядка: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; або &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Визначає час очікування в секундах перед запуском піктограми системного лотка (типово 0 секунд).&lt;/p&gt;&lt;p&gt;Якщо CMST запущений та намагається створити піктограму в лотку до створення самого системного лотка, то з&apos;явиться діалогове вікно з поясненням. Іноді це трапляється при автоматичному запуску застосунку. Якщо ви впевнені, що лоток буде існувати після того, як система запрацює, ви можете вказати час очікування, і CMST буде чекати вказану кількість секунд, перш ніж намагатися створити піктограму у лотку. Це потрібно для того, щоб надати менеджеру вікон або панелі час для створення лотка, перш ніж намагатися розмістити в ньому піктограму.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1593"/>
@@ -894,7 +895,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1197"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the state of the GUI will be restored from settings saved on disk. Settings include the geometry and position of the dialog and the current tab. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p&gt;The settings file is: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо встановлено прапорець, стан графічного інтерфейсу буде відновлено із збережених на диску налаштувань. Налаштування включають геометрію і положення діалогового вікна та поточної вкладки. &lt;/p&gt;&lt;p&gt;Ці параметри будуть використовуватися під час наступного запуску, щоб відновити інтерфейс користувача таким, яким він був при завершенні роботи.&lt;/p&gt;&lt;p&gt;Файл налаштувань: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;Це стандартний текстовий файл типу ini.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1200"/>
@@ -1035,7 +1036,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1298"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо увімкнено, у системному лотку з&apos;явиться сповіщення, коли відбудеться важлива подія, пов&apos;язана з connman.&lt;/p&gt;&lt;p&gt;Сповіщеннями можна керувати за допомогою піктограми системного лотка або за допомогою служби Notify, якщо вона встановлена.  Обидві служби не можуть бути активними одночасно.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо  встановлено прапорець, у системному лотку з&apos;явиться сповіщення, коли відбудеться важлива подія, пов&apos;язана з connman.&lt;/p&gt;&lt;p&gt;Сповіщеннями можна керувати за допомогою піктограми системного лотка або за допомогою служби Notify, якщо вона встановлена.  Обидві служби не можуть бути активними одночасно.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1301"/>
@@ -1205,7 +1206,11 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enter the program or process to be executed after Connman enters the &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; state.  If left blank no program or process will be executed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Введіть застосунок або процес, який потрібно виконати після того, як Connman перейде у стан &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; або &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt;.  Якщо залишити поле порожнім, жодний застосунок або процес не буде виконуватися.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1727"/>
@@ -1596,7 +1601,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1563"/>
         <source>Favorite: %1&lt;br&gt;</source>
-        <translation>Улюблені: %1&lt;br&gt;</translation>
+        <translation>Обрані: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1563"/>
@@ -1862,7 +1867,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1655"/>
         <source>Name: %1&lt;br&gt;</source>
-        <translation>Ім&apos;я: %1&lt;br&gt;</translation>
+        <translation>Назва: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1656"/>
@@ -1942,7 +1947,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2319"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished"></translation>
+        <translation>Не під&apos;єднано</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2326"/>
@@ -1952,7 +1957,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2327"/>
         <source>Connection status is unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Стан підключення невідомий</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2371"/>
@@ -1977,7 +1982,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2375"/>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Не під&apos;єднано</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2376"/>
@@ -1988,49 +1993,49 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2377"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Увімкнути</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2435"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2464"/>
         <source>Connection : %1</source>
-        <translation type="unfinished"></translation>
+        <translation>З&apos;єднання : %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2437"/>
         <source>Signal Strength: %1%</source>
-        <translation>Сила сигналу: %1%</translation>
+        <translation>Потужність сигналу: %1%</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2439"/>
         <source>Favorite Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>Улюблені з&apos;єднання</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2439"/>
         <source>Never Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Ніколи не під&apos;єднувались</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2446"/>
         <source>&lt;br&gt;Roaming</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;Роумінг</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2447"/>
         <source>&lt;br&gt;Autoconnect is </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;Автоз&apos;єднання </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2434"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2463"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="523"/>
         <source>&lt;center&gt;This program uses the &lt;b&gt;AwOken&lt;/b&gt; icon set version 2.5&lt;br&gt;&lt;br&gt;Released under the&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;Unported License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Цей застосунок використовує &lt;b&gt;AwOken&lt;/b&gt; - набір піктограм версії 2.5&lt;br&gt;&lt;br&gt;Випущений під ліцензією&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;Unported License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1852"/>
@@ -2073,17 +2078,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2931"/>
         <source>Could not create an interface to connman on the system bus</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося створити інтерфейс для connman на системній шині</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2933"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося створити інтерфейс для connman на системній шині.&lt;br&gt;&lt;br&gt;%1 не зможе спілкуватися з connman.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2936"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
-        <translation type="unfinished"></translation>
+        <translation>Помилка читання або синтаксичного аналізу connman.Manager.GetProperties</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2937"/>
@@ -2100,27 +2105,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2941"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
-        <translation type="unfinished"></translation>
+        <translation>Помилка читання або синтаксичного аналізу connman.Manager.GetTechnologies</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2943"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="unfinished"></translation>
+        <translation>Виникла помилка читання або синтаксичного аналізу відповіді від методу connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Деяка частина %1 все ще може бути функціональною.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2946"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
-        <translation type="unfinished"></translation>
+        <translation>Помилка читання або синтаксичного аналізу connman.Manager.GetServices</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2948"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="unfinished"></translation>
+        <translation>Виникла помилка читання або синтаксичного аналізу відповіді від методу connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Деяка частина %1 все ще може бути функціональною.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2955"/>
         <source>Could not create an interface to connman-vpn on the system bus</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося створити інтерфейс для connman-vpn на системній шині</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3016"/>
@@ -2193,12 +2198,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="232"/>
         <source> Critical</source>
-        <translation type="unfinished"></translation>
+        <translation> Критичний</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="233"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Назва помилки DBus:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Рядок:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Повідомлення:&lt;/b&gt; %3</translation>
     </message>
 </context>
 <context>
@@ -2214,22 +2219,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="14"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактор властивостей</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="35"/>
         <source>&amp;General</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Загальні</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="44"/>
         <source>AutoConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Автоз&apos;єднання</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="76"/>
         <source>&amp;Nameservers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Сервери імен</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="152"/>
@@ -2283,7 +2288,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="471"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User configuration of Proxy settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Користувацька конфігурація параметрів проксі.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="474"/>
@@ -2293,7 +2298,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="518"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic proxy configuration URL.  Used by the &amp;quot;auto&amp;quot; method.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;URL-адреса автоматичної конфігурації проксі. Використовується з методом &amp;quot;auto&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="511"/>
@@ -2308,17 +2313,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="206"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv4 address to use for this connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IPv4 адреса для використання з цим з&apos;єднанням.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="237"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv4 gateway for this connection. This field is optional and may be left blank&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IPv4 адреса шлюзу для використання з цим з&apos;єднанням. Це поле не є обов&apos;язковим і його можна залишити порожнім&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="227"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv4 netmask for this connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Маска мережі IPv4 для використання з цим з&apos;єднанням.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="41"/>
@@ -2349,7 +2354,11 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The IPv4 address to use for this connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;IPv4 адреса для використання з цим з&apos;єднанням.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="216"/>
@@ -2359,7 +2368,11 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The IPv4 gateway for this connection. This field is optional and may be left blank&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Pv4 адреса шлюзу для використання з цим з&apos;єднанням. Це поле не є обов&apos;язковим і його можна залишити порожнім&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="247"/>
@@ -2369,7 +2382,11 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The IPv4 netmask for this connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Маска мережі IPv4 для використання з цим з&apos;єднанням.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="265"/>
@@ -2387,7 +2404,15 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled&lt;/span&gt;: the system prefers to use public addresses over temporary addresses.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prefered&lt;/span&gt;: privacy extension is enabled and the system prefers temporary addresses over public addresses.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Вмикає або вимикає розширення конфіденційності IPv6 відповідно до RFC 4941.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Disabled (вимкнено)&lt;/span&gt;: розширення конфіденційності вимкнено, використовуються звичайні адреси автоконфігурації.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled (увімкнено)&lt;/span&gt;: система використовуватиме публічні адреси замість тимчасових.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prefered (переважно)&lt;/span&gt;: розширення конфіденційності увімкнено, але система надає перевагу тимчасовим адресам, аніж загальнодоступним.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="352"/>
@@ -2476,7 +2501,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="663"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear all entries on the current page.&lt;/p&gt;&lt;p&gt;This button will reset every field on the current page to the default value, which generally means nothing in the field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Очистити всі записи на поточній сторінці.&lt;/p&gt;&lt;p&gt;Ця кнопка скидає кожне поле на поточній сторінці на типове, яке може нічого не означати.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="666"/>
@@ -2486,7 +2511,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="673"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear all fields on every page of the dialog.&lt;/p&gt;&lt;p&gt;This will reset every field on every page to the default value for the field. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Очистити усі поля на кожній сторінці діалогового вікна.&lt;/p&gt;&lt;p&gt;Це скине кожне поле на кожній сторінці до типового значення. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="676"/>
@@ -2519,7 +2544,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="14"/>
         <source>Provisioning Editor</source>
-        <translation>Редактор підготовки</translation>
+        <translation>Редактор конфігурацій</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="23"/>
@@ -2539,7 +2564,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="48"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Write the displayed data to a config file.&lt;/p&gt;&lt;p&gt;The combo box is seeded with a list of CMST created config files to provide an easy way to overwrite one. You may also type a name in the ComboBox.&lt;/p&gt;&lt;p&gt;It is not necessary to provide a path nor a file extension as both will be stripped out and replaced allowed values. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Записує відображені дані у файл конфігурації.&lt;/p&gt;&lt;p&gt;Поле зі списком заповнене файлами конфігурації, створених CMST, щоб забезпечити простий спосіб їх перезаписувати. Також ви можете ввести ім’я в поле зі списком.&lt;/p&gt;&lt;p&gt;Не потрібно вказувати шлях або розширення файлу, оскільки обидва будуть видалені та замінені дозволеними значеннями. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="51"/>
@@ -2765,7 +2790,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="394"/>
         <source>Substring to be matched against the subject of the authentication server certificate for EAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Підрядок, який має збігатись із суб&apos;єктом сертифіката сервера автентифікації для EAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="399"/>
@@ -2775,7 +2800,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="402"/>
         <source>Semicolon separated string of entries to be matched against the alternative subject name of the authentication server certificate for EAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Рядок записів, розділених крапкою з комою, для перевірки відповідності з альтернативною назвою суб’єкта сертифіката сервера автентифікації для EAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="407"/>
@@ -2785,7 +2810,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="410"/>
         <source>A FQDN used as a suffix match requirement for the authentication server.</source>
-        <translation type="unfinished"></translation>
+        <translation>FQDN, який використовується як суфікс при перевірці відповідності на сервері автентифікації.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="415"/>
@@ -2795,7 +2820,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="418"/>
         <source>A FQDN used as a full match requirement for the authentication server.</source>
-        <translation type="unfinished"></translation>
+        <translation>FQDN, який використовується для повної перевірки відповідності на сервері автентифікації.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="343"/>
@@ -2896,27 +2921,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="243"/>
         <source>Enter the string representation of an 802.11 SSID.</source>
-        <translation type="unfinished"></translation>
+        <translation>Введіть рядок представлення SSID 802.11.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="244"/>
         <source>Substring to be matched against the subject of the authentication server</source>
-        <translation type="unfinished"></translation>
+        <translation>Підрядок, який має збігатись із суб&apos;єктом сервера автентифікації</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="245"/>
         <source>List of entries to be matched against the alternative subject name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Список записів, які мають збігатись із альтернативним іменем суб&apos;єкту.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="246"/>
         <source>A fully qualified domain name used as a full match requirement for the authentication server</source>
-        <translation type="unfinished"></translation>
+        <translation>Повне доменне ім&apos;я, яке використовується для перевірки відповідності на сервері автентифікації</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="247"/>
         <source>A fully qualified domain name used as a suffix match requirement for the authentication server</source>
-        <translation type="unfinished"></translation>
+        <translation>Повне доменне ім&apos;я, яке використовується як суфікс для перевірки відповідності на сервері автентифікації</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="282"/>
@@ -2961,37 +2986,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="294"/>
         <source>%1 - Item Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - введення елемента</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="325"/>
         <source>Tag which will replace the * with&lt;br&gt;an identifier unique to the config file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Тег для заміни * на&lt;br&gt;ідентифікатор, унікальний для файлу конфігурації.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="326"/>
         <source>Enter the network name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Введіть назву мережі.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="327"/>
         <source>Enter a description of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>Введіть опис мережі.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="328"/>
         <source>Password/Passphrase for the private key file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль/кодова фраза для файлу приватного ключа.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="329"/>
         <source>Identity string for EAP.</source>
-        <translation type="unfinished"></translation>
+        <translation>Рядок ідентифікації для EAP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="331"/>
         <source>RSN/WPA/WPA2 Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>Кодова фраза RSN/WPA/WPA2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="332"/>
@@ -3001,145 +3026,145 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="345"/>
         <source>%1 - Text Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Введення тексту</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="368"/>
         <source>IPv4 Address. &lt;br&gt;&lt;br&gt;Enter the IPv4 network address in the form xxx.xxx.xxx.xxx</source>
-        <translation type="unfinished"></translation>
+        <translation>Адреса IPv4. &lt;br&gt;&lt;br&gt;Введіть мережеву адресу IPv4 у форматі xxx.xxx.xxx.xxx</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="373"/>
         <source>IPv4 Netmask. &lt;br&gt;&lt;br&gt;The entry can be a mask length (example 24) or in the form xxx:xxx:xxx:xxx</source>
-        <translation type="unfinished"></translation>
+        <translation>Мережева маска IPv4. &lt;br&gt;&lt;br&gt;Введіть довжину мережевої маски (наприклад, 24) або у форматі xxx:xxx:xxx:xxx</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="414"/>
         <source>IPv6 Gateway .&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>Шлюз IPv6.&lt;br&gt;&lt;br&gt;Це необов’язковий запис. Натисніть Скасувати, якщо немає запису для шлюзу</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="511"/>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="550"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation> Інформація</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="378"/>
         <source>IPv4 Gateway.&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>Шлюз IPv4.&lt;br&gt;&lt;br&gt;Це необов’язковий запис. Натисніть Скасувати, якщо немає запису для шлюзу</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="659"/>
         <source> Critical</source>
-        <translation type="unfinished"></translation>
+        <translation> Критичний</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="402"/>
         <source>IPv6 Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Адреса IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="290"/>
         <source>Enable mDNS</source>
-        <translation type="unfinished"></translation>
+        <translation>Увімкнути mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="330"/>
         <source>Anonymous identity string for EAP.</source>
-        <translation type="unfinished"></translation>
+        <translation>Рядок анонімного ідентифікатора для EAP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="333"/>
         <source>The interface name in which to apply the provisioning (ex. eth0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ім&apos;я інтерфейсу, який надає ресурси (напр. eth0)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="407"/>
         <source>%1 - Integer Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Цілочисельний ввід</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="408"/>
         <source>Enter the IPv6 prefix length</source>
-        <translation type="unfinished"></translation>
+        <translation>Введіть довжину префікса IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="512"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;You may use this dialog to create one.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Файлів конфігурації не знайдено.&lt;br&gt;Ви можете використовувати це діалогове вікно для його створення.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="518"/>
         <source>%1 - Information</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Інформація</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="519"/>
         <source>&lt;center&gt;Reading configuration file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Читання файлу конфігурації: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="526"/>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="557"/>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="578"/>
         <source>%1 - Select File</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Вибір файлу</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="527"/>
         <source>Select a file to load.</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл для завантаження.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="551"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;Nothing will be deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Файлів конфігурації не знайдено.&lt;br&gt;Нічого не буде видалено.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="558"/>
         <source>Select a file to be deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл для видалення.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="579"/>
         <source>Enter a new file name or select&lt;br&gt;an existing file to overwrite.</source>
-        <translation type="unfinished"></translation>
+        <translation>Введіть нову назву файлу або виберіть&lt;br&gt;існуючий файл для перезапису.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="614"/>
         <source>File read completed</source>
-        <translation type="unfinished"></translation>
+        <translation>Читання файлу завершено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="626"/>
         <source>File deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл видалено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="628"/>
         <source>Error encountered deleting.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сталася помилка видалення.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="642"/>
         <source>File save failed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося зберегти файл.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="645"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 кБ записано</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="647"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 байт записано</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="660"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Назва помилки DBus:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Рядок:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Повідомлення:&lt;/b&gt; %3</translation>
     </message>
 </context>
 <context>
@@ -3147,12 +3172,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/rootapp/code/roothelper/roothelper.cpp" line="64"/>
         <source>Failed to register service org.cmst.roothelper - there may be another instance running.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося зареєструвати службу org.cmst.roothelper - можливо, працює інший екземпляр.</translation>
     </message>
     <message>
         <location filename="../apps/rootapp/code/roothelper/roothelper.cpp" line="70"/>
         <source>Failed to register roothelper object on the system bus.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося зареєструвати об&apos;єкт roothelper на системній шині.</translation>
     </message>
 </context>
 <context>
@@ -3160,12 +3185,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="14"/>
         <source>Scrollbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Панель прокрутки</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="38"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Текстова мітка</translation>
     </message>
 </context>
 <context>
@@ -3174,7 +3199,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="43"/>
         <source>connman system tray</source>
         <comment>Main Window Title</comment>
-        <translation>системний лоток connman</translation>
+        <translation>Системний лоток connman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="44"/>
@@ -3808,17 +3833,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="536"/>
         <source>%1 - Item Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - введення елемента</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="554"/>
         <source>%1 - Verify Option</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Варіант перевірки</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="574"/>
         <source>User defined name for the VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>Визначене користувачем ім’я для VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="575"/>
@@ -3834,18 +3859,23 @@ Format is network/netmask/gateway, and gateway can be omitted.
 Ex: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:Ldb8::1/16
 
 Networks = entry is optional and may be left blank.</source>
-        <translation type="unfinished"></translation>
+        <translation>Мережі, що знаходяться під посиланням VPN, якщо більше однієї - розділені комою.
+Формат - мережа/маска_мережі/шлюз, шлюз можна опустити.
+Наприклад: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:Ldb8::1/16
+
+Мережі = запис необов’язковий і його можна залишити порожнім.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="580"/>
         <source>Network address in the form address/netmask/peer.
 Ex: 10.2.0.2/24</source>
-        <translation type="unfinished"></translation>
+        <translation>Мережева адреса у вигляді адреса/маска_мережі/вузол.
+Наприклад: 10.2.0.2/24</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="595"/>
         <source>%1 - Text Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Введення тексту</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="663"/>
@@ -3928,7 +3958,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="812"/>
         <source> Critical</source>
-        <translation> Критично</translation>
+        <translation> Критичний</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="813"/>
@@ -3963,12 +3993,12 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="921"/>
         <source>Create User:Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>Створити користувача: файл паролю</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="922"/>
         <source>Do you wish to create a user:password file for this connection?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ви бажаєте створити файл користувач:пароль для цього з&apos;єднання?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="927"/>
@@ -3993,7 +4023,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="951"/>
         <source>Unable to write user:password file &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Неможливо записати файл користувач:пароль &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="961"/>
@@ -4003,7 +4033,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="969"/>
         <source>OpenVPN import is complete.  The provisioning file may now be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Імпорт OpenVPN завершено.  Тепер файл конфігурації можна зберегти.</translation>
     </message>
 </context>
 <context>
@@ -4011,17 +4041,17 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="14"/>
         <source>VPN Provisioning Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактор конфігурацій VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="23"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Text edit window.&lt;/p&gt;&lt;p&gt;You may type or cut and paste into this window. You may also use menus above to insert text fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вікно редагування тексту.&lt;/p&gt;&lt;p&gt;Ви можете ввести, вирізати та вставити текст у це вікно. Також ви можете використовувати меню вгорі, щоб вставити текстові поля.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="32"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open an existing config file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Відкрити існуючий файл конфігурації.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="35"/>
@@ -4031,7 +4061,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="48"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Write the displayed data to a config file.&lt;/p&gt;&lt;p&gt;The combo box is seeded with a list of CMST created config files to provide an easy way to overwrite one. You may also type a name in the ComboBox.&lt;/p&gt;&lt;p&gt;It is not necessary to provide a path nor a file extension as both will be stripped out and replaced allowed values. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Записує відображені дані у файл конфігурації.&lt;/p&gt;&lt;p&gt;Поле зі списком заповнене файлами конфігурації, створених CMST, щоб забезпечити простий спосіб їх перезаписувати. Також ви можете ввести ім’я в поле зі списком.&lt;/p&gt;&lt;p&gt;Не потрібно вказувати шлях або розширення файлу, оскільки обидва будуть видалені та замінені дозволеними значеннями. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="51"/>
@@ -4102,19 +4132,22 @@ Ex: 10.2.0.2/24</source>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="217"/>
         <source>Set the maximum number of LCP configure-NAKs returned
 before starting to send configure-Rejects (default is 10).</source>
-        <translation type="unfinished"></translation>
+        <translation>Встановіть максимальну кількість повернених LCP configure-NAKs
+перед початком надсилання configure-Rejects (за замовчуванням 10).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="226"/>
         <source>Send an LCP echo-request frame to the peer every n seconds.
  This option can be used with the lcp-echo-failure option to detect
 that the peer is no longer connected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Надсилати блок ехо-запиту LCP до вузла кожні N секунд.
+ Цей параметр можна використовувати з параметром lcp-echo-failure
+для виявлення наявності з&apos;єднання з вузлом.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="236"/>
         <source>Debug level.</source>
-        <translation type="unfinished"></translation>
+        <translation>Рівень зневадження.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="244"/>
@@ -4193,47 +4226,47 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="356"/>
         <source>Maximum bandwidth to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальна пропускна здатність.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="364"/>
         <source>Maximum transmit bandwidth to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальна пропускна здатність під час передавання.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="372"/>
         <source>Maximum receive bandwidth to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальна пропускна здатність під час приймання.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="380"/>
         <source>Use length bit?</source>
-        <translation type="unfinished"></translation>
+        <translation>Використовувати довжину біта?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="388"/>
         <source>Use challenge authentication?</source>
-        <translation type="unfinished"></translation>
+        <translation>Використовувати складну (виклик-відповідь) автентифікацію?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="396"/>
         <source>Add a default route to the system routing tables, using the peer as the gatewa?</source>
-        <translation type="unfinished"></translation>
+        <translation>Додати типовий маршрут до системних таблиць маршрутизації, використовуючи вузол в якості шлюзу?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="404"/>
         <source>Sequence numbers included in the communication?</source>
-        <translation type="unfinished"></translation>
+        <translation>Додати послідовність чисел у протокол зв&apos;язку?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="412"/>
         <source>The window size of the control channel (number of unacknowledged packets, not bytes)</source>
-        <translation type="unfinished"></translation>
+        <translation>Розмір вікна каналу керування (кількість непідтверджених пакетів, не байтів)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="420"/>
         <source>Use only one control channel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Використовувати тільки один канал керування?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="428"/>
@@ -4243,137 +4276,137 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="436"/>
         <source>Wait n seconds before redial.</source>
-        <translation type="unfinished"></translation>
+        <translation>Зачекайте N секунд перед повторним з&apos;єднанням.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="444"/>
         <source>Give up redial tries after X attempts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Відмовитись від спроб повторного з&apos;єднання після X намагань.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="452"/>
         <source>Require the remote peer to get authenticated via PAP?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагати від віддаленого вузла автентифікацію через PAP?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="460"/>
         <source>Require the remote peer to get authenticated via CHAP?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагати від віддаленого вузла автентифікацію через CHAP?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="468"/>
         <source>Require the remote peer to authenticate itself?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагати від віддаленого вузла автентифікувати себе?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="476"/>
         <source>Only accept connections from specified peer addresses?</source>
-        <translation type="unfinished"></translation>
+        <translation>Приймати з&apos;єднання лише від визначених адрес вузлів?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="484"/>
         <source>Authentication file location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Розташування файлу автентифікації.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="492"/>
         <source>The IP address of the interface on which the daemon listens.</source>
-        <translation type="unfinished"></translation>
+        <translation>IP -адреса інтерфейсу, на якому прослуховує системна служба.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="500"/>
         <source>Use IPsec Security Association tracking?</source>
-        <translation type="unfinished"></translation>
+        <translation>Виконувати стеження за захищеним віртуальним з&apos;єднанням IPsec SA?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="508"/>
         <source>Specify which UDP port should be used.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вкажіть, який порт UDP слід використовувати.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="516"/>
         <source>Disable protocol compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути стиснення протоколу?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="524"/>
         <source>Disable address/control compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути стиснення адреси/протоколу?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="564"/>
         <source>Your Group username.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ім’я користувача вашої групи.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="572"/>
         <source>Your group password (cleartext).</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль вашої групи (прозоро).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="580"/>
         <source>Your username.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ваше ім&apos;я користувача.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="588"/>
         <source>Your password (cleartext).</source>
-        <translation type="unfinished"></translation>
+        <translation>Ваш пароль (прозоро).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="596"/>
         <source>IKE authentication mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим автентифікації IKE.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="604"/>
         <source>Name of the IKE DH Group.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ім&apos;я групи IKE dh-group.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="612"/>
         <source>DH gropup to use for perfect forward secrecy. </source>
-        <translation type="unfinished"></translation>
+        <translation>DH група для цілковитої прямої секретності. </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="620"/>
         <source>Domain name for authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Доменне ім&apos;я для автентифікації.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="628"/>
         <source>Vendor of your IPSec gateway.</source>
-        <translation type="unfinished"></translation>
+        <translation>Постачальник вашого шлюзу IPSec.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="636"/>
         <source>Local ISAKMP port to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Локальний порт ISAKMP для використання.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="644"/>
         <source>Local UDP port number to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Номер локального UDP порту для використання.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="652"/>
         <source>Application version to report.</source>
-        <translation type="unfinished"></translation>
+        <translation>Версія застосунку для звітування.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="660"/>
         <source>NAT-Traversal method to employ.</source>
-        <translation type="unfinished"></translation>
+        <translation>Метод обходу NAT для використання.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="668"/>
         <source>Send DPD packet after not receiving anything for n seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>Надіслати пакет DPD, не отримавши нічого протягом n секунд</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="676"/>
         <source>Enable single DES encryption.</source>
-        <translation type="unfinished"></translation>
+        <translation>Увімкнути окреме шифрування DES.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="684"/>
@@ -4388,12 +4421,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="700"/>
         <source>File containing peer&apos;s signed certificate.</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл, що містить підписаний вузлом сертифікат.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="708"/>
         <source>File containing local peer&apos;s private key.</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл, що містить приватний ключ вузла.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="748"/>
@@ -4438,7 +4471,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="889"/>
         <source>Local listen port (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>Локальний порт прослуховування (необов’язково).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="894"/>
@@ -4468,7 +4501,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="913"/>
         <source>Public key of peer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Публічний ключ вузла.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="918"/>
@@ -4478,7 +4511,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="921"/>
         <source>Preshared key of peer (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>Загальнодоступний ключ вузла (необов’язково).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="926"/>
@@ -4488,7 +4521,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="929"/>
         <source>See cryptokey routing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Дивитися маршрутизацію криптоключів.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="934"/>
@@ -4498,7 +4531,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="937"/>
         <source>Endpoint listen port (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>Порт прослуховування кінцевого пристрою (необов’язково).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="942"/>
@@ -4508,7 +4541,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="945"/>
         <source>Keep alive in seconds (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>Залишатися активним, у секундах (необов’язково).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="950"/>
@@ -4518,7 +4551,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="953"/>
         <source>Whether the VPN should use tun or tap.</source>
-        <translation type="unfinished"></translation>
+        <translation>Чи повинен VPN використовувати tun або tap.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="958"/>
@@ -4538,7 +4571,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="969"/>
         <source>Type of authentication used.</source>
-        <translation type="unfinished"></translation>
+        <translation>Метод використовуваної автентифікації.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="974"/>
@@ -4598,32 +4631,32 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1017"/>
         <source>SSL private key file needed by web authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл приватного ключа SSL, необхідний для web-автентифікації.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="716"/>
         <source>MTU of the tunnel.</source>
-        <translation type="unfinished"></translation>
+        <translation>MTU тунелю.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="724"/>
         <source>Peer certificate type (server/client).</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип сертифікату вузла (server/client).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="732"/>
         <source>Protocol type (udp/tcp-client/tcp-server).</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип протоколу (udp/tcp-client/tcp-server).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="740"/>
         <source>TCP/UDP port number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Номер порту TCP/UDP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="756"/>
         <source>Get certificate password from console or file?</source>
-        <translation type="unfinished"></translation>
+        <translation>Отримати пароль сертифікату з консолі або файлу?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="764"/>
@@ -4633,27 +4666,27 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="772"/>
         <source>Encrypt packets with cipher algorithm:</source>
-        <translation type="unfinished"></translation>
+        <translation>Шифрувати пакети алгоритмом cipher:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="780"/>
         <source>Authenticate packets using algorithm:</source>
-        <translation type="unfinished"></translation>
+        <translation>Засвідчувати пакети за допомогою алгоритму:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="788"/>
         <source>Use fast LZO compression (yes/no/adaptive).</source>
-        <translation type="unfinished"></translation>
+        <translation>Використовувати швидке стискання LZO (yes/no/adaptive).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="796"/>
         <source>Require peer certificate signed (client/server).</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагати у вузла підписаний сертифікат (client/server).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="804"/>
         <source>OpenVPN config file that can contain extra options.</source>
-        <translation type="unfinished"></translation>
+        <translation>Конфігураційний файл OpenVPN, який може містити додаткові параметри.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="812"/>
@@ -4668,7 +4701,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="828"/>
         <source>Client certificate file, if needed for web authentication. </source>
-        <translation type="unfinished"></translation>
+        <translation>Файл сертифікату клієнта, якщо він необхідний для web-автентифікації. </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="836"/>
@@ -4683,7 +4716,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="852"/>
         <source>The final VPN server to use after completing web authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Кінцевий сервер VPN, який буде використовуватися після проходження web-автентифікації.</translation>
     </message>
 </context>
 <context>
@@ -4691,7 +4724,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="70"/>
         <source>Another running instance of CMST has been detected.  This instance is aborting</source>
-        <translation type="unfinished"></translation>
+        <translation>Виявлено інший запущений екземпляр CMST.  Запуск відхилено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="79"/>
@@ -4706,12 +4739,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="91"/>
         <source>Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимикає піктограму системного лотка. Може знадобитися для системних лотків, які не відповідають специфікації Freedesktop.org.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="76"/>
         <source>Connman System Tray.</source>
-        <translation type="unfinished"></translation>
+        <translation>Connman системного лотка.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="87"/>
@@ -4731,17 +4764,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="103"/>
         <source>Log the connman inputRequest for debugging purposes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Журнал connman inputRequest для зневаджування.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="107"/>
         <source>Start the GUI minimized in the system tray.</source>
-        <translation type="unfinished"></translation>
+        <translation>Запускати застосунок згорнутим до системного лотка.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="111"/>
         <source>Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути кнопку згортання. Використовуйте, якщо хочете, щоб менеджер вікон мав виключний контроль над згортанням застосунку.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="115"/>
@@ -4805,7 +4838,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="45"/>
         <source>&lt;center&gt;&lt;b&gt;We received a DBUS reply message indicating an error.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Error Name: %1&lt;br&gt;&lt;br&gt;Error Message: %2</source>
-        <translation>&lt;center&gt;&lt;b&gt;Ми отримали відповідь DBUS, яке вказує на помилку.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Назва помилки: %1&lt;br&gt;&lt;br&gt;Повідомлення про помилку: %2</translation>
+        <translation>&lt;center&gt;&lt;b&gt;Ми отримали відповідь DBus, яке вказує на помилку.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Назва помилки: %1&lt;br&gt;&lt;br&gt;Повідомлення про помилку: %2</translation>
     </message>
 </context>
 </TS>
