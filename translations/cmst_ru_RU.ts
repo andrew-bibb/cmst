@@ -714,7 +714,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="932"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection that is not marked roaming. &lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Счётчики для &amp;quot;онлайновой&amp;quot; службы соединений, которая не помечена как роуминг. &lt;/p&gt;&lt;p&gt;Счётчики могут не всегда быть доступны. Счётчики могут быть отключены из командной строки (-c или --disable-counters) или случайно соединение будет зарегистрировано как &amp;quot;готовое&amp;quot; вместо &amp;quot;онлайн&amp;quot;. Онлайн — это &amp;quot;готовое&amp;quot; соединение, которое имеет проверенное соединение с интернетом. Онлайн можно быть только с  &amp;quot;готовым&amp;quot; соединением, однако счётчики будут работать только с &amp;quot;онлайновыми&amp;quot; соединениями.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Счётчики для &amp;quot;онлайновой&amp;quot; службы соединений, которая не помечена как роуминг. &lt;/p&gt;&lt;p&gt;Счётчики могут не всегда быть доступны. Счётчики могут быть отключены из командной строки (-c или --disable-counters) или случайно соединение будет зарегистрировано как &amp;quot;готовое&amp;quot; вместо &amp;quot;онлайн&amp;quot;. Онлайн — это &amp;quot;готовое&amp;quot; соединение, которое имеет проверенное соединение с интернетом. Онлайн можно быть только с &amp;quot;готовым&amp;quot; соединением, однако счётчики будут работать только с &amp;quot;онлайновыми&amp;quot; соединениями.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="905"/>
@@ -730,7 +730,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="961"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection marked &amp;quot;roaming&amp;quot;.&lt;/p&gt;&lt;p&gt;In the case of cellular services this normally indicates connections to a foreign provider.&lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Счётчики для &amp;quot;онлайновой&amp;quot; службы соединений, которая помечена как &amp;quot;роуминг&amp;quot;.&lt;/p&gt;&lt;p&gt;В случае с сотовыми сетями это обычно означает соединение с иностранным провайдером. &lt;/p&gt;&lt;p&gt;Счётчики могут не всегда быть доступны. Счётчики могут быть отключены из командной строки (-c или --disable-counters) или случайно соединение будет зарегистрировано как &amp;quot;готовое&amp;quot; вместо &amp;quot;онлайн&amp;quot;. Онлайн — это &amp;quot;готовое&amp;quot; соединение, которое имеет проверенное соединение с интернетом. Онлайн можно быть только с  &amp;quot;готовым&amp;quot; соединением, однако счётчики будут работать только с &amp;quot;онлайновыми&amp;quot; соединениями.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Счётчики для &amp;quot;онлайновой&amp;quot; службы соединений, которая помечена как &amp;quot;роуминг&amp;quot;.&lt;/p&gt;&lt;p&gt;В случае с сотовыми сетями это обычно означает соединение с иностранным провайдером. &lt;/p&gt;&lt;p&gt;Счётчики могут не всегда быть доступны. Счётчики могут быть отключены из командной строки (-c или --disable-counters) или случайно соединение будет зарегистрировано как &amp;quot;готовое&amp;quot; вместо &amp;quot;онлайн&amp;quot;. Онлайн — это &amp;quot;готовое&amp;quot; соединение, которое имеет проверенное соединение с интернетом. Онлайн можно быть только с &amp;quot;готовым&amp;quot; соединением, однако счётчики будут работать только с &amp;quot;онлайновыми&amp;quot; соединениями.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="964"/>
@@ -1008,7 +1008,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1285"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked an icon will not be displayed in the system tray.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если поставлен флажок, значок значок не будет отображаться в системном лотке.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если поставлен флажок, значок не будет отображаться в системном лотке.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1288"/>
@@ -1340,7 +1340,7 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1867"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Help&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Program help is mainly provided by the &amp;quot;What&apos;s This&amp;quot; button in the lower left corner. Press the button and then click on an item you are interested in. &amp;quot;What&apos;s This&amp;quot; is also available via context menu by right clicking on a button, box or text area.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Справка&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Справка по программе в основном представлена кнопкой &amp;quot;Что это&amp;quot; в нижнем левом углу. Нажмите эту кнопку и затем щёлкните по интересующему вас элементу. Функция &amp;quot;Что это&amp;quot; также доступна  через контекстное меню нажатием правой кнопки мыши на кнопку, окно или область текста.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Справка&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Справка по программе в основном представлена кнопкой &amp;quot;Что это&amp;quot; в нижнем левом углу. Нажмите эту кнопку и затем щёлкните по интересующему вас элементу. Функция &amp;quot;Что это&amp;quot; также доступна через контекстное меню нажатием правой кнопки мыши на кнопку, окно или область текста.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1903"/>
@@ -2323,7 +2323,7 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2011"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
-        <translation>Технологии Wi-Fi:&lt;br&gt;найдено %1, включено %2</translation>
+        <translation>  Технологии Wi-Fi:&lt;br&gt;найдено %1, включено %2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2370"/>
