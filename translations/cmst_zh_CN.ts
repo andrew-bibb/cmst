@@ -1228,7 +1228,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1095"/>
         <source>Enable VPN Internet Kill Switch</source>
-        <translation type="unfinished">启用 VPN Internet Kill Switch</translation>
+        <translation>启用 VPN 互联网阻却开关</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1108"/>
@@ -1561,7 +1561,7 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="857"/>
         <source>You need to select a service before pressing the disconnect button.</source>
-        <translation type="unfinished"></translation>
+        <translation>按下断开按钮前，您需要选择一个服务。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="888"/>
@@ -1576,7 +1576,7 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="919"/>
         <source>All network devices are powered off, now in Airplane mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>所有网络设备将关闭，现处于飞行模式。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="922"/>
@@ -1614,98 +1614,106 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1226"/>
         <source>VPN Engaged</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 接入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1230"/>
         <source>VPN Disengaged</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 脱线</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1852"/>
         <source>On</source>
         <comment>powered</comment>
-        <translation type="unfinished">是</translation>
+        <translation>开</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1857"/>
         <source>Off</source>
         <comment>powered</comment>
-        <translation type="unfinished">关</translation>
+        <translation>关</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1872"/>
         <source>On</source>
         <comment>tethering</comment>
-        <translation type="unfinished">是</translation>
+        <translation>开</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1877"/>
         <source>Off</source>
         <comment>tethering</comment>
-        <translation type="unfinished">关</translation>
+        <translation>关</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2266"/>
         <source>Ethernet Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished"></translation>
+        <translation>以太网连接
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2267"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2294"/>
         <source>Service: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>服务：%1
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2273"/>
         <source>WiFi Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished"></translation>
+        <translation>无线网络连接
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2275"/>
         <source>SSID: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>SSID：%1
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2280"/>
         <source>Security: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>安全性： %1
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2281"/>
         <source>Strength: %1%
 </source>
-        <translation type="unfinished"></translation>
+        <translation>强度：%1%
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2292"/>
         <source>VPN Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished"></translation>
+        <translation>VPN 连接
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2293"/>
         <source>Type: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>类型：%1
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2295"/>
         <source>Host: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>主机：%1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2445"/>
         <source>Security: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>安全性：%1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2743"/>
@@ -1864,56 +1872,56 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1601"/>
         <source>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
         <source>Support Enabled: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>支持启用：%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
         <source>Yes</source>
         <comment>mdns</comment>
-        <translation type="unfinished">是</translation>
+        <translation>是</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
         <source>No</source>
         <comment>mdns</comment>
-        <translation type="unfinished">否</translation>
+        <translation>否</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1611"/>
         <source>&lt;br&gt;&lt;b&gt;Last Address Conflict&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;最后的地址冲突&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1615"/>
         <source>MAC Address: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>MAC 地址：%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1616"/>
         <source>Conflict detected on: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>检测到冲突：%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
         <source>Resolved: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>解析：%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
         <source>Yes</source>
         <comment>last_address_conflict</comment>
-        <translation type="unfinished">是</translation>
+        <translation>是</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
         <source>No</source>
         <comment>last_address_conflict</comment>
-        <translation type="unfinished">否</translation>
+        <translation>否</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1626"/>
@@ -1990,27 +1998,27 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
         <source>&lt;br&gt;&lt;b&gt;VPN Provider&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;VPN 提供者&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1653"/>
         <source>Host: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>主机： %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1654"/>
         <source>Domain: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>域：%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1655"/>
         <source>Name: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>名称： %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1656"/>
         <source>Type: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>类型：%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1797"/>
@@ -2136,135 +2144,135 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2370"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 Properties&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 属性&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2371"/>
         <source>Type: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>类型：%1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2372"/>
         <source>&lt;br&gt;Powered </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;加电 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2373"/>
         <source>On</source>
-        <translation type="unfinished">是</translation>
+        <translation>开</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2373"/>
         <source>Off</source>
-        <translation type="unfinished">关</translation>
+        <translation>关</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2375"/>
         <source>Not Connected</source>
-        <translation type="unfinished">未连接</translation>
+        <translation>未连接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2376"/>
         <source>&lt;br&gt;Tethering </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;约束 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2377"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
         <source>Enabled</source>
-        <translation type="unfinished">启用</translation>
+        <translation>启用</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2435"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2464"/>
         <source>Connection : %1</source>
-        <translation type="unfinished"></translation>
+        <translation>连接：1%</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2437"/>
         <source>Signal Strength: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>信号强度：%1%</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2439"/>
         <source>Favorite Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>连接收藏</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2439"/>
         <source>Never Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>从未连接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2446"/>
         <source>&lt;br&gt;Roaming</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;漫游</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2447"/>
         <source>&lt;br&gt;Autoconnect is </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;自动连接是 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2434"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2463"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="496"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;%1 是一个用一般守护进程连接并接供系统托盘控制的程序。&lt;br&gt;&lt;center&gt;版本 &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;发布日期： %3&lt;center&gt;版权（C） %4&lt;center&gt;来自&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, 美国&lt;br&gt;&lt;center&gt;&lt;b&gt;翻译：&lt;/b&gt;&lt;center&gt;张剑锋 (中国)&lt;center&gt;sqozz (德国)&lt;center&gt;Ilya Shestopalov (俄罗斯)&lt;center&gt;Heimen Stoffels (荷兰)&lt;center&gt; Yaşar Çiv (土耳其)&lt;br&gt;&lt;center&gt;&lt;b&gt;构建信息：&lt;/b&gt;&lt;center&gt;使用 QT 版本 %5 编译</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="523"/>
         <source>&lt;center&gt;This program uses the &lt;b&gt;AwOken&lt;/b&gt; icon set version 2.5&lt;br&gt;&lt;br&gt;Released under the&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;Unported License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;该程序使用&lt;b&gt;AwOken&lt;/b&gt; 图标集版本 2.5&lt;br&gt;&lt;br&gt;发布以&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;未移植许可&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="536"/>
         <source>About Other Artwork</source>
-        <translation type="unfinished"></translation>
+        <translation>关于其他美工</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="537"/>
         <source>&lt;center&gt;This program uses artwork from &lt;b&gt;Freepik&lt;/b&gt; obtained from www.flaticon.com:&lt;br&gt;&lt;br&gt;Released under the Flaticon Basic License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;https://file000.flaticon.com/downloads/license/license.pdf&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Artwork files:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;该程序使用美工： &lt;b&gt;Freepik&lt;/b&gt; obtained from www.flaticon.com:&lt;br&gt;&lt;br&gt;以 the Flaticon Basic License 许可发行&lt;br&gt;&lt;a href=&quot;url&quot;&gt;https://file000.flaticon.com/downloads/license/license.pdf&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;美工文件：&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="924"/>
         <source>Power has been restored to all previously powered network devices.</source>
-        <translation type="unfinished"></translation>
+        <translation>先前加电的网络设备已恢复。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="939"/>
         <source>The system is online.</source>
-        <translation type="unfinished"></translation>
+        <translation>系统在线。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="945"/>
         <source>The system is offline.</source>
-        <translation type="unfinished"></translation>
+        <translation>系统掉线。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1048"/>
         <source>VPN Kill Switch Engaged</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 阻却开关工作</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1049"/>
         <source>The connection to VPN service %1 was dropped and the VPN kill switch was engaged. All network devices are powered off.</source>
-        <translation type="unfinished"></translation>
+        <translation>已丢弃连接到VPN服务 %1 且 VPN 阻却开关已工作。所有网络设备均已关闭。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1313"/>
         <source>&lt;b&gt;Technology: %1&lt;/b&gt;&lt;p&gt;Please enter the WiFi AP SSID that clients will&lt;br&gt;have to join in order to gain internet connectivity.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;技术： %1&lt;/b&gt;&lt;p&gt;请输入无线网络接入点 SSID 以便客客端&lt;br&gt;加入以获取互连网连接。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1325"/>
         <source>&lt;b&gt;Technology: %1&lt;/b&gt;&lt;p&gt;Please enter the WPA pre-shared key clients will&lt;br&gt;have to use in order to establish a connection.&lt;p&gt;PSK length: minimum of 8 characters.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;技术：%1&lt;/b&gt;&lt;p&gt;请输入 WPA 预共享密钥&lt;br&gt;终端将用其建立连接。&lt;p&gt;PSK 长度:：最小 8 个字符。</translation>
     </message>
     <message>
         <source>%1On%1%1</source>
@@ -2347,12 +2355,12 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2955"/>
         <source>Could not create an interface to connman-vpn on the system bus</source>
-        <translation type="unfinished"></translation>
+        <translation>无法在系统总线上创建 connman-vpn 连接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3016"/>
         <source>[Hidden Wifi]</source>
-        <translation type="unfinished"></translation>
+        <translation>[隐藏无线网络]</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3068"/>
@@ -2362,17 +2370,17 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3080"/>
         <source>Attempt %1 of %2 looking for notification server.</source>
-        <translation type="unfinished"></translation>
+        <translation>尝试 %1 在 %2 中以寻找通知服务。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3083"/>
         <source>Unable to connect to a notification server after %1 tries.</source>
-        <translation type="unfinished"></translation>
+        <translation>在%1次尝试后仍无法连接到通知服务。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3196"/>
         <source>Colorize Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>彩色图标</translation>
     </message>
     <message>
         <source>%1 detected</source>
@@ -2392,27 +2400,27 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="214"/>
         <source>File save failed.</source>
-        <translation type="unfinished">文件保存失败。</translation>
+        <translation>文件保存失败。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="217"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished">%L1 KB 已写入</translation>
+        <translation>%L1 KB 已写入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="219"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished">%L1 Bytes 已写入</translation>
+        <translation>%L1 Bytes 已写入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="232"/>
         <source> Critical</source>
-        <translation type="unfinished"></translation>
+        <translation> 严重</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="233"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation type="unfinished">&lt;b&gt;DBus 错误 名称:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;字符串:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;消息:&lt;/b&gt; %3</translation>
+        <translation>&lt;b&gt;DBus 错误名称：&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;字符串：&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;消息：&lt;/b&gt; %3</translation>
     </message>
 </context>
 <context>
@@ -2420,7 +2428,7 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/iconman/iconman.cpp" line="350"/>
         <source>A new icon definition file will be installed to &lt;b&gt;%1&lt;/b&gt; and a backup of the old definition file has been created as &lt;b&gt;%2&lt;/b&gt; 						&lt;p&gt;If the original definition file was customized and you wish to retain those changes you will need to manually merge them into the new file.							&lt;p&gt;If the original was never customized or you just wish to delete the backup now you may select &lt;i&gt;Discard&lt;/i&gt; to delete the backup or &lt;i&gt;Save&lt;/i&gt; to retain it.</source>
-        <translation type="unfinished"></translation>
+        <translation>新的图标定义文件将安装到 &lt;b&gt;%1&lt;/b&gt; 旧文件备份将创建为&lt;b&gt;%2&lt;/b&gt; 						&lt;p&gt;如果已自定义原定义文件且您希望保留这些修改，您需要手动合并它他。							&lt;p&gt;如果从未自定义过原文件或您希望删除备份，您现在可以选择 &lt;i&gt;忽略&lt;/i&gt; 来删除备份或 &lt;i&gt;保存&lt;/i&gt; 来保留备分。</translation>
     </message>
 </context>
 <context>
@@ -2573,33 +2581,33 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="114"/>
         <source>&amp;Timeservers</source>
-        <translation type="unfinished"></translation>
+        <translation>时间服务器（&amp;T）</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="206"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv4 address to use for this connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将为该连接使用IPv4 地址&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="237"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv4 gateway for this connection. This field is optional and may be left blank&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;该连接的 IPv4 网关。此文本框为可选，可以留空&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="227"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv4 netmask for this connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;该连接使用的The IPv4 子网掩码。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="41"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked this service will auto-connect when no other connection is available. This is only available for services marked &amp;quot;Favorite&amp;quot;. &lt;/p&gt;&lt;p&gt;The service will not auto-connect while roaming.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;若勾选，这个服务将在没有其它可用连接时自动连接。这个只能被标记为 &amp;quot;已保存&amp;quot;的服务使用。 &lt;/p&gt;&lt;p&gt;漫游时，服务将不会自动连接。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;若勾选，这个服务将在没有其他可用连接时自动连接。这个只能被标记为 &amp;quot;已保存&amp;quot;的服务使用。 &lt;/p&gt;&lt;p&gt;漫游时，服务将不会自动连接。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="73"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The list of manually configured domain name servers. Some cellular networks don&apos;t provide correct name servers and this allows for an override.&lt;/p&gt;&lt;p&gt;This array is sorted by priority and the first entry in the list represents the nameserver with the highest priority.&lt;/p&gt;&lt;p&gt;When using manual configuration and no global nameservers are configured, then it is useful to configure this setting.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, vertical bar, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;手机配置域名服务器的列表。一些蜂窝网络无法提供正确的域名服务器。该项可以重写。&lt;/p&gt;&lt;p&gt;此列表以优先级储存，第一项代表该域名服务器有最高优先级。&lt;/p&gt;&lt;p&gt;当使用手机配置且没有配置全球域名服务器，则该项目配置将会十分有用。&lt;/p&gt;&lt;p&gt;输入一个或多个 IP 地址。用逗号、分号、竖线或空格分隔各个地址。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="111"/>

@@ -399,7 +399,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="862"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="902"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="72"/>
