@@ -1531,7 +1531,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2281"/>
         <source>Strength: %1%
 </source>
-        <translation>Fortaleza: %1 %
+        <translation>Fortaleza: %1&#xa0;%
 </translation>
     </message>
     <message>

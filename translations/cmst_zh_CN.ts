@@ -2676,7 +2676,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="366"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv6 gateway for this connection. This field is optional and may be left blank&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;该连接的 IPv4 网关。此文本框为可选，可以留空&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {6 ?}</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="379"/>
@@ -2688,7 +2688,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="409"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="419"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv6 address to use for this connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将为该连接使用IPv4 地址&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {6 ?}</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="450"/>
