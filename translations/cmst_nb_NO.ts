@@ -342,7 +342,7 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ConnMan-feil</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="83"/>
@@ -1130,7 +1130,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="135"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1238"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">…</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1248"/>
@@ -1628,7 +1628,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
         <source>On</source>
         <comment>autoconnect</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">På</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
@@ -1639,7 +1639,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1568"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt; {4&lt;?}</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1570"/>
@@ -2675,7 +2675,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="291"/>
         <source>Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Passord</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="299"/>
@@ -2808,7 +2808,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="338"/>
         <source>IPv6.Privacy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">IPv6-personvern {6.?}</translation>
     </message>
 </context>
 <context>
@@ -3012,7 +3012,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="511"/>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="550"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> Info</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="378"/>
@@ -3114,17 +3114,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="642"/>
         <source>File save failed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kunne ikke lagre fil.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="645"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 KB skrevet</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="647"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 byte skrevet</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="660"/>
@@ -3290,13 +3290,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="68"/>
         <source>manual</source>
         <comment>connman proxy string</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Manual</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="69"/>
         <source>auto</source>
         <comment>connman proxy string</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Auto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="71"/>
@@ -3476,13 +3476,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="103"/>
         <source>auto</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Auto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="104"/>
         <source>manual</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Manual</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="106"/>
@@ -3494,13 +3494,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="107"/>
         <source>manual</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Manual</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="108"/>
         <source>off</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Off</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="109"/>
@@ -3518,13 +3518,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="112"/>
         <source>auto</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Auto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="113"/>
         <source>manual</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Manual</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="114"/>
@@ -3536,7 +3536,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="115"/>
         <source>off</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Off</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="117"/>
@@ -3840,7 +3840,7 @@ Ex: 10.2.0.2/24</source>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="663"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="703"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> Info</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="664"/>
@@ -3902,22 +3902,22 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="795"/>
         <source>File save failed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kunne ikke lagre fil.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="798"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 KB skrevet</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="800"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 byte skrevet</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="812"/>
         <source> Critical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> Kritisk</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="813"/>
@@ -3972,7 +3972,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="933"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Passord</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="934"/>
@@ -4015,7 +4015,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="35"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Åpne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="48"/>
@@ -4025,7 +4025,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Lagre</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="68"/>
@@ -4045,7 +4045,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="97"/>
         <source>&amp;Clear Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Tøm side</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="111"/>
@@ -4065,7 +4065,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="140"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">A&amp;vslutt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="160"/>

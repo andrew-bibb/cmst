@@ -14,11 +14,14 @@ TRANSLATIONS += ./translations/cmst_es_ES.ts
 TRANSLATIONS += ./translations/cmst_fr_FR.ts
 TRANSLATIONS += ./translations/cmst_hu_HU.ts
 TRANSLATIONS += ./translations/cmst_it_IT.ts
+TRANSLATIONS += ./translations/cmst_nb_NO.ts
 TRANSLATIONS += ./translations/cmst_nl_NL.ts
 TRANSLATIONS += ./translations/cmst_pl_PL.ts
+TRANSLATIONS += ./translations/cmst_pt_BR.ts
 TRANSLATIONS += ./translations/cmst_ru_RU.ts
 TRANSLATIONS += ./translations/cmst_si.ts
 TRANSLATIONS += ./translations/cmst_tr_TR.ts
+TRANSLATIONS += ./translations/cmst_uk.ts
 TRANSLATIONS += ./translations/cmst_zh_CN.ts
 
 # non-application files which need to be installed
