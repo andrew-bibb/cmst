@@ -16,7 +16,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="46"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se uma antiga frase-senha estiver disponível ela será mostrada aqui para referência.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se uma antiga frase-senha estiver disponível, ela será exibida aqui para referência.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="56"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="72"/>
         <source>&amp;Hide Passphrase</source>
-        <translation>Ocultar Frase-senha (&amp;H)</translation>
+        <translation>Ocultar a Frase-Senha (&amp;H)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="79"/>
         <source>O&amp;ld Passphrase</source>
-        <translation>Frase-senha Antiga (&amp;L)</translation>
+        <translation>Frase-Senha Antiga (&amp;L)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="89"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="102"/>
         <source>Hidden Network</source>
-        <translation>Ocultar Rede</translation>
+        <translation>Ocultar a Rede</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="108"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the name of the hidden network you wish to connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Digite o nome da rede oculta que deseja se conectar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Digite o nome da rede oculta que você quer se conectar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="131"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="212"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type your Identity for the Extensible Authentication Protocol&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Digite sua identidade para o Protocolo de Autenticação Extensível (EAP)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Digite a sua identidade para o Protocolo de Autenticação Extensível (EAP)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="222"/>
@@ -111,7 +111,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="235"/>
         <source>WiFi Protected Setup (WPS)</source>
-        <translation>Configuração Protegida de WiFi (WPS)</translation>
+        <translation>Configuração Protegida de Wi-Fi (WPS)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="243"/>
@@ -136,7 +136,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="311"/>
         <source>Browser Login Requested</source>
-        <translation>Login do Navegador Requisitado</translation>
+        <translation>Autenticação do Navegador Requisitada</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="320"/>
@@ -146,17 +146,17 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login. If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Browser Users:&lt;/span&gt; Note that Brave does not seem to accept a URL to start with. After the browser starts you will need to enter the URL manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan está requisitando que você abra um navegador web para completar o processo de login.&lt;/p&gt;&lt;p&gt;Nós verificamos seu PATH para navegadores e todos os encontrados estão na lista abaixo. Você pode selecionar qualquer um dos navegadores para o uso do login. Se seu navegador web não está na lista, você pode inseri-lo diretamente na caixa &lt;span style=&quot; font-weight:600;&quot;&gt; Escolha ou insira um navegador&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Para abri-lo clique no botão &lt;span style=&quot; font-weight:600;&quot;&gt;Abrir Navegador&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;Se deseja o login manualmente, feche este diálogo, inicie seu navegador e proceda ao URL mostrado na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;URL para Login&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Usuários do Nevegador Brave:&lt;/span&gt; Perceba que o Brave não parece aceitar uma URL para abrir diretamente. Após iniciar o navegador você precisa digitar a URL manualmente. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;O ConnMan está requisitando que você abra um navegador de internet para completar o processo de autenticação.&lt;/p&gt;&lt;p&gt;Nós verificamos o seu PATH em busca de navegadores e todos os encontrados estão na lista abaixo. Você pode selecionar qualquer um dos navegadores para o uso no processo de autenticação. Se o seu navegador de internet não está na lista, você pode inseri-lo diretamente na caixa &lt;span style=&quot; font-weight:600;&quot;&gt; Escolha ou insira um navegador&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Para abri-lo clique no botão &lt;span style=&quot; font-weight:600;&quot;&gt;Abrir Navegador&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;Se você quiser autenticar manualmente, feche esta caixa de diálogo, inicie seu navegador de internet e proceda ao URL exibido na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;URL para Autenticação&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Usuários do Navegador Brave:&lt;/span&gt; Observe que o Brave não parece aceitar um endereço de URL para abrir diretamente. Após iniciar o navegador, você precisa digitar o URL manualmente. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="342"/>
         <source>Login URL:</source>
-        <translation>URL para Login:</translation>
+        <translation>URL para a Autenticação:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="349"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting you continue login with a web browser. This box shows the URL that contains the login page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan está requisitando que continue o login com um navegador web. Esta caixa mostra o URL com a página de login.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;O ConnMan está requisitando que você continue a autenticação com um navegador de internet. Esta caixa exibe o URL com a página de autenticação.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use  the Firefox browser.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -166,12 +166,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="361"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to launch the selected browser. The browser will open at the page shown in the Login URL box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use este botão para iniciar o navegador selecionado. O navegador será aberto na página mostrada na caixa de login da URL.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use este botão para iniciar o navegador de internet selecionado. O navegador será aberto na página exibida na caixa de autenticação do URL.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="364"/>
         <source>Launch &amp;Browser</source>
-        <translation>A&amp;brir Navegador</translation>
+        <translation>A&amp;brir o Navegador</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="396"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="439"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the dialog. &lt;/p&gt;&lt;p&gt;This will send a message to the connman daemon that you have cancelled the connection request.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancelar o dialogo. &lt;/p&gt;&lt;p&gt;Isso enviará uma mensagem ao servidor do connman informando que você cancelou a solicitação de conexão.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancelar a caixa de diálogo. &lt;/p&gt;&lt;p&gt;Isso enviará uma mensagem ao servidor do connman informando que você cancelou a solicitação de conexão.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="442"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="299"/>
         <source>You have requested the %1 browser, but we cannot find a terminal program to open it with.  Currenty we can start %1 using these terminals: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;To continue you need to manually open a terminal and then enter: &quot;%1 %2&quot;</source>
-        <translation>Você requisitou o navegador %1, mas não conseguimos encontrar um programa para abri-lo. Atualmente podemos iniciar %1 usando estes terminais: &lt;b&gt;roxterm&lt;/b&gt; e &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;Para continuar você precisa abrir manualmente um terminal e então digitar: &quot;%1 %2&quot;</translation>
+        <translation>Você requisitou o navegador de internet  %1, mas não conseguimos encontrar um programa para abri-lo. Atualmente podemos iniciar o %1 usando estes terminais: &lt;b&gt;roxterm&lt;/b&gt; e &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;Para continuar, você precisa abrir manualmente um terminal e então digitar: &quot;%1 %2&quot;</translation>
     </message>
 </context>
 <context>
@@ -237,17 +237,17 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation>Connman retornou o seguinte erro:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Gostaria de retentar?</translation>
+        <translation>O Connman retornou o seguinte erro: &lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Você quer tentar novamente?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="131"/>
         <source>Agent Request Failed</source>
-        <translation>Requisição do Agente falhou</translation>
+        <translation>A Requisição do Agente Falhou</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="132"/>
         <source>The agent request failed before a reply was returned.</source>
-        <translation>A requisição do agente falhou antes do retorno.</translation>
+        <translation>A requisição do agente falhou antes que uma resposta fosse retornada.</translation>
     </message>
 </context>
 <context>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="76"/>
         <source>&lt;b&gt;Transmit:&lt;/b&gt;&lt;br&gt;TX Total: %1 (%2),  TX Errors: %3,  TX Dropped: %4</source>
-        <translation>&lt;b&gt;Transmissão:&lt;/b&gt;&lt;br&gt;TX Total: %1 (%2),  TX Errors: %3,  TX Dropped: %4</translation>
+        <translation>&lt;b&gt;Transmissão:&lt;/b&gt;&lt;br&gt;TX Total: %1 (%2),  TX Erros: %3,  TX Perdidos: %4</translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="77"/>
@@ -297,19 +297,19 @@
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="93"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Received:&lt;/b&gt;&lt;br&gt;RX Total: %1 (%2),  RX Errors: %3,  RX Dropped: %4</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Recebido:&lt;/b&gt;&lt;br&gt;RX Total: %1 (%2),  RX Errors: %3,  RX Dropped: %4</translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Recebido:&lt;/b&gt;&lt;br&gt;RX Total: %1 (%2),  RX Erros: %3,  RX Perdidos: %4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="100"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Connect Time:&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Tempo de conexão:&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Tempo de Conexão:&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="111"/>
         <source>%n Day(s)</source>
         <translation>
-            <numerusform>%n dia</numerusform>
-            <numerusform>%n dias</numerusform>
+            <numerusform>%n Dia</numerusform>
+            <numerusform>%n Dias</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -347,12 +347,12 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation>Connman retornou o seguinte erro:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Gostaria de tentar novamente?</translation>
+        <translation>O Connman retornou o seguinte erro: &lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Você quer tentar novamente?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="119"/>
         <source>Agent Request Failed</source>
-        <translation>Requisição do Agente falhou</translation>
+        <translation>A Requisição do Agente Falhou</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="120"/>
@@ -370,22 +370,22 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="48"/>
         <source>&amp;Status</source>
-        <translation>&amp;Status</translation>
+        <translation>&amp;Estado</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="100"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This checkbox controls the global setting for switching all radios on or off. When checked all radios are powered down.&lt;/p&gt;&lt;p&gt;When the system is In offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta caixa de seleção controla a configuração global para ligar ou desligar todos os rádios. Quando esta caixa é marcada, todos os rádios são desligados.&lt;/p&gt;&lt;p&gt;Quando o sistema está em modo off-line, é possível ligar os dispositivos individuais novamente. Ao sair do modo off-line, a política individual de cada dispositivo determina se o rádio está ou não ligado novamente.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="103"/>
         <source>All Devices &amp;Off</source>
-        <translation>Todos os dispositivos &amp;Off</translation>
+        <translation>Todos os Dispositivos Desligad&amp;os</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="69"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OfflineMode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The offline mode indicates the global setting for switching all radios on or off. Changing offline mode to true results in powering down all devices. When leaving offline mode the individual policy of each device decides to switch the radio back on or not. &lt;/p&gt;&lt;p&gt;During offline mode, it is still possible to switch certain technologies manually back on. For example the limited usage of WiFi or Bluetooth devices might be allowed in some situations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Modo Off-line&lt;/span&gt;&lt;/p&gt;&lt;p&gt;O modo off-line indica a configuração global para ligar ou desligar todos os rádios. A alteração do modo off-line para o modo real resulta no desligamento de todos os dispositivos. Ao sair do modo off-line, a política individual de cada dispositivo decide ligar ou não o rádio de novo.&lt;/p&gt;p&gt;Durante o modo off-line, ainda é possível ligar manualmente certas tecnologias de novo. Por exemplo, o uso limitado de dispositivos Wi-Fi ou Bluetooth pode ser permitido em algumas situações.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="35"/>
@@ -406,17 +406,17 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="80"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="132"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A configuração global para ligar ou desligar todos os rádios. Quando o modo off-line é ligado, todos os rádios são desligados.&lt;/p&gt;&lt;p&gt;Enquanto que no modo off-line é possível ligar os dispositivos individuais novamente. Ao sair do modo off-line, a política individual de cada dispositivo determina se o rádio está ou não ligado novamente.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="83"/>
         <source>OfflineMode: Unavailable</source>
-        <translation>Modo offline: Indisponível</translation>
+        <translation>Modo Off-Line: Indisponível</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="90"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global connection state of the system.  Possible values are &amp;quot;offline&amp;quot;, &amp;quot;idle&amp;quot;, &amp;quot;ready&amp;quot;, and &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;O estado de conexão global do sistema. Possíveis valores são &amp;quot;offline&amp;quot;, &amp;quot;idle (ocupado)&amp;quot;, &amp;quot;ready (pronto)&amp;quot;, e &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;O estado de conexão global do sistema. Os valores possíveis estão &amp;quot;off-line (desconectado)&amp;quot;, &amp;quot;idle (ocupado)&amp;quot;, &amp;quot;ready (pronto)&amp;quot;, e &amp;quot;on-line(conectado)&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="93"/>
@@ -465,12 +465,12 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="253"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="693"/>
         <source>Resc&amp;an</source>
-        <translation>Resc&amp;an</translation>
+        <translation>Busc&amp;ar Redes</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="302"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This box lists all services that connman can connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta caixa lista todos os serviços que connman pode se conectar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta caixa lista todos os serviços que o connman pode se conectar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="305"/>
@@ -493,18 +493,18 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="388"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1971"/>
         <source>Move Before</source>
-        <translation>Mover para Antes</translation>
+        <translation>Mover para Trás</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="401"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1976"/>
         <source>Move After</source>
-        <translation>Mover para Depois</translation>
+        <translation>Mover para Frente</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="421"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked hide the connection name in the Services box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Quando marcado esconde o nome da conexão na caixa de Serviços.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Quando marcado oculta o nome da conexão na caixa de Serviços.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="424"/>
@@ -514,7 +514,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="445"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page will show the details of the service selected in the box at the top. If the selected service is not in the READY or ONLINE state then most of the details will be blank. &lt;/p&gt;&lt;p&gt;You may override service details by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Configuration&lt;/span&gt; button at the bottom right. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta página exibirá os detalhes do serviço selecionado na caixa no topo. Se o serviço selecionado não estiver no estado PRONTO ou ON-LINE, a maioria dos detalhes estarão vazios.&lt;/p&gt;&lt;p&gt;Você pode substituir os detalhes do serviço usando o botão &lt;span style=&quot; font-weight:600;&quot;&gt;Configurações&lt;/span&gt; no canto inferior direito.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="448"/>
@@ -529,37 +529,37 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="470"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this Combobox to select the service for which you wish to view the detailed information.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use esta caixa de combinação para selecionar o serviço para o qual você quer visualizar as informações detalhadas.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="564"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service  is a hidden wifi service.  It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;O método de configuração padrão para todos os serviços é automático ou algo como DHCP. Isso deve ser bom o suficiente para o uso mais comum, mas se não for, este botão permitirá a configuração manual das configurações de Ethernet e do IP para o serviço selecionado.&lt;/p&gt;&lt;p&gt;Este botão será desligado se o serviço for fornecido por meio de um arquivo de configuração externo ou se o serviço for um serviço Wi-Fi oculto. Não é possível modificar as propriedades desses serviços.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="567"/>
         <source>Configuration</source>
-        <translation>Configuração</translation>
+        <translation>Configurações</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="580"/>
         <source>&amp;Wireless</source>
-        <translation>&amp;Wireless</translation>
+        <translation>&amp;Sem Fio</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="586"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;SIgnal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta página exibe os serviços Wi-Fi conhecidos.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nome:&lt;/span&gt;O SSID da rede.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorito:&lt;/span&gt;Um símbolo de coração nesta coluna indica que este computador já fez uma conexão à rede utilizando este serviço.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Conectado:&lt;/span&gt;Exibe o estado da conexão deste serviço. Passe o rato/mouse sobre o ícone para exibir uma descrição de texto. O  estado on-line sinaliza quando uma conexão com a Internet está disponível e foi verificada. O  estado pronto sinaliza um dispositivo conectado com sucesso.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Segurança:&lt;/span&gt;Descreve o tipo de segurança usado para este serviço. Os valores possíveis são &amp;quot;nenhum&amp;quot;, &amp;quot;WEP&amp;quot;, &amp;quot;PSK&amp;quot;, &amp;quot;IEEE 802.1X&amp;quot;, and &amp;quot;WPS&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Intensidade do Sinal:&lt;/span&gt;A força do sinal Wi-Fi normalizada para uma escala de 0 a 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="654"/>
         <source>Wireless Services</source>
-        <translation>Serviços Wireless</translation>
+        <translation>Serviços Sem Fio (Wireless)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="660"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one wifi service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço Wi-Fi na tabela abaixo e pressione este botão para conectar o serviço.&lt;/p&gt;&lt;p&gt;Se houver apenas um serviço Wi-Fi listado na tabela, pressione este botão para selecionar automaticamente esse serviço e tentará se conectar.&lt;/p&gt;&lt;p&gt;Se forem necessárias informações sobre o serviço, uma frase-senha, por exemplo, será solicitada a você.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="663"/>
@@ -570,7 +570,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="670"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one wifi service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço Wi-Fi na tabela abaixo e pressione este botão para desconectá-lo. &lt;/p&gt;&lt;p&gt;Se houver apenas um serviço Wi-Fi no estado &amp;quot;pronto&amp;quot; ou &amp;quot;on-line&amp;quot;, pressione este botão para selecionar automaticamente esse serviço e desconectá-lo.&lt;/p&gt;&lt;p&gt;Isso também pode ser utilizado para abortar uma tentativa de conexão anterior.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="673"/>
@@ -586,70 +586,73 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="706"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This label shows the number of WiFi technologies (devices) that were found, and the number that are powered on. There must be at least one WiFi technology found and powered in order for the box below to show services.&lt;/p&gt;&lt;p&gt;To turn a technology on or off go to the &lt;span style=&quot; font-weight:600;&quot;&gt;Technologies&lt;/span&gt; box in the &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; tab and double click on the text that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Este rótulo exibe o número de dispositivos com tecnologias Wi-Fi que foram encontrados e o número que estão ligados. Deve haver pelo menos uma tecnologia Wi-Fi encontrada e ativada para que a caixa abaixo exiba os serviços.&lt;/p&gt;&lt;p&gt;Para ligar ou desligar uma tecnologia, vá para a caixa&lt;span style=&quot; font-weight:600;&quot;&gt;Tecnologias&lt;/span&gt;na aba ou guia&lt;span style=&quot; font-weight:600;&quot;&gt;Estado&lt;/span&gt;e clique duas vezes no texto que aparece na coluna&lt;span style=&quot; font-weight:600;&quot;&gt;Ligado&lt;/span&gt;para a tecnologia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="709"/>
         <source>Wifi State</source>
-        <translation>Estado do Wifi</translation>
+        <translation>Estado do Wi-Fi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="790"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. . &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta página exibe os serviços de VPN provisionados. Algumas células da tabela podem estar disponíveis apenas após o estabelecimento de uma conexão.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nome:&lt;/span&gt;O nome fornecido no arquivo de provisionamento.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tipo:&lt;/span&gt;O tipo de VPN (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Estado:&lt;/span&gt;Exibe o estado da conexão deste serviço. Passe o rato/mouse sobre o ícone para exibir uma descrição de texto.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hospedeiro:&lt;/span&gt;O IP do hospedeiro (host) da VPN.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domínio:&lt;/span&gt;O domínio da VPN.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1092"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will implement an internet kill switch for VPN connections. If a VPN connection drops while the kill switch is enabled all technologies will be powered off.&lt;/p&gt;&lt;p&gt;The way this works is the service order is monitored. If the topmost service is of type VPN and then if it changes to something other than VPN and if the change was not initiated by the user (for instance by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Disconnect&lt;/span&gt; button in the VPN tab), then CMST will cycle through all technologies powering each one down in turn. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se esta opção for marcada, o CMST implementará uma comutação de internet para as conexões VPN. Se uma conexão VPN cair enquanto o comutador &apos;kill&apos; estiver ativado, todas as tecnologias serão desligadas.&lt;/p&gt;&lt;p&gt;A forma como este serviço funciona é a ordem de serviço monitorada. Se o serviço mais alto for do tipo VPN e, em seguida, se ocorrer uma alteração para algo diferente de VPN e se a alteração não foi iniciada pelo usuário (por exemplo, utilizando o botão &lt;span style=&quot; font-weight:600;&quot;&gt;Desconectar&lt;/span&gt; na aba ou guia VPN, então o CMST percorrerá todas as tecnologias, alimentando cada uma delas por sua vez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1095"/>
         <source>Enable VPN Internet Kill Switch</source>
-        <translation type="unfinished"></translation>
+        <translation>Ativar o Comutador de Desligamento de Internet VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1108"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system notification daemon will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed. Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se esta opção for marcada, o serviço de notificação do sistema exibirá uma mensagem de notificação quando um evento significativo relacionado ao connman for recebido.&lt;/p&gt;&lt;p&gt;As notificações podem ser tratadas pelo ícone da bandeja do sistema ou por um serviço de notificação, se houver um instalado. Ambos serviços não podem estar ativos ao mesmo tempo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1184"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the Start Up Options in the right hand pane will be enabled. Start up options set in this pane will be read and used next time the program starts. Start up options are also available as command line switches and an option provided on the command line will take precedence over an option set in the right hand pane. The options in this pane are provided as a convienence to avoid the necessity of editing a systemd service or other start up file. &lt;/p&gt;&lt;p&gt;Settings are stored in&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se esta opção for marcada, as opções de inicialização no painel direito serão ativadas. As opções de inicialização definidas neste painel serão lidas e utilizadas na próxima vez que o programa for iniciado. As opções de inicialização também estão disponíveis como opções de linha de comando e uma opção fornecida na linha de comando terá preferência sobre uma opção definida no painel direito. As opções neste painel são fornecidas como uma convenção para evitar a necessidade de editar um serviço do systemd ou outro arquivo de inicialização.&lt;/p&gt;&lt;p&gt;As configurações são armazenadas em &lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;Este é um arquivo de texto padrão do tipo ini.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1187"/>
         <source>Enable Start Options from GUI (right hand pane)</source>
-        <translation>Habilita Opções Iniciais do GUI (painel da direita)</translation>
+        <translation>Ativa as Opções Iniciais da Interface Gráfica (painel da direita)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1314"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. Changing or setting these will only take effect at the next program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Estas entradas controlam várias opções para CMST no início do programa. A alteração ou ajuste destas opções só terão efeito na próximo inicialização do programa.&lt;/p&gt;&lt;p&gt;Todas estas opções estão disponíveis na linha de comando e, se uma opção de linha de comando for fornecida, ela terá preferência sobre essas configurações.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1317"/>
         <source>Start Up Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opções de Inicialização</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1407"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Opções de Linha de Comando:&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Iniciar a interface gráfica do usuário minimizada na bandeja do sistema.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1432"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Opções de Linha de Comando: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; ou &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Especifica o tempo de espera em segundos antes de iniciar o ícone da bandeja do sistema (o padrão é 0 segundos).&lt;/p&gt;&lt;p&gt;Se o CMST for iniciado e tentar criar um ícone de bandeja antes que a própria bandeja do sistema seja criada, uma caixa de diálogo será exibida explicando isso. Isto às vezes acontece quando o programa é iniciado automaticamente. Se você sabe que a bandeja existirá quando o sistema estiver ativo, você pode especificar um tempo de espera e o CMST aguardará este número de segundos antes de tentar criar o ícone da bandeja. Isto dá ao gerenciador de janelas ou ao painel o tempo necessário para criar a bandeja antes de tentar colocar o ícone na bandeja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1593"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Opções de Linha de Comando: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Especifica a frequência em segundos entre as atualizações do contador (o padrão é 10 segundos). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1597"/>
@@ -664,12 +667,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1529"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Default is no desktop specific code.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Padrão não é um código específico de desktop.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Padrão não é um código específico da área de trabalho.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1792"/>
         <source>Aw&amp;Oken</source>
-        <translation>Ac&amp;Ordado</translation>
+        <translation>Ac&amp;ordado</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1799"/>
@@ -679,18 +682,18 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1981"/>
         <source>Rescan</source>
-        <translation>Rescan</translation>
+        <translation>Varredura</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1989"/>
         <source>Offline Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo Off-Line</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="250"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="690"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Força uma nova varredura de todas as tecnologias Wi-Fi. Isso é semelhante a emitir o comando &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; a partir da linha de comando.&lt;/p&gt;&lt;p&gt;O botão ficará inativo durante a varredura.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="631"/>
@@ -705,7 +708,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="646"/>
         <source>Signal Strength</source>
-        <translation>Força do Sinal</translation>
+        <translation>Intensidade do Sinal</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="865"/>
@@ -715,7 +718,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="886"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The service being monitored by the counters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;O serviço está sendo monitorado pelos contadores.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="889"/>
