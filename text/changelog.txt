@@ -2,6 +2,7 @@
 <b><center>Change Log</center></b>
 <b>In Progress</b>
 <ul>
+<li>Fix (attempt anyway) for issue #240.</li>
 <li>Pull Requests #221-#224, #227-#233 translations from Weblate.</li>
 <li>Pull Request #218 (Fix getting ConnMan version)</li>
 <li>Added translation to Bulgarian.</li>

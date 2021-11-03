@@ -37,7 +37,7 @@ DEALINGS IN THE SOFTWARE.
 // Program Info (may be visible, but don't mark for tranalation)
 #define VERSION "2021.04.30-1"
 
-#define RELEASE_DATE "1 November 2020"
+#define RELEASE_DATE "2 November 2020"
 #define COPYRIGHT_DATE "2013-2021"
 
 // Program Values:
