@@ -1162,7 +1162,7 @@ void ControlBox::dbsTechnologyAdded(QDBusObjectPath path, QVariantMap properties
 }
 
 //
-//  Slot called whenever DBUS issues a TechonlogyAdded signal
+//  Slot called whenever DBUS issues a TechonlogyRemoved signal
 void ControlBox::dbsTechnologyRemoved(QDBusObjectPath removed)
 {
   for (int i = 0; i < technologies_list.count(); ++i) {

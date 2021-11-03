@@ -4,7 +4,6 @@
 <ul>
 <li>Fix (attempt anyway) for issue #240.</li>
 <li>Pull Requests #221-#224, #227-#241 translations from Weblate.</li>
->>>>>>> issue_240
 <li>Pull Request #218 (Fix getting ConnMan version)</li>
 <li>Added translation to Bulgarian.</li>
 </ul>
