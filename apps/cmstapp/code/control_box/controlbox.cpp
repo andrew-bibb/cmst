@@ -907,8 +907,9 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
   QString oldstate = properties_map.value(prop).toString();
   properties_map.insert(prop, dbvalue.variant() );
 
+  // updateDisplayWidgets() removed for issue #240 - displaywidgets should update when services list changes which must happen when properties change.
   // refresh display widgets
-  updateDisplayWidgets();
+  //updateDisplayWidgets();
 
   // offlinemode property
   if (prop == "OfflineMode") {
