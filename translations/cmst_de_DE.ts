@@ -115,7 +115,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="235"/>
         <source>WiFi Protected Setup (WPS)</source>
-        <translation type="unfinished">Wi-Fi Protected Setup (WPS)</translation>
+        <translation>Wi-Fi Protected Setup (WPS)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="243"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="320"/>
         <source>Choose or enter a browser:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen oder geben Sie einen Browser ein:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="327"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="436"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Verbindungsprozess abbrechen.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="439"/>
