@@ -2704,7 +2704,7 @@ p, li { white-space: pre-wrap; }
         <source>Check to enable mDNS. Note that mDNS requires a DNS backend which supports it.
 
 </source>
-        <translation>Отметьте для активации mDNS.  Учтите, что mDNS требует поддержку на стороне бекенда DNS.
+        <translation>Отметьте для активации mDNS. Учтите, что mDNS требует поддержку на стороне бекенда DNS.
 
 </translation>
     </message>
