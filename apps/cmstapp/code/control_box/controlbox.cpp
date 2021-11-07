@@ -1560,6 +1560,7 @@ void ControlBox::getServiceDetails(int index)
   QString rs = tr("<br><b>Service Details:</b><br>");
   if (getNickName(services_list.at(index).objpath).isEmpty() ) b_editable = false;
   rs.append(tr("Service Type: %1<br>").arg(TranslateStrings::cmtr(map.value("Type").toString())) );
+  if (map.value("Type").toString() == "vpn") b_editable = false; // VPN services cannot be edited from here
   rs.append(tr("Service State: %1<br>").arg(TranslateStrings::cmtr(map.value("State").toString())) );
   rs.append(tr("Favorite: %1<br>").arg(map.value("Favorite").toBool() ? tr("Yes", "favorite") : tr("No", "favorite"))  );
   rs.append(tr("External Configuration File: %1<br>").arg(map.value("Immutable").toBool() ? tr("Yes", "immutable") : tr("No", "immutable")) );
