@@ -609,7 +609,7 @@ that the peer is no longer connected.</string>
     <string notr="true">VPNC.PFS</string>
    </property>
    <property name="toolTip">
-    <string>DH gropup to use for perfect forward secrecy. </string>
+    <string>DH group to use for perfect forward secrecy. </string>
    </property>
   </action>
   <action name="actionVPNC_Domain">
