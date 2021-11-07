@@ -735,7 +735,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="932"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection that is not marked roaming. &lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Лічильники служби з&apos;єднання зі статусом &amp;quot;online&amp;quot; за умови, що вона не є у роумінгу. &lt;/p&gt;&lt;p&gt;Лічильники можуть бути доступними не завжди. Лічильники могли бути вимкнені через командний рядок (-c або --disable-counters) або іноді з’єднання реєструється як &amp;quot;ready&amp;quot; замість &amp;quot;online&amp;quot;. Online (в мережі) - це готове з&apos;єднання зі статусом &amp;quot;ready&amp;quot; та має перевірене підключення до Інтернету. Перебування в мережі можливе лише коли з’єднання готове - &amp;quot;ready&amp;quot;, однак лічильники працюють лише коли з’єднання &amp;quot;online&amp;quot; (в мережі).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Лічильники служби з&apos;єднання зі статусом &amp;quot;online&amp;quot; за умови, що вона не перебуває у роумінгу. &lt;/p&gt;&lt;p&gt;Лічильники можуть бути доступними не завжди. Лічильники могли бути вимкнені через командний рядок (-c або --disable-counters) або іноді з’єднання реєструється як &amp;quot;ready&amp;quot; замість &amp;quot;online&amp;quot;. Online (в мережі) — це готове з&apos;єднання зі статусом &amp;quot;ready&amp;quot; та має перевірене під&apos;єднання до інтернету. Перебування в мережі можливе лише якщо з’єднання готове — &amp;quot;ready&amp;quot;, однак лічильники працюють лише коли з’єднання &amp;quot;online&amp;quot; (в мережі).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="905"/>
@@ -781,7 +781,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1358"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Параметри командного рядка: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; або &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Вмикає лічильники Connman RX та TX (приймання та передача). Лічильники в Connman є експериментальними, якщо їх ввімкнено, у системні журнали буде записано велику кількість даних.&lt;/p&gt;&lt;p&gt;Типово лічильники вимкнено, але до версії 2017.09.19 включно лічильники типово були ввімкнені.  Усі наступні версії лічильників типово вимкнені.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Параметри командного рядка: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; або &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Вмикає лічильники Connman RX та TX (приймання та передача). Лічильники в Connman експериментальні, якщо їх увімкнено, у системні журнали буде записано велику кількість даних.&lt;/p&gt;&lt;p&gt;Типово лічильники вимкнено, але до версії 2017.09.19 включно лічильники типово були ввімкнені.  Усі наступні версії лічильників типово вимкнені.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1361"/>
@@ -984,7 +984,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="764"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one vpn service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Виберіть службу VPN у таблиці нижче та натисніть цю кнопку, щоб відключити її. &lt;/p&gt;&lt;p&gt;Якщо є лише одна служба VPN в стані &amp;quot;ready&amp;quot;(готова) або &amp;quot;online&amp;quot;(в мережі), натискання цієї кнопки автоматично вибере цю службу та від’єднає її. &lt;/p&gt;&lt;p&gt;Це також може бути використано для припинення попередньої спроби з’єднання.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Виберіть службу VPN у таблиці нижче та натисніть цю кнопку, щоб від&apos;єднати її. &lt;/p&gt;&lt;p&gt;Якщо є лише одна служба VPN в стані &amp;quot;ready&amp;quot;(готова) або &amp;quot;online&amp;quot;(в мережі), натискання цієї кнопки автоматично вибере цю службу та від’єднає її. &lt;/p&gt;&lt;p&gt;Це також може бути використано для припинення попередньої спроби з’єднання.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="848"/>
@@ -1074,7 +1074,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="273"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To edit the ID and Password of a tethered WiFi device click this button.&lt;/p&gt;&lt;p&gt;The ID and Password are what clients will have to enter to connect to the ad-hoc network. This is only valid for WiFi connections&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Щоб змінити назву та пароль точки доступу Wi-Fi, натисніть цю кнопку.&lt;/p&gt;&lt;p&gt;Назва (SSID) та пароль – це те, що клієнти повинні ввести для підключення до тимчасової мережі точки доступу. Дійсне лише для з’єднань Wi-Fi&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Щоб змінити назву та пароль точки доступу Wi-Fi, натисніть цю кнопку.&lt;/p&gt;&lt;p&gt;Назва (SSID) та пароль – це те, що клієнти повинні ввести для під&apos;єднання до тимчасової мережі точки доступу. Дійсне лише для з’єднань Wi-Fi&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="276"/>
@@ -1094,12 +1094,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="385"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Move the selected service before another in the list.&lt;/p&gt;&lt;p&gt;The button will only become active if the selected service can be moved and if there is another valid service which it can be used as a target.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Перемістіть вибрану службу перед іншою у списку.&lt;/p&gt;&lt;p&gt;Кнопка стане активною лише у випадку, якщо вибрану службу можна перемістити і якщо є інша дійсна служба, яку можна використовувати в якості цільової.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Перемістіть вибрану службу перед іншою у списку.&lt;/p&gt;&lt;p&gt;Кнопка стане активною лише якщо вибрану службу можна перемістити, і якщо є інша дійсна служба, яку можна використовувати цільовою.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="398"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Move the selected service after another in the list.&lt;/p&gt;&lt;p&gt;The button will only become active if the selected service can be moved and if there is another valid service which it can be used as a target.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Перемістіть вибрану службу за іншою у списку.&lt;/p&gt;&lt;p&gt;Кнопка стане активною лише у випадку, якщо вибрану службу можна перемістити і якщо є інша дійсна служба, яку можна використовувати в якості цільової.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Перемістіть вибрану службу за іншою у списку.&lt;/p&gt;&lt;p&gt;Кнопка стане активною лише якщо вибрану службу можна перемістити, і якщо є інша дійсна служба, яку можна використовувати цільовою.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1053"/>
@@ -1119,7 +1119,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1059"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If a Connman service falls into the &amp;quot;Failed&amp;quot; state it will normally remain in that state.&lt;/p&gt;&lt;p&gt;If this box is checked CMST will try to automatically reconnect a WiFi service that enters the &amp;quot;Failed&amp;quot; state. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо Connman потрапляє в стан &amp;quot;Failed&amp;quot;(помилка), він зазвичай залишатиметься в цьому стані.&lt;/p&gt;&lt;p&gt;Якщо цей прапорець встановлено, CMST спробує автоматично повторно підключити службу Wi-Fi, яка переходить у стан &amp;quot;Failed&amp;quot;(помилка). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1062"/>
@@ -1145,7 +1145,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1248"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Internal icons can be colorized. You may select a color using the button to the left, or you may type in the #RGB color yourself.&lt;/p&gt;&lt;p&gt;If you type the entry it must have leading # sign. Example: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Внутрішні піктограми можна розфарбувати. Ви можете обрати колір за допомогою кнопки ліворуч, або ви можете ввести колір #RGB самостійно.&lt;/p&gt;&lt;p&gt;При вводі кольору запис повинен мати знак # на початку. Приклад: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1251"/>
@@ -1155,12 +1155,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1609"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line. Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Two events are checked. &lt;span style=&quot; font-weight:600;&quot;&gt;Before Connecting&lt;/span&gt; events are called after the Connect button is pressed in either the Wireless or VPN tabs. The program or process in the Execute box will only be executed prior to making a connection for the service shown in the Service box.  It will not be called when connecting to any other service.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;After Connecting&lt;/span&gt; box will be called after Connman enters the ready or online state.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Програми або процеси, які виконуються після різних подій.&lt;/p&gt;&lt;p&gt;Якщо програмі або процесу потрібні аргументи командного рядка, задайте їх тут так само, якщо б ви вводили їх у командному рядку. Наприклад:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program арг1 арг2 арг3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Перевіряються дві події. &lt;span style=&quot; font-weight:600;&quot;&gt;Перед з’єднанням&lt;/span&gt; - виклик події виникає після натискання кнопки &quot;З’єднати&quot; на вкладках Бездротовий зв’язок або VPN. Програму або процес, вказану у полі «Виконати», буде виконано лише до встановлення з’єднання зі службою, показаною у полі «Служба». Її не буде виконано при з’єднанні із будь-якою іншою службою.&lt;/p&gt;&lt;p&gt;Програму або процес у полі &lt;span style=&quot; font-weight:600;&quot;&gt;Після з&apos;єднання&lt;/span&gt; буде запущено після того, як Connman перейде в стан &quot;Готовий&quot; або &quot;В мережі&quot;.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1618"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This area is to specify a program or process to run after a wifi or vpn service button is pressed, but before the connect method is sent to ConnMan. This is mainly used to modify a .cmst.config file which seems useful to modify certain short lived entries for openConnect vpn connections.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;Execute&lt;/span&gt; box will only be executed prior to making a connection for the single service shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Service&lt;/span&gt; box. It will not be called when connecting to any other service. If a .cmst.config file is to be modified a check must in the &lt;span style=&quot; font-weight:600;&quot;&gt;Modify Service File&lt;/span&gt; box and the path and name of the file to be modified must be provided.&lt;/p&gt;&lt;p&gt;To modify a .cmst.config file CMST will read stdout of the program or process being called. Program output should be individual lines in KEY=VALUE format. If KEY exists in the .cmst.config file it will be replaced by the new VALUE. If KEY does not exist it will be appended. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Це поле призначене для визначення програми або процесу, які запускатимуться після натискання кнопки Wi-Fi або VPN, але перед відправкою методу з&apos;єднання до ConnMan. Переважно використовується для зміни файлу .cmst.config, який буде корисним для зміни певних тимчасових записів при з&apos;єднаннях через openConnect VPN.&lt;/p&gt;&lt;p&gt;Програму або процес у полі &lt;span style=&quot; font-weight:600;&quot;&gt;Виконати&lt;/span&gt; буде виконано лише до встановлення з’єднання для однієї служби, вказаної у полі &lt;span style=&quot; font-weight:600;&quot;&gt;Служба&lt;/span&gt;. Подію не буде виконано при з’єднанні із будь-якою іншою службою. Якщо файл .cmst.config потрібно змінити, поставте прапорець у полі &lt;span style=&quot; font-weight:600;&quot;&gt;Змінити файл служби&lt;/span&gt;, а також вкажіть шлях та ім’я файлу, який потрібно змінити.&lt;/p&gt;&lt;p&gt;Щоб змінити файл .cmst.config, CMST прочитає стандартне виведення stdout програми або процесу, що викликається. Вивід програми має бути у вигляді окремих рядків у форматі КЛЮЧ=ЗНАЧЕННЯ. Якщо КЛЮЧ існує у файлі .cmst.config, його буде замінено новим ЗНАЧЕННЯм. Якщо КЛЮЧ не існує, він буде доданий. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1621"/>
@@ -1170,7 +1170,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1637"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the program or process to be executed before Connman initiates a connection to the service listed in the box above. If left blank no program or process will be executed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введіть програму або процес, який потрібно виконати, перш ніж Connman ініціює підключення до служби, зазначеної у полі вище. Якщо залишити порожнім, жодна програма чи процес не виконуватиметься.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1640"/>
@@ -1278,7 +1278,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1867"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Help&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Program help is mainly provided by the &amp;quot;What&apos;s This&amp;quot; button in the lower left corner. Press the button and then click on an item you are interested in. &amp;quot;What&apos;s This&amp;quot; is also available via context menu by right clicking on a button, box or text area.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Довідка&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Довідка у застосунку, переважно, надається кнопкою &amp;quot;Що це&amp;quot; в нижньому куті ліворуч. Натисніть кнопку, а потім виберіть елемент, який вас цікавить. Кнопка &amp;quot;Що це&amp;quot; також доступна через контекстне меню при натисканні правою кнопкою миші на кнопці, полі або текстовому полі.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1903"/>
@@ -1288,7 +1288,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1906"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to find information about an element in the GUI by entering &amp;quot;What&apos;s This&amp;quot; mode. &lt;/p&gt;&lt;p&gt;You may also right click on an element to show the &amp;quot;What&apos;s This&amp;quot; text for it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Використовуйте цю кнопку, щоб знайти інформацію про елемент графічного інтерфейсу, замовивши підказку &amp;quot;Що це&amp;quot;. &lt;/p&gt;&lt;p&gt;Ви також можете клацнути правою кнопкою миші на елементі, щоб показати підказку &amp;quot;Що це&amp;quot; для нього.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1916"/>
@@ -1374,7 +1374,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="496"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;%1 — це застосунок для взаємодії зі службою Connman та керування нею через системний лоток.&lt;br&gt;&lt;center&gt;Версія &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Дата випуску: %3&lt;center&gt;Авторське право © %4&lt;center&gt;за&lt;center&gt;Andrew J. Bibb&lt;center&gt;Вермонт, США&lt;br&gt;&lt;center&gt;&lt;b&gt;Перекладачі:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (китайська)&lt;center&gt;sqozz (німецька)&lt;center&gt;Ilya Shestopalov (російська)&lt;center&gt;Heimen Stoffels (голландська)&lt;center&gt; Yaşar Çiv (турецька)&lt;center&gt;Taras Panchenko, Ihor Hordiichuk (українська)&lt;br&gt;&lt;center&gt;&lt;b&gt;Інформація про збірку:&lt;/b&gt;&lt;center&gt;Зібрано за допомогою QT версії %5</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="522"/>

@@ -6,142 +6,142 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="14"/>
         <source>Agent Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Vstup agenta</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="27"/>
         <source>Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>Heslová fráze</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="46"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pokud je k dispozici původní heslová fráze, zobrazí se pro referenci zde.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="56"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the passphrase here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sem zadejte heslovou frázi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="69"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this box to obscure the password characters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toto zaškrtněte, pokud chcete znečitelnit znaky hesla.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="72"/>
         <source>&amp;Hide Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrýt &amp;heslovou frázi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="79"/>
         <source>O&amp;ld Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>Původní hes&amp;lová fráze</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="89"/>
         <source>&amp;Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Heslová fráze</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="102"/>
         <source>Hidden Network</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrytá síť</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="108"/>
         <source>&amp;Name</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Název</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the name of the hidden network you wish to connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zadejte název skryté sítě, k které se chcete připojit.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="131"/>
         <source>Service Set Identifier</source>
-        <translation type="unfinished"></translation>
+        <translation>Identifikátor sady služby</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="137"/>
         <source>&amp;SSID</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;SSID</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="157"/>
         <source>Wireless Internet Service Provider roaming (WISPr)</source>
-        <translation type="unfinished"></translation>
+        <translation>roaming u poskytovatele bezdrátového připojení k Internetu</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="163"/>
         <source>&amp;Username</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uživatelské jméno</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="173"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr uživatelské jméno.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="183"/>
         <source>Passwor&amp;d</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Heslo</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="193"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr password.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr heslo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="206"/>
         <source>Extensible Authentication Protocol (EAP)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozšiřitelný protokol pro ověřování se (EAP)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="212"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type your Identity for the Extensible Authentication Protocol&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zadejte svou identitu pro EAP protokol&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="222"/>
         <source>&amp;Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Identita</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="235"/>
         <source>WiFi Protected Setup (WPS)</source>
-        <translation type="unfinished"></translation>
+        <translation>Chráněné nastavení WiFi (WPS)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="243"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked use WPS push button authentication.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pokud zaškrtnete, použijte ověření stisknutím tlačítka.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="246"/>
         <source>Use Push &amp;Button Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Použijte ověření se stisknutím tlačítka</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="276"/>
         <source>&amp;WPS Pin</source>
-        <translation type="unfinished"></translation>
+        <translation>PIN pro &amp;WPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="292"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter a WPS pin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zadejte pin pro WPS.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="311"/>
         <source>Browser Login Requested</source>
-        <translation type="unfinished"></translation>
+        <translation>Je vyžadováno přihlášení se v prohlížeči</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="320"/>
         <source>Choose or enter a browser:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvolte nebo zadejte prohlížeč:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="327"/>
@@ -151,7 +151,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="342"/>
         <source>Login URL:</source>
-        <translation type="unfinished"></translation>
+        <translation>URL pro přihlášení:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="349"/>
@@ -171,22 +171,22 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="364"/>
         <source>Launch &amp;Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>S&amp;pustit prohlížeč</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="396"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Co to je&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="399"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>…</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="423"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pokračovat v procesu připojování.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="426"/>
@@ -196,12 +196,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="429"/>
         <source>O&amp;K</source>
-        <translation type="unfinished"></translation>
+        <translation>O&amp;K</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="436"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zrušit proces připojování.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="439"/>
@@ -211,7 +211,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="442"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Storno</translation>
     </message>
 </context>
 <context>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="298"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation> Informace</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="299"/>
@@ -232,22 +232,22 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba v Connman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation type="unfinished"></translation>
+        <translation>Conman vrátilo následující chybu:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Chcete zkusit znovu?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="131"/>
         <source>Agent Request Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Požadavek agenta se nezdařil</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="132"/>
         <source>The agent request failed before a reply was returned.</source>
-        <translation type="unfinished"></translation>
+        <translation>Požadavek agenta se nezdařil dříve než přišla odpověď.</translation>
     </message>
 </context>
 <context>
@@ -256,30 +256,30 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="67"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="84"/>
         <source>%L1 Bytes</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 bajtů</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="69"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="86"/>
         <source>%L1 KB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 KB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="71"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="88"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="73"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="90"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="76"/>
         <source>&lt;b&gt;Transmit:&lt;/b&gt;&lt;br&gt;TX Total: %1 (%2),  TX Errors: %3,  TX Dropped: %4</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Odesláno:&lt;/b&gt;&lt;br&gt;Celkem odesláno: %1 (%2),  Chyb odesílání: %3,  Zahozeno odesílání: %4</translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="77"/>
@@ -289,10 +289,10 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="96"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="97"/>
         <source>%Ln Packet(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>&amp;Ln paket</numerusform>
+            <numerusform>&amp;Ln pakety</numerusform>
+            <numerusform>&amp;Ln paketů</numerusform>
         </translation>
     </message>
     <message>
@@ -308,37 +308,37 @@
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="111"/>
         <source>%n Day(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n den</numerusform>
+            <numerusform>%n dny</numerusform>
+            <numerusform>%n dnů</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="118"/>
         <source>%n Hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n hodina</numerusform>
+            <numerusform>%n hodiny</numerusform>
+            <numerusform>%n hodin</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="125"/>
         <source>%n Minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minuta</numerusform>
+            <numerusform>%n minuty</numerusform>
+            <numerusform>%n minut</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="131"/>
         <source>%n Second(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n sekunda</numerusform>
+            <numerusform>%n sekundy</numerusform>
+            <numerusform>%n sekund</numerusform>
         </translation>
     </message>
 </context>
@@ -347,22 +347,22 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba v Conman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation type="unfinished"></translation>
+        <translation>Connman vrátilo následující chybu:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Chcete zkusit znovu?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="119"/>
         <source>Agent Request Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Požadavek agenta se nezdařil</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="120"/>
         <source>The agent request failed before a reply was returned.</source>
-        <translation type="unfinished"></translation>
+        <translation>Požadavek agenta se nezdařil dříve než přišla odpověď.</translation>
     </message>
 </context>
 <context>
@@ -370,12 +370,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="20"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialog</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="48"/>
         <source>&amp;Status</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Stav</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="100"/>
@@ -385,7 +385,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="103"/>
         <source>All Devices &amp;Off</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Všechna zařízení vypnuta</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="69"/>
@@ -400,12 +400,12 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="862"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="902"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="72"/>
         <source>Global Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Globální vlastnosti</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="80"/>
@@ -416,7 +416,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="83"/>
         <source>OfflineMode: Unavailable</source>
-        <translation type="unfinished"></translation>
+        <translation>Režim bez připojení: není k dispozici</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="90"/>
@@ -426,13 +426,13 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="93"/>
         <source>State: Unavailable</source>
-        <translation type="unfinished"></translation>
+        <translation>Stav: není k dispozici</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="166"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="149"/>
         <source>Technologies</source>
-        <translation type="unfinished"></translation>
+        <translation>Technologie</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="215"/>
@@ -440,81 +440,81 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="626"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="833"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Název</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="220"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="362"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="838"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="225"/>
         <source>Powered</source>
-        <translation type="unfinished"></translation>
+        <translation>Napájeno</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="230"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="636"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2375"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Připojeno</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="235"/>
         <source>Tethering</source>
-        <translation type="unfinished"></translation>
+        <translation>Sdílející připojení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="253"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="693"/>
         <source>Resc&amp;an</source>
-        <translation type="unfinished"></translation>
+        <translation>Znovu n&amp;askenovat</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="302"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This box lists all services that connman can connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toto vypisuje veškeré služby, ke kterým je možné se připojit.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="305"/>
         <source>Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Služby</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="367"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="843"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Stav</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="372"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="853"/>
         <source>Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>Připojení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="388"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1971"/>
         <source>Move Before</source>
-        <translation type="unfinished"></translation>
+        <translation>Přesunout před</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="401"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1976"/>
         <source>Move After</source>
-        <translation type="unfinished"></translation>
+        <translation>Přesunout za</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="421"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked hide the connection name in the Services box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pokud je zaškrtnuto, skrýt název připojení ve Služby.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="424"/>
         <source>&amp;Less</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Méně</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="445"/>
@@ -524,12 +524,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="448"/>
         <source>&amp;Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Po&amp;drobnosti</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="460"/>
         <source>Ser&amp;vice</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Služba</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="470"/>
@@ -544,12 +544,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="567"/>
         <source>Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="580"/>
         <source>&amp;Wireless</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bezdrátové</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="586"/>
@@ -559,7 +559,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="654"/>
         <source>Wireless Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezdrátové služby</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="660"/>
@@ -570,7 +570,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="663"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="754"/>
         <source>Connect</source>
-        <translation type="unfinished"></translation>
+        <translation>Připojit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="670"/>
@@ -581,12 +581,12 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="673"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="767"/>
         <source>Disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpojit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="683"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Odebrat</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="706"/>
@@ -596,7 +596,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="709"/>
         <source>Wifi State</source>
-        <translation type="unfinished"></translation>
+        <translation>Stav WiFi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="790"/>
@@ -611,7 +611,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1095"/>
         <source>Enable VPN Internet Kill Switch</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapnout vypnutí připojení k Internetu při VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1108"/>
@@ -636,7 +636,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1317"/>
         <source>Start Up Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Možnosti při spuštění</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1407"/>
@@ -664,7 +664,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1612"/>
         <source>External Programs</source>
-        <translation type="unfinished"></translation>
+        <translation>Externí aplikace</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1529"/>
@@ -684,12 +684,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1981"/>
         <source>Rescan</source>
-        <translation type="unfinished"></translation>
+        <translation>Znovu naskenovat</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1989"/>
         <source>Offline Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Režim bez připojení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="250"/>
@@ -700,22 +700,22 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="631"/>
         <source>Favorite</source>
-        <translation type="unfinished"></translation>
+        <translation>Označit jako oblíbené</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="641"/>
         <source>Security</source>
-        <translation type="unfinished"></translation>
+        <translation>Zabezpečení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="646"/>
         <source>Signal Strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Síla signálu</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="865"/>
         <source>&amp;Counters</source>
-        <translation type="unfinished"></translation>
+        <translation>Čít&amp;ače</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="886"/>
@@ -726,7 +726,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="889"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1663"/>
         <source>Service:</source>
-        <translation type="unfinished"></translation>
+        <translation>Služba:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="932"/>
@@ -736,13 +736,13 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="905"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Domů</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="935"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="991"/>
         <source>Counter not available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Čítače nejsou k dispozici.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="961"/>
@@ -752,12 +752,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="964"/>
         <source>Roaming</source>
-        <translation type="unfinished"></translation>
+        <translation>Roaming</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1011"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counter Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nastavení čítačů&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1014"/>
@@ -767,12 +767,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1017"/>
         <source>Settings:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavení:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1032"/>
         <source>&amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Předvolby</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1358"/>
@@ -782,7 +782,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1361"/>
         <source>Enable Counters</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapnout čítače</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1507"/>
@@ -792,7 +792,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1510"/>
         <source>Disable VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1497"/>
@@ -802,7 +802,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1500"/>
         <source>Disable Minimized</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout minimalizované</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1146"/>
@@ -812,7 +812,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1149"/>
         <source>Interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozhraní</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1207"/>
@@ -822,7 +822,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
         <source>Enable ToolTips (Interface)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapnout popisky nástrojů (rozhraní)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1158"/>
@@ -832,7 +832,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1161"/>
         <source>Reset Counters</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetovat čítače</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1168"/>
@@ -842,7 +842,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1171"/>
         <source>Advanced Controls</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokročilá nastavení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1368"/>
@@ -878,17 +878,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1411"/>
         <source>Start Minimized</source>
-        <translation type="unfinished"></translation>
+        <translation>Spustit zminimalizované</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1436"/>
         <source>Wait Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Doba čekání</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1372"/>
         <source>Disable Tray Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout ikonu v oznamovací oblasti</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1197"/>
@@ -898,7 +898,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1200"/>
         <source>Retain State</source>
-        <translation type="unfinished"></translation>
+        <translation>Podržet stav</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1446"/>
@@ -908,7 +908,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1449"/>
         <source>Use Icon Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít motiv vzhledu ikon</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1459"/>
@@ -923,12 +923,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1520"/>
         <source>Desktop Specific</source>
-        <translation type="unfinished"></translation>
+        <translation>Pro jednotlivá prostředí</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1532"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Žádné</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1545"/>
@@ -938,7 +938,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1548"/>
         <source>XFCE</source>
-        <translation type="unfinished"></translation>
+        <translation>XFCE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1558"/>
@@ -948,7 +948,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1561"/>
         <source>MATE</source>
-        <translation type="unfinished"></translation>
+        <translation>MATE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1421"/>
@@ -969,7 +969,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="742"/>
         <source>VPN Services</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN služby</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="751"/>
@@ -984,12 +984,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="848"/>
         <source>Host</source>
-        <translation type="unfinished"></translation>
+        <translation>Hostitel</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1425"/>
         <source>Fake Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastrčená transparentnost</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1326"/>
@@ -1004,12 +1004,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1263"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the system tray are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Předvolby pro oznamovací oblast systémového panelu se nacházejí v této části.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1266"/>
         <source>System Tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Oznamovací oblast panelu</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1285"/>
@@ -1019,7 +1019,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1288"/>
         <source>Hide Tray Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrýt ikonu v oznamovací oblasti</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1272"/>
@@ -1029,7 +1029,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1275"/>
         <source>Enable System Tray Popups</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapnout vyskakovací hlášení v systémové oblasti</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1298"/>
@@ -1039,22 +1039,22 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1301"/>
         <source>System Tray Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Hlášení v oznamovací oblasti</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1111"/>
         <source>Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Hlášení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1136"/>
         <source>Notification Daemon</source>
-        <translation type="unfinished"></translation>
+        <translation>Proces služby hlášení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1123"/>
         <source>Server Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Stav serveru</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="163"/>
@@ -1064,7 +1064,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="240"/>
         <source>ID:Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Identif:heslo</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="273"/>
@@ -1074,7 +1074,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="276"/>
         <source>ID:Pass</source>
-        <translation type="unfinished"></translation>
+        <translation>ID:Heslo</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="283"/>
@@ -1084,7 +1084,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="286"/>
         <source>Less</source>
-        <translation type="unfinished"></translation>
+        <translation>Méně</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="385"/>
@@ -1099,7 +1099,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1053"/>
         <source>Program Control</source>
-        <translation type="unfinished"></translation>
+        <translation>Ovládání programu</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1082"/>
@@ -1109,7 +1109,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1085"/>
         <source>Enable Autostart</source>
-        <translation type="unfinished"></translation>
+        <translation>Spouštět automaticky</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1059"/>
@@ -1119,7 +1119,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1062"/>
         <source>Retry Failed Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>Znovu navázat přerušené spojení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1225"/>
@@ -1135,7 +1135,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="135"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1238"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>…</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1248"/>
@@ -1145,7 +1145,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1251"/>
         <source>Colorize</source>
-        <translation type="unfinished"></translation>
+        <translation>Obarvit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1609"/>
@@ -1160,7 +1160,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1621"/>
         <source>Before Connecting</source>
-        <translation type="unfinished"></translation>
+        <translation>Před připojením</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1637"/>
@@ -1170,7 +1170,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1640"/>
         <source>Execute:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vykonat:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1660"/>
@@ -1185,17 +1185,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1678"/>
         <source>Modify Service File</source>
-        <translation type="unfinished"></translation>
+        <translation>Upravit soubor pro službu</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1687"/>
         <source>Service configuration file to be modified by the program.</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor s nastaveními pro službu, který má být programem upraven.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1690"/>
         <source>FIle: </source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor: </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1720"/>
@@ -1209,17 +1209,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1727"/>
         <source>After Connecting</source>
-        <translation type="unfinished"></translation>
+        <translation>Po připojení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1767"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nápověda</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1773"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>O &amp;aplikaci</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1779"/>
@@ -1229,7 +1229,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1782"/>
         <source>C&amp;MST</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;MST</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1789"/>
@@ -1244,7 +1244,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1809"/>
         <source>&amp;QT</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Qt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1816"/>
@@ -1254,17 +1254,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1819"/>
         <source>&amp;License</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Licence</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1826"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the change log of the program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toto tlačítko použijte pro zobrazení seznamu změn, provedených při vývoji programu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1829"/>
         <source>ChangeLo&amp;g</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Seznam změn</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1867"/>
@@ -1274,7 +1274,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1903"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Co to je&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1906"/>
@@ -1289,7 +1289,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1919"/>
         <source>Provisioning Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Editor zprovozňování</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1926"/>
@@ -1299,7 +1299,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1929"/>
         <source>VPN Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Editor VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1936"/>
@@ -1309,7 +1309,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1939"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ukončit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1959"/>
@@ -1320,7 +1320,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1962"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="392"/>
         <source>Mi&amp;nimize</source>
-        <translation type="unfinished"></translation>
+        <translation>Mi&amp;nimalizovat</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1994"/>
@@ -1330,37 +1330,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1997"/>
         <source>Set ID and Password for tethered wifi</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavit identifikátor a heslo pro sdílení připojení přes WiFi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="393"/>
         <source>Ma&amp;ximize</source>
-        <translation type="unfinished"></translation>
+        <translation>Ma&amp;ximalizovat</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="396"/>
         <source>&amp;Exit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ukončit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="495"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>O %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="150"/>
         <source>Service Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Podrobnosti služby</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="151"/>
         <source>WiFi Connections</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi připojení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="152"/>
         <source>VPN Connections</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN připojení</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="496"/>
@@ -1370,51 +1370,51 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="522"/>
         <source>About AwOken</source>
-        <translation type="unfinished"></translation>
+        <translation>O AwOken</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="553"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="561"/>
         <source>%1 change log is not available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seznam změn v %1 není k dispozici.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="563"/>
         <source>ChangeLog</source>
-        <translation type="unfinished"></translation>
+        <translation>Seznam změn</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="686"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2696"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Storno</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="711"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="716"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Služba:&lt;/b&gt; %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="716"/>
         <source>Unable to determine service</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedaří se zjistit službu</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="748"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="856"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="887"/>
         <source>No Services Selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Nevybrány žádné služby</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="888"/>
         <source>You need to select a Wifi service before pressing the remove button.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aby bylo možné použít tlačítko pro odebrání, je nejprve třeba vybrat WiFi službu.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="917"/>
@@ -1429,18 +1429,18 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="936"/>
         <source>Network Services:</source>
-        <translation type="unfinished"></translation>
+        <translation>Síťové služby:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1205"/>
         <source>Service Error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba služby: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1206"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1233"/>
         <source>Object Path: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Popis umístění objektu: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1226"/>
@@ -1467,72 +1467,80 @@ p, li { white-space: pre-wrap; }
         <source>Ethernet Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ethernetové připojení
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2267"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2294"/>
         <source>Service: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Služba: %1
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2273"/>
         <source>WiFi Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished"></translation>
+        <translation>WiFi připojení
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2275"/>
         <source>SSID: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>SSID: %1
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2280"/>
         <source>Security: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Zabezpečení: %1
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2281"/>
         <source>Strength: %1%
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Síla signálu: %1%
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2292"/>
         <source>VPN Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished"></translation>
+        <translation>VPN připojení
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2293"/>
         <source>Type: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Typ: %1
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2295"/>
         <source>Host: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hostitel: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2743"/>
         <source> Warning</source>
-        <translation type="unfinished"></translation>
+        <translation> Varování</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1556"/>
         <source>&lt;b&gt;Connection:&lt;/b&gt; %1</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Připojení:&lt;/b&gt; %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="536"/>
         <source>About Other Artwork</source>
-        <translation type="unfinished"></translation>
+        <translation>O ostatních uměleckých dílech</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="537"/>
@@ -1542,22 +1550,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="919"/>
         <source>All network devices are powered off, now in Airplane mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Všechna síťová zařízení jsou vypnuta, nyní se nacházíte v režimu Letadlo.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="924"/>
         <source>Power has been restored to all previously powered network devices.</source>
-        <translation type="unfinished"></translation>
+        <translation>Napájení všech předtím zapnutých síťových zařízení bylo obnoveno.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="939"/>
         <source>The system is online.</source>
-        <translation type="unfinished"></translation>
+        <translation>Systém je připojen.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="945"/>
         <source>The system is offline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Systém není připojen.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1048"/>
@@ -1572,298 +1580,298 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1559"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;Podrobnosti o službě:&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1561"/>
         <source>Service Type: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ služby: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1562"/>
         <source>Service State: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Stav služby: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1563"/>
         <source>Favorite: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Označit jako oblíbené: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1563"/>
         <source>Yes</source>
         <comment>favorite</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1563"/>
         <source>No</source>
         <comment>favorite</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1564"/>
         <source>External Configuration File: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Externí soubor s nastaveními: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1564"/>
         <source>Yes</source>
         <comment>immutable</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1564"/>
         <source>No</source>
         <comment>immutable</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
         <source>Auto Connect: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaticky připojit: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
         <source>On</source>
         <comment>autoconnect</comment>
-        <translation type="unfinished"></translation>
+        <translation>Zapnuto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
         <source>No</source>
         <comment>autoconnect</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1568"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1570"/>
         <source>IP Address Acquisition: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Získání IP adresy: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1571"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1578"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1613"/>
         <source>IP Address: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>IP adresa: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1572"/>
         <source>IP Netmask: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Maska sítě: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1573"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1584"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Brána: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1575"/>
         <source>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1577"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1590"/>
         <source>Address Acquisition: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Získání adresy: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1581"/>
         <source>Prefix Length: &lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Délka předpony: &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1583"/>
         <source>Prefix Length: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Délka předpony: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1585"/>
         <source>Privacy: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Soukromí: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1587"/>
         <source>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1592"/>
         <source>URL: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>URL: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1595"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Servery:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1596"/>
         <source>Excludes:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Vynechává:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1601"/>
         <source>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
         <source>Support Enabled: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Podpora zapnuta: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
         <source>Yes</source>
         <comment>mdns</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
         <source>No</source>
         <comment>mdns</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1611"/>
         <source>&lt;br&gt;&lt;b&gt;Last Address Conflict&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;Minulý konflikt adres&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1615"/>
         <source>MAC Address: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>MAC adresa: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1616"/>
         <source>Conflict detected on: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Konflikt zjištěn na: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
         <source>Resolved: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyřešeno: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
         <source>Yes</source>
         <comment>last_address_conflict</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
         <source>No</source>
         <comment>last_address_conflict</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1626"/>
         <source>&lt;br&gt;&lt;b&gt;Name Servers&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;DNS servery&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1629"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Time Servers&lt;/b&gt;&lt;br&gt;  </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Časové servery&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1632"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Search Domains&lt;/b&gt;&lt;br&gt;  </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Prohledávat domény&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1635"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1637"/>
         <source>Connection Method: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Metoda připojení: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1638"/>
         <source>Interface: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozhraní: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1639"/>
         <source>Device Address: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresa zařízení: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1640"/>
         <source>MTU: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>MTU: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1642"/>
         <source>&lt;br&gt;&lt;b&gt;Wireless&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;Bezdrátové&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1647"/>
         <source>Security: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Zabezpečení: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1648"/>
         <source>Strength: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Síla signálu: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1649"/>
         <source>Roaming: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Roaming: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1649"/>
         <source>Yes</source>
         <comment>roaming</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1649"/>
         <source>No</source>
         <comment>roaming</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
         <source>&lt;br&gt;&lt;b&gt;VPN Provider&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;Poskytovatel VPN&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1653"/>
         <source>Host: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Hostitel: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1654"/>
         <source>Domain: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Doména: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1655"/>
         <source>Name: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Název: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1656"/>
         <source>Type: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1797"/>
         <source>State: </source>
-        <translation type="unfinished"></translation>
+        <translation>Stav: </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1803"/>
@@ -1880,31 +1888,31 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1811"/>
         <source>Offline Mode </source>
-        <translation type="unfinished"></translation>
+        <translation>Režim bez připojení </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1865"/>
         <source>Yes</source>
         <comment>connected</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1865"/>
         <source>No</source>
         <comment>connected</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1872"/>
         <source>On</source>
         <comment>tethering</comment>
-        <translation type="unfinished"></translation>
+        <translation>Zapnuto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1877"/>
         <source>Off</source>
         <comment>tethering</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vypnuto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2209"/>
@@ -1915,7 +1923,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2268"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2282"/>
         <source>Interface: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozhraní: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2309"/>
@@ -1927,96 +1935,96 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2313"/>
         <source>Connection is in the Failure State.</source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished"></translation>
+        <translation>Připojení je ve stavu nezdaru.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2319"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished"></translation>
+        <translation>Nepřipojeno</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2326"/>
         <source>Error retrieving properties via Dbus</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba při získávání vlastností prostřednictvím Dbus</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2327"/>
         <source>Connection status is unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Stav připojení není znám</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2371"/>
         <source>Type: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2372"/>
         <source>&lt;br&gt;Powered </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;Napájení </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2373"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapnuto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2373"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnuto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2375"/>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepřipojeno</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2376"/>
         <source>&lt;br&gt;Tethering </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;Sdílení připojení </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2377"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapnuto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2435"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2464"/>
         <source>Connection : %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Připojení: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2437"/>
         <source>Signal Strength: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Síla signálu: %1%</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2439"/>
         <source>Favorite Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>Označit připojení jako oblíbené</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2439"/>
         <source>Never Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Nikdy nepřipojeno</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2446"/>
         <source>&lt;br&gt;Roaming</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;Roaming</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2447"/>
         <source>&lt;br&gt;Autoconnect is </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;Automatické připojení je </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2434"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2463"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="523"/>
@@ -2027,18 +2035,18 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1852"/>
         <source>On</source>
         <comment>powered</comment>
-        <translation type="unfinished"></translation>
+        <translation>Zap</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1857"/>
         <source>Off</source>
         <comment>powered</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vyp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2445"/>
         <source>Security: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Zabezpečení: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2744"/>
@@ -2048,13 +2056,13 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2926"/>
         <source>Could not find a connection to the system bus</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepodařilo se nalézt připojení k systémové sběrnici</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2927"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2932"/>
         <source>%1 - Critical Error</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 – kritická chyba</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2928"/>
@@ -4591,27 +4599,27 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="716"/>
         <source>MTU of the tunnel.</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost MTU v tunelu.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="724"/>
         <source>Peer certificate type (server/client).</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ certifikátu protějšku (serverový/klientský).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="732"/>
         <source>Protocol type (udp/tcp-client/tcp-server).</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ protokolu (udp/tcp-klient/tcp-server).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="740"/>
         <source>TCP/UDP port number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Číslo TCP/UDP portu.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="756"/>
         <source>Get certificate password from console or file?</source>
-        <translation type="unfinished"></translation>
+        <translation>Získat heslo k certifikátu z konzole nebo ze souboru?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="764"/>
@@ -4621,52 +4629,52 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="772"/>
         <source>Encrypt packets with cipher algorithm:</source>
-        <translation type="unfinished"></translation>
+        <translation>Šifrovat pakety algoritmem:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="780"/>
         <source>Authenticate packets using algorithm:</source>
-        <translation type="unfinished"></translation>
+        <translation>Opatřovat pakety ověřením pomocí algoritmu:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="788"/>
         <source>Use fast LZO compression (yes/no/adaptive).</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít rychlou LZO kompresi (ano/ne/dle vhodnosti).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="796"/>
         <source>Require peer certificate signed (client/server).</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyžadovat, aby certifikát protějšku byl podepsaný (klient/server).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="804"/>
         <source>OpenVPN config file that can contain extra options.</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor s nastaveními pro OpenVPN, který může obsahovat další předvolby.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="812"/>
         <source>SHA1 certificate fingerprint of the final VPN server.</source>
-        <translation type="unfinished"></translation>
+        <translation>Otisk SHA1 certifikátu konečného VPN serveru.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="820"/>
         <source>File containing other certificate authorities.</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor obsahující ostatní certifikační autority.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="828"/>
         <source>Client certificate file, if needed for web authentication. </source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor s klientským certifikátem, pokud je potřebný pro webové ověřování. </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="836"/>
         <source>Request MTU from server to use as MTU of tunnel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyžádat MTU ze serveru a použít jako MTU tunelu?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="844"/>
         <source>Read cookie from standard input?</source>
-        <translation type="unfinished"></translation>
+        <translation>Číst cookie ze standardního vstupu?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="852"/>
@@ -4699,22 +4707,22 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="76"/>
         <source>Connman System Tray.</source>
-        <translation type="unfinished"></translation>
+        <translation>Conman oznamovací oblast panelu.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="87"/>
         <source>[Experimental] Enable data counters.</source>
-        <translation type="unfinished"></translation>
+        <translation>[Experimentální] Zapnout čítače dat.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="97"/>
         <source>Use an icon theme from your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít motiv ikon ze systému.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="98"/>
         <source>Icon Theme Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Název motivu vzhledu ikony</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="103"/>
@@ -4724,7 +4732,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="107"/>
         <source>Start the GUI minimized in the system tray.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spustit grafické uživ. rozhraní minimalizované do oznamovací oblasti panelu.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="111"/>
@@ -4734,7 +4742,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="115"/>
         <source>Disable VPN support.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout podporu pro VPN.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="121"/>
@@ -4745,7 +4753,7 @@ that the peer is no longer connected.</source>
         <location filename="../apps/cmstapp/code/main.cpp" line="122"/>
         <location filename="../apps/cmstapp/code/main.cpp" line="134"/>
         <source>seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>sekund</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="127"/>
@@ -4755,7 +4763,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="128"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>KB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="133"/>
@@ -4770,17 +4778,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="141"/>
         <source>RRGGBB</source>
-        <translation type="unfinished"></translation>
+        <translation>RRGGBB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="148"/>
         <source>Use XFCE specific code.</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít programování určené pro prostředí XFCE.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="153"/>
         <source>Use MATE DE specific code.</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít programování určené pro prostředí MATE.</translation>
     </message>
 </context>
 <context>
@@ -4788,7 +4796,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="44"/>
         <source> Warning</source>
-        <translation type="unfinished"></translation>
+        <translation> Varování</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="45"/>

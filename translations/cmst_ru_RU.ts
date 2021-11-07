@@ -346,12 +346,12 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation type="unfinished">Ошибка Connman</translation>
+        <translation>Ошибка Connman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation type="unfinished">Connman вернул следующую ошибку: &lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Вы хотите попробовать снова?</translation>
+        <translation>Connman вернул следующую ошибку: &lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Вы хотите попробовать снова?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="119"/>
@@ -1198,7 +1198,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="135"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1238"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1248"/>
@@ -2644,7 +2644,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="366"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv6 gateway for this connection. This field is optional and may be left blank&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Шлюз IPv4 для этого соединения. Это поле является необязательным и может быть оставлено пустым &lt;/p&gt; &lt;/body&gt; &lt;/html&gt; {6 ?}</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; Шлюз IPv6 для этого соединения. Это поле является необязательным и может быть оставлено пустым &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="379"/>
@@ -2656,12 +2656,12 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="409"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="419"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv6 address to use for this connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; IPv4-адрес, который будет использоваться для этого соединения. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt; {6 ?}</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt; &lt;p&gt; IPv6-адрес, который будет использоваться для этого соединения. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="450"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Possible values are &amp;quot;auto&amp;quot;, &amp;quot;manual&amp;quot;,  and &amp;quot;off&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Возможны значения &amp;quot;авто&amp;quot;, &amp;quot;ручное&amp;quot;,  и &amp;quot;отключено&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="542"/>
@@ -2683,7 +2683,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="619"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check to enable mDNS.  Note that mDNS requires a DNS backend which supports it.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Отметьте для активации mDNS.  Учтите, что mDNS требует поддержку на стороне бекенда DNS.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used when &amp;quot;manual&amp;quot; is set.List of proxy URIs.  The URI without a protocol will be interpreted as the generic proxy URI.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -2704,17 +2704,19 @@ p, li { white-space: pre-wrap; }
         <source>Check to enable mDNS. Note that mDNS requires a DNS backend which supports it.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Отметьте для активации mDNS. Учтите, что mDNS требует поддержку на стороне бекенда DNS.
+
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="607"/>
         <source>&amp;mDNS</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="622"/>
         <source>Enable mDNS </source>
-        <translation type="unfinished"></translation>
+        <translation>Активировать mDNS </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="640"/>
@@ -2958,27 +2960,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="322"/>
         <source>IPv4</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="325"/>
         <source>Set IPv4 to &quot;off&quot;, &quot;dhcp&quot;, or enter IPV4 address information</source>
-        <translation type="unfinished"></translation>
+        <translation>Установите IPv4 в &quot;отключено&quot;, &quot;dhcp&quot;, или введите информацию о IPV4 адресе</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="330"/>
         <source>IPv6</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="333"/>
         <source>Set IPv6 to &quot;off, &quot;auto&quot;, or enter IPv6 address information</source>
-        <translation type="unfinished"></translation>
+        <translation>Установите IPv6 в &quot;отключено&quot;, &quot;dhcp&quot;, или введите информацию о IPV6 адресе</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="367"/>
         <source>DeviceName</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя устройства</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="370"/>
@@ -2988,7 +2990,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="375"/>
         <source>mDNS</source>
-        <translation type="unfinished"></translation>
+        <translation>mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="378"/>
@@ -3049,19 +3051,19 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="343"/>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="346"/>
         <source>EAP-PEAP</source>
-        <translation type="unfinished"></translation>
+        <translation>EAP-PEAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="351"/>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="354"/>
         <source>EAP-TLS</source>
-        <translation type="unfinished"></translation>
+        <translation>EAP-TLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="359"/>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="362"/>
         <source>EAP-TTLS</source>
-        <translation type="unfinished"></translation>
+        <translation>EAP-TTLS</translation>
     </message>
     <message>
         <source>IPv4 Address</source>
@@ -3223,12 +3225,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="288"/>
         <source>IPv4 Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки IPv4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="289"/>
         <source>IPv6 Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="294"/>
@@ -3283,17 +3285,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="368"/>
         <source>IPv4 Address. &lt;br&gt;&lt;br&gt;Enter the IPv4 network address in the form xxx.xxx.xxx.xxx</source>
-        <translation type="unfinished"></translation>
+        <translation>Адрес IPv4. &lt;br&gt;&lt;br&gt;Введите IPv4 адрес в формате xxx.xxx.xxx.xxx</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="373"/>
         <source>IPv4 Netmask. &lt;br&gt;&lt;br&gt;The entry can be a mask length (example 24) or in the form xxx:xxx:xxx:xxx</source>
-        <translation type="unfinished"></translation>
+        <translation>Маска подсети IPv4. &lt;br&gt;&lt;br&gt;Можно указать длину маски (например 24) или целиком в формате xxx:xxx:xxx:xxx</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="414"/>
         <source>IPv6 Gateway .&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>Шлюз IPv6 .&lt;br&gt;&lt;br&gt;Можно нажать &quot;отмена&quot; и не вводить</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="511"/>
@@ -3304,12 +3306,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="378"/>
         <source>IPv4 Gateway.&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>Шлюз IPv4 .&lt;br&gt;&lt;br&gt;Можно нажать &quot;отмена&quot; и не вводить</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="290"/>
         <source>Enable mDNS</source>
-        <translation type="unfinished"></translation>
+        <translation>Активировать mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="333"/>
@@ -3644,19 +3646,19 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="78"/>
         <source>Invalid arguments</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Неправильные аргументы</translation>
+        <translation>Неправильные аргументы</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="79"/>
         <source>Permission denied</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Доступ запрещён</translation>
+        <translation>Доступ запрещён</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="80"/>
         <source>Passphrase required</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Требуется пароль</translation>
+        <translation>Требуется пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="81"/>
@@ -3674,7 +3676,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="83"/>
         <source>Not supported</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Не поддерживается</translation>
+        <translation>Не поддерживается</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="84"/>
@@ -3692,55 +3694,55 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="86"/>
         <source>No carrier</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>Нет сигнала</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="87"/>
         <source>In progress</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">В процессе</translation>
+        <translation>В процессе</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="88"/>
         <source>Already exists</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Уже существует</translation>
+        <translation>Уже существует</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="89"/>
         <source>Already enabled</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Уже включена</translation>
+        <translation>Уже включена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="90"/>
         <source>Already disabled</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Уже выключена</translation>
+        <translation>Уже выключена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="91"/>
         <source>Already connected</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Уже подключена</translation>
+        <translation>Уже подключена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="92"/>
         <source>Not connected</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Не подключена</translation>
+        <translation>Не подключена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="93"/>
         <source>Operation aborted</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Операция отменена</translation>
+        <translation>Операция отменена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="94"/>
         <source>Operation timeout</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Время ожидания операции вышло</translation>
+        <translation>Время ожидания операции вышло</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="95"/>
@@ -3782,31 +3784,31 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="103"/>
         <source>auto</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished">автоматически</translation>
+        <translation>автоматически</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="104"/>
         <source>manual</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished">вручную</translation>
+        <translation>вручную</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="106"/>
         <source>dhcp</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>DHCP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="107"/>
         <source>manual</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished">вручную</translation>
+        <translation>вручную</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="108"/>
         <source>off</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>отключено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="109"/>
@@ -3818,25 +3820,25 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="110"/>
         <source>address</source>
         <comment>connamn ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>адрес</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="112"/>
         <source>auto</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished">автоматически</translation>
+        <translation>автоматически</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="113"/>
         <source>manual</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished">вручную</translation>
+        <translation>вручную</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="114"/>
         <source>6to4</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>6to4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="115"/>
@@ -3854,43 +3856,43 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="118"/>
         <source>openvpn</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="119"/>
         <source>vpnc</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>vpnc</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="120"/>
         <source>l2tp</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>l2tp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="121"/>
         <source>pptp</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>pptp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="122"/>
         <source>wireguard</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="124"/>
         <source>true</source>
         <comment>connman mdns setting</comment>
-        <translation type="unfinished"></translation>
+        <translation>истинно</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="125"/>
         <source>false</source>
         <comment>connman mdns setting</comment>
-        <translation type="unfinished"></translation>
+        <translation>ложно</translation>
     </message>
     <message>
         <source>auto</source>
@@ -4003,107 +4005,107 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="20"/>
         <source>Username</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя пользователя</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="30"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Имя пользователя WISPr.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Имя пользователя WISPr.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="40"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="50"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr password.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль WISPr.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль WISPr.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="60"/>
         <source>Host</source>
-        <translation type="unfinished">Хост</translation>
+        <translation>Хост</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="74"/>
         <source>Name</source>
-        <translation type="unfinished">Имя</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="88"/>
         <source>OpenConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="94"/>
         <source>CA Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>Корневой сертификат</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="108"/>
         <source>Client Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>Клиентский сертификат</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="118"/>
         <source>Cookie</source>
-        <translation type="unfinished"></translation>
+        <translation>Куки</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="128"/>
         <source>Server Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>Серверный сертификат</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="142"/>
         <source>VPN Host</source>
-        <translation type="unfinished"></translation>
+        <translation>Хост VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="157"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Что это&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Что это&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="160"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="184"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Продолжить процесс подключения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Продолжить процесс подключения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="187"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accept and use the answers you have provided in this dialog. &lt;/p&gt;&lt;p&gt;This will send your input to the connman daemon to continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Принять и использовать ответы, предоставленные вами в этом диалоге. &lt;/p&gt;&lt;p&gt;Это отправит введённый данные демону connman для продолжения процесса подключения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Принять и использовать ответы, предоставленные вами в этом диалоге. &lt;/p&gt;&lt;p&gt;Это отправит введённый данные сервису connman для продолжения процесса подключения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="190"/>
         <source>O&amp;K</source>
-        <translation type="unfinished">O&amp;K</translation>
+        <translation>O&amp;K</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="197"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Отменить процесс подключения.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Отменить процесс подключения.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="200"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the dialog. &lt;/p&gt;&lt;p&gt;This will send a message to the connman daemon that you have cancelled the connection request.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Отменить диалог. &lt;/p&gt;&lt;p&gt;Это отправит сообщение демону connman о том, что вы отменили зпрос на подключение.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Отменить диалог. &lt;/p&gt;&lt;p&gt;Это отправит сообщение сервису connman о том, что вы отменили запрос на подключение.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="203"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Отмена</translation>
+        <translation>&amp;Отмена</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="225"/>
         <source>Save Credentials</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить данные идентификации</translation>
     </message>
 </context>
 <context>
@@ -4116,12 +4118,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="212"/>
         <source>OpenConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="235"/>
         <source>OpenVPN</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="262"/>
@@ -4141,7 +4143,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="411"/>
         <source>All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Все файлы (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="424"/>
@@ -4149,12 +4151,12 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="426"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="427"/>
         <source>Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы сертификатов (*.pem *.ca *.crt *.cert);;Все файлы (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="415"/>
         <source>User:Pass Files (*.up *.txt *.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы авторизации (*.up *.txt *.conf);;Все файлы (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="366"/>
@@ -4164,27 +4166,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="418"/>
         <source>CA Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы корневых сертификатов (*.ca *.cert *.crt *.pem);;Все файлы (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="419"/>
         <source>Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы сертификатов (*.ca *.cert *.crt *.pem);;Все файлы (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="420"/>
         <source>Key Files (*.key *.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы ключей (*.key *.ca *.cert *.crt *.pem);;Все файлы (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="421"/>
         <source>Config Files (*.ovpn *.conf *.config);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы конфигурации (*.ovpn *.conf *.config);;Все файлы (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="456"/>
         <source>VPN server IP address (ex: 1.2.3.4)</source>
-        <translation type="unfinished"></translation>
+        <translation>IP адрес VPN сервера (например 1.2.3.4)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="536"/>
@@ -4199,13 +4201,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="574"/>
         <source>User defined name for the VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>Пользовательское имя VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="575"/>
         <source>Domain name for the VPN Service
 (ex: corporate.com)</source>
-        <translation type="unfinished"></translation>
+        <translation>Доменное имя VPN сервиса
+(например corporate.ru)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="576"/>
@@ -4236,12 +4239,12 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="664"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;You may use this dialog to create one.</source>
-        <translation type="unfinished">&lt;center&gt;Файлы настроек не найдены.&lt;br&gt;Вы можете использовать этот диалог для их создания.</translation>
+        <translation>&lt;center&gt;Файлы настроек не найдены.&lt;br&gt;Вы можете использовать этот диалог для их создания.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="670"/>
         <source>%1 - Information</source>
-        <translation type="unfinished">%1 - Информация</translation>
+        <translation>%1 - Информация</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="671"/>
@@ -4253,57 +4256,57 @@ Ex: 10.2.0.2/24</source>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="710"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="731"/>
         <source>%1 - Select File</source>
-        <translation type="unfinished">%1 - Выбрать файл</translation>
+        <translation>%1 - Выбрать файл</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="679"/>
         <source>Select a file to load.</source>
-        <translation type="unfinished">Выберите файл для загрузки.</translation>
+        <translation>Выберите файл для загрузки.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="704"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;Nothing will be deleted.</source>
-        <translation type="unfinished">&lt;center&gt;Файлы настроек не найдены.&lt;br&gt;Ничего не будет удалено.</translation>
+        <translation>&lt;center&gt;Файлы настроек не найдены.&lt;br&gt;Ничего не будет удалено.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="711"/>
         <source>Select a file to be deleted.</source>
-        <translation type="unfinished">Выберите файл для удаления.</translation>
+        <translation>Выберите файл для удаления.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="732"/>
         <source>Enter a new file name or select&lt;br&gt;an existing file to overwrite.</source>
-        <translation type="unfinished">Введите новое имя файла или выберите&lt;br&gt;существующий файл для перезаписи.</translation>
+        <translation>Введите новое имя файла или выберите&lt;br&gt;существующий файл для перезаписи.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="767"/>
         <source>File read completed</source>
-        <translation type="unfinished">Чтение файла завершено</translation>
+        <translation>Чтение файла завершено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="779"/>
         <source>File deleted</source>
-        <translation type="unfinished">Файл удалён</translation>
+        <translation>Файл удалён</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="781"/>
         <source>Error encountered deleting.</source>
-        <translation type="unfinished">Ошибка удаления.</translation>
+        <translation>Ошибка удаления.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="795"/>
         <source>File save failed.</source>
-        <translation type="unfinished">Не удалось сохранить файл.</translation>
+        <translation>Не удалось сохранить файл.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="798"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished">%L1 КБ записано</translation>
+        <translation>%L1 КБ записано</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="800"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished">%L1 Байтов записано</translation>
+        <translation>%L1 Байтов записано</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="812"/>
@@ -4313,17 +4316,17 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="813"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation type="unfinished">&lt;b&gt;Ошибка имени DBus:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Строка:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Сообщение:&lt;/b&gt; %3</translation>
+        <translation>&lt;b&gt;Имя ошибки DBus:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Строка:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Сообщение:&lt;/b&gt; %3</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="851"/>
         <source>OpenVPN Configurations (*.ovpn  *.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Конфигурации OpenVPN (*.ovpn  *.conf);;Все файлы (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="860"/>
         <source>Select the configuration file to import</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберете файл конфигурации для импорта</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="882"/>
@@ -4338,47 +4341,47 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="909"/>
         <source>Unable to write conf file &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно записать файл конфигурации &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="921"/>
         <source>Create User:Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>Создать файл идентификации</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="922"/>
         <source>Do you wish to create a user:password file for this connection?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы хотите создать файл идентификации для этого соединения?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="927"/>
         <source>User</source>
-        <translation type="unfinished"></translation>
+        <translation>Пользователь</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="928"/>
         <source>Enter the user name for this connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите имя пользователя для этого соединения.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="933"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="934"/>
         <source>Enter the password for this connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите пароль для этого соединения.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="951"/>
         <source>Unable to write user:password file &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно записать файл идентификации &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="961"/>
         <source>Unable to read &lt;b&gt;%1&lt;/b&gt; - Aborting the import</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно прочитать &lt;b&gt;%1&lt;/b&gt; - Импорт прерван</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="969"/>
@@ -4406,7 +4409,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="35"/>
         <source>&amp;Open</source>
-        <translation type="unfinished">&amp;Открыть</translation>
+        <translation>&amp;Открыть</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="48"/>
@@ -4416,17 +4419,17 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation type="unfinished">&amp;Сохранить</translation>
+        <translation>&amp;Сохранить</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="68"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delete a config file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Удалить файл настроек.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Удалить файл настроек.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Удалить</translation>
+        <translation>&amp;Удалить</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="94"/>
