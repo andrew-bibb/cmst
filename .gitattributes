@@ -5,7 +5,7 @@
 .gitignore     export-ignore
 
 
-# several files and directories we never want to export 
+# several files and directories we never want to export
 # a little bit belt and braces as the most of these files
 # should never ever be in the repository
 
@@ -21,3 +21,4 @@
 # 2018.012.29 issue #188 would like readme back in the tarball
 # README.md export-ignore
 building_and_installing.txt export-ignore
+*.sh export-ignore
