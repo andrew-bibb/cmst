@@ -375,7 +375,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="103"/>
         <source>All Devices &amp;Off</source>
-        <translation type="unfinished">Tous les appareils &amp;arrêtés</translation>
+        <translation>Tous les appareils &amp;arrêtés</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="69"/>
@@ -771,7 +771,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="905"/>
         <source>Home</source>
-        <translation type="unfinished">Accueil</translation>
+        <translation>Accueil</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="586"/>
@@ -2384,7 +2384,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Possible values of &lt;span style=&quot; font-weight:600;&quot;&gt;dhcp&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt;, and &lt;span style=&quot; font-weight:600;&quot;&gt;off&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt; is selected boxes for &lt;span style=&quot; font-weight:600;&quot;&gt;Address&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Netmask&lt;/span&gt; and&lt;span style=&quot; font-weight:600;&quot;&gt; Gateway&lt;/span&gt; will become visible.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Valeurs possibles de &lt;span style=&quot; font-weight:600;&quot;&gt;dhcp&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;manuel&lt;/span&gt;, et &lt;span style=&quot; font-weight:600;&quot;&gt;désactivé&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Si &lt;span style=&quot; font-weight:600;&quot;&gt;manuel&lt;/span&gt; est sélectionné pour &lt;span style=&quot; font-weight:600;&quot;&gt;Addresse&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Masque de réseau&lt;/span&gt; et&lt;span style=&quot; font-weight:600;&quot;&gt; Passerelle&lt;/span&gt; deviendrons visibles.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Valeurs possibles de &lt;span style=&quot; font-weight:600;&quot;&gt;dhcp&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;manuel&lt;/span&gt;, et &lt;span style=&quot; font-weight:600;&quot;&gt;désactivé&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Si &lt;span style=&quot; font-weight:600;&quot;&gt;manuel&lt;/span&gt; sont des cases sélectionnées pour &lt;span style=&quot; font-weight:600;&quot;&gt;Adresse&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Masque de réseau&lt;/span&gt; et&lt;span style=&quot; font-weight:600;&quot;&gt; Passerelle&lt;/span&gt; deviendrons visibles.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="321"/>
@@ -2753,7 +2753,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="367"/>
         <source>DeviceName</source>
-        <translation type="unfinished">Nom de l&apos;appareil</translation>
+        <translation>Nom de l&apos;appareil</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="370"/>
@@ -2773,7 +2773,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="383"/>
         <source>AnonymousIdentity</source>
-        <translation type="unfinished">Identité anonyme</translation>
+        <translation>Identité anonyme</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="386"/>
@@ -2783,7 +2783,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="391"/>
         <source>SubjectMatch</source>
-        <translation type="unfinished">SubjectMatch</translation>
+        <translation>Correspondance des sujets</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="394"/>
@@ -2793,7 +2793,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="399"/>
         <source>AltSubjectMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Correspondance avec la touche Alt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="402"/>
@@ -2803,7 +2803,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="407"/>
         <source>DomainSuffixMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Correspondance des suffixes de domaine</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="410"/>
@@ -2813,12 +2813,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="415"/>
         <source>DomainMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Correspondance des domaines</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="418"/>
         <source>A FQDN used as a full match requirement for the authentication server.</source>
-        <translation type="unfinished">Un nom de domaine complet utilisé comme une exigence de correspondance complète pour le serveur d&apos;authentification.</translation>
+        <translation>L&apos;utilisation d&apos;un nom de domaine complet doit correspondre entièrement pour le serveur d&apos;authentification.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="343"/>
@@ -2841,7 +2841,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="338"/>
         <source>IPv6.Privacy</source>
-        <translation type="unfinished">IPv6.Confidentialité</translation>
+        <translation>IPv6.Confidentialité</translation>
     </message>
 </context>
 <context>
@@ -3188,7 +3188,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="38"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Étiquette de texte</translation>
     </message>
 </context>
 <context>
@@ -3251,7 +3251,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="54"/>
         <source>offline</source>
         <comment>connman state string</comment>
-        <translation type="unfinished">hors-ligne</translation>
+        <translation>hors-ligne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="56"/>
@@ -3299,7 +3299,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="63"/>
         <source>gadget</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>gadget</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="64"/>
@@ -3419,7 +3419,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="86"/>
         <source>No carrier</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Aucun transporteur</translation>
+        <translation>Aucun support</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="87"/>
@@ -3563,7 +3563,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="114"/>
         <source>6to4</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished">6to4</translation>
+        <translation>6à4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="115"/>
@@ -3858,7 +3858,7 @@ Ex : 10.2.0.2/24</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="595"/>
         <source>%1 - Text Input</source>
-        <translation type="unfinished">%1 - Saisie de texte</translation>
+        <translation>%1 - Saisie de texte</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="663"/>
@@ -4224,7 +4224,7 @@ que le pair n&apos;est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="380"/>
         <source>Use length bit?</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser la longueur en bit ?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="388"/>

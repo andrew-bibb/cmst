@@ -964,7 +964,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="736"/>
         <source>&amp;VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="742"/>
@@ -1424,7 +1424,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="922"/>
         <source>Offline Mode Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Režim bez připojení vypnut</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="936"/>
@@ -3994,7 +3994,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="961"/>
         <source>Unable to read &lt;b&gt;%1&lt;/b&gt; - Aborting the import</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedaří se číst &lt;b&gt;%1&lt;/b&gt; – import bude přerušen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="969"/>
@@ -4022,7 +4022,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="35"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Otevřít</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="48"/>
@@ -4032,7 +4032,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uložit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="68"/>
@@ -4042,7 +4042,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Smazat</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="94"/>
@@ -4052,7 +4052,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="97"/>
         <source>&amp;Clear Page</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vyčistit stránku</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="111"/>
@@ -4072,27 +4072,27 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="140"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ukončit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="160"/>
         <source>Name of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>Název sítě.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="168"/>
         <source>Description of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>Popis sítě.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="201"/>
         <source>PPTP User Name.</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP uživatelské jméno.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="209"/>
         <source>PPTP Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP heslo.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="217"/>
@@ -4110,37 +4110,37 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="236"/>
         <source>Debug level.</source>
-        <translation type="unfinished"></translation>
+        <translation>Úroveň podrobností ladících informací.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="244"/>
         <source>Deny EAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>Odepřít EAP ověřování?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="252"/>
         <source>Deny PAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>Odepřít PAP ověřování?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="260"/>
         <source>Deny CHAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>Odepřít CHAP ověřování?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="268"/>
         <source>Deny MSCHAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>Odepřít MSCHAPV ověřování?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="276"/>
         <source>Deny MSCHAPV2 authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>Odepřít MSCHAPV2 ověřování?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="284"/>
         <source>Disables BSD compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout BSD kompresi?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="292"/>
@@ -4179,12 +4179,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="340"/>
         <source>L2TP User Name.</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP uživatelské jméno.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="348"/>
         <source>L2TP Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP heslo.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="356"/>
@@ -4204,12 +4204,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="380"/>
         <source>Use length bit?</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít bit týkající se délky?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="388"/>
         <source>Use challenge authentication?</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít ověřování výzvou?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="396"/>
@@ -4229,37 +4229,37 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="420"/>
         <source>Use only one control channel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít pouze jeden řídící kanál?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="428"/>
         <source>Redial if disconnected?</source>
-        <translation type="unfinished"></translation>
+        <translation>V případě odpojení vytočit znovu?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="436"/>
         <source>Wait n seconds before redial.</source>
-        <translation type="unfinished"></translation>
+        <translation>Počkat před opětovným vytočením n sekund.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="444"/>
         <source>Give up redial tries after X attempts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzdát pokusy o opětovné vytočení po X pokusech.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="452"/>
         <source>Require the remote peer to get authenticated via PAP?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyžadovat, aby se vzdálený protějšek ověřil prostřednictvím PAP?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="460"/>
         <source>Require the remote peer to get authenticated via CHAP?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyžadovat, aby se vzdálený protějšek ověřil prostřednictvím CHAP?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="468"/>
         <source>Require the remote peer to authenticate itself?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyžadovat, aby se vzdálený protějšek ověřil?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="476"/>
@@ -4269,7 +4269,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="484"/>
         <source>Authentication file location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Umístění souboru s údaji pro ověření se.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="492"/>
@@ -4284,17 +4284,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="508"/>
         <source>Specify which UDP port should be used.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zadejte, který UDP port má být použit.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="516"/>
         <source>Disable protocol compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout kompresi protokolu?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="524"/>
         <source>Disable address/control compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout kompresi adres / řídících dat?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="564"/>
@@ -4304,12 +4304,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="572"/>
         <source>Your group password (cleartext).</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaše skupinové heslo (čitelný text).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="580"/>
         <source>Your username.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaše uživatelské jméno.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="588"/>
@@ -4324,7 +4324,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="604"/>
         <source>Name of the IKE DH Group.</source>
-        <translation type="unfinished"></translation>
+        <translation>Název IKE DH skupiny.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="612"/>
@@ -4334,32 +4334,32 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="620"/>
         <source>Domain name for authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Doménové jméno pro ověřování.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="628"/>
         <source>Vendor of your IPSec gateway.</source>
-        <translation type="unfinished"></translation>
+        <translation>Výrobce vámi využívané IPSec brány.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="636"/>
         <source>Local ISAKMP port to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Místní ISAKMP port, který použít.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="644"/>
         <source>Local UDP port number to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaké číslo místního UDP portu použít.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="652"/>
         <source>Application version to report.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jakou verzi aplikace hlásit.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="660"/>
         <source>NAT-Traversal method to employ.</source>
-        <translation type="unfinished"></translation>
+        <translation>Metoda obejití NAT překladu, kterou nasadit.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="668"/>
@@ -4369,27 +4369,27 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="676"/>
         <source>Enable single DES encryption.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapíná šifrováním jediným DES.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="684"/>
         <source>Enables using no encryption for data traffic.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypíná šifrování pro datový provoz.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="692"/>
         <source>Certificate authority file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor certifikační autority.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="700"/>
         <source>File containing peer&apos;s signed certificate.</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor obsahující podepsaný certifikát protějšku.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="708"/>
         <source>File containing local peer&apos;s private key.</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor obsahující soukromý klíč místního protějšku.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="748"/>
@@ -4404,7 +4404,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="865"/>
         <source>Provider Wire Guard</source>
-        <translation type="unfinished"></translation>
+        <translation>Poskytovatel Wire Guard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="870"/>
@@ -4414,7 +4414,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="873"/>
         <source>Wheher the VPN should use tun or tap.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zda má VPN použít tun nebo tap zařízení.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="878"/>
@@ -4424,7 +4424,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="881"/>
         <source>Internal IP Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Interní IP adresa</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="886"/>
@@ -4434,7 +4434,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="889"/>
         <source>Local listen port (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>Místní port, na kterém očekávat spojení (volitelné).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="894"/>
@@ -4444,7 +4444,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="897"/>
         <source>List of name servers (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>Seznam jmenných serverů (volitelné).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="902"/>
@@ -4454,7 +4454,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="905"/>
         <source>Private key of the interface.</source>
-        <translation type="unfinished"></translation>
+        <translation>Soukromý klíč rozhraní.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="910"/>
@@ -4464,7 +4464,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="913"/>
         <source>Public key of peer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Veřejný klíč protějšku.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="918"/>
@@ -4474,7 +4474,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="921"/>
         <source>Preshared key of peer (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>Předsdílený klíč protějšku (volitelné).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="926"/>
@@ -4494,7 +4494,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="937"/>
         <source>Endpoint listen port (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>Port na kterém očekávat spojení na koncovém bodu (volitelné).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="942"/>
@@ -4504,7 +4504,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="945"/>
         <source>Keep alive in seconds (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>Interval udržování spojení otevřeného (v sekundách) – volitelné.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="950"/>
@@ -4514,7 +4514,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="953"/>
         <source>Whether the VPN should use tun or tap.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zda má VPN použít tun nebo tap.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="958"/>
@@ -4524,7 +4524,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="961"/>
         <source>Define if self signed server certificates are allowed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Definovat, zda je povoleno použít sám sebou podepsané certifikáty serveru.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="966"/>
@@ -4544,7 +4544,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="977"/>
         <source>Do not ask for IPv6 connectivity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedotazovat se na IPv6 konektivitu.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="982"/>
@@ -4554,7 +4554,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="985"/>
         <source>Disable DTLS and ESP.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout DTLS a ESP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="990"/>
@@ -4564,7 +4564,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="993"/>
         <source>Disable HTTP connection re-use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout druhotnému využití HTTP spojení.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="998"/>
@@ -4584,7 +4584,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1009"/>
         <source>Set login usergroup on remote server.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavit přihlašovací skupinu uživatele na vzdáleném serveru.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1014"/>
@@ -4594,7 +4594,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1017"/>
         <source>SSL private key file needed by web authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>SSL soukromý klíč potřebný pro webové ověřování.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="716"/>
