@@ -1,10 +1,10 @@
-#  We need the qt libraries, we want compiler warnings on, and this is a release version of the program  
+#  We need the qt libraries, we want compiler warnings on, and this is a release version of the program
 CONFIG += qt
 CONFIG += warn_on
 CONFIG += release
-CONFIG += nostrip 
+CONFIG += nostrip
 
-#  Widgets needed for QT5, 
+#  Widgets needed for QT5,
 QT += widgets
 QT += dbus
 QT += network
@@ -78,6 +78,8 @@ RESOURCES 	+= ../../cmst.qrc
 
 ##  Place all object files in their own directory and moc files in their own directory
 ##  This is not necessary but keeps things cleaner.
+system('mkdir -p ./object_files')
+system('mkdir -p ./moc_files')
 OBJECTS_DIR = ./object_files
 MOC_DIR = ./moc_files
 
