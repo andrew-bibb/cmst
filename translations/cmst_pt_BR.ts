@@ -71,7 +71,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="157"/>
         <source>Wireless Internet Service Provider roaming (WISPr)</source>
-        <translation>Roaming de Provedor de Serviços de Internet Sem Fio (WISPr)</translation>
+        <translation>Reencaminhamento do Provedor de Serviços de Internet Sem Fio (WISPr)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="163"/>
@@ -593,7 +593,7 @@
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. . &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta página exibe os serviços de VPN provisionados. Algumas células da tabela podem estar disponíveis apenas após o estabelecimento de uma conexão.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nome:&lt;/span&gt;O nome fornecido no arquivo de provisionamento.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tipo:&lt;/span&gt;O tipo de VPN (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Estado:&lt;/span&gt;Exibe o estado da conexão deste serviço. Passe o rato/mouse sobre o ícone para exibir uma descrição de texto.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hospedeiro:&lt;/span&gt;O IP do hospedeiro (host) da VPN.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domínio:&lt;/span&gt;O domínio da VPN.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta página exibe os serviços de configurações de VPN. Algumas células da tabela podem estar disponíveis apenas após o estabelecimento de uma conexão.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nome:&lt;/span&gt;O nome fornecido no arquivo de configurações.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tipo:&lt;/span&gt;O tipo de VPN (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Estado:&lt;/span&gt;Exibe o estado da conexão deste serviço. Passe o rato/mouse sobre o ícone para exibir uma descrição de texto.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hospedeiro:&lt;/span&gt;O IP do hospedeiro (host) da VPN.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domínio:&lt;/span&gt;O domínio da VPN.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1092"/>
@@ -726,7 +726,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="932"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection that is not marked roaming. &lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Contadores para a conexão de serviço &amp;quot;on-line&amp;quot; que não estão marcados como &amp;quot;roaming&amp;quot;.&lt;/p&gt;&lt;p&gt;Os contadores podem nem sempre estarem disponíveis. Os contadores podem ter sido desativados através da linha de comando (-c or --disable-counters) ou ocasionalmente a conexão será registrada como sendo &amp;quot;pronta&amp;quot; em vez de &amp;quot;on-line&amp;quot;. Quando exibe &amp;quot;on-line&amp;quot;, significa que é uma conexão &amp;quot;pronta&amp;quot; que possui conectividade verificada com à Internet. É possível estar &amp;quot;on-line&amp;quot; apenas com uma conexão &amp;quot;pronta&amp;quot;, porém os contadores só funcionam em uma conexão &amp;quot;on-line&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Contadores para a conexão de serviço &amp;quot;on-line&amp;quot; que não estão marcados como &amp;quot;reencaminhamento&amp;quot; (roaming).&lt;/p&gt;&lt;p&gt;Os contadores podem nem sempre estarem disponíveis. Os contadores podem ter sido desativados através da linha de comando (-c or --disable-counters) ou ocasionalmente a conexão será registrada como sendo &amp;quot;pronta&amp;quot; em vez de &amp;quot;on-line&amp;quot;. Quando exibe &amp;quot;on-line&amp;quot;, significa que é uma conexão &amp;quot;pronta&amp;quot; que possui conectividade verificada com à Internet. É possível estar &amp;quot;on-line&amp;quot; apenas com uma conexão &amp;quot;pronta&amp;quot;, porém os contadores só funcionam em uma conexão &amp;quot;on-line&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="905"/>
@@ -742,12 +742,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="961"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection marked &amp;quot;roaming&amp;quot;.&lt;/p&gt;&lt;p&gt;In the case of cellular services this normally indicates connections to a foreign provider.&lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Contadores para a conexão de serviço &amp;quot;on-line&amp;quot; marcados como &amp;quot;roaming&amp;quot;.&lt;/p&gt;&lt;p&gt;No caso de serviços de telefonia móvel, isto normalmente indica conexões com um provedor de internet estrangeiro&lt;/p&gt;&lt;p&gt;Os contadores podem nem sempre estarem disponíveis. Os contadores podem ter sido desativados através da linha de comando (-c ou --disable-counters) ou ocasionalmente a conexão será registrada como sendo &amp;quot;pronta&amp;quot; em vez de &amp;quot;on-line&amp;quot;. Quando exibe &amp;quot;on-line&amp;quot;, significa que uma conexão &amp;quot;pronta&amp;quot; que possui conectividade verificada com à Internet. É possível estar &amp;quot;on-line&amp;quot; apenas com uma conexão &amp;quot;pronta&amp;quot;, porém os contadores só funcionam para uma conexão &amp;quot;on-line&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Contadores para a conexão de serviço &amp;quot;on-line&amp;quot; marcados como &amp;quot;reencaminhamento&amp;quot; (roaming).&lt;/p&gt;&lt;p&gt;No caso de serviços de telefonia móvel, isto normalmente indica conexões com um provedor de internet estrangeiro&lt;/p&gt;&lt;p&gt;Os contadores podem nem sempre estarem disponíveis. Os contadores podem ter sido desativados através da linha de comando (-c ou --disable-counters) ou ocasionalmente a conexão será registrada como sendo &amp;quot;pronta&amp;quot; em vez de &amp;quot;on-line&amp;quot;. Quando exibe &amp;quot;on-line&amp;quot;, significa que uma conexão &amp;quot;pronta&amp;quot; que possui conectividade verificada com à Internet. É possível estar &amp;quot;on-line&amp;quot; apenas com uma conexão &amp;quot;pronta&amp;quot;, porém os contadores só funcionam para uma conexão &amp;quot;on-line&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="964"/>
         <source>Roaming</source>
-        <translation>Roaming</translation>
+        <translation>Reencaminhamento</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1011"/>
@@ -951,7 +951,7 @@
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB.  If the spedified color matches the tray background we&apos;ve effectively created fake transparency. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Opções de Linha de Comando: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utilizado para contornar uma falha do QT onde os ícones da bandeja do sistema são exibidos com fundos brancos ou pretos em vez de transparentes.&lt;/p&gt;&lt;p&gt;Você pode especificar a cor de fundo do ícone aqui. O formato é um número hexadecimal no formato RRGGBB (vermelho, verde e azul). Se a cor especificada coincidir com a cor do fundo da bandeja, poderá ser utilizada efetivamente uma falsa transparência.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utilizado para contornar uma falha do QT onde os ícones da bandeja do sistema são exibidos com fundos brancos ou pretos em vez de transparentes.&lt;/p&gt;&lt;p&gt;Você pode especificar a cor de fundo do ícone aqui. O formato é um número hexadecimal no formato RRGGBB (vermelho, verde e azul). Se a cor especificada coincidir com a cor do fundo da bandeja, poderá ser utilizada efetivamente uma transparência falsa.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="680"/>
@@ -986,7 +986,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1425"/>
         <source>Fake Transparency</source>
-        <translation>Falsa Transparência</translation>
+        <translation>Transparência Falsa</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1326"/>
@@ -1300,17 +1300,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1916"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the provisioning editor to create or edit Connman configuration (provisioning) files.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. &lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Abre o editor de provisionamento para criar ou editar os arquivos de configuração (provisionamento) do Connman.&lt;/p&gt;&lt;p&gt;Estes arquivos de configuração residem em /var/lib/connman, que pertence a root:root. O CMST irá registrar um roothelper (processo de escalonamento de privilégios em um sistema) para permitir a leitura e escrita/gravação de arquivos neste diretório.&lt;/p&gt;&lt;p&gt;Para evitar o abuso do uso dos privilégios de root, o editor só irá operar em arquivos com nomes que terminam em &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. Este final do nome de arquivo será adicionado automaticamente durante o salvamento do arquivo e não pode ser alterado.&lt;/p&gt;&lt;p&gt;Utilizando este editor, não é possível editar ou excluir arquivos de configuração criados por outros meios.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Abre o editor de configurações para criar ou editar os arquivos de configuração (provisionamento) do Connman.&lt;/p&gt;&lt;p&gt;Estes arquivos de configuração residem em /var/lib/connman, que pertence a root:root. O CMST irá registrar um roothelper (processo de escalonamento de privilégios em um sistema) para permitir a leitura e escrita/gravação de arquivos neste diretório.&lt;/p&gt;&lt;p&gt;Para evitar o abuso do uso dos privilégios de root, o editor só irá operar em arquivos com nomes que terminam em &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. Este final do nome de arquivo será adicionado automaticamente durante o salvamento do arquivo e não pode ser alterado.&lt;/p&gt;&lt;p&gt;Utilizando este editor, não é possível editar ou excluir arquivos de configuração criados por outros meios.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1919"/>
         <source>Provisioning Editor</source>
-        <translation>Editor de Provisionamento</translation>
+        <translation>Editor de Configurações</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1926"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the VPN provisioning editor to create or edit Connman configuration (provisioning) files for VPN connections.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman-vpn which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. &lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Abre o editor de provisionamento de VPN para criar ou editar os arquivos de configuração (provisionamento) do Connman para conexões de VPN.&lt;/p&gt;&lt;p&gt;Estes arquivos de configuração residem em /var/lib/connman-vpn , que é propriedade de root: root. O CMST irá registrar um roothelper (processo de escalonamento de privilégios em um sistema) para permitir a leitura e escrita/gravação de arquivos neste diretório.&lt;/p&gt;&lt;p&gt;Para evitar o abuso do uso dos privilégios de root, o editor só irá operar em arquivos com nomes que terminam em &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. Este final do nome de arquivo será adicionado automaticamente durante o salvamento do arquivo e não pode ser alterado.&lt;/p&gt;&lt;p&gt;Utilizando este editor, não é possível editar ou excluir arquivos de configuração criados por outros meios.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Abre o editor de configurações de VPN para criar ou editar os arquivos de configuração (provisionamento) do Connman para conexões de VPN.&lt;/p&gt;&lt;p&gt;Estes arquivos de configuração residem em /var/lib/connman-vpn , que é propriedade de root: root. O CMST irá registrar um roothelper (processo de escalonamento de privilégios em um sistema) para permitir a leitura e escrita/gravação de arquivos neste diretório.&lt;/p&gt;&lt;p&gt;Para evitar o abuso do uso dos privilégios de root, o editor só irá operar em arquivos com nomes que terminam em &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. Este final do nome de arquivo será adicionado automaticamente durante o salvamento do arquivo e não pode ser alterado.&lt;/p&gt;&lt;p&gt;Utilizando este editor, não é possível editar ou excluir arquivos de configuração criados por outros meios.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1929"/>
@@ -1845,7 +1845,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
         <source>Roaming: %1&lt;br&gt;</source>
-        <translation>Roaming: %1&lt;br&gt;</translation>
+        <translation>Reencaminhamento: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
@@ -2029,7 +2029,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
         <source>&lt;br&gt;Roaming</source>
-        <translation>&lt;br&gt;Roaming</translation>
+        <translation>&lt;br&gt;Reencaminhamento</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2449"/>
@@ -2339,7 +2339,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="41"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked this service will auto-connect when no other connection is available. This is only available for services marked &amp;quot;Favorite&amp;quot;. &lt;/p&gt;&lt;p&gt;The service will not auto-connect while roaming.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se esta opção for marcada, este serviço se conectará automaticamente quando nenhuma outra conexão estiver disponível. Esta opção só está disponível para os serviços marcados como &amp;quot;Favoritos&amp;quot;. &lt;/p&gt;&lt;p&gt;O serviço não se conecta automaticamente se estiver em roaming.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se esta opção for marcada, este serviço se conectará automaticamente quando nenhuma outra conexão estiver disponível. Esta opção só está disponível para os serviços marcados como &amp;quot;Favoritos&amp;quot;. &lt;/p&gt;&lt;p&gt;O serviço não se conecta automaticamente se estiver em modo de reencaminhamento (roaming).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="73"/>
@@ -2573,7 +2573,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="14"/>
         <source>Provisioning Editor</source>
-        <translation>Editor de Provisionamento</translation>
+        <translation>Editor de Configurações</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="23"/>
@@ -2789,7 +2789,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="370"/>
         <source>Interface name where this provisioning applies (ex: eth0)</source>
-        <translation>Nome da interface onde este provisionamento se aplica (por exemplo: eth0)</translation>
+        <translation>Nome da interface onde estas configurações se aplicam (por exemplo: eth0)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="375"/>
@@ -3106,7 +3106,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="333"/>
         <source>The interface name in which to apply the provisioning (ex. eth0)</source>
-        <translation>O nome da interface na qual será aplicado o provisionamento (por exemplo: eth0)</translation>
+        <translation>O nome da interface na qual será aplicada as configurações (por exemplo: eth0)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="407"/>
@@ -4062,7 +4062,7 @@ Por exemplo: 10.2.0.2/24</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="969"/>
         <source>OpenVPN import is complete.  The provisioning file may now be saved.</source>
-        <translation>A importação do OpenVPN foi concluída.  O arquivo de provisionamento agora pode ser salvo.</translation>
+        <translation>A importação do OpenVPN foi concluída.  O arquivo de configurações agora pode ser salvo.</translation>
     </message>
 </context>
 <context>
@@ -4070,7 +4070,7 @@ Por exemplo: 10.2.0.2/24</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="14"/>
         <source>VPN Provisioning Editor</source>
-        <translation>Editor de Provisionamento do VPN</translation>
+        <translation>Editor de Configurações de VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="23"/>
@@ -4846,7 +4846,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="140"/>
         <source>If tray icon fake transparency is required, specify the background color to use (format: 0xRRGGBB)</source>
-        <translation>Se for necessária uma falsa transparência do ícone da bandeja, especifique a cor de fundo a ser utilizada (formato: 0xRRGGBB)</translation>
+        <translation>Se for necessária uma transparência falsa do ícone da bandeja, especifique a cor de fundo a ser utilizada (formato: 0xRRGGBB)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="141"/>
