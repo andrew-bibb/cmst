@@ -447,7 +447,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="230"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="636"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2376"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2377"/>
         <source>Connected</source>
         <translation>Bağlı</translation>
     </message>
@@ -527,9 +527,8 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ayrıntılı bilgileri görüntülemek istediğiniz hizmeti seçmek için bu Açılan Kutuyu kullanın.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="564"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service  is a hidden wifi service.  It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tüm hizmetler için varsayılan yapılandırma yöntemi otomatiktir veya DHCP gibidir. Bu, çoğu tipik kullanım için yeterince iyi olmalıdır, ancak bu düğme değilse, seçilen Hizmet için Ethernet ve IP ayarlarının manuel olarak yapılandırılmasına izin verecektir.&lt;/p&gt;&lt;p&gt;Hizmet harici bir yapılandırma dosyası aracılığıyla sağlanırsa veya hizmet gizli bir wifi hizmeti ise bu düğme devre dışı bırakılır. Bu hizmetlerin özelliklerini değiştirmek mümkün değildir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tüm hizmetler için varsayılan yapılandırma yöntemi otomatiktir veya DHCP gibidir. Bu, çoğu tipik kullanım için yeterince iyi olmalıdır, ancak bu düğme değilse, seçilen Hizmet için Ethernet ve IP ayarlarının manuel olarak yapılandırılmasına izin verecektir.&lt;/p&gt;&lt;p&gt;Hizmet harici bir yapılandırma dosyası aracılığıyla sağlanırsa veya hizmet gizli bir wifi hizmeti ise bu düğme devre dışı bırakılır. Bu hizmetlerin özelliklerini değiştirmek mümkün değildir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="567"/>
@@ -542,9 +541,8 @@
         <translation>&amp;Kablosuz</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="586"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;SIgnal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu sayfada bilinen WiFi hizmetleri gösterilmektedir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ad:&lt;/span&gt; Ağın SSID&apos;si.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sık Kullanılan:&lt;/span&gt; Bu sütundaki kalp simgesi, bu bilgisayarın daha önce bu hizmeti kullanarak ağa bağlantı yaptığını gösterir.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bağlı:&lt;/span&gt; Bu hizmetin bağlantı durumunu gösterir. Bir metin açıklaması açmak için fareyi simgenin üzerine getirin. Çevrimiçi bir İnternet bağlantısının mevcut olduğunu ve doğrulandığını gösterir. Hazır, başarılı bir şekilde bağlanmış bir aygıta sinyal verir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Güvenlik: &lt;/span&gt;Bu hizmet için kullanılan güvenlik türünü açıklar. Olası değerler &amp;quot;yok&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, ve &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sinyal Gücü:&lt;/span&gt; WiFi sinyalinin gücü, 0 ila 100 arasında bir değere normalize edildi.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu sayfada bilinen WiFi hizmetleri gösterilmektedir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ad:&lt;/span&gt; Ağın SSID&apos;si.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sık Kullanılan:&lt;/span&gt; Bu sütundaki kalp simgesi, bu bilgisayarın daha önce bu hizmeti kullanarak ağa bağlantı yaptığını gösterir.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bağlı:&lt;/span&gt; Bu hizmetin bağlantı durumunu gösterir. Bir metin açıklaması açmak için fareyi simgenin üzerine getirin. Çevrimiçi bir İnternet bağlantısının mevcut olduğunu ve doğrulandığını gösterir. Hazır, başarılı bir şekilde bağlanmış bir aygıta sinyal verir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Güvenlik: &lt;/span&gt;Bu hizmet için kullanılan güvenlik türünü açıklar. Olası değerler &amp;quot;yok&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, ve &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sinyal Gücü:&lt;/span&gt; WiFi sinyalinin gücü, 0 ila 100 arasında bir değere normalize edildi.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="654"/>
@@ -589,9 +587,8 @@
         <translation>Wifi Durumu</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="790"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. . &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu sayfada sağlanan VPN hizmetleri gösterilmektedir. Tablodaki bazı hücreler ancak bir bağlantı kurulduktan sonra kullanılabilir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ad:&lt;/span&gt; Yetkilendirme dosyasında verilen ad.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tür:&lt;/span&gt; VPN türü (OpenConnect, OpenVPN, PPTP, vb.)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Durum:&lt;/span&gt; Bu hizmetin bağlantı durumunu gösterir. Bir metin açıklaması açmak için fareyi simgenin üzerine getirin. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ana Bilgisayar: &lt;/span&gt;VPN Ana Bilgisayar IP&apos;si.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Alan Adı:&lt;/span&gt; VPN Alan adı.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu sayfada sağlanan VPN hizmetleri gösterilmektedir. Tablodaki bazı hücreler ancak bir bağlantı kurulduktan sonra kullanılabilir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ad:&lt;/span&gt; Yetkilendirme dosyasında verilen ad.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tür:&lt;/span&gt; VPN türü (OpenConnect, OpenVPN, PPTP, vb.)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Durum:&lt;/span&gt; Bu hizmetin bağlantı durumunu gösterir. Bir metin açıklaması açmak için fareyi simgenin üzerine getirin. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ana Bilgisayar: &lt;/span&gt;VPN Ana Bilgisayar IP&apos;si.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Alan Adı:&lt;/span&gt; VPN Alan adı.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1092"/>
@@ -1165,6 +1162,21 @@
         <translation>...</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="564"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service is of type VPN. It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="586"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="790"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1248"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Internal icons can be colorized. You may select a color using the button to the left, or you may type in the #RGB color yourself.&lt;/p&gt;&lt;p&gt;If you type the entry it must have leading # sign. Example: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dahili simgeler renklendirilebilir. Soldaki düğmeyi kullanarak bir renk seçebilir veya #RGB rengini kendiniz yazabilirsiniz.&lt;/p&gt;&lt;p&gt;Girdiyi yazarsanız, başında # işareti olması gerekir. Örnek: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -1416,7 +1428,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="686"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2697"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2698"/>
         <source>Cancel</source>
         <translation>İptal et</translation>
     </message>
@@ -1490,7 +1502,7 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;b&gt;Teknoloji: %1&lt;/b&gt;&lt;p&gt;Lütfen bağlantı kurmak için istemcilerin kullanması&lt;br&gt;gereken WPA ön paylaşımlı anahtarını girin.&lt;p&gt;PSK uzunluğu: en az 8 karakter.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2267"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2268"/>
         <source>Ethernet Connection
 </source>
         <comment>icon_tool_tip</comment>
@@ -1498,15 +1510,15 @@ p, li { white-space: pre-wrap; }
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2268"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2295"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2269"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2296"/>
         <source>Service: %1
 </source>
         <translation>Hizmet: %1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2274"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2275"/>
         <source>WiFi Connection
 </source>
         <comment>icon_tool_tip</comment>
@@ -1514,46 +1526,46 @@ p, li { white-space: pre-wrap; }
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2276"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2277"/>
         <source>SSID: %1
 </source>
         <translation>SSID: %1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2281"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2282"/>
         <source>Security: %1
 </source>
         <translation type="unfinished">Güvenlik: %1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2282"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2283"/>
         <source>Strength: %1%
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2293"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2294"/>
         <source>VPN Connection
 </source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2294"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2295"/>
         <source>Type: %1
 </source>
         <translation type="unfinished">Tür: %1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2296"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2297"/>
         <source>Host: %1</source>
         <translation>Host: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2744"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2745"/>
         <source> Warning</source>
         <translation> Uyarı</translation>
     </message>
@@ -1617,334 +1629,334 @@ p, li { white-space: pre-wrap; }
         <translation>Hizmet Türü: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1563"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1564"/>
         <source>Service State: %1&lt;br&gt;</source>
         <translation>Hizmet Durumu: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1564"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1565"/>
         <source>Favorite: %1&lt;br&gt;</source>
         <translation>Sık Kullanılan: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1564"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1565"/>
         <source>Yes</source>
         <comment>favorite</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1564"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1565"/>
         <source>No</source>
         <comment>favorite</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1565"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
         <source>External Configuration File: %1&lt;br&gt;</source>
         <translation>Harici Yapılandırma Dosyası: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1565"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
         <source>Yes</source>
         <comment>immutable</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1565"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
         <source>No</source>
         <comment>immutable</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1567"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1568"/>
         <source>Auto Connect: %1&lt;br&gt;</source>
         <translation>Otomatik Bağlantı: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1567"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1568"/>
         <source>On</source>
         <comment>autoconnect</comment>
         <translation>Açık</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1567"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1568"/>
         <source>No</source>
         <comment>autoconnect</comment>
         <translation>Kapalı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1569"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1570"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1571"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1572"/>
         <source>IP Address Acquisition: %1&lt;br&gt;</source>
         <translation>IP Adresi Edinme: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1572"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1579"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1614"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1573"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1580"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1615"/>
         <source>IP Address: %1&lt;br&gt;</source>
         <translation>IP Adresi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1573"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1574"/>
         <source>IP Netmask: %1&lt;br&gt;</source>
         <translation>IP Ağ Maskesi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1574"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1585"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1575"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1586"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
         <translation>IP Geçidi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1576"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1577"/>
         <source>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1578"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1591"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1579"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1592"/>
         <source>Address Acquisition: %1&lt;br&gt;</source>
         <translation>Adres Edinme: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1582"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1583"/>
         <source>Prefix Length: &lt;br&gt;</source>
         <translation>Önek Uzunluğu: &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1584"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1585"/>
         <source>Prefix Length: %1&lt;br&gt;</source>
         <translation>Önek Uzunluğu: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1586"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1587"/>
         <source>Privacy: %1&lt;br&gt;</source>
         <translation>Gizlilik: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1588"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1589"/>
         <source>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1593"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1594"/>
         <source>URL: %1&lt;br&gt;</source>
         <translation>URL: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1596"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1597"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation>Sunucular:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1597"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1598"/>
         <source>Excludes:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation>Dışlananlar:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1602"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1603"/>
         <source>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1603"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1604"/>
         <source>Support Enabled: %1&lt;br&gt;</source>
         <translation>Destek Etkin: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1603"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1604"/>
         <source>Yes</source>
         <comment>mdns</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1603"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1604"/>
         <source>No</source>
         <comment>mdns</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1612"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1613"/>
         <source>&lt;br&gt;&lt;b&gt;Last Address Conflict&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Son Adres Çakışması&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1616"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
         <source>MAC Address: %1&lt;br&gt;</source>
         <translation>MAC Adresi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1618"/>
         <source>Conflict detected on: %1&lt;br&gt;</source>
         <translation>Çakışma saptandı: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1618"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1619"/>
         <source>Resolved: %1&lt;br&gt;</source>
         <translation>Kararlı: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1618"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1619"/>
         <source>Yes</source>
         <comment>last_address_conflict</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1618"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1619"/>
         <source>No</source>
         <comment>last_address_conflict</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1627"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1628"/>
         <source>&lt;br&gt;&lt;b&gt;Name Servers&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Ad Sunucuları&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1630"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1631"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Time Servers&lt;/b&gt;&lt;br&gt;  </source>
         <translation>&lt;br&gt;&lt;b&gt;Zaman Sunucuları&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1633"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1634"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Search Domains&lt;/b&gt;&lt;br&gt;  </source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Alan Adlarında Ara&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1636"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1637"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1638"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1639"/>
         <source>Connection Method: %1&lt;br&gt;</source>
         <translation>Bağlantı Yöntemi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1639"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1640"/>
         <source>Interface: %1&lt;br&gt;</source>
         <translation>Arayüz: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1640"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1641"/>
         <source>Device Address: %1&lt;br&gt;</source>
         <translation>Aygıt Adresi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1641"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1642"/>
         <source>MTU: %1&lt;br&gt;</source>
         <translation>MTU: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1643"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1644"/>
         <source>&lt;br&gt;&lt;b&gt;Wireless&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Kablosuz&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1648"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1649"/>
         <source>Security: %1&lt;br&gt;</source>
         <translation>Güvenlik: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1649"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1650"/>
         <source>Strength: %1&lt;br&gt;</source>
         <translation>Kuvvet: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1650"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
         <source>Roaming: %1&lt;br&gt;</source>
         <translation>Dolaşım: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1650"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
         <source>Yes</source>
         <comment>roaming</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1650"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
         <source>No</source>
         <comment>roaming</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1652"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1653"/>
         <source>&lt;br&gt;&lt;b&gt;VPN Provider&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;VPN Sağlayıcı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1654"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1655"/>
         <source>Host: %1&lt;br&gt;</source>
         <translation>Ana Bilgisayar: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1655"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1656"/>
         <source>Domain: %1&lt;br&gt;</source>
         <translation>Alan Adı: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1656"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1657"/>
         <source>Name: %1&lt;br&gt;</source>
         <translation>Ad: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1657"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1658"/>
         <source>Type: %1&lt;br&gt;</source>
         <translation>Tür: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1798"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1799"/>
         <source>State: </source>
         <translation>Durum: </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1805"/>
         <source>Engaged</source>
         <translation>Etkin</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1809"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2378"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2449"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1810"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2379"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2450"/>
         <source>Disabled</source>
         <translation>Devre Dışı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1812"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1813"/>
         <source>Offline Mode </source>
         <translation>Çevrimdışı Mod </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1866"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1867"/>
         <source>Yes</source>
         <comment>connected</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1866"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1867"/>
         <source>No</source>
         <comment>connected</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1873"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1874"/>
         <source>On</source>
         <comment>tethering</comment>
         <translation>Açık</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1878"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1879"/>
         <source>Off</source>
         <comment>tethering</comment>
         <translation>Kapalı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2210"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2211"/>
         <source>Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.</source>
         <translation>Sayaçların güncelleme çözünürlüğü %L1 KB veri eşiğine ve %L2 saniye süresine dayanmaktadır.</translation>
     </message>
@@ -1958,8 +1970,8 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Hizmet: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2269"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2283"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2270"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2284"/>
         <source>Interface: %1</source>
         <translation>Arayüz: %1</translation>
     </message>
@@ -1987,103 +1999,103 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Bağlantı Hazır Durumunda.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2310"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2311"/>
         <source>Connection is in the Failure State, attempting to reestablish the connection</source>
         <comment>icon_tool_tip</comment>
         <translation>Bağlantı Başarısız Durumunda, bağlantıyı yeniden kurmaya çalışıyor</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2314"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2315"/>
         <source>Connection is in the Failure State.</source>
         <comment>icon_tool_tip</comment>
         <translation>Bağlantı Başarısız Durumunda.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2320"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2321"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
         <translation>Bağlı Değil</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2327"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2328"/>
         <source>Error retrieving properties via Dbus</source>
         <translation>Dbus aracılığıyla özellikler alınırken hata oluştu</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2328"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2329"/>
         <source>Connection status is unknown</source>
         <translation>Bağlantı durumu bilinmiyen</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2372"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2373"/>
         <source>Type: %1</source>
         <translation>Tür: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2373"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2374"/>
         <source>&lt;br&gt;Powered </source>
         <translation>&lt;br&gt;Güç </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2374"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2375"/>
         <source>On</source>
         <translation>Açık</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2374"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2375"/>
         <source>Off</source>
         <translation>Kapalı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2376"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2377"/>
         <source>Not Connected</source>
         <translation>Bağlı Değil</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2377"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2378"/>
         <source>&lt;br&gt;Tethering </source>
         <translation>&lt;br&gt;Paylaşım </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2378"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2449"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2379"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2450"/>
         <source>Enabled</source>
         <translation>Etkin</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2436"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2465"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2437"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2466"/>
         <source>Connection : %1</source>
         <translation>Bağlantı : %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2438"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2439"/>
         <source>Signal Strength: %1%</source>
         <translation>Sinyal Gücü: %1%</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2440"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2441"/>
         <source>Favorite Connection</source>
         <translation>Sık Kullanılan Bağlantı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2440"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2441"/>
         <source>Never Connected</source>
         <translation>Hiç Bağlanmadı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2447"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
         <source>&lt;br&gt;Roaming</source>
         <translation>&lt;br&gt;Dolaşım</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2449"/>
         <source>&lt;br&gt;Autoconnect is </source>
         <translation>&lt;br&gt;Otomatik bağlı </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2435"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2464"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2436"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2465"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
@@ -2093,117 +2105,117 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;center&gt;Bu program sürüm 2.5 &lt;b&gt;AwOken&lt;/b&gt; simge setini kullanır&lt;br&gt;&lt;br&gt;Creative Commons&lt;br&gt;Atıf-Benzer Paylaşım 3.0&lt;br&gt; Aktarılmamış Lisansı&lt;br&gt; altında yayınlandı&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1853"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1854"/>
         <source>On</source>
         <comment>powered</comment>
         <translation>Açık</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1858"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1859"/>
         <source>Off</source>
         <comment>powered</comment>
         <translation>Kapalı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2446"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2447"/>
         <source>Security: %1</source>
         <translation>Güvenlik: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2745"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2746"/>
         <source>&lt;center&gt;&lt;b&gt;Unable to find a systemtray on this machine.&lt;/b&gt;&lt;center&gt;&lt;br&gt;The program may still be used to manage your connections, but the tray icon will be disabled.&lt;center&gt;&lt;br&gt;&lt;br&gt;If you are seeing this message at system start up and you know a system tray exists once the system is up, try starting with the &lt;b&gt;-w&lt;/b&gt; switch and set a delay as necessary.  The exact wait time will vary from system to system.</source>
         <translation>&lt;center&gt;&lt;b&gt;Bu makinede bir sistem çekmecesi bulunamadı.&lt;/b&gt;&lt;center&gt;&lt;br&gt;Program yine de bağlantılarınızı yönetmek için kullanılabilir, ancak çekmece simgesi devre dışı bırakılır.&lt;center&gt;&lt;br&gt;&lt;br&gt;Bu iletiyi sistem başlangıcında görüyorsanız ve sistem açıldığında bir sistem çekmecesi olduğunu biliyorsanız, &lt;b&gt;-w&lt;/b&gt; anahtarıyla başlatmayı deneyin ve gerektiği şekilde bir gecikme ayarlayın.  Kesin bekleme süresi sistemden sisteme değişecektir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2927"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2928"/>
         <source>Could not find a connection to the system bus</source>
         <translation>Sistem veri yoluna bağlantı bulunamadı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2928"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2933"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2929"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2934"/>
         <source>%1 - Critical Error</source>
         <translation>%1 - Ciddi Hata</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2929"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2930"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation>Sistem veri yoluna bağlantı bulunamadı.&lt;br&gt;&lt;br&gt;%1 connman ile iletişim kuramayacak.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2932"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2933"/>
         <source>Could not create an interface to connman on the system bus</source>
         <translation>Sistem veri yolunda connman için bir arayüz oluşturulamadı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2934"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2935"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
         <translation>Sistem veriyolundaki connman için bir arayüz oluşturulamıyor.&lt;br&gt;&lt;br&gt;%1 connman ile iletişim kuramayacak.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2937"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2938"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
         <translation>connman.Manager.GetProperties okunurken veya ayrıştırılırken hata oluştu</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2938"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2943"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2948"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2939"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2944"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2949"/>
         <source>%1 - Warning</source>
         <translation>%1 - Uyarı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2939"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2940"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
         <translation>connman.Manager.GetProperties yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;Herhangi bir %1 bölümünün işlevsel olması pek olası değildir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2942"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2943"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
         <translation>connman.Manager.GetTechnologies okunurken veya ayrıştırılırken hata oluştu</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2944"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2945"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation>connman.Manager.GetTechnologies yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;%1&apos;in bir kısmı hala işlevsel olabilir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2947"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2948"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
         <translation>connman.Manager.GetServices okunurken veya ayrıştırılırken hata oluştu</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2949"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2950"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
         <translation>connman.Manager.GetServices yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;%1&apos;in bir kısmı hala işlevsel olabilir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2956"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2957"/>
         <source>Could not create an interface to connman-vpn on the system bus</source>
         <translation>Sistem veriyolunda connman-vpn için bir arayüz oluşturulamadı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3017"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3018"/>
         <source>[Hidden Wifi]</source>
         <translation>[Gizli Wifi]</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3069"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3070"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
         <translation>Bu sistemde %1 sürüm %2 %3 tarafından algılandı.&lt;p&gt;Bu sunucu masaüstü Bildirim Belirtimi sürüm %4 destekliyor</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3081"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3082"/>
         <source>Attempt %1 of %2 looking for notification server.</source>
         <translation>%2&apos;nin %1&apos;i bildirim sunucusunu arıyor.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3084"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3085"/>
         <source>Unable to connect to a notification server after %1 tries.</source>
         <translation>%1 denemesinden sonra bir bildirim sunucusuna bağlanılamıyor.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3197"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3198"/>
         <source>Colorize Icons</source>
         <translation>Simgeleri Renklendir</translation>
     </message>
@@ -2227,7 +2239,7 @@ p, li { white-space: pre-wrap; }
         <translation>Bağlantıyı Kes düğmesine basmadan önce bir hizmet seçmeniz gerekir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2371"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2372"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 Properties&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 Özellikleri&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
@@ -2236,7 +2248,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Bir Bildirim sunucusu bulunamıyor veya bir sunucuya bağlanılamıyor.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2012"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2013"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
         <translation>  WiFi Teknolojileri:&lt;br&gt;  %1 Bulundu, %2 Güçlü</translation>
     </message>
@@ -2353,6 +2365,11 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="299"/>
         <source>IPv&amp;6</source>
         <translation>IPv&amp;6</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="352"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable or disable the IPv6 privacy extension as described in RFC 4941.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Disabled&lt;/span&gt;: privacy extension is disabled and normal autoconf addresses are used.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled&lt;/span&gt;: the system prefers to use public addresses over temporary addresses.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prefered&lt;/span&gt;: privacy extension is enabled and the system prefers temporary addresses over public addresses.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IPv6 gizlilik uzantısını RFC 4941&apos;de açıklandığı gibi etkinleştirin veya devre dışı bırakın,&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Devre Dışı&lt;/span&gt;: gizlilik uzantısı devre dışı bırakılır ve normal autoconf adresleri kullanılır.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Etkin&lt;/span&gt;: sistem genel adresleri geçici adresler yerine kullanmayı tercih eder.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tercih Edilen&lt;/span&gt;: gizlilik uzantısı etkinleştirilir ve sistem genel adreslere göre geçici adresleri tercih eder.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {6 ?} {4941.?} {600;?} {600;?} {600;?}</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="399"/>
@@ -2474,9 +2491,19 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="352"/>
+        <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="549"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Used when &amp;quot;manual&amp;quot; is set. List of proxy URIs. The URI without a protocol will be interpreted as the generic proxy URI.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <comment>property editor</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable or disable the IPv6 privacy extension as described in RFC 4941,&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Disabled&lt;/span&gt;: privacy extension is disabled and normal autoconf addresses are used.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled&lt;/span&gt;: the system prefers to use public addresses over temporary addresses.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prefered&lt;/span&gt;: privacy extension is enabled and the system prefers temporary addresses over public addresses.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IPv6 gizlilik uzantısını RFC 4941&apos;de açıklandığı gibi etkinleştirin veya devre dışı bırakın,&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Devre Dışı&lt;/span&gt;: gizlilik uzantısı devre dışı bırakılır ve normal autoconf adresleri kullanılır.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Etkin&lt;/span&gt;: sistem genel adresleri geçici adresler yerine kullanmayı tercih eder.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tercih Edilen&lt;/span&gt;: gizlilik uzantısı etkinleştirilir ve sistem genel adreslere göre geçici adresleri tercih eder.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IPv6 gizlilik uzantısını RFC 4941&apos;de açıklandığı gibi etkinleştirin veya devre dışı bırakın,&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Devre Dışı&lt;/span&gt;: gizlilik uzantısı devre dışı bırakılır ve normal autoconf adresleri kullanılır.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Etkin&lt;/span&gt;: sistem genel adresleri geçici adresler yerine kullanmayı tercih eder.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tercih Edilen&lt;/span&gt;: gizlilik uzantısı etkinleştirilir ve sistem genel adreslere göre geçici adresleri tercih eder.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="366"/>
@@ -2505,17 +2532,6 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="542"/>
         <source>Servers</source>
         <translation>Sunucular</translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="549"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Used when &amp;quot;manual&amp;quot; is set.List of proxy URIs. The URI without a protocol will be interpreted as the generic proxy URI.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <comment>property editor</comment>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="619"/>
@@ -4450,9 +4466,8 @@ seçeneğiyle kullanılabilir.</translation>
         <translation>IKE DH Grubunun adı.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="612"/>
         <source>DH gropup to use for perfect forward secrecy. </source>
-        <translation>Mükemmel ileri gizlilik için kullanılacak DH grubu. </translation>
+        <translation type="vanished">Mükemmel ileri gizlilik için kullanılacak DH grubu. </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="620"/>
@@ -4727,6 +4742,11 @@ seçeneğiyle kullanılabilir.</translation>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="716"/>
         <source>MTU of the tunnel.</source>
         <translation>Tünelin MTU&apos;su.</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="612"/>
+        <source>DH group to use for perfect forward secrecy. </source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="724"/>
