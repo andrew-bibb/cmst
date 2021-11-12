@@ -37,8 +37,8 @@ SOURCES	+= ./code/roothelper/roothelper.cpp
 
 ##  Place all object files in their own directory and moc files in their own directory
 ##  This is not necessary but keeps things cleaner.
-system('mkdir -p ./object_files')
-system('mkdir -p ./moc_files')
+system(mkdir -p './object_files')
+system(mkdir -p './moc_files')
 OBJECTS_DIR = ./object_files
 MOC_DIR = ./moc_files
 
