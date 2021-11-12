@@ -3,3 +3,4 @@ moc_*.cpp
 moc_*.h
 *.o
 Makefile
+*.qm
