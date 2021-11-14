@@ -111,7 +111,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="235"/>
         <source>WiFi Protected Setup (WPS)</source>
-        <translation>Configuração Protegida de Wi-Fi (WPS)</translation>
+        <translation>Configurações de Proteção de Rede Wi-Fi (WPS)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="243"/>
@@ -375,7 +375,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="100"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This checkbox controls the global setting for switching all radios on or off. When checked all radios are powered down.&lt;/p&gt;&lt;p&gt;When the system is In offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta caixa de seleção controla a configuração global para ligar ou desligar todos os rádios. Quando esta caixa é marcada, todos os rádios são desligados.&lt;/p&gt;&lt;p&gt;Quando o sistema está em modo off-line, é possível ligar os dispositivos individuais novamente. Ao sair do modo off-line, a política individual de cada dispositivo determina se o rádio está ou não ligado novamente.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta caixa de seleção controla a configuração global para ligar ou desligar todos os rádios. Quando esta caixa é marcada, todos os rádios são desligados.&lt;/p&gt;&lt;p&gt;Quando o sistema está em modo desligado ou sem conexão (off-line), é possível ligar ou conectar os dispositivos individuais novamente. Ao sair do modo off-line, a política individual de cada dispositivo determina se o rádio está ou não ligado novamente.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="103"/>
@@ -406,7 +406,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="80"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="132"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A configuração global para ligar ou desligar todos os rádios. Quando o modo off-line é ligado, todos os rádios são desligados.&lt;/p&gt;&lt;p&gt;Enquanto que no modo off-line é possível ligar os dispositivos individuais novamente. Ao sair do modo off-line, a política individual de cada dispositivo determina se o rádio está ou não ligado novamente.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A configuração global para ligar ou desligar todos os rádios. Quando o modo desligado ou sem conexão (off-line) é ligado, todos os rádios são desligados.&lt;/p&gt;&lt;p&gt;Enquanto que no modo off-line é possível ligar ou conectar os dispositivos individuais novamente. Ao sair do modo off-line, a política individual de cada dispositivo determina se o rádio está ou não ligado novamente.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="83"/>
@@ -584,12 +584,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="706"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This label shows the number of WiFi technologies (devices) that were found, and the number that are powered on. There must be at least one WiFi technology found and powered in order for the box below to show services.&lt;/p&gt;&lt;p&gt;To turn a technology on or off go to the &lt;span style=&quot; font-weight:600;&quot;&gt;Technologies&lt;/span&gt; box in the &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; tab and double click on the text that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Este rótulo exibe o número de dispositivos com tecnologias Wi-Fi que foram encontrados e o número que estão ligados. Deve haver pelo menos uma tecnologia Wi-Fi encontrada e ativada para que a caixa abaixo exiba os serviços.&lt;/p&gt;&lt;p&gt;Para ligar ou desligar uma tecnologia, vá para a caixa&lt;span style=&quot; font-weight:600;&quot;&gt;Tecnologias&lt;/span&gt;na aba ou guia&lt;span style=&quot; font-weight:600;&quot;&gt;Estado&lt;/span&gt;e clique duas vezes no texto que aparece na coluna&lt;span style=&quot; font-weight:600;&quot;&gt;Dispositivo&lt;/span&gt;para a tecnologia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Este rótulo exibe o número de dispositivos com tecnologias Wi-Fi (sem fio) que foram encontrados e o número que estão ligados. Deve haver pelo menos uma tecnologia Wi-Fi encontrada e ativada para que a caixa abaixo exiba os serviços.&lt;/p&gt;&lt;p&gt;Para ligar ou desligar uma tecnologia, vá para a caixa&lt;span style=&quot; font-weight:600;&quot;&gt;Tecnologias&lt;/span&gt;na aba ou guia&lt;span style=&quot; font-weight:600;&quot;&gt;Estado&lt;/span&gt;e clique duas vezes no texto que aparece na coluna&lt;span style=&quot; font-weight:600;&quot;&gt;Dispositivo&lt;/span&gt;para a tecnologia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="709"/>
         <source>Wifi State</source>
-        <translation>Estado do Wi-Fi</translation>
+        <translation>Estado da rede Wi-Fi (sem fio)</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. . &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -598,7 +598,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1092"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will implement an internet kill switch for VPN connections. If a VPN connection drops while the kill switch is enabled all technologies will be powered off.&lt;/p&gt;&lt;p&gt;The way this works is the service order is monitored. If the topmost service is of type VPN and then if it changes to something other than VPN and if the change was not initiated by the user (for instance by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Disconnect&lt;/span&gt; button in the VPN tab), then CMST will cycle through all technologies powering each one down in turn. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se esta opção for marcada, o CMST implementará uma comutação de internet para as conexões VPN. Se uma conexão VPN cair enquanto o comutador &apos;kill&apos; estiver ativado, todas as tecnologias serão desligadas.&lt;/p&gt;&lt;p&gt;A forma como este serviço funciona é a ordem de serviço monitorada. Se o serviço mais alto for do tipo VPN e, em seguida, se ocorrer uma alteração para algo diferente de VPN e se a alteração não foi iniciada pelo usuário (por exemplo, utilizando o botão &lt;span style=&quot; font-weight:600;&quot;&gt;Desconectar&lt;/span&gt; na aba ou guia VPN, então o CMST percorrerá todas as tecnologias, alimentando cada uma delas por sua vez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se esta opção for marcada, o CMST implementará uma comutação de internet para as conexões de VPN. Se uma conexão de VPN cair enquanto o comutador &apos;kill&apos; estiver ativado, todas as tecnologias serão desligadas.&lt;/p&gt;&lt;p&gt;A forma como este serviço funciona é a ordem de serviço monitorada. Se o serviço mais alto for do tipo VPN e, em seguida, se ocorrer uma alteração para algo diferente de VPN e se a alteração não foi iniciada pelo usuário (por exemplo, utilizando o botão &lt;span style=&quot; font-weight:600;&quot;&gt;Desconectar&lt;/span&gt; na aba ou guia VPN, o CMST percorrerá todas as tecnologias desconectando todos os dispositivos, um de cada vez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1095"/>
@@ -1066,12 +1066,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="273"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To edit the ID and Password of a tethered WiFi device click this button.&lt;/p&gt;&lt;p&gt;The ID and Password are what clients will have to enter to connect to the ad-hoc network. This is only valid for WiFi connections&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique neste botão para editar o ID e a Senha de um dispositivo Wi-Fi conectado.&lt;/p&gt;&lt;p&gt;O ID e a Senha são o que os clientes terão que inserir para se conectar à rede ad-hoc. Isto é válido apenas para conexões Wi-Fi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique neste botão para editar o ID e a Senha de um dispositivo Wi-Fi (sem fio) conectado.&lt;/p&gt;&lt;p&gt;O ID e a Senha são o que os clientes terão que inserir para se conectar à rede ad-hoc. Isto é válido apenas para conexões Wi-Fi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="276"/>
         <source>ID:Pass</source>
-        <translation>ID:Senha</translation>
+        <translation>ID:Passe</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="283"/>
@@ -1111,7 +1111,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1059"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If a Connman service falls into the &amp;quot;Failed&amp;quot; state it will normally remain in that state.&lt;/p&gt;&lt;p&gt;If this box is checked CMST will try to automatically reconnect a WiFi service that enters the &amp;quot;Failed&amp;quot; state. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se um serviço Connman passar a ter o estado de &amp;quot;Falha&amp;quot;, normalmente será exibido esta mensagem no estado.&lt;/p&gt;&lt;p&gt;Se esta caixa de opção estiver marcada, o CMST tentará reconectar automaticamente em um serviço de Wi-Fi que passou a ter o estado de &amp;quot;Falha&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se um serviço Connman passar a ter o estado de &amp;quot;Falha&amp;quot;, normalmente será exibido esta mensagem no estado.&lt;/p&gt;&lt;p&gt;Se esta caixa de opção estiver marcada, o CMST tentará reconectar automaticamente em um serviço de Wi-Fi (sem fio) que passou a ter o estado de &amp;quot;Falha&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1062"/>
@@ -1137,17 +1137,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="564"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service is of type VPN. It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;O método de configuração padrão para todos os serviços é automático ou algo como DHCP. Isto deve ser bom o suficiente para a maioria dos usos mais comuns, mas se não for, este botão permitirá a configuração manual das configurações de Ethernet e de endereço de IP para o serviço selecionado.&lt;/p&gt;&lt;p&gt;Este botão será desativado se o serviço for fornecido por meio de um arquivo de configuração externo ou se o serviço for do tipo VPN. Não é possível modificar as propriedades destes serviços.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="586"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta página exibe os serviços Wi-Fi (sem fio) disponíveis. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nome:&lt;/span&gt; O SSID é o nome da rede.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorito:&lt;/span&gt; O ícone de um coração quando é exibido nesta coluna indica que este computador já fez uma conexão à rede utilizando este serviço.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;Conectado:&lt;/span&gt; Exibe o estado da conexão deste serviço. Passe o rato/mouse sobre o ícone para exibir uma descrição de texto. O estado on-line sinaliza que uma conexão com à Internet e está disponível e foi verificada. O estado &amp;quot;pronto&amp;quot; sinaliza que um dispositivo está conectado com sucesso. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Segurança: &lt;/span&gt;Descreve o tipo de segurança utilizado para este serviço. Os valores possíveis são &amp;quot;nenhum&amp;quot;, &amp;quot;WEP&amp;quot;, &amp;quot;PSK&amp;quot;, &amp;quot;IEEE 802.1X&amp;quot; e &amp;quot;WPS&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Intensidade do Sinal:&lt;/span&gt; É a intensidade de força do sinal Wi-Fi normalizada em uma escala de 0 a 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="790"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta página exibe os serviços de configurações de VPN. Algumas células da tabela podem estar disponíveis apenas após o estabelecimento de uma conexão.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nome:&lt;/span&gt; O nome fornecido no arquivo do editor de configurações.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tipo:&lt;/span&gt; O tipo de VPN (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Estado:&lt;/span&gt; Exibe o estado da conexão deste serviço. Passe o rato/mouse sobre o ícone para exibir uma descrição de texto.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hospedeiro:&lt;/span&gt; O IP do hospedeiro (host) da VPN.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domínio:&lt;/span&gt; O domínio da VPN.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1248"/>
@@ -1167,7 +1167,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1618"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This area is to specify a program or process to run after a wifi or vpn service button is pressed, but before the connect method is sent to ConnMan. This is mainly used to modify a .cmst.config file which seems useful to modify certain short lived entries for openConnect vpn connections.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;Execute&lt;/span&gt; box will only be executed prior to making a connection for the single service shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Service&lt;/span&gt; box. It will not be called when connecting to any other service. If a .cmst.config file is to be modified a check must in the &lt;span style=&quot; font-weight:600;&quot;&gt;Modify Service File&lt;/span&gt; box and the path and name of the file to be modified must be provided.&lt;/p&gt;&lt;p&gt;To modify a .cmst.config file CMST will read stdout of the program or process being called. Program output should be individual lines in KEY=VALUE format. If KEY exists in the .cmst.config file it will be replaced by the new VALUE. If KEY does not exist it will be appended. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta área é para especificar um programa ou processo a ser executado após um botão de serviço Wi-Fi ou VPN ser pressionado, mas antes que o método de conexão seja enviado ao ConnMan. Isto é utilizado principalmente para modificar o arquivo .cmst.config que parece útil para modificar certas entradas de curta duração para conexões de VPN do openConnect.&lt;/p&gt;&lt;p&gt;O programa ou processo na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Executar&lt;/span&gt; só será executado antes de fazer uma conexão para o único serviço exibido na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Serviço&lt;/span&gt;. Ele não será chamado ao se conectar a qualquer outro serviço. Se um arquivo .cmst.config tiver que ser modificado, uma marca de seleção deverá ser feita na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Modificar o Arquivo de Serviço&lt;/span&gt;, o caminho e o nome do arquivo a ser modificado deverão ser fornecidos.&lt;/p&gt;&lt;p&gt;Para modificar o arquivo .cmst.config, o CMST irá ler o stdout do programa ou processo que está sendo chamado. A saída do programa deve ser de linhas individuais no formato KEY=VALUE. Se KEY existir no arquivo .cmst.config, ele será substituído pelo novo valor de VALUE. Se KEY não existir, ele será anexado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta área é para especificar um programa ou processo a ser executado após um botão do serviço de rede Wi-Fi (sem fio) ou de VPN ser pressionado, mas antes que o método de conexão seja enviado ao ConnMan. Isto é utilizado principalmente para modificar o arquivo .cmst.config que parece útil para modificar certas entradas de curta duração para conexões de VPN do openConnect.&lt;/p&gt;&lt;p&gt;O programa ou processo na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Executar&lt;/span&gt; só será executado antes de fazer uma conexão para o único serviço exibido na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Serviço&lt;/span&gt;. Ele não será chamado ao se conectar a qualquer outro serviço. Se um arquivo .cmst.config tiver que ser modificado, uma marca de seleção deverá ser feita na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Modificar o Arquivo de Serviço&lt;/span&gt;, o caminho e o nome do arquivo a ser modificado deverão ser fornecidos.&lt;/p&gt;&lt;p&gt;Para modificar o arquivo .cmst.config, o CMST irá ler o stdout do programa ou processo que está sendo chamado. A saída do programa deve ser de linhas individuais no formato KEY=VALUE. Se KEY existir no arquivo .cmst.config, ele será substituído pelo novo valor de VALUE. Se KEY não existir, ele será anexado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1621"/>
@@ -1371,7 +1371,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="151"/>
         <source>WiFi Connections</source>
-        <translation>Conexões de Wi-Fi</translation>
+        <translation>Conexões de Rede Wi-Fi (Sem Fio)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="152"/>
@@ -1499,7 +1499,7 @@ p, li { white-space: pre-wrap; }
         <source>WiFi Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation>Conexão de Wi-Fi
+        <translation>Conexão de Wi-Fi (Sem Fio)
 </translation>
     </message>
     <message>
@@ -2140,7 +2140,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3018"/>
         <source>[Hidden Wifi]</source>
-        <translation>[Ocultar o Wi-Fi]</translation>
+        <translation>[Ocultar a Rede Sem Fio - Wi-Fi]</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3070"/>
@@ -2185,7 +2185,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2013"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
-        <translation>  Tecnologias Wi-Fi:&lt;br&gt;  %1 Encontrado(s), %2 Conectado(s)</translation>
+        <translation>  Tecnologias Wi-Fi (sem fio):&lt;br&gt;  %1 Encontrado(s), %2 Conectado(s)</translation>
     </message>
 </context>
 <context>
@@ -2485,7 +2485,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable or disable the IPv6 privacy extension as described in RFC 4941.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Disabled&lt;/span&gt;: privacy extension is disabled and normal autoconf addresses are used.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled&lt;/span&gt;: the system prefers to use public addresses over temporary addresses.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prefered&lt;/span&gt;: privacy extension is enabled and the system prefers temporary addresses over public addresses.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ativa ou desativa a extensão de privacidade IPv6 conforme descrito em RFC 4941.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desativado&lt;/span&gt;: a extensão de privacidade é desativada e são utilizados os endereços normais do autoconf.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ativado&lt;/span&gt;: o sistema prefere utilizar os endereços públicos em vez de endereços temporários.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Preferido&lt;/span&gt;: a extensão de privacidade está ativada e o sistema prefere endereços temporários em vez de endereços públicos.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {6 ?} {4941.?} {600;?} {600;?} {600;?}</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ativa ou desativa a extensão de privacidade de IPv6 conforme descrito em RFC 4941.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desativado&lt;/span&gt;: a extensão de privacidade é desativada e são utilizados os endereços normais do autoconf.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ativado&lt;/span&gt;: o sistema prefere utilizar os endereços públicos em vez de endereços temporários.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Preferido&lt;/span&gt;: a extensão de privacidade está ativada e o sistema prefere endereços temporários em vez de endereços públicos.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="549"/>
@@ -2496,7 +2496,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Used when &amp;quot;manual&amp;quot; is set. List of proxy URIs. The URI without a protocol will be interpreted as the generic proxy URI.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;É utilizado quando o modo manual é definido. Lista os URIs de proxy. O URI sem um protocolo será interpretado como o URI de proxy genérico.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Insira um ou mais endereços de IP. Separe cada endereço inserido por vírgula, ponto e vírgula ou espaço em branco.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="568"/>
@@ -4672,7 +4677,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="612"/>
         <source>DH group to use for perfect forward secrecy. </source>
-        <translation type="unfinished"></translation>
+        <translation>O grupo de DH a ser utilizado para o sigilo de encaminhamento perfeito. </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="724"/>
