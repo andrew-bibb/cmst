@@ -4,7 +4,7 @@
 <ul>
 <li>Disable configuration button when service is VPN.</li>
 <li>Fix for issue #240.</li>
-<li>Pull Requests #221-#224, #227-#234 #236, #239, #241, #243 translations from Weblate.</li>
+<li>Pull Requests translations from Weblate.</li>
 <li>Pull Request #218 (Fix getting ConnMan version)</li>
 <li>Added translation to Bulgarian.</li>
 </ul>
