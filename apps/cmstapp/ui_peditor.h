@@ -589,7 +589,7 @@ public:
 #endif // QT_CONFIG(whatsthis)
         comboBox_ipv6privacy->setCurrentText(QString());
 #if QT_CONFIG(whatsthis)
-        label_6->setWhatsThis(QCoreApplication::translate("Peditor", "<html><head/><body><p>Enable or disable the IPv6 privacy extension as described in RFC 4941,</p><p><span style=\" font-weight:600;\">Disabled</span>: privacy extension is disabled and normal autoconf addresses are used.</p><p><span style=\" font-weight:600;\">Enabled</span>: the system prefers to use public addresses over temporary addresses.</p><p><span style=\" font-weight:600;\">Prefered</span>: privacy extension is enabled and the system prefers temporary addresses over public addresses.</p><p><br/></p></body></html>", nullptr));
+        label_6->setWhatsThis(QCoreApplication::translate("Peditor", "<html><head/><body><p>Enable or disable the IPv6 privacy extension as described in RFC 4941.</p><p><span style=\" font-weight:600;\">Disabled</span>: privacy extension is disabled and normal autoconf addresses are used.</p><p><span style=\" font-weight:600;\">Enabled</span>: the system prefers to use public addresses over temporary addresses.</p><p><span style=\" font-weight:600;\">Prefered</span>: privacy extension is enabled and the system prefers temporary addresses over public addresses.</p><p><br/></p></body></html>", nullptr));
 #endif // QT_CONFIG(whatsthis)
         label_6->setText(QCoreApplication::translate("Peditor", "Privacy", nullptr));
 #if QT_CONFIG(whatsthis)
@@ -634,7 +634,7 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Used when &quot;manual&quot; is set.List of proxy URIs. The URI without a protocol will be interpreted as the generic proxy URI.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Used when &quot;manual&quot; is set. List of proxy URIs. The URI without a protocol will be interpreted as the generic proxy URI.</p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, or by white space.</p></body></html>", "property editor"));
 #endif // QT_CONFIG(whatsthis)
         label_12->setText(QCoreApplication::translate("Peditor", "Excludes", nullptr));

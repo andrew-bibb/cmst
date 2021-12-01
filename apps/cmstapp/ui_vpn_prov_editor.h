@@ -711,7 +711,7 @@ public:
         actionVPNC_IKE_DHGroup->setToolTip(QCoreApplication::translate("VPN_Prov", "Name of the IKE DH Group.", nullptr));
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(tooltip)
-        actionVPNC_PFS->setToolTip(QCoreApplication::translate("VPN_Prov", "DH gropup to use for perfect forward secrecy. ", nullptr));
+        actionVPNC_PFS->setToolTip(QCoreApplication::translate("VPN_Prov", "DH group to use for perfect forward secrecy. ", nullptr));
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(tooltip)
         actionVPNC_Domain->setToolTip(QCoreApplication::translate("VPN_Prov", "Domain name for authentication.", nullptr));

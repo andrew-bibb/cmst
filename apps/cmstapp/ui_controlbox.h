@@ -758,7 +758,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_4 = new QWidget();
         scrollAreaWidgetContents_4->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_4"));
-        scrollAreaWidgetContents_4->setGeometry(QRect(0, -274, 693, 740));
+        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 693, 740));
         gridLayout_8 = new QGridLayout(scrollAreaWidgetContents_4);
         gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
         groupBox_programcontrol = new QGroupBox(scrollAreaWidgetContents_4);
@@ -1276,7 +1276,7 @@ public:
         QObject::connect(checkBox_modifyservicefile, SIGNAL(clicked(bool)), comboBox_beforeconnectservicefile, SLOT(setEnabled(bool)));
         QObject::connect(checkBox_advanced, SIGNAL(clicked(bool)), groupBox_process, SLOT(setVisible(bool)));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(ControlBox);
@@ -1383,7 +1383,7 @@ public:
         label_details_connection->setText(QString());
         label_details_left->setText(QString());
 #if QT_CONFIG(whatsthis)
-        pushButton_configuration->setWhatsThis(QCoreApplication::translate("ControlBox", "<html><head/><body><p>The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.</p><p>This button will be disabled if the service is provisioned via an external config file or if the service  is a hidden wifi service.  It is not possible to modify the properties of these services.</p></body></html>", nullptr));
+        pushButton_configuration->setWhatsThis(QCoreApplication::translate("ControlBox", "<html><head/><body><p>The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.</p><p>This button will be disabled if the service is provisioned via an external config file or if the service is of type VPN. It is not possible to modify the properties of these services.</p></body></html>", nullptr));
 #endif // QT_CONFIG(whatsthis)
         pushButton_configuration->setText(QCoreApplication::translate("ControlBox", "Configuration", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Details), QCoreApplication::translate("ControlBox", "&Details", nullptr));
@@ -1401,7 +1401,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem14 = tableWidget_wifi->horizontalHeaderItem(4);
         ___qtablewidgetitem14->setText(QCoreApplication::translate("ControlBox", "Signal Strength", nullptr));
 #if QT_CONFIG(whatsthis)
-        tableWidget_wifi->setWhatsThis(QCoreApplication::translate("ControlBox", "<html><head/><body><p>This page shows the known WiFi services. </p><p><span style=\" font-weight:600;\">Name:</span> The SSID of the network.</p><p><span style=\" font-weight:600;\">Favorite:</span> A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.</p><p><span style=\" font-weight:600;\">Connected:</span> Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. </p><p><span style=\" font-weight:600;\">Security: </span>Describes the type of security used for this service. Possible values are &quot;none&quot;, &quot;wep&quot;, &quot;psk&quot;, &quot;ieee8021x&quot;, and &quot;wps&quot;.</p><p><span style=\" font-weight:600;\">SIgnal Strength:</span> The strength of the WiFi signal, normalized to a scale of 0 to 100.</p><p><br/></p></body></html>", nullptr));
+        tableWidget_wifi->setWhatsThis(QCoreApplication::translate("ControlBox", "<html><head/><body><p>This page shows the known WiFi services. </p><p><span style=\" font-weight:600;\">Name:</span> The SSID of the network.</p><p><span style=\" font-weight:600;\">Favorite:</span> A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.</p><p><span style=\" font-weight:600;\">Connected:</span> Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. </p><p><span style=\" font-weight:600;\">Security: </span>Describes the type of security used for this service. Possible values are &quot;none&quot;, &quot;wep&quot;, &quot;psk&quot;, &quot;ieee8021x&quot;, and &quot;wps&quot;.</p><p><span style=\" font-weight:600;\">Signal Strength:</span> The strength of the WiFi signal, normalized to a scale of 0 to 100.</p><p><br/></p></body></html>", nullptr));
 #endif // QT_CONFIG(whatsthis)
         groupBox_wireless_utils->setTitle(QCoreApplication::translate("ControlBox", "Wireless Services", nullptr));
 #if QT_CONFIG(whatsthis)
@@ -1448,7 +1448,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem19 = tableWidget_vpn->horizontalHeaderItem(4);
         ___qtablewidgetitem19->setText(QCoreApplication::translate("ControlBox", "Connection", nullptr));
 #if QT_CONFIG(whatsthis)
-        tableWidget_vpn->setWhatsThis(QCoreApplication::translate("ControlBox", "<html><head/><body><p>This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. </p><p><span style=\" font-weight:600;\">Name:</span> The name given in the provisioning file.</p><p><span style=\" font-weight:600;\">Type:</span> The VPN type (OpenConnect, OpenVPN, PPTP, etc)</p><p><span style=\" font-weight:600;\">State:</span> Shows the connection state of this service. Hover the mouse over the icon to popup a text description. . </p><p><span style=\" font-weight:600;\">Host: </span>VPN Host IP.</p><p><span style=\" font-weight:600;\">Domain:</span> The VPN Domain.<br/></p></body></html>", nullptr));
+        tableWidget_vpn->setWhatsThis(QCoreApplication::translate("ControlBox", "<html><head/><body><p>This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. </p><p><span style=\" font-weight:600;\">Name:</span> The name given in the provisioning file.</p><p><span style=\" font-weight:600;\">Type:</span> The VPN type (OpenConnect, OpenVPN, PPTP, etc)</p><p><span style=\" font-weight:600;\">State:</span> Shows the connection state of this service. Hover the mouse over the icon to popup a text description. </p><p><span style=\" font-weight:600;\">Host: </span>VPN Host IP.</p><p><span style=\" font-weight:600;\">Domain:</span> The VPN Domain.<br/></p></body></html>", nullptr));
 #endif // QT_CONFIG(whatsthis)
         tabWidget->setTabText(tabWidget->indexOf(VPN), QCoreApplication::translate("ControlBox", "&VPN", nullptr));
 #if QT_CONFIG(whatsthis)
