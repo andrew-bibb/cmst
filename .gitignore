@@ -9,3 +9,4 @@ Makefile
 ./rootapp/*.cpp
 ./rootap/*.h
 *.gz
+*.sh
