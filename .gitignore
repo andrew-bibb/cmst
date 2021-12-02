@@ -6,7 +6,9 @@ Makefile
 *.qm
 ./apps/cmstapp/*.cpp
 ./apps/cmstapp/*.h
+./apps/cmstapp/cmst
 ./apps/rootapp/*.cpp
-./apps/rootap/*.h
+./apps/rootapp/*.h
+./apps/rootapp/cmstroothelper
 *.gz
 *.sh
