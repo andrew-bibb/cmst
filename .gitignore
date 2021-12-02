@@ -4,9 +4,9 @@ moc_*.h
 *.o
 Makefile
 *.qm
-./cmstapp/*.cpp
-./cmstapp/*.h
-./rootapp/*.cpp
-./rootap/*.h
+./apps/cmstapp/*.cpp
+./apps/cmstapp/*.h
+./apps/rootapp/*.cpp
+./apps/rootap/*.h
 *.gz
 *.sh
