@@ -40,41 +40,42 @@ DEALINGS IN THE SOFTWARE.
 
 struct IconElement
 {
-	QString resource_path;
-	QString colorize;
-	QString fdo_name;
-	QStringList theme_names;
+   QString resource_path;
+   QString colorize;
+   QString fdo_name;
+   QStringList theme_names;
 };
 
 class IconManager : public QObject
 {
   Q_OBJECT
 
-  public:
-  // members
+   public:
+   // members
     IconManager(QObject* parent);
-    
-  // functions
-		QIcon getIcon(const QString&);
-		QString getIconName(const QString&);
-		inline void setIconColor(const QColor& col) {icon_color = col;}
-  
-  private:
-  // members
-		QMap<QString, IconElement> icon_map; 
-		QString cfg;
-		QString qrc;
-		QColor icon_color;
-		
-	// functions
-		bool buildResourceIcon(QIcon&, const QString&, const QString&);
-		bool buildThemeIcon(QIcon&, const QString&);	
-		QString getFallback(const QString&);
-		void makeLocalFile();	
-		QString extractValue(const QString&);
-		QString extractKey(const QString&);
-		QPixmap processArt(const QString&, const QColor&);
-		QString findQualifiedName(const QString&, const QStringList& = QStringList() );
-  
+
+   // functions
+      QIcon getIcon(const QString&);
+      QString getIconName(const QString&);
+      inline void setIconColor(const QColor& col) {icon_color = col;}
+
+   private:
+   // members
+      QMap<QString, IconElement> icon_map;
+      QString cfg;
+      QString qrc;
+      QColor icon_color;
+
+   // functions
+      bool buildResourceIcon(QIcon&, const QString&, const QString&);
+      bool buildThemeIcon(QIcon&, const QString&);
+      QString getFallback(const QString&);
+      void makeLocalFile();
+      QString extractValue(const QString&);
+      QString extractKey(const QString&);
+      QPixmap processArt(const QString&, const QColor&);
+      QString findQualifiedName(const QString&, const QStringList& = QStringList() );
+
 };
+
 #endif
