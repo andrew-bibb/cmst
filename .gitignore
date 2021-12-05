@@ -2,8 +2,8 @@
 moc_*.cpp
 moc_*.h
 *.o
-Makefile
 *.qm
+Makefile
 ./apps/cmstapp/*.cpp
 ./apps/cmstapp/*.h
 ./apps/cmstapp/cmst

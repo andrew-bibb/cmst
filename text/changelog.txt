@@ -1,6 +1,11 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b>In Progress</b>
+<b> IN PROGRESS</b>
+<ul>
+<li>Added scroll bars to Agent dialog (issue #242).</li>
+</ul>
+
+<b> 2021.12.02</b>
 <ul>
 <li>Disable configuration button when service is VPN.</li>
 <li>Fix for issue #240.</li>
