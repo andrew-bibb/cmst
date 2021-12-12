@@ -60,13 +60,6 @@ int main(int argc, char *argv[])
   QApplication::setDesktopSettingsAware(true);
   QApplication app(argc, argv);
 
-  // create translator object
-  QTranslator translator;
-  bool ok = translator.load(":/translations/translations/.qm/cmst_" + QLocale::system().name());
-  if (ok)
-   app.installTranslator(&translator);
-
-
   // make sure only one instance is running
   QLocalSocket* socket = new QLocalSocket();
   socket->connectToServer(SOCKET_NAME);
@@ -167,11 +160,11 @@ int main(int argc, char *argv[])
   app.installTranslator(&qtTranslator);
 
   QTranslator cmstTranslator;
-  if (cmstTranslator.load("cmst_" + QLocale::system().name(), ":/translations/translations" ) ) {
+  if (cmstTranslator.load(":/translations/translations/.qm/cmst_" + QLocale::system().name()) ) {
 		app.installTranslator(&cmstTranslator);
 	}
 	// else use en_US as it contains Connman strings properized and some singular/plural strings
-	else if (cmstTranslator.load("cmst_en_US", ":/translations/translations" ) ) {
+	else if (cmstTranslator.load(":/translations/translations/.qm/cmst_en_US") ) {
 		app.installTranslator(&cmstTranslator);
 	}
 
