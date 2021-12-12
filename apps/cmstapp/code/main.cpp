@@ -63,8 +63,6 @@ int main(int argc, char *argv[])
   // create translator object
   QTranslator translator;
   bool ok = translator.load(":/translations/translations/.qm/cmst_" + QLocale::system().name());
-  qDebug() << " locale is: " << QLocale::system().name();
-  qDebug()  << "translator is " << ok;
   if (ok)
    app.installTranslator(&translator);
 
