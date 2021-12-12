@@ -1,6 +1,6 @@
 #  Need a make file to make other make files
 TEMPLATE = subdirs
-SUBDIRS = ./apps/cmstapp ./apps/rootapp
+SUBDIRS = ./translations ./apps/cmstapp ./apps/rootapp
 
 # cmst build variables
 include(cmst.pri)
@@ -10,25 +10,7 @@ mkpath(./apps/cmstapp/moc_files)
 mkpath(./apps/cmstapp/object_files)
 mkpath(./apps/rootapp/moc_files)
 mkpath(./apps/rootapp/object_files)
-
-# translations
-TRANSLATIONS += ./translations/cmst_bg_BG.ts
-TRANSLATIONS += ./translations/cmst_de_DE.ts
-TRANSLATIONS += ./translations/cmst_en_US.ts
-TRANSLATIONS += ./translations/cmst_es_CO.ts
-TRANSLATIONS += ./translations/cmst_es_ES.ts
-TRANSLATIONS += ./translations/cmst_fr_FR.ts
-TRANSLATIONS += ./translations/cmst_hu_HU.ts
-TRANSLATIONS += ./translations/cmst_it_IT.ts
-TRANSLATIONS += ./translations/cmst_nb_NO.ts
-TRANSLATIONS += ./translations/cmst_nl_NL.ts
-TRANSLATIONS += ./translations/cmst_pl_PL.ts
-TRANSLATIONS += ./translations/cmst_pt_BR.ts
-TRANSLATIONS += ./translations/cmst_ru_RU.ts
-TRANSLATIONS += ./translations/cmst_si.ts
-TRANSLATIONS += ./translations/cmst_tr_TR.ts
-TRANSLATIONS += ./translations/cmst_uk.ts
-TRANSLATIONS += ./translations/cmst_zh_CN.ts
+mkpath(./translations/.qm)
 
 # non-application files which need to be installed
 #

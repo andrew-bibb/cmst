@@ -14,20 +14,6 @@
     <file>stylesheets/tabwidget.qss</file>
     <file>stylesheets/vpn_connecting.qss</file>
   </qresource>
-  <qresource prefix="translations">
-    <file>translations/cmst_bg_BG.qm</file>
-    <file>translations/cmst_de_DE.qm</file>
-    <file>translations/cmst_en_US.qm</file>
-    <file>translations/cmst_es_ES.qm</file>
-    <file>translations/cmst_fr_FR.qm</file>
-    <file>translations/cmst_hu_HU.qm</file>
-    <file>translations/cmst_it_IT.qm</file>
-    <file>translations/cmst_nl_NL.qm</file>
-    <file>translations/cmst_pl_PL.qm</file>
-    <file>translations/cmst_ru_RU.qm</file>
-    <file>translations/cmst_tr_TR.qm</file>
-    <file>translations/cmst_zh_CN.qm</file>
-  </qresource>
   <qresource prefix="icons">
     <file>images/interface/radio.png</file>
     <file>images/interface/basic-plane.png</file>
