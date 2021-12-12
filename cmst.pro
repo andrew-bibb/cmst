@@ -5,6 +5,12 @@ SUBDIRS = ./apps/cmstapp ./apps/rootapp
 # cmst build variables
 include(cmst.pri)
 
+# create required build directories
+mkpath(./apps/cmstapp/moc_files)
+mkpath(./apps/cmstapp/object_files)
+mkpath(./apps/rootapp/moc_files)
+mkpath(./apps/rootapp/object_files)
+
 # translations
 TRANSLATIONS += ./translations/cmst_bg_BG.ts
 TRANSLATIONS += ./translations/cmst_de_DE.ts
