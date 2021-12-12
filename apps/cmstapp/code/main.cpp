@@ -1,6 +1,6 @@
 /**************************** main.cpp *********************************
 
-C++ main routine. 
+C++ main routine.
 
 Copyright (C) 2013-2021
 by: Andrew J. Bibb
@@ -60,6 +60,15 @@ int main(int argc, char *argv[])
   QApplication::setDesktopSettingsAware(true);
   QApplication app(argc, argv);
 
+  // create translator object
+  QTranslator translator;
+  bool ok = translator.load(":/translations/translations/.qm/cmst_" + QLocale::system().name());
+  qDebug() << " locale is: " << QLocale::system().name();
+  qDebug()  << "translator is " << ok;
+  if (ok)
+   app.installTranslator(&translator);
+
+
   // make sure only one instance is running
   QLocalSocket* socket = new QLocalSocket();
   socket->connectToServer(SOCKET_NAME);
@@ -90,7 +99,7 @@ int main(int argc, char *argv[])
   QCommandLineOption disableTrayIcon(QStringList() << "d" << "disable-tray-icon",
 		QCoreApplication::translate("main.cpp", "Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.") );
   parser.addOption(disableTrayIcon);
-  
+
   parser.addHelpOption();
 
   QCommandLineOption useIconTheme(QStringList() << "i" << "icon-theme",
@@ -106,14 +115,14 @@ int main(int argc, char *argv[])
   QCommandLineOption startMinimized(QStringList() << "m" << "minimized",
 		QCoreApplication::translate("main.cpp", "Start the GUI minimized in the system tray.") );
   parser.addOption(startMinimized);
-  
+
   QCommandLineOption disableMinimize(QStringList() << "M" << "disable-minimize",
 		QCoreApplication::translate("main.cpp", "Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.") );
-  parser.addOption(disableMinimize);  
-  
+  parser.addOption(disableMinimize);
+
   QCommandLineOption disableVPN(QStringList() << "n" << "disable-vpn",
 		QCoreApplication::translate("main.cpp", "Disable VPN support.") );
-  parser.addOption(disableVPN);  
+  parser.addOption(disableVPN);
 
   parser.addVersionOption();
 

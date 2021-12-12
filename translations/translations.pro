@@ -23,4 +23,3 @@ TRANSLATIONS += ./cmst_uk.ts
 TRANSLATIONS += ./cmst_zh_CN.ts
 
 CONFIG += lrelease
-
