@@ -22,4 +22,6 @@ TRANSLATIONS += ./cmst_tr_TR.ts
 TRANSLATIONS += ./cmst_uk.ts
 TRANSLATIONS += ./cmst_zh_CN.ts
 
+# create required build directories
+mkpath(./.qm)
 CONFIG += lrelease

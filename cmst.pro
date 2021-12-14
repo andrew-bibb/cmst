@@ -5,13 +5,6 @@ SUBDIRS = ./translations ./apps/cmstapp ./apps/rootapp
 # cmst build variables
 include(cmst.pri)
 
-# create required build directories
-mkpath(./apps/cmstapp/moc_files)
-mkpath(./apps/cmstapp/object_files)
-mkpath(./apps/rootapp/moc_files)
-mkpath(./apps/rootapp/object_files)
-mkpath(./translations/.qm)
-
 # non-application files which need to be installed
 #
 # documentation (manpage)
