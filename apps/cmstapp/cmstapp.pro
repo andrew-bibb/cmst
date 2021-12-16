@@ -13,6 +13,11 @@ QT += core
 # cmst variables
 include(../../cmst.pri)
 
+#  translations
+include(../../translations/translations.pri)
+CONFIG += lrelease
+CONFIG += embed_translations
+
 TEMPLATE = app
 TARGET = cmst
 target.path = /usr/bin

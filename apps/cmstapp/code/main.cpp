@@ -160,11 +160,12 @@ int main(int argc, char *argv[])
   app.installTranslator(&qtTranslator);
 
   QTranslator cmstTranslator;
-  if (cmstTranslator.load(":/translations/translations/.qm/cmst_" + QLocale::system().name()) ) {
+  qDebug() << "Locale: " << QLocale::system().name();
+  if (cmstTranslator.load(":/i18n/cmst_" + QLocale::system().name()) ) {
 		app.installTranslator(&cmstTranslator);
 	}
 	// else use en_US as it contains Connman strings properized and some singular/plural strings
-	else if (cmstTranslator.load(":/translations/translations/.qm/cmst_en_US") ) {
+	else if (cmstTranslator.load(":/i18n/cmst_en_US") ) {
 		app.installTranslator(&cmstTranslator);
 	}
 
