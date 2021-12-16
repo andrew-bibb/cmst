@@ -6,7 +6,7 @@
 #  The resulting translations are included automatically in the
 #  resource system under the :/i18n/ prefix.
 
-#  The ipaths for the translations below are relative
+#  The paths for the translations below are relative
 #  to the directory cmstapp.
 #
 

@@ -14,7 +14,7 @@
     <file>stylesheets/tabwidget.qss</file>
     <file>stylesheets/vpn_connecting.qss</file>
   </qresource>
-    <qresource prefix="icons">
+  <qresource prefix="icons">
     <file>images/interface/radio.png</file>
     <file>images/interface/basic-plane.png</file>
     <file>images/raw_art/blank.png</file>
