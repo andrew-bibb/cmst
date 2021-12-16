@@ -160,7 +160,6 @@ int main(int argc, char *argv[])
   app.installTranslator(&qtTranslator);
 
   QTranslator cmstTranslator;
-  qDebug() << "Locale: " << QLocale::system().name();
   if (cmstTranslator.load(":/i18n/cmst_" + QLocale::system().name()) ) {
 		app.installTranslator(&cmstTranslator);
 	}
