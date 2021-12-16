@@ -1,6 +1,6 @@
 #  Need a make file to make other make files
 TEMPLATE = subdirs
-SUBDIRS = ./translations ./apps/cmstapp ./apps/rootapp
+SUBDIRS = ./apps/cmstapp ./apps/rootapp
 
 # cmst build variables
 include(cmst.pri)
