@@ -2,8 +2,7 @@
 <b><center>Change Log</center></b>
 <b> IN PROGRESS</b>
 <ul>
-<li>Embed translations automatically from make via qmake.</li>
-<li>Auto run lupdate from make via qmake.</li>
+<li>Auto run lupdate and embed translations automatically from make via qmake.</li>
 <li>Added scroll bars to Agent dialog (issue #242).</li>
 </ul>
 
