@@ -669,12 +669,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1792"/>
         <source>Aw&amp;Oken</source>
-        <translation>Ac&amp;ordado</translation>
+        <translation>Íc&amp;ones</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1799"/>
         <source>A&amp;rtwork</source>
-        <translation>Obra de &amp;Arte</translation>
+        <translation>Imagens (&amp;r)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1981"/>
@@ -1386,7 +1386,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="522"/>
         <source>About AwOken</source>
-        <translation>Sobre o AwOken</translation>
+        <translation>Sobre os Ícones AwOken</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="553"/>
@@ -1556,7 +1556,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="536"/>
         <source>About Other Artwork</source>
-        <translation>Sobre as Outras Imagens</translation>
+        <translation>Sobre as Imagens Utilizadas no CMST</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="537"/>
@@ -3233,7 +3233,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="43"/>
         <source>connman system tray</source>
         <comment>Main Window Title</comment>
-        <translation>Bandeja do Sistema do Connman</translation>
+        <translation>Connman System Tray - Bandeja do Sistema do Connman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="44"/>
@@ -4785,7 +4785,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="76"/>
         <source>Connman System Tray.</source>
-        <translation>Bandeja de Sistema Connman (Connman System Tray).</translation>
+        <translation>Bandeja de Sistema Connman - Connman System Tray.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="87"/>
