@@ -130,7 +130,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="276"/>
         <source>&amp;WPS Pin</source>
-        <translation>&amp;WPS Pin</translation>
+        <translation>&amp;WPS Pin码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="292"/>
@@ -978,7 +978,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1597"/>
         <source>Counter Update Rate </source>
-        <translation>统计更新频率</translation>
+        <translation>统计更新频率 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1459"/>
@@ -2052,7 +2052,7 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1813"/>
         <source>Offline Mode </source>
-        <translation>飞行模式</translation>
+        <translation>飞行模式 </translation>
     </message>
     <message>
         <source>%1On%1%1</source>
