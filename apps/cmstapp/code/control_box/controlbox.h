@@ -195,7 +195,6 @@ class ControlBox : public QDialog
       void scanWiFi();
       void wifiIDPass(const QString& obj_path = QString() );
       void toggleOfflineMode(bool);
-      void toggleTrayIcon(bool);
       void togglePowered(QString, bool);
       void toggleTethered(QString, bool);
       void minMaxWindow(QAction* = 0);
@@ -207,6 +206,8 @@ class ControlBox : public QDialog
       void showWhatsThis();
       inline void trayNotifications(bool checked) {if (checked) ui.checkBox_notifydaemon->setChecked(false);}
       inline void daemonNotifications(bool checked) {if (checked) ui.checkBox_systemtraynotifications->setChecked(false);}
+      inline void iconFullHide(bool checked) {if (checked) ui.checkBox_hideIconPartial->setChecked(false); updateDisplayWidgets();}
+      inline void iconPartialHide(bool checked) {if (checked) ui.checkBox_hideIconFull->setChecked(false);updateDisplayWidgets();}
       inline void closeSystemTrayTearOffMenu() {trayiconmenu->hideTearOffMenu();}
       void iconActivated(QSystemTrayIcon::ActivationReason reason);
       void enableRunOnStartup(bool enabled);

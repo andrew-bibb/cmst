@@ -35,7 +35,7 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>5</number>
      </property>
      <property name="movable">
       <bool>true</bool>
@@ -1111,7 +1111,17 @@
               <string>Notifications</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_17">
-              <item row="0" column="1">
+              <item row="1" column="0">
+               <widget class="QCheckBox" name="checkBox_notifydaemon">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="text">
+                 <string>Notification Daemon</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
                <widget class="QLabel" name="label_serverstatus">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1124,16 +1134,6 @@
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QCheckBox" name="checkBox_notifydaemon">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="text">
-                 <string>Notification Daemon</string>
                 </property>
                </widget>
               </item>
@@ -1266,7 +1266,20 @@
               <string>System Tray</string>
              </property>
              <layout class="QGridLayout" name="gridLayout">
-              <item row="1" column="0">
+              <item row="3" column="0">
+               <widget class="QCheckBox" name="checkBox_systemtraynotifications">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>System Tray Notifications</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
                <widget class="QCheckBox" name="checkBox_enablesystemtraytooltips">
                 <property name="whatsThis">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray icon will popup a status message when you hover the mouse over it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1280,25 +1293,22 @@
                </widget>
               </item>
               <item row="0" column="0">
-               <widget class="QCheckBox" name="checkBox_hideIcon">
+               <widget class="QCheckBox" name="checkBox_hideIconFull">
                 <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked an icon will not be displayed in the system tray.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the CMST icon will be hidden in the system tray. CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
                  <string>Hide Tray Icon</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="0">
-               <widget class="QCheckBox" name="checkBox_systemtraynotifications">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
+              <item row="1" column="0">
+               <widget class="QCheckBox" name="checkBox_hideIconPartial">
                 <property name="whatsThis">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide the CMST tray icon during normal operations. Normal operations are defined as having the Global state in an &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; mode. Any other state will cause the icon to be displayed in the system tray.  CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>System Tray Notifications</string>
+                 <string>Hide Tray Icon Unless Needed</string>
                 </property>
                </widget>
               </item>
@@ -2028,12 +2038,12 @@ p, li { white-space: pre-wrap; }
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>157</x>
-     <y>-59</y>
+     <x>180</x>
+     <y>193</y>
     </hint>
     <hint type="destinationlabel">
      <x>245</x>
-     <y>619</y>
+     <y>593</y>
     </hint>
    </hints>
   </connection>
@@ -2044,12 +2054,12 @@ p, li { white-space: pre-wrap; }
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>102</x>
-     <y>-59</y>
+     <x>125</x>
+     <y>193</y>
     </hint>
     <hint type="destinationlabel">
-     <x>149</x>
-     <y>601</y>
+     <x>159</x>
+     <y>593</y>
     </hint>
    </hints>
   </connection>
@@ -2060,7 +2070,7 @@ p, li { white-space: pre-wrap; }
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>117</x>
+     <x>122</x>
      <y>312</y>
     </hint>
     <hint type="destinationlabel">
@@ -2108,12 +2118,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>501</x>
-     <y>-2</y>
+     <x>524</x>
+     <y>250</y>
     </hint>
     <hint type="destinationlabel">
-     <x>632</x>
-     <y>0</y>
+     <x>692</x>
+     <y>249</y>
     </hint>
    </hints>
   </connection>
@@ -2124,8 +2134,8 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>205</x>
-     <y>-167</y>
+     <x>228</x>
+     <y>85</y>
     </hint>
     <hint type="destinationlabel">
      <x>492</x>
@@ -2140,12 +2150,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>501</x>
-     <y>-85</y>
+     <x>524</x>
+     <y>167</y>
     </hint>
     <hint type="destinationlabel">
-     <x>632</x>
-     <y>-84</y>
+     <x>692</x>
+     <y>166</y>
     </hint>
    </hints>
   </connection>
@@ -2156,12 +2166,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>501</x>
-     <y>88</y>
+     <x>524</x>
+     <y>360</y>
     </hint>
     <hint type="destinationlabel">
-     <x>632</x>
-     <y>90</y>
+     <x>692</x>
+     <y>362</y>
     </hint>
    </hints>
   </connection>
@@ -2172,12 +2182,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>501</x>
-     <y>28</y>
+     <x>524</x>
+     <y>289</y>
     </hint>
     <hint type="destinationlabel">
-     <x>632</x>
-     <y>30</y>
+     <x>692</x>
+     <y>290</y>
     </hint>
    </hints>
   </connection>
@@ -2188,12 +2198,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>501</x>
-     <y>58</y>
+     <x>524</x>
+     <y>330</y>
     </hint>
     <hint type="destinationlabel">
-     <x>632</x>
-     <y>60</y>
+     <x>692</x>
+     <y>332</y>
     </hint>
    </hints>
   </connection>
@@ -2208,7 +2218,7 @@ p, li { white-space: pre-wrap; }
      <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>642</x>
+     <x>691</x>
      <y>106</y>
     </hint>
    </hints>
@@ -2252,7 +2262,7 @@ p, li { white-space: pre-wrap; }
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>642</x>
+     <x>691</x>
      <y>106</y>
     </hint>
     <hint type="destinationlabel">
@@ -2284,12 +2294,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>384</x>
-     <y>349</y>
+     <x>421</x>
+     <y>624</y>
     </hint>
     <hint type="destinationlabel">
-     <x>452</x>
-     <y>373</y>
+     <x>525</x>
+     <y>652</y>
     </hint>
    </hints>
   </connection>
@@ -2300,12 +2310,12 @@ p, li { white-space: pre-wrap; }
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>103</x>
-     <y>-59</y>
+     <x>126</x>
+     <y>193</y>
     </hint>
     <hint type="destinationlabel">
-     <x>610</x>
-     <y>444</y>
+     <x>622</x>
+     <y>505</y>
     </hint>
    </hints>
   </connection>

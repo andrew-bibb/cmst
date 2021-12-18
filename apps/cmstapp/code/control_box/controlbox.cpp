@@ -415,7 +415,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    connect(ui.comboBox_service, SIGNAL(currentIndexChanged(int)), this, SLOT(getServiceDetails(int)));
    connect(ui.pushButton_exit, SIGNAL(clicked()), exitAction, SLOT(trigger()));
    connect(ui.pushButton_minimize, SIGNAL(clicked()), minimizeAction, SLOT(trigger()));
-   connect(ui.checkBox_hideIcon, SIGNAL(clicked(bool)), this, SLOT(toggleTrayIcon(bool)));
    connect(ui.pushButton_connect, SIGNAL(clicked()), this, SLOT(connectPressed()));
    connect(ui.pushButton_vpn_connect, SIGNAL(clicked()), this, SLOT(connectPressed()));
    connect(ui.pushButton_disconnect, SIGNAL(clicked()), this, SLOT(disconnectPressed()));
@@ -433,6 +432,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    connect(ui.checkBox_hidetethering, SIGNAL (toggled(bool)), this, SLOT(updateDisplayWidgets()));
    connect(ui.checkBox_systemtraynotifications, SIGNAL (clicked(bool)), this, SLOT(trayNotifications(bool)));
    connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
+   connect(ui.checkBox_hideIconFull, SIGNAL(clicked(bool)), this, SLOT(iconFullHide(bool)));
+   connect(ui.checkBox_hideIconPartial, SIGNAL(clicked(bool)), this, SLOT(iconPartialHide(bool)));
    connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
    connect(ui.pushButton_provisioning_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
    connect(ui.pushButton_vpn_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
@@ -454,7 +455,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    // the settings, otherwise set a singleshot timer to create the tray icon.
    if (parser.isSet("disable-tray-icon") ? true : (b_so && ui.checkBox_disabletrayicon->isChecked()) ) {
       trayicon = NULL;
-      ui.checkBox_hideIcon->setDisabled(true);
+      ui.checkBox_hideIconFull->setDisabled(true);
+      ui.checkBox_hideIconPartial->setDisabled(true);
       this->updateDisplayWidgets();
       qApp->setQuitOnLastWindowClosed(true); // not running systemtray icon so normal close
       this->showNormal(); // no place to minimize to, so showMaximized
@@ -1352,25 +1354,6 @@ void ControlBox::toggleOfflineMode(bool checked)
 }
 
 //
-// Slot to toggle the visibility of the tray icon
-// Called when ui.checkBox_hideIcon is clicked
-void ControlBox::toggleTrayIcon(bool b_checked)
-{
-   if (trayicon != NULL ) {
-      if (b_checked) {
-         trayicon->setVisible(false);
-         ui.pushButton_minimize->setDisabled(true);
-      } // if
-      else {
-         trayicon->setVisible(true);
-         ui.pushButton_minimize->setDisabled(false);
-      } // else
-   } //if
-
-   return;
-}
-
-//
 // Slot to toggle the powered state of a technology
 // Called when our custom idButton in the powered cell in the page 1 technology tableWidget is clicked
 void ControlBox::togglePowered(QString object_id, bool checkstate)
@@ -1416,32 +1399,36 @@ void ControlBox::toggleTethered(QString object_id, bool checkstate)
 }
 
 //
-// Slot to minimize the input window.  QWidget.hide() if the tray icon
-// is visible, QWidget.showMinmized() if the tray icon is not visible.
-// Do it this way as otherwise there is no way to get the dialog back if
-// the tray icon is not shown.
-// called when actionMinimize is activated
+// Slot to minimize or maximize the input window, called when action group minMaxGroup is
+// triggered. showMinimized() has no visible effect unless there is a place, such as the
+// tray icon or a panel, where the app can go.If there is no tray icon just run showMinimized()
+// and hope for the best. If there is a tray icon use hide() (same as pressing the ESC key).
+// If the icon if visible just click it to get back, if it is hidden start CMST again which
+// will abort because there is another instance running, howver the first instance will then
+// be shown full window.
 void ControlBox::minMaxWindow(QAction* act)
 {
    if (act == minimizeAction ) {
       this->writeSettings();
-      if (trayicon != NULL ) trayicon->isVisible() ? this->hide() : this->showMinimized();
-      else this->showMinimized();
+      if (trayicon == NULL ) this->showMinimized();
+      else this->hide();
    } // if minimizeAction
 
-   else if (act == maximizeAction) {
-      this->showNormal();
-   }
-
-   // Called from the systemtrayicon context menu.  Actions are
-   // created dynamically and we don't know them up front.  Actions here
-   // we want to open the details page and set the combo box to display
-   // information on the service.
    else {
-      ui.tabWidget->setCurrentIndex(1);
-      ui.comboBox_service->setCurrentIndex(ui.comboBox_service->findText(act->text()) );
-      this->showNormal();
-   }
+      if (act == maximizeAction) {
+         this->showNormal();
+      }
+
+      // Called from the systemtrayicon context menu.  Actions are
+      // created dynamically and we don't know them up front.  Actions here
+      // we want to open the details page and set the combo box to display
+      // information on the service.
+      else {
+         ui.tabWidget->setCurrentIndex(1);
+         ui.comboBox_service->setCurrentIndex(ui.comboBox_service->findText(act->text()) );
+         this->showNormal();
+      } // inner else
+   } // outer else
 
    return;
 }
@@ -2357,6 +2344,13 @@ void ControlBox::assembleTrayIcon()
    else
       trayicon->setToolTip(QString());
 
+   // show or hide the icon depending on checkBoxes and connection state
+   if (ui.checkBox_hideIconFull->isChecked() ) trayicon->hide();
+   else
+      if (ui.checkBox_hideIconPartial->isChecked() && ((properties_map.value("State").toString() == "online") || (properties_map.value("State").toString() == "ready")) )
+         trayicon->hide();
+      else trayicon->show();
+
    // Don't continue if we can't get properties
    if ( (q16_errors & CMST::Err_Properties & CMST::Err_Technologies & CMST::Err_Services) != 0x00 ) return;
 
@@ -2542,7 +2536,7 @@ void ControlBox::writeSettings()
    settings->endGroup();
 
    settings->beginGroup("CheckBoxes");
-   settings->setValue("hide_tray_icon", ui.checkBox_hideIcon->isChecked() );
+   settings->setValue("hide_tray_icon", ui.checkBox_hideIconFull->isChecked() );
    settings->setValue("devices_off", ui.checkBox_devicesoff->isChecked() );
    settings->setValue("retain_settings", ui.checkBox_usestartoptions->isChecked() );
    settings->setValue("retain_state", ui.checkBox_retainstate->isChecked() );
@@ -2598,7 +2592,7 @@ void ControlBox::writeSettings()
 void ControlBox::readSettings()
 {
    settings->beginGroup("CheckBoxes");
-   ui.checkBox_hideIcon->setChecked(settings->value("hide_tray_icon").toBool() );
+   ui.checkBox_hideIconFull->setChecked(settings->value("hide_tray_icon").toBool() );
    ui.checkBox_devicesoff->setChecked(settings->value("devices_off").toBool() );
    ui.checkBox_usestartoptions->setChecked(settings->value("retain_settings").toBool() );
    ui.checkBox_retainstate->setChecked(settings->value("retain_state").toBool() );
@@ -2729,14 +2723,14 @@ void ControlBox::createSystemTrayIcon()
       } // if use xfce
 
       // Sync the visibility to the checkbox
-      ui.checkBox_hideIcon->setEnabled(true);
+      ui.checkBox_hideIconFull->setEnabled(true);
       trayicon->setVisible(true);
 
    } // if there is a systemtray available
 
    // else no systemtray available
    else {
-      ui.checkBox_hideIcon->setDisabled(true);
+      ui.checkBox_hideIconFull->setDisabled(true);
       trayicon = NULL;
 
       QMessageBox::warning(this,
