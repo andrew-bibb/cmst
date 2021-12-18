@@ -433,7 +433,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    connect(ui.checkBox_systemtraynotifications, SIGNAL (clicked(bool)), this, SLOT(trayNotifications(bool)));
    connect(ui.checkBox_notifydaemon, SIGNAL (clicked(bool)), this, SLOT(daemonNotifications(bool)));
    connect(ui.checkBox_hideIconFull, SIGNAL(clicked(bool)), this, SLOT(iconFullHide(bool)));
-   connect(ui.checkBox_hideIconPartial, SIGNAL(clicked(bool)), this, SLOT(iconPartialHide(bool)));
+   connect(ui.checkBox_hideIconAuto, SIGNAL(clicked(bool)), this, SLOT(iconPartialHide(bool)));
    connect(ui.pushButton_configuration, SIGNAL (clicked()), this, SLOT(configureService()));
    connect(ui.pushButton_provisioning_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
    connect(ui.pushButton_vpn_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
@@ -456,7 +456,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    if (parser.isSet("disable-tray-icon") ? true : (b_so && ui.checkBox_disabletrayicon->isChecked()) ) {
       trayicon = NULL;
       ui.checkBox_hideIconFull->setDisabled(true);
-      ui.checkBox_hideIconPartial->setDisabled(true);
+      ui.checkBox_hideIconAuto->setDisabled(true);
       this->updateDisplayWidgets();
       qApp->setQuitOnLastWindowClosed(true); // not running systemtray icon so normal close
       this->showNormal(); // no place to minimize to, so showMaximized
@@ -2347,7 +2347,7 @@ void ControlBox::assembleTrayIcon()
    // show or hide the icon depending on checkBoxes and connection state
    if (ui.checkBox_hideIconFull->isChecked() ) trayicon->hide();
    else
-      if (ui.checkBox_hideIconPartial->isChecked() && ((properties_map.value("State").toString() == "online") || (properties_map.value("State").toString() == "ready")) )
+      if (ui.checkBox_hideIconAuto->isChecked() && ((properties_map.value("State").toString() == "online") || (properties_map.value("State").toString() == "ready")) )
          trayicon->hide();
       else trayicon->show();
 
@@ -2537,6 +2537,7 @@ void ControlBox::writeSettings()
 
    settings->beginGroup("CheckBoxes");
    settings->setValue("hide_tray_icon", ui.checkBox_hideIconFull->isChecked() );
+   settings->setValue("auto_hide_tray_icon", ui.checkBox_hideIconAuto->isChecked() );
    settings->setValue("devices_off", ui.checkBox_devicesoff->isChecked() );
    settings->setValue("retain_settings", ui.checkBox_usestartoptions->isChecked() );
    settings->setValue("retain_state", ui.checkBox_retainstate->isChecked() );
@@ -2593,6 +2594,7 @@ void ControlBox::readSettings()
 {
    settings->beginGroup("CheckBoxes");
    ui.checkBox_hideIconFull->setChecked(settings->value("hide_tray_icon").toBool() );
+   ui.checkBox_hideIconAuto->setChecked(settings->value("auto_hide_tray_icon").toBool() );
    ui.checkBox_devicesoff->setChecked(settings->value("devices_off").toBool() );
    ui.checkBox_usestartoptions->setChecked(settings->value("retain_settings").toBool() );
    ui.checkBox_retainstate->setChecked(settings->value("retain_state").toBool() );

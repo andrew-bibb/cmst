@@ -206,7 +206,7 @@ class ControlBox : public QDialog
       void showWhatsThis();
       inline void trayNotifications(bool checked) {if (checked) ui.checkBox_notifydaemon->setChecked(false);}
       inline void daemonNotifications(bool checked) {if (checked) ui.checkBox_systemtraynotifications->setChecked(false);}
-      inline void iconFullHide(bool checked) {if (checked) ui.checkBox_hideIconPartial->setChecked(false); updateDisplayWidgets();}
+      inline void iconFullHide(bool checked) {if (checked) ui.checkBox_hideIconAuto->setChecked(false); updateDisplayWidgets();}
       inline void iconPartialHide(bool checked) {if (checked) ui.checkBox_hideIconFull->setChecked(false);updateDisplayWidgets();}
       inline void closeSystemTrayTearOffMenu() {trayiconmenu->hideTearOffMenu();}
       void iconActivated(QSystemTrayIcon::ActivationReason reason);
