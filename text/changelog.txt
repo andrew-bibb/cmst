@@ -2,6 +2,7 @@
 <b><center>Change Log</center></b>
 <b> IN PROGRESS</b>
 <ul>
+<li>Added line for Connman version to the About box.</li>
 <li>Added new option to hide the system tray icon in normal operations (issue #235)</li>
 <li>Auto run lupdate and embed translations automatically from make via qmake.</li>
 <li>Added scroll bars to Agent dialog (issue #242).</li>
