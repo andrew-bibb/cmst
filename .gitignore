@@ -10,7 +10,7 @@ apps/cmstapp/cmst
 apps/rootapp/*.cpp
 apps/rootapp/*.h
 apps/rootapp/cmstroothelper
-apps/c,stapp/qmake_*.qrc
+apps/cmstapp/qmake_*.qrc
 *.gz
 *.sh
 *.stash
