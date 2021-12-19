@@ -32,6 +32,14 @@ DEALINGS IN THE SOFTWARE.
 #ifndef RESOURCE_H
 #define RESOURCE_H
 
+
+// As of 2021.12.19 removed the old xfce and mate code hacks.
+// Code still exists in the cpp files.  If we need it back
+// add #define XFCE here.  Also the manual page and controlbox ui
+// have .save files contiaining the old code.  Keep these around
+// for a while then delete if nobody complains.
+//
+
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation)
