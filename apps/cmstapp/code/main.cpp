@@ -142,6 +142,7 @@ int main(int argc, char *argv[])
       "0x222222" );
    parser.addOption(fakeTransparency);
 
+   # ifdef XFCE
    // Added on 2014.11.24 to work around a bug where QT5.3 won't show an icon in XFCE,  My fix may not work, but keep it in for now.  If this gets fixed in
    // QT5.4 keep the command line option so users start up commands don't break, but make it a NOP.
    QCommandLineOption useXFCE(QStringList() << "use-xfce",
@@ -152,6 +153,7 @@ int main(int argc, char *argv[])
    QCommandLineOption useMATE(QStringList() << "use-mate",
       QCoreApplication::translate("main.cpp", "Use MATE DE specific code.") );
    parser.addOption(useMATE);
+   # endif
 
    // Setup translations
    QTranslator qtTranslator;

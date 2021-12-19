@@ -1,4 +1,4 @@
-.TH	CMST 1 "06 January 2018" "Version: 2018.01.06"
+.TH	CMST 1 "19 December 2021" "Version: 2010.12.19"
 .SH NAME
 CMST - Connman System Tray
 .SH SYNOPSIS
@@ -25,7 +25,7 @@ Displays this help.
 \fB-i, --icon-theme <Icon Theme Name>\fP
 Use a specific icon theme from your system. The Icon Theme name is optional and if specified CMST will try to use icons from that
 theme.  If no name is provided and if a system wide icon theme is defined (via your DE) it will be used.  If the icon theme cannot
-be found CMST will fallback to using internal built in icons. 
+be found CMST will fallback to using internal built in icons.
 .TP
 \fB-l, --log-input-request\fP
 Log the Connman inputRequest for debugging purposes.
@@ -45,9 +45,9 @@ Displays version information.
 .TP
 \fB-w, --wait-time <seconds>\fP
 Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).  If CMST is started and tries to
-create a tray icon before the system tray itself is created a dialog will be displayed explaining that.  This sometimes happens when the 
-program is started automatically.  If you know the tray will exist once the system is up you may specify a wait time and CMST 
-will wait that number of seconds before trying to create the tray icon.  This is to give the window manager or panel time to create 
+create a tray icon before the system tray itself is created a dialog will be displayed explaining that.  This sometimes happens when the
+program is started automatically.  If you know the tray will exist once the system is up you may specify a wait time and CMST
+will wait that number of seconds before trying to create the tray icon.  This is to give the window manager or panel time to create
 the tray before we try to place the icon there.
 .TP
 \fB--counter-update-kb <KB> [Experimental]\fP
@@ -55,23 +55,13 @@ Specify the amount of data in KB that must be transmitted before the counters up
 Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented.
 .TP
 \fB--counter-update-rate <seconds> [Experimental]\fP
-Specify the frequency in seconds between counter updates (default is 10 seconds).  
+Specify the frequency in seconds between counter updates (default is 10 seconds).
 .TP
 \fB--fake-transparency <RRGGBB>\fP
 On some systems the system tray icon background, which is transparent, will display as white or black.  This seems to be an issue
 between QT, system tray implementations, compositing, and perhaps certain graphics cards.  To work around it we've implemented
 a fake transparency for tray icons.  To use it specify the system tray background color with this option.  If the background color
-is provided CMST will convert the tray icon image to have the specified background color.  Color is a hex number in the format: RRGGBB.      
-.TP
-\fB--use-xfce\fP
-Use code specific for XFCE.  As of 2014.11.24 there seems to be a problem with QT5.3 and the XFCE system tray.  There is code
-in the program to try and work around this issue.  If the bug gets fixed in QT5.4 (or later) this option will remain so that
-user start up scripts and commands do not break, but it will be a no operation place holder.
-.TP
-\fB--use-mate\fP
-Use code specific for MATE.  As of 2014.11.24 there seems to be a problem with QT5.3 and the XFCE system tray.  There is code
-in the program to try and work around this issue.  If the bug gets fixed in QT5.4 (or later) this option will remain so that
-user start up scripts and commands do not break, but it will be a no operation place holder.
+is provided CMST will convert the tray icon image to have the specified background color.  Color is a hex number in the format: RRGGBB.
 .SH COMMAND LINE STABILITY
 Command line options marked
 .I [Experimental]
@@ -85,28 +75,28 @@ click the GUI feature, or control that you are interested in.  A right mouse cli
 .TP
 .I Status Tab
 The status tab displays information about the global properties, found technologies, and services. Checkbox at the top right will
-allow you to put everything in "offline" mode.  To toggle a technology on or off click the entry under the Powered column 
+allow you to put everything in "offline" mode.  To toggle a technology on or off click the entry under the Powered column
 .TP
 .I Details Tab
 The details tab will display detailed setup and connection information about a service. Select the service you wish to investigate
 in the combo box at the top.
 .TP
 .I Wireless Tab
-The Wireless tab will display information, connect, disconnect, and edit certain properties of wireless services. 
+The Wireless tab will display information, connect, disconnect, and edit certain properties of wireless services.
 .TP
 .I VPN Tab
 The VNP tab will display information, connect and disconnect already provisioned VPN services.
 .TP
 .I Counters Tab
 The Counters tab will display information about the Connect time, the Transmit (TX) and Receiving (RX) counters for the service
-currently in the "online" state. The counters are set to fairly course intervals to minimize system usage. Currently these 
-interval settings are hard coded into the program. 
+currently in the "online" state. The counters are set to fairly course intervals to minimize system usage. Currently these
+interval settings are hard coded into the program.
 .TP
 .I Preferences Tab
-The preferences tab will allow you to change some aspects of the GUI.  
+The preferences tab will allow you to change some aspects of the GUI.
 .SH CONFIGURATION
 For typical networks and access points, even hidden ones, Connman will find and automatically configure the network for you.  If Connman
-needs information, for instance a passphrase, CMST registers an agent and this agent will prompt you for the needed information.  For 
+needs information, for instance a passphrase, CMST registers an agent and this agent will prompt you for the needed information.  For
 most cases this "just works", however there are options for fine tuning the automatic configuration or creating provisioning files.
 .TP
 \fBProfile Editor\fP
@@ -124,26 +114,26 @@ has a provisioning editor built in, but it is considered an advanced control and
 box on the
 .I Provisioning
 tab.  The button to open the editor will appear in the lower left corner of the dialog.  With this editor you may create, open, edit,
-delete and save config files to /var/lib/connman.  The menu at the top may be used to enter some information automatically, and many  
+delete and save config files to /var/lib/connman.  The menu at the top may be used to enter some information automatically, and many
 of the input fields are validated as you enter text into them.  There are also predefined template files that may be used to seed the
-editing area.  All of this can be bypassed if you wish and you may cut and paste or type into the editor directly. 
+editing area.  All of this can be bypassed if you wish and you may cut and paste or type into the editor directly.
 .TP
-\fBCreating and Editing VPN Connections\fP 
+\fBCreating and Editing VPN Connections\fP
 As of 2016.01.26 CMST has a VPN provisioning editor built in, but it is considered an advanced control and by default it is hidden.  To enable the control check the
 .B Advanced Controls
 box on the
 .I Provisioning
 tab.  The button to open the editor will appear in the lower left corner of the dialog.  With this editor you may create, open, edit,
-delete and save config files to /var/lib/connman-vpn.  The menu at the top may be used to enter some information automatically, and many  
+delete and save config files to /var/lib/connman-vpn.  The menu at the top may be used to enter some information automatically, and many
 of the input fields are validated as you enter text into them. The first item under each menu heading (Provider xxx) will start a junior
 wizard to walk you through entering all the mandatory information for each connection type.  For OpenVPN the second menu item (Import Configuration)
 will import an OpenVPN .opvn file.  The import will extract and save keys and certificates and will place the proper provisioning entries
-into the editor window.   
+into the editor window.
 .SH BUGS
-For the tray icon to display is it required that the system tray be compliant with the Freedesktop.org systemtray specification.  
+For the tray icon to display is it required that the system tray be compliant with the Freedesktop.org systemtray specification.
 
 The tray icon is known to not work in the DWM system tray which appears to be a noncompliant tray.
- 
+
 .SH Author
 Andrew J. Bibb.  Project web page: https://github.com/andrew-bibb/cmst
 

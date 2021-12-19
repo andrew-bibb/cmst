@@ -256,11 +256,13 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
    vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
 
+   #ifdef XFCE
    // set a flag if we want to use XFCE or MATE custom code.
    // Currently (as of 2014.11.24) this is only used to get around a bug between QT5.3 and the XFCE system tray
    // Even then the fix may not work, but for now keep it in.
    b_usexfce = (parser.isSet("use-xfce") ? true : (b_so && ui.radioButton_desktopxfce->isChecked()) );
    b_usemate = (parser.isSet("use-mate") ? true : (b_so && ui.radioButton_desktopmate->isChecked()) );
+   #endif
 
    // Fake transparency
    if (parser.isSet("fake-transparency") ) {
@@ -2574,9 +2576,11 @@ void ControlBox::writeSettings()
    settings->setValue("counter_update_rate", ui.spinBox_counterrate->value() );
    settings->setValue("use_fake_transparency", ui.checkBox_faketranparency->isChecked() );
    settings->setValue("fake_transparency_color", ui.spinBox_faketransparency->value() );
+   #ifdef XFCE
    settings->setValue("desktop_none", ui.radioButton_desktopnone->isChecked() );
    settings->setValue("desktop_xfce", ui.radioButton_desktopxfce->isChecked() );
    settings->setValue("desktop_mate", ui.radioButton_desktopmate->isChecked() );
+   #endif
    settings->endGroup();
 
    settings->beginGroup("ExternalPrograms");
@@ -2640,9 +2644,11 @@ void ControlBox::readSettings()
    ui.spinBox_counterrate->setValue(settings->value("counter_update_rate").toInt() );
    ui.checkBox_faketranparency->setChecked(settings->value("use_fake_transparency").toBool() );
    ui.spinBox_faketransparency->setValue(settings->value("fake_transparency_color").toInt() );
+   #ifdef XFCE
    ui.radioButton_desktopnone->setChecked(settings->value("desktop_none").toBool() );
    ui.radioButton_desktopxfce->setChecked(settings->value("desktop_xfce").toBool() );
    ui.radioButton_desktopmate->setChecked(settings->value("desktop_mate").toBool() );
+   #endif
    settings->endGroup();
 
    settings->beginGroup("ExternalPrograms");
@@ -2706,10 +2712,11 @@ void ControlBox::createSystemTrayIcon()
       // Assemble the tray icon (set the icon to display)
       assembleTrayIcon();
 
+      #ifdef XFCE
       // QT5.3 and XFCE don't play nicely.   Hammer the XFCE tray up to
       // maxtries to get a valid icon geometry.
       // QT5.4 update, may be fixed but leave option in for now
-      if (b_usexfce || b_usemate) {
+      if (b_usexfce || b_usemateXFCE {
          const int maxtries = 125;
          int i;
          for (i = 0; i < maxtries; ++i) {
@@ -2725,6 +2732,7 @@ void ControlBox::createSystemTrayIcon()
             trayicon = 0; // reinitialize the pointer
          } // if we hit the end of the loop
       } // if use xfce
+      #endif
 
       // Sync the visibility to the checkbox
       ui.checkBox_hideIconFull->setEnabled(true);
