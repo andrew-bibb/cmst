@@ -53,7 +53,6 @@ DEALINGS IN THE SOFTWARE.
 # include <QTableWidgetSelectionRange>
 # include <QProcess>
 # include <QProcessEnvironment>
-# include <QCryptographicHash>
 # include <QLocale>
 # include <QColorDialog>
 # include <QPainter>
@@ -2485,6 +2484,7 @@ void ControlBox::iconActivated(QSystemTrayIcon::ActivationReason reason)
    }
 }
 
+// called when ui.checkBox_runonstartup is checked or unchecked
 void ControlBox::enableRunOnStartup(bool enabled)
 {
    QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
@@ -2492,41 +2492,37 @@ void ControlBox::enableRunOnStartup(bool enabled)
    QString XDG_CONFIG_HOME = env.value("XDG_CONFIG_HOME", QFileInfo(QDir(HOME), ".config").absoluteFilePath());
    QFileInfo autostart_dir_info(QDir(XDG_CONFIG_HOME), "autostart");
    QFileInfo autostart_file_info(QDir(autostart_dir_info.absoluteFilePath()), "cmst-autostart.desktop");
-   QFile user_autostart_file(autostart_file_info.absoluteFilePath());
+   QFileInfo autostart_archive_file_info(QDir(autostart_dir_info.absoluteFilePath()), ".cmst-autostart.desktop.archive");
+
+   // make sure the directory exists
+   QDir dir = autostart_file_info.dir();
+   if (! dir.exists() ) dir.mkdir(autostart_file_info.path() );
 
    if (enabled) {
-      QCryptographicHash hasher(QCryptographicHash::Sha1);
-      QFile fileToCopy("/usr/share/cmst/autostart/cmst-autostart.desktop");
+      // there should be no autostart file unless someone manually installed one.
+      // if there is we have to assume it works and keep it
+      if (QFile::exists(autostart_file_info.absoluteFilePath()) )
+         return;
 
-      if (user_autostart_file.exists()) {
-         hasher.reset();
-         hasher.addData(&fileToCopy);
-         QByteArray orig_file_hash = hasher.result();
-
-         hasher.reset();
-         hasher.addData(&user_autostart_file);
-         QByteArray user_autostart_file_hash = hasher.result();
-
-         if (orig_file_hash == user_autostart_file_hash) {
-            return;
+      // if an archived copy exists use that one for the autostart desktop file
+      if (QFile::exists(autostart_archive_file_info.absoluteFilePath()) ) {
+         QFile::copy(autostart_archive_file_info.absoluteFilePath(), autostart_file_info.absoluteFilePath());
+         return;
          }
 
-         if (!user_autostart_file.remove()) {
-            return;
-         }
-      }
-      // Copy the autostart file (create the target directory first if needed)
-      QDir dir = autostart_file_info.dir();
-      if (! dir.exists() ) dir.mkdir(autostart_file_info.path() );
-      fileToCopy.copy(autostart_file_info.absoluteFilePath());
+      // no archived copy, create a new one from the master
+      QFile::copy("/usr/share/cmst/autostart/cmst-autostart.desktop", autostart_file_info.absoluteFilePath() );
+
    } // if enabled
 
+   // on disable archive a copy of the current desktop file for future use
    else {
-      if (!autostart_file_info.exists()) {
-         return;
-      }
-      user_autostart_file.remove();
-   }
+      QFile::remove(autostart_archive_file_info.absoluteFilePath());
+      QFile::copy (autostart_file_info.absoluteFilePath(), autostart_archive_file_info.absoluteFilePath() );
+      QFile::remove(autostart_file_info.absoluteFilePath());
+   } // else
+
+   return;
 }
 
 // Slot to save GUI settings to disk
