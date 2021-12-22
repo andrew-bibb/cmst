@@ -26,7 +26,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="69"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this box to obscure the password characters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spunta per oscurare i caratteri del password.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spunta per oscurare i caratteri della password.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="72"/>
@@ -116,7 +116,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="243"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked use WPS push button authentication.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Quando selezionato usa il pulsante WPS per l&apos;autenticazione.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="246"/>
@@ -242,7 +242,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="132"/>
         <source>The agent request failed before a reply was returned.</source>
-        <translation>La richiesta all&apos;agente è fallita prima di una risposta</translation>
+        <translation>La richiesta all&apos;agente è fallita prima di una risposta.</translation>
     </message>
 </context>
 <context>
