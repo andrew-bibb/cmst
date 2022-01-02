@@ -4,7 +4,7 @@ Class to manage and present strings that need to be translated. These
 are typically not inline strings, rather strings used globally or strings
 returned by third parties, for instance, Connman.
 
-Copyright (C) 2013-2021
+Copyright (C) 2013-2022
 by: Andrew J. Bibb
 License: MIT
 

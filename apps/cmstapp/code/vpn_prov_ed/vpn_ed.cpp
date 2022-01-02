@@ -2,7 +2,7 @@
 
 Code to manage the VPN Provisioning Editor dialog.
 
-Copyright (C) 2016-2021
+Copyright (C) 2016-2022
 by: Andrew J. Bibb
 License: MIT
 

@@ -6,7 +6,7 @@ name implies roothelper is run as the root user, since we need to read
 and write to /var/lib/connman. This program is started by DBus and the
 configuration files necessary to make that happen are in the system dir.
 
-Copyright (C) 2013-2021
+Copyright (C) 2013-2022
 by: Andrew J. Bibb
 License: MIT 
 
