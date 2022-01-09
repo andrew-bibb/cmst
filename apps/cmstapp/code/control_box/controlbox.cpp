@@ -456,6 +456,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    connect(ui.pushButton_disconnect, SIGNAL(clicked()), this, SLOT(disconnectPressed()));
    connect(ui.pushButton_vpn_disconnect, SIGNAL(clicked()), this, SLOT(disconnectPressed()));
    connect(ui.pushButton_remove, SIGNAL(clicked()), this, SLOT(removePressed()));
+   connect(ui.pushButton_edit, SIGNAL(clicked()), this, SLOT(editPressed()));
    connect(ui.pushButton_aboutCMST, SIGNAL(clicked()), this, SLOT(aboutCMST()));
    connect(ui.pushButton_aboutIconSet, SIGNAL(clicked()), this, SLOT(aboutIconSet()));
    connect(ui.pushButton_aboutOtherArt, SIGNAL(clicked()), this, SLOT(aboutOtherArt()));
@@ -826,7 +827,7 @@ void ControlBox::connectPressed()
 // Slot to actually request a connection via DBUS. Called from the connectPressed() slot
 void ControlBox::requestConnection()
 {
-   // only way here is when a finished() signal fires, delete the object that did it
+   // if we got here because a finished() signal fireed delete the object that did it
    if (proc)  delete proc;
    if (gened) delete gened;
 
@@ -918,7 +919,13 @@ void ControlBox::disconnectPressed()
 // Called when ui.pushButton_remove is pressed
 void ControlBox::removePressed()
 {
-   // if no row selected return
+   // If there is only one row select it
+   if (ui.tableWidget_wifi->rowCount() == 1 ) {
+      QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(0, 0, 0, ui.tableWidget_wifi->columnCount() - 1);
+      ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
+   }
+
+   // If no row is selected then return
    QList<QTableWidgetItem*> list;
    list.clear();
    list = ui.tableWidget_wifi->selectedItems();
@@ -927,6 +934,10 @@ void ControlBox::removePressed()
          tr("You need to select a Wifi service before pressing the remove button.") );
       return;
    }
+
+   // calling Remove() on hidden or provisioned services will cause an error, so simply return now without executing the method.
+   QMap<QString,QVariant> map = wifi_list.at(list.at(0)->row()).objmap;
+   if(map.value("Name").toString().isEmpty() || map.value("Immutable").toBool() ) return;
 
    // send the Remove message to the service
    QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, wifi_list.at(list.at(0)->row()).objpath.path(), "net.connman.Service", QDBusConnection::systemBus(), this);
@@ -937,7 +948,38 @@ void ControlBox::removePressed()
    return;
 }
 
-// dbs slots are slots to receive DBus Signals
+//
+// Slot to edit a Wifi service.  Note that Connman does not provide a way to retrieve or edit a passphrase.  Adding something like this is insecure as we don't know
+// anything about the permissions the CMST user has.  The best we can do issue a remove call then a connect call.
+void ControlBox::editPressed()
+{
+   // If there is only one row select it
+   if (ui.tableWidget_wifi->rowCount() == 1 ) {
+      QTableWidgetSelectionRange qtwsr = QTableWidgetSelectionRange(0, 0, 0, ui.tableWidget_wifi->columnCount() - 1);
+      ui.tableWidget_wifi->setRangeSelected(qtwsr, true);
+   }
+
+   // if no row selected return
+   QList<QTableWidgetItem*> list;
+   list.clear();
+   list = ui.tableWidget_wifi->selectedItems();
+   if (list.isEmpty() ) {
+      QMessageBox::information(this, tr("No Services Selected"),
+         tr("You need to select a Wifi service before pressing the edit button.") );
+      return;
+   }
+
+   // remove the connection
+   this->removePressed();
+
+   // connect the connection which will ask for user information if needed
+   pendingobjectpath = wifi_list.at(list.at(0)->row()).objpath.path();
+   this->requestConnection();
+
+   return;
+}
+
+// dbs slots: these slots are to receive DBus Signals
 //
 // Slot called whenever DBUS issues a PropertyChanged signal
 void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)

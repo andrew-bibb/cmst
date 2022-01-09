@@ -185,6 +185,7 @@ class ControlBox : public QDialog
       void requestConnection();
       void disconnectPressed();
       void removePressed();
+      void editPressed();
       void dbsPropertyChanged(QString,QDBusVariant);
       void dbsServicesChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage);
       void dbsPeersChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage);

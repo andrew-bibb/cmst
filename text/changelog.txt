@@ -2,6 +2,7 @@
 <b><center>Change Log</center></b>
 <b> In Progress </b>
 <ul>
+<li>Added Edit button to Wifi Services (issue #202)</li>
 <li>Removed obsolete managerRescan() function, moved code to where needed.</li>
 <li>Fix VPN parsing not being done in various display elements (issue #192)</li>
 </ul>
