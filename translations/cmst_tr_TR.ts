@@ -9,152 +9,152 @@
         <translation>Aracı Girişi</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="27"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="45"/>
         <source>Passphrase</source>
         <translation>Parola</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="46"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="64"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Eski bir parola varsa, referans olması için burada gösterilecektir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="56"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="74"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the passphrase here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Parolayı buraya yazın.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="69"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="87"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this box to obscure the password characters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Parola karakterlerini gizlemek için bu kutuyu işaretleyin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="72"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="90"/>
         <source>&amp;Hide Passphrase</source>
         <translation>&amp;Parolayı Gizle</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="79"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="97"/>
         <source>O&amp;ld Passphrase</source>
         <translation>&amp;Eski Parola</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="89"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="107"/>
         <source>&amp;Passphrase</source>
         <translation>&amp;Parola</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="102"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="120"/>
         <source>Hidden Network</source>
         <translation>Gizli Ağ</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="108"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="126"/>
         <source>&amp;Name</source>
         <translation>&amp;Ad</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="118"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="136"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the name of the hidden network you wish to connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bağlanmak istediğiniz gizli ağın adını yazın.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="131"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="149"/>
         <source>Service Set Identifier</source>
         <translation>Hizmet Kümesi Tanımlayıcısı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="137"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="155"/>
         <source>&amp;SSID</source>
         <translation>&amp;SSID</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="157"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="175"/>
         <source>Wireless Internet Service Provider roaming (WISPr)</source>
         <translation>Kablosuz İnternet Servis Sağlayıcısı dolaşımı (WISPr)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="163"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="181"/>
         <source>&amp;Username</source>
         <translation>K&amp;ullanıcı Adı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="173"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="191"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr kullanıcı adı.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="183"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="201"/>
         <source>Passwor&amp;d</source>
         <translation>&amp;Parola</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="193"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="211"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr password.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr parolası.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="206"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="224"/>
         <source>Extensible Authentication Protocol (EAP)</source>
         <translation>Genişletilebilir Kimlik Doğrulama Protokolü (EAP)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="212"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="230"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type your Identity for the Extensible Authentication Protocol&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Genişletilebilir Kimlik Doğrulama Protokolü için Kimliğinizi yazın&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="222"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="240"/>
         <source>&amp;Identity</source>
         <translation>K&amp;imlik</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="235"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="253"/>
         <source>WiFi Protected Setup (WPS)</source>
         <translation>WiFi Korumalı Kurulum (WPS)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="243"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="261"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked use WPS push button authentication.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlendiğinde kimlik doğrulama WPS düğmesini kullan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="246"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="264"/>
         <source>Use Push &amp;Button Authentication</source>
         <translation>Kimlik Doğrulama &amp;Düğmesini Kullan</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="276"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="294"/>
         <source>&amp;WPS Pin</source>
         <translation>&amp;WPS Pin</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="292"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="310"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter a WPS pin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bir WPS pini girin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="311"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="329"/>
         <source>Browser Login Requested</source>
         <translation>Tarayıcı Girişi İstendi</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="320"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="338"/>
         <source>Choose or enter a browser:</source>
         <translation>Bir tarayıcı seçin veya girin:</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="327"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="345"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login. If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Browser Users:&lt;/span&gt; Note that Brave does not seem to accept a URL to start with. After the browser starts you will need to enter the URL manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan, oturum açma işlemini tamamlamak için bir web tarayıcısı açmanızı istiyor.&lt;/p&gt;&lt;p&gt;YOL&apos;unuzu tarayıcılar için taradık ve bulunan tüm tarayıcılar aşağıdaki listede gösterilmektedir. Giriş için kullanmak üzere herhangi bir tarayıcı seçebilirsiniz. Web tarayıcınız listede gösterilmiyorsa doğrudan &lt;span style=&quot; font-weight:600;&quot;&gt; Bir tarayıcı kutusu seç veya gir&lt;/span&gt; kutusuna girebilirsiniz.&lt;/p&gt;&lt;p&gt;Tarayıcıyı başlatmak için &lt;span style=&quot; font-weight:600;&quot;&gt;Tarayıcıyı Başlat&lt;/span&gt; düğmesini tıklayın. &lt;/p&gt;&lt;p&gt;Elle oturum açmak istiyorsanız bu iletişim kutusunu kapatın, web tarayıcınızı başlatın ve &lt;span style=&quot; font-weight:600;&quot;&gt;Oturum Açma URL&apos;si&lt;/span&gt; kutusunda gösterilen URL&apos;ye ilerleyin.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Tarayıcı Kullanıcıları:&lt;/span&gt; Brave&apos;nin başlangıçta bir URL&apos;yi kabul etmediğini unutmayın. Tarayıcı başladıktan sonra URL&apos;yi elle girmeniz gerekir. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="342"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="360"/>
         <source>Login URL:</source>
         <translation>Oturum Açma URL&apos;si:</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="349"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="367"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting you continue login with a web browser. This box shows the URL that contains the login page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman, bir web tarayıcısıyla oturum açmaya devam etmenizi istiyor. Bu kutu, giriş sayfasını içeren URL&apos;yi gösterir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -164,52 +164,52 @@
         <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the Firefox browser.&lt;/p&gt;&lt;/body&gt;&lt;html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="361"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="379"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to launch the selected browser. The browser will open at the page shown in the Login URL box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seçilen tarayıcıyı başlatmak için bu düğmeyi kullanın. Tarayıcı, Giriş URL&apos;si kutusunda gösterilen sayfada açılır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="364"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="382"/>
         <source>Launch &amp;Browser</source>
         <translation>Tarayıcıyı &amp;Başlat</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="396"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="414"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu Nedir&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="399"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="417"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="423"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="441"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bağlantı işlemine devam et.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="426"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="444"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accept and use the answers you have provided in this dialog. &lt;/p&gt;&lt;p&gt;This will send your input to the connman daemon to continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu iletişim kutusunda verdiğiniz yanıtları kabul edin ve kullanın. &lt;/p&gt;&lt;p&gt;Bu, bağlantı işlemine devam etmek için girişinizi connman arka plan programına gönderir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="429"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="447"/>
         <source>O&amp;K</source>
         <translation>&amp;Tamam</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="436"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="454"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bağlantı işlemini iptal et.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="439"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="457"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the dialog. &lt;/p&gt;&lt;p&gt;This will send a message to the connman daemon that you have cancelled the connection request.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İletişim kutusunu iptal et. &lt;/p&gt;&lt;p&gt;Bu, bağlantı isteği iptalini connman arka plan programına bir iletiyle gönderir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="442"/>
+        <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="460"/>
         <source>&amp;Cancel</source>
         <translation>&amp;İptal et</translation>
     </message>
@@ -386,9 +386,9 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="35"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="477"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="577"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="733"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="862"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="902"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="743"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="872"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="912"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -427,15 +427,15 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="215"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="357"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="626"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="833"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="714"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="843"/>
         <source>Name</source>
         <translation>Ad</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="220"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="362"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="838"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="848"/>
         <source>Type</source>
         <translation>Tür</translation>
     </message>
@@ -446,8 +446,8 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="230"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="636"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2377"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="724"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2422"/>
         <source>Connected</source>
         <translation>Bağlı</translation>
     </message>
@@ -458,7 +458,7 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="253"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="693"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="635"/>
         <source>Resc&amp;an</source>
         <translation>Yeniden T&amp;ara</translation>
     </message>
@@ -474,25 +474,25 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="367"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="843"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="853"/>
         <source>State</source>
         <translation>Durum</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="372"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="853"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="863"/>
         <source>Connection</source>
         <translation>Bağlantı</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="388"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1971"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1953"/>
         <source>Move Before</source>
         <translation>Önce Taşı</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="401"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1976"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1958"/>
         <source>Move After</source>
         <translation>Sonra Taşı</translation>
     </message>
@@ -545,44 +545,44 @@
         <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu sayfada bilinen WiFi hizmetleri gösterilmektedir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ad:&lt;/span&gt; Ağın SSID&apos;si.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sık Kullanılan:&lt;/span&gt; Bu sütundaki kalp simgesi, bu bilgisayarın daha önce bu hizmeti kullanarak ağa bağlantı yaptığını gösterir.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bağlı:&lt;/span&gt; Bu hizmetin bağlantı durumunu gösterir. Bir metin açıklaması açmak için fareyi simgenin üzerine getirin. Çevrimiçi bir İnternet bağlantısının mevcut olduğunu ve doğrulandığını gösterir. Hazır, başarılı bir şekilde bağlanmış bir aygıta sinyal verir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Güvenlik: &lt;/span&gt;Bu hizmet için kullanılan güvenlik türünü açıklar. Olası değerler &amp;quot;yok&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, ve &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sinyal Gücü:&lt;/span&gt; WiFi sinyalinin gücü, 0 ila 100 arasında bir değere normalize edildi.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="654"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="586"/>
         <source>Wireless Services</source>
         <translation>Kablosuz Hizmetleri</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="660"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="592"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one wifi service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aşağıdaki tabloda bir wifi hizmeti seçin ve hizmeti bağlamak için bu düğmeye basın. &lt;/p&gt;&lt;p&gt;Tabloda listelenen yalnızca bir wifi hizmeti varsa, bu düğmeye basıldığında otomatik olarak bu hizmet seçilir ve bağlanmaya çalışır. &lt;/p&gt;&lt;p&gt;Hizmet hakkında bilgi gerekiyorsa, örneğin bir parola, sizden istenir. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="663"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="754"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="595"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="764"/>
         <source>Connect</source>
         <translation>Bağlan</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="670"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="602"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one wifi service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aşağıdaki tabloda bir wifi hizmeti seçin ve bağlantısını kesmek için bu düğmeye basın. &lt;/p&gt;&lt;p&gt; &amp;quot;Hazır&amp;quot; veya &amp;quot;çevrimiçi&amp;quot; durumda yalnızca bir wifi hizmeti varsa, bu düğmeye basıldığında bu hizmet otomatik olarak seçilir ve bağlantı kesilir. &lt;/p&gt;&lt;p&gt;Bu, önceki bir bağlantı girişimini iptal etmek için de kullanılabilir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="673"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="767"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="605"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="777"/>
         <source>Disconnect</source>
         <translation>Bağlantıyı Kes</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="683"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="615"/>
         <source>Remove</source>
         <translation>Kaldır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="706"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="648"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This label shows the number of WiFi technologies (devices) that were found, and the number that are powered on. There must be at least one WiFi technology found and powered in order for the box below to show services.&lt;/p&gt;&lt;p&gt;To turn a technology on or off go to the &lt;span style=&quot; font-weight:600;&quot;&gt;Technologies&lt;/span&gt; box in the &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; tab and double click on the text that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu etiket bulunan WiFi teknolojilerinin (aygıtlarının) sayısını ve açık olanların sayısını gösterir. Aşağıdaki kutunun hizmetleri gösterebilmesi için en az bir WiFi teknolojisinin bulunması ve güçlendirilmesi gerekir.&lt;/p&gt;&lt;p&gt;Bir teknolojiyi açmak veya kapatmak için &lt;span style=&quot; font-weight:600;&quot;&gt;Durum&lt;/span&gt; sekmesindeki &lt;span style=&quot; font-weight:600;&quot;&gt;Teknolojiler&lt;/span&gt; kutusuna gidin ve teknolojinin &lt;span style=&quot; font-weight:600;&quot;&gt;Güç&lt;/span&gt; sütununda gösterilen metni çift tıklayın.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="709"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="651"/>
         <source>Wifi State</source>
         <translation>Wifi Durumu</translation>
     </message>
@@ -591,63 +591,63 @@
         <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu sayfada sağlanan VPN hizmetleri gösterilmektedir. Tablodaki bazı hücreler ancak bir bağlantı kurulduktan sonra kullanılabilir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ad:&lt;/span&gt; Yetkilendirme dosyasında verilen ad.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tür:&lt;/span&gt; VPN türü (OpenConnect, OpenVPN, PPTP, vb.)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Durum:&lt;/span&gt; Bu hizmetin bağlantı durumunu gösterir. Bir metin açıklaması açmak için fareyi simgenin üzerine getirin. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ana Bilgisayar: &lt;/span&gt;VPN Ana Bilgisayar IP&apos;si.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Alan Adı:&lt;/span&gt; VPN Alan adı.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1092"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1293"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will implement an internet kill switch for VPN connections. If a VPN connection drops while the kill switch is enabled all technologies will be powered off.&lt;/p&gt;&lt;p&gt;The way this works is the service order is monitored. If the topmost service is of type VPN and then if it changes to something other than VPN and if the change was not initiated by the user (for instance by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Disconnect&lt;/span&gt; button in the VPN tab), then CMST will cycle through all technologies powering each one down in turn. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse CMST, VPN bağlantıları için bir internet kapatma anahtarı uygular. Kill anahtarı etkinken bir VPN bağlantısı kesilirse, tüm teknolojiler kapatılacaktır.&lt;/p&gt;&lt;p&gt;Bunun çalışma şekli servis sırasının izlenmesidir. En üstteki hizmet VPN türündeyse ve ardından VPN dışında bir şeye dönüşürse ve değişiklik kullanıcı tarafından başlatılmadıysa (örneğin VPN sekmesindeki  &lt;span style=&quot; font-weight:600;&quot;&gt;Bağlantıyı Kes&lt;/span&gt;  düğmesine basın) ardından CMST sırayla her birini kapatan tüm teknolojiler arasında geçiş yapacaktır.. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1095"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1296"/>
         <source>Enable VPN Internet Kill Switch</source>
         <translation>VPN İnternet Kapatma Anahtarını Etkinleştir</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1108"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1249"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system notification daemon will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed. Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse, önemli bir connman ile ilgili olay alındığında sistem bildirim arka plan programı bir bildirim mesajı açacaktır.&lt;/p&gt;&lt;p&gt;Bildirimler, Sistem Tepsisi Simgesi veya yüklüyse bir Bildir arka plan programı tarafından işlenebilir. İkisi aynı anda aktif olamaz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1184"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1172"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the Start Up Options in the right hand pane will be enabled. Start up options set in this pane will be read and used next time the program starts. Start up options are also available as command line switches and an option provided on the command line will take precedence over an option set in the right hand pane. The options in this pane are provided as a convienence to avoid the necessity of editing a systemd service or other start up file. &lt;/p&gt;&lt;p&gt;Settings are stored in&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1187"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1175"/>
         <source>Enable Start Options from GUI (right hand pane)</source>
         <translation>GUI&apos;den Başlatma Seçeneklerini Etkinleştir (sağdaki bölme)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1314"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1339"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. Changing or setting these will only take effect at the next program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu girişler, program başlangıcında CMST için çeşitli seçenekleri kontrol eder. Bunların değiştirilmesi veya ayarlanması, yalnızca bir sonraki program başlangıcında geçerli olacaktır.&lt;/p&gt;&lt;p&gt;Bu seçeneklerin tümüne komut satırından erişilebilir ve bir komut satırı seçeneği sağlanmışsa, bu ayarlara göre öncelikli olacaktır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1317"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1342"/>
         <source>Start Up Options</source>
         <translation>Başlangıç Seçenekleri</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1407"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1516"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; veya &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Arayüzü sistem çekmecesinde simge durumuna küçültülmüş olarak başlatın.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1432"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1348"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; veya &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sistem çekmecesi simgesinde başlatmadan önce saniye cinsinden bekleme süresini belirtin (varsayılan 0 saniyedir).&lt;/p&gt;&lt;p&gt;CMST başlatılırsa ve sistem çekmecesi oluşturulmadan önce bir çekmece simgesi oluşturmaya çalışırsa, bunu açıklayan bir iletişim kutusu görüntülenir. Bu bazen program otomatik olarak başlatıldığında olur. Sistem açıldığında çekmecenin var olacağını biliyorsanız, bir bekleme süresi belirtebilirsiniz ve CMST çekmece simgesini oluşturmaya çalışmadan önce bu saniye kadar bekleyecektir. Bu, simgeyi oraya yerleştirmeye çalışmadan önce pencere yöneticisine veya panele çekmece oluşturmak için zaman vermeye yarar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1593"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1362"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sayaç güncellemeleri arasındaki saniye cinsinden sıklığı belirtin (varsayılan değer 10 saniyedir). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1597"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1366"/>
         <source>Counter Update Rate </source>
         <translation>Sayaç Güncelleme Oranı </translation>
     </message>
@@ -656,7 +656,7 @@
         <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Çeşitli olaylar gerçekleştikten sonra yürütülecek programlar veya işlemler.&lt;/p&gt;&lt;p&gt;Program veya işlem komut satırı bağımsız değişkenlerini gerektiriyorsa, bunları bir komut satırında yazıyormuş gibi burada sağlayın.&lt;/p&gt;&lt;p&gt;Örnek:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/programa/giden/yol değ1 değ2 değ3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1612"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1594"/>
         <source>External Programs</source>
         <translation>Harici Programlar</translation>
     </message>
@@ -669,180 +669,179 @@
         <translation type="vanished">Bağlandıktan Sonra</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1529"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Default is no desktop specific code.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Varsayılan, masaüstüne özgü bir kod değildir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Varsayılan, masaüstüne özgü bir kod değildir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1792"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1774"/>
         <source>Aw&amp;Oken</source>
         <translation>Aw&amp;Oken</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1799"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1781"/>
         <source>A&amp;rtwork</source>
         <translation>&amp;Çizim</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1981"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1963"/>
         <source>Rescan</source>
         <translation>Yeniden tara</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1989"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1971"/>
         <source>Offline Mode</source>
         <translation>Çevrimdışı Mod</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="250"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="690"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="632"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tüm WiFi teknolojilerini yeniden taramaya zorlayın. Bu, komut satırından &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; komutunu vermeye benzer.&lt;/p&gt;&lt;p&gt;Tarama yapılırken düğme devre dışı kalır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="631"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="719"/>
         <source>Favorite</source>
         <translation>Sık Kullanılan</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="641"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="729"/>
         <source>Security</source>
         <translation>Güvenlik</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="646"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="734"/>
         <source>Signal Strength</source>
         <translation>Sinyal Gücü</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="865"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="875"/>
         <source>&amp;Counters</source>
         <translation>&amp;Sayaçlar</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="886"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="896"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The service being monitored by the counters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sayaçlar tarafından izlenen hizmet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="889"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1663"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="899"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1658"/>
         <source>Service:</source>
         <translation>Hizmet:</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="932"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="942"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection that is not marked roaming. &lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dolaşım olarak işaretlenmemiş &amp;quot;çevrimiçi&amp;quot; hizmet bağlantısı için sayaçlar. &lt;/p&gt;&lt;p&gt;Sayaçlar her zaman mevcut olmayabilir. Sayaçlar komut satırında (-c veya --disable-counters) devre dışı bırakılmış olabilir veya bazen bağlantı  &amp;quot;çevrimiçi &amp;quot; yerine &amp;quot;hazır &amp;quot; olarak kaydedilecektir. Çevrimiçi, internet bağlantısını doğrulayan &amp;quot;hazır&amp;quot; bir bağlantıdır. Yalnızca &amp;quot;hazır&amp;quot; bir bağlantıyla çevrimiçi olmak mümkündür, ancak sayaçlar yalnızca &amp;quot;çevrimiçi&amp;quot; bağlantı için çalışır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="905"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="915"/>
         <source>Home</source>
         <translation>Ana Sayfa</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="935"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="991"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="945"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1001"/>
         <source>Counter not available.</source>
         <translation>Sayaç mevcut değil.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="961"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="971"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection marked &amp;quot;roaming&amp;quot;.&lt;/p&gt;&lt;p&gt;In the case of cellular services this normally indicates connections to a foreign provider.&lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&amp;quot;Çevrimiçi&amp;quot; hizmet bağlantısı için &amp;quot;dolaşım&amp;quot; işaretli sayaçlar.&lt;/p&gt;&lt;p&gt;Hücresel hizmetlerde bu normal olarak yabancı bir sağlayıcıya bağlantı olduğunu gösterir.&lt;/p&gt;&lt;p&gt;Sayaçlar her zaman mevcut olmayabilir. Sayaçlar komut satırında (-c veya --disable-counters) devre dışı bırakılmış olabilir veya bazen bağlantı &amp;quot;çevrimiçi&amp;quot; yerine &amp;quot;hazır&amp;quot; olarak kaydedilecektir. Çevrimiçi, internet bağlantısını doğrulayan &amp;quot;hazır&amp;quot; bir bağlantıdır. Yalnızca &amp;quot;hazır&amp;quot; bir bağlantıyla çevrimiçi olmak mümkündür, ancak sayaçlar yalnızca &amp;quot;çevrimiçi&amp;quot; bağlantı için çalışır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="964"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="974"/>
         <source>Roaming</source>
         <translation>Dolaşım</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1011"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1021"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counter Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sayaç Ayarları&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1014"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1024"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The threshold values for counter updates (counter resolution).  Data and time work together to define how often the fields are updated.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sayaç güncellemeleri için eşik değerleri (sayaç çözünürlüğü). Veri ve zaman, alanların ne sıklıkta güncelleneceğini tanımlamak için birlikte çalışır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1017"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1027"/>
         <source>Settings:</source>
         <translation>Ayarlar:</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1032"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1042"/>
         <source>&amp;Preferences</source>
         <translation>&amp;Tercihler</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1358"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1527"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; veya &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Connman RX ve TX sayaçlarını etkinleştirin. Sayaçlar Connman&apos;da deneyseldir ve sistem günlüklerine büyük miktarda veri yazmalarını sağlar.&lt;/p&gt;&lt;p&gt;Sayaçlar varsayılan olarak kapalıdır ve başlangıçta olduğu gibi bir değişikliktir. 2017.09.19 sürümüne kadar ve dahil sürümler varsayılan olarak etkinleştirilmiştir. Bu sürümlerden sonraki tüm sayaçlar varsayılan olarak devre dışıdır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1361"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1530"/>
         <source>Enable Counters</source>
         <translation>Sayaçları Etkinleştir</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1507"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1503"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; veya &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;VPN&apos;yi devre dışı bırak. Bu, VPN sekmesini gizleyecek ve connman-vpn ile bağlantı kurmaya çalışmayı da atlayacaktır. Daha sonra, Connman programınız --disable-vpn özelliğiyle oluşturulmuşsa yararlıdır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1510"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1506"/>
         <source>Disable VPN</source>
         <translation>VPN&apos;yi Devre Dışı Bırak</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1497"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1471"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; veya &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Simge durumuna küçült düğmesini devre dışı bırakın. Pencere yöneticisinin arayüzü küçültmek için tek kontrol sahibi olmasını istediğinizde kullanın.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1500"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1474"/>
         <source>Disable Minimized</source>
         <translation>Küçültmeyi Devre Dışı Bırak</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1146"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1071"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the interface are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Arayüz için tercihler bu kutudadır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1149"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1074"/>
         <source>Interface</source>
         <translation>Arayüz</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1207"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1090"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the display of tooltips will be enabled for the interface widgets.&lt;/p&gt;&lt;p&gt;Tooltips are the small popups that appear when you hover the mouse pointer over an area of the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse, arabirim widget&apos;ları için araç ipuçlarının görüntülenmesi etkinleştirilir.&lt;/p&gt;&lt;p&gt;Araç ipuçları, fare işaretçisini arayüzün bir alanının üzerine getirdiğinizde görünen küçük açılır pencerelerdir. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1093"/>
         <source>Enable ToolTips (Interface)</source>
         <translation>Araç İpuçlarını Etkinleştir (Arayüz)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1158"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1103"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cumulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normalde sayaçlar birikimlidir ve bağlantı süresini korur ve önyükleme arasındaki TX ve RX sayılarını korur. &lt;/p&gt;&lt;p&gt;Bu kutu işaretlendiğinde, CMST her başlatıldığında sayaçlar sıfırlanır ve CMST her çalıştığında bir Connman hizmeti başlatılır. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1161"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1106"/>
         <source>Reset Counters</source>
         <translation>Sayaçları Sıfırla</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1168"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1113"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked additional controls for advanced users are displayed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlendiğinde ileri düzey kullanıcılar için ek kontroller görüntülenir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1171"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1116"/>
         <source>Advanced Controls</source>
         <translation>Gelişmiş Denetimler</translation>
     </message>
@@ -855,49 +854,49 @@
         <translation type="vanished">Başlatma Seçenekleri</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1368"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1460"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; veya &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sistem çekmecesi simgesini devre dışı bırakın.&lt;/p&gt;&lt;p&gt;Freedesktop.org sistem çekmecesi teknik özelliklerine uymayan sistem çekmeceleri için gerekli olabilir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1484"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1434"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Devre dışı bırakıldı çünkü şu anda Connman bu seçeneği kabul edecek, ancak hiçbir şey yapmayacak.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1487"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1437"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sayaç güncellemesinden önce iletilmesi gereken KB cinsinden veri miktarını belirtin (varsayılan 1024 KB&apos;dir).&lt;/p&gt;&lt;p&gt;Connman bu girişi kabul eder, ancak Connman kodundaki bir açıklamaya göre gerçek özelliğin hala uygulanması gerekir ve bu nedenle seçim devre dışı bırakılır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1490"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1440"/>
         <source>Counter Update KB</source>
         <translation>Sayaç Güncellemesi KB</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1574"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1376"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sistem çekmecesi simgesine başlamadan önce saniye cinsinden bekleme süresini belirtin (varsayılan 0 saniyedir).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1382"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1409"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sayaç güncellemesinden önce iletilmesi gereken KB cinsinden veri miktarını belirtin (varsayılan 1024 KB&apos;dir).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1411"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1520"/>
         <source>Start Minimized</source>
         <translation>Küçültülmüş Başlat</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1436"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1352"/>
         <source>Wait Time</source>
         <translation>Bekleme Zamanı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1372"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1464"/>
         <source>Disable Tray Icon</source>
         <translation>Sistem Çekmece Simgesini Devre Dışı Bırak</translation>
     </message>
@@ -910,159 +909,151 @@
         <translation type="vanished">Başlatma Seçeneklerini Kullan</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1197"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1080"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the state of the GUI will be restored from settings saved on disk. Settings include the geometry and position of the dialog and the current tab. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p&gt;The settings file is: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse, arayüzün durumu diske kaydedilen ayarlardan geri yüklenir. Ayarlar, iletişim kutusunun geometrisini ve konumunu ve geçerli sekmeyi içerir. &lt;/p&gt;&lt;p&gt;Bu ayarlar bir sonraki önyüklemede kullanıcı arayüzünü kapanma şekline geri yüklemek için kullanılacaktır.&lt;/p&gt;&lt;p&gt;Ayar dosyası: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;Bu standart bir ini türü metin dosyasıdır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1200"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1083"/>
         <source>Retain State</source>
         <translation>Durumu Koru</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1446"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1450"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; veya &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Sisteminizden bir simge teması kullanın. Temayı sağdaki kutuda belirtebilirsiniz veya kutu boş bırakılırsa CMST sistem genelinde simge temasını (tanımlanmışsa) kullanmayı dener.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1449"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1453"/>
         <source>Use Icon Theme</source>
         <translation>Simge Temasını Kullan</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1459"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1553"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sayaç güncellemeleri arasındaki saniye cinsinden sıklığı belirtin (varsayılan değer 10 saniyedir). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1517"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use code specific for the selected desktop environment.&lt;/p&gt;&lt;p&gt;As of 2014.11.24 there seems to be a problem with QT5.3 and some system trays. There is code in the program to try and work around this issue, and selecting one of these buttons will invoke the code specific to the desktop.&lt;/p&gt;&lt;p&gt;If the bug gets fixed these options will remain so that start up scripts do not break, but the options will do nothing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seçili masaüstü ortamına özgü kodu kullanın.&lt;/p&gt;&lt;p&gt;2014.11.24 itibariyle QT5.3 ve bazı sistem çekmecelerinde bir sorun var gibi görünüyor. Programda bu soruna geçici bir çözüm bulmak için kod var ve bu düğmelerden birini seçtiğinizde masaüstüne özgü kodu çağıracaksınız.&lt;/p&gt;&lt;p&gt;Hata giderilirse bu seçenekler başlangıç betiklerinin bozulmaması için kalır, ancak seçenekler hiçbir şey yapmaz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seçili masaüstü ortamına özgü kodu kullanın.&lt;/p&gt;&lt;p&gt;2014.11.24 itibariyle QT5.3 ve bazı sistem çekmecelerinde bir sorun var gibi görünüyor. Programda bu soruna geçici bir çözüm bulmak için kod var ve bu düğmelerden birini seçtiğinizde masaüstüne özgü kodu çağıracaksınız.&lt;/p&gt;&lt;p&gt;Hata giderilirse bu seçenekler başlangıç betiklerinin bozulmaması için kalır, ancak seçenekler hiçbir şey yapmaz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1520"/>
         <source>Desktop Specific</source>
-        <translation>Masaüstüne Özel</translation>
+        <translation type="vanished">Masaüstüne Özel</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1532"/>
         <source>None</source>
-        <translation>Yok</translation>
+        <translation type="vanished">Yok</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1545"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-xfce&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1548"/>
         <source>XFCE</source>
-        <translation>XFCE</translation>
+        <translation type="vanished">XFCE</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1558"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--use-mate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1561"/>
         <source>MATE</source>
-        <translation>MATE</translation>
+        <translation type="vanished">MATE</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1421"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1395"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB.  If the spedified color matches the tray background we&apos;ve effectively created fake transparency. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sistem çekmecesi simgelerinin saydam olmak yerine beyaz veya siyah arka planlarla görüntülendiği bir QT hatası etrafında çalışmak için kullanılır.&lt;/p&gt;&lt;p&gt;Simge arka plan rengini burada belirleyebilirsiniz. Biçim, RRGGBB biçimindeki onaltılık bir sayıdır. Hızlandırılmış renk çekmece arka planıyla eşleşiyorsa, sahte saydamlığı etkili bir şekilde oluşturduk. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="680"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="612"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to remove the service. &lt;/p&gt;&lt;p&gt;If a service has previously been successfully connected (Favorite is true) this button will remove the Favorite property. The service will also be disconnected if it is currently connected. If the service required a passphrase then the passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;If a connection attempt failed this can slso be used to reset the service.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aşağıdaki tabloda bir wifi hizmeti seçin ve hizmeti kaldırmak için bu düğmeye basın. &lt;/p&gt;&lt;p&gt;Bir hizmet daha önce başarıyla bağlandıysa (Sık Kullanılan doğru) bu düğme Sık Kullanılan özelliğini kaldırır. Hizmet şu anda bağlıysa da bağlantısı kesilir. Hizmet bir parola gerektiriyorsa, parola silinir ve unutulur.&lt;/p&gt;&lt;p&gt;Bir bağlantı girişimi başarısız olursa, hizmeti sıfırlamak için de kullanılabilir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="736"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="746"/>
         <source>&amp;VPN</source>
         <translation>&amp;VPN</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="742"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="752"/>
         <source>VPN Services</source>
         <translation>VPN Hizmetleri</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="751"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="761"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one vpn service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aşağıdaki tabloda bir vpn hizmeti seçin ve hizmeti bağlamak için bu düğmeye basın. &lt;/p&gt;&lt;p&gt;Tabloda listelenen yalnızca bir vpn hizmeti varsa, bu düğmeye basıldığında bu hizmet otomatik olarak seçilir ve bağlanmaya çalışır. &lt;/p&gt;&lt;p&gt;Hizmet hakkında bilgi gerekiyorsa, örneğin bir parola, sizden istenir. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="764"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="774"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one vpn service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aşağıdaki tabloda bir vpn hizmeti seçin ve bağlantısını kesmek için bu düğmeye basın. &lt;/p&gt;&lt;p&gt;&amp;quot;Hazır&amp;quot; veya &amp;quot;çevrimiçi&amp;quot; durumda yalnızca bir vpn hizmeti varsa, bu düğmeye basıldığında bu hizmet otomatik olarak seçilir ve bağlantı kesilir. &lt;/p&gt;&lt;p&gt;Bu, önceki bir bağlantı girişimini iptal etmek için de kullanılabilir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="848"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="858"/>
         <source>Host</source>
         <translation>Ana Bilgisayar</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1425"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1399"/>
         <source>Fake Transparency</source>
         <translation>Sahte Saydamlık</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1326"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1484"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the background color as a hex number in the format: RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Arka plan rengini onaltılı bir sayı olarak belirtin: RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1348"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1540"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon theme to use. For this theme to be used it must be installed on your system. If the theme is not installed, or if you spell the name wrong CMST will fall back to using its internal icon set.&lt;/p&gt;&lt;p&gt;If this box is blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kullanılacak simge teması. Bu temanın kullanılabilmesi için sisteminize yüklenmiş olması gerekir. Tema yüklü değilse veya adı yanlış hecelerseniz CMST dahili simge kümesini kullanmaya geri döner.&lt;/p&gt;&lt;p&gt;Bu kutu boşsa, CMST sistem genelinde simge temasını (tanımlanmışsa) kullanmayı dener.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1263"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1188"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the system tray are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sistem çekmecesi için tercihler bu kutudadır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1266"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1191"/>
         <source>System Tray</source>
         <translation>Sistem Çekmecesi</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1285"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked an icon will not be displayed in the system tray.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse, sistem çekmecesinde bir simge görüntülenmez. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse, sistem çekmecesinde bir simge görüntülenmez. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1288"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
         <source>Hide Tray Icon</source>
         <translation>Sistem Çekmece Simgesini Gizle</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1272"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1230"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray icon will popup a status message when you hover the mouse over it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse, sistem çekmecesi simgesi, fareyi üzerine getirdiğinizde bir durum iletisi görüntüler.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1275"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1233"/>
         <source>Enable System Tray Popups</source>
         <translation>Sistem Çekmecesi Açılır Pencerelerini Etkinleştir</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1298"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1220"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse, connman ile ilgili önemli bir olay alındığında sistem çekmecesi bir bildirim iletisi açar.&lt;/p&gt;&lt;p&gt;Bildirimler Sistem Çekmecesi Simgesi veya yüklenmişse bir Bildirim arka plan programı tarafından gerçekleştirilebilir. Her ikisi de aynı anda etkin olamaz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1301"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1223"/>
         <source>System Tray Notifications</source>
         <translation>Sistem Çekmecesi Bildirimleri</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1111"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1252"/>
         <source>Notifications</source>
         <translation>Bildirimler</translation>
     </message>
@@ -1071,12 +1062,12 @@
         <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse, sistem masaüstü bildirim arka plan programı, connman ile ilgili önemli bir olay alındığında bir bildirim iletisi açar.&lt;/p&gt;&lt;p&gt;Bildirimler Sistem Çekmecesi Simgesi veya yüklenmişse bir Bildirim arka plan programı tarafından işlenebilir. Her ikisi de aynı anda etkin olamaz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1136"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1261"/>
         <source>Notification Daemon</source>
         <translation>Bildirim Arka Plan Programı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1123"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1274"/>
         <source>Server Status</source>
         <translation>Sunucu Durumu</translation>
     </message>
@@ -1121,43 +1112,43 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seçilen hizmeti listede bir diğerinden sonra taşıyın.&lt;/p&gt;&lt;p&gt;Düğme yalnızca seçilen hizmet taşınabiliyorsa ve hedef olarak kullanılabilecek geçerli başka bir hizmet varsa etkinleşir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1053"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1287"/>
         <source>Program Control</source>
         <translation>Program Denetimi</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1082"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1313"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will place an entry in the autostart directory for the current user, unchecking will remove said entry. This directory is typically: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST only add or remove the .desktop file from the autostart directory. Autostarting is typically dependent upon your Desktop Environment and must be enabled from there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretli CMST, geçerli kullanıcı için otomatik başlatma dizinine bir giriş yerleştirirse, işaretin kaldırılması söz konusu girişi kaldırır. Bu dizin genellikle: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST yalnızca .desktop dosyasını autostart dizinine ekler veya kaldırır. Otomatik başlatma genellikle Masaüstü Ortamınıza bağlıdır ve buradan etkinleştirilmelidir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1085"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1316"/>
         <source>Enable Autostart</source>
         <translation>Otomatik Başlatmayı Etkinleştir</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1059"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1303"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If a Connman service falls into the &amp;quot;Failed&amp;quot; state it will normally remain in that state.&lt;/p&gt;&lt;p&gt;If this box is checked CMST will try to automatically reconnect a WiFi service that enters the &amp;quot;Failed&amp;quot; state. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bir Connman hizmeti &amp;quot;Başarısız&amp;quot; durumuna düşerse, normalde bu durumda kalır.&lt;/p&gt;&lt;p&gt;Bu kutu işaretlenirse CMST, &amp;quot;Başarısız&amp;quot; durumuna giren bir WiFi hizmetini otomatik olarak yeniden bağlamaya çalışır. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1062"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1306"/>
         <source>Retry Failed Connection</source>
         <translation>Başarısız Bağlantıyı Yeniden Dene</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1225"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1134"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Color in #RGB format to colorize the internal icons with.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dahili simgeleri renklendirmek için #RGB biçiminde renk.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1235"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1144"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the color selection dialog. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Renk seçimi iletişim kutusunu aç. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="135"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1238"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1147"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -1167,77 +1158,102 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="586"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="622"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to edit the service. &lt;/p&gt;&lt;p&gt;The service must have previously been successfully connected (Favorite is true) for this button to work. Pressing &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; will remove the service and then request credentials to establish the connection. If the service is currently connected it will be disconnected first. If the service required a passphrase then the old passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;Connman does not provide any methods to retrieve credentials (passphrases, etc.) as that is insecure. CMST will not work around this protection. All this button really does is automate pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Remove&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; buttons above. Make sure you know all of the credentials to reconnect as the existing credentials will be cleared when this button is pressed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="625"/>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="674"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="790"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="800"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1248"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1157"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Internal icons can be colorized. You may select a color using the button to the left, or you may type in the #RGB color yourself.&lt;/p&gt;&lt;p&gt;If you type the entry it must have leading # sign. Example: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dahili simgeler renklendirilebilir. Soldaki düğmeyi kullanarak bir renk seçebilir veya #RGB rengini kendiniz yazabilirsiniz.&lt;/p&gt;&lt;p&gt;Girdiyi yazarsanız, başında # işareti olması gerekir. Örnek: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1251"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1160"/>
         <source>Colorize</source>
         <translation>Renklendirme</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1609"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1197"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide the CMST tray icon during normal operations. Normal operations are defined as having the Global state in an &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; mode. Any other state will cause the icon to be displayed in the system tray.  CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1200"/>
+        <source>Hide Tray Icon Unless Needed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1207"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the CMST icon will be hidden in the system tray. CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1591"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line. Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Two events are checked. &lt;span style=&quot; font-weight:600;&quot;&gt;Before Connecting&lt;/span&gt; events are called after the Connect button is pressed in either the Wireless or VPN tabs. The program or process in the Execute box will only be executed prior to making a connection for the service shown in the Service box.  It will not be called when connecting to any other service.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;After Connecting&lt;/span&gt; box will be called after Connman enters the ready or online state.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1618"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1613"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This area is to specify a program or process to run after a wifi or vpn service button is pressed, but before the connect method is sent to ConnMan. This is mainly used to modify a .cmst.config file which seems useful to modify certain short lived entries for openConnect vpn connections.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;Execute&lt;/span&gt; box will only be executed prior to making a connection for the single service shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Service&lt;/span&gt; box. It will not be called when connecting to any other service. If a .cmst.config file is to be modified a check must in the &lt;span style=&quot; font-weight:600;&quot;&gt;Modify Service File&lt;/span&gt; box and the path and name of the file to be modified must be provided.&lt;/p&gt;&lt;p&gt;To modify a .cmst.config file CMST will read stdout of the program or process being called. Program output should be individual lines in KEY=VALUE format. If KEY exists in the .cmst.config file it will be replaced by the new VALUE. If KEY does not exist it will be appended. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1621"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1616"/>
         <source>Before Connecting</source>
         <translation>Bağlanmadan Önce</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1637"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1632"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the program or process to be executed before Connman initiates a connection to the service listed in the box above. If left blank no program or process will be executed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman, yukarıdaki kutuda listelenen hizmete bir bağlantı başlatmadan önce yürütülecek programı veya işlemi girin. Boş bırakılırsa hiçbir program veya işlem yürütülmez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1640"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1635"/>
         <source>Execute:</source>
         <translation>Yürüt:</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1660"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1655"/>
         <source>Specify the service you are connecting to where you want a program or process to execute prior to initiating the connection.</source>
         <translation>Bağlantıyı başlatmadan önce, bir programın veya işlemin yürütülmesini istediğiniz yere bağlandığınız hizmeti belirtin.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1675"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1670"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the configuration file shown below will be modified by whatever output the program provides.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse, aşağıda gösterilen yapılandırma dosyası, programın sağladığı çıktı ne olursa olsun değiştirilecektir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1678"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1673"/>
         <source>Modify Service File</source>
         <translation>Servis Dosyasını Değiştir</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1687"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1682"/>
         <source>Service configuration file to be modified by the program.</source>
         <translation>Program tarafından değiştirilecek hizmet yapılandırma dosyası.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1690"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1685"/>
         <source>FIle: </source>
         <translation>Dosya: </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1720"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1722"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -1246,143 +1262,143 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1727"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1729"/>
         <source>After Connecting</source>
         <translation>Bağlandıktan Sonra</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1767"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1749"/>
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1773"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1755"/>
         <source>&amp;About</source>
         <translation>H&amp;akkında</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1779"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1761"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display a dialog box containing information about this program. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu program hakkında bilgi içeren bir iletişim kutusu görüntüler.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1782"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1764"/>
         <source>C&amp;MST</source>
         <translation>C&amp;MST</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1789"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1771"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display a dialog box containing information about the Icon set used in this program. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu programda kullanılan Simge seti hakkında bilgi içeren bir iletişim kutusu görüntüler. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1806"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1788"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display a dialog box containing information about the QT toolkit used to develop this program. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu programı geliştirmek için kullanılan QT araç seti hakkında bilgi içeren bir iletişim kutusu görüntüler. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1809"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1791"/>
         <source>&amp;QT</source>
         <translation>&amp;QT</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1816"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1798"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the program license.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Program lisansını görüntülemek için bu düğmeyi kullanın.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1819"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1801"/>
         <source>&amp;License</source>
         <translation>&amp;Lisans</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1826"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1808"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the change log of the program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programın değişiklik günlüğünü görüntülemek için bu düğmeyi kullanın.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1829"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1811"/>
         <source>ChangeLo&amp;g</source>
         <translation>Değişiklik &amp;Günlüğü</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1867"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1849"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Help&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Program help is mainly provided by the &amp;quot;What&apos;s This&amp;quot; button in the lower left corner. Press the button and then click on an item you are interested in. &amp;quot;What&apos;s This&amp;quot; is also available via context menu by right clicking on a button, box or text area.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Yardım&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Program yardımı temel olarak sol alt köşedeki &amp;quot;Bu Nedir&amp;quot; düğmesiyle sağlanır. Düğmeye basın ve sonra ilgilendiğiniz bir öğeye tıklayın. &amp;quot;Bu Nedir&amp;quot;, bir menü, kutu veya metin alanına sağ tıklayarak içerik menüsü üzerinden de erişilebilir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1903"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1885"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu Nedir&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1906"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1888"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to find information about an element in the GUI by entering &amp;quot;What&apos;s This&amp;quot; mode. &lt;/p&gt;&lt;p&gt;You may also right click on an element to show the &amp;quot;What&apos;s This&amp;quot; text for it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&amp;quot;Bu Nedir&amp;quot; moduna girerek arayüzdeki bir öğe hakkında bilgi bulmak için bu düğmeyi kullanın. &lt;/p&gt;&lt;p&gt;&amp;quot;Bu Nedir&amp;quot; metnini göstermek için bir öğeye sağ tıklayabilirsiniz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1916"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1898"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the provisioning editor to create or edit Connman configuration (provisioning) files.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. &lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman yapılandırma (temel hazırlık) dosyaları oluşturmak veya düzenlemek için temel hazırlık düzenleyiciyi açın.&lt;/p&gt;&lt;p&gt;Bu yapılandırma dosyaları root:root&apos;a ait olan /var/lib/connman dizinindedir. CMST, bu dizindeki dosyaların okunmasına ve yazılmasına izin vermek için bir roothelper kaydedecektir. &lt;/p&gt;&lt;p&gt;Kök ayrıcalıklarını kötüye kullanmaktan kaçınmak için düzenleyici yalnızca &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt; ile biten dosyalarda çalışır. Bu dosya adı sonu, bir dosya kaydı sırasında otomatik olarak eklenir ve değiştirilemez. &lt;/p&gt;&lt;p&gt;Bu düzenleyiciyi kullanarak başka yollarla oluşturulan yapılandırma dosyalarını düzenlemek veya silmek mümkün değildir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1919"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1901"/>
         <source>Provisioning Editor</source>
         <translation>Temel Hazırlık Düzenleyicisi</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1926"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1908"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the VPN provisioning editor to create or edit Connman configuration (provisioning) files for VPN connections.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman-vpn which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. &lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VPN bağlantıları için Connman yapılandırma (temel hazırlık) dosyaları oluşturmak veya düzenlemek için VPN temel hazırlığı düzenleyicisini açın.&lt;/p&gt;&lt;p&gt;Bu yapılandırma dosyaları root:root&apos;a ait olan /var/lib/connman-vpn dizinindedir. CMST, bu dizindeki dosyaların okunmasına ve yazılmasına izin vermek için bir roothelper kaydedecektir. &lt;/p&gt;&lt;p&gt;Kök ayrıcalıklarını kötüye kullanmaktan kaçınmak için düzenleyici yalnızca &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt; ile biten dosyalarda çalışır. Bu dosya adı sonu, bir dosya kaydı sırasında otomatik olarak eklenir ve değiştirilemez. &lt;/p&gt;&lt;p&gt;Bu düzenleyiciyi kullanarak başka yollarla oluşturulan yapılandırma dosyalarını düzenlemek veya silmek mümkün değildir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1929"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1911"/>
         <source>VPN Editor</source>
         <translation>VPN Düzenleyicisi</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1936"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1918"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exit the program and remove the system tray icon. Connman will still be running as a daemon but will not be managed by this program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programdan çıkın ve sistem çekmecesi simgesini kaldırın. Connman hala bir arka plan programı olarak çalışacak, ancak bu program tarafından yönetilmeyecek.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1939"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1921"/>
         <source>E&amp;xit</source>
         <translation>&amp;Çıkış</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1959"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1941"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimize the dialog. If you have the system tray Icon shown this dialog may be restored by right clicking on the tray icon. If the tray icon is hidden minimize will not be active.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İletişim kutusunu simge durumuna küçültün. Sistem çekmecesi simgesi gösterildiyse, bu iletişim kutusu çekmece simgesine sağ tıklayarak geri yüklenebilir. Çekmece simgesi gizlenmişse simge durumuna küçültme etkin olmaz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1962"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="392"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1944"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="426"/>
         <source>Mi&amp;nimize</source>
         <translation>&amp;Küçült</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1994"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1976"/>
         <source>IDPass</source>
         <translation>KimlikŞifre</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1997"/>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1979"/>
         <source>Set ID and Password for tethered wifi</source>
         <translation>Kablosuz paylaşım için kimlik ve şifre belirle</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="393"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="427"/>
         <source>Ma&amp;ximize</source>
         <translation>B&amp;üyüt</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="396"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="430"/>
         <source>&amp;Exit</source>
         <translation>&amp;Çıkış</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="495"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="532"/>
         <source>About %1</source>
         <translation>%1 Hakkında</translation>
     </message>
@@ -1402,107 +1418,103 @@ p, li { white-space: pre-wrap; }
         <translation>VPN Bağlantıları</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="496"/>
-        <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="522"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="560"/>
         <source>About AwOken</source>
         <translation>AwOken Hakkında</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="553"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="591"/>
         <source>License</source>
         <translation>Lisans</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="561"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="599"/>
         <source>%1 change log is not available.</source>
         <translation>%1 değişiklik günlüğü kullanılamıyor.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="563"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="601"/>
         <source>ChangeLog</source>
         <translation>Değişiklik Günlüğü</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="686"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2698"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="724"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2746"/>
         <source>Cancel</source>
         <translation>İptal et</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="711"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="716"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="749"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="754"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;Hizmet:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="716"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="754"/>
         <source>Unable to determine service</source>
         <translation>Hizmet belirlenemedi</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="748"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="856"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="887"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="786"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="896"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="933"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="967"/>
         <source>No Services Selected</source>
         <translation>Hiçbir Hizmet Seçilmedi</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="888"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="934"/>
         <source>You need to select a Wifi service before pressing the remove button.</source>
         <translation>Kaldır düğmesine basmadan önce bir Wifi hizmeti seçmeniz gerekir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="918"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="999"/>
         <source>Offline Mode Engaged</source>
         <translation>Çevrimdışı Mod Etkin</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="923"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1004"/>
         <source>Offline Mode Disabled</source>
         <translation>Çevrimdışı Mod Devre Dışı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="937"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1018"/>
         <source>Network Services:</source>
         <translation>Ağ Hizmetleri:</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1206"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1285"/>
         <source>Service Error: %1</source>
         <translation>Hizmet Hatası: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1207"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1234"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1286"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1331"/>
         <source>Object Path: %1</source>
         <translation>Nesne Yolu: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1227"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1324"/>
         <source>VPN Engaged</source>
         <translation>VPN Etkin</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1231"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1328"/>
         <source>VPN Disengaged</source>
         <translation>VPN Devre Dışı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1314"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1411"/>
         <source>&lt;b&gt;Technology: %1&lt;/b&gt;&lt;p&gt;Please enter the WiFi AP SSID that clients will&lt;br&gt;have to join in order to gain internet connectivity.</source>
         <translation>&lt;b&gt;Teknoloji: %1&lt;/b&gt;&lt;p&gt;İnternet bağlantısı kazanmak için lütfen&lt;br&gt; istemcilerin&lt;br&gt;katılması gereken WiFi AP SSID&apos;sini girin.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1326"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1423"/>
         <source>&lt;b&gt;Technology: %1&lt;/b&gt;&lt;p&gt;Please enter the WPA pre-shared key clients will&lt;br&gt;have to use in order to establish a connection.&lt;p&gt;PSK length: minimum of 8 characters.</source>
         <translation>&lt;b&gt;Teknoloji: %1&lt;/b&gt;&lt;p&gt;Lütfen bağlantı kurmak için istemcilerin kullanması&lt;br&gt;gereken WPA ön paylaşımlı anahtarını girin.&lt;p&gt;PSK uzunluğu: en az 8 karakter.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2268"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2305"/>
         <source>Ethernet Connection
 </source>
         <comment>icon_tool_tip</comment>
@@ -1510,15 +1522,15 @@ p, li { white-space: pre-wrap; }
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2269"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2296"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2306"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2334"/>
         <source>Service: %1
 </source>
         <translation>Hizmet: %1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2275"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2312"/>
         <source>WiFi Connection
 </source>
         <comment>icon_tool_tip</comment>
@@ -1526,51 +1538,51 @@ p, li { white-space: pre-wrap; }
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2277"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2314"/>
         <source>SSID: %1
 </source>
         <translation>SSID: %1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2282"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2319"/>
         <source>Security: %1
 </source>
         <translation type="unfinished">Güvenlik: %1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2283"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2320"/>
         <source>Strength: %1%
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2294"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2332"/>
         <source>VPN Connection
 </source>
         <comment>icon_tool_tip</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2295"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2333"/>
         <source>Type: %1
 </source>
         <translation type="unfinished">Tür: %1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2297"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2335"/>
         <source>Host: %1</source>
         <translation>Host: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2745"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2795"/>
         <source> Warning</source>
         <translation> Uyarı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1557"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1641"/>
         <source>&lt;b&gt;Connection:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;Bağlantı:&lt;/b&gt; %1</translation>
     </message>
@@ -1579,386 +1591,401 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">&lt;center&gt;%1 Connman arka plan programı ile arayüz oluşturmak ve sistem çekmecesi denetimi sağlamak için kullanılan bir programdır. &lt;br&gt;&lt;center&gt;Sürüm &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Yayın tarihi: %3&lt;center&gt;Telif Hakkı c %4&lt;center&gt;Sahibi&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, ABD&lt;br&gt;&lt;center&gt;&lt;b&gt;Çeviriler:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Çince)&lt;center&gt;sqozz (Almanca)&lt;center&gt;Ilya Shestopalov (Rusça)&lt;center&gt;Heimen Stoffels (Flemenkçe)&lt;center&gt;Yaşar Çiv (Türkçe)&lt;br&gt;&lt;center&gt;&lt;b&gt;Yapı Bilgisi:&lt;/b&gt;&lt;center&gt;QT %5 sürümü kullanılarak derlendi</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="536"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="574"/>
         <source>About Other Artwork</source>
         <translation>Diğer Çizimler Hakkında</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="537"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="575"/>
         <source>&lt;center&gt;This program uses artwork from &lt;b&gt;Freepik&lt;/b&gt; obtained from www.flaticon.com:&lt;br&gt;&lt;br&gt;Released under the Flaticon Basic License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;https://file000.flaticon.com/downloads/license/license.pdf&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Artwork files:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</source>
         <translation>&lt;center&gt;Bu program, www.flaticon.com adresinden elde edilen &lt;b&gt;Freepik&lt;/b&gt; çizimini kullanır:&lt;br&gt;&lt;br&gt;Flaticon Temel Lisansı altında yayınlandı&lt;br&gt;&lt;a href=&quot;url&quot;&gt;https://file000.flaticon.com/downloads/license/license.pdf&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Çizim dosyaları:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="920"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="968"/>
+        <source>You need to select a Wifi service before pressing the edit button.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1001"/>
         <source>All network devices are powered off, now in Airplane mode.</source>
         <translation>Tüm ağ aygıtları kapalı, şimdi Uçak modunda.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="925"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1006"/>
         <source>Power has been restored to all previously powered network devices.</source>
         <translation>Güç, daha önce çalışan tüm ağ aygıtlarına geri yüklendi.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="940"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1021"/>
         <source>The system is online.</source>
         <translation>Sistem çevrimiçi.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="946"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1027"/>
         <source>The system is offline.</source>
         <translation>Sistem çevrimdışı.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1049"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1128"/>
         <source>VPN Kill Switch Engaged</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1050"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1129"/>
         <source>The connection to VPN service %1 was dropped and the VPN kill switch was engaged. All network devices are powered off.</source>
         <translation>%1 VPN hizmetine bağlantı kesildi ve VPN kill anahtarı devreye alındı. Tüm ağ cihazları kapalı.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1560"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1644"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Hizmet Ayrıntıları:&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1562"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1646"/>
         <source>Service Type: %1&lt;br&gt;</source>
         <translation>Hizmet Türü: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1564"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1648"/>
+        <source>Service Name: %1&lt;br&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1649"/>
         <source>Service State: %1&lt;br&gt;</source>
         <translation>Hizmet Durumu: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1565"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1650"/>
         <source>Favorite: %1&lt;br&gt;</source>
         <translation>Sık Kullanılan: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1565"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1650"/>
         <source>Yes</source>
         <comment>favorite</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1565"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1650"/>
         <source>No</source>
         <comment>favorite</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
         <source>External Configuration File: %1&lt;br&gt;</source>
         <translation>Harici Yapılandırma Dosyası: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
         <source>Yes</source>
         <comment>immutable</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1566"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
         <source>No</source>
         <comment>immutable</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1568"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1653"/>
         <source>Auto Connect: %1&lt;br&gt;</source>
         <translation>Otomatik Bağlantı: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1568"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1653"/>
         <source>On</source>
         <comment>autoconnect</comment>
         <translation>Açık</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1568"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1653"/>
         <source>No</source>
         <comment>autoconnect</comment>
         <translation>Kapalı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1570"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1655"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1572"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1657"/>
         <source>IP Address Acquisition: %1&lt;br&gt;</source>
         <translation>IP Adresi Edinme: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1573"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1580"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1615"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1658"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1665"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1700"/>
         <source>IP Address: %1&lt;br&gt;</source>
         <translation>IP Adresi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1574"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1659"/>
         <source>IP Netmask: %1&lt;br&gt;</source>
         <translation>IP Ağ Maskesi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1575"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1586"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1660"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1671"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
         <translation>IP Geçidi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1577"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1662"/>
         <source>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1579"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1592"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1664"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1677"/>
         <source>Address Acquisition: %1&lt;br&gt;</source>
         <translation>Adres Edinme: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1583"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1668"/>
         <source>Prefix Length: &lt;br&gt;</source>
         <translation>Önek Uzunluğu: &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1585"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1670"/>
         <source>Prefix Length: %1&lt;br&gt;</source>
         <translation>Önek Uzunluğu: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1587"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1672"/>
         <source>Privacy: %1&lt;br&gt;</source>
         <translation>Gizlilik: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1589"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1674"/>
         <source>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1594"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1679"/>
         <source>URL: %1&lt;br&gt;</source>
         <translation>URL: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1597"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1682"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation>Sunucular:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1598"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1683"/>
         <source>Excludes:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
         <translation>Dışlananlar:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1603"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1688"/>
         <source>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1604"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1689"/>
         <source>Support Enabled: %1&lt;br&gt;</source>
         <translation>Destek Etkin: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1604"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1689"/>
         <source>Yes</source>
         <comment>mdns</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1604"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1689"/>
         <source>No</source>
         <comment>mdns</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1613"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1698"/>
         <source>&lt;br&gt;&lt;b&gt;Last Address Conflict&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Son Adres Çakışması&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1617"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1702"/>
         <source>MAC Address: %1&lt;br&gt;</source>
         <translation>MAC Adresi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1618"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1703"/>
         <source>Conflict detected on: %1&lt;br&gt;</source>
         <translation>Çakışma saptandı: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1619"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1704"/>
         <source>Resolved: %1&lt;br&gt;</source>
         <translation>Kararlı: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1619"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1704"/>
         <source>Yes</source>
         <comment>last_address_conflict</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1619"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1704"/>
         <source>No</source>
         <comment>last_address_conflict</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1628"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1713"/>
         <source>&lt;br&gt;&lt;b&gt;Name Servers&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Ad Sunucuları&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1631"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1716"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Time Servers&lt;/b&gt;&lt;br&gt;  </source>
         <translation>&lt;br&gt;&lt;b&gt;Zaman Sunucuları&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1634"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1719"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Search Domains&lt;/b&gt;&lt;br&gt;  </source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Alan Adlarında Ara&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1637"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1722"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1639"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1724"/>
         <source>Connection Method: %1&lt;br&gt;</source>
         <translation>Bağlantı Yöntemi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1640"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1725"/>
         <source>Interface: %1&lt;br&gt;</source>
         <translation>Arayüz: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1641"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1726"/>
         <source>Device Address: %1&lt;br&gt;</source>
         <translation>Aygıt Adresi: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1642"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1727"/>
         <source>MTU: %1&lt;br&gt;</source>
         <translation>MTU: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1644"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1729"/>
         <source>&lt;br&gt;&lt;b&gt;Wireless&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;Kablosuz&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1649"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1734"/>
         <source>Security: %1&lt;br&gt;</source>
         <translation>Güvenlik: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1650"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1735"/>
         <source>Strength: %1&lt;br&gt;</source>
         <translation>Kuvvet: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1736"/>
         <source>Roaming: %1&lt;br&gt;</source>
         <translation>Dolaşım: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1736"/>
         <source>Yes</source>
         <comment>roaming</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1651"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1736"/>
         <source>No</source>
         <comment>roaming</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1653"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1738"/>
         <source>&lt;br&gt;&lt;b&gt;VPN Provider&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;br&gt;&lt;b&gt;VPN Sağlayıcı&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1655"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1740"/>
         <source>Host: %1&lt;br&gt;</source>
         <translation>Ana Bilgisayar: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1656"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1741"/>
         <source>Domain: %1&lt;br&gt;</source>
         <translation>Alan Adı: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1657"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1742"/>
         <source>Name: %1&lt;br&gt;</source>
         <translation>Ad: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1658"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1743"/>
         <source>Type: %1&lt;br&gt;</source>
         <translation>Tür: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1799"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1836"/>
         <source>State: </source>
         <translation>Durum: </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1805"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1842"/>
         <source>Engaged</source>
         <translation>Etkin</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1810"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2379"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2450"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1847"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2424"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2497"/>
         <source>Disabled</source>
         <translation>Devre Dışı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1813"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1850"/>
         <source>Offline Mode </source>
         <translation>Çevrimdışı Mod </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1867"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1904"/>
         <source>Yes</source>
         <comment>connected</comment>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1867"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1904"/>
         <source>No</source>
         <comment>connected</comment>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1874"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1911"/>
         <source>On</source>
         <comment>tethering</comment>
         <translation>Açık</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1879"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1916"/>
         <source>Off</source>
         <comment>tethering</comment>
         <translation>Kapalı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2211"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2249"/>
         <source>Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.</source>
         <translation>Sayaçların güncelleme çözünürlüğü %L1 KB veri eşiğine ve %L2 saniye süresine dayanmaktadır.</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2796"/>
+        <source>&lt;center&gt;&lt;b&gt;Unable to find a systemtray on this machine.&lt;/b&gt;&lt;center&gt;&lt;br&gt;The program may still be used to manage your connections, but the tray icon will be disabled.&lt;center&gt;&lt;br&gt;&lt;br&gt;If you are seeing this message at system start up and you know a system tray exists once the system is up, try starting with the &lt;b&gt;-w&lt;/b&gt; switch and set a delay as necessary. The exact wait time will vary from system to system.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Ethernet Connection&lt;br&gt;</source>
@@ -1970,8 +1997,8 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Hizmet: %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2270"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2284"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2307"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2321"/>
         <source>Interface: %1</source>
         <translation>Arayüz: %1</translation>
     </message>
@@ -1999,247 +2026,230 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Bağlantı Hazır Durumunda.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2311"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2349"/>
         <source>Connection is in the Failure State, attempting to reestablish the connection</source>
         <comment>icon_tool_tip</comment>
         <translation>Bağlantı Başarısız Durumunda, bağlantıyı yeniden kurmaya çalışıyor</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2315"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2353"/>
         <source>Connection is in the Failure State.</source>
         <comment>icon_tool_tip</comment>
         <translation>Bağlantı Başarısız Durumunda.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2321"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2359"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
         <translation>Bağlı Değil</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2328"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2366"/>
         <source>Error retrieving properties via Dbus</source>
         <translation>Dbus aracılığıyla özellikler alınırken hata oluştu</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2329"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2367"/>
         <source>Connection status is unknown</source>
         <translation>Bağlantı durumu bilinmiyen</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2373"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2418"/>
         <source>Type: %1</source>
         <translation>Tür: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2374"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2419"/>
         <source>&lt;br&gt;Powered </source>
         <translation>&lt;br&gt;Güç </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2375"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2420"/>
         <source>On</source>
         <translation>Açık</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2375"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2420"/>
         <source>Off</source>
         <translation>Kapalı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2377"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2422"/>
         <source>Not Connected</source>
         <translation>Bağlı Değil</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2378"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2423"/>
         <source>&lt;br&gt;Tethering </source>
         <translation>&lt;br&gt;Paylaşım </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2379"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2450"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2424"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2497"/>
         <source>Enabled</source>
         <translation>Etkin</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2437"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2466"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2484"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2514"/>
         <source>Connection : %1</source>
         <translation>Bağlantı : %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2439"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2486"/>
         <source>Signal Strength: %1%</source>
         <translation>Sinyal Gücü: %1%</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2441"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2488"/>
         <source>Favorite Connection</source>
         <translation>Sık Kullanılan Bağlantı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2441"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2488"/>
         <source>Never Connected</source>
         <translation>Hiç Bağlanmadı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2495"/>
         <source>&lt;br&gt;Roaming</source>
         <translation>&lt;br&gt;Dolaşım</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2449"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2496"/>
         <source>&lt;br&gt;Autoconnect is </source>
         <translation>&lt;br&gt;Otomatik bağlı </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2436"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2465"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2483"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2513"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="523"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="533"/>
+        <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5&lt;center&gt;Connman version %6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="561"/>
         <source>&lt;center&gt;This program uses the &lt;b&gt;AwOken&lt;/b&gt; icon set version 2.5&lt;br&gt;&lt;br&gt;Released under the&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;Unported License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;</source>
         <translation>&lt;center&gt;Bu program sürüm 2.5 &lt;b&gt;AwOken&lt;/b&gt; simge setini kullanır&lt;br&gt;&lt;br&gt;Creative Commons&lt;br&gt;Atıf-Benzer Paylaşım 3.0&lt;br&gt; Aktarılmamış Lisansı&lt;br&gt; altında yayınlandı&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1854"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1891"/>
         <source>On</source>
         <comment>powered</comment>
         <translation>Açık</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1859"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1896"/>
         <source>Off</source>
         <comment>powered</comment>
         <translation>Kapalı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2447"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2494"/>
         <source>Security: %1</source>
         <translation>Güvenlik: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2746"/>
         <source>&lt;center&gt;&lt;b&gt;Unable to find a systemtray on this machine.&lt;/b&gt;&lt;center&gt;&lt;br&gt;The program may still be used to manage your connections, but the tray icon will be disabled.&lt;center&gt;&lt;br&gt;&lt;br&gt;If you are seeing this message at system start up and you know a system tray exists once the system is up, try starting with the &lt;b&gt;-w&lt;/b&gt; switch and set a delay as necessary.  The exact wait time will vary from system to system.</source>
-        <translation>&lt;center&gt;&lt;b&gt;Bu makinede bir sistem çekmecesi bulunamadı.&lt;/b&gt;&lt;center&gt;&lt;br&gt;Program yine de bağlantılarınızı yönetmek için kullanılabilir, ancak çekmece simgesi devre dışı bırakılır.&lt;center&gt;&lt;br&gt;&lt;br&gt;Bu iletiyi sistem başlangıcında görüyorsanız ve sistem açıldığında bir sistem çekmecesi olduğunu biliyorsanız, &lt;b&gt;-w&lt;/b&gt; anahtarıyla başlatmayı deneyin ve gerektiği şekilde bir gecikme ayarlayın.  Kesin bekleme süresi sistemden sisteme değişecektir.</translation>
+        <translation type="vanished">&lt;center&gt;&lt;b&gt;Bu makinede bir sistem çekmecesi bulunamadı.&lt;/b&gt;&lt;center&gt;&lt;br&gt;Program yine de bağlantılarınızı yönetmek için kullanılabilir, ancak çekmece simgesi devre dışı bırakılır.&lt;center&gt;&lt;br&gt;&lt;br&gt;Bu iletiyi sistem başlangıcında görüyorsanız ve sistem açıldığında bir sistem çekmecesi olduğunu biliyorsanız, &lt;b&gt;-w&lt;/b&gt; anahtarıyla başlatmayı deneyin ve gerektiği şekilde bir gecikme ayarlayın.  Kesin bekleme süresi sistemden sisteme değişecektir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2928"/>
         <source>Could not find a connection to the system bus</source>
-        <translation>Sistem veri yoluna bağlantı bulunamadı</translation>
+        <translation type="vanished">Sistem veri yoluna bağlantı bulunamadı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2929"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2934"/>
         <source>%1 - Critical Error</source>
-        <translation>%1 - Ciddi Hata</translation>
+        <translation type="vanished">%1 - Ciddi Hata</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2930"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation>Sistem veri yoluna bağlantı bulunamadı.&lt;br&gt;&lt;br&gt;%1 connman ile iletişim kuramayacak.</translation>
+        <translation type="vanished">Sistem veri yoluna bağlantı bulunamadı.&lt;br&gt;&lt;br&gt;%1 connman ile iletişim kuramayacak.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2933"/>
         <source>Could not create an interface to connman on the system bus</source>
-        <translation>Sistem veri yolunda connman için bir arayüz oluşturulamadı</translation>
+        <translation type="vanished">Sistem veri yolunda connman için bir arayüz oluşturulamadı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2935"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation>Sistem veriyolundaki connman için bir arayüz oluşturulamıyor.&lt;br&gt;&lt;br&gt;%1 connman ile iletişim kuramayacak.</translation>
+        <translation type="vanished">Sistem veriyolundaki connman için bir arayüz oluşturulamıyor.&lt;br&gt;&lt;br&gt;%1 connman ile iletişim kuramayacak.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2938"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
-        <translation>connman.Manager.GetProperties okunurken veya ayrıştırılırken hata oluştu</translation>
+        <translation type="vanished">connman.Manager.GetProperties okunurken veya ayrıştırılırken hata oluştu</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2939"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2944"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2949"/>
         <source>%1 - Warning</source>
-        <translation>%1 - Uyarı</translation>
+        <translation type="vanished">%1 - Uyarı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2940"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
-        <translation>connman.Manager.GetProperties yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;Herhangi bir %1 bölümünün işlevsel olması pek olası değildir.</translation>
+        <translation type="vanished">connman.Manager.GetProperties yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;Herhangi bir %1 bölümünün işlevsel olması pek olası değildir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2943"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
-        <translation>connman.Manager.GetTechnologies okunurken veya ayrıştırılırken hata oluştu</translation>
+        <translation type="vanished">connman.Manager.GetTechnologies okunurken veya ayrıştırılırken hata oluştu</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2945"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation>connman.Manager.GetTechnologies yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;%1&apos;in bir kısmı hala işlevsel olabilir.</translation>
+        <translation type="vanished">connman.Manager.GetTechnologies yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;%1&apos;in bir kısmı hala işlevsel olabilir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2948"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
-        <translation>connman.Manager.GetServices okunurken veya ayrıştırılırken hata oluştu</translation>
+        <translation type="vanished">connman.Manager.GetServices okunurken veya ayrıştırılırken hata oluştu</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2950"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation>connman.Manager.GetServices yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;%1&apos;in bir kısmı hala işlevsel olabilir.</translation>
+        <translation type="vanished">connman.Manager.GetServices yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;%1&apos;in bir kısmı hala işlevsel olabilir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2957"/>
         <source>Could not create an interface to connman-vpn on the system bus</source>
-        <translation>Sistem veriyolunda connman-vpn için bir arayüz oluşturulamadı</translation>
+        <translation type="vanished">Sistem veriyolunda connman-vpn için bir arayüz oluşturulamadı</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3018"/>
         <source>[Hidden Wifi]</source>
-        <translation>[Gizli Wifi]</translation>
+        <translation type="vanished">[Gizli Wifi]</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3070"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
-        <translation>Bu sistemde %1 sürüm %2 %3 tarafından algılandı.&lt;p&gt;Bu sunucu masaüstü Bildirim Belirtimi sürüm %4 destekliyor</translation>
+        <translation type="vanished">Bu sistemde %1 sürüm %2 %3 tarafından algılandı.&lt;p&gt;Bu sunucu masaüstü Bildirim Belirtimi sürüm %4 destekliyor</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3082"/>
         <source>Attempt %1 of %2 looking for notification server.</source>
-        <translation>%2&apos;nin %1&apos;i bildirim sunucusunu arıyor.</translation>
+        <translation type="vanished">%2&apos;nin %1&apos;i bildirim sunucusunu arıyor.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3085"/>
         <source>Unable to connect to a notification server after %1 tries.</source>
-        <translation>%1 denemesinden sonra bir bildirim sunucusuna bağlanılamıyor.</translation>
+        <translation type="vanished">%1 denemesinden sonra bir bildirim sunucusuna bağlanılamıyor.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3198"/>
         <source>Colorize Icons</source>
-        <translation>Simgeleri Renklendir</translation>
+        <translation type="vanished">Simgeleri Renklendir</translation>
     </message>
     <message>
         <source>Attempt %1 of 4 looking for notification server.</source>
         <translation type="vanished">Bildirim sunucusunu aramak için %1 4 deneyin.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="551"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="589"/>
         <source>%1 license is the MIT (Expat) license.</source>
         <translation>%1 lisansı MIT (Expat) lisansıdır.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="749"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="787"/>
         <source>You need to select a service before pressing the connect button.</source>
         <translation>Bağlan düğmesine basmadan önce bir hizmet seçmeniz gerekir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="857"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="897"/>
         <source>You need to select a service before pressing the disconnect button.</source>
         <translation>Bağlantıyı Kes düğmesine basmadan önce bir hizmet seçmeniz gerekir.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2372"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2417"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 Properties&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 Özellikleri&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
@@ -2248,7 +2258,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Bir Bildirim sunucusu bulunamıyor veya bir sunucuya bağlanılamıyor.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2013"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2050"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
         <translation>  WiFi Teknolojileri:&lt;br&gt;  %1 Bulundu, %2 Güçlü</translation>
     </message>
@@ -2284,9 +2294,13 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>IconManager</name>
     <message>
-        <location filename="../apps/cmstapp/code/iconman/iconman.cpp" line="350"/>
         <source>A new icon definition file will be installed to &lt;b&gt;%1&lt;/b&gt; and a backup of the old definition file has been created as &lt;b&gt;%2&lt;/b&gt; 						&lt;p&gt;If the original definition file was customized and you wish to retain those changes you will need to manually merge them into the new file.							&lt;p&gt;If the original was never customized or you just wish to delete the backup now you may select &lt;i&gt;Discard&lt;/i&gt; to delete the backup or &lt;i&gt;Save&lt;/i&gt; to retain it.</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; klasörüne yeni bir simge tanımı dosyası yüklenecek ve eski tanım dosyasının bir yedeği &lt;b&gt;%2&lt;/b&gt; olarak oluşturulacak 						&lt;p&gt;Asıl tanım dosyası özelleştirildiyse ve bu değişiklikleri korumak istiyorsanız, bunları yeni dosyaya elle birleştirmeniz gerekir.							&lt;p&gt;Asıl hiç özelleştirilmediyse veya yedeği şimdi silmek istiyorsanız, yedeklemeyi silmek için &lt;i&gt;Sil&lt;/i&gt; &apos;i veya korumak için &lt;i&gt;Kaydet&lt;/i&gt;&apos; i seçebilirsiniz.</translation>
+        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; klasörüne yeni bir simge tanımı dosyası yüklenecek ve eski tanım dosyasının bir yedeği &lt;b&gt;%2&lt;/b&gt; olarak oluşturulacak 						&lt;p&gt;Asıl tanım dosyası özelleştirildiyse ve bu değişiklikleri korumak istiyorsanız, bunları yeni dosyaya elle birleştirmeniz gerekir.							&lt;p&gt;Asıl hiç özelleştirilmediyse veya yedeği şimdi silmek istiyorsanız, yedeklemeyi silmek için &lt;i&gt;Sil&lt;/i&gt; &apos;i veya korumak için &lt;i&gt;Kaydet&lt;/i&gt;&apos; i seçebilirsiniz.</translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/iconman/iconman.cpp" line="351"/>
+        <source>A new icon definition file will be installed to &lt;b&gt;%1&lt;/b&gt; and a backup of the old definition file has been created as &lt;b&gt;%2&lt;/b&gt;                   &lt;p&gt;If the original definition file was customized and you wish to retain those changes you will need to manually merge them into the new file.                    &lt;p&gt;If the original was never customized or you just wish to delete the backup now you may select &lt;i&gt;Discard&lt;/i&gt; to delete the backup or &lt;i&gt;Save&lt;/i&gt; to retain it.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3263,14 +3277,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>RootHelper</name>
     <message>
-        <location filename="../apps/rootapp/code/roothelper/roothelper.cpp" line="64"/>
         <source>Failed to register service org.cmst.roothelper - there may be another instance running.</source>
-        <translation>org.cmst.roothelper hizmeti kaydedilemedi - çalışan başka bir örnek olabilir.</translation>
+        <translation type="vanished">org.cmst.roothelper hizmeti kaydedilemedi - çalışan başka bir örnek olabilir.</translation>
     </message>
     <message>
-        <location filename="../apps/rootapp/code/roothelper/roothelper.cpp" line="70"/>
         <source>Failed to register roothelper object on the system bus.</source>
-        <translation>Roothelper nesnesi sistem veriyoluna kaydedilemedi.</translation>
+        <translation type="vanished">Roothelper nesnesi sistem veriyoluna kaydedilemedi.</translation>
     </message>
 </context>
 <context>
@@ -4928,12 +4940,12 @@ seçeneğiyle kullanılabilir.</translation>
         <translation>RRGGBB</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="148"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="149"/>
         <source>Use XFCE specific code.</source>
         <translation>XFCE&apos;ye özel kod kullanın.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="153"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="154"/>
         <source>Use MATE DE specific code.</source>
         <translation>MATE Masaüstü Ortamına özel kod kullanın.</translation>
     </message>

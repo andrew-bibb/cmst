@@ -827,7 +827,7 @@ void ControlBox::connectPressed()
 // Slot to actually request a connection via DBUS. Called from the connectPressed() slot
 void ControlBox::requestConnection()
 {
-   // if we got here because a finished() signal fireed delete the object that did it
+   // if we got here because a finished() signal fired delete the object that did it
    if (proc)  delete proc;
    if (gened) delete gened;
 
@@ -1645,6 +1645,7 @@ void ControlBox::getServiceDetails(int index)
    if (getNickName(services_list.at(index).objpath).isEmpty() ) b_editable = false;
    rs.append(tr("Service Type: %1<br>").arg(TranslateStrings::cmtr(map.value("Type").toString())) );
    if (map.value("Type").toString() == "vpn") b_editable = false; // VPN services cannot be edited from here
+   rs.append(tr("Service Name: %1<br>").arg(TranslateStrings::cmtr(map.value("Name").toString())) );
    rs.append(tr("Service State: %1<br>").arg(TranslateStrings::cmtr(map.value("State").toString())) );
    rs.append(tr("Favorite: %1<br>").arg(map.value("Favorite").toBool() ? tr("Yes", "favorite") : tr("No", "favorite"))  );
    rs.append(tr("External Configuration File: %1<br>").arg(map.value("Immutable").toBool() ? tr("Yes", "immutable") : tr("No", "immutable")) );
