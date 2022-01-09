@@ -332,7 +332,31 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       if (! con_manager->isValid() ) logErrors(CMST::Err_Invalid_Con_Iface);
       else {
          // Access connman.manager to retrieve the data
-         this->managerRescan(CMST::Manager_All);
+
+         // Reset the getXX errors
+         q16_errors &= ~CMST::Err_Properties;
+         q16_errors &= ~CMST::Err_Technologies;
+         q16_errors &= ~CMST::Err_Services;
+
+         if (! getTechnologies() ) logErrors(CMST::Err_Technologies);
+         else {
+            // connect technology signals to slots
+            for (int i = 0; i < technologies_list.size(); ++i) {
+               QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
+               QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
+            } // for
+         } //else
+
+         if (! getServices() ) logErrors(CMST::Err_Services);
+         else {
+            // connect service signals to slots
+            for (int i = 0; i < services_list.size(); ++i) {
+               QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+               QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
+            } // for
+         } // else
+
+         if (! getProperties() ) logErrors(CMST::Err_Properties);
 
          // register the agent
          shared::processReply(con_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(AGENT_OBJECT))) );
@@ -1747,52 +1771,6 @@ bool ControlBox::eventFilter(QObject* obj, QEvent* evn)
 // This function is now really misnamed.  Originally we called it a lot, but now
 // everything is dealt with using DBus signals so it is only called at startup
 // as an initial scan.
-int ControlBox::managerRescan(const int& srv)
-{
-   if ( ((q16_errors & CMST::Err_No_DBus) | (q16_errors & CMST::Err_Invalid_Con_Iface)) == 0x00 ) {
-
-      // Reset the getXX errors, always a chance we could read them after
-      // a previous error. Don't actually believe it, but just in case.
-      q16_errors &= ~CMST::Err_Properties;
-      q16_errors &= ~CMST::Err_Technologies;
-      q16_errors &= ~CMST::Err_Services;
-
-      // Access connman.manager to retrieve the data
-      if (srv & CMST::Manager_Technologies) {
-         if (! getTechnologies() ) {
-            logErrors(CMST::Err_Technologies);
-         } // if
-         else {
-            // connect technology signals to slots
-            for (int i = 0; i < technologies_list.size(); ++i) {
-               QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
-               QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
-            } // for
-         } //else
-      } // if technolgies
-
-      if (srv & CMST::Manager_Services) {
-         if (! getServices() ) {
-            logErrors(CMST::Err_Services);
-         } // if
-         else {
-            // connect service signals to slots
-            for (int i = 0; i < services_list.size(); ++i) {
-               QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
-               QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
-            } // for
-         } // else
-      } // if services
-
-      if (srv & CMST::Manager_Properties) {
-         if (! getProperties() ) logErrors(CMST::Err_Properties);
-      }
-
-   } // if
-
-   return (q16_errors & CMST::Err_Properties) | (q16_errors & CMST::Err_Technologies) | (q16_errors & CMST::Err_Services);
-}
-
 //
 // Function to assemble status tab of the dialog
 void ControlBox::assembleTabStatus()
@@ -2853,7 +2831,6 @@ bool ControlBox::getTechnologies()
 //
 // Function to query connman.manager.GetServices
 // Return a bool, true on success, false otherwise
-// Called from managerRescan()
 bool ControlBox::getServices()
 {
    // call connman and GetServices

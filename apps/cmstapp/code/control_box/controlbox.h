@@ -156,7 +156,6 @@ class ControlBox : public QDialog
       bool b_userinitiated;
 
    // functions
-      int managerRescan(const int& srv = 0);
       void assembleTabStatus();
       void assembleTabDetails();
       void assembleTabWireless();

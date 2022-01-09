@@ -2,6 +2,7 @@
 <b><center>Change Log</center></b>
 <b> In Progress </b>
 <ul>
+<li>Removed obsolete managerRescan() function, moved code to where needed.</li>
 <li>Fix VPN parsing not being done in various display elements (issue #192)</li>
 </ul>
 <b> 2022.01.05 </b>

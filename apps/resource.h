@@ -43,7 +43,7 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation)
-#define VERSION "2022.01.09-1"
+#define VERSION "2022.01.09-2"
 
 #define RELEASE_DATE "05 January 2022"
 #define COPYRIGHT_DATE "2013-2022"
@@ -76,12 +76,6 @@ namespace CMST
     Err_Technologies      = (1 << 3), // There was an error reading connman.Manager.GetTechnologies
     Err_Services          = (1 << 4), // There was an error reading connman.Manager.GetServices
     Err_Invalid_VPN_Iface = (1 << 5), // Invalid interface
-
-    // methods
-    Manager_Properties    = (1 << 1), // scan for properties
-    Manager_Technologies  = (1 << 2), // scan for technologies
-    Manager_Services      = (1 << 3), // scan for services
-    Manager_All           = (CMST::Manager_Properties | CMST::Manager_Technologies | CMST::Manager_Services),
 
     // provisioning editor
     ProvEd_No_Selection = 0x00,
