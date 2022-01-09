@@ -141,6 +141,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    wifi_list.clear();
    peer_list.clear();
    vpn_list.clear();
+   vpnconn_list.clear();
    agent = new ConnmanAgent(this);
    vpnagent = new ConnmanVPNAgent(this);
    counter = new ConnmanCounter(this);
@@ -381,8 +382,18 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
                ui.pushButton_vpn_editor->setEnabled(true);
                ui.checkBox_killswitch->setEnabled(true);
                shared::processReply(vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
-            } // else register agent
-         } // else normal vpn manager
+
+               // connect vpn services to slots
+               QDBusMessage reply = vpn_manager->call("GetConnections");
+               shared::processReply(reply);
+               vpnconn_list.clear();
+               getArray(vpnconn_list, reply);
+               for (int i = 0; i < vpnconn_list.size(); ++i) {
+                  QDBusConnection::systemBus().disconnect(DBUS_VPN_SERVICE, vpnconn_list.at(i).objpath.path(), "net.connman.vpn.Connection", "PropertyChanged", this, SLOT(dbsVPNPropertyChanged(QString, QDBusVariant, QDBusMessage)));
+                  QDBusConnection::systemBus().connect(DBUS_VPN_SERVICE, vpnconn_list.at(i).objpath.path(), "net.connman.vpn.Connection", "PropertyChanged", this, SLOT(dbsVPNPropertyChanged(QString, QDBusVariant, QDBusMessage)));
+               } // vpnconn_list for loop
+            } // else enable vpn widgets, register agent, connect signals
+         } // else vpn_manager is valid
       } // else have valid connection
    } // else have connected systemBus
 
@@ -1220,10 +1231,28 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
       else if (s_path == onlineobjectpath) {
          onlineobjectpath.clear();
       } // else if object went offline
+   } // if property contains State
+
+   // update the widgets
+   updateDisplayWidgets();
+
+   return;
+}
+
+//
+// Slot called whenever a vpn connection issues a PropertyChanged signal on DBUS
+void ControlBox::dbsVPNPropertyChanged(QString property, QDBusVariant dbvalue, QDBusMessage msg)
+{
+   QString s_path = msg.path();
+   QVariant value = dbvalue.variant();
+
+   if (property == "State") {
+      // This is sort of a hack.  Not all VPN service properties are signaled when they change (for instance Provider, IPV4).  This slot was created to address that, plus we moved the notification code from dbsServicePropertyChanged to here. Force a new service list to be created.
+      getServices();
 
       // Send notification if vpn changed
-      for (int i = 0; i < vpn_list.count(); ++i) {
-         if (s_path == vpn_list.at(i).objpath.path() ) {
+      for (int i = 0; i < vpnconn_list.count(); ++i) {
+         if (s_path == vpnconn_list.at(i).objpath.path() ) {
             notifyclient->init();
             if (value.toString() == "ready") {
                notifyclient->setSummary(QString(tr("VPN Engaged")) );
@@ -1239,12 +1268,12 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
             break;
          } // if
       } // for
-   } // if property contains State
+   } // if property = State
 
-   // update the widgets
-   updateDisplayWidgets();
+// update the widgets
+  updateDisplayWidgets();
 
-   return;
+  return;
 }
 
 //
@@ -2000,7 +2029,7 @@ void ControlBox::assembleTabWireless()
       ui.label_wifi_state->setText(tr("  WiFi Technologies:<br>  %1 Found, %2 Powered").arg(i_wifidevices).arg(i_wifipowered) );
    } // technologis if no errors
 
-   // Run through each service_list looking for wifi services
+   // Run through each services_list looking for wifi services
    wifi_list.clear();
 
    for (int row = 0; row < services_list.size(); ++row) {
@@ -2105,7 +2134,7 @@ void ControlBox::assembleTabVPN()
    // Make sure we got the services_list before we try to work with it.
    if ( (q16_errors & CMST::Err_Services ) != 0x00 ) return;
 
-// Run through each service_list looking for vpn services
+// Run through each services_list looking for vpn services
    vpn_list.clear();
    for (int row = 0; row < services_list.size(); ++row) {
       QMap<QString,QVariant> map = services_list.at(row).objmap;

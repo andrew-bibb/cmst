@@ -1,6 +1,10 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b> IN PROGRESS</b>
+<b> In Progress </b>
+<ul>
+<li>Fix VPN parsing not being done in various display elements (issue #192)</li>
+</ul>
+<b> 2022.01.05 </b>
 <ul>
 <li>Desktop entry in .config/autostart is saved when enable/disable is toggled (issue #238).</li>
 <li>Removed --use-mate and --use-xfce options from program (issue #237)</li>
@@ -9,7 +13,6 @@
 <li>Auto run lupdate and embed translations automatically from make via qmake.</li>
 <li>Added scroll bars to Agent dialog (issue #242).</li>
 </ul>
-
 <b> 2021.12.02</b>
 <ul>
 <li>Disable configuration button when service is VPN.</li>
