@@ -342,7 +342,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
          else {
             // connect technology signals to slots
             for (int i = 0; i < technologies_list.size(); ++i) {
-               QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
                QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, technologies_list.at(i).objpath.path(), "net.connman.Technology", "PropertyChanged", this, SLOT(dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage)));
             } // for
          } //else
@@ -351,7 +350,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
          else {
             // connect service signals to slots
             for (int i = 0; i < services_list.size(); ++i) {
-               QDBusConnection::systemBus().disconnect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
                QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, services_list.at(i).objpath.path(), "net.connman.Service", "PropertyChanged", this, SLOT(dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage)));
             } // for
          } // else
@@ -413,7 +411,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
                vpnconn_list.clear();
                getArray(vpnconn_list, reply);
                for (int i = 0; i < vpnconn_list.size(); ++i) {
-                  QDBusConnection::systemBus().disconnect(DBUS_VPN_SERVICE, vpnconn_list.at(i).objpath.path(), "net.connman.vpn.Connection", "PropertyChanged", this, SLOT(dbsVPNPropertyChanged(QString, QDBusVariant, QDBusMessage)));
                   QDBusConnection::systemBus().connect(DBUS_VPN_SERVICE, vpnconn_list.at(i).objpath.path(), "net.connman.vpn.Connection", "PropertyChanged", this, SLOT(dbsVPNPropertyChanged(QString, QDBusVariant, QDBusMessage)));
                } // vpnconn_list for loop
             } // else enable vpn widgets, register agent, connect signals
