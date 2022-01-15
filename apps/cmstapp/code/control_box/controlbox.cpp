@@ -271,7 +271,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       if (! ok) trayiconbackground = QColor();
    } // if parser set
    else
-      if (b_so && ui.checkBox_faketranparency->isChecked() ) {
+      if (b_so && ui.checkBox_faketransparency->isChecked() ) {
          trayiconbackground = QColor(ui.spinBox_faketransparency->value() );
       } // if
       else trayiconbackground = QColor();
@@ -2365,11 +2365,13 @@ void ControlBox::assembleTrayIcon()
    }
 
    // Set the tray icon.  If the trayiconbackground color is valid and
-   // there is a valid alpha channel convert the alpha to the background
-   // color to get our fake transparency. Fake transparency can be set as a command
-   // line option so trayiconbackground is set up in the constructor.
+   // there is a valid alpha channel convert the alpha to the backgroundcolor.
+   // Fake transparency can be set as a command line option so trayiconbackground
+   // is set up in the constructor.
+   //
    // Otherwise just convert the image to ARGB32 which seems to be required
    // for the icons to display in Plasma5.
+   //
    // First convert from a QIcon through QPixmap to QImage
    QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
    QImage src = pxm.toImage();
@@ -2617,7 +2619,7 @@ void ControlBox::writeSettings()
    settings->setValue("wait_time", ui.spinBox_waittime->value() );
    settings->setValue("use_counter_update_rate", ui.checkBox_counterseconds->isChecked() );
    settings->setValue("counter_update_rate", ui.spinBox_counterrate->value() );
-   settings->setValue("use_fake_transparency", ui.checkBox_faketranparency->isChecked() );
+   settings->setValue("use_fake_transparency", ui.checkBox_faketransparency->isChecked() );
    settings->setValue("fake_transparency_color", ui.spinBox_faketransparency->value() );
    #ifdef XFCE
    settings->setValue("desktop_none", ui.radioButton_desktopnone->isChecked() );
@@ -2685,7 +2687,7 @@ void ControlBox::readSettings()
    ui.spinBox_waittime->setValue(settings->value("wait_time").toInt() );
    ui.checkBox_counterseconds->setChecked(settings->value("use_counter_update_rate").toBool() );
    ui.spinBox_counterrate->setValue(settings->value("counter_update_rate").toInt() );
-   ui.checkBox_faketranparency->setChecked(settings->value("use_fake_transparency").toBool() );
+   ui.checkBox_faketransparency->setChecked(settings->value("use_fake_transparency").toBool() );
    ui.spinBox_faketransparency->setValue(settings->value("fake_transparency_color").toInt() );
    #ifdef XFCE
    ui.radioButton_desktopnone->setChecked(settings->value("desktop_none").toBool() );

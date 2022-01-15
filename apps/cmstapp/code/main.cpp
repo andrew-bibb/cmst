@@ -54,6 +54,12 @@ void signalhandler(int sig) {
 
 int main(int argc, char *argv[])
 {
+   // set core application attributes
+   QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+   #if QT_VERSION >= 0x050600
+   QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+   #endif
+
    QApplication::setApplicationName(LONG_NAME);
    QApplication::setApplicationVersion(VERSION);
    QApplication::setOrganizationName(ORG);

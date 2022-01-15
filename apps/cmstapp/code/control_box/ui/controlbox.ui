@@ -1387,7 +1387,7 @@
                  </widget>
                 </item>
                 <item row="10" column="0">
-                 <widget class="QCheckBox" name="checkBox_faketranparency">
+                 <widget class="QCheckBox" name="checkBox_faketransparency">
                   <property name="toolTip">
                    <string/>
                   </property>
@@ -2260,7 +2260,7 @@ p, li { white-space: pre-wrap; }
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_faketranparency</sender>
+   <sender>checkBox_faketransparency</sender>
    <signal>clicked(bool)</signal>
    <receiver>spinBox_faketransparency</receiver>
    <slot>setEnabled(bool)</slot>
