@@ -1372,6 +1372,9 @@ void ControlBox::scanWiFi()
    // Make sure we got the technologies_list before we try to work with it.
    if ( (q16_errors & CMST::Err_Technologies) != 0x00 ) return;
 
+   // Clear any selections in the wifi tab
+   ui.tableWidget_wifi->clearSelection();
+
    // Run through each technology and do a scan for any wifi
    for (int row = 0; row < technologies_list.size(); ++row) {
       if (technologies_list.at(row).objmap.value("Type").toString() == "wifi") {
@@ -2026,6 +2029,13 @@ void ControlBox::assembleTabDetails()
 // Function to assemble the wireless tab of the dialog.
 void ControlBox::assembleTabWireless()
 {
+   // If there is a selection save it
+   QString old_sel_item;
+   QList<QTableWidgetItem*> list;
+   list.clear();
+   list = ui.tableWidget_wifi->selectedItems();
+   if (!list.isEmpty() ) old_sel_item = list.at(0)->text();
+
    // initilize the table
    ui.tableWidget_wifi->clearContents();
    ui.tableWidget_wifi->setRowCount(0);
@@ -2060,6 +2070,7 @@ void ControlBox::assembleTabWireless()
          qtwi00->setText(getNickName(services_list.at(row).objpath) );
          qtwi00->setTextAlignment(Qt::AlignCenter);
          ui.tableWidget_wifi->setItem(rowcount, 0, qtwi00);
+         if (qtwi00->text() == old_sel_item) ui.tableWidget_wifi->selectRow(rowcount);
 
          QLabel* ql01 = new QLabel(ui.tableWidget_wifi);
          if (map.value("Favorite").toBool() ) {
