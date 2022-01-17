@@ -450,7 +450,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="230"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="724"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2422"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2432"/>
         <source>Connected</source>
         <translation>Подключено</translation>
     </message>
@@ -673,7 +673,6 @@
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="250"/>
-        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="632"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Принудительное сканирование всех технологий WiFi. Работает идентично команде &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; из командной строки.&lt;/p&gt;&lt;p&gt;Кнопка будет неактивной, пока происходит сканирование.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -1196,6 +1195,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="632"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.  This will also clear any selections in the table below.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="674"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -1409,7 +1413,7 @@ p, li {пробел: предварительный перенос; }
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1944"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="426"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="423"/>
         <source>Mi&amp;nimize</source>
         <translation>С&amp;вернуть</translation>
     </message>
@@ -1424,17 +1428,17 @@ p, li {пробел: предварительный перенос; }
         <translation>Установить идентификатор и пароль для привязанного Wi-Fi</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="427"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="424"/>
         <source>Ma&amp;ximize</source>
         <translation>Ра&amp;звернуть</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="430"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="427"/>
         <source>&amp;Exit</source>
         <translation>В&amp;ыйти</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="532"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="529"/>
         <source>About %1</source>
         <translation>О %1</translation>
     </message>
@@ -1443,7 +1447,7 @@ p, li {пробел: предварительный перенос; }
         <translation type="vanished">&lt;center&gt;%1 — это программа для взаимодействия с демоном Connman и предоставления контроля через системный лоток.&lt;br&gt;&lt;center&gt;Версия &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Дата выпуска: %3&lt;center&gt;Копирайт c %4&lt;center&gt;разработана&lt;center&gt;Andrew J. Bibb&lt;center&gt;Вермонт, США&lt;br&gt;&lt;center&gt;&lt;b&gt;Помощники:&lt;/b&gt;&lt;center&gt;Brett Dutro&lt;center&gt;Adam Fontenot&lt;center&gt;Lester Bico&lt;br&gt;&lt;center&gt;&lt;b&gt;Переводчики:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (китайский язык)&lt;center&gt;sqozz (немецкий язык)&lt;center&gt;Ilya Shestopalov (русский язык)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="560"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="557"/>
         <source>About AwOken</source>
         <translation>О AwOken</translation>
     </message>
@@ -1456,42 +1460,42 @@ p, li {пробел: предварительный перенос; }
         <translation type="vanished">Лицензия %1 — это лицензия MIT.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="591"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="588"/>
         <source>License</source>
         <translation>Лицензия</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="599"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="596"/>
         <source>%1 change log is not available.</source>
         <translation>%1 журнал изменений не доступен.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="601"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="598"/>
         <source>ChangeLog</source>
         <translation>Журнал изменений</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="724"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2746"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="721"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2756"/>
         <source>Cancel</source>
         <translation>Отмена</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="749"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="754"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="746"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="751"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;Служба:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="754"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="751"/>
         <source>Unable to determine service</source>
         <translation>Не удалось определить службу</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="786"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="896"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="933"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="967"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="783"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="893"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="930"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="964"/>
         <source>No Services Selected</source>
         <translation>Нет выбранных служб</translation>
     </message>
@@ -1504,17 +1508,17 @@ p, li {пробел: предварительный перенос; }
         <translation type="vanished">Выберите службу Wi-Fi перед нажатием кнопки отсоединения.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="934"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="931"/>
         <source>You need to select a Wifi service before pressing the remove button.</source>
         <translation>Выберите службу Wi-Fi перед нажатием кнопки удаления.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="999"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="996"/>
         <source>Offline Mode Engaged</source>
         <translation>Автономный режим активирован</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1004"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1001"/>
         <source>Offline Mode Disabled</source>
         <translation>Автономный режим отключён</translation>
     </message>
@@ -1527,7 +1531,7 @@ p, li {пробел: предварительный перенос; }
         <translation type="vanished">Соединение: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1018"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1015"/>
         <source>Network Services:</source>
         <translation>Сетевые службы:</translation>
     </message>
@@ -1536,13 +1540,13 @@ p, li {пробел: предварительный перенос; }
         <translation type="vanished">Не доступны никакие сетевые службы</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1285"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1282"/>
         <source>Service Error: %1</source>
         <translation>Ошибка службы: %1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1286"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1331"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1283"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1328"/>
         <source>Object Path: %1</source>
         <translation>Путь к объекту: %1</translation>
     </message>
@@ -1576,32 +1580,32 @@ p, li {пробел: предварительный перенос; }
         <translation>VPN-подключения</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="533"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="530"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5&lt;center&gt;Connman version %6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="589"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="586"/>
         <source>%1 license is the MIT (Expat) license.</source>
         <translation>% 1 license - это лицензия MIT (Expat).</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="787"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="784"/>
         <source>You need to select a service before pressing the connect button.</source>
         <translation>Перед нажатием кнопки подключения необходимо выбрать услугу.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="897"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="894"/>
         <source>You need to select a service before pressing the disconnect button.</source>
         <translation>Перед нажатием кнопки отключения необходимо выбрать услугу.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1324"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1321"/>
         <source>VPN Engaged</source>
         <translation>VPN задействован</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1328"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1325"/>
         <source>VPN Disengaged</source>
         <translation>VPN отключен</translation>
     </message>
@@ -1630,7 +1634,7 @@ p, li {пробел: предварительный перенос; }
         <translation>Выключено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2305"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2313"/>
         <source>Ethernet Connection
 </source>
         <comment>icon_tool_tip</comment>
@@ -1638,15 +1642,15 @@ p, li {пробел: предварительный перенос; }
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2306"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2334"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2314"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2342"/>
         <source>Service: %1
 </source>
         <translation>Сервис:% 1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2312"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2320"/>
         <source>WiFi Connection
 </source>
         <comment>icon_tool_tip</comment>
@@ -1654,28 +1658,28 @@ p, li {пробел: предварительный перенос; }
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2314"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2322"/>
         <source>SSID: %1
 </source>
         <translation>SSID:% 1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2319"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2327"/>
         <source>Security: %1
 </source>
         <translation>Безопасность:% 1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2320"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2328"/>
         <source>Strength: %1%
 </source>
         <translation>Крепость:% 1%
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2332"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2340"/>
         <source>VPN Connection
 </source>
         <comment>icon_tool_tip</comment>
@@ -1683,24 +1687,24 @@ p, li {пробел: предварительный перенос; }
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2333"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2341"/>
         <source>Type: %1
 </source>
         <translation>Тип: %1
 </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2335"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2343"/>
         <source>Host: %1</source>
         <translation>Хост:% 1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2494"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2504"/>
         <source>Security: %1</source>
         <translation>Безопасность:% 1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2795"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2805"/>
         <source> Warning</source>
         <translation> внимание</translation>
     </message>
@@ -1714,52 +1718,52 @@ p, li {пробел: предварительный перенос; }
         <translation type="vanished">&lt;center&gt;% 1 - это программа, взаимодействующая с демоном Connman и обеспечивающая управление на панели задач. &lt;br&gt; &lt;center&gt; Версия &lt;b&gt;%2&lt;/b&gt; &lt;center&gt; Дата выпуска:% 3 &lt;center&gt; Авторские права c% 4 &lt;center&gt; от &lt;center&gt; Эндрю Дж. Бибб &lt;center&gt; Вермонт, США &lt;br&gt; &lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt; &lt;center&gt; Цзяньфэн Чжан (китайский) &lt;center&gt; sqozz (немецкий) &lt;center&gt; Илья Шестопалов (русский) &lt;center&gt; Heimen Stoffels (голландский) &lt;center&gt; Yaşar iv (турецкий) &lt;br&gt; &lt;center&gt; &lt;b&gt; Информация о сборке: &lt;/b&gt; &lt;center&gt; Скомпилировано с использованием QT версии% 5</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="561"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="558"/>
         <source>&lt;center&gt;This program uses the &lt;b&gt;AwOken&lt;/b&gt; icon set version 2.5&lt;br&gt;&lt;br&gt;Released under the&lt;br&gt;Creative Commons&lt;br&gt;Attribution-Share Alike 3.0&lt;br&gt;Unported License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;http://creativecommons.org/licenses/by-sa/3.0/legalcode&lt;/a&gt;</source>
         <translation>&lt;center&gt; В этой программе используется набор значков &lt;b&gt; AwOken &lt;/b&gt; версии 2.5 &lt;br&gt; &lt;br&gt; Выпущено по лицензии &lt;br&gt; Creative Commons &lt;br&gt; Attribution-Share Alike 3.0 &lt;br&gt; Непортированная лицензия &lt;br&gt; &lt; a href = &quot;url&quot;&gt; http://creativecommons.org/licenses/by-sa/3.0/legalcode &lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="574"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="571"/>
         <source>About Other Artwork</source>
         <translation>О других произведениях искусства</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="575"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="572"/>
         <source>&lt;center&gt;This program uses artwork from &lt;b&gt;Freepik&lt;/b&gt; obtained from www.flaticon.com:&lt;br&gt;&lt;br&gt;Released under the Flaticon Basic License&lt;br&gt;&lt;a href=&quot;url&quot;&gt;https://file000.flaticon.com/downloads/license/license.pdf&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Artwork files:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</source>
         <translation>&lt;center&gt; В этой программе используются изображения из &lt;b&gt; Freepik &lt;/b&gt;, полученные с www.flaticon.com: &lt;br&gt; &lt;br&gt; Выпущено по базовой лицензии Flaticon &lt;br&gt; &lt;a href=&quot;url&quot;&gt; https: / /file000.flaticon.com/downloads/license/license.pdf &lt;/a&gt; &lt;br&gt; &lt;br&gt; &lt;b&gt; Файлы обложек: &lt;/b&gt; &lt;li&gt; radio.png &lt;/li&gt; &lt;li&gt; basic-plane .png &lt;/li&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="968"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="965"/>
         <source>You need to select a Wifi service before pressing the edit button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1001"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="998"/>
         <source>All network devices are powered off, now in Airplane mode.</source>
         <translation>Все сетевые устройства выключены, теперь они находятся в режиме полета.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1006"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1003"/>
         <source>Power has been restored to all previously powered network devices.</source>
         <translation>Восстановлено питание всех ранее запитанных сетевых устройств.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1021"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1018"/>
         <source>The system is online.</source>
         <translation>Система онлайн.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1027"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1024"/>
         <source>The system is offline.</source>
         <translation>Система отключена.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1128"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1125"/>
         <source>VPN Kill Switch Engaged</source>
         <translation>Включен аварийный выключатель VPN</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1129"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1126"/>
         <source>The connection to VPN service %1 was dropped and the VPN kill switch was engaged. All network devices are powered off.</source>
         <translation>Подключение к службе VPN% 1 было прервано, и был задействован аварийный выключатель VPN. Все сетевые устройства выключены.</translation>
     </message>
@@ -2071,8 +2075,8 @@ p, li {пробел: предварительный перенос; }
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1847"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2424"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2497"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2434"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2507"/>
         <source>Disabled</source>
         <translation>не активирован</translation>
     </message>
@@ -2082,7 +2086,7 @@ p, li {пробел: предварительный перенос; }
         <translation>Автономный режим </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2796"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2806"/>
         <source>&lt;center&gt;&lt;b&gt;Unable to find a systemtray on this machine.&lt;/b&gt;&lt;center&gt;&lt;br&gt;The program may still be used to manage your connections, but the tray icon will be disabled.&lt;center&gt;&lt;br&gt;&lt;br&gt;If you are seeing this message at system start up and you know a system tray exists once the system is up, try starting with the &lt;b&gt;-w&lt;/b&gt; switch and set a delay as necessary. The exact wait time will vary from system to system.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2119,7 +2123,7 @@ p, li {пробел: предварительный перенос; }
         <translation type="vanished">Нет</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2249"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2257"/>
         <source>Update resolution of the counters is based on a threshold of %L1 KB of data and %L2 seconds of time.</source>
         <translation>Частота обновления счётчиков основана на пороговом значении %L1 КБ данных и %L2 секундах времени.</translation>
     </message>
@@ -2133,8 +2137,8 @@ p, li {пробел: предварительный перенос; }
         <translation type="vanished">Служба:%1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2307"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2321"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2315"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2329"/>
         <source>Interface: %1</source>
         <translation>Интерфейс: %1</translation>
     </message>
@@ -2157,103 +2161,103 @@ p, li {пробел: предварительный перенос; }
         <translation type="vanished">Соединение в состоянии готовности.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2349"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2357"/>
         <source>Connection is in the Failure State, attempting to reestablish the connection</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение в неработоспособном состоянии, попытка переподключения</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2353"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2361"/>
         <source>Connection is in the Failure State.</source>
         <comment>icon_tool_tip</comment>
         <translation>Соединение в неработоспособном состоянии.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2359"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2367"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
         <translation>Не подключено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2366"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2374"/>
         <source>Error retrieving properties via Dbus</source>
         <translation>Ошибка при получении свойств через Dbus</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2367"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2375"/>
         <source>Connection status is unknown</source>
         <translation>Состояние соединения неизвестно</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2418"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2428"/>
         <source>Type: %1</source>
         <translation>Тип:% 1 &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2419"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2429"/>
         <source>&lt;br&gt;Powered </source>
         <translation>&lt;br&gt; Работает </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2420"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2430"/>
         <source>On</source>
         <translation>включено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2420"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2430"/>
         <source>Off</source>
         <translation>Выключено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2422"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2432"/>
         <source>Not Connected</source>
         <translation>Не подключено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2423"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2433"/>
         <source>&lt;br&gt;Tethering </source>
         <translation>&lt;br&gt; Модем </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2424"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2497"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2434"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2507"/>
         <source>Enabled</source>
         <translation>Включено</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2484"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2514"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2494"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2524"/>
         <source>Connection : %1</source>
         <translation>Подключение:% 1</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2486"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2496"/>
         <source>Signal Strength: %1%</source>
         <translation>Мощность сигнала:% 1%</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2488"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2498"/>
         <source>Favorite Connection</source>
         <translation>Любимое соединение</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2488"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2498"/>
         <source>Never Connected</source>
         <translation>Никогда не подключался</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2495"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2505"/>
         <source>&lt;br&gt;Roaming</source>
         <translation>&lt;br&gt; Роуминг</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2496"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2506"/>
         <source>&lt;br&gt;Autoconnect is </source>
         <translation>&lt;br&gt; Автоподключение - это </translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2483"/>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2513"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2493"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2523"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
@@ -2340,12 +2344,12 @@ p, li {пробел: предварительный перенос; }
         <translation type="vanished">Раскрасить иконки</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2050"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2057"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
         <translation>  Технологии Wi-Fi:&lt;br&gt;найдено %1, включено %2</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2417"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2427"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 Properties&lt;/b&gt;&lt;/center&gt;</source>
         <translation>&lt;p style = &apos;white-space: pre&apos;&gt; &lt;center&gt; &lt;b&gt; Свойства% 1 &lt;/b&gt; &lt;/center&gt;</translation>
     </message>
@@ -5108,7 +5112,7 @@ that the peer is no longer connected.</source>
 <context>
     <name>main.cpp</name>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="70"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="76"/>
         <source>Another running instance of CMST has been detected.  This instance is aborting</source>
         <translation>Была обнаружена запущенная копия CMST. Запуск этой копии отменён</translation>
     </message>
@@ -5117,103 +5121,103 @@ that the peer is no longer connected.</source>
         <translation type="vanished">[Экспериментально] Отключить счётчики данных. Может быть использовано для уменьшения нагрузки на систему.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="91"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="97"/>
         <source>Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.</source>
         <translation>Отключить значок в системном лотке. Может понадобиться системным лоткам, не соответствующим спецификации Freedesktop.org.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="76"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="82"/>
         <source>Connman System Tray.</source>
         <translation>Connman в cистемном лотке.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="79"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="85"/>
         <source>Bypass restoring the window state if restoring window state is specified in the settings file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="83"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="89"/>
         <source>Bypass restoring any start options in the settings file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="87"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="93"/>
         <source>[Experimental] Enable data counters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="97"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="103"/>
         <source>Use an icon theme from your system.</source>
         <translation>Использовать системную тему значков.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="98"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="104"/>
         <source>Icon Theme Name</source>
         <translation>Название темы значков</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="103"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="109"/>
         <source>Log the connman inputRequest for debugging purposes.</source>
         <translation>Журналировать запрос connman inputRequest для целей отладки.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="107"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="113"/>
         <source>Start the GUI minimized in the system tray.</source>
         <translation>Запустить графический пользовательский интерфейс, свёрнутым в системный лоток.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="111"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="117"/>
         <source>Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="115"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="121"/>
         <source>Disable VPN support.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="121"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="127"/>
         <source>Specify the wait time in seconds before starting the system tray icon.</source>
         <translation>Укажите время ожидания в секундах перед запуском значка в системном лотке.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="122"/>
-        <location filename="../apps/cmstapp/code/main.cpp" line="134"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="128"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="140"/>
         <source>seconds</source>
         <translation>секунд</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="127"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="133"/>
         <source>[Experimental] The number of kb that have to be transmitted before the counter updates.</source>
         <translation>[Экспериментально] Количество кб которые должны быть переданы перед обновлением счётчиков.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="128"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="134"/>
         <source>KB</source>
         <translation>КБ</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="133"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="139"/>
         <source>[Experimental] The interval in seconds between counter updates.</source>
         <translation>[Экспериментально] Промежуток в секундах между обновлением счётчиков.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="140"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="146"/>
         <source>If tray icon fake transparency is required, specify the background color to use (format: 0xRRGGBB)</source>
         <translation>Если значку в системном лотке требуется псевдопрозрачность, укажите цвет фона (формат: 0xRRGGBB)</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="141"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="147"/>
         <source>RRGGBB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="149"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="155"/>
         <source>Use XFCE specific code.</source>
         <translation>Использовать специальный код для XFCE.</translation>
     </message>
     <message>
-        <location filename="../apps/cmstapp/code/main.cpp" line="154"/>
+        <location filename="../apps/cmstapp/code/main.cpp" line="160"/>
         <source>Use MATE DE specific code.</source>
         <translation>Использовать специальный код для окружения рабочего стола MATE.</translation>
     </message>
