@@ -2333,76 +2333,97 @@ p，li { white-space: pre-wrap; }
         <translation type="vanished">&lt;center&gt;&lt;b&gt;未能在此机上找到系统托盘。&lt;/b&gt;&lt;center&gt;&lt;br&gt;此程序仍可用于管理你的连接，但是托盘图标会被禁用。&lt;center&gt;&lt;br&gt;&lt;br&gt;如果你在系统启动时看到这个信息，并且你知道当系统启动时系统托盘存在，尝试用 &lt;b&gt;-w&lt;/b&gt; 参数启动本程序，并在有必要的情况下设置一个延迟时间。  实际的等待时间因不同系统而异。</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2987"/>
         <source>Could not find a connection to the system bus</source>
-        <translation type="vanished">无法连接到system bus</translation>
+        <translation>无法连接到system bus</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2988"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2993"/>
         <source>%1 - Critical Error</source>
-        <translation type="vanished">%1 - 严重错误</translation>
+        <translation>%1 - 严重错误</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2989"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="vanished">无法连接到system bus。&lt;br&gt;&lt;br&gt;%1 将无法与connman通信。</translation>
+        <translation>无法连接到system bus。&lt;br&gt;&lt;br&gt;%1 将无法与connman通信。</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2992"/>
         <source>Could not create an interface to connman on the system bus</source>
-        <translation type="vanished">无法在 system bus 上创建与connman通信的接口</translation>
+        <translation>无法在 system bus 上创建与connman通信的接口</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2994"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="vanished">无法在 system bus 上创建与connman通信的接口。&lt;br&gt;&lt;br&gt;%1 将无法与connman通信。</translation>
+        <translation>无法在 system bus 上创建与connman通信的接口。&lt;br&gt;&lt;br&gt;%1 将无法与connman通信。</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2997"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
-        <translation type="vanished">在读取或解析connman.Manager.GetProperties时发生错误</translation>
+        <translation>在读取或解析connman.Manager.GetProperties时发生错误</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2998"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3003"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3008"/>
         <source>%1 - Warning</source>
-        <translation type="vanished">%1 - 警告</translation>
+        <translation>%1 - 警告</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2999"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
-        <translation type="vanished">在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 可能不工作。</translation>
+        <translation>在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 可能不工作。</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3002"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
-        <translation type="vanished">在读取或解析connman.Manager.GetProperties时发生错误</translation>
+        <translation>在读取或解析connman.Manager.GetProperties时发生错误</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3004"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="vanished">在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 部分功能可能仍可以工作。</translation>
+        <translation>在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 部分功能可能仍可以工作。</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3007"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
-        <translation type="vanished">在读取或解析connman.Manager.GetProperties时发生错误</translation>
+        <translation>在读取或解析connman.Manager.GetProperties时发生错误</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3009"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="vanished">在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 部分功能可能仍可以工作。</translation>
+        <translation>在读取或解析connman.Manager.GetProperties的回应时发生了一个错误。&lt;br&gt;&lt;br&gt;%1 部分功能可能仍可以工作。</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3016"/>
         <source>Could not create an interface to connman-vpn on the system bus</source>
-        <translation type="vanished">无法在系统总线上创建 connman-vpn 连接</translation>
+        <translation>无法在系统总线上创建 connman-vpn 连接</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3079"/>
         <source>[Hidden Wifi]</source>
-        <translation type="vanished">[隐藏无线网络]</translation>
+        <translation>[隐藏无线网络]</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3133"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
-        <translation type="vanished">检测到 %1 版本 %2 by %3 。&lt;p&gt;这个服务支持桌面通知规范 版本 %4</translation>
+        <translation>检测到 %1 版本 %2 by %3 。&lt;p&gt;这个服务支持桌面通知规范 版本 %4</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3145"/>
         <source>Attempt %1 of %2 looking for notification server.</source>
-        <translation type="vanished">尝试 %1 在 %2 中以寻找通知服务。</translation>
+        <translation>尝试 %1 在 %2 中以寻找通知服务。</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3148"/>
         <source>Unable to connect to a notification server after %1 tries.</source>
-        <translation type="vanished">在%1次尝试后仍无法连接到通知服务。</translation>
+        <translation>在%1次尝试后仍无法连接到通知服务。</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3261"/>
         <source>Colorize Icons</source>
-        <translation type="vanished">彩色图标</translation>
+        <translation>彩色图标</translation>
     </message>
     <message>
         <source>%1 detected</source>

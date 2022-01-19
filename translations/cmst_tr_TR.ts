@@ -2162,76 +2162,97 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">&lt;center&gt;&lt;b&gt;Bu makinede bir sistem çekmecesi bulunamadı.&lt;/b&gt;&lt;center&gt;&lt;br&gt;Program yine de bağlantılarınızı yönetmek için kullanılabilir, ancak çekmece simgesi devre dışı bırakılır.&lt;center&gt;&lt;br&gt;&lt;br&gt;Bu iletiyi sistem başlangıcında görüyorsanız ve sistem açıldığında bir sistem çekmecesi olduğunu biliyorsanız, &lt;b&gt;-w&lt;/b&gt; anahtarıyla başlatmayı deneyin ve gerektiği şekilde bir gecikme ayarlayın.  Kesin bekleme süresi sistemden sisteme değişecektir.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2987"/>
         <source>Could not find a connection to the system bus</source>
-        <translation type="vanished">Sistem veri yoluna bağlantı bulunamadı</translation>
+        <translation>Sistem veri yoluna bağlantı bulunamadı</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2988"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2993"/>
         <source>%1 - Critical Error</source>
-        <translation type="vanished">%1 - Ciddi Hata</translation>
+        <translation>%1 - Ciddi Hata</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2989"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="vanished">Sistem veri yoluna bağlantı bulunamadı.&lt;br&gt;&lt;br&gt;%1 connman ile iletişim kuramayacak.</translation>
+        <translation>Sistem veri yoluna bağlantı bulunamadı.&lt;br&gt;&lt;br&gt;%1 connman ile iletişim kuramayacak.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2992"/>
         <source>Could not create an interface to connman on the system bus</source>
-        <translation type="vanished">Sistem veri yolunda connman için bir arayüz oluşturulamadı</translation>
+        <translation>Sistem veri yolunda connman için bir arayüz oluşturulamadı</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2994"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="vanished">Sistem veriyolundaki connman için bir arayüz oluşturulamıyor.&lt;br&gt;&lt;br&gt;%1 connman ile iletişim kuramayacak.</translation>
+        <translation>Sistem veriyolundaki connman için bir arayüz oluşturulamıyor.&lt;br&gt;&lt;br&gt;%1 connman ile iletişim kuramayacak.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2997"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
-        <translation type="vanished">connman.Manager.GetProperties okunurken veya ayrıştırılırken hata oluştu</translation>
+        <translation>connman.Manager.GetProperties okunurken veya ayrıştırılırken hata oluştu</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2998"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3003"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3008"/>
         <source>%1 - Warning</source>
-        <translation type="vanished">%1 - Uyarı</translation>
+        <translation>%1 - Uyarı</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2999"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
-        <translation type="vanished">connman.Manager.GetProperties yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;Herhangi bir %1 bölümünün işlevsel olması pek olası değildir.</translation>
+        <translation>connman.Manager.GetProperties yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;Herhangi bir %1 bölümünün işlevsel olması pek olası değildir.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3002"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
-        <translation type="vanished">connman.Manager.GetTechnologies okunurken veya ayrıştırılırken hata oluştu</translation>
+        <translation>connman.Manager.GetTechnologies okunurken veya ayrıştırılırken hata oluştu</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3004"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="vanished">connman.Manager.GetTechnologies yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;%1&apos;in bir kısmı hala işlevsel olabilir.</translation>
+        <translation>connman.Manager.GetTechnologies yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;%1&apos;in bir kısmı hala işlevsel olabilir.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3007"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
-        <translation type="vanished">connman.Manager.GetServices okunurken veya ayrıştırılırken hata oluştu</translation>
+        <translation>connman.Manager.GetServices okunurken veya ayrıştırılırken hata oluştu</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3009"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="vanished">connman.Manager.GetServices yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;%1&apos;in bir kısmı hala işlevsel olabilir.</translation>
+        <translation>connman.Manager.GetServices yönteminden yanıt okunurken veya ayrıştırılırken bir hata oluştu.&lt;br&gt;&lt;br&gt;%1&apos;in bir kısmı hala işlevsel olabilir.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3016"/>
         <source>Could not create an interface to connman-vpn on the system bus</source>
-        <translation type="vanished">Sistem veriyolunda connman-vpn için bir arayüz oluşturulamadı</translation>
+        <translation>Sistem veriyolunda connman-vpn için bir arayüz oluşturulamadı</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3079"/>
         <source>[Hidden Wifi]</source>
-        <translation type="vanished">[Gizli Wifi]</translation>
+        <translation>[Gizli Wifi]</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3133"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
-        <translation type="vanished">Bu sistemde %1 sürüm %2 %3 tarafından algılandı.&lt;p&gt;Bu sunucu masaüstü Bildirim Belirtimi sürüm %4 destekliyor</translation>
+        <translation>Bu sistemde %1 sürüm %2 %3 tarafından algılandı.&lt;p&gt;Bu sunucu masaüstü Bildirim Belirtimi sürüm %4 destekliyor</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3145"/>
         <source>Attempt %1 of %2 looking for notification server.</source>
-        <translation type="vanished">%2&apos;nin %1&apos;i bildirim sunucusunu arıyor.</translation>
+        <translation>%2&apos;nin %1&apos;i bildirim sunucusunu arıyor.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3148"/>
         <source>Unable to connect to a notification server after %1 tries.</source>
-        <translation type="vanished">%1 denemesinden sonra bir bildirim sunucusuna bağlanılamıyor.</translation>
+        <translation>%1 denemesinden sonra bir bildirim sunucusuna bağlanılamıyor.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3261"/>
         <source>Colorize Icons</source>
-        <translation type="vanished">Simgeleri Renklendir</translation>
+        <translation>Simgeleri Renklendir</translation>
     </message>
     <message>
         <source>Attempt %1 of 4 looking for notification server.</source>

@@ -2276,72 +2276,92 @@ p, li {пробел: предварительный перенос; }
         <translation type="vanished">&lt;center&gt;&lt;b&gt;Не удалось найти системный лоток в этой системе.&lt;/b&gt;&lt;center&gt;&lt;br&gt;Эта программа всё-ещё может быть использована для управения вашими соединениями, но значок в системном лотке отражаться не будет.&lt;center&gt;&lt;br&gt;&lt;br&gt;Если вы видите это сообщение при загрузке системы и вы знаете, что системный лоток будет после загрузки системы, попытайтесь запустить с опцией &lt;b&gt;-w&lt;/b&gt; и установить нужную задержку. Точное время ожидания будет зависеть от конкретной системы.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2987"/>
         <source>Could not find a connection to the system bus</source>
-        <translation type="vanished">Не удалось найти подключение к системной шине</translation>
+        <translation>Не удалось найти подключение к системной шине</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2988"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2993"/>
         <source>%1 - Critical Error</source>
-        <translation type="vanished">%1 - критическая ошибка</translation>
+        <translation>%1 - критическая ошибка</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2989"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="vanished">Не удалось найти подключение к системной шине.&lt;br&gt;&lt;br&gt;%1 не сможет обмениваться данными с connman.</translation>
+        <translation>Не удалось найти подключение к системной шине.&lt;br&gt;&lt;br&gt;%1 не сможет обмениваться данными с connman.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2992"/>
         <source>Could not create an interface to connman on the system bus</source>
-        <translation type="vanished">Не удалось создать интерфейс для connman на системной шине</translation>
+        <translation>Не удалось создать интерфейс для connman на системной шине</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2994"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="vanished">Не удалось создать интерфейс для connman на системной шине.&lt;br&gt;&lt;br&gt;%1 не сможет обмениваться данными с connman.</translation>
+        <translation>Не удалось создать интерфейс для connman на системной шине.&lt;br&gt;&lt;br&gt;%1 не сможет обмениваться данными с connman.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2997"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
-        <translation type="vanished">Ошибка чтения или анализа connman.Manager.GetProperties</translation>
+        <translation>Ошибка чтения или анализа connman.Manager.GetProperties</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2998"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3003"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3008"/>
         <source>%1 - Warning</source>
-        <translation type="vanished">%1 - внимание</translation>
+        <translation>%1 - внимание</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2999"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
-        <translation type="vanished">Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;Вряд ли какая-нибудь часть %1 будет функционировать.</translation>
+        <translation>Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;Вряд ли какая-нибудь часть %1 будет функционировать.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3002"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
-        <translation type="vanished">Ошибка чтения или анализа connman.Manager.GetTechnologies</translation>
+        <translation>Ошибка чтения или анализа connman.Manager.GetTechnologies</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3004"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="vanished">Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Какая-то часть %1 всё ещё может функционировать.</translation>
+        <translation>Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Какая-то часть %1 всё ещё может функционировать.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3007"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
-        <translation type="vanished">Ошибка чтения или анализа connman.Manager.GetServices</translation>
+        <translation>Ошибка чтения или анализа connman.Manager.GetServices</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3009"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="vanished">Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Какая-то часть %1 всё ещё может функционировать.</translation>
+        <translation>Произошла ошибка при чтении или анализе ответа от метода connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Какая-то часть %1 всё ещё может функционировать.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3016"/>
         <source>Could not create an interface to connman-vpn on the system bus</source>
-        <translation type="vanished">Не удалось создать интерфейс для connman-vpn на системной шине</translation>
+        <translation>Не удалось создать интерфейс для connman-vpn на системной шине</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3079"/>
         <source>[Hidden Wifi]</source>
-        <translation type="vanished">[Скрытый Wi-Fi]</translation>
+        <translation>[Скрытый Wi-Fi]</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3145"/>
         <source>Attempt %1 of %2 looking for notification server.</source>
-        <translation type="vanished">Попытка% 1 из% 2 найти сервер уведомлений.</translation>
+        <translation>Попытка% 1 из% 2 найти сервер уведомлений.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3148"/>
         <source>Unable to connect to a notification server after %1 tries.</source>
-        <translation type="vanished">Не удалось подключиться к серверу уведомлений после попытки% 1.</translation>
+        <translation>Не удалось подключиться к серверу уведомлений после попытки% 1.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3261"/>
         <source>Colorize Icons</source>
-        <translation type="vanished">Раскрасить иконки</translation>
+        <translation>Раскрасить иконки</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2057"/>
@@ -2354,8 +2374,9 @@ p, li {пробел: предварительный перенос; }
         <translation>&lt;p style = &apos;white-space: pre&apos;&gt; &lt;center&gt; &lt;b&gt; Свойства% 1 &lt;/b&gt; &lt;/center&gt;</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3133"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
-        <translation type="vanished">%1 версия %2 by %3 была обнаружена в этой системе.&lt;p&gt;Этот сервер поддерживает спецификацию уведомлений рабочего стола версии %4</translation>
+        <translation>%1 версия %2 by %3 была обнаружена в этой системе.&lt;p&gt;Этот сервер поддерживает спецификацию уведомлений рабочего стола версии %4</translation>
     </message>
     <message>
         <source>%1 detected</source>

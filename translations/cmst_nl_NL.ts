@@ -2216,72 +2216,101 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">&lt;center&gt;&lt;b&gt;Geen systeemvak aangetroffen.&lt;/b&gt;&lt;center&gt;&lt;br&gt;Je kunt je verbindingen nog steeds beheren, maar dan zonder systeemvakpictogram.&lt;center&gt;&lt;br&gt;&lt;br&gt;Als je dit bericht ziet, maar zeker weet dat je wél over een systeemvak beschikt, probeer dan om cmst op te starten met &lt;b&gt;-w&lt;/b&gt;, en stel, indien nodig, een vertraging in.  De wachttijd verschilt per systeem.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2987"/>
         <source>Could not find a connection to the system bus</source>
-        <translation type="vanished">Niet verbonden met de systeembus</translation>
+        <translation>Niet verbonden met de systeembus</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2988"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2993"/>
         <source>%1 - Critical Error</source>
-        <translation type="vanished">%1 - Kritieke fout</translation>
+        <translation>%1 - Kritieke fout</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2989"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="vanished">Niet verbonden met de systeembus.&lt;br&gt;&lt;br&gt;%1 kan niet communiceren met connman.</translation>
+        <translation>Niet verbonden met de systeembus.&lt;br&gt;&lt;br&gt;%1 kan niet communiceren met connman.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2992"/>
         <source>Could not create an interface to connman on the system bus</source>
-        <translation type="vanished">Kan niet communiceren met connman middels de systeembus</translation>
+        <translation>Kan niet communiceren met connman middels de systeembus</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2994"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="vanished">Kan niet communiceren met connman middels de systeembus.&lt;br&gt;&lt;br&gt;%1 kan niet communiceren met connman.</translation>
+        <translation>Kan niet communiceren met connman middels de systeembus.&lt;br&gt;&lt;br&gt;%1 kan niet communiceren met connman.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2997"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
-        <translation type="vanished">Fout tijdens uitlezen of verwerken van connman.Manager.GetProperties</translation>
+        <translation>Fout tijdens uitlezen of verwerken van connman.Manager.GetProperties</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2998"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3003"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3008"/>
         <source>%1 - Warning</source>
-        <translation type="vanished">%1 - Waarschuwing</translation>
+        <translation>%1 - Waarschuwing</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2999"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
-        <translation type="vanished">Er is een fout opgetreden tijdens het uitlezen of verwerken van connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;Hoogstwaarschijnlijk werkt geen enkel onderdeel van %1.</translation>
+        <translation>Er is een fout opgetreden tijdens het uitlezen of verwerken van connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;Hoogstwaarschijnlijk werkt geen enkel onderdeel van %1.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3002"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
-        <translation type="vanished">Fout tijdens uitlezen of verwerken van connman.Manager.GetTechnologies</translation>
+        <translation>Fout tijdens uitlezen of verwerken van connman.Manager.GetTechnologies</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3004"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="vanished">Er is een fout opgetreden tijdens het uitlezen of verwerken van connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Mogelijk werkt een deel van %1 nog wel.</translation>
+        <translation>Er is een fout opgetreden tijdens het uitlezen of verwerken van connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Mogelijk werkt een deel van %1 nog wel.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3007"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
-        <translation type="vanished">Fout tijdens uitlezen of verwerken van connman.Manager.GetServices</translation>
+        <translation>Fout tijdens uitlezen of verwerken van connman.Manager.GetServices</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3009"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="vanished">Er is een fout opgetreden tijdens het uitlezen of verwerken van connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Mogelijk werkt een deel van %1 nog wel.</translation>
+        <translation>Er is een fout opgetreden tijdens het uitlezen of verwerken van connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Mogelijk werkt een deel van %1 nog wel.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3016"/>
         <source>Could not create an interface to connman-vpn on the system bus</source>
-        <translation type="vanished">Kan niet communiceren met connman-vpn middels de systeembus</translation>
+        <translation>Kan niet communiceren met connman-vpn middels de systeembus</translation>
     </message>
     <message>
         <source>Unable to create an interface to connman-vpn on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with the connman vpn daemon.</source>
         <translation type="vanished">Kan niet communiceren met connman-vpn middels de systeembus.&lt;br&gt;&lt;br&gt;%1 kan niet communiceren met de connman-vpn-achtergronddienst.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3079"/>
         <source>[Hidden Wifi]</source>
-        <translation type="vanished">[Verborgen Wi-Fi]</translation>
+        <translation>[Verborgen Wi-Fi]</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3133"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
-        <translation type="vanished">%1, versie %2 van %3 is aangetroffen op dit systeem.&lt;p&gt;Deze server ondersteunt meldingen middels Notification Specification, versie %4</translation>
+        <translation>%1, versie %2 van %3 is aangetroffen op dit systeem.&lt;p&gt;Deze server ondersteunt meldingen middels Notification Specification, versie %4</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3145"/>
+        <source>Attempt %1 of %2 looking for notification server.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3148"/>
+        <source>Unable to connect to a notification server after %1 tries.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3261"/>
         <source>Colorize Icons</source>
-        <translation type="vanished">Pictogrammen inkleuren</translation>
+        <translation>Pictogrammen inkleuren</translation>
     </message>
     <message>
         <source>Attempt %1 of 4 looking for notification server.</source>

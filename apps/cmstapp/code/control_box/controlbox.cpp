@@ -2772,7 +2772,7 @@ void ControlBox::createSystemTrayIcon()
       // QT5.3 and XFCE don't play nicely.   Hammer the XFCE tray up to
       // maxtries to get a valid icon geometry.
       // QT5.4 update, may be fixed but leave option in for now
-      if (b_usexfce || b_usemate {
+      if (b_usexfce || b_usemate) {
          const int maxtries = 125;
          int i;
          for (i = 0; i < maxtries; ++i) {

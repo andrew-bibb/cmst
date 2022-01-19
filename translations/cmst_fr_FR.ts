@@ -1929,12 +1929,14 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3145"/>
         <source>Attempt %1 of %2 looking for notification server.</source>
-        <translation type="vanished">Tentative %1 sur %2 à la recherche du serveur de notification.</translation>
+        <translation>Tentative %1 sur %2 à la recherche du serveur de notification.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3148"/>
         <source>Unable to connect to a notification server after %1 tries.</source>
-        <translation type="vanished">Impossible de se connecter à un serveur de notification après %1 essais.</translation>
+        <translation>Impossible de se connecter à un serveur de notification après %1 essais.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2315"/>
@@ -2137,68 +2139,87 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">&lt;center&gt;&lt;b&gt;Impossible de trouver une barre d&apos;état système sur cette machine.&lt;/b&gt;&lt;center&gt;&lt;br&gt;Le programme peut toujours être utilisé pour gérer vos connexions, mais l&apos;icône de la barre d&apos;état sera désactivée.&lt;center&gt;&lt;br&gt;&lt;br&gt;Si vous voyez ce message au démarrage du système et que vous savez qu&apos;une barre d&apos;état système existe une fois que le système est en marche, essayez de commencer par le switch &lt;b&gt;-w&lt;/b&gt; et définissez un délai si nécessaire.  Le temps d&apos;attente exact variera d&apos;un système à l&apos;autre.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2987"/>
         <source>Could not find a connection to the system bus</source>
-        <translation type="vanished">Impossible de trouver une connexion au bus système</translation>
+        <translation>Impossible de trouver une connexion au bus système</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2988"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2993"/>
         <source>%1 - Critical Error</source>
-        <translation type="vanished">%1 - Erreur critique</translation>
+        <translation>%1 - Erreur critique</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2989"/>
         <source>Unable to find a connection to the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="vanished">Impossible de trouver une connexion au bus système.&lt;br&gt;&lt;br&gt;%1 ne pourra pas communiquer avec connman.</translation>
+        <translation>Impossible de trouver une connexion au bus système.&lt;br&gt;&lt;br&gt;%1 ne pourra pas communiquer avec connman.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2992"/>
         <source>Could not create an interface to connman on the system bus</source>
-        <translation type="vanished">Impossible de créer une interface avec connman sur le bus système</translation>
+        <translation>Impossible de créer une interface avec connman sur le bus système</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2994"/>
         <source>Unable to create an interface to connman on the system bus.&lt;br&gt;&lt;br&gt;%1 will not be able to communicate with connman.</source>
-        <translation type="vanished">Impossible de créer une interface avec connman sur le bus système.&lt;br&gt;&lt;br&gt;%1 ne pourra pas communiquer avec connman.</translation>
+        <translation>Impossible de créer une interface avec connman sur le bus système.&lt;br&gt;&lt;br&gt;%1 ne pourra pas communiquer avec connman.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2997"/>
         <source>Error reading or parsing connman.Manager.GetProperties</source>
-        <translation type="vanished">Erreur de lecture ou d&apos;analyse de connman.Manager.GetProperties</translation>
+        <translation>Erreur de lecture ou d&apos;analyse de connman.Manager.GetProperties</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2998"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3003"/>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3008"/>
         <source>%1 - Warning</source>
-        <translation type="vanished">%1 - Avertissement</translation>
+        <translation>%1 - Avertissement</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2999"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetProperties.&lt;br&gt;&lt;br&gt;It is unlikely any portion of %1 will be functional.</source>
-        <translation type="vanished">Une erreur s&apos;est produite lors de la lecture ou de l&apos;analyse de la réponse de la méthode connman.Manager.GetProperties. &lt;br&gt;&lt;br&gt;Il est peu probable qu&apos;une partie de %1 soit fonctionnelle.</translation>
+        <translation>Une erreur s&apos;est produite lors de la lecture ou de l&apos;analyse de la réponse de la méthode connman.Manager.GetProperties. &lt;br&gt;&lt;br&gt;Il est peu probable qu&apos;une partie de %1 soit fonctionnelle.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3002"/>
         <source>Error reading or parsing connman.Manager.GetTechnologies</source>
-        <translation type="vanished">Erreur lors de la lecture ou de l&apos;analyse de connman.Manager.GetTechnologies</translation>
+        <translation>Erreur lors de la lecture ou de l&apos;analyse de connman.Manager.GetTechnologies</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3004"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="vanished">Une erreur s&apos;est produite lors de la lecture ou de l&apos;analyse de la réponse de la méthode connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Une partie de %1 peut encore être fonctionnelle.</translation>
+        <translation>Une erreur s&apos;est produite lors de la lecture ou de l&apos;analyse de la réponse de la méthode connman.Manager.GetTechnologies.&lt;br&gt;&lt;br&gt;Une partie de %1 peut encore être fonctionnelle.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3007"/>
         <source>Error reading or parsing connman.Manager.GetServices</source>
-        <translation type="vanished">Erreur de lecture ou d&apos;analyse de connman.Manager.GetServices</translation>
+        <translation>Erreur de lecture ou d&apos;analyse de connman.Manager.GetServices</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3009"/>
         <source>There was an error reading or parsing the reply from method connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Some portion of %1 may still be functional.</source>
-        <translation type="vanished">Une erreur s&apos;est produite lors de la lecture ou de l&apos;analyse de la réponse de la méthode connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Une partie de %1 peut encore être fonctionnelle.</translation>
+        <translation>Une erreur s&apos;est produite lors de la lecture ou de l&apos;analyse de la réponse de la méthode connman.Manager.GetServices.&lt;br&gt;&lt;br&gt;Une partie de %1 peut encore être fonctionnelle.</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3016"/>
         <source>Could not create an interface to connman-vpn on the system bus</source>
-        <translation type="vanished">Impossible de créer une interface avec connman-vpn sur le bus système</translation>
+        <translation>Impossible de créer une interface avec connman-vpn sur le bus système</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3079"/>
         <source>[Hidden Wifi]</source>
-        <translation type="vanished">[Wifi Caché]</translation>
+        <translation>[Wifi Caché]</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3133"/>
         <source>%1 version %2 by %3 has been detected on this system.&lt;p&gt;This server supports desktop Notification Specification version %4</source>
-        <translation type="vanished">%1 version %2 par %3 à été détecté sur ce système.&lt;p&gt;Ce serveur prend en charge la version de spécification de notification de bureau %4</translation>
+        <translation>%1 version %2 par %3 à été détecté sur ce système.&lt;p&gt;Ce serveur prend en charge la version de spécification de notification de bureau %4</translation>
     </message>
     <message>
+        <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3261"/>
         <source>Colorize Icons</source>
-        <translation type="vanished">Coloriser les icônes</translation>
+        <translation>Coloriser les icônes</translation>
     </message>
 </context>
 <context>
