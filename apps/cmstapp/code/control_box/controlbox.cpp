@@ -2384,7 +2384,8 @@ void ControlBox::assembleTrayIcon()
    // for the icons to display in Plasma5.
    //
    // First convert from a QIcon through QPixmap to QImage
-   QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
+   // QIcon.pixmap(QSize) can return a larger than requested size because AA_UseHighDpiPixmaps is set
+   QPixmap pxm = prelimicon.pixmap(QSize(22,22) );
    QImage src = pxm.toImage();
    QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);
    QPainter painter(&dest);
