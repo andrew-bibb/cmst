@@ -291,7 +291,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>172</width>
+        <width>174</width>
         <height>155</height>
        </rect>
       </property>
@@ -636,6 +636,12 @@ p, li { white-space: pre-wrap; }
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QToolButton" name="toolButton_whatsthis">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="toolTip">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What's This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>

@@ -107,7 +107,7 @@
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_state_pix">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
@@ -128,6 +128,12 @@
                 </item>
                 <item row="1" column="0">
                  <widget class="QToolButton" name="toolButton_offlinemode">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="whatsThis">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
@@ -1342,50 +1348,6 @@
                 <string>Start Up Options</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_9">
-                <item row="7" column="0">
-                 <widget class="QCheckBox" name="checkBox_waittime">
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                   <string>Wait Time</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="9" column="0">
-                 <widget class="QCheckBox" name="checkBox_counterseconds">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                   <string>Counter Update Rate </string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="7" column="1">
-                 <widget class="QSpinBox" name="spinBox_waittime">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::PlusMinus</enum>
-                  </property>
-                  <property name="minimum">
-                   <number>1</number>
-                  </property>
-                  <property name="maximum">
-                   <number>60</number>
-                  </property>
-                 </widget>
-                </item>
                 <item row="10" column="0">
                  <widget class="QCheckBox" name="checkBox_faketransparency">
                   <property name="toolTip">
@@ -1399,6 +1361,40 @@
                    <string>Fake Transparency</string>
                   </property>
                  </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QCheckBox" name="checkBox_enablecounters">
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Enable Counters</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QCheckBox" name="checkBox_waittime">
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Wait Time</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="11" column="0" colspan="2">
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
                 </item>
                 <item row="8" column="1">
                  <widget class="QSpinBox" name="spinBox_counterkb">
@@ -1425,56 +1421,6 @@
                   </property>
                  </widget>
                 </item>
-                <item row="8" column="0">
-                 <widget class="QCheckBox" name="checkBox_counterkb">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="toolTip">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                   <string>Counter Update KB</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="0">
-                 <widget class="QCheckBox" name="checkBox_systemicontheme">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                   <string>Use Icon Theme</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0">
-                 <widget class="QCheckBox" name="checkBox_disabletrayicon">
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                   <string>Disable Tray Icon</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="5" column="0">
-                 <widget class="QCheckBox" name="checkBox_disableminimized">
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                   <string>Disable Minimized</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="10" column="1">
                  <widget class="QSpinBox" name="spinBox_faketransparency">
                   <property name="enabled">
@@ -1497,13 +1443,29 @@
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="0">
-                 <widget class="QCheckBox" name="checkBox_disablevpn">
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="lineEdit_icontheme">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
                   <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon theme to use. For this theme to be used it must be installed on your system. If the theme is not installed, or if you spell the name wrong CMST will fall back to using its internal icon set.&lt;/p&gt;&lt;p&gt;If this box is blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QCheckBox" name="checkBox_systemicontheme">
+                  <property name="toolTip">
+                   <string/>
+                  </property>
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="text">
-                   <string>Disable VPN</string>
+                   <string>Use Icon Theme</string>
                   </property>
                  </widget>
                 </item>
@@ -1521,26 +1483,67 @@
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="0">
-                 <widget class="QCheckBox" name="checkBox_enablecounters">
+                <item row="2" column="0">
+                 <widget class="QCheckBox" name="checkBox_disablevpn">
                   <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="text">
-                   <string>Enable Counters</string>
+                   <string>Disable VPN</string>
                   </property>
                  </widget>
                 </item>
-                <item row="3" column="1">
-                 <widget class="QLineEdit" name="lineEdit_icontheme">
+                <item row="5" column="0">
+                 <widget class="QCheckBox" name="checkBox_disableminimized">
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Disable Minimized</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="1">
+                 <widget class="QSpinBox" name="spinBox_waittime">
                   <property name="enabled">
                    <bool>false</bool>
                   </property>
                   <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon theme to use. For this theme to be used it must be installed on your system. If the theme is not installed, or if you spell the name wrong CMST will fall back to using its internal icon set.&lt;/p&gt;&lt;p&gt;If this box is blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
-                  <property name="clearButtonEnabled">
-                   <bool>true</bool>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::PlusMinus</enum>
+                  </property>
+                  <property name="minimum">
+                   <number>1</number>
+                  </property>
+                  <property name="maximum">
+                   <number>60</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="9" column="0">
+                 <widget class="QCheckBox" name="checkBox_counterseconds">
+                  <property name="toolTip">
+                   <string/>
+                  </property>
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Counter Update Rate </string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QCheckBox" name="checkBox_disabletrayicon">
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Disable Tray Icon</string>
                   </property>
                  </widget>
                 </item>
@@ -1569,18 +1572,21 @@
                   </property>
                  </widget>
                 </item>
-                <item row="11" column="0" colspan="2">
-                 <spacer name="verticalSpacer_3">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
+                <item row="8" column="0">
+                 <widget class="QCheckBox" name="checkBox_counterkb">
+                  <property name="enabled">
+                   <bool>false</bool>
                   </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
-                 </spacer>
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Counter Update KB</string>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </widget>
@@ -1881,6 +1887,12 @@ p, li { white-space: pre-wrap; }
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QToolButton" name="toolButton_whatsthis">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="toolTip">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What's This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
@@ -2074,8 +2086,8 @@ p, li { white-space: pre-wrap; }
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>119</x>
-     <y>74</y>
+     <x>455</x>
+     <y>97</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -2142,8 +2154,8 @@ p, li { white-space: pre-wrap; }
      <y>214</y>
     </hint>
     <hint type="destinationlabel">
-     <x>461</x>
-     <y>405</y>
+     <x>473</x>
+     <y>728</y>
     </hint>
    </hints>
   </connection>
@@ -2218,12 +2230,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>461</x>
-     <y>265</y>
+     <x>485</x>
+     <y>301</y>
     </hint>
     <hint type="destinationlabel">
-     <x>563</x>
-     <y>258</y>
+     <x>619</x>
+     <y>303</y>
     </hint>
    </hints>
   </connection>
@@ -2234,12 +2246,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>497</x>
-     <y>290</y>
+     <x>521</x>
+     <y>331</y>
     </hint>
     <hint type="destinationlabel">
-     <x>583</x>
-     <y>294</y>
+     <x>619</x>
+     <y>333</y>
     </hint>
    </hints>
   </connection>
@@ -2250,12 +2262,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>525</x>
-     <y>320</y>
+     <x>546</x>
+     <y>361</y>
     </hint>
     <hint type="destinationlabel">
-     <x>577</x>
-     <y>323</y>
+     <x>619</x>
+     <y>363</y>
     </hint>
    </hints>
   </connection>
@@ -2266,12 +2278,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>529</x>
-     <y>355</y>
+     <x>546</x>
+     <y>391</y>
     </hint>
     <hint type="destinationlabel">
-     <x>610</x>
-     <y>351</y>
+     <x>619</x>
+     <y>393</y>
     </hint>
    </hints>
   </connection>
@@ -2282,12 +2294,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>482</x>
-     <y>516</y>
+     <x>519</x>
+     <y>597</y>
     </hint>
     <hint type="destinationlabel">
-     <x>507</x>
-     <y>558</y>
+     <x>580</x>
+     <y>627</y>
     </hint>
    </hints>
   </connection>

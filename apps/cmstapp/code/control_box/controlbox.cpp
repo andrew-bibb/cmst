@@ -571,7 +571,6 @@ void ControlBox::aboutOtherArt()
    QMessageBox::about(this, tr("About Other Artwork"),
        tr("<center>This program uses artwork from <b>Freepik</b> obtained from www.flaticon.com:"
          "<br><br>Released under the Flaticon Basic License"
-         "<br><a href=\"url\">https://file000.flaticon.com/downloads/license/license.pdf</a>"
          "<br><br><b>Artwork files:</b>"
          "<li>radio.png</li>"
          "<li>basic-plane.png</li>"
@@ -1822,14 +1821,14 @@ void ControlBox::assembleTabStatus()
    if ( (q16_errors & CMST::Err_Properties) == 0x00 ) {
       QString s1 = properties_map.value("State").toString();
       if (s1 == "online") {
-         ui.label_state_pix->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
+         ui.label_state_pix->setPixmap(iconman->getIcon("state_online").pixmap(QSize(ui.label_state_pix->height(), ui.label_state_pix->height())) );
       } // if online
       else {
          if (s1 == "ready") {
-            ui.label_state_pix->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
+            ui.label_state_pix->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(ui.label_state_pix->height(), ui.label_state_pix->height())) );
          } // if ready
          else {
-            ui.label_state_pix->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
+            ui.label_state_pix->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(ui.label_state_pix->height(), ui.label_state_pix->height())) );
          } // else any other state
       } // else ready or any other state
       s1 = TranslateStrings::cmtr(s1);
@@ -2041,6 +2040,9 @@ void ControlBox::assembleTabWireless()
    ui.tableWidget_wifi->setRowCount(0);
    int rowcount = 0;
 
+   // set icon scale
+   const double iscale = (11.0 / 16.0);
+
    // Make sure we got the services_list before we try to work with it.
    if ( (q16_errors & CMST::Err_Services) != 0x00 ) return;
 
@@ -2074,21 +2076,21 @@ void ControlBox::assembleTabWireless()
 
          QLabel* ql01 = new QLabel(ui.tableWidget_wifi);
          if (map.value("Favorite").toBool() ) {
-            ql01->setPixmap(iconman->getIcon("favorite").pixmap(QSize(16,16)) );
+            ql01->setPixmap(iconman->getIcon("favorite").pixmap(QSize(ql01->height(),ql01->height()) *= iscale) );
          }
          ql01->setAlignment(Qt::AlignCenter);
          ui.tableWidget_wifi->setCellWidget(rowcount, 1, ql01);
 
          QLabel* ql02 = new QLabel(ui.tableWidget_wifi);
          if (map.value("State").toString() == "online") {
-            ql02->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16)) );
+            ql02->setPixmap(iconman->getIcon("state_online").pixmap(QSize(ql02->height(),ql02->height()) *= iscale) );
          } // if online
          else {
             if (map.value("State").toString() == "ready") {
-               ql02->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16)) );
+               ql02->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(ql02->height(),ql02->height()) *= iscale) );
             } // if ready
             else {
-            ql02->setPixmap(iconman->getIcon("wifi_tab_state_not_ready").pixmap(QSize(16,16)) );
+            ql02->setPixmap(iconman->getIcon("wifi_tab_state_not_ready").pixmap(QSize(ql02->height(),ql02->height()) *= iscale) );
             } // else any other state
          } // else ready or any other state
          ql02->setAlignment(Qt::AlignCenter);
@@ -2154,6 +2156,9 @@ void ControlBox::assembleTabVPN()
    ui.tableWidget_vpn->setRowCount(0);
    int rowcount = 0;
 
+   // set icon scale
+   const double iscale = (11.0 / 16.0);
+
    // Make sure we've been able to communicate with the connman-vpn daemon
    if ( ((q16_errors & CMST::Err_Invalid_VPN_Iface) != 0x00) | (vpn_manager == NULL) ) {
       ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
@@ -2208,10 +2213,10 @@ void ControlBox::assembleTabVPN()
          else {
             QLabel* ql02 = new QLabel(ui.tableWidget_vpn);
             if (map.value("State").toString() == "ready") {
-               ql02->setPixmap(iconman->getIcon("state_vpn_connected").pixmap(QSize(16,16)) );
+               ql02->setPixmap(iconman->getIcon("state_vpn_connected").pixmap(QSize(ql02->height(),ql02->height()) *= iscale) );
             } // if ready
             else {
-               ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16)) );
+               ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(ql02->height(),ql02->height()) *= iscale) );
             } // else any other state
             ql02->setAlignment(Qt::AlignCenter);
             ql02->setToolTip(TranslateStrings::cmtr(map.value("State").toString()) );
@@ -2384,7 +2389,7 @@ void ControlBox::assembleTrayIcon()
    // for the icons to display in Plasma5.
    //
    // First convert from a QIcon through QPixmap to QImage
-   // QIcon.pixmap(QSize) can return a larger than requested size because AA_UseHighDpiPixmaps is set
+   // QIcon.pixmap(QSize) can return a larger than requested size because AA_UseHighDpiPixmaps is set in main.cpp
    QPixmap pxm = prelimicon.pixmap(QSize(22,22) );
    QImage src = pxm.toImage();
    QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);

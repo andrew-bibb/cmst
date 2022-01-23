@@ -107,6 +107,12 @@
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QToolButton" name="toolButton_whatsthis">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="toolTip">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What's This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
