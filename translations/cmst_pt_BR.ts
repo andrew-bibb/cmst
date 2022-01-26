@@ -31,17 +31,17 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="90"/>
         <source>&amp;Hide Passphrase</source>
-        <translation>Ocultar a Frase-Senha (&amp;H)</translation>
+        <translation>Ocultar a Frase-Sen&amp;ha</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="97"/>
         <source>O&amp;ld Passphrase</source>
-        <translation>Frase-Senha Antiga (&amp;L)</translation>
+        <translation>Frase-Senha An&amp;tiga</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="107"/>
         <source>&amp;Passphrase</source>
-        <translation>Frase-senha (&amp;P)</translation>
+        <translation>&amp;Frase-senha</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="120"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="224"/>
         <source>Extensible Authentication Protocol (EAP)</source>
-        <translation>Protocolo de Autenticação Extensível(EAP)</translation>
+        <translation>Protocolo de Autenticação Extensível (EAP)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="230"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="264"/>
         <source>Use Push &amp;Button Authentication</source>
-        <translation>Use a Autenticação de &amp;Botão</translation>
+        <translation>Utilize a Autenticação de &amp;Botão</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="294"/>
@@ -136,7 +136,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="329"/>
         <source>Browser Login Requested</source>
-        <translation>Autenticação do Navegador Requisitada</translation>
+        <translation>A Autenticação do Navegador é Requisitada</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="338"/>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="298"/>
         <source> Information</source>
-        <translation> Informação</translation>
+        <translation> Informações</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="299"/>
@@ -342,7 +342,7 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation>Erro do ConnMan</translation>
+        <translation>Erro do Connman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="83"/>
@@ -673,7 +673,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1781"/>
         <source>A&amp;rtwork</source>
-        <translation>Imagens (&amp;r)</translation>
+        <translation>&amp;Imagens</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1963"/>
@@ -1250,12 +1250,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1749"/>
         <source>&amp;Help</source>
-        <translation>Ajuda (&amp;H)</translation>
+        <translation>&amp;Ajuda</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1755"/>
         <source>&amp;About</source>
-        <translation>Sobre (&amp;A)</translation>
+        <translation>&amp;Sobre</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1761"/>
@@ -1345,7 +1345,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1921"/>
         <source>E&amp;xit</source>
-        <translation>Sair (&amp;x)</translation>
+        <translation>Sair (&amp;X)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1941"/>
@@ -1460,7 +1460,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1001"/>
         <source>Offline Mode Disabled</source>
-        <translation>Modo Off-Line Foi Desativado</translation>
+        <translation>O Modo Off-Line Foi Desativado</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1015"/>
@@ -1470,7 +1470,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1282"/>
         <source>Service Error: %1</source>
-        <translation>Erro no Serviço %1</translation>
+        <translation>Erro no Serviço: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1283"/>
@@ -1986,7 +1986,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2361"/>
         <source>Connection is in the Failure State.</source>
         <comment>icon_tool_tip</comment>
-        <translation>Conexão está em Estado de Falha.</translation>
+        <translation>A Conexão Está em Estado de Falha.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2367"/>
@@ -2272,7 +2272,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="14"/>
         <source>Property Editor</source>
-        <translation>Editor de Propriedade</translation>
+        <translation>Editor de Propriedades</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="35"/>
@@ -2361,7 +2361,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="114"/>
         <source>&amp;Timeservers</source>
-        <translation>Servidores de Horário (&amp;T)</translation>
+        <translation>Servidores de &amp;Horário</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="206"/>
@@ -2593,7 +2593,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="676"/>
         <source>Reset &amp;All</source>
-        <translation>Redefinir Tudo (&amp;A)</translation>
+        <translation>&amp;Redefinir Tudo</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="703"/>
@@ -2772,7 +2772,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="273"/>
         <source>PrivateKeyPassphraseType</source>
-        <translation>Tipo da Senha da Chave Privada</translation>
+        <translation>Tipo de Senha da Chave Privada</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="278"/>
@@ -2817,7 +2817,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="325"/>
         <source>Set IPv4 to &quot;off&quot;, &quot;dhcp&quot;, or enter IPV4 address information</source>
-        <translation>Marque o IPv4 para &quot;desligado/off&quot;, &quot;DHCP&quot; ou insira as informações do endereço de IPV4</translation>
+        <translation>Marque o IPv4 para &quot;desligado&quot;/&quot;off&quot;, &quot;DHCP&quot; ou insira as informações do endereço de IPV4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="330"/>
@@ -2827,7 +2827,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="333"/>
         <source>Set IPv6 to &quot;off, &quot;auto&quot;, or enter IPv6 address information</source>
-        <translation>Marque IPv6 para &quot;desligado/off&quot;, &quot;auto&quot; ou entre com as informações do endereço IPV6</translation>
+        <translation>Marque o IPv6 para &quot;desligado&quot;/&quot;off&quot;, &quot;automático&quot;/&quot;auto&quot; ou entre com as informações do endereço IPV6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="367"/>
@@ -3221,12 +3221,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="628"/>
         <source>Error encountered deleting.</source>
-        <translation>Um erro foi encontrado ao excluir.</translation>
+        <translation>Um erro foi encontrado ao tentar excluir.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="642"/>
         <source>File save failed.</source>
-        <translation>Falha ao salvar o arquivo.</translation>
+        <translation>Falha ao tentar salvar o arquivo.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="645"/>
@@ -4181,7 +4181,7 @@ Por exemplo: 10.2.0.2/24</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="140"/>
         <source>E&amp;xit</source>
-        <translation>Sair (E&amp;)</translation>
+        <translation>Sair (&amp;X)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="160"/>
@@ -4523,7 +4523,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="870"/>
         <source>VPNC.DeviceType</source>
-        <translation>Tipo de Dispositivo VPNC</translation>
+        <translation>VPNC.DeviceType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="873"/>
@@ -4533,7 +4533,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="878"/>
         <source>WireGuard.Address</source>
-        <translation>Endereço do WireGuard</translation>
+        <translation>WireGuard.Address</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="881"/>
@@ -4543,7 +4543,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="886"/>
         <source>WireGuard.ListPort</source>
-        <translation>Lista de Portas do WireGuard</translation>
+        <translation>WireGuard.ListPort</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="889"/>
@@ -4553,7 +4553,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="894"/>
         <source>WireGuard.DNS</source>
-        <translation>DNS do WireGuard</translation>
+        <translation>WireGuard.DNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="897"/>
@@ -4563,7 +4563,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="902"/>
         <source>WireGuard.PrivateKey</source>
-        <translation>Chave Privada do WireGuard</translation>
+        <translation>WireGuard.PrivateKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="905"/>
@@ -4573,7 +4573,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="910"/>
         <source>WireGuard.PublicKey</source>
-        <translation>Chave Pública do WireGuard</translation>
+        <translation>WireGuard.PublicKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="913"/>
@@ -4583,7 +4583,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="918"/>
         <source>WireGuard.PresharedKey</source>
-        <translation>Chave pré-compartilhada do WireGuard</translation>
+        <translation>WireGuard.PresharedKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="921"/>
@@ -4593,7 +4593,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="926"/>
         <source>WireGuard.AllowedIPs</source>
-        <translation>IPs permitidos pelo WireGuard</translation>
+        <translation>WireGuard.AllowedIPs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="929"/>
@@ -4603,7 +4603,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="934"/>
         <source>WireGuard.EndpointPort</source>
-        <translation>O Endpoint da Porta do WireGuard</translation>
+        <translation>WireGuard.EndpointPort</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="937"/>
@@ -4613,7 +4613,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="942"/>
         <source>WireGuard.PersistentKeepalive</source>
-        <translation>Manter Ativo e Persistente o WireGuard</translation>
+        <translation>WireGuard.PersistentKeepalive</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="945"/>
@@ -4623,7 +4623,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="950"/>
         <source>OpenVPN.DeviceType</source>
-        <translation>Tipo de Dispositivo do OpenVPN</translation>
+        <translation>OpenVPN.DeviceType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="953"/>
@@ -4633,7 +4633,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="958"/>
         <source>OpenConnect.AllowSelfSignedCert</source>
-        <translation>Permitir a Conexão com o Certificado Assinado Automaticamente</translation>
+        <translation>OpenConnect.AllowSelfSignedCert</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="961"/>
@@ -4643,7 +4643,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="966"/>
         <source>OpenConnect.AuthType</source>
-        <translation>Conexão do Tipo Aberta e Sem Autenticação</translation>
+        <translation>OpenConnect.AuthType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="969"/>
@@ -4653,7 +4653,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="974"/>
         <source>OpenConnect.DisableIPv6</source>
-        <translation>Conexão Aberta com o IPv6 Desabilitado</translation>
+        <translation>OpenConnect.DisableIPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="977"/>
@@ -4663,7 +4663,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="982"/>
         <source>OpenConnect.NoDTLS</source>
-        <translation>Conexão Aberta Sem o DTLS</translation>
+        <translation>OpenConnect.NoDTLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="985"/>
@@ -4673,7 +4673,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="990"/>
         <source>OpenConnect.NoHTTPKeepalive</source>
-        <translation>Manter a Conexão Aberta Sem o HTTP Ativo</translation>
+        <translation>OpenConnect.NoHTTPKeepalive</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="993"/>
@@ -4683,7 +4683,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="998"/>
         <source>OpenConnect.PKCSClientCert</source>
-        <translation>Conexão Aberta Sem o Certificado de Cliente do PKCS</translation>
+        <translation>OpenConnect.PKCSClientCert</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1001"/>
@@ -4693,7 +4693,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1006"/>
         <source>OpenConnect.Usergroup</source>
-        <translation>Conexão Aberta de Usuário de Grupo</translation>
+        <translation>OpenConnect.Usergroup</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1009"/>
@@ -4703,7 +4703,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1014"/>
         <source>OpenConnect.UserPrivateKey</source>
-        <translation>Conexão Aberta da Chave Privada do Usuário</translation>
+        <translation>OpenConnect.UserPrivateKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1017"/>
@@ -4826,7 +4826,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="82"/>
         <source>Connman System Tray.</source>
-        <translation>Bandeja de Sistema Connman - Connman System Tray.</translation>
+        <translation>Connman System Tray - Bandeja do Sistema do Connman.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="93"/>
