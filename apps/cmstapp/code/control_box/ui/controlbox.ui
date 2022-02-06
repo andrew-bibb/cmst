@@ -76,6 +76,12 @@
                <layout class="QGridLayout" name="gridLayout_18">
                 <item row="1" column="1">
                  <widget class="QLabel" name="label_offlinemode">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="whatsThis">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
@@ -86,6 +92,12 @@
                 </item>
                 <item row="0" column="1">
                  <widget class="QLabel" name="label_state">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>1</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="whatsThis">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global connection state of the system.  Possible values are &amp;quot;offline&amp;quot;, &amp;quot;idle&amp;quot;, &amp;quot;ready&amp;quot;, and &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
@@ -112,17 +124,11 @@
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>48</width>
-                    <height>48</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string/>
                   </property>
                   <property name="scaledContents">
-                   <bool>true</bool>
+                   <bool>false</bool>
                   </property>
                  </widget>
                 </item>
@@ -490,8 +496,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>60</height>
+            <width>635</width>
+            <height>482</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -891,8 +897,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>112</width>
-            <height>290</height>
+            <width>635</width>
+            <height>563</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -931,8 +937,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>98</width>
-                   <height>47</height>
+                   <width>591</width>
+                   <height>205</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -990,8 +996,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>98</width>
-                   <height>47</height>
+                   <width>591</width>
+                   <height>204</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1064,7 +1070,7 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>620</width>
+            <width>621</width>
             <height>663</height>
            </rect>
           </property>
@@ -1844,8 +1850,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>414</height>
+            <width>525</width>
+            <height>563</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">

@@ -1823,15 +1823,15 @@ void ControlBox::assembleTabStatus()
    if ( (q16_errors & CMST::Err_Properties) == 0x00 ) {
       QString s1 = properties_map.value("State").toString();
       if (s1 == "online") {
-         ui.label_state_pix->setPixmap(iconman->getIcon("state_online").pixmap(QSize(ui.label_state_pix->height(), ui.label_state_pix->height())) );
+         ui.label_state_pix->setPixmap(iconman->getIcon("state_online").pixmap(iconman->getIcon("state_online").actualSize(QSize(16,16))) );
       } // if online
       else {
          if (s1 == "ready") {
-            ui.label_state_pix->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(ui.label_state_pix->height(), ui.label_state_pix->height())) );
-         } // if ready
+            ui.label_state_pix->setPixmap(iconman->getIcon("state_ready").pixmap(iconman->getIcon("state_ready").actualSize(QSize(16,16))) );
+        } // if ready
          else {
-            ui.label_state_pix->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(ui.label_state_pix->height(), ui.label_state_pix->height())) );
-         } // else any other state
+            ui.label_state_pix->setPixmap(iconman->getIcon("state_not_ready").pixmap(iconman->getIcon("state_ready").actualSize(QSize(16,16))) );
+        } // else any other state
       } // else ready or any other state
       s1 = TranslateStrings::cmtr(s1);
       s1.prepend(tr("State: ") );
