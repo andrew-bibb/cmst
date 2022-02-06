@@ -187,6 +187,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       f1.close();
       ui.toolButton_offlinemode->setStyleSheet(qss);
    }
+   ui.toolButton_offlinemode->setIconSize(ui.toolButton_offlinemode->icon().actualSize(QSize(16,16)) );
 
    // Read saved settings which will set the ui controls in the preferences tab.
    this->readSettings();
@@ -253,6 +254,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
 
    // Set the whatsthis icons
    ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));
+   ui.toolButton_whatsthis->setIconSize(ui.toolButton_whatsthis->icon().actualSize(QSize(16,16)) );
    agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
    vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
 
