@@ -217,7 +217,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    QSize sz_target = (qApp->desktop()->availableGeometry(this)).size();
    QSize sz_source = this->sizeHint();
    if (sz_source.width() > sz_target.width() || sz_source.height() > sz_target.height() ) {
-      sz_source.scale(sz_target.width() - 100, sz_target.height() - 100, Qt::KeepAspectRatio); // keep min. 100 pixels around dialog resize(sz_source);
+      sz_source.scale(sz_target.width() - 100, sz_target.height() - 100, Qt::KeepAspectRatio); // keep min. 100 pixels around dialog
+      resize(sz_source);
       move((sz_target.width() - this->width()) / 2, (sz_target.height() - this->height()) / 2); // re-center if needed
    }
 
