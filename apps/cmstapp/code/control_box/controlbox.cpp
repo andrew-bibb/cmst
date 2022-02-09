@@ -165,6 +165,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    proc = NULL;
    iconman = new IconManager(this);
    b_userinitiated = false;
+   iconscale = 1.0;
 
    // set a stylesheet on the tab widget - used to hide disabled tabs
    QFile f0(":/stylesheets/stylesheets/tabwidget.qss");
@@ -216,8 +217,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    QSize sz_target = (qApp->desktop()->availableGeometry(this)).size();
    QSize sz_source = this->sizeHint();
    if (sz_source.width() > sz_target.width() || sz_source.height() > sz_target.height() ) {
-      sz_source.scale(sz_target.width() - 100, sz_target.height() - 100, Qt::KeepAspectRatio); // keep min. 100 pixels around dialog
-      resize(sz_source);
+      sz_source.scale(sz_target.width() - 100, sz_target.height() - 100, Qt::KeepAspectRatio); // keep min. 100 pixels around dialog resize(sz_source);
       move((sz_target.width() - this->width()) / 2, (sz_target.height() - this->height()) / 2); // re-center if needed
    }
 
@@ -244,6 +244,19 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       } // if
       else QIcon::setThemeName(INTERNAL_THEME);
    } // else parser not set
+
+   // Set icon scale if provided on the command line or in the settings
+   // Min and Max limits are defined in the UI
+   if (parser.isSet("icon-scale") ) {
+      bool ok;
+      iconscale = parser.value("icon-scale").toFloat(&ok);
+      if (! ok) iconscale = 1.0;
+      if (iconscale < ui.doubleSpinBox_iconscale->minimum()) iconscale = ui.doubleSpinBox_iconscale->minimum();
+      if (iconscale > ui.doubleSpinBox_iconscale->maximum()) iconscale = ui.doubleSpinBox_iconscale->maximum();
+   } // parser is set
+   else if (b_so && ui.checkBox_iconscale->isChecked() ) {
+      iconscale = ui.doubleSpinBox_iconscale->value();
+   }
 
    // Set the window icon.  If an icon was installed to /usr/share/icons/hicolor/48x48/apps
    // use that, otherwise use a freedesktop.org named one
@@ -2392,7 +2405,7 @@ void ControlBox::assembleTrayIcon()
    //
    // First convert from a QIcon through QPixmap to QImage
    // QIcon.pixmap(QSize) can return a larger than requested size because AA_UseHighDpiPixmaps is set in main.cpp
-   QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize(QSize(22,22)) );
+   QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize((QSize(22,22) *= iconscale)) );
    QImage src = pxm.toImage();
    QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);
    QPainter painter(&dest);
@@ -2632,6 +2645,8 @@ void ControlBox::writeSettings()
    settings->setValue("disable_vpn", ui.checkBox_disablevpn->isChecked() );
    settings->setValue("use_icon_theme", ui.checkBox_systemicontheme->isChecked() );
    settings->setValue("icon_theme", ui.lineEdit_icontheme->text() );
+   settings->setValue("use_icon_scale", ui.checkBox_iconscale->isChecked() );
+   settings->setValue("icon_scale", ui.doubleSpinBox_iconscale->value() );
    settings->setValue("start_minimized", ui.checkBox_startminimized->isChecked() );
    settings->setValue("disable_minimized", ui.checkBox_disableminimized->isChecked() );
    settings->setValue("use_wait_time", ui.checkBox_waittime->isChecked() );
@@ -2700,6 +2715,8 @@ void ControlBox::readSettings()
    ui.checkBox_disablevpn->setChecked(settings->value("disable_vpn").toBool() );
    ui.checkBox_systemicontheme->setChecked(settings->value("use_icon_theme").toBool() );
    ui.lineEdit_icontheme->setText(settings->value("icon_theme").toString() );
+   ui.checkBox_iconscale->setChecked(settings->value("use_icon_scale").toBool() );
+   ui.doubleSpinBox_iconscale->setValue(settings->value("icon_scale").toFloat() );
    ui.checkBox_startminimized->setChecked(settings->value("start_minimized").toBool() );
    ui.checkBox_disableminimized->setChecked(settings->value("disable_minimized").toBool() );
    ui.checkBox_waittime->setChecked(settings->value("use_wait_time").toBool() );
@@ -2723,6 +2740,13 @@ void ControlBox::readSettings()
    ui.comboBox_beforeconnectservicefile->addItem(settings->value("before_connect_service_file").toString() );
    ui.comboBox_beforeconnectservicefile->setEnabled(settings->value("modify_service_file").toBool() );
    settings->endGroup();
+
+   // sync disabled boxes
+   ui.lineEdit_icontheme->setEnabled(ui.checkBox_systemicontheme->isChecked());
+   ui.doubleSpinBox_iconscale->setEnabled(ui.checkBox_iconscale->isChecked());
+   ui.spinBox_waittime->setEnabled(ui.checkBox_waittime->isChecked());
+   ui.spinBox_counterrate->setEnabled(ui.checkBox_counterseconds->isChecked());
+   ui.spinBox_faketransparency->setEnabled(ui.checkBox_faketransparency->isChecked());
    return;
 }
 

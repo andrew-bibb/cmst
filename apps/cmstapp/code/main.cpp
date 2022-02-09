@@ -105,6 +105,12 @@ int main(int argc, char *argv[])
       QString("") );
    parser.addOption(useIconTheme);
 
+   QCommandLineOption iconScale(QStringList() << "I" << "icon-scale",
+      QCoreApplication::translate("main.cpp", "Scale program artwork for high DPI monitors."),
+      QCoreApplication::translate("main.cpp", "Icon Scale" "1"),
+      QString("") );
+   parser.addOption(iconScale);
+
    QCommandLineOption logInputRequest(QStringList() << "l" << "log-input-request",
       QCoreApplication::translate("main.cpp", "Log the connman inputRequest for debugging purposes.") );
    parser.addOption(logInputRequest);

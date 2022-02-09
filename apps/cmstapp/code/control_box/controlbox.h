@@ -154,6 +154,7 @@ class ControlBox : public QDialog
       GEN_Editor* gened;
       QProcess* proc;
       bool b_userinitiated;
+      float iconscale;
 
    // functions
       void assembleTabStatus();

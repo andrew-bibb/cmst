@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>677</width>
-    <height>661</height>
+    <width>860</width>
+    <height>876</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -58,8 +58,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>635</width>
-            <height>563</height>
+            <width>818</width>
+            <height>778</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
@@ -502,8 +502,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>635</width>
-            <height>482</height>
+            <width>818</width>
+            <height>697</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -903,8 +903,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>635</width>
-            <height>563</height>
+            <width>818</width>
+            <height>778</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -943,8 +943,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>591</width>
-                   <height>205</height>
+                   <width>774</width>
+                   <height>312</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1002,8 +1002,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>591</width>
-                   <height>204</height>
+                   <width>774</width>
+                   <height>312</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1076,8 +1076,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>621</width>
-            <height>663</height>
+            <width>818</width>
+            <height>778</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -1301,6 +1301,12 @@
              </item>
              <item>
               <widget class="QGroupBox" name="groupBox_programcontrol">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="title">
                 <string>Program Control</string>
                </property>
@@ -1338,6 +1344,19 @@
                </layout>
               </widget>
              </item>
+             <item>
+              <spacer name="verticalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
             </layout>
            </item>
            <item>
@@ -1360,7 +1379,7 @@
                 <string>Start Up Options</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_9">
-                <item row="10" column="0">
+                <item row="11" column="0">
                  <widget class="QCheckBox" name="checkBox_faketransparency">
                   <property name="toolTip">
                    <string/>
@@ -1374,127 +1393,6 @@
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="0">
-                 <widget class="QCheckBox" name="checkBox_enablecounters">
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                   <string>Enable Counters</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="7" column="0">
-                 <widget class="QCheckBox" name="checkBox_waittime">
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                   <string>Wait Time</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="11" column="0" colspan="2">
-                 <spacer name="verticalSpacer_3">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="8" column="1">
-                 <widget class="QSpinBox" name="spinBox_counterkb">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::PlusMinus</enum>
-                  </property>
-                  <property name="minimum">
-                   <number>256</number>
-                  </property>
-                  <property name="maximum">
-                   <number>32768</number>
-                  </property>
-                  <property name="singleStep">
-                   <number>64</number>
-                  </property>
-                  <property name="value">
-                   <number>1024</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="10" column="1">
-                 <widget class="QSpinBox" name="spinBox_faketransparency">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the background color as a hex number in the format: RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::PlusMinus</enum>
-                  </property>
-                  <property name="accelerated">
-                   <bool>true</bool>
-                  </property>
-                  <property name="maximum">
-                   <number>16777215</number>
-                  </property>
-                  <property name="displayIntegerBase">
-                   <number>16</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="1">
-                 <widget class="QLineEdit" name="lineEdit_icontheme">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon theme to use. For this theme to be used it must be installed on your system. If the theme is not installed, or if you spell the name wrong CMST will fall back to using its internal icon set.&lt;/p&gt;&lt;p&gt;If this box is blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="clearButtonEnabled">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="0">
-                 <widget class="QCheckBox" name="checkBox_systemicontheme">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                   <string>Use Icon Theme</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="4" column="0">
-                 <widget class="QCheckBox" name="checkBox_startminimized">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                   <string>Start Minimized</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="2" column="0">
                  <widget class="QCheckBox" name="checkBox_disablevpn">
                   <property name="whatsThis">
@@ -1505,36 +1403,23 @@
                   </property>
                  </widget>
                 </item>
-                <item row="5" column="0">
-                 <widget class="QCheckBox" name="checkBox_disableminimized">
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                   <string>Disable Minimized</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="7" column="1">
-                 <widget class="QSpinBox" name="spinBox_waittime">
+                <item row="9" column="0">
+                 <widget class="QCheckBox" name="checkBox_counterkb">
                   <property name="enabled">
                    <bool>false</bool>
                   </property>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
                   <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::PlusMinus</enum>
-                  </property>
-                  <property name="minimum">
-                   <number>1</number>
-                  </property>
-                  <property name="maximum">
-                   <number>60</number>
+                  <property name="text">
+                   <string>Counter Update KB</string>
                   </property>
                  </widget>
                 </item>
-                <item row="9" column="0">
+                <item row="10" column="0">
                  <widget class="QCheckBox" name="checkBox_counterseconds">
                   <property name="toolTip">
                    <string/>
@@ -1559,7 +1444,31 @@
                   </property>
                  </widget>
                 </item>
-                <item row="9" column="1">
+                <item row="0" column="0">
+                 <widget class="QCheckBox" name="checkBox_enablecounters">
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:'monospace';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'monospace'; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Enable Counters</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QCheckBox" name="checkBox_startminimized">
+                  <property name="toolTip">
+                   <string/>
+                  </property>
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Start Minimized</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="10" column="1">
                  <widget class="QSpinBox" name="spinBox_counterrate">
                   <property name="enabled">
                    <bool>false</bool>
@@ -1584,19 +1493,152 @@
                   </property>
                  </widget>
                 </item>
-                <item row="8" column="0">
-                 <widget class="QCheckBox" name="checkBox_counterkb">
+                <item row="6" column="0">
+                 <widget class="QCheckBox" name="checkBox_disableminimized">
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Disable Minimized</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QCheckBox" name="checkBox_systemicontheme">
+                  <property name="toolTip">
+                   <string/>
+                  </property>
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Use Icon Theme</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="11" column="1">
+                 <widget class="QSpinBox" name="spinBox_faketransparency">
                   <property name="enabled">
                    <bool>false</bool>
                   </property>
-                  <property name="toolTip">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the background color as a hex number in the format: RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::PlusMinus</enum>
+                  </property>
+                  <property name="accelerated">
+                   <bool>true</bool>
+                  </property>
+                  <property name="maximum">
+                   <number>16777215</number>
+                  </property>
+                  <property name="displayIntegerBase">
+                   <number>16</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="1">
+                 <widget class="QSpinBox" name="spinBox_waittime">
+                  <property name="enabled">
+                   <bool>false</bool>
                   </property>
                   <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::PlusMinus</enum>
+                  </property>
+                  <property name="minimum">
+                   <number>1</number>
+                  </property>
+                  <property name="maximum">
+                   <number>60</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="12" column="0" colspan="2">
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="9" column="1">
+                 <widget class="QSpinBox" name="spinBox_counterkb">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::PlusMinus</enum>
+                  </property>
+                  <property name="minimum">
+                   <number>256</number>
+                  </property>
+                  <property name="maximum">
+                   <number>32768</number>
+                  </property>
+                  <property name="singleStep">
+                   <number>64</number>
+                  </property>
+                  <property name="value">
+                   <number>1024</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="lineEdit_icontheme">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon theme to use. For this theme to be used it must be installed on your system. If the theme is not installed, or if you spell the name wrong CMST will fall back to using its internal icon set.&lt;/p&gt;&lt;p&gt;If this box is blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="0">
+                 <widget class="QCheckBox" name="checkBox_waittime">
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New,courier'; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created a dialog will be displayed explaining that. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="text">
-                   <string>Counter Update KB</string>
+                   <string>Wait Time</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QCheckBox" name="checkBox_iconscale">
+                  <property name="text">
+                   <string>Icon Scale Factor</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QDoubleSpinBox" name="doubleSpinBox_iconscale">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="minimum">
+                   <double>1.000000000000000</double>
+                  </property>
+                  <property name="maximum">
+                   <double>3.000000000000000</double>
+                  </property>
+                  <property name="singleStep">
+                   <double>0.250000000000000</double>
                   </property>
                  </widget>
                 </item>
@@ -1856,8 +1898,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>525</width>
-            <height>563</height>
+            <width>708</width>
+            <height>778</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -2035,7 +2077,7 @@ p, li { white-space: pre-wrap; }
    <hints>
     <hint type="sourcelabel">
      <x>122</x>
-     <y>361</y>
+     <y>468</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -2051,7 +2093,7 @@ p, li { white-space: pre-wrap; }
    <hints>
     <hint type="sourcelabel">
      <x>126</x>
-     <y>586</y>
+     <y>801</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -2067,7 +2109,7 @@ p, li { white-space: pre-wrap; }
    <hints>
     <hint type="sourcelabel">
      <x>212</x>
-     <y>586</y>
+     <y>801</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
@@ -2086,7 +2128,7 @@ p, li { white-space: pre-wrap; }
      <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>633</x>
+     <x>816</x>
      <y>106</y>
     </hint>
    </hints>
@@ -2130,7 +2172,7 @@ p, li { white-space: pre-wrap; }
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>633</x>
+     <x>816</x>
      <y>106</y>
     </hint>
     <hint type="destinationlabel">
@@ -2182,8 +2224,8 @@ p, li { white-space: pre-wrap; }
      <y>205</y>
     </hint>
     <hint type="destinationlabel">
-     <x>202</x>
-     <y>628</y>
+     <x>245</x>
+     <y>865</y>
     </hint>
    </hints>
   </connection>
@@ -2198,8 +2240,8 @@ p, li { white-space: pre-wrap; }
      <y>204</y>
     </hint>
     <hint type="destinationlabel">
-     <x>124</x>
-     <y>628</y>
+     <x>159</x>
+     <y>865</y>
     </hint>
    </hints>
   </connection>
@@ -2214,8 +2256,8 @@ p, li { white-space: pre-wrap; }
      <y>92</y>
     </hint>
     <hint type="destinationlabel">
-     <x>406</x>
-     <y>83</y>
+     <x>473</x>
+     <y>120</y>
     </hint>
    </hints>
   </connection>
@@ -2230,8 +2272,8 @@ p, li { white-space: pre-wrap; }
      <y>179</y>
     </hint>
     <hint type="destinationlabel">
-     <x>593</x>
-     <y>182</y>
+     <x>816</x>
+     <y>189</y>
     </hint>
    </hints>
   </connection>
@@ -2312,6 +2354,22 @@ p, li { white-space: pre-wrap; }
     <hint type="destinationlabel">
      <x>580</x>
      <y>627</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_iconscale</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>doubleSpinBox_iconscale</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>538</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>210</y>
     </hint>
    </hints>
   </connection>
