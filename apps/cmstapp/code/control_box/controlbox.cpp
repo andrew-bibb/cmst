@@ -188,7 +188,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       f1.close();
       ui.toolButton_offlinemode->setStyleSheet(qss);
    }
-   ui.toolButton_offlinemode->setIconSize(ui.toolButton_offlinemode->icon().actualSize(QSize(16,16)) );
+   ui.toolButton_offlinemode->setIconSize(ui.toolButton_offlinemode->icon().actualSize(QSize(16,16) *= iconscale) );
 
    // Read saved settings which will set the ui controls in the preferences tab.
    this->readSettings();
@@ -266,11 +266,13 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    else
       this->setWindowIcon(QIcon::fromTheme("preferences-system-network") );
 
-   // Set the whatsthis icons
+   // Set the whatsthis icons and scale
    ui.toolButton_whatsthis->setIcon(iconman->getIcon("whats_this"));
-   ui.toolButton_whatsthis->setIconSize(ui.toolButton_whatsthis->icon().actualSize(QSize(16,16)) );
    agent->setWhatsThisIcon(iconman->getIcon("whats_this"));
    vpnagent->setWhatsThisIcon(iconman->getIcon("whats_this"));
+   ui.toolButton_whatsthis->setIconSize(ui.toolButton_whatsthis->icon().actualSize(QSize(16,16) *= iconscale) );
+   agent->setIconSize(iconscale);
+   vpnagent->setIconSize(iconscale);
 
    #ifdef XFCE
    // set a flag if we want to use XFCE or MATE custom code.
@@ -1837,14 +1839,14 @@ void ControlBox::assembleTabStatus()
    if ( (q16_errors & CMST::Err_Properties) == 0x00 ) {
       QString s1 = properties_map.value("State").toString();
       if (s1 == "online") {
-         ui.label_state_pix->setPixmap(iconman->getIcon("state_online").pixmap(iconman->getIcon("state_online").actualSize(QSize(16,16))) );
+         ui.label_state_pix->setPixmap(iconman->getIcon("state_online").pixmap(iconman->getIcon("state_online").actualSize(QSize(16,16) *= iconscale)) );
       } // if online
       else {
          if (s1 == "ready") {
-            ui.label_state_pix->setPixmap(iconman->getIcon("state_ready").pixmap(iconman->getIcon("state_ready").actualSize(QSize(16,16))) );
+            ui.label_state_pix->setPixmap(iconman->getIcon("state_ready").pixmap(iconman->getIcon("state_ready").actualSize(QSize(16,16) *= iconscale)) );
         } // if ready
          else {
-            ui.label_state_pix->setPixmap(iconman->getIcon("state_not_ready").pixmap(iconman->getIcon("state_ready").actualSize(QSize(16,16))) );
+            ui.label_state_pix->setPixmap(iconman->getIcon("state_not_ready").pixmap(iconman->getIcon("state_ready").actualSize(QSize(16,16) *= iconscale)) );
         } // else any other state
       } // else ready or any other state
       s1 = TranslateStrings::cmtr(s1);
@@ -1862,8 +1864,10 @@ void ControlBox::assembleTabStatus()
          s2 = tr("Disabled");
          ui.toolButton_offlinemode->setIcon(iconman->getIcon("offline_mode_disengaged") );
       } //  else offlinemode disabled
+      ui.toolButton_offlinemode->setIconSize(ui.toolButton_offlinemode->icon().actualSize(QSize(16,16) *= iconscale) );
       s2.prepend(tr("Offline Mode "));
       ui.label_offlinemode->setText(s2);
+
 
    } // properties if no error
 
@@ -2056,9 +2060,6 @@ void ControlBox::assembleTabWireless()
    ui.tableWidget_wifi->setRowCount(0);
    int rowcount = 0;
 
-   // set icon scale
-   const double iscale = (11.0 / 16.0);
-
    // Make sure we got the services_list before we try to work with it.
    if ( (q16_errors & CMST::Err_Services) != 0x00 ) return;
 
@@ -2092,21 +2093,21 @@ void ControlBox::assembleTabWireless()
 
          QLabel* ql01 = new QLabel(ui.tableWidget_wifi);
          if (map.value("Favorite").toBool() ) {
-            ql01->setPixmap(iconman->getIcon("favorite").pixmap(QSize(ql01->height(),ql01->height()) *= iscale) );
+            ql01->setPixmap(iconman->getIcon("favorite").pixmap(QSize(16,16) *= iconscale) );
          }
          ql01->setAlignment(Qt::AlignCenter);
          ui.tableWidget_wifi->setCellWidget(rowcount, 1, ql01);
 
          QLabel* ql02 = new QLabel(ui.tableWidget_wifi);
          if (map.value("State").toString() == "online") {
-            ql02->setPixmap(iconman->getIcon("state_online").pixmap(QSize(ql02->height(),ql02->height()) *= iscale) );
+            ql02->setPixmap(iconman->getIcon("state_online").pixmap(QSize(16,16) *= iconscale) );
          } // if online
          else {
             if (map.value("State").toString() == "ready") {
-               ql02->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(ql02->height(),ql02->height()) *= iscale) );
+               ql02->setPixmap(iconman->getIcon("state_ready").pixmap(QSize(16,16) *= iconscale) );
             } // if ready
             else {
-            ql02->setPixmap(iconman->getIcon("wifi_tab_state_not_ready").pixmap(QSize(ql02->height(),ql02->height()) *= iscale) );
+            ql02->setPixmap(iconman->getIcon("wifi_tab_state_not_ready").pixmap(QSize(16,16) *= iconscale) );
             } // else any other state
          } // else ready or any other state
          ql02->setAlignment(Qt::AlignCenter);
@@ -2172,9 +2173,6 @@ void ControlBox::assembleTabVPN()
    ui.tableWidget_vpn->setRowCount(0);
    int rowcount = 0;
 
-   // set icon scale
-   const double iscale = (11.0 / 16.0);
-
    // Make sure we've been able to communicate with the connman-vpn daemon
    if ( ((q16_errors & CMST::Err_Invalid_VPN_Iface) != 0x00) | (vpn_manager == NULL) ) {
       ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
@@ -2184,7 +2182,7 @@ void ControlBox::assembleTabVPN()
    // Make sure we got the services_list before we try to work with it.
    if ( (q16_errors & CMST::Err_Services ) != 0x00 ) return;
 
-// Run through each services_list looking for vpn services
+   // Run through each services_list looking for vpn services
    vpn_list.clear();
    for (int row = 0; row < services_list.size(); ++row) {
       QMap<QString,QVariant> map = services_list.at(row).objmap;
@@ -2229,10 +2227,10 @@ void ControlBox::assembleTabVPN()
          else {
             QLabel* ql02 = new QLabel(ui.tableWidget_vpn);
             if (map.value("State").toString() == "ready") {
-               ql02->setPixmap(iconman->getIcon("state_vpn_connected").pixmap(QSize(ql02->height(),ql02->height()) *= iscale) );
+               ql02->setPixmap(iconman->getIcon("state_vpn_connected").pixmap(QSize(16,16) *= iconscale) );
             } // if ready
             else {
-               ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(ql02->height(),ql02->height()) *= iscale) );
+               ql02->setPixmap(iconman->getIcon("state_not_ready").pixmap(QSize(16,16) *= iconscale) );
             } // else any other state
             ql02->setAlignment(Qt::AlignCenter);
             ql02->setToolTip(TranslateStrings::cmtr(map.value("State").toString()) );
@@ -3208,6 +3206,7 @@ void ControlBox::configureService()
 
    // Set the whatsthis button icon
    peditor->setWhatsThisIcon(iconman->getIcon("whats_this"));
+   peditor->setIconSize(iconscale);
 
    // call then clean up
    peditor->exec();
@@ -3226,6 +3225,7 @@ void ControlBox::provisionService()
 
       // Set the whatsthis button icon
       reditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
+      reditor->setIconSize(iconscale);
 
       // call then clean up
       reditor->exec();
@@ -3237,6 +3237,7 @@ void ControlBox::provisionService()
 
       // Set the whatsthis button icon
       veditor->setWhatsThisIcon(iconman->getIcon("whats_this") );
+      veditor->setIconSize(iconscale);
 
       // call then clean up
       veditor->exec();
@@ -3298,7 +3299,8 @@ void ControlBox::callColorDialog()
 }
 
 //
-// Slot to process things when the user changes the icon color
+// Slot to process things when the user changes the icon color.  No need to change size here as size is already set, we're just changing color.
+
 void ControlBox::iconColorChanged(const QString& col)
 {
    iconman->setIconColor(QColor(col) );
