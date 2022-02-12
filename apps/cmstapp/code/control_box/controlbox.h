@@ -12,7 +12,7 @@ of this software and associated documentation files (the "Software"),to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+
 
 The above copyright notice and this permission notice shall be included
 in all copies or substantial portions of the Software.
@@ -76,6 +76,7 @@ class idButton : public QFrame
       idButton (QWidget*, const QDBusObjectPath&);
       inline void setText (const QString& text) {button->setText(text);}
       inline void setIcon (const QPixmap& pixmap) {button->setIcon(pixmap);}
+      inline void setIconSize (float sz) {button->setIconSize(button->icon().actualSize(QSize(12,12) *= sz) ); }
       inline void setChecked (bool checked) {button->setChecked(checked);}
 
    signals:
@@ -111,7 +112,7 @@ class ControlBox : public QDialog
       bool eventFilter(QObject*, QEvent*);
 
    private:
-   // members
+      // members
       Ui::ControlBox ui;
       quint16 q16_errors;
       QMap<QString,QVariant>  properties_map;
@@ -156,7 +157,7 @@ class ControlBox : public QDialog
       bool b_userinitiated;
       float iconscale;
 
-   // functions
+      // functions
       void assembleTabStatus();
       void assembleTabDetails();
       void assembleTabWireless();

@@ -1909,13 +1909,14 @@ void ControlBox::assembleTabStatus()
          if (technologies_list.at(row).objmap.value("Powered").toBool()) {
             qpb02->setText(tr("On", "powered") );
             qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
+            qpb02->setIconSize(iconscale);
             qpb02->setChecked(true);
          }
          else {
             qpb02->setText(tr("Off", "powered") );
             qpb02->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
-            qpb02->setChecked(false);
-         }
+            qpb02->setIconSize(iconscale);
+            qpb02->setChecked(false); }
          ui.tableWidget_technologies->setCellWidget(row, 2, qpb02);
 
          QTableWidgetItem* qtwi03 = new QTableWidgetItem();
@@ -1929,11 +1930,13 @@ void ControlBox::assembleTabStatus()
          if (technologies_list.at(row).objmap.value("Tethering").toBool()) {
             qpb04->setText(tr("On", "tethering") );
             qpb04->setIcon(QPixmap(":/icons/images/interface/golfball_green.png"));
+            qpb02->setIconSize(iconscale);
             qpb04->setChecked(true);
          }
          else {
             qpb04->setText(tr("Off", "tethering") );
             qpb04->setIcon(QPixmap(":/icons/images/interface/golfball_red.png"));
+            qpb02->setIconSize(iconscale);
             qpb04->setChecked(false);
             if (technologies_list.at(row).objmap.value("Type").toString() == "ethernet")
                qpb04->setDisabled(true);
