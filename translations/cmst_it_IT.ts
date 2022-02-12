@@ -6,12 +6,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="14"/>
         <source>Agent Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Input dell&apos;agente</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="45"/>
         <source>Passphrase</source>
-        <translation>Password</translation>
+        <translation>Frase d&apos;accesso</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="64"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="175"/>
         <source>Wireless Internet Service Provider roaming (WISPr)</source>
-        <translation type="unfinished"></translation>
+        <translation>Roaming del provider di servizi Internet wireless</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="181"/>
