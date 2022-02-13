@@ -53,6 +53,10 @@ class VPNAgentDialog : public QDialog
    private:
       // members
       Ui::VPNAgent ui;
+      bool allowStoreCredentials;
+      bool allowRetrieveCredentials;
+      bool keepCredentials;
+      QString authFailure;
 
       // functions
       void initialize();

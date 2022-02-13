@@ -2,6 +2,7 @@
 <b><center>Change Log</center></b>
 <b> In Progress </b>
 <ul>
+<li>Add fields to VPN Agent dialog to bring up to date with Connman.</li>
 <li>Added an option to scale icons and artwork (issue # 256).</li>
 <li>Fixed deselecting WiFi entry after automatic rescan (issue #226).</li>
 <li>Attempt at fixing tray icon size for high dpi screens (issue #256).</li>

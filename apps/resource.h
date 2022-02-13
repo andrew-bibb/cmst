@@ -43,7 +43,7 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation)
-#define VERSION "2022.02.12-3"
+#define VERSION "2022.02.13-1"
 
 #define RELEASE_DATE "05 January 2022"
 #define COPYRIGHT_DATE "2013-2022"
