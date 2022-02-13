@@ -54,8 +54,8 @@ VPNAgentDialog::VPNAgentDialog(QWidget* parent)
 
 ///////////////////////////////////////////////// Public Functions /////////////////////////////////////////////
 //
-//	Function to extract the input data from the QLineEdit's in the dialog and put it into
-//	a QMap<QString,QVariant>.  The QMap is sent to this function as a reference and is modified by the function.
+// Function to extract the input data from the QLineEdit's in the dialog and put it into
+// a QMap<QString,QVariant>.  The QMap is sent to this function as a reference and is modified by the function.
 void VPNAgentDialog::createDict(QMap<QString,QVariant>& r_map)
 {
    // Initialize the map
@@ -140,6 +140,7 @@ int VPNAgentDialog::showPage(const QMap<QString,QString>& imap)
    }
    if (imap.contains("SaveCredentials")) {
       ui.checkBox_savecredentials->setEnabled(true);
+      ui.checkBox_savecredentials->setChecked(QVariant(imap.value("SaveCredentials")).toBool() );
    }
    if (imap.contains("OpenConnect.CaCert")) {
       ui.lineEdit_oc_cacert->setEnabled(true);
@@ -171,6 +172,7 @@ int VPNAgentDialog::showPage(const QMap<QString,QString>& imap)
    }
    if (imap.contains("OpenConnect.UseSecondPassword")) {
       ui.checkBox_oc_usesecondpassword->setEnabled(true);
+      ui.checkBox_oc_usesecondpassword->setChecked(QVariant(imap.value("OpenConnect.UseSecondPassword")).toBool() );
    }
    if (imap.contains("OpenConnect.VPNHost")) {
       ui.lineEdit_oc_vpnhost->setEnabled(true);
@@ -181,15 +183,7 @@ int VPNAgentDialog::showPage(const QMap<QString,QString>& imap)
       ui.lineEdit_ov_privatekeypassword->setText(imap.value("OpenVPN.PrivateKeyPassword") );
    }
 
-   // Data members
-   // note: the imap should really be a map of <QString,QVAriant>, not <QString,QString>.  Right now only storing these values
-   // for possible future use.  If we ever do use them convert the map to what it should be.
-   if (imap.contains("AllowStoreCredentials")) allowStoreCredentials = QVariant(imap.value("AllowStoreCredentials")).toBool();
-   if (imap.contains("AllowRetrieveCredentials")) allowRetrieveCredentials = QVariant(imap.value("AllowRetrieveCredentials")).toBool();
-   if (imap.contains("KeepCredentials")) keepCredentials = QVariant(imap.value("KeepCredentials")).toBool();
-   if (imap.contains("VpnAgent.AuthFailure")) authFailure = imap.value("VpnAgent.AuthFailure");
-
-return this->exec();
+   return this->exec();
 }
 
 ///////////////////////////////////////////////// Private Functions /////////////////////////////////////////////
@@ -197,38 +191,33 @@ return this->exec();
 //	Function to initialize the fields in the dialog box, everything is disabled to start
 void VPNAgentDialog::initialize()
 {
-// QList of widget pointers
-QList <QWidget*> list;
-list.clear();
-list.append(ui.lineEdit_username);
-list.append(ui.lineEdit_password);
-list.append(ui.lineEdit_host);
-list.append(ui.lineEdit_name);
-list.append(ui.lineEdit_oc_cacert);
-list.append(ui.lineEdit_oc_clientcert);
-list.append(ui.lineEdit_oc_cookie);
-list.append(ui.lineEdit_oc_group);
-list.append(ui.lineEdit_oc_pkcsclientcert);
-list.append(ui.lineEdit_oc_pkcspassword);
-list.append(ui.lineEdit_oc_secondpassword);
-list.append(ui.lineEdit_oc_servercert);
-list.append(ui.checkBox_oc_usesecondpassword);
-list.append(ui.lineEdit_oc_vpnhost);
-list.append(ui.lineEdit_ov_privatekeypassword);
-list.append(ui.checkBox_savecredentials);
+   // QList of widget pointers
+   QList <QWidget*> list;
+   list.clear();
+   list.append(ui.lineEdit_username);
+   list.append(ui.lineEdit_password);
+   list.append(ui.lineEdit_host);
+   list.append(ui.lineEdit_name);
+   list.append(ui.lineEdit_oc_cacert);
+   list.append(ui.lineEdit_oc_clientcert);
+   list.append(ui.lineEdit_oc_cookie);
+   list.append(ui.lineEdit_oc_group);
+   list.append(ui.lineEdit_oc_pkcsclientcert);
+   list.append(ui.lineEdit_oc_pkcspassword);
+   list.append(ui.lineEdit_oc_secondpassword);
+   list.append(ui.lineEdit_oc_servercert);
+   list.append(ui.checkBox_oc_usesecondpassword);
+   list.append(ui.lineEdit_oc_vpnhost);
+   list.append(ui.lineEdit_ov_privatekeypassword);
+   list.append(ui.checkBox_savecredentials);
 
-//	set disabled true for all widgets in the list and clear contents
-for (int i = 0; i < list.size(); ++i) {
-list.at(i)->setDisabled(true);
-if (qobject_cast<QLineEdit *> (list.at(i)) != NULL ) qobject_cast<QLineEdit *> (list.at(i))->clear();
-if (qobject_cast<QCheckBox *> (list.at(i)) != NULL ) qobject_cast<QCheckBox *> (list.at(i))->setChecked(false);
-} // for loop
+   //	set disabled true for all widgets in the list and clear contents
+   for (int i = 0; i < list.size(); ++i) {
+      list.at(i)->setDisabled(true);
+      if (qobject_cast<QLineEdit *> (list.at(i)) != NULL ) qobject_cast<QLineEdit *> (list.at(i))->clear();
+      if (qobject_cast<QCheckBox *> (list.at(i)) != NULL ) qobject_cast<QCheckBox *> (list.at(i))->setChecked(false);
+   } // for loop
 
-// data members
-   allowStoreCredentials = false;
-   allowRetrieveCredentials = false;
-   keepCredentials = false;
-   authFailure = QString();
 }
 
 ///////////////////////////////////////////////// Private Slots /////////////////////////////////////////////

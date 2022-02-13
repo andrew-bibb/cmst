@@ -64,6 +64,11 @@ class ConnmanVPNAgent : public QObject, protected QDBusContext
       QMap<QString,QString> input_map;
       bool b_loginputrequest;
       void createInputMap(const QMap<QString,QVariant>&);
+      bool allowStoreCredentials;
+      bool allowRetrieveCredentials;
+      bool keepCredentials;
+      QString authFailure;
+
 
    public:
       inline void setWhatsThisIcon(QIcon icon) {uiDialog->setWhatsThisIcon(icon);}
