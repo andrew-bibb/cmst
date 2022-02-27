@@ -86,7 +86,7 @@ namespace CMST
     // validating dialog validator input
     ValDialog_None    = 0x00,
     ValDialog_IPv4    = 0x01,
-    ValDialog_nmask   = 0x02,
+    ValDialog_nmask4  = 0x02,
     ValDialog_IPv6    = 0x03,
     ValDialog_MAC     = 0x04,
     ValDialog_46      = 0x05,
@@ -96,7 +96,10 @@ namespace CMST
     ValDialog_Word    = 0x09,
     ValDialog_min1ch  = 0x0a,
     ValDialog_min8ch  = 0x0b,
-    ValDialog_46d     = 0x0c,
+//    ValDialog_46d     = 0x0c,
+    ValDialog_IPv4cidr = 0x0d,
+    ValDialog_IPv6cidr = 0x0e,
+    ValDialog_46cidr   = 0x0f,
 
   };  // enum
 } // namespace CMST

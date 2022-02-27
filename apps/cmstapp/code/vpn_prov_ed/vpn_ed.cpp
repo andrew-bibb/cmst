@@ -453,7 +453,7 @@ void VPN_Editor::inputValidated(QAction* act, QString key)
   shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
 
   // create some prompts and set validator
-  if (key == "Host") {vd->setLabel(tr("VPN server IP address (ex: 1.2.3.4)")), vd->setValidator(CMST::ValDialog_46, false);}
+  if (key == "Host") {vd->setLabel(tr("VPN server IP address (ex: 1.2.3.4)")), vd->setValidator(CMST::ValDialog_46cidr, false);}
   else vd->setLabel(act->toolTip() );
 
   if (act == ui.actionPPPD_EchoFailure) vd->setValidator(CMST::ValDialog_Int, false);
