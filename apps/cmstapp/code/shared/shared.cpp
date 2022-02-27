@@ -119,40 +119,49 @@ shared::ValidatingDialog::ValidatingDialog(QWidget* parent) : QDialog(parent)
 
 // Slot to set the lineedit validator. If plural is true multiple values can
 // be supplied separated by comma, semi-colon or white space
+//
+// The ipv6 validator string is from:
+// https://stackoverflow.com/questions/53497/regular-expression-that-matches-valid-ipv6-addresses
+// leaving out the IPv4 mapped or embedded tests
 void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
 {
-  // setup a switch to set the validator
-  const QString ip4seg = "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
-  const QString s_ip4  = (ip4seg + "(?:\\." + ip4seg + "){3}");
-  const QString s_nmask4 = "(?:3[0-2]|[1-2][0-9]|[0-9])";
-  const QString s_nmask6 = "(?:12[0-8]|1[0-1][0-9]|[1-9][0-9]|[0-9])";
-  const QString ip6seg = "[0-9a-fA-F]{1,4}";
-  const QString s_ip6 =  (
-    QString("(" + ip6seg + ":){7,7}" + ip6seg + "|") +
-    QString("(" + ip6seg + ":){1,7}:" + "|") +
-    QString("(" + ip6seg + ":){1,6}:" + ip6seg + "|") +
-    QString("(" + ip6seg + ":){1,5}(:" + ip6seg + "){1,2}" + "|") +
-    QString("(" + ip6seg + ":){1,4}(:" + ip6seg + "){1,3}" + "|") +
-    QString("(" + ip6seg + ":){1,3}(:" + ip6seg + "){1,4}" + "|") +
-    QString("(" + ip6seg + ":){1,2}(:" + ip6seg + "){1,5}" + "|") +
-    QString(ip6seg + ":((:" + ip6seg + "){1,6})") );
-  const QString s_mac   = "(?:[0-9a-fA-F]{1,2})";
-  const QString s_hex   = "[0-9a-fA-F]*";
-  const QString s_int   = "[0-9]*";
-  const QString s_dom   = "((?!-)[A-Za-z0-9-]{1,63}(?<!-)\\.)+[A-Za-z]{2,6}";
-  const QString s_word  = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
-  const QString s_ch    = "\\S";
-  const QString s_start = (plural ? "^(" : "^");
-  const QString s_end   = (plural ? "([,;|\\s]\\s*|$))+" : "$");
+   // setup a switch to set the validator
+   const QString ip4seg = "(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])";
+   const QString s_ip4  = (ip4seg + "(\\." + ip4seg + "){3}");
+   const QString s_nmask4 = "(3[0-2]|[1-2][0-9]|[0-9])";
+   const QString s_nmask6 = "(12[0-8]|1[0-1][0-9]|[1-9][0-9]|[0-9])";
+   const QString ip6seg = "[0-9a-fA-F]{1,4}";
+   const QString s_ip6 =  (
+      QString("(") +
+      QString("(" + ip6seg + ":){7,7}" + ip6seg + "|") +
+      QString("(" + ip6seg + ":){1,7}:" + "|") +
+      QString("(" + ip6seg + ":){1,6}:" + ip6seg + "|") +
+      QString("(" + ip6seg + ":){1,5}(:" + ip6seg + "){1,2}" + "|") +
+      QString("(" + ip6seg + ":){1,4}(:" + ip6seg + "){1,3}" + "|") +
+      QString("(" + ip6seg + ":){1,3}(:" + ip6seg + "){1,4}" + "|") +
+      QString("(" + ip6seg + ":){1,2}(:" + ip6seg + "){1,5}" + "|") +
+      QString(ip6seg + ":((:" + ip6seg + "){1,6})" + "|") +
+      QString(":((:" + ip6seg + "){1,7}|:)" + "|") +
+      QString("fe80:(:" + ip6seg + "){0,4}%[0-9a-zA-Z]{1,}") +
+      QString(")") );
 
-  switch (vd){
-    case CMST::ValDialog_IPv4: {
+   const QString s_mac   = "(?:[0-9a-fA-F]{1,2})";
+   const QString s_hex   = "[0-9a-fA-F]*";
+   const QString s_int   = "[0-9]*";
+   const QString s_dom   = "((?!-)[A-Za-z0-9-]{1,63}(?<!-)\\.)+[A-Za-z]{2,6}";
+   const QString s_word  = "[0-9,a-zA-Z_\\.\\!\\@\\#\\$\\%\\^\\&\\*\\+\\-]*";
+   const QString s_ch    = "\\S";
+   const QString s_start = (plural ? "^(" : "^");
+   const QString s_end   = (plural ? "([,;|\\s]\\s*|$))+" : "$");
+
+   switch (vd){
+      case CMST::ValDialog_IPv4: {
       QRegularExpression rx4(s_start + s_ip4 + s_end);
       QRegularExpressionValidator* lev_4 = new QRegularExpressionValidator(rx4, this);
       lineedit->setValidator(lev_4);
       lev_4->deleteLater(); }
       break;
-    case CMST::ValDialog_IPv4cidr: {
+   case CMST::ValDialog_IPv4cidr: {
       QRegularExpression rx4cidr(s_start + s_ip4 + "(/" + s_nmask4 + ")?" + s_end);
       QRegularExpressionValidator* lev_4cidr = new QRegularExpressionValidator(rx4cidr, this);
       lineedit->setValidator(lev_4cidr);
@@ -164,85 +173,85 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
       lineedit->setValidator(lev_nmask);
       lev_nmask->deleteLater(); }
       break;
-    case CMST::ValDialog_IPv6: {
+   case CMST::ValDialog_IPv6: {
       QRegularExpression rx6(s_start + s_ip6 + s_end);
       QRegularExpressionValidator* lev_6 = new QRegularExpressionValidator(rx6, this);
       lineedit->setValidator(lev_6);
       lev_6->deleteLater(); }
       break;
-    case CMST::ValDialog_IPv6cidr: {
+   case CMST::ValDialog_IPv6cidr: {
       QRegularExpression rx6cidr(s_start + s_ip6 + "(/" + s_nmask6 + ")?" + s_end);
       QRegularExpressionValidator* lev_6cidr = new QRegularExpressionValidator(rx6cidr, this);
       lineedit->setValidator(lev_6cidr);
       lev_6cidr->deleteLater(); }
       break;
-    case CMST::ValDialog_MAC: {
+   case CMST::ValDialog_MAC: {
       QRegularExpression rxm(s_start + s_mac + "(?::" + s_mac + "){5}" + s_end);
       QRegularExpressionValidator* lev_m = new QRegularExpressionValidator(rxm, this);
       lineedit->setValidator(lev_m);
       lev_m->deleteLater(); }
       break;
-    case CMST::ValDialog_46: {
+   case CMST::ValDialog_46: {
       QRegularExpression rx46(s_start + "(" + s_ip4 + "|" + s_ip6 + ")" + s_end);
       QRegularExpressionValidator* lev_46 = new QRegularExpressionValidator(rx46, this);
       lineedit->setValidator(lev_46);
       lev_46->deleteLater(); }
       break;
-    case CMST::ValDialog_46cidr: {
+   case CMST::ValDialog_46cidr: {
       QRegularExpression rx46cidr(s_start + "(" + s_ip4 + "(/" + s_nmask4 + ")?" + "|" + s_ip6 + "(/" + s_nmask6 + ")?" + ")" + s_end);
       QRegularExpressionValidator* lev_46cidr = new QRegularExpressionValidator(rx46cidr, this);
       lineedit->setValidator(lev_46cidr);
       lev_46cidr->deleteLater(); }
       break;
-    case CMST::ValDialog_Hex: {
+   case CMST::ValDialog_Hex: {
       QRegularExpression rxh(s_start + s_hex + s_end);
       QRegularExpressionValidator* lev_h = new QRegularExpressionValidator(rxh, this);
       lineedit->setValidator(lev_h);
       lev_h->deleteLater(); }
       break;
-    case CMST::ValDialog_Int: {
+   case CMST::ValDialog_Int: {
       QRegularExpression rxint(s_start + s_int + s_end);
       QRegularExpressionValidator* lev_int = new QRegularExpressionValidator(rxint, this);
       lineedit->setValidator(lev_int);
       lev_int->deleteLater(); }
       break;
-    case CMST::ValDialog_Dom: {
+   case CMST::ValDialog_Dom: {
       QRegularExpression rxdom(s_start + s_dom + s_end);
       QRegularExpressionValidator* lev_dom = new QRegularExpressionValidator(rxdom, this);
       lineedit->setValidator(lev_dom);
       lev_dom->deleteLater(); }
       break;
-    case CMST::ValDialog_Word: {
+   case CMST::ValDialog_Word: {
       QRegularExpression rxwd(s_start + s_word + s_end);
       QRegularExpressionValidator* lev_wd = new QRegularExpressionValidator(rxwd, this);
       lineedit->setValidator(lev_wd);
       lev_wd->deleteLater(); }
       break;
-    case CMST::ValDialog_min1ch: {
+   case CMST::ValDialog_min1ch: {
       QRegularExpression rx1char(s_start + s_ch + "{1,}" + s_end);
       QRegularExpressionValidator* lev_1char = new QRegularExpressionValidator(rx1char, this);
       lineedit->setValidator(lev_1char);
       lev_1char->deleteLater(); }
       break;
-    case CMST::ValDialog_min8ch: {
+   case CMST::ValDialog_min8ch: {
       QRegularExpression rx8char(s_start + s_ch + "{8,}" + s_end);
       QRegularExpressionValidator* lev_8char = new QRegularExpressionValidator(rx8char, this);
       lineedit->setValidator(lev_8char);
       lev_8char->deleteLater(); }
       break;
-// Don't know why this was ever here, comment it out
-//    case CMST::ValDialog_46d: {
-//      QRegularExpression rx46d(s_start + "(" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7}|" + s_dom + ")" + s_end);
-//      QRegularExpressionValidator* lev_46d = new QRegularExpressionValidator(rx46d, this);
-//      lineedit->setValidator(lev_46d);
-//      lev_46d->deleteLater(); }
-//      break;
-    default:
+   // Don't know why this was ever here, comment it out
+   //    case CMST::ValDialog_46d: {
+   //      QRegularExpression rx46d(s_start + "(" + s_ip4 + "(?:\\." + s_ip4 + "){3}|" + s_ip6 + "(?::" + s_ip6 + "){7}|" + s_dom + ")" + s_end);
+   //      QRegularExpressionValidator* lev_46d = new QRegularExpressionValidator(rx46d, this);
+   //      lineedit->setValidator(lev_46d);
+   //      lev_46d->deleteLater(); }
+   //      break;
+   default:
       lineedit->setValidator(0);
       break;
-    } // switch
+   } // switch
 
-  return;
+   return;
 }
 
 //
