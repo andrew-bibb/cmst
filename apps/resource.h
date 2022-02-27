@@ -14,7 +14,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"),to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included
@@ -43,7 +42,7 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation)
-#define VERSION "2022.02.27-1"
+#define VERSION "2022.02.27-2"
 
 #define RELEASE_DATE "05 January 2022"
 #define COPYRIGHT_DATE "2013-2022"
@@ -100,6 +99,7 @@ namespace CMST
     ValDialog_IPv4cidr = 0x0d,
     ValDialog_IPv6cidr = 0x0e,
     ValDialog_46cidr   = 0x0f,
+    ValDialog_networks = 0x10,
 
   };  // enum
 } // namespace CMST

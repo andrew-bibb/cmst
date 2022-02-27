@@ -246,6 +246,17 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
    //      lineedit->setValidator(lev_46d);
    //      lev_46d->deleteLater(); }
    //      break;
+   case CMST::ValDialog_networks: {
+      QString valstr = s_start;
+      valstr.append("(" + s_ip4 + "/(" + s_nmask4 + "|" + s_ip4 + ")(/" + s_ip4 + ")?)");
+      valstr.append("|");
+      valstr.append("(" + s_ip6 + "/" + s_nmask6 + ")" );
+      valstr.append(s_end);
+      QRegularExpression netwk(valstr);
+      QRegularExpressionValidator* lev_netwk= new QRegularExpressionValidator(netwk, this);
+      lineedit->setValidator(lev_netwk);
+      lev_netwk->deleteLater(); }
+      break;
    default:
       lineedit->setValidator(0);
       break;
