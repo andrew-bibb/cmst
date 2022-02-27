@@ -248,9 +248,11 @@ void shared::ValidatingDialog::setValidator(const int& vd, bool plural)
    //      break;
    case CMST::ValDialog_networks: {
       QString valstr = s_start;
+      valstr.append("(");
       valstr.append("(" + s_ip4 + "/(" + s_nmask4 + "|" + s_ip4 + ")(/" + s_ip4 + ")?)");
       valstr.append("|");
       valstr.append("(" + s_ip6 + "/" + s_nmask6 + ")" );
+      valstr.append(")");
       valstr.append(s_end);
       QRegularExpression netwk(valstr);
       QRegularExpressionValidator* lev_netwk= new QRegularExpressionValidator(netwk, this);
