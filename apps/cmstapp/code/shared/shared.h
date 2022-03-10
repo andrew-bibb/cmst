@@ -46,22 +46,22 @@ namespace shared {
 class ValidatingDialog : public QDialog
 {
   Q_OBJECT
-  
+
   public:
     ValidatingDialog(QWidget*);
     inline void setLabel(const QString& s) {label->setText(s);}
+    static QString getPattern(const int&, bool plural = false);
     void setValidator(const int&, bool plural = false);
-    inline const QValidator* getValidator() {return lineedit->validator(); }
     inline QString getText() {return lineedit->text().trimmed();}
     inline void setText(const QString& s) {lineedit->setText(s);}
     inline void clear() {initialize();}
     inline bool isPlural() {return plural;}
-    
+
   private slots:
 		void textChanged();
 		void initialize();
-  
-  private:  
+
+  private:
     // members
     QLabel* label;
     QLineEdit* lineedit;

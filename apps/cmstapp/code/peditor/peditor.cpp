@@ -44,7 +44,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   // Data members
   objpath = ae.objpath;
   objmap = ae.objmap;
-  sl_ipv4_method << "dhcp" << "manual" << "off"; 
+  sl_ipv4_method << "dhcp" << "manual" << "off";
   sl_ipv6_method << "auto" << "manual" << "off";
   sl_ipv6_privacy << "disabled" << "enabled" << "prefered";       // misspelling prefered is necessary
   sl_proxy_method << "direct" << "auto" << "manual";
@@ -55,30 +55,30 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   connect(ui.pushButton_resetall, SIGNAL(clicked()), this, SLOT(resetAll()));
   connect(ui.pushButton_ok, SIGNAL(clicked()), this, SLOT(updateConfiguration()));
   connect(ui.comboBox_ipv4method, SIGNAL(currentIndexChanged(int)), this, SLOT(ipv4Method(int)));
-        
+
   // Setup comboboxes
   ui.comboBox_ipv4method->addItems(TranslateStrings::cmtr_sl(sl_ipv4_method) );
   ui.comboBox_ipv6method->addItems(TranslateStrings::cmtr_sl(sl_ipv6_method) );
   ui.comboBox_ipv6privacy->addItems(TranslateStrings::cmtr_sl(sl_ipv6_privacy) );
   ui.comboBox_proxymethod->addItems(TranslateStrings::cmtr_sl(sl_proxy_method) );
 
-  // Using the ValidatingDialog only to obtain the validator. This 
+  // Using the ValidatingDialog only to obtain the validator. This
   // allows all the validating code to be in a single location.
   // QLineEdits (validated)  that allow single address
-  shared::ValidatingDialog* vd = new shared::ValidatingDialog(this);
-  vd->setValidator(CMST::ValDialog_IPv4);
-    ui.lineEdit_ipv4address->setValidator(vd->getValidator() );
-    ui.lineEdit_ipv4netmask->setValidator(vd->getValidator() );
-    ui.lineEdit_ipv4gateway->setValidator(vd->getValidator() );
-  vd->setValidator(CMST::ValDialog_IPv6);
-    ui.lineEdit_ipv6address->setValidator(vd->getValidator() );
-    ui.lineEdit_ipv6gateway->setValidator(vd->getValidator() );
+  QRegularExpressionValidator* qrex_val= new QRegularExpressionValidator();
+  qrex_val->setRegularExpression(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_IPv4)) );
+      ui.lineEdit_ipv4address->setValidator(qrex_val);
+      ui.lineEdit_ipv4netmask->setValidator(qrex_val);
+      ui.lineEdit_ipv4gateway->setValidator(qrex_val);
+  qrex_val->setRegularExpression(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_IPv6)) );
+      ui.lineEdit_ipv6address->setValidator(qrex_val);
+      ui.lineEdit_ipv6gateway->setValidator(qrex_val);
 
   // now QLineEdits (validated)  that allow multiple addresses
-  vd->setValidator(CMST::ValDialog_46, true);
-    ui.lineEdit_nameservers->setValidator(vd->getValidator() );
-    ui.lineEdit_timeservers->setValidator(vd->getValidator() );
-  vd->deleteLater();
+  qrex_val->setRegularExpression(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_46, true)) );
+    ui.lineEdit_nameservers->setValidator(qrex_val);
+    ui.lineEdit_timeservers->setValidator(qrex_val);
+  qrex_val->deleteLater();
 
   // initialize and populate submaps
   ipv4map.clear();
@@ -109,7 +109,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   ui.spinBox_ipv6prefixlength->setValue(ipv6map.value("PrefixLength").toUInt() );
   ui.lineEdit_ipv6address->setText(ipv6map.value("Address").toString() );
   ui.lineEdit_ipv6gateway->setText(ipv6map.value("Gateway").toString() );
-  if (! ipv6map.value("Privacy").toString().isEmpty() ) {       
+  if (! ipv6map.value("Privacy").toString().isEmpty() ) {
     ui.comboBox_ipv6privacy->setCurrentIndex(sl_ipv6_privacy.indexOf(QRegularExpression(ipv6map.value("Privacy").toString())) );
   }
 
@@ -117,17 +117,17 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   if (proxmap.value("Method").toString().isEmpty() )
     ui.comboBox_proxymethod->setCurrentIndex(-1);
   else
-    ui.comboBox_proxymethod->setCurrentIndex(sl_proxy_method.indexOf(QRegularExpression(proxmap.value("Method").toString())) );     
+    ui.comboBox_proxymethod->setCurrentIndex(sl_proxy_method.indexOf(QRegularExpression(proxmap.value("Method").toString())) );
 
   ui.lineEdit_proxyservers->setText(proxmap.value("Servers").toStringList().join("\n") );
   ui.lineEdit_proxyexcludes->setText(proxmap.value("Excludes").toStringList().join("\n") );
   ui.lineEdit_proxyurl->setText(proxmap.value("URL").toString() );
-  
+
   if (ui.comboBox_proxymethod->currentIndex() < 0)
     ui.stackedWidget_proxy01->setCurrentIndex(0);
-  else    
+  else
     ui.stackedWidget_proxy01->setCurrentIndex(ui.comboBox_proxymethod->currentIndex() );
-          
+
   // disable pages not needed for a service (mainly vpn)
   if (objmap.value("Type").toString() == "vpn") {
     ui.ipv4->setDisabled(true);
@@ -135,7 +135,7 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   }
 
   // mDNS page
-  ui.checkBox_mdns->setChecked(objmap.value("mDNS").toBool() ); 
+  ui.checkBox_mdns->setChecked(objmap.value("mDNS").toBool() );
 
 }
 
@@ -256,33 +256,33 @@ void PropertiesEditor::updateConfiguration()
       shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
     } // if
   } //for
-  
+
   // ipv4
-  if (ui.ipv4 == ui.toolBox_peditor->currentWidget() ) { 
+  if (ui.ipv4 == ui.toolBox_peditor->currentWidget() ) {
     // Only update if an entry has changed.
     if ((ui.comboBox_ipv4method->currentText() != TranslateStrings::cmtr(ipv4map.value("Method").toString()) )      |
       (ui.lineEdit_ipv4address->text() != TranslateStrings::cmtr(ipv4map.value("Address").toString()) )       |
       (ui.lineEdit_ipv4netmask->text() != TranslateStrings::cmtr(ipv4map.value("Netmask").toString()) )                               |
       (ui.lineEdit_ipv4gateway->text() != TranslateStrings::cmtr(ipv4map.value("Gateway").toString())) )                      {
-                
+
       vlist.clear();
       lep.clear();
       slp.clear();
       dict.clear();
-                
-    if (ui.comboBox_ipv4method->currentIndex() >= 0) {      
+
+    if (ui.comboBox_ipv4method->currentIndex() >= 0) {
       vlist << "IPv4.Configuration";
       dict.insert("Method", sl_ipv4_method.at(ui.comboBox_ipv4method->currentIndex()) );
       lep << ui.lineEdit_ipv4address << ui.lineEdit_ipv4netmask << ui.lineEdit_ipv4gateway;
       slp << "Address" << "Netmask" << "Gateway";
-                       
+
       for (int i = 0; i < lep.count(); ++i) {
         s = lep.at(i)->text();
         s = s.simplified(); // really should not be needed with the validator
         if (s.isEmpty() ) break;
         dict.insert(slp.at(i), s);
       } // for
-                
+
       vlist << QVariant::fromValue(QDBusVariant(dict) );
       shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
     } // if there is a valid index
@@ -297,18 +297,18 @@ void PropertiesEditor::updateConfiguration()
       (ui.lineEdit_ipv6gateway->text() != TranslateStrings::cmtr(ipv6map.value("Gateway").toString()) )                           |
       (ui.lineEdit_ipv6address->text() != TranslateStrings::cmtr(ipv6map.value("Address").toString()) )             |
       (ui.comboBox_ipv6privacy->currentText() != TranslateStrings::cmtr(ipv6map.value("Privacy").toString())) ) {
-        
+
       vlist.clear();
       lep.clear();
       slp.clear();
       dict.clear();
-            
+
       if (ui.comboBox_ipv6method->currentIndex() >= 0) {
         vlist << "IPv6.Configuration";
         dict.insert("Method", sl_ipv6_method.at(ui.comboBox_ipv6method->currentIndex()) );
         dict.insert("PrefixLength", QVariant::fromValue(static_cast<quint8>(ui.spinBox_ipv6prefixlength->value())) );
         dict.insert("Privacy", sl_ipv6_privacy.at(ui.comboBox_ipv6privacy->currentIndex()) );
-        
+
         lep << ui.lineEdit_ipv6address <<  ui.lineEdit_ipv6gateway;
         slp << "Address" << "Gateway";
         for (int i = 0; i < lep.count(); ++i) {
@@ -317,7 +317,7 @@ void PropertiesEditor::updateConfiguration()
           if (s.isEmpty() ) break;
           dict.insert(slp.at(i), s);
         } // for
-        
+
         vlist << QVariant::fromValue(QDBusVariant(dict) );
         shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
       } // if there is a valid index
@@ -359,7 +359,7 @@ void PropertiesEditor::updateConfiguration()
     vlist << QVariant::fromValue(QDBusVariant(dict) );
     shared::processReply(iface_serv->callWithArgumentList(QDBus::AutoDetect, "SetProperty", vlist) );
   } // if proxy changed
-  
+
   // mDNS
   if (ui.checkBox_mdns->isChecked() != objmap.value("mDNS").toBool() ) {
     vlist.clear();
@@ -394,6 +394,6 @@ void PropertiesEditor::ipv4Method(int idx)
     ui.lineEdit_ipv4netmask->hide();
     ui.lineEdit_ipv4gateway->hide();
   }
-  
+
   return;
 }
