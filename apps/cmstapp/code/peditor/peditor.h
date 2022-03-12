@@ -38,40 +38,40 @@ DEALINGS IN THE SOFTWARE.
 # include "ui_peditor.h"
 # include "./code/control_box/controlbox.h"
 
-//  The class to control the properties editor UI based on a QDialog
+// The class to control the properties editor UI based on a QDialog
 class PropertiesEditor : public QDialog
 {
-  Q_OBJECT
+   Q_OBJECT
 
-  public:
-  // members
-    PropertiesEditor(QWidget*, const arrayElement&);
+   public:
+   // members
+      PropertiesEditor(QWidget*, const arrayElement&);
 
-  private:
-  // members
-    Ui::Peditor ui;
-    QDBusObjectPath objpath;
-    QMap<QString,QVariant> objmap;
-    QMap<QString,QVariant> ipv4map;
-    QMap<QString,QVariant> ipv6map;
-    QMap<QString,QVariant> proxmap;
-    QStringList sl_ipv4_method;
-    QStringList sl_ipv6_method;
-    QStringList sl_ipv6_privacy;
-    QStringList sl_proxy_method;
+   private:
+   // members
+      Ui::Peditor ui;
+      QDBusObjectPath objpath;
+      QMap<QString,QVariant> objmap;
+      QMap<QString,QVariant> ipv4map;
+      QMap<QString,QVariant> ipv6map;
+      QMap<QString,QVariant> proxmap;
+      QStringList sl_ipv4_method;
+      QStringList sl_ipv6_method;
+      QStringList sl_ipv6_privacy;
+      QStringList sl_proxy_method;
 
-  // functions
-  private slots:
-    void showWhatsThis();
-    void resetPage(int page = -1);
-    void resetAll();
-    void updateConfiguration();
-    void ipv4Method(int);
-
-  public:
-    inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
-    inline void setIconSize (float sz) {ui.toolButton_whatsthis->setIconSize(ui.toolButton_whatsthis->icon().actualSize(QSize(16,16) *= sz) ); }
-    inline void setItemEnabled (int i, bool b) {ui.toolBox_peditor->setItemEnabled(i, b);}
+   // functions
+   private slots:
+      void showWhatsThis();
+      void resetPage(int page = -1);
+      void resetAll();
+      void updateConfiguration();
+      void ipv4Method(int);
+:
+   public:
+      inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
+      inline void setIconSize (float sz) {ui.toolButton_whatsthis->setIconSize(ui.toolButton_whatsthis->icon().actualSize(QSize(16,16) *= sz) ); }
+      inline void setItemEnabled (int i, bool b) {ui.toolBox_peditor->setItemEnabled(i, b);}
 };
 
 
