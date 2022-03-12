@@ -65,20 +65,23 @@ PropertiesEditor::PropertiesEditor(QWidget* parent, const arrayElement& ae)
   // Using the ValidatingDialog only to obtain the validator. This
   // allows all the validating code to be in a single location.
   // QLineEdits (validated)  that allow single address
-  QRegularExpressionValidator* qrex_val= new QRegularExpressionValidator();
-  qrex_val->setRegularExpression(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_IPv4)) );
-      ui.lineEdit_ipv4address->setValidator(qrex_val);
-      ui.lineEdit_ipv4netmask->setValidator(qrex_val);
-      ui.lineEdit_ipv4gateway->setValidator(qrex_val);
-  qrex_val->setRegularExpression(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_IPv6)) );
-      ui.lineEdit_ipv6address->setValidator(qrex_val);
-      ui.lineEdit_ipv6gateway->setValidator(qrex_val);
+   QRegularExpressionValidator* qrex_val4= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_IPv4)) );
+   ui.lineEdit_ipv4address->setValidator(qrex_val4);
+   ui.lineEdit_ipv4netmask->setValidator(qrex_val4);
+   ui.lineEdit_ipv4gateway->setValidator(qrex_val4);
 
-  // now QLineEdits (validated)  that allow multiple addresses
-  qrex_val->setRegularExpression(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_46, true)) );
-    ui.lineEdit_nameservers->setValidator(qrex_val);
-    ui.lineEdit_timeservers->setValidator(qrex_val);
-  qrex_val->deleteLater();
+   QRegularExpressionValidator* qrex_val6= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_IPv6)) );
+   ui.lineEdit_ipv6address->setValidator(qrex_val6);
+   ui.lineEdit_ipv6gateway->setValidator(qrex_val6);
+
+   // now QLineEdits (validated)  that allow multiple addresses
+   QRegularExpressionValidator* qrex_val46= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_46, true)) );
+   ui.lineEdit_nameservers->setValidator(qrex_val46);
+   ui.lineEdit_timeservers->setValidator(qrex_val46);
+
+   qrex_val4->deleteLater();
+   qrex_val6->deleteLater();
+   qrex_val46->deleteLater();
 
   // initialize and populate submaps
   ipv4map.clear();
