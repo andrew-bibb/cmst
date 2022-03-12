@@ -653,10 +653,13 @@ void VPN_Editor::requestFileList(QAbstractButton* button)
 void VPN_Editor::processFileList(const QStringList& sl_conf)
 {
    // variables
-   bool ok;
    QString filename = "";
    QList<QVariant> vlist;
    QDBusInterface* iface_pfl = new QDBusInterface("org.cmst.roothelper", "/", "org.cmst.roothelper", QDBusConnection::systemBus(), this);
+   QInputDialog* qid = new QInputDialog(this);
+      qid->setOption(QInputDialog::UseListViewForComboBoxItems);
+      qid->setWindowModality(Qt::WindowModality::ApplicationModal);
+      qid->setInputMode(QInputDialog::TextInput);
 
    // If we are trying to open and read the file
    if (i_sel & CMST::ProvEd_File_Read) {
@@ -670,23 +673,16 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
                QMessageBox::Ok);
             break;
          case 1:
-            QMessageBox::information(this,
-               tr("%1 - Information").arg(TranslateStrings::cmtr("cmst")),
-               tr("<center>Reading configuration file: %1").arg(sl_conf.at(0)),
-               QMessageBox::Ok,
-               QMessageBox::Ok);
             filename = sl_conf.at(0);
             break;
          default:
-            QString item = QInputDialog::getItem(this,
-                  tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")),
-                  tr("Select a file to load."),
-                  sl_conf,
-                  0,       // current item 0
-                  false,   // non-editable
-                  &ok);
-            if (ok) filename = item;
-            break;
+             qid->setWindowTitle(tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")) );
+             qid->setLabelText(tr("Select a file to load.") );
+             qid->setComboBoxItems(sl_conf);
+             qid->exec();
+             if (qid->result() == QDialog::Accepted)
+                  filename = qid->textValue();
+             break;
          } // switch
 
    // if we have a filename try to open the file
@@ -710,16 +706,15 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
                QMessageBox::Ok);
             break;
          default:
-            QString item = QInputDialog::getItem(this,
-                  tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")),
-                  tr("Select a file to be deleted."),
-                  sl_conf,
-                  0,       // current item 0
-                  false,   // non-editable
-                  &ok);
-            if (ok) filename = item;
+            qid->setWindowTitle(tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")) );
+            qid->setLabelText(tr("Select a file to be deleted.") );
+            qid->setComboBoxItems(sl_conf);
+            qid->exec();
+            if (qid->result() == QDialog::Accepted)
+               filename = qid->textValue();
             break;
          } // switch
+
       // if we have a filename try to delete the file
       if (! filename.isEmpty() ) {
          vlist.clear();
@@ -731,17 +726,17 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
 
    // If we are trying to save the file
    else if (i_sel & CMST::ProvEd_File_Write) {
-   QString item = QInputDialog::getItem(this,
-         tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")),
-         tr("Enter a new file name or select<br>an existing file to overwrite."),
-         sl_conf,
-         0,    // current item 0
-         true, // editable
-         &ok);
-      if (ok) {
-         filename = item.simplified();                // multiple whitespace to one space
+      qid->setWindowTitle(tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")) );
+      qid->setLabelText(tr("Enter a new file name or select<br>an existing file to overwrite.") );
+      qid->setComboBoxEditable(true);
+      qid->setComboBoxItems(sl_conf);
+      qid->exec();
+      if (qid->result() == QDialog::Accepted) {
+         filename = qid->textValue();
+         filename = filename.simplified();      // multiple whitespace to one space
          filename = filename.replace(' ', '_'); // replace spaces with underscores
-      } // if ok
+      } // if accepted
+
       // if we have a filename try to save the file
       if (! filename.isEmpty() ) {
          vlist.clear();
@@ -755,6 +750,8 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
    // cleanup
    i_sel = CMST::ProvEd_No_Selection;
    iface_pfl->deleteLater();
+   delete qid;
+
    return;
 }
 
