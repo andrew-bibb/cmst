@@ -2,6 +2,7 @@
 <b><center>Change Log</center></b>
 <b> In Progress </b>
 <ul>
+<li>Revised open, save, delete dialog boxes in Provisioning editor.<li>
 <li>Added networks validator and use in networks fields in VPN Provisioning editor.</li>
 <li>Added cidr validators and use in server address fields in VPN Provisioning editor.</li>
 <li>Add fields to VPN Agent dialog to bring up to date with Connman.</li>
