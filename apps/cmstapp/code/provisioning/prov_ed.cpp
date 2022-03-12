@@ -340,13 +340,12 @@ void ProvisioningEditor::inputFreeForm(QAction* act)
       act == ui.actionService ? key = "[service_%1]\n" : key.append(" = %1\n");
 
       // get the string from the user
-      QString text = "";
-         text = QInputDialog::getText(this,
-            tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
-            str,
-            echomode,
-            "",
-            &ok);
+      QString text = QInputDialog::getText(this,
+         tr("%1 - Text Input").arg(TranslateStrings::cmtr("cmst")),
+         str,
+         echomode,
+         "",
+         &ok);
 
       if (ok) ui.plainTextEdit_main->insertPlainText(key.arg(text));
    } // else
@@ -517,11 +516,6 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
                QMessageBox::Ok);
             break;
          case 1:
-            QMessageBox::information(this,
-               tr("%1 - Information").arg(TranslateStrings::cmtr("cmst")),
-               tr("<center>Reading configuration file: %1").arg(sl_conf.at(0)),
-               QMessageBox::Ok,
-               QMessageBox::Ok);
             filename = sl_conf.at(0);
             break;
          default:
@@ -558,7 +552,7 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
             qid->setWindowTitle(tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")) );
             qid->setLabelText(tr("Select a file to be deleted.") );
             qid->setComboBoxItems(sl_conf);
-             qid->exec();
+            qid->exec();
             if (qid->result() == QDialog::Accepted)
                filename = qid->textValue();
             break;
@@ -579,10 +573,7 @@ void ProvisioningEditor::processFileList(const QStringList& sl_conf)
       qid->setLabelText(tr("Enter a new file name or select<br>an existing file to overwrite.") );
       qid->setComboBoxEditable(true);
       qid->setComboBoxItems(sl_conf);
-               qid->exec();
-      if (qid->result() == QDialog::Accepted)
-          filename = qid->textValue();
-
+      qid->exec();
       if (qid->result() == QDialog::Accepted) {
          filename = qid->textValue();
          filename = filename.simplified();      // multiple whitespace to one space
