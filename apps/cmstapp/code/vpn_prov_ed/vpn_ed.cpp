@@ -44,6 +44,8 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/trstring/tr_strings.h"
 # include "./code/shared/shared.h"
 
+# define VPN_PATH "/var/lib/connman-vpn"
+//
 //
 // This class is based on the ProvisioningEditor class,  There are a few improvements
 // mainly in more efficient packaging of the text data into each QAction.
@@ -66,7 +68,6 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
    // Data members
    menubar = new QMenuBar(this);
    ui.verticalLayout01->setMenuBar(menubar);
-   vpn_path = "/var/lib/connman-vpn";
 
    statusbar = new QStatusBar(this);
    ui.verticalLayout01->addWidget(statusbar);
@@ -639,7 +640,7 @@ void VPN_Editor::requestFileList(QAbstractButton* button)
 
    // request a list of config files from roothelper
    QList<QVariant> vlist;
-   vlist << QVariant::fromValue(vpn_path);
+   vlist << QVariant::fromValue(QString(VPN_PATH));
    QDBusInterface* iface_rfl = new QDBusInterface("org.cmst.roothelper", "/", "org.cmst.roothelper", QDBusConnection::systemBus(), this);
    iface_rfl->callWithCallback(QLatin1String("getFileList"), vlist, this, SLOT(processFileList(const QStringList&)), SLOT(callbackErrorHandler(QDBusError)));
 
@@ -656,7 +657,7 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
    QString filename = "";
    QList<QVariant> vlist;
    QDBusInterface* iface_pfl = new QDBusInterface("org.cmst.roothelper", "/", "org.cmst.roothelper", QDBusConnection::systemBus(), this);
-   QInputDialog* qid = new QInputDialog(this);
+   QInputDialog* qid = new QInputDialog();
       qid->setOption(QInputDialog::UseListViewForComboBoxItems);
       qid->setWindowModality(Qt::WindowModality::ApplicationModal);
       qid->setInputMode(QInputDialog::TextInput);
@@ -688,7 +689,7 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
    // if we have a filename try to open the file
       if (! filename.isEmpty() ) {
          vlist.clear();
-         vlist << QVariant::fromValue(vpn_path);
+         vlist << QVariant::fromValue(QString(VPN_PATH));
          vlist << QVariant::fromValue(filename);
          iface_pfl->callWithCallback(QLatin1String("readFile"), vlist, this, SLOT(seedTextEdit(const QString&)), SLOT(callbackErrorHandler(QDBusError)));
       } // if there is a file name
@@ -718,7 +719,7 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
       // if we have a filename try to delete the file
       if (! filename.isEmpty() ) {
          vlist.clear();
-         vlist << QVariant::fromValue(vpn_path);
+         vlist << QVariant::fromValue(QString(VPN_PATH));
          vlist << QVariant::fromValue(filename);
          iface_pfl->callWithCallback(QLatin1String("deleteFile"), vlist, this, SLOT(deleteCompleted(bool)), SLOT(callbackErrorHandler(QDBusError)));
       } // if there is a file name
@@ -740,7 +741,7 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
       // if we have a filename try to save the file
       if (! filename.isEmpty() ) {
          vlist.clear();
-         vlist<< QVariant::fromValue(vpn_path);
+         vlist<< QVariant::fromValue(QString(VPN_PATH));
          vlist << QVariant::fromValue(filename);
          vlist << QVariant::fromValue(ui.plainTextEdit_main->toPlainText() );
          iface_pfl->callWithCallback(QLatin1String("saveFile"), vlist, this, SLOT(writeCompleted(qint64)), SLOT(callbackErrorHandler(QDBusError)));

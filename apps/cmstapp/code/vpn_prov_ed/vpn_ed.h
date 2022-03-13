@@ -74,7 +74,6 @@ class VPN_Editor : public QDialog
     QButtonGroup* bg01;
     QStatusBar* statusbar;
     int statustimeout;
-    QString vpn_path;
 
   private slots:
     void inputSelectFile(QAction*);

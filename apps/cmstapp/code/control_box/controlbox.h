@@ -188,6 +188,8 @@ class ControlBox : public QDialog
       void disconnectPressed();
       void removePressed();
       void editPressed();
+      void createVPN();
+      void removeVPN();
       void dbsPropertyChanged(QString,QDBusVariant);
       void dbsServicesChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage);
       void dbsPeersChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage);

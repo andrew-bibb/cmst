@@ -35,7 +35,7 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <property name="movable">
       <bool>true</bool>
@@ -502,8 +502,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>818</width>
-            <height>697</height>
+            <width>98</width>
+            <height>60</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -809,6 +809,20 @@
             </property>
            </spacer>
           </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_createvpn">
+            <property name="text">
+             <string>Create</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_removevpn">
+            <property name="text">
+             <string>Remove</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
@@ -903,8 +917,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>818</width>
-            <height>778</height>
+            <width>112</width>
+            <height>290</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -943,8 +957,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>774</width>
-                   <height>312</height>
+                   <width>98</width>
+                   <height>47</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1002,8 +1016,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>774</width>
-                   <height>312</height>
+                   <width>98</width>
+                   <height>47</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1076,8 +1090,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>818</width>
-            <height>778</height>
+            <width>620</width>
+            <height>693</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -1904,8 +1918,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>708</width>
-            <height>778</height>
+            <width>98</width>
+            <height>414</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">

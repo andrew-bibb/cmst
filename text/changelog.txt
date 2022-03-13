@@ -1,5 +1,9 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<b> IN PROGRESS</b>
+<ul>
+<li>VPN tab - implemented Remove function</li>
+</ul>
 <b> 2022.03.13</b>
 <ul>
 <li>Revised open, save, delete dialog boxes in VPN Provisioning editor.<li>

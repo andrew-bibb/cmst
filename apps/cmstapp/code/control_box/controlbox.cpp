@@ -81,6 +81,8 @@ DEALINGS IN THE SOFTWARE.
 # define DBUS_CON_MANAGER "net.connman.Manager"
 # define DBUS_VPN_MANAGER "net.connman.vpn.Manager"
 
+# define VPN_PATH "/var/lib/connman-vpn"
+
 // Custom push button, used in the technology box for powered on/off
 // This is really a single use button, after it is clicked all idButtons
 // are deleted and recreated.  Once is is clicked disable the button.
@@ -471,6 +473,8 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    connect(ui.pushButton_disconnect, SIGNAL(clicked()), this, SLOT(disconnectPressed()));
    connect(ui.pushButton_vpn_disconnect, SIGNAL(clicked()), this, SLOT(disconnectPressed()));
    connect(ui.pushButton_remove, SIGNAL(clicked()), this, SLOT(removePressed()));
+   connect(ui.pushButton_createvpn, SIGNAL(clicked()), this, SLOT(createVPN()));
+   connect(ui.pushButton_removevpn, SIGNAL(clicked()), this, SLOT(removeVPN()));
    connect(ui.pushButton_edit, SIGNAL(clicked()), this, SLOT(editPressed()));
    connect(ui.pushButton_aboutCMST, SIGNAL(clicked()), this, SLOT(aboutCMST()));
    connect(ui.pushButton_aboutIconSet, SIGNAL(clicked()), this, SLOT(aboutIconSet()));
@@ -992,6 +996,74 @@ void ControlBox::editPressed()
 
    return;
 }
+
+// test create VPN
+void ControlBox::createVPN()
+{
+   qDebug() << "inside createVPN";
+
+   QMap<QString,QVariant> map;
+   map.clear();
+
+   map["Name"] = "Test_VPN";
+   map["Type"] = "PPTP";
+   map["Domain"] = "us1.vpnbook.com";
+   map["Host"] = "198.7.62.204";
+
+
+   QDBusMessage reply = vpn_manager->call(QLatin1String("Create"), map);
+
+   qDebug() << "Reply: " << reply;
+   qDebug() << "Map contents: " << map;
+
+   return;
+}
+
+// Remove a CMST provisioned VPN service without going into the VPN Provisioning editor.
+void ControlBox::removeVPN()
+{
+   // request a list of config files from roothelper
+   QList<QVariant> vlist;
+   vlist.clear();
+   vlist << QVariant::fromValue(QString(VPN_PATH));
+   QDBusInterface* iface_rh1 = new QDBusInterface("org.cmst.roothelper", "/", "org.cmst.roothelper", QDBusConnection::systemBus(), this);
+   QDBusMessage reply = iface_rh1->callWithArgumentList(QDBus::AutoDetect, QLatin1String("getFileList"), vlist);
+   if (reply.type() != QDBusMessage::ReplyMessage) return;
+   QStringList sl_conf = reply.arguments().at(0).toStringList();
+   if (sl_conf.size() < 1) {
+      QMessageBox::information(this,
+      QString(TranslateStrings::cmtr("cmst")) + tr(" Information"),
+      tr("No provisioning files created by %1 were found.<br>There are no VPN services which can be removed.").arg(TranslateStrings::cmtr("cmst")) );
+      return;
+   }
+
+   // create a dialog to show candidates for deletion
+   QString filename = QString();
+   QInputDialog* qid = new QInputDialog();
+      qid->setOption(QInputDialog::UseListViewForComboBoxItems);
+      qid->setWindowModality(Qt::WindowModality::ApplicationModal);
+      qid->setInputMode(QInputDialog::TextInput); qid->setWindowTitle(tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")) );
+      qid->setLabelText(tr("Select a file to be deleted.") );
+      qid->setComboBoxItems(sl_conf);
+      qid->exec();
+   if (qid->result() == QDialog::Accepted)
+   filename = qid->textValue();
+
+   // delete the provisioning file
+   if (! filename.isEmpty() ) {
+      vlist.clear();
+      vlist << QVariant::fromValue(QString(VPN_PATH));
+      vlist << QVariant::fromValue(filename);
+      shared::processReply(iface_rh1->callWithArgumentList(QDBus::AutoDetect, QLatin1String("deleteFile"), vlist));
+   }
+
+   // cleanup
+   delete qid;
+   iface_rh1->deleteLater();
+
+   return;
+}
+
 
 // dbs slots: these slots are to receive DBus Signals
 //
