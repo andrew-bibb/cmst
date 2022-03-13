@@ -67,6 +67,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./code/peditor/peditor.h"
 # include "./code/provisioning/prov_ed.h"
 # include "./code/vpn_prov_ed/vpn_ed.h"
+# include "./code/vpn_create/vpn_create.h"
 # include "./code/trstring/tr_strings.h"
 # include "./code/shared/shared.h"
 
@@ -1000,21 +1001,8 @@ void ControlBox::editPressed()
 // test create VPN
 void ControlBox::createVPN()
 {
-   qDebug() << "inside createVPN";
-
-   QMap<QString,QVariant> map;
-   map.clear();
-
-   map["Name"] = "Test_VPN";
-   map["Type"] = "PPTP";
-   map["Domain"] = "us1.vpnbook.com";
-   map["Host"] = "198.7.62.204";
-
-
-   QDBusMessage reply = vpn_manager->call(QLatin1String("Create"), map);
-
-   qDebug() << "Reply: " << reply;
-   qDebug() << "Map contents: " << map;
+   VPN_Create* vpncreator = new VPN_Create(this, f_connmanversion);
+   vpncreator->show();
 
    return;
 }
@@ -1028,12 +1016,16 @@ void ControlBox::removeVPN()
    vlist << QVariant::fromValue(QString(VPN_PATH));
    QDBusInterface* iface_rh1 = new QDBusInterface("org.cmst.roothelper", "/", "org.cmst.roothelper", QDBusConnection::systemBus(), this);
    QDBusMessage reply = iface_rh1->callWithArgumentList(QDBus::AutoDetect, QLatin1String("getFileList"), vlist);
-   if (reply.type() != QDBusMessage::ReplyMessage) return;
+   if (reply.type() != QDBusMessage::ReplyMessage) {
+      iface_rh1->deleteLater();
+      return;
+   }
    QStringList sl_conf = reply.arguments().at(0).toStringList();
    if (sl_conf.size() < 1) {
       QMessageBox::information(this,
       QString(TranslateStrings::cmtr("cmst")) + tr(" Information"),
       tr("No provisioning files created by %1 were found.<br>There are no VPN services which can be removed.").arg(TranslateStrings::cmtr("cmst")) );
+      iface_rh1->deleteLater();
       return;
    }
 

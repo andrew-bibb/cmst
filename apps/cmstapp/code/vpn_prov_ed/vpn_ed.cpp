@@ -72,7 +72,7 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
    statusbar = new QStatusBar(this);
    ui.verticalLayout01->addWidget(statusbar);
    statustimeout = 2000;
-   i_sel = CMST::ProvEd_No_Selection;
+   i_sel = CMST::VPNProvEd_No_Selection;
 
    // Setup the buttongroup
    bg01 = new QButtonGroup(this);
@@ -633,10 +633,10 @@ void VPN_Editor::resetPage()
 void VPN_Editor::requestFileList(QAbstractButton* button)
 {
    // initialize the selection
-   if (button == ui.pushButton_open) i_sel = CMST::ProvEd_File_Read;
-   else if (button == ui.pushButton_save) i_sel = CMST::ProvEd_File_Write;
-      else if (button == ui.pushButton_delete) i_sel = CMST::ProvEd_File_Delete;
-         else i_sel = CMST::ProvEd_No_Selection;
+   if (button == ui.pushButton_open) i_sel = CMST::VPNProvEd_File_Read;
+   else if (button == ui.pushButton_save) i_sel = CMST::VPNProvEd_File_Write;
+      else if (button == ui.pushButton_delete) i_sel = CMST::VPNProvEd_File_Delete;
+         else i_sel = CMST::VPNProvEd_No_Selection;
 
    // request a list of config files from roothelper
    QList<QVariant> vlist;
@@ -663,7 +663,7 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
       qid->setInputMode(QInputDialog::TextInput);
 
    // If we are trying to open and read the file
-   if (i_sel & CMST::ProvEd_File_Read) {
+   if (i_sel & CMST::VPNProvEd_File_Read) {
       // display dialogs based on the length of the stringlist
       switch (sl_conf.size()) {
          case 0:
@@ -696,7 +696,7 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
    } // if i_sel is File_Read
 
    // If we are trying to delete the file
-   else if (i_sel & CMST::ProvEd_File_Delete) {
+   else if (i_sel & CMST::VPNProvEd_File_Delete) {
       // // user will have to select the file to delete it
       switch (sl_conf.size()) {
          case 0:
@@ -726,7 +726,7 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
    } // if i_sel is File_Delete
 
    // If we are trying to save the file
-   else if (i_sel & CMST::ProvEd_File_Write) {
+   else if (i_sel & CMST::VPNProvEd_File_Write) {
       qid->setWindowTitle(tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")) );
       qid->setLabelText(tr("Enter a new file name or select<br>an existing file to overwrite.") );
       qid->setComboBoxEditable(true);
@@ -749,7 +749,7 @@ void VPN_Editor::processFileList(const QStringList& sl_conf)
    } // if i_sel is File_Save
 
    // cleanup
-   i_sel = CMST::ProvEd_No_Selection;
+   i_sel = CMST::VPNProvEd_No_Selection;
    iface_pfl->deleteLater();
    delete qid;
 

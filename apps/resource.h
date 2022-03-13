@@ -82,6 +82,12 @@ namespace CMST
     ProvEd_File_Delete  = (1 << 1),
     ProvEd_File_Write   = (1 << 2),
 
+    // VPN provisioning editor
+    VPNProvEd_No_Selection = 0x00,
+    VPNProvEd_File_Read    = (1 << 0),
+    VPNProvEd_File_Delete  = (1 << 1),
+    VPNProvEd_File_Write   = (1 << 2),
+
     // validating dialog validator input
     ValDialog_None    = 0x00,
     ValDialog_IPv4    = 0x01,

@@ -38,8 +38,8 @@ HEADERS		+= ./code/counter/counter.h
 HEADERS		+= ./code/scrollbox/scrollbox.h
 HEADERS		+= ./code/notify/notify.h
 HEADERS		+= ./code/peditor/peditor.h
-HEADERS   += ./code/provisioning/prov_ed.h
-HEADERS   += ./code/vpn_prov_ed/vpn_ed.h
+HEADERS         += ./code/provisioning/prov_ed.h
+HEADERS         += ./code/vpn_prov_ed/vpn_ed.h
 HEADERS		+= ./code/trstring/tr_strings.h
 HEADERS		+= ./code/iconman/iconman.h
 HEADERS		+= ./code/vpn_agent/vpnagent.h
@@ -48,6 +48,7 @@ HEADERS		+= ./code/vpn_agent/vpnagent_adaptor.h
 HEADERS		+= ./code/vpn_agent/vpnagent_interface.h
 HEADERS		+= ./code/shared/shared.h
 HEADERS		+= ./code/gen_conf_ed/gen_conf_ed.h
+HEADERS         += ./code/vpn_create/vpn_create.h
 
 #	forms
 FORMS		+= ./code/control_box/ui/controlbox.ui
@@ -57,6 +58,7 @@ FORMS		+= ./code/peditor/ui/peditor.ui
 FORMS		+= ./code/provisioning/ui/provisioning_editor.ui
 FORMS		+= ./code/vpn_prov_ed/ui/vpn_prov_editor.ui
 FORMS		+= ./code/vpn_agent/ui/vpnagent.ui
+FORMS           += ./code/vpn_create/ui/vpn_create.ui
 
 #	sources
 SOURCES	+= ./code/main.cpp
@@ -77,6 +79,7 @@ SOURCES	+= ./code/vpn_agent/vpnagent_adaptor.cpp
 SOURCES	+= ./code/vpn_agent/vpnagent_interface.cpp
 SOURCES += ./code/shared/shared.cpp
 SOURCES	+= ./code/gen_conf_ed/gen_conf_ed.cpp
+SOURCES += ./code/vpn_create/vpn_create.cpp
 
 #	resource files
 RESOURCES 	+= ../../cmst.qrc

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VPN_Create</class>
+ <widget class="QDialog" name="VPN_Create">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>General</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_type">
+        <property name="text">
+         <string>VPN Type</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_type">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="maxCount">
+         <number>6</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>OpenConnect</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>OpenVPN</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>VPNC</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>L2TP</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PPTP</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>WireGuard</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_name">
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_name"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_host">
+        <property name="text">
+         <string>VPN Server Address</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit_host"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_domain">
+        <property name="text">
+         <string>VPN Domain Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="lineEdit_domain"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_networks">
+        <property name="text">
+         <string>Networks</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="lineEdit_networks"/>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QStackedWidget" name="stackedWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="OpenConnect">
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>30</y>
+            <width>241</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>OpenConnect Under Construction</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="OpenVPN">
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>30</y>
+            <width>191</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>OpenVPN Under Construction</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="VPNC">
+         <widget class="QLabel" name="label_3">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>20</y>
+            <width>191</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>VPNC Under Construction</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="L2TP">
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>211</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>L2TP Under Construction</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="PPTP">
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>20</y>
+            <width>221</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>PPTP Under Construction</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="WireGuard">
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>20</y>
+            <width>221</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>WireGuard Under Construction</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>VPN_Create</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>227</x>
+     <y>281</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>VPN_Create</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>295</x>
+     <y>287</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_type</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>237</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>240</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
