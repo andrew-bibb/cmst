@@ -32,6 +32,7 @@ DEALINGS IN THE SOFTWARE.
 # include "./peditor.h"
 # include "./code/shared/shared.h"
 # include "./code/trstring/tr_strings.h"
+# include "../resource.h"
 
 #define DBUS_SERVICE "net.connman"
 

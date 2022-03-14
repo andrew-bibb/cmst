@@ -26,9 +26,13 @@ DEALINGS IN THE SOFTWARE.
 ***********************************************************************/
 
 # include <QtCore/QDebug>
+# include <QRegularExpression>
+# include <QRegularExpressionValidator>
 
 # include "./code/vpn_create/vpn_create.h"
 # include "./code/shared/shared.h"
+# include "../resource.h"
+
 
 // # define VPN_PATH "/var/lib/connman-vpn"
 
@@ -38,6 +42,14 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
 {
    // Setup the user interface
    ui.setupUi(this);
+
+   // Assign validators to input boxes
+   QRegularExpressionValidator* qrex_46cidr= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_46cidr, false)), this);
+      ui.lineEdit_host->setValidator(qrex_46cidr);
+
+   QRegularExpressionValidator* qrex_networks= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_networks, true)), this);
+      ui.lineEdit_networks->setValidator(qrex_networks);
+
 
    return;
 }
