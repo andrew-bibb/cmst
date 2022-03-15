@@ -36,20 +36,22 @@ DEALINGS IN THE SOFTWARE.
 //  The class to control the properties editor UI based on a QDialog
 class VPN_Create : public QDialog
 {
-  Q_OBJECT
+   Q_OBJECT
 
-  public:
-    VPN_Create(QWidget*, const float&);
+   public:
+      VPN_Create(QWidget*, const float&);
 
-  private:
-  // members
-    Ui::VPN_Create ui;
+   private:
+   // members
+      Ui::VPN_Create ui;
 
-  private slots:
+   private slots:
+      void editingFinished();
 
-  public:
-//    inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
-//    inline void setIconSize (float sz) {ui.toolButton_whatsthis->setIconSize(ui.toolButton_whatsthis->icon().actualSize(QSize(16,16) *= sz) ); }
+
+   public:
+      //    inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
+      //    inline void setIconSize (float sz) {ui.toolButton_whatsthis->setIconSize(ui.toolButton_whatsthis->icon().actualSize(QSize(16,16) *= sz) ); }
 };
 
 

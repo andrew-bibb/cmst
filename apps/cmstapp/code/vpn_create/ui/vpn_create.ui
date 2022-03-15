@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>452</width>
+    <height>495</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -107,104 +110,200 @@
       <item row="4" column="1">
        <widget class="QLineEdit" name="lineEdit_networks"/>
       </item>
-      <item row="5" column="0" colspan="2">
-       <widget class="QStackedWidget" name="stackedWidget">
-        <property name="currentIndex">
-         <number>0</number>
-        </property>
-        <widget class="QWidget" name="OpenConnect">
-         <widget class="QLabel" name="label">
-          <property name="geometry">
-           <rect>
-            <x>60</x>
-            <y>30</y>
-            <width>241</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>OpenConnect Under Construction</string>
-          </property>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="OpenVPN">
-         <widget class="QLabel" name="label_2">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>30</y>
-            <width>191</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>OpenVPN Under Construction</string>
-          </property>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="VPNC">
-         <widget class="QLabel" name="label_3">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>20</y>
-            <width>191</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>VPNC Under Construction</string>
-          </property>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="L2TP">
-         <widget class="QLabel" name="label_4">
-          <property name="geometry">
-           <rect>
-            <x>50</x>
-            <y>20</y>
-            <width>211</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>L2TP Under Construction</string>
-          </property>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="PPTP">
-         <widget class="QLabel" name="label_5">
-          <property name="geometry">
-           <rect>
-            <x>70</x>
-            <y>20</y>
-            <width>221</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>PPTP Under Construction</string>
-          </property>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="WireGuard">
-         <widget class="QLabel" name="label_6">
-          <property name="geometry">
-           <rect>
-            <x>80</x>
-            <y>20</y>
-            <width>221</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>WireGuard Under Construction</string>
-          </property>
-         </widget>
-        </widget>
-       </widget>
-      </item>
      </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="OpenConnect">
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>30</y>
+         <width>241</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OpenConnect Under Construction</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="OpenVPN">
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>30</y>
+         <width>191</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OpenVPN Under Construction</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="VPNC">
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>20</y>
+         <width>191</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>VPNC Under Construction</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="L2TP">
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>211</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>L2TP Under Construction</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="PPTP">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_pptpoptions">
+         <property name="title">
+          <string>Options</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkBox_debug">
+            <property name="text">
+             <string>Debug</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QCheckBox" name="checkBox_nobsdcomp">
+            <property name="text">
+             <string>Disable BSD Compression</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="2">
+           <widget class="QCheckBox" name="checkBox_requiremppe128">
+            <property name="text">
+             <string>Require MPPE128</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QCheckBox" name="checkBox_nodeflate">
+            <property name="text">
+             <string>Disable Deflate Compression</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="2">
+           <widget class="QCheckBox" name="checkBox_mppestateful">
+            <property name="text">
+             <string>Allow MPPE Stateful Mode</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QCheckBox" name="checkBox_novj">
+            <property name="text">
+             <string>Disable Van Jacobson Compression</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QCheckBox" name="checkBox_requiremppe">
+            <property name="text">
+             <string>Require MPPE</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QCheckBox" name="checkBox_requiremppe40">
+            <property name="text">
+             <string>Require MPPE40</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QCheckBox" name="checkBox_refusemschap2">
+            <property name="text">
+             <string>Refuse MS CHAP 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QCheckBox" name="checkBox_refusemschap">
+            <property name="text">
+             <string>Refuse MS CHAP</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="checkBox_refusechap">
+            <property name="text">
+             <string>Refuse CHAP</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="checkBox_refusepap">
+            <property name="text">
+             <string>Refuse PAP</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="checkBox_refuseeap">
+            <property name="text">
+             <string>Refuse EAP</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="WireGuard">
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>20</y>
+         <width>221</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>WireGuard Under Construction</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
    </item>
    <item>

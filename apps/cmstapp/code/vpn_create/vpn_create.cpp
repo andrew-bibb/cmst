@@ -43,6 +43,9 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
    // Setup the user interface
    ui.setupUi(this);
 
+   // Set OK button to disable
+   ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
+
    // Assign validators to input boxes
    QRegularExpressionValidator* qrex_46cidr= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_46cidr, false)), this);
       ui.lineEdit_host->setValidator(qrex_46cidr);
@@ -50,8 +53,33 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
    QRegularExpressionValidator* qrex_networks= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_networks, true)), this);
       ui.lineEdit_networks->setValidator(qrex_networks);
 
+   // Connect signals and slots
+   connect (ui.lineEdit_name, SIGNAL(textChanged(const QString&)), this, SLOT(editingFinished()));
+   connect (ui.lineEdit_host, SIGNAL(textChanged(const QString&)), this, SLOT(editingFinished()));
+   connect (ui.lineEdit_domain, SIGNAL(textChanged(const QString&)), this, SLOT(editingFinished()));
+   connect (ui.lineEdit_networks, SIGNAL(textChanged(const QString&)), this, SLOT(editingFinished()));
 
    return;
 }
+
+
+//////////////////////////////////////////////// Public Slots
+//
+// Slot called when a lineEdit emits the editingFinished() signal
+// Used to enable the OK button if everything passes
+void VPN_Create::editingFinished()
+{
+   if (
+      (! ui.lineEdit_name->text().isEmpty())           &&
+      ui.lineEdit_host->hasAcceptableInput()           &&
+      (! ui.lineEdit_domain->text().isEmpty())         &&
+      (ui.lineEdit_networks->text().isEmpty() || ui.lineEdit_networks->hasAcceptableInput())
+      )
+      ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(false);
+   else
+      ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
+
+    return;
+ }
 
 
