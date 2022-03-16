@@ -46,7 +46,8 @@ class VPN_Create : public QDialog
       Ui::VPN_Create ui;
 
    private slots:
-      void editingFinished();
+      void checkInput();
+      void writeFile();
 
 
    public:

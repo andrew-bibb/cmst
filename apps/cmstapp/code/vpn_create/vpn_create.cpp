@@ -54,10 +54,11 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
       ui.lineEdit_networks->setValidator(qrex_networks);
 
    // Connect signals and slots
-   connect (ui.lineEdit_name, SIGNAL(textChanged(const QString&)), this, SLOT(editingFinished()));
-   connect (ui.lineEdit_host, SIGNAL(textChanged(const QString&)), this, SLOT(editingFinished()));
-   connect (ui.lineEdit_domain, SIGNAL(textChanged(const QString&)), this, SLOT(editingFinished()));
-   connect (ui.lineEdit_networks, SIGNAL(textChanged(const QString&)), this, SLOT(editingFinished()));
+   connect (ui.lineEdit_name, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
+   connect (ui.lineEdit_host, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
+   connect (ui.lineEdit_domain, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
+   connect (ui.lineEdit_networks, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
+   connect (this, SIGNAL(accepted()), this, SLOT(writeFile()));
 
    return;
 }
@@ -65,9 +66,11 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
 
 //////////////////////////////////////////////// Public Slots
 //
-// Slot called when a lineEdit emits the editingFinished() signal
-// Used to enable the OK button if everything passes
-void VPN_Create::editingFinished()
+// Slot called when a lineEdit emits the textChanged() signal
+// Used to enable the OK button if the input passes basic validation checks.
+// Pass means the input is sufficient to provision a service.  Does not mean
+// it is without error or complete, but it meets the minimum requirements.
+void VPN_Create::checkInput()
 {
    if (
       (! ui.lineEdit_name->text().isEmpty())           &&
@@ -82,4 +85,70 @@ void VPN_Create::editingFinished()
     return;
  }
 
+//
+// Slot called when this emits an accepted() signal (user clicks OK).
+// Write the provisioning file
+void VPN_Create::writeFile()
+{
+   // data members
+   const QString newline(QString("\n"));
+   QString rtnstr(QString("[provider_"));
 
+   // typical information
+   rtnstr.append(ui.comboBox_type->currentText().toLower() );
+   rtnstr.append("]");
+   rtnstr.append(newline);
+
+   rtnstr.append("Type = ");
+   rtnstr.append(ui.comboBox_type->currentText() );
+   rtnstr.append(newline);
+
+   rtnstr.append("Name = ");
+   rtnstr.append(ui.lineEdit_name->text() );
+   rtnstr.append(newline);
+
+   rtnstr.append("Host = ");
+   rtnstr.append(ui.lineEdit_host->text() );
+   rtnstr.append(newline);
+
+   rtnstr.append("Domain = ");
+   rtnstr.append(ui.lineEdit_domain->text() );
+   rtnstr.append(newline);
+
+   if (! ui.lineEdit_networks->text().isEmpty() ) {
+      rtnstr.append("Networks = ");
+      rtnstr.append(ui.lineEdit_networks->text() );
+      rtnstr.append(newline);
+   } // if
+
+   // information specific to each VPN type
+   switch (ui.comboBox_type->currentIndex() )
+   {
+      case 0:
+         qDebug() << "OpenConnect";
+         break;
+      case 1:
+         qDebug() << "OpenVPN";
+         break;
+      case 2:
+         qDebug() << "VPNC";
+         break;
+      case 3:
+         qDebug() << "L2TP";
+         break;
+      case 4:
+         qDebug() << "PPTP";
+         break;
+      case 5:
+         qDebug() << "WireGuard";
+         break;
+      default:
+         break;
+   }
+
+
+   qDebug() << rtnstr;
+
+
+   return;
+}
