@@ -95,6 +95,7 @@ void VPN_Create::writeFile()
 {
    // data members
    const QString newline(QString("\n"));
+   const QString eqyes(QString(" = yes\n"));
    QString rtnstr(QString("[provider_"));
 
    // typical information
@@ -136,13 +137,29 @@ void VPN_Create::writeFile()
          qDebug() << "OpenVPN";
          break;
       case 2:
-         qDebug() << "VPNC";
-         break;
+        qDebug() << "VPNC";
+        break;
       case 3:
          qDebug() << "L2TP";
          break;
       case 4:
-         qDebug() << "PPTP";
+         if (! ui.lineEdit_04_user->text().isEmpty()) rtnstr.append("PPTP.User = ").append(ui.lineEdit_04_user->text().append(newline));
+         if (! ui.lineEdit_04_password->text().isEmpty()) rtnstr.append("PPTP.Password = ").append(ui.lineEdit_04_password->text().append(newline));
+         if (ui.checkBox_04_debug->isChecked()) rtnstr.append("PPPD.Debug").append(eqyes);
+         if (ui.checkBox_04_refuseeap->isChecked()) rtnstr.append("PPPD.RefuseEAP").append(eqyes);
+         if (ui.checkBox_04_refusepap->isChecked()) rtnstr.append("PPPD.RefusePAP").append(eqyes);
+         if (ui.checkBox_04_refusechap->isChecked()) rtnstr.append("PPPD.RefuseCHAP").append(eqyes);
+         if (ui.checkBox_04_refusemschap->isChecked()) rtnstr.append("PPPD.RefuseMSCHAP").append(eqyes);
+         if (ui.checkBox_04_refusemschap2->isChecked()) rtnstr.append("PPPD.RefuseMSCHAP2").append(eqyes);
+         if (ui.checkBox_04_nobsdcomp->isChecked()) rtnstr.append("PPPD.NoBSDComp").append(eqyes);
+         if (ui.checkBox_04_nodeflate->isChecked()) rtnstr.append("PPPD.NoDeflate").append(eqyes);
+         if (ui.checkBox_04_novj->isChecked()) rtnstr.append("PPPD.NoVJ").append(eqyes);
+         if (ui.checkBox_04_requiremppe->isChecked()) rtnstr.append("PPPD.RequirMPPE").append(eqyes);
+         if (ui.checkBox_04_requiremppe40->isChecked()) rtnstr.append("PPPD.RequirMPPE40").append(eqyes);
+         if (ui.checkBox_04_requiremppe128->isChecked()) rtnstr.append("PPPD.RequirMPPE128").append(eqyes);
+         if (ui.checkBox_04_mppestateful->isChecked()) rtnstr.append("PPPD.RequirMPPEStateful").append(eqyes);
+         if (ui.spinBox_04_echofailure->value() > 0) rtnstr.append(QString("PPPD.EchoFailure = %1").arg(ui.spinBox_04_echofailure->value()).append(newline));
+         if (ui.spinBox_04_echointerval->value() > 0) rtnstr.append(QString("PPPD.EchoInterval = %1").arg(ui.spinBox_04_echointerval->value()).append(newline));
          break;
       case 5:
          qDebug() << "WireGuard";
@@ -151,8 +168,40 @@ void VPN_Create::writeFile()
          break;
    }
 
-
+//   QDBusInterface* iface_rfl = new QDBusInterface("org.cmst.roothelper", "/", "org.cmst.roothelper", QDBusConnection::systemBus(), this);
+//   iface_rfl->callWithCallback(QLatin1String("getFileList"), vlist, this, SLOT(processFileList(const QStringList&)), SLOT(callbackErrorHandler(QDBusError)));
+//
    qDebug() << rtnstr;
+//   QInputDialog* qid = new QInputDialog();
+//      qid->setOption(QInputDialog::UseListViewForComboBoxItems);
+//      qid->setWindowModality(Qt::WindowModality::ApplicationModal);
+//      qid->setInputMode(QInputDialog::TextInput);
+//      qid->setWindowTitle(tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")) );
+//      qid->setLabelText(tr("Enter a new file name or select<br>an existing file to overwrite.") );
+//      qid->setComboBoxEditable(true);
+//      qid->setComboBoxItems(sl_conf);
+//      qid->exec();
+//      if (qid->result() == QDialog::Accepted) {
+//         filename = qid->textValue();
+//         filename = filename.simplified();      // multiple whitespace to one space
+//         filename = filename.replace(' ', '_'); // replace spaces with underscores
+//      } // if accepted
+//
+//      // if we have a filename try to save the file
+//      if (! filename.isEmpty() ) {
+//         vlist.clear();
+//         vlist<< QVariant::fromValue(QString(VPN_PATH));
+//         vlist << QVariant::fromValue(filename);
+//         vlist << QVariant::fromValue(ui.plainTextEdit_main->toPlainText() );
+//         iface_pfl->callWithCallback(QLatin1String("saveFile"), vlist, this, SLOT(writeCompleted(qint64)), SLOT(callbackErrorHandler(QDBusError)));
+//      } // if there is a file name
+//   } // if i_sel is File_Save
+//
+//   // cleanup
+//   i_sel = CMST::VPNProvEd_No_Selection;
+//   iface_pfl->deleteLater();
+//   delete qid;
+
 
 
    return;
