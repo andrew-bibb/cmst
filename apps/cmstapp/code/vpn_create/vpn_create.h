@@ -48,11 +48,11 @@ class VPN_Create : public QDialog
    private slots:
       void checkInput();
       void writeFile();
-
+      void showWhatsThis();
 
    public:
-      //    inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
-      //    inline void setIconSize (float sz) {ui.toolButton_whatsthis->setIconSize(ui.toolButton_whatsthis->icon().actualSize(QSize(16,16) *= sz) ); }
+      inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
+      inline void setIconSize (float sz) {ui.toolButton_whatsthis->setIconSize(ui.toolButton_whatsthis->icon().actualSize(QSize(16,16) *= sz) ); }
 };
 
 

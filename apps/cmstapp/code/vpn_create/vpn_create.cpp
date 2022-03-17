@@ -59,12 +59,16 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
    connect (ui.lineEdit_domain, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_networks, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (this, SIGNAL(accepted()), this, SLOT(writeFile()));
+   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
+
+   // set index to something we're working on
+   ui.comboBox_type->setCurrentIndex(4);
 
    return;
 }
 
 
-//////////////////////////////////////////////// Public Slots
+//////////////////////////////////////////////// Private Slots /////////////////////////////////////////
 //
 // Slot called when a lineEdit emits the textChanged() signal
 // Used to enable the OK button if the input passes basic validation checks.
@@ -75,7 +79,6 @@ void VPN_Create::checkInput()
    if (
       (! ui.lineEdit_name->text().isEmpty())           &&
       ui.lineEdit_host->hasAcceptableInput()           &&
-      (! ui.lineEdit_domain->text().isEmpty())         &&
       (ui.lineEdit_networks->text().isEmpty() || ui.lineEdit_networks->hasAcceptableInput())
       )
       ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(false);
@@ -111,9 +114,11 @@ void VPN_Create::writeFile()
    rtnstr.append(ui.lineEdit_host->text() );
    rtnstr.append(newline);
 
-   rtnstr.append("Domain = ");
-   rtnstr.append(ui.lineEdit_domain->text() );
-   rtnstr.append(newline);
+   if (! ui.lineEdit_domain->text().isEmpty() ) {
+      rtnstr.append("Domain = ");
+      rtnstr.append(ui.lineEdit_domain->text() );
+      rtnstr.append(newline);
+   } // if
 
    if (! ui.lineEdit_networks->text().isEmpty() ) {
       rtnstr.append("Networks = ");
@@ -151,4 +156,12 @@ void VPN_Create::writeFile()
 
 
    return;
+}
+
+//
+// Slot to enter whats this mode
+// Called when the ui.toolButton_whatsthis clicked() signal is emitted
+void VPN_Create::showWhatsThis()
+{
+   QWhatsThis::enterWhatsThisMode();
 }

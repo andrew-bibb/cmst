@@ -1002,7 +1002,13 @@ void ControlBox::editPressed()
 void ControlBox::createVPN()
 {
    VPN_Create* vpncreator = new VPN_Create(this, f_connmanversion);
-   vpncreator->show();
+
+   // Set the whatsthis button icon
+   vpncreator->setWhatsThisIcon(iconman->getIcon("whats_this") );
+   vpncreator->setIconSize(iconscale);
+
+   vpncreator->exec();
+   vpncreator->deleteLater();
 
    return;
 }

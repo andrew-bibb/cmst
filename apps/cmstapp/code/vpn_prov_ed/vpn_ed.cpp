@@ -461,7 +461,7 @@ void VPN_Editor::inputValidated(QAction* act, QString key)
          if (key == "Networks") {
             vd->setLabel(tr("Networks behind the VPN link, if more than one separate by a comma.\n"
                              "Format is network/netmask/gateway, and gateway can be omitted.\n"
-                             "Ex: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:Ldb8::1/16\n\n"
+                             "Ex: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:db8::1/16\n\n"
                              "Networks = entry is optional and may be left blank.")),
             vd->setValidator(CMST::ValDialog_networks, true); }
          else vd->setLabel(act->toolTip() );
