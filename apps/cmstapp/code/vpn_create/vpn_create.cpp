@@ -25,16 +25,26 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/
 
+// Class to provide the functionallity of the manager.Remove() and manager.Create()
+// methods from the ConnMan vpn manager: net.connman.vpn.Manager. Doing it here for
+// a couple of reasons.  One is that I could only get the the ConnMan functions to
+// work once, no idea what happened after that one time.  More importantly though
+// by doing it this way the user can edit the provisioning file created.
+// This avoids having to remove and recreate a connection if the user had a
+// simple typo in one of the input fields which is what you would need to do if
+// the vpn manager methods were used.
+
 # include <QtCore/QDebug>
 # include <QRegularExpression>
 # include <QRegularExpressionValidator>
 
 # include "./code/vpn_create/vpn_create.h"
+# include "./code/trstring/tr_strings.h"
 # include "./code/shared/shared.h"
 # include "../resource.h"
 
 
-// # define VPN_PATH "/var/lib/connman-vpn"
+# define VPN_PATH "/var/lib/connman-vpn"
 
 //
 // Constructor
@@ -43,12 +53,24 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
    // Setup the user interface
    ui.setupUi(this);
 
+   // Setup the QDBusInterface
+   iface_rh1 = new QDBusInterface("org.cmst.roothelper", "/", "org.cmst.roothelper", QDBusConnection::systemBus(), this);
+
+   // Setup the QInputDialog
+   qid = new QInputDialog(this);
+      qid->setOption(QInputDialog::UseListViewForComboBoxItems);
+      qid->setWindowModality(Qt::WindowModality::ApplicationModal);
+      qid->setInputMode(QInputDialog::TextInput); qid->setWindowTitle(tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")) );
+
    // Set OK button to disable
    ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
 
    // Assign validators to input boxes
    QRegularExpressionValidator* qrex_46cidr= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_46cidr, false)), this);
       ui.lineEdit_host->setValidator(qrex_46cidr);
+
+   QRegularExpressionValidator* qrex_dom= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_Dom, false)), this);
+      ui.lineEdit_domain->setValidator(qrex_dom);
 
    QRegularExpressionValidator* qrex_networks= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_networks, true)), this);
       ui.lineEdit_networks->setValidator(qrex_networks);
@@ -58,7 +80,7 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
    connect (ui.lineEdit_host, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_domain, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_networks, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
-   connect (this, SIGNAL(accepted()), this, SLOT(writeFile()));
+   connect (this, SIGNAL(accepted()), this, SLOT(createFile()));
    connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
 
    // set index to something we're working on
@@ -67,31 +89,11 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
    return;
 }
 
-
 //////////////////////////////////////////////// Private Slots /////////////////////////////////////////
-//
-// Slot called when a lineEdit emits the textChanged() signal
-// Used to enable the OK button if the input passes basic validation checks.
-// Pass means the input is sufficient to provision a service.  Does not mean
-// it is without error or complete, but it meets the minimum requirements.
-void VPN_Create::checkInput()
-{
-   if (
-      (! ui.lineEdit_name->text().isEmpty())           &&
-      ui.lineEdit_host->hasAcceptableInput()           &&
-      (ui.lineEdit_networks->text().isEmpty() || ui.lineEdit_networks->hasAcceptableInput())
-      )
-      ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(false);
-   else
-      ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
-
-    return;
- }
-
 //
 // Slot called when this emits an accepted() signal (user clicks OK).
 // Write the provisioning file
-void VPN_Create::writeFile()
+void VPN_Create::createFile()
 {
    // data members
    const QString newline(QString("\n"));
@@ -168,44 +170,56 @@ void VPN_Create::writeFile()
          break;
    }
 
-//   QDBusInterface* iface_rfl = new QDBusInterface("org.cmst.roothelper", "/", "org.cmst.roothelper", QDBusConnection::systemBus(), this);
-//   iface_rfl->callWithCallback(QLatin1String("getFileList"), vlist, this, SLOT(processFileList(const QStringList&)), SLOT(callbackErrorHandler(QDBusError)));
-//
-   qDebug() << rtnstr;
-//   QInputDialog* qid = new QInputDialog();
-//      qid->setOption(QInputDialog::UseListViewForComboBoxItems);
-//      qid->setWindowModality(Qt::WindowModality::ApplicationModal);
-//      qid->setInputMode(QInputDialog::TextInput);
-//      qid->setWindowTitle(tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")) );
-//      qid->setLabelText(tr("Enter a new file name or select<br>an existing file to overwrite.") );
-//      qid->setComboBoxEditable(true);
-//      qid->setComboBoxItems(sl_conf);
-//      qid->exec();
-//      if (qid->result() == QDialog::Accepted) {
-//         filename = qid->textValue();
-//         filename = filename.simplified();      // multiple whitespace to one space
-//         filename = filename.replace(' ', '_'); // replace spaces with underscores
-//      } // if accepted
-//
-//      // if we have a filename try to save the file
-//      if (! filename.isEmpty() ) {
-//         vlist.clear();
-//         vlist<< QVariant::fromValue(QString(VPN_PATH));
-//         vlist << QVariant::fromValue(filename);
-//         vlist << QVariant::fromValue(ui.plainTextEdit_main->toPlainText() );
-//         iface_pfl->callWithCallback(QLatin1String("saveFile"), vlist, this, SLOT(writeCompleted(qint64)), SLOT(callbackErrorHandler(QDBusError)));
-//      } // if there is a file name
-//   } // if i_sel is File_Save
-//
-//   // cleanup
-//   i_sel = CMST::VPNProvEd_No_Selection;
-//   iface_pfl->deleteLater();
-//   delete qid;
+   // request a list of config files from roothelper
+   QList<QVariant> vlist;
+   vlist << QVariant::fromValue(QString(VPN_PATH));
+   QDBusMessage reply = iface_rh1->callWithArgumentList(QDBus::AutoDetect, QLatin1String("getFileList"), vlist);
+   if (shared::processReply(reply) != QDBusMessage::ReplyMessage) return;
 
+   QStringList sl_conf = reply.arguments().at(0).toStringList();
+   QString filename = QString();
+   qid->setLabelText(tr("Enter a new file name or select<br>an existing file to overwrite.") );
+   qid->setComboBoxEditable(true);
+   qid->setComboBoxItems(sl_conf);
+   qid->exec();
+   if (qid->result() == QDialog::Accepted) {
+      filename = qid->textValue();
+      filename = filename.simplified();      // multiple whitespace to one space
+      filename = filename.replace(' ', '_'); // replace spaces with underscores
+   } // if accepted
+   else return;
 
+   // if we have a filename try to save the file
+   if (! filename.isEmpty() ) {
+      vlist.clear();
+      vlist<< QVariant::fromValue(QString(VPN_PATH));
+      vlist << QVariant::fromValue(filename);
+      vlist << QVariant::fromValue(rtnstr);
+      shared::processReply(iface_rh1->callWithArgumentList(QDBus::AutoDetect, QLatin1String("saveFile"), vlist));
+   } // if there is a file name
 
    return;
 }
+
+//
+// Slot called when a lineEdit emits the textChanged() signal
+// Used to enable the OK button if the input passes basic validation checks.
+// Pass means the input is sufficient to provision a service.  Does not mean
+// it is without error or complete, but it meets the minimum requirements.
+void VPN_Create::checkInput()
+{
+   if (
+      (! ui.lineEdit_name->text().isEmpty())                                                 &&
+      ui.lineEdit_host->hasAcceptableInput()                                                 &&
+      (ui.lineEdit_domain->text().isEmpty() || ui.lineEdit_domain->hasAcceptableInput())     &&
+      (ui.lineEdit_networks->text().isEmpty() || ui.lineEdit_networks->hasAcceptableInput()  )
+      )
+      ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(false);
+   else
+      ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
+
+    return;
+ }
 
 //
 // Slot to enter whats this mode
@@ -214,3 +228,5 @@ void VPN_Create::showWhatsThis()
 {
    QWhatsThis::enterWhatsThisMode();
 }
+
+

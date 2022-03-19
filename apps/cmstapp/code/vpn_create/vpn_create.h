@@ -30,6 +30,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QDialog>
 # include <QWhatsThis>
 # include <QtDBus/QtDBus>
+# include <QDBusInterface>
+# include <QInputDialog>
 
 # include "ui_vpn_create.h"
 
@@ -44,10 +46,12 @@ class VPN_Create : public QDialog
    private:
    // members
       Ui::VPN_Create ui;
+      QDBusInterface* iface_rh1;
+      QInputDialog* qid;
 
    private slots:
+      void createFile();
       void checkInput();
-      void writeFile();
       void showWhatsThis();
 
    public:

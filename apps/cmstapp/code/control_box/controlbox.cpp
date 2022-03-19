@@ -1008,8 +1008,8 @@ void ControlBox::createVPN()
    vpncreator->setIconSize(iconscale);
 
    vpncreator->exec();
-   vpncreator->deleteLater();
 
+   delete vpncreator;
    return;
 }
 
