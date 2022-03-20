@@ -35,7 +35,7 @@ DEALINGS IN THE SOFTWARE.
 
 # include "ui_vpn_create.h"
 
-//  The class to control the properties editor UI based on a QDialog
+//  The class to control the VPN create dialog UI which is based on a QDialog
 class VPN_Create : public QDialog
 {
    Q_OBJECT
@@ -58,6 +58,5 @@ class VPN_Create : public QDialog
       inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
       inline void setIconSize (float sz) {ui.toolButton_whatsthis->setIconSize(ui.toolButton_whatsthis->icon().actualSize(QSize(16,16) *= sz) ); }
 };
-
 
 #endif

@@ -25,14 +25,7 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ***********************************************************************/
 
-// Class to provide the functionallity of the manager.Remove() and manager.Create()
-// methods from the ConnMan vpn manager: net.connman.vpn.Manager. Doing it here for
-// a couple of reasons.  One is that I could only get the the ConnMan functions to
-// work once, no idea what happened after that one time.  More importantly though
-// by doing it this way the user can edit the provisioning file created.
-// This avoids having to remove and recreate a connection if the user had a
-// simple typo in one of the input fields which is what you would need to do if
-// the vpn manager methods were used.
+// Class to provide the functionallity of the VPNmanager.Create() method.
 
 # include <QtCore/QDebug>
 # include <QRegularExpression>
@@ -69,17 +62,27 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
    QRegularExpressionValidator* qrex_46cidr= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_46cidr, false)), this);
       ui.lineEdit_host->setValidator(qrex_46cidr);
 
+   QRegularExpressionValidator* qrex_46cidrp= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_46cidr, true)), this);
+      ui.lineEdit_05_dns->setValidator(qrex_46cidrp);
+      ui.lineEdit_05_allowedips->setValidator(qrex_46cidrp);
+
    QRegularExpressionValidator* qrex_dom= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_Dom, false)), this);
       ui.lineEdit_domain->setValidator(qrex_dom);
 
    QRegularExpressionValidator* qrex_networks= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_networks, true)), this);
       ui.lineEdit_networks->setValidator(qrex_networks);
+      ui.lineEdit_05_address->setValidator(qrex_networks);
 
    // Connect signals and slots
    connect (ui.lineEdit_name, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_host, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_domain, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_networks, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
+   connect (ui.lineEdit_05_address, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
+   connect (ui.lineEdit_05_dns, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
+   connect (ui.lineEdit_05_privatekey, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
+   connect (ui.lineEdit_05_publickey, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
+   connect (ui.lineEdit_05_allowedips, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (this, SIGNAL(accepted()), this, SLOT(createFile()));
    connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
 
@@ -130,6 +133,7 @@ void VPN_Create::createFile()
    } // if
 
    // information specific to each VPN type
+   // lines which don't start with an "if" are validated with checkInput() before we get here.
    switch (ui.comboBox_type->currentIndex() )
    {
       case 0:
@@ -164,7 +168,15 @@ void VPN_Create::createFile()
          if (ui.spinBox_04_echointerval->value() > 0) rtnstr.append(QString("PPPD.EchoInterval = %1").arg(ui.spinBox_04_echointerval->value()).append(newline));
          break;
       case 5:
-         qDebug() << "WireGuard";
+         rtnstr.append("WireGuard.Address = ").append(ui.lineEdit_05_address->text().append(newline));
+         if (ui.spinBox_05_listport->value() > 0) rtnstr.append(QString("WireGuard.ListPort = %1").arg(ui.spinBox_05_listport->value()).append(newline));
+         if (! ui.lineEdit_05_dns->text().isEmpty()) rtnstr.append("WireGuard.DNS = ").append(ui.lineEdit_05_dns->text().append(newline));
+         rtnstr.append("WireGuard.PrivateKey = ").append(ui.lineEdit_05_privatekey->text().append(newline));
+         rtnstr.append("WireGuard.PublicKey = ").append(ui.lineEdit_05_publickey->text().append(newline));
+         if (! ui.lineEdit_05_presharedkey->text().isEmpty()) rtnstr.append("WireGuard.PresharedKey = ").append(ui.lineEdit_05_presharedkey->text().append(newline));
+         rtnstr.append("WireGuard.AllowedIPs = ").append(ui.lineEdit_05_allowedips->text().append(newline));
+         if (ui.spinBox_05_endpointport->value() > 0) rtnstr.append(QString("WireGuard.EndpointPort = %1").arg(ui.spinBox_05_endpointport->value()).append(newline));
+         if (ui.spinBox_05_keepalive->value() > 9) rtnstr.append(QString("WireGuard.PersistentKeepalive = %1").arg(ui.spinBox_05_keepalive->value()).append(newline));
          break;
       default:
          break;
@@ -209,10 +221,15 @@ void VPN_Create::createFile()
 void VPN_Create::checkInput()
 {
    if (
-      (! ui.lineEdit_name->text().isEmpty())                                                 &&
-      ui.lineEdit_host->hasAcceptableInput()                                                 &&
-      (ui.lineEdit_domain->text().isEmpty() || ui.lineEdit_domain->hasAcceptableInput())     &&
-      (ui.lineEdit_networks->text().isEmpty() || ui.lineEdit_networks->hasAcceptableInput()  )
+      (! ui.lineEdit_name->text().isEmpty())                                                                                        &&
+      ui.lineEdit_host->hasAcceptableInput()                                                                                        &&
+      (ui.lineEdit_domain->text().isEmpty() || ui.lineEdit_domain->hasAcceptableInput())                                            &&
+      (ui.lineEdit_networks->text().isEmpty() || ui.lineEdit_networks->hasAcceptableInput())                                        &&
+      (ui.comboBox_type->currentIndex() != 5 || ui.lineEdit_05_address->hasAcceptableInput())                                       &&
+      (ui.comboBox_type->currentIndex() != 5 || ui.lineEdit_05_dns->text().isEmpty() || ui.lineEdit_05_dns->hasAcceptableInput())   &&
+      (ui.comboBox_type->currentIndex() != 5 || ! ui.lineEdit_05_privatekey->text().isEmpty())                                      &&
+      (ui.comboBox_type->currentIndex() != 5 || ! ui.lineEdit_05_publickey->text().isEmpty())                                       &&
+      (ui.comboBox_type->currentIndex() != 5 || ui.lineEdit_05_allowedips->hasAcceptableInput())
       )
       ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(false);
    else

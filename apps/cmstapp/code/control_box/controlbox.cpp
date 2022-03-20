@@ -998,7 +998,14 @@ void ControlBox::editPressed()
    return;
 }
 
-// test create VPN
+// Functions createVPN() and removeVPN() are to provide the functionallity of the manager.Remove() and manager.Create()
+// methods from the ConnMan vpn manager: net.connman.vpn.Manager. Doing it here for a couple of reasons.  One is that
+// I could only get the the ConnMan functions to work once, no idea what happened after that one time.  More importantly
+// though by doing it this way the user can edit the provisioning file created. This avoids having to remove and recreate
+// a connection if the user had a simply typo in one of the input fields which is what you would need to do it if the
+// vpn manager methods were used.
+//
+// Create  a provisioned VPN service without going into the VPN Provisioning editor.
 void ControlBox::createVPN()
 {
    VPN_Create* vpncreator = new VPN_Create(this, f_connmanversion);
@@ -1022,7 +1029,7 @@ void ControlBox::removeVPN()
    vlist << QVariant::fromValue(QString(VPN_PATH));
    QDBusInterface* iface_rh1 = new QDBusInterface("org.cmst.roothelper", "/", "org.cmst.roothelper", QDBusConnection::systemBus(), this);
    QDBusMessage reply = iface_rh1->callWithArgumentList(QDBus::AutoDetect, QLatin1String("getFileList"), vlist);
-   if (reply.type() != QDBusMessage::ReplyMessage) {
+   if (shared::processReply(reply) != QDBusMessage::ReplyMessage) {
       iface_rh1->deleteLater();
       return;
    }
