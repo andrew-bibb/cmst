@@ -73,6 +73,11 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
       ui.lineEdit_networks->setValidator(qrex_networks);
       ui.lineEdit_05_address->setValidator(qrex_networks);
 
+   // disable newer features if Connman does not support them
+   if (ver <= 1.37f) {
+      ui.stackedWidget->widget(5)->setDisabled(true); // no wireguard
+   } // if
+
    // Connect signals and slots
    connect (ui.lineEdit_name, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_host, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
