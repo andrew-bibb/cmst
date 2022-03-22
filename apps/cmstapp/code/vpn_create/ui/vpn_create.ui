@@ -201,7 +201,7 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_02_grouppassword_2">
+          <widget class="QLineEdit" name="lineEdit_02_grouppassword">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your group password in cleartext.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -222,21 +222,21 @@
           </widget>
          </item>
          <item row="0" column="3">
-          <widget class="QLineEdit" name="lineEdit_02_username_2">
+          <widget class="QLineEdit" name="lineEdit_02_username">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your Xauth username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_02_groupusername_2">
+          <widget class="QLineEdit" name="lineEdit_02_groupusername">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your group username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item row="1" column="3">
-          <widget class="QLineEdit" name="lineEdit_02_password_2">
+          <widget class="QLineEdit" name="lineEdit_02_password">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your Xauth password in clear text.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -254,7 +254,7 @@
           </widget>
          </item>
          <item row="0" column="1" colspan="2">
-          <widget class="QLineEdit" name="lineEdit_02_applicationversion_2">
+          <widget class="QLineEdit" name="lineEdit_02_applicationversion">
            <property name="whatsThis">
             <string>Application Version to report. Note: Default string is generated at runtime.
 Default: Cisco Systems VPN Client 0.5.3:Linux</string>
@@ -269,7 +269,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="1" column="1" colspan="2">
-          <widget class="QLineEdit" name="lineEdit_02_domain_2">
+          <widget class="QLineEdit" name="lineEdit_02_domain">
            <property name="whatsThis">
             <string>(NT-) Domain name for authentication</string>
            </property>
@@ -280,14 +280,14 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
        <item>
         <layout class="QGridLayout" name="gridLayout_9">
          <item row="3" column="0">
-          <widget class="QLabel" name="label_02_diffiehellmangroup_2">
+          <widget class="QLabel" name="label_02_pfs">
            <property name="text">
             <string>Diffie-Hellman Group</string>
            </property>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QComboBox" name="_02_ikeauthenticationmodecomboBox_2">
+          <widget class="QComboBox" name="comboBox_02_ikeauthenticationmode">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Authentication mode: &lt;/p&gt;&lt;p&gt;psk: pre-shared key (default)&lt;/p&gt;&lt;p&gt;cert: server + client certificate (not implemented yet) &lt;/p&gt;&lt;p&gt;hybrid: server certificate + xauth (if built with openssl support)&lt;/p&gt;&lt;p&gt;&lt;br/&gt;Default: psk&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -309,7 +309,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QComboBox" name="comboBox_02_diffiehellmangroup_2">
+          <widget class="QComboBox" name="comboBox_02_pfs">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Diffie-Hellman group to use for Perfect Forward Secrecy (PFS).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -351,7 +351,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="4" column="1">
-          <widget class="QSpinBox" name="spinBox_02_localport_2">
+          <widget class="QSpinBox" name="spinBox_02_localport">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local ISAKMP port number to use (0 == use random port).&lt;/p&gt;&lt;p&gt;Default: 500&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -371,7 +371,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QSpinBox" name="spinBox_02_udpport_2">
+          <widget class="QSpinBox" name="spinBox_02_udpport">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local UDP port number to use (0 == use random port). This is only relevant if cisco-udp nat-traversal is used. This is the _local_ port, the remote udp port is discovered automatically. It is especially not the cisco-tcp port.&lt;/p&gt;&lt;p&gt;Default: 10000&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -391,7 +391,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QComboBox" name="comboBox_02_ikedhgroup_2">
+          <widget class="QComboBox" name="comboBox_02_ikedhgroup">
            <property name="whatsThis">
             <string>Name of the IKE DH Group</string>
            </property>
@@ -430,7 +430,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="1" column="3">
-          <widget class="QComboBox" name="comboBox_02_vendor_2">
+          <widget class="QComboBox" name="comboBox_02_vendor">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vendor of your IPSec gateway.&lt;/p&gt;&lt;p&gt;Default: cisco&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -454,7 +454,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="2" column="3">
-          <widget class="QComboBox" name="comboBox_02_nattmode_2">
+          <widget class="QComboBox" name="comboBox_02_nattmode">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Which NAT-Traversal Method to use:&lt;/p&gt;&lt;p&gt;natt -- NAT-T as defined in RFC3947&lt;/p&gt;&lt;p&gt;none -- disable use of any NAT-T method &lt;/p&gt;&lt;p&gt;force-natt -- always use NAT-T encapsulation even without presence of a NAT device (useful if the OS captures all ESP traffic)&lt;/p&gt;&lt;p&gt;cisco-udp -- Cisco proprietary UDP encapsulation, commonly over Port 10000 Note: cisco-tcp encapsulation is not yet supported &lt;/p&gt;&lt;p&gt;Default: natt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -491,7 +491,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="3" column="3">
-          <widget class="QSpinBox" name="spinBox_02_dpdt_2">
+          <widget class="QSpinBox" name="spinBox_02_dpdt">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Send DPD packet after not receiving anything for &lt;span style=&quot; font-style:italic;&quot;&gt;idle&lt;/span&gt; seconds. Use 0 to disable DPD completely (both ways). &lt;/p&gt;&lt;p&gt;Default: 600&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -511,7 +511,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="4" column="3">
-          <widget class="QComboBox" name="comboBox_02_interfacemode_2">
+          <widget class="QComboBox" name="comboBox_02_interfacemode">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mode of TUN/TAP interface:&lt;/p&gt;&lt;p&gt;tun: virtual point to point interface (default) &lt;/p&gt;&lt;p&gt;tap: virtual ethernet interface&lt;/p&gt;&lt;p&gt;Default: tun&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -528,7 +528,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="5" column="2">
-          <widget class="QCheckBox" name="checkBox_02_singledes_2">
+          <widget class="QCheckBox" name="checkBox_02_singledes">
            <property name="whatsThis">
             <string>Enables weak single DES encryption</string>
            </property>
@@ -538,7 +538,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="5" column="3">
-          <widget class="QCheckBox" name="checkBox_02_noencryption_2">
+          <widget class="QCheckBox" name="checkBox_02_noencryption">
            <property name="whatsThis">
             <string>Enables using no encryption for data traffic (key exchanged must be encrypted)</string>
            </property>

@@ -83,6 +83,7 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
    connect (ui.lineEdit_host, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_domain, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_networks, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
+   connect (ui.lineEdit_02_groupusername, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_05_address, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_05_dns, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_05_privatekey, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
@@ -148,7 +149,23 @@ void VPN_Create::createFile()
          qDebug() << "OpenVPN";
          break;
       case 2:
-        qDebug() << "VPNC";
+        if (! ui.lineEdit_02_groupusername->text().isEmpty()) rtnstr.append("VPNC.IPSec.ID = ").append(ui.lineEdit_02_groupusername->text().append(newline));
+        if (! ui.lineEdit_02_grouppassword->text().isEmpty()) rtnstr.append("VPNC.IPSec.Secret = ").append(ui.lineEdit_02_grouppassword->text().append(newline));
+        if (! ui.lineEdit_02_username->text().isEmpty()) rtnstr.append("VPNC.Xauth.Username = ").append(ui.lineEdit_02_username->text().append(newline));
+        if (! ui.lineEdit_02_password->text().isEmpty()) rtnstr.append("VPNC.Xauth.Password = ").append(ui.lineEdit_02_password->text().append(newline));
+        if (! ui.lineEdit_02_applicationversion->text().isEmpty()) rtnstr.append("VPNC.AppVersion = ").append(ui.lineEdit_02_applicationversion->text().append(newline));
+        if (! ui.lineEdit_02_domain->text().isEmpty()) rtnstr.append("VPNC.Domain = ").append(ui.lineEdit_02_domain->text().append(newline));
+        rtnstr.append("VPNC.IKE.Authmode = ").append(ui.comboBox_02_ikeauthenticationmode->currentText().append(newline));
+        rtnstr.append("VPNC.IKE.DHGroup = ").append(ui.comboBox_02_ikedhgroup->currentText().append(newline));
+        rtnstr.append("VPNC.PFS = ").append(ui.comboBox_02_pfs->currentText().append(newline));
+        rtnstr.append(QString("VPNC.LocalPort = %1").arg(ui.spinBox_02_localport->value()).append(newline));
+        rtnstr.append(QString("VPNC.CiscoPort = %1").arg(ui.spinBox_02_udpport->value()).append(newline));
+        rtnstr.append("VPNC.Vendor = ").append(ui.comboBox_02_vendor->currentText().append(newline));
+        rtnstr.append("VPNC.NATTMode = ").append(ui.comboBox_02_nattmode->currentText().append(newline));
+        rtnstr.append(QString("VPNC.DPDTimeout = %1").arg(ui.spinBox_02_dpdt->value()).append(newline));
+        rtnstr.append("VPNC.DeviceType = ").append(ui.comboBox_02_interfacemode->currentText().append(newline));
+        if (ui.checkBox_02_singledes->isChecked()) rtnstr.append("VPNC.SingleDES").append(eqyes);
+        if (ui.checkBox_02_noencryption->isChecked()) rtnstr.append("VPNC.NoEncryption").append(eqyes);
         break;
       case 3:
          qDebug() << "L2TP";
@@ -230,6 +247,7 @@ void VPN_Create::checkInput()
       ui.lineEdit_host->hasAcceptableInput()                                                                                        &&
       (ui.lineEdit_domain->text().isEmpty() || ui.lineEdit_domain->hasAcceptableInput())                                            &&
       (ui.lineEdit_networks->text().isEmpty() || ui.lineEdit_networks->hasAcceptableInput())                                        &&
+      (ui.comboBox_type->currentIndex() != 2 || ! ui.lineEdit_02_groupusername->text().isEmpty())                                   &&
       (ui.comboBox_type->currentIndex() != 5 || ui.lineEdit_05_address->hasAcceptableInput())                                       &&
       (ui.comboBox_type->currentIndex() != 5 || ui.lineEdit_05_dns->text().isEmpty() || ui.lineEdit_05_dns->hasAcceptableInput())   &&
       (ui.comboBox_type->currentIndex() != 5 || ! ui.lineEdit_05_privatekey->text().isEmpty())                                      &&
