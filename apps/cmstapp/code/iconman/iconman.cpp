@@ -215,7 +215,7 @@ bool IconManager::buildResourceIcon(QIcon& icon, const QString& name, const QStr
          if (QFileInfo(name_off.section(' ', 0, 0)).exists() )
             icon.addPixmap(processArt(name_off, qc_col), QIcon::Normal, QIcon::Off);
       } // if name_off not empty
-qDebug() << name << qc_col;
+
       icon.addPixmap(processArt(name_on, qc_col), QIcon::Normal, QIcon::On);
       return true;
    } // if name_on exists

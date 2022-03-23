@@ -41,14 +41,9 @@ DEALINGS IN THE SOFTWARE.
 
 # define VPN_PATH "/var/lib/connman-vpn"
 
-////////////////// TESTING
-
-# include "./code/iconman/iconman.h"
-
-
 //
 // Constructor
-VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
+VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon) : QDialog(parent)
 {
    // Setup the user interface
    ui.setupUi(this);
@@ -87,15 +82,10 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
 
    // QActionGroup and QActions
    qag = new QActionGroup(this);
-
-////////////////// TESTING
-   IconManager* im = new IconManager(this);
-
-   action_03_authfile = new QAction(im->getIcon("document-open"), "Authority File", this);
+   action_03_authfile = new QAction(fileicon, "Authority File", qag);
    action_03_authfile->setToolTip(tr("Select the L2TP Authority file"));
    ui.lineEdit_03_authfile->addAction(action_03_authfile, QLineEdit::TrailingPosition);
 
-   delete im;
 
 
    // Connect signals and slots

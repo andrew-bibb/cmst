@@ -1008,7 +1008,7 @@ void ControlBox::editPressed()
 // Create  a provisioned VPN service without going into the VPN Provisioning editor.
 void ControlBox::createVPN()
 {
-   VPN_Create* vpncreator = new VPN_Create(this, f_connmanversion);
+   VPN_Create* vpncreator = new VPN_Create(this, f_connmanversion, iconman->getIcon("document-open"));
 
    // Set the whatsthis button icon
    vpncreator->setWhatsThisIcon(iconman->getIcon("whats_this") );

@@ -33,6 +33,7 @@ DEALINGS IN THE SOFTWARE.
 # include <QDBusInterface>
 # include <QInputDialog>
 # include <QActionGroup>
+# include <QIcon>
 
 # include "ui_vpn_create.h"
 
@@ -42,7 +43,7 @@ class VPN_Create : public QDialog
    Q_OBJECT
 
    public:
-      VPN_Create(QWidget*, const float&);
+      VPN_Create(QWidget*, const float&, const QIcon&);
 
    private:
    // members
