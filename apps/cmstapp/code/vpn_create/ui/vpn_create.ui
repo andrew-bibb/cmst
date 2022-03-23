@@ -150,7 +150,7 @@
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>2</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="OpenConnect">
       <widget class="QLabel" name="label">
@@ -563,6 +563,29 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
        </property>
        <property name="text">
         <string>L2TP Under Construction</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label__03_authfile">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>170</y>
+         <width>111</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Authentication File</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_03_authfile">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>170</y>
+         <width>331</width>
+         <height>23</height>
+        </rect>
        </property>
       </widget>
      </widget>

@@ -209,14 +209,13 @@ bool IconManager::buildResourceIcon(QIcon& icon, const QString& name, const QStr
    if (s_col.contains("yes", Qt::CaseInsensitive) || s_col == "1" ) qc_col = icon_color;
    else if (s_col.size() == 6) qc_col.setNamedColor(QString("#" + s_col) );
 
-
    // check to see if the names exist, if they do build the icon
    if (QFileInfo(name_on.section(' ', 0, 0)).exists() ) {
       if (! name_off.isEmpty() ) {
          if (QFileInfo(name_off.section(' ', 0, 0)).exists() )
             icon.addPixmap(processArt(name_off, qc_col), QIcon::Normal, QIcon::Off);
       } // if name_off not empty
-
+qDebug() << name << qc_col;
       icon.addPixmap(processArt(name_on, qc_col), QIcon::Normal, QIcon::On);
       return true;
    } // if name_on exists
@@ -308,7 +307,7 @@ QString IconManager::getFallback(const QString& name)
 }
 
 //
-// Function to make a local version of the configuration fiqle
+// Function to make a local version of the configuration file
 void IconManager::makeLocalFile()
 {
    // constants

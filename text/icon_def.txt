@@ -2,15 +2,15 @@
 #
 # This icon definition file, located in the user's home directory, can be
 # edited.  The purpose of this file is to facilitate the use of theme icons
-# that are not part of the official Freedesktop.org naming specification. 
-# 
-# QT provides very good icon selection with a fallback mechanism.  In order
-# to use it one must know the name of the theme icon you want.  This is 
-# not a problem with the official named icons, but is if you want to support
-# any icon theme since the name of any icon not part of the official 
-# Freedesktop.org specification is up to the theme author.   
+# that are not part of the official Freedesktop.org naming specification.
 #
-# This file basically describes the pictures to use for each icon.  Format 
+# QT provides very good icon selection with a fallback mechanism.  In order
+# to use it one must know the name of the theme icon you want.  This is
+# not a problem with the official named icons, but is if you want to support
+# any icon theme since the name of any icon not part of the official
+# Freedesktop.org specification is up to the theme author.
+#
+# This file basically describes the pictures to use for each icon.  Format
 # of the file is as follows:
 #
 # Comments are the # sign.  Any text on a line after the first # is treated
@@ -30,15 +30,15 @@
 # resources using this file.  This key/value pair is mandatory.
 #
 #	colorize = (no/yes, 0/1, or a color in the format RRGGBB) if yes or 1
-# the internal icons will be colorized according to the value specified 
+# the internal icons will be colorized according to the value specified
 # from preferences.  If a color number is provided the icon will be colorized
 # to the specified color.  If no or 0 then the icon is not colorized.
-# Colorizing is only available for internal icons defined in the resource line. 
+# Colorizing is only available for internal icons defined in the resource line.
 #
 # fdo_name = is the name of one of the official Freedesktop.org named icons.
 # This key/value pair is optional.
 #
-# theme_names = is a comma (,) separated list of theme icon names which 
+# theme_names = is a comma (,) separated list of theme icon names which
 # are not part of the Freedesktop.org specification. The list will be
 # searched in order looking for each icon name in the current theme.
 # This key/value pair is also optional.
@@ -55,7 +55,7 @@
 # overlay file to place over the raw_art icon. This is only for
 # internal icons from the resource file.
 #
-# If this file becomes corrupted by editing or by other means is can be 
+# If this file becomes corrupted by editing or by other means is can be
 # regenerated simply by deleting it, then stopping and starting CMST.
 #
 # Icon selections at runtime are as follows:
@@ -63,7 +63,7 @@
 # used then the resource name specified here is used if found, if not found
 # the hard coded internal icon will be used.
 #
-# If the -i (--icon-theme) command line switch or preferences settings is used     
+# If the -i (--icon-theme) command line switch or preferences settings is used
 # then icons are searched in the following order until one is found:
 #   theme_names from left to right (match will only occur if one of the names
 #               can be found in the current or specified theme.)
@@ -103,9 +103,9 @@ fdo_name = network-offline
 theme_names = network-offline, network-disconnect
 
 [icon]
-# This icon is only used in the wifi tab, not elsewhere.  Default is to same as state_not_ready 
+# This icon is only used in the wifi tab, not elsewhere.  Default is to same as state_not_ready
 # If you would prefer not to see any icon in the connected column uncomment the resource blank.png
-# line and remove the as shipped resource, colorize, fdo_name, and theme_names lines  
+# line and remove the as shipped resource, colorize, fdo_name, and theme_names lines
 icon_name = wifi_tab_state_not_ready
 #resource = :/icons/images/raw_art/blank.png
 resource = :/icons/images/raw_art/network-offline.png :/icons/images/overlay/overlay-warningnet9.png
@@ -215,4 +215,11 @@ theme-names = network-vpn.png, emblem-locked.png
 icon_name = connection_vpn_acquiring
 resource = :/icons/images/raw_art/network-vpn-acquiring.png
 colorize = yes
+
+[icon]
+icon_name = document-open
+resource = :/icons/images/raw_art/document-open.png
+colorize = yes
+fdo_name = document-open
+
 

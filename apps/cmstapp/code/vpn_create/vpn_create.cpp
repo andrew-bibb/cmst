@@ -30,6 +30,8 @@ DEALINGS IN THE SOFTWARE.
 # include <QtCore/QDebug>
 # include <QRegularExpression>
 # include <QRegularExpressionValidator>
+# include <QFileDialog>
+# include <QDir>
 
 # include "./code/vpn_create/vpn_create.h"
 # include "./code/trstring/tr_strings.h"
@@ -38,6 +40,11 @@ DEALINGS IN THE SOFTWARE.
 
 
 # define VPN_PATH "/var/lib/connman-vpn"
+
+////////////////// TESTING
+
+# include "./code/iconman/iconman.h"
+
 
 //
 // Constructor
@@ -78,6 +85,19 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
       ui.stackedWidget->widget(5)->setDisabled(true); // no wireguard
    } // if
 
+   // QActionGroup and QActions
+   qag = new QActionGroup(this);
+
+////////////////// TESTING
+   IconManager* im = new IconManager(this);
+
+   action_03_authfile = new QAction(im->getIcon("document-open"), "Authority File", this);
+   action_03_authfile->setToolTip(tr("Select the L2TP Authority file"));
+   ui.lineEdit_03_authfile->addAction(action_03_authfile, QLineEdit::TrailingPosition);
+
+   delete im;
+
+
    // Connect signals and slots
    connect (ui.lineEdit_name, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_host, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
@@ -90,6 +110,7 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver) : QDialog(parent)
    connect (ui.lineEdit_05_publickey, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_05_allowedips, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (this, SIGNAL(accepted()), this, SLOT(createFile()));
+   connect (qag, SIGNAL(triggered(QAction*)), this, SLOT(processAction(QAction*)));
    connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
 
    // set index to something we're working on
@@ -259,7 +280,19 @@ void VPN_Create::checkInput()
       ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
 
     return;
- }
+}
+
+//
+// Slot called when the QActionGroup qag issues a triggered action
+void VPN_Create::processAction(QAction* act)
+{
+   QString filterstring = tr("All Files (*.*)");
+   QString filepath = QDir::homePath();
+
+   if (act == action_03_authfile) ui.lineEdit_03_authfile->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
+
+   return;
+}
 
 //
 // Slot to enter whats this mode
