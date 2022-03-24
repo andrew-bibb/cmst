@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>493</width>
-    <height>586</height>
+    <width>534</width>
+    <height>565</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,9 +19,6 @@
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QGroupBox" name="groupBox">
-     <property name="title">
-      <string>General</string>
-     </property>
      <layout class="QFormLayout" name="formLayout">
       <item row="0" column="0">
        <widget class="QLabel" name="label_type">
@@ -552,42 +549,469 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
       </layout>
      </widget>
      <widget class="QWidget" name="L2TP">
-      <widget class="QLabel" name="label_4">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>20</y>
-         <width>211</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>L2TP Under Construction</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label__03_authfile">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>170</y>
-         <width>111</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Authentication File</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_03_authfile">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>170</y>
-         <width>331</width>
-         <height>23</height>
-        </rect>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>482</width>
+            <height>722</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="title">
+              <string>L2TPOptions</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <layout class="QGridLayout" name="gridLayout_6">
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="lineEdit_02_user">
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP user name. If left blank you will be asked for a username by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_02_password">
+                  <property name="text">
+                   <string>Password:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_02_user">
+                  <property name="text">
+                   <string>User:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="lineEdit_02_password_2">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP password. If left blank the password will be asked from the user by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="whatsThis">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP password. If left blank you will be asked for the password by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label__03_authfile">
+                  <property name="text">
+                   <string>Authentication File</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="lineEdit_03_authfile"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="gridLayout_3">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_02_bps">
+                  <property name="text">
+                   <string>BPS</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QSpinBox" name="spinBox_02_bps">
+                  <property name="maximum">
+                   <number>99999</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QLabel" name="label_02_defaultroute">
+                  <property name="text">
+                   <string>Default Route</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QLineEdit" name="lineEdit_02_defaultroute"/>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_02_txbps">
+                  <property name="text">
+                   <string>TX BPS</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QSpinBox" name="spinBox_02_txbps">
+                  <property name="maximum">
+                   <number>99999</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QLabel" name="label_02_listenaddress">
+                  <property name="text">
+                   <string>Listen Address</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QLineEdit" name="lineEdit_02_listenaddress"/>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_02_rxbps">
+                  <property name="text">
+                   <string>RX BPS</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QSpinBox" name="spinBox_02_rxbps">
+                  <property name="maximum">
+                   <number>99999</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QLabel" name="label_02_port">
+                  <property name="text">
+                   <string>UDP Port</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3">
+                 <widget class="QSpinBox" name="spinBox_port">
+                  <property name="maximum">
+                   <number>65535</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_02_tunnelrws">
+                  <property name="text">
+                   <string>Tunnel RWS</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QSpinBox" name="spinBox_02_tunnelrws">
+                  <property name="maximum">
+                   <number>99999</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="gridLayout_10">
+                <item row="8" column="0">
+                 <widget class="QCheckBox" name="checkBox_02_redial">
+                  <property name="text">
+                   <string>Redial</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QCheckBox" name="checkBox_02_requirepap">
+                  <property name="text">
+                   <string>Require PAP</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="1">
+                 <widget class="QCheckBox" name="checkBox_02_ipsecsaref">
+                  <property name="text">
+                   <string>IPsec Security Association</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QCheckBox" name="checkBox_02_requirechap">
+                  <property name="text">
+                   <string>Require CHAP</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QCheckBox" name="checkBox_requireauth">
+                  <property name="text">
+                   <string>Require Authentication</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QCheckBox" name="checkBox_02_lengthbit">
+                  <property name="text">
+                   <string>Use Length Bit</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QCheckBox" name="checkBox_challenge">
+                  <property name="text">
+                   <string>Challenge Authentication</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QCheckBox" name="checkBox_02_flowbit">
+                  <property name="text">
+                   <string>Flow Bit</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QCheckBox" name="checkBox_02_accesscontrol">
+                  <property name="text">
+                   <string>Access Control</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="1">
+                 <widget class="QCheckBox" name="checkBox_02_exclusive">
+                  <property name="text">
+                   <string>Exclusive</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="gridLayout_11">
+                <item row="0" column="2">
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QSpinBox" name="spinBox_02_redialtimeout">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="maximum">
+                   <number>360</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_02_redialtimeout">
+                  <property name="text">
+                   <string>Redial Timeout</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_02_maxredials">
+                  <property name="text">
+                   <string>Maximum Redials</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <spacer name="horizontalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QSpinBox" name="spinBox_02_maxredials">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="maximum">
+                   <number>999</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
+              <string>PPTP Options</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="3" column="1">
+               <widget class="QCheckBox" name="checkBox_02_noaccomp">
+                <property name="text">
+                 <string>Disable Address Control Compression</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QCheckBox" name="checkBox_02_nodeflate">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disables Deflate compression; pppd will not request or agree to compress packets using the Deflate scheme.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Disable Deflate Compression</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QCheckBox" name="checkBox_02_novj">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable Van Jacobson style TCP/IP header compression in both the transmit and the receive direction.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Disable Van Jacobson Compression</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QCheckBox" name="checkBox_02_nopcomp">
+                <property name="whatsThis">
+                 <string>Disable protocol field compression negotiation in both the receive and the transmit direction.</string>
+                </property>
+                <property name="text">
+                 <string>Disable Protocol Compression</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QCheckBox" name="checkBox_02_nobsdcomp">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disables BSD-Compress compression; pppd will not request or agree to compress packets using the BSD-Compress scheme.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Disable BSD Compression</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QCheckBox" name="checkBox_02_debug">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables  connection  debugging  facilities.  If this option is given, pppd will log the contents of all control packets sent or received in a readable form.  The packets are logged through syslog with facility daemon and level debug.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Debug</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QCheckBox" name="checkBox_02_requiremppe40">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE, with 40-bit encryption.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Require MPPE40</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QCheckBox" name="checkBox_02_requiremppe128">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE, with 128-bit encryption.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Require MPPE128</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="checkBox_02_refuseeap">
+                <property name="whatsThis">
+                 <string>With this option, pppd will not agree to authenticate itself to the peer using EAP.</string>
+                </property>
+                <property name="text">
+                 <string>Refuse EAP</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QCheckBox" name="checkBox_02_refusepap">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using PAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Refuse PAP</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QCheckBox" name="checkBox_02_refusechap">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using CHAP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Refuse CHAP</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QCheckBox" name="checkBox_02_refusemschap">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using MS-CHAP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Refuse MS CHAP</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QCheckBox" name="checkBox_02_refusemschap2">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using MS-CHAPv2.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Refuse MS CHAP 2</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QCheckBox" name="checkBox_02_requiremppe">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE (Microsoft Point to Point Encryption).  This option disables all other compression types.  This option  enables  both 40-bit  and  128-bit  encryption.   In  order for MPPE to successfully come up, you must have authenticated with either MS-CHAP or MS-CHAPv2. This option is presently only supported under Linux, and only if your kernel has been configured to include MPPE support.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Require MPPE</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QCheckBox" name="checkBox_02_mppestateful">
+                <property name="whatsThis">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allow MPPE to use stateful mode.  Stateless mode is still attempted first.  The default is to disallow stateful mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Allow MPPE Stateful Mode</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="PPTP">
       <layout class="QGridLayout" name="gridLayout_2">
@@ -628,13 +1052,13 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
        </item>
        <item row="1" column="0">
         <layout class="QGridLayout" name="gridLayout_5">
-         <item row="2" column="0">
-          <widget class="QCheckBox" name="checkBox_04_refusepap">
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="checkBox_04_refusemschap">
            <property name="whatsThis">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using PAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using MS-CHAP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="text">
-            <string>Refuse PAP</string>
+            <string>Refuse MS CHAP</string>
            </property>
           </widget>
          </item>
@@ -648,7 +1072,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
            </property>
           </widget>
          </item>
-         <item row="7" column="1">
+         <item row="8" column="1">
           <widget class="QSpinBox" name="spinBox_04_echofailure">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -661,23 +1085,23 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
            </property>
           </widget>
          </item>
-         <item row="5" column="1">
-          <widget class="QCheckBox" name="checkBox_04_requiremppe128">
+         <item row="10" column="0">
+          <widget class="QLabel" name="label_04_echointerval">
            <property name="whatsThis">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE, with 128-bit encryption.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string/>
            </property>
            <property name="text">
-            <string>Require MPPE128</string>
+            <string>Dead Peer Check Interval</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="0">
-          <widget class="QCheckBox" name="checkBox_04_debug">
+         <item row="4" column="0">
+          <widget class="QCheckBox" name="checkBox_04_refusemschap2">
            <property name="whatsThis">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables  connection  debugging  facilities.  If this option is given, pppd will log the contents of all control packets sent or received in a readable form.  The packets are logged through syslog with facility daemon and level debug.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using MS-CHAPv2.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="text">
-            <string>Debug</string>
+            <string>Refuse MS CHAP 2</string>
            </property>
           </widget>
          </item>
@@ -691,47 +1115,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="1">
-          <widget class="QCheckBox" name="checkBox_04_mppestateful">
-           <property name="whatsThis">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allow MPPE to use stateful mode.  Stateless mode is still attempted first.  The default is to disallow stateful mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string>Allow MPPE Stateful Mode</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QCheckBox" name="checkBox_04_refuseeap">
-           <property name="whatsThis">
-            <string>With this option, pppd will not agree to authenticate itself to the peer using EAP.</string>
-           </property>
-           <property name="text">
-            <string>Refuse EAP</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QCheckBox" name="checkBox_04_refusemschap">
-           <property name="whatsThis">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using MS-CHAP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string>Refuse MS CHAP</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QCheckBox" name="checkBox_04_requiremppe">
-           <property name="whatsThis">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE (Microsoft Point to Point Encryption).  This option disables all other compression types.  This option  enables  both 40-bit  and  128-bit  encryption.   In  order for MPPE to successfully come up, you must have authenticated with either MS-CHAP or MS-CHAPv2. This option is presently only supported under Linux, and only if your kernel has been configured to include MPPE support.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string>Require MPPE</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
+         <item row="2" column="0">
           <widget class="QCheckBox" name="checkBox_04_refusechap">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using CHAP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -742,22 +1126,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           </widget>
          </item>
          <item row="5" column="0">
-          <widget class="QCheckBox" name="checkBox_04_refusemschap2">
+          <widget class="QCheckBox" name="checkBox_04_requiremppe">
            <property name="whatsThis">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using MS-CHAPv2.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE (Microsoft Point to Point Encryption).  This option disables all other compression types.  This option  enables  both 40-bit  and  128-bit  encryption.   In  order for MPPE to successfully come up, you must have authenticated with either MS-CHAP or MS-CHAPv2. This option is presently only supported under Linux, and only if your kernel has been configured to include MPPE support.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="text">
-            <string>Refuse MS CHAP 2</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="label_04_echofailure">
-           <property name="whatsThis">
-            <string/>
-           </property>
-           <property name="text">
-            <string>Dead Peer Check Count</string>
+            <string>Require MPPE</string>
            </property>
           </widget>
          </item>
@@ -771,7 +1145,37 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
            </property>
           </widget>
          </item>
-         <item row="9" column="1">
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="checkBox_04_refuseeap">
+           <property name="whatsThis">
+            <string>With this option, pppd will not agree to authenticate itself to the peer using EAP.</string>
+           </property>
+           <property name="text">
+            <string>Refuse EAP</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="label_04_echofailure">
+           <property name="whatsThis">
+            <string/>
+           </property>
+           <property name="text">
+            <string>Dead Peer Check Count</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="checkBox_04_refusepap">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using PAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Refuse PAP</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="1">
           <widget class="QSpinBox" name="spinBox_04_echointerval">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If  this  option  is  given,  pppd  will send an LCP echo-request frame to the peer every n seconds.  Normally the peer should respond to the echo-request by sending an echo-reply.  This option can be used with the lcp-echo-failure option to detect that the peer is no longer connected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -781,7 +1185,27 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="1">
+         <item row="6" column="0">
+          <widget class="QCheckBox" name="checkBox_04_mppestateful">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allow MPPE to use stateful mode.  Stateless mode is still attempted first.  The default is to disallow stateful mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Allow MPPE Stateful Mode</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QCheckBox" name="checkBox_04_requiremppe128">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE, with 128-bit encryption.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Require MPPE128</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
           <widget class="QCheckBox" name="checkBox_04_requiremppe40">
            <property name="whatsThis">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE, with 40-bit encryption.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -791,13 +1215,13 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
            </property>
           </widget>
          </item>
-         <item row="9" column="0">
-          <widget class="QLabel" name="label_04_echointerval">
+         <item row="4" column="1">
+          <widget class="QCheckBox" name="checkBox_04_debug">
            <property name="whatsThis">
-            <string/>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables  connection  debugging  facilities.  If this option is given, pppd will log the contents of all control packets sent or received in a readable form.  The packets are logged through syslog with facility daemon and level debug.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="text">
-            <string>Dead Peer Check Interval</string>
+            <string>Debug</string>
            </property>
           </widget>
          </item>
@@ -1019,8 +1443,8 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>227</x>
-     <y>281</y>
+     <x>505</x>
+     <y>963</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -1035,8 +1459,8 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>295</x>
-     <y>287</y>
+     <x>505</x>
+     <y>963</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
@@ -1051,12 +1475,44 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
    <slot>setCurrentIndex(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>237</x>
-     <y>59</y>
+     <x>384</x>
+     <y>46</y>
     </hint>
     <hint type="destinationlabel">
      <x>240</x>
      <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_02_redial</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>spinBox_02_redialtimeout</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>563</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>186</x>
+     <y>590</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_02_redial</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>spinBox_02_maxredials</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>106</x>
+     <y>559</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>158</x>
+     <y>625</y>
     </hint>
    </hints>
   </connection>
