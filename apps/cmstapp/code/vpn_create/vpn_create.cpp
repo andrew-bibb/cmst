@@ -61,6 +61,8 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
    ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
 
    // Assign validators to input boxes
+   // note: L2TP.DefaultRoute and L2TP.LisenAddr could have validators on them but the documentation is so sparse I don't actually know
+   // what they should be.  For now don't put a validator on those fields.
    QRegularExpressionValidator* qrex_46cidr= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_46cidr, false)), this);
       ui.lineEdit_host->setValidator(qrex_46cidr);
 
@@ -77,6 +79,7 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
 
    // disable newer features if Connman does not support them
    if (ver <= 1.37f) {
+      ui.comboBox_02_interfacemode->setDisabled(true); // no VPNC interface mode
       ui.stackedWidget->widget(5)->setDisabled(true); // no wireguard
    } // if
 
@@ -179,24 +182,60 @@ void VPN_Create::createFile()
         if (ui.checkBox_02_noencryption->isChecked()) rtnstr.append("VPNC.NoEncryption").append(eqyes);
         break;
       case 3:
-         qDebug() << "L2TP";
+         if (! ui.lineEdit_03_user->text().isEmpty()) rtnstr.append("L2TP.User = ").append(ui.lineEdit_03_user->text().append(newline));
+         if (! ui.lineEdit_03_password->text().isEmpty()) rtnstr.append("L2TP.Password = ").append(ui.lineEdit_03_password->text().append(newline));
+         if (ui.spinBox_03_bps->value() > 0) rtnstr.append(QString("L2TP.BPS = %1").arg(ui.spinBox_03_bps->value()).append(newline));
+         if (ui.spinBox_03_txbps->value() > 0) rtnstr.append(QString("L2TP.TXBPS = %1").arg(ui.spinBox_03_txbps->value()).append(newline));
+         if (ui.spinBox_03_rxbps->value() > 0) rtnstr.append(QString("L2TP.RXBPS = %1").arg(ui.spinBox_03_rxbps->value()).append(newline));
+         if (ui.spinBox_03_tunnelrws->value() > 0) rtnstr.append(QString("L2TP.TunnelRWS = %1").arg(ui.spinBox_03_tunnelrws->value()).append(newline));
+         if (! ui.lineEdit_03_defaultroute->text().isEmpty()) rtnstr.append("L2TP.DefaultRoute = ").append(ui.lineEdit_03_defaultroute->text().append(newline));
+         if (! ui.lineEdit_03_listenaddress->text().isEmpty()) rtnstr.append("L2TP.ListenAddr = ").append(ui.lineEdit_03_listenaddress->text().append(newline));
+         if (ui.spinBox_03_port->value() > 0) rtnstr.append(QString("L2TP.Port = %1").arg(ui.spinBox_03_port->value()).append(newline));
+         if (ui.checkBox_03_requirepap->isChecked()) rtnstr.append("L2TP.RequirePAP").append(eqyes);
+         if (ui.checkBox_03_requirechap->isChecked()) rtnstr.append("L2TP.RequireCHAP").append(eqyes);
+         if (ui.checkBox_03_challenge->isChecked()) rtnstr.append("L2TP.Challenge").append(eqyes);
+         if (ui.checkBox_03_requireauth->isChecked()) rtnstr.append("L2TP.ReqAuth").append(eqyes);
+         if (ui.checkBox_03_redial->isChecked()) rtnstr.append("L2TP.Redial").append(eqyes);
+         if (ui.checkBox_03_lengthbit->isChecked()) rtnstr.append("L2TP.LengthBit").append(eqyes);
+         if (ui.checkBox_03_flowbit->isChecked()) rtnstr.append("L2TP.FlowBit").append(eqyes);
+         if (ui.checkBox_03_accesscontrol->isChecked()) rtnstr.append("L2TP.AccessControl").append(eqyes);
+         if (ui.checkBox_03_exclusive->isChecked()) rtnstr.append("L2TP.Exclusive").append(eqyes);
+         if (ui.checkBox_03_ipsecsaref->isChecked()) rtnstr.append("L2TP.IPsecSaref").append(eqyes);
+         if (ui.checkBox_03_redial->isChecked() && ui.spinBox_03_redialtimeout->value() > 0) rtnstr.append(QString("L2TP.RedialTimeout = %1").arg(ui.spinBox_03_redialtimeout->value()).append(newline));
+         if (ui.checkBox_03_redial->isChecked() && ui.spinBox_03_maxredials->value() > 0) rtnstr.append(QString("L2TP.MaxRedials = %1").arg(ui.spinBox_03_maxredials->value()).append(newline));
+
+         if (ui.checkBox_03_refuseeap->isChecked()) rtnstr.append("PPPD.RefuseEAP").append(eqyes);
+         if (ui.checkBox_03_refusepap->isChecked()) rtnstr.append("PPPD.RefusePAP").append(eqyes);
+         if (ui.checkBox_03_refusechap->isChecked()) rtnstr.append("PPPD.RefuseCHAP").append(eqyes);
+         if (ui.checkBox_03_refusemschap->isChecked()) rtnstr.append("PPPD.RefuseMSCHAP").append(eqyes);
+         if (ui.checkBox_03_refusemschap2->isChecked()) rtnstr.append("PPPD.RefuseMSCHAP2").append(eqyes);
+         if (ui.checkBox_03_requiremppe->isChecked()) rtnstr.append("PPPD.ReqMPPE").append(eqyes);
+         if (ui.checkBox_03_mppestateful->isChecked()) rtnstr.append("PPPD.ReqMPPEStateful").append(eqyes);
+         if (ui.checkBox_03_debug->isChecked()) rtnstr.append("PPPD.Debug").append(eqyes);
+         if (ui.checkBox_03_nobsdcomp->isChecked()) rtnstr.append("PPPD.NoBSDComp").append(eqyes);
+         if (ui.checkBox_03_nodeflate->isChecked()) rtnstr.append("PPPD.NoDeflate").append(eqyes);
+         if (ui.checkBox_03_nopcomp->isChecked()) rtnstr.append("PPPD.NoPcomp").append(eqyes);
+         if (ui.checkBox_03_noaccomp->isChecked()) rtnstr.append("PPPD.UseAccomp").append(eqyes);
+         if (ui.checkBox_03_novj->isChecked()) rtnstr.append("PPPD.NoVJ").append(eqyes);
+         if (ui.checkBox_03_requiremppe40->isChecked()) rtnstr.append("PPPD.ReqMPPE40").append(eqyes);
+         if (ui.checkBox_03_requiremppe128->isChecked()) rtnstr.append("PPPD.ReqMPPE128").append(eqyes);
          break;
       case 4:
          if (! ui.lineEdit_04_user->text().isEmpty()) rtnstr.append("PPTP.User = ").append(ui.lineEdit_04_user->text().append(newline));
          if (! ui.lineEdit_04_password->text().isEmpty()) rtnstr.append("PPTP.Password = ").append(ui.lineEdit_04_password->text().append(newline));
-         if (ui.checkBox_04_debug->isChecked()) rtnstr.append("PPPD.Debug").append(eqyes);
          if (ui.checkBox_04_refuseeap->isChecked()) rtnstr.append("PPPD.RefuseEAP").append(eqyes);
          if (ui.checkBox_04_refusepap->isChecked()) rtnstr.append("PPPD.RefusePAP").append(eqyes);
          if (ui.checkBox_04_refusechap->isChecked()) rtnstr.append("PPPD.RefuseCHAP").append(eqyes);
          if (ui.checkBox_04_refusemschap->isChecked()) rtnstr.append("PPPD.RefuseMSCHAP").append(eqyes);
          if (ui.checkBox_04_refusemschap2->isChecked()) rtnstr.append("PPPD.RefuseMSCHAP2").append(eqyes);
+         if (ui.checkBox_04_requiremppe->isChecked()) rtnstr.append("PPPD.RequirMPPE").append(eqyes);
+         if (ui.checkBox_04_mppestateful->isChecked()) rtnstr.append("PPPD.RequirMPPEStateful").append(eqyes);
          if (ui.checkBox_04_nobsdcomp->isChecked()) rtnstr.append("PPPD.NoBSDComp").append(eqyes);
          if (ui.checkBox_04_nodeflate->isChecked()) rtnstr.append("PPPD.NoDeflate").append(eqyes);
          if (ui.checkBox_04_novj->isChecked()) rtnstr.append("PPPD.NoVJ").append(eqyes);
-         if (ui.checkBox_04_requiremppe->isChecked()) rtnstr.append("PPPD.RequirMPPE").append(eqyes);
+         if (ui.checkBox_04_debug->isChecked()) rtnstr.append("PPPD.Debug").append(eqyes);
          if (ui.checkBox_04_requiremppe40->isChecked()) rtnstr.append("PPPD.RequirMPPE40").append(eqyes);
          if (ui.checkBox_04_requiremppe128->isChecked()) rtnstr.append("PPPD.RequirMPPE128").append(eqyes);
-         if (ui.checkBox_04_mppestateful->isChecked()) rtnstr.append("PPPD.RequirMPPEStateful").append(eqyes);
          if (ui.spinBox_04_echofailure->value() > 0) rtnstr.append(QString("PPPD.EchoFailure = %1").arg(ui.spinBox_04_echofailure->value()).append(newline));
          if (ui.spinBox_04_echointerval->value() > 0) rtnstr.append(QString("PPPD.EchoInterval = %1").arg(ui.spinBox_04_echointerval->value()).append(newline));
          break;
@@ -279,7 +318,8 @@ void VPN_Create::processAction(QAction* act)
    QString filterstring = tr("All Files (*.*)");
    QString filepath = QDir::homePath();
 
-   if (act == action_03_authfile) ui.lineEdit_03_authfile->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
+   if (act == action_03_authfile)
+      ui.lineEdit_03_authfile->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
 
    return;
 }
