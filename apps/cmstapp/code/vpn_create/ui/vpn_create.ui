@@ -559,7 +559,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
+            <y>-330</y>
             <width>482</width>
             <height>722</height>
            </rect>
@@ -567,6 +567,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
           <layout class="QVBoxLayout" name="verticalLayout_5">
            <item>
             <widget class="QGroupBox" name="groupBox_2">
+             <property name="whatsThis">
+              <string>Default route.</string>
+             </property>
              <property name="title">
               <string>L2TPOptions</string>
              </property>
@@ -576,7 +579,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 <item row="0" column="1">
                  <widget class="QLineEdit" name="lineEdit_02_user">
                   <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP user name. If left blank you will be asked for a username by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L2TP user name. If left blank you will be asked for a username by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
                 </item>
@@ -600,7 +603,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP password. If left blank the password will be asked from the user by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP password. If left blank you will be asked for the password by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L2TP password. If left blank you will be asked for the password by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
                 </item>
@@ -612,7 +615,11 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                  </widget>
                 </item>
                 <item row="2" column="1">
-                 <widget class="QLineEdit" name="lineEdit_03_authfile"/>
+                 <widget class="QLineEdit" name="lineEdit_03_authfile">
+                  <property name="whatsThis">
+                   <string>Specify where to find the authentication file used to authenticate l2tp tunnels. The default is /etc/xl2tpd/l2tp-secrets</string>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </item>
@@ -627,6 +634,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="0" column="1">
                  <widget class="QSpinBox" name="spinBox_02_bps">
+                  <property name="whatsThis">
+                   <string>Maximum bandwidth to use.</string>
+                  </property>
                   <property name="maximum">
                    <number>99999</number>
                   </property>
@@ -651,6 +661,10 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="1" column="1">
                  <widget class="QSpinBox" name="spinBox_02_txbps">
+                  <property name="whatsThis">
+                   <string>If set, the transmit bandwidth maximum will be set to this value
+</string>
+                  </property>
                   <property name="maximum">
                    <number>99999</number>
                   </property>
@@ -664,7 +678,11 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                  </widget>
                 </item>
                 <item row="1" column="3">
-                 <widget class="QLineEdit" name="lineEdit_02_listenaddress"/>
+                 <widget class="QLineEdit" name="lineEdit_02_listenaddress">
+                  <property name="whatsThis">
+                   <string>The IP address of the interface on which the daemon listens. By default, it listens on INADDR_ANY (0.0.0.0), meaning it listens on all interfaces.</string>
+                  </property>
+                 </widget>
                 </item>
                 <item row="2" column="0">
                  <widget class="QLabel" name="label_02_rxbps">
@@ -675,6 +693,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="2" column="1">
                  <widget class="QSpinBox" name="spinBox_02_rxbps">
+                  <property name="whatsThis">
+                   <string>If set, the receive bandwidth maximum will be set to this value</string>
+                  </property>
                   <property name="maximum">
                    <number>99999</number>
                   </property>
@@ -689,6 +710,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="2" column="3">
                  <widget class="QSpinBox" name="spinBox_port">
+                  <property name="whatsThis">
+                   <string>Specify which UDP port xl2tpd should use. The default is 1701.</string>
+                  </property>
                   <property name="maximum">
                    <number>65535</number>
                   </property>
@@ -703,6 +727,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="3" column="1">
                  <widget class="QSpinBox" name="spinBox_02_tunnelrws">
+                  <property name="whatsThis">
+                   <string>This defines the window size of the control channel. The window size is defined as the number of outstanding unacknowledged packets, not as a number of bytes.</string>
+                  </property>
                   <property name="maximum">
                    <number>99999</number>
                   </property>
@@ -714,6 +741,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                <layout class="QGridLayout" name="gridLayout_10">
                 <item row="8" column="0">
                  <widget class="QCheckBox" name="checkBox_02_redial">
+                  <property name="whatsThis">
+                   <string>If checked xl2tpd will attempt to redial if the call get disconnected. Note that, if enabled, xl2tpd will keep passwords in memory: a potential security risk.</string>
+                  </property>
                   <property name="text">
                    <string>Redial</string>
                   </property>
@@ -721,6 +751,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="1" column="0">
                  <widget class="QCheckBox" name="checkBox_02_requirepap">
+                  <property name="whatsThis">
+                   <string>Will require the remote peer to get authenticated via PAP for the ppp authentication.</string>
+                  </property>
                   <property name="text">
                    <string>Require PAP</string>
                   </property>
@@ -728,6 +761,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="8" column="1">
                  <widget class="QCheckBox" name="checkBox_02_ipsecsaref">
+                  <property name="whatsThis">
+                   <string>Use IPsec Security Association tracking. When this is enabled, packets received by xl2tpd should have to extra fields (refme and refhim) which allows tracking of multiple clients using the same internal NATed IP address, and allows tracking of multiple clients behind the same NAT router. This needs to be supported by the kernel. Currently, this only works with Openswan KLIPS in &quot;mast&quot; mode. (see http://www.openswan.org/)</string>
+                  </property>
                   <property name="text">
                    <string>IPsec Security Association</string>
                   </property>
@@ -735,6 +771,10 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="3" column="0">
                  <widget class="QCheckBox" name="checkBox_02_requirechap">
+                  <property name="whatsThis">
+                   <string>Will require the remote peer to get authenticated via CHAP for the ppp authentication.
+</string>
+                  </property>
                   <property name="text">
                    <string>Require CHAP</string>
                   </property>
@@ -742,6 +782,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="7" column="0">
                  <widget class="QCheckBox" name="checkBox_requireauth">
+                  <property name="whatsThis">
+                   <string>Require the remote peer to authenticate itself.</string>
+                  </property>
                   <property name="text">
                    <string>Require Authentication</string>
                   </property>
@@ -749,6 +792,10 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="1" column="1">
                  <widget class="QCheckBox" name="checkBox_02_lengthbit">
+                  <property name="whatsThis">
+                   <string>If checjed the length bit present in the l2tp packet payload will be used.
+</string>
+                  </property>
                   <property name="text">
                    <string>Use Length Bit</string>
                   </property>
@@ -756,6 +803,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="4" column="0">
                  <widget class="QCheckBox" name="checkBox_challenge">
+                  <property name="whatsThis">
+                   <string>When checked use challenge authentication to authenticate peer.</string>
+                  </property>
                   <property name="text">
                    <string>Challenge Authentication</string>
                   </property>
@@ -763,6 +813,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="3" column="1">
                  <widget class="QCheckBox" name="checkBox_02_flowbit">
+                  <property name="whatsThis">
+                   <string>If checked sequence numbers will be included in the communication. The feature to use sequence numbers in sessions is currently broken and does not function.</string>
+                  </property>
                   <property name="text">
                    <string>Flow Bit</string>
                   </property>
@@ -770,6 +823,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="4" column="1">
                  <widget class="QCheckBox" name="checkBox_02_accesscontrol">
+                  <property name="whatsThis">
+                   <string>If checked the xl2tpd process will only accept connections from peers addresses specified in the following sections. The default is no.</string>
+                  </property>
                   <property name="text">
                    <string>Access Control</string>
                   </property>
@@ -777,6 +833,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                 </item>
                 <item row="7" column="1">
                  <widget class="QCheckBox" name="checkBox_02_exclusive">
+                  <property name="whatsThis">
+                   <string>If checked only one control tunnel will be allowed to be built between 2 peers.</string>
+                  </property>
                   <property name="text">
                    <string>Exclusive</string>
                   </property>
@@ -803,6 +862,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                  <widget class="QSpinBox" name="spinBox_02_redialtimeout">
                   <property name="enabled">
                    <bool>false</bool>
+                  </property>
+                  <property name="whatsThis">
+                   <string>Wait X seconds before redial. The redial option must be set to yes to use this option. Defaults to 30 seconds.</string>
                   </property>
                   <property name="maximum">
                    <number>360</number>
@@ -840,6 +902,9 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
                  <widget class="QSpinBox" name="spinBox_02_maxredials">
                   <property name="enabled">
                    <bool>false</bool>
+                  </property>
+                  <property name="whatsThis">
+                   <string>Will give up redial tries after X attempts.</string>
                   </property>
                   <property name="maximum">
                    <number>999</number>
