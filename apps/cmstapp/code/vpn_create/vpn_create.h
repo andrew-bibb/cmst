@@ -51,6 +51,9 @@ class VPN_Create : public QDialog
       QDBusInterface* iface_rh1;
       QInputDialog* qid;
       QActionGroup* qag;
+      QAction* action_00_cacert;
+      QAction* action_00_clientcert;
+      QAction* action_00_pkcsclientcert;
       QAction* action_03_authfile;
 
 
@@ -59,6 +62,7 @@ class VPN_Create : public QDialog
       void checkInput();
       void processAction(QAction*);
       void showWhatsThis();
+      void openConnectAuthTypeChanged(const int&);
 
    public:
       inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}

@@ -70,6 +70,9 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
       ui.lineEdit_05_dns->setValidator(qrex_46cidrp);
       ui.lineEdit_05_allowedips->setValidator(qrex_46cidrp);
 
+   QRegularExpressionValidator* qrex_46= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_46, false)), this);
+      ui.lineEdit_00_vpnhost->setValidator(qrex_46);
+
    QRegularExpressionValidator* qrex_dom= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_Dom, false)), this);
       ui.lineEdit_domain->setValidator(qrex_dom);
 
@@ -79,12 +82,31 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
 
    // disable newer features if Connman does not support them
    if (ver <= 1.37f) {
+      ui.checkBox_00_allowselfsignedcert->setDisabled(true);   // no OpenConnect self signed certs
+      ui.checkBox_00_disableipv6->setDisabled(true);   // no OpenConnect option to disable ipv6
+      ui.checkBox_00_disabledtls->setDisabled(true);   // no OpenConnect option to disable no-dtls
+      ui.checkBox_00_nokeepalive->setDisabled(true);   // no OpenConnect option for https keep alive
+      ui.comboBox_00_authtype->setDisabled(true);      // no OpenConnect Authorization type, also forces ClientCert, PKSCClientCert and UserPrivateKey to stay disabled
+      ui.lineEdit_00_usergroup->setDisabled(true);     // no OpenConnect usergroup
       ui.comboBox_02_interfacemode->setDisabled(true); // no VPNC interface mode
-      ui.stackedWidget->widget(5)->setDisabled(true); // no wireguard
+      ui.stackedWidget->widget(5)->setDisabled(true);  // no wireguard
    } // if
+//      menu_OpenConnect->addAction(ui.actionOpenConnect_Usergroup);
 
    // QActionGroup and QActions
    qag = new QActionGroup(this);
+   action_00_cacert = new QAction(fileicon, "CA Certificate File", qag);
+   action_00_cacert->setToolTip(tr("Select the file containing other Certificate Authorities"));
+   ui.lineEdit_00_cacert->addAction(action_00_cacert, QLineEdit::TrailingPosition);
+
+   action_00_clientcert = new QAction(fileicon, "Client Certificate File", qag);
+   action_00_clientcert->setToolTip(tr("Select the file containing the Client Certificate"));
+   ui.lineEdit_00_clientcert->addAction(action_00_clientcert, QLineEdit::TrailingPosition);
+
+   action_00_pkcsclientcert = new QAction(fileicon, "PKCS Client Certificate File", qag);
+   action_00_pkcsclientcert->setToolTip(tr("Select the file containing the PKCS Client Certificate"));
+   ui.lineEdit_00_pkcsclientcert->addAction(action_00_pkcsclientcert, QLineEdit::TrailingPosition);
+
    action_03_authfile = new QAction(fileicon, "Authority File", qag);
    action_03_authfile->setToolTip(tr("Select the L2TP Authority file"));
    ui.lineEdit_03_authfile->addAction(action_03_authfile, QLineEdit::TrailingPosition);
@@ -96,6 +118,7 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
    connect (ui.lineEdit_host, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_domain, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_networks, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
+   connect (ui.lineEdit_00_vpnhost, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_02_groupusername, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_05_address, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (ui.lineEdit_05_dns, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
@@ -104,7 +127,8 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
    connect (ui.lineEdit_05_allowedips, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
    connect (this, SIGNAL(accepted()), this, SLOT(createFile()));
    connect (qag, SIGNAL(triggered(QAction*)), this, SLOT(processAction(QAction*)));
-   connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
+   connect (ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
+   connect (ui.comboBox_00_authtype, SIGNAL(currentIndexChanged(int)), this, SLOT(openConnectAuthTypeChanged(int)));
 
    // set index to something we're working on
    ui.comboBox_type->setCurrentIndex(4);
@@ -121,6 +145,7 @@ void VPN_Create::createFile()
    // data members
    const QString newline(QString("\n"));
    const QString eqyes(QString(" = yes\n"));
+   const QString eqtrue(QString(" = true\n"));
    QString rtnstr(QString("[provider_"));
 
    // typical information
@@ -157,30 +182,43 @@ void VPN_Create::createFile()
    switch (ui.comboBox_type->currentIndex() )
    {
       case 0:
-         qDebug() << "OpenConnect";
+         if (! ui.lineEdit_00_servercert->text().isEmpty()) rtnstr.append("OpenConnect.ServerCert = ").append(ui.lineEdit_00_servercert->text().append(newline));
+         if (! ui.lineEdit_00_cacert->text().isEmpty()) rtnstr.append("OpenConnect.CACert = ").append(ui.lineEdit_00_cacert->text().append(newline));
+         if (! ui.lineEdit_00_vpnhost->text().isEmpty()) rtnstr.append("OpenConnect.VPNHost = ").append(ui.lineEdit_00_vpnhost->text().append(newline));
+         if (ui.spinBox_00_mtu->value() > 0) rtnstr.append(QString("OpenConnect.MTU = %1").arg(ui.spinBox_00_mtu->value()).append(newline));
+         if (ui.checkBox_00_allowselfsignedcert->isEnabled() && ui.checkBox_00_allowselfsignedcert->isChecked()) rtnstr.append("OpenConnect.AllowSelfSignedCert = %1").append(eqtrue);
+         if (ui.checkBox_00_cookie->isChecked()) rtnstr.append("OpenConnect.Cookie = %1").append(eqtrue);
+         if (ui.checkBox_00_disableipv6->isEnabled() && ui.checkBox_00_disableipv6->isChecked()) rtnstr.append("OpenConnect.DisableIPv6 = %1").append(eqtrue);
+         if (ui.checkBox_00_disabledtls->isEnabled() && ui.checkBox_00_disabledtls->isChecked()) rtnstr.append("OpenConnect.NoDTLS = %1").append(eqtrue);
+         if (ui.checkBox_00_nokeepalive->isEnabled() && ui.checkBox_00_nokeepalive->isChecked()) rtnstr.append("OpenConnect.NoHTTPKeepAlive = %1").append(eqtrue);
+         rtnstr.append(QString("OpenConnect.AuthType = %1\n").arg(ui.comboBox_00_authtype->currentText()));
+         if (ui.lineEdit_00_pkcsclientcert->isEnabled() && (! ui.lineEdit_00_pkcsclientcert->text().isEmpty())) rtnstr.append("OpenConnect.PKCSClientCert = ").append(ui.lineEdit_00_pkcsclientcert->text().append(newline));
+         if (ui.lineEdit_00_usergroup->isEnabled() && (! ui.lineEdit_00_usergroup->text().isEmpty())) rtnstr.append("OpenConnect.Usergroup = ").append(ui.lineEdit_00_usergroup->text().append(newline));
+         if (ui.lineEdit_00_clientcert->isEnabled() && (! ui.lineEdit_00_clientcert->text().isEmpty())) rtnstr.append("OpenConnect.ClientCert = ").append(ui.lineEdit_00_clientcert->text().append(newline));
+         if (ui.lineEdit_00_userprivatekey->isEnabled() && (! ui.lineEdit_00_userprivatekey->text().isEmpty())) rtnstr.append("OpenConnect.UserPrivateKey = ").append(ui.lineEdit_00_userprivatekey->text().append(newline));
          break;
       case 1:
          qDebug() << "OpenVPN";
          break;
       case 2:
-        if (! ui.lineEdit_02_groupusername->text().isEmpty()) rtnstr.append("VPNC.IPSec.ID = ").append(ui.lineEdit_02_groupusername->text().append(newline));
-        if (! ui.lineEdit_02_grouppassword->text().isEmpty()) rtnstr.append("VPNC.IPSec.Secret = ").append(ui.lineEdit_02_grouppassword->text().append(newline));
-        if (! ui.lineEdit_02_username->text().isEmpty()) rtnstr.append("VPNC.Xauth.Username = ").append(ui.lineEdit_02_username->text().append(newline));
-        if (! ui.lineEdit_02_password->text().isEmpty()) rtnstr.append("VPNC.Xauth.Password = ").append(ui.lineEdit_02_password->text().append(newline));
-        if (! ui.lineEdit_02_applicationversion->text().isEmpty()) rtnstr.append("VPNC.AppVersion = ").append(ui.lineEdit_02_applicationversion->text().append(newline));
-        if (! ui.lineEdit_02_domain->text().isEmpty()) rtnstr.append("VPNC.Domain = ").append(ui.lineEdit_02_domain->text().append(newline));
-        rtnstr.append("VPNC.IKE.Authmode = ").append(ui.comboBox_02_ikeauthenticationmode->currentText().append(newline));
-        rtnstr.append("VPNC.IKE.DHGroup = ").append(ui.comboBox_02_ikedhgroup->currentText().append(newline));
-        rtnstr.append("VPNC.PFS = ").append(ui.comboBox_02_pfs->currentText().append(newline));
-        rtnstr.append(QString("VPNC.LocalPort = %1").arg(ui.spinBox_02_localport->value()).append(newline));
-        rtnstr.append(QString("VPNC.CiscoPort = %1").arg(ui.spinBox_02_udpport->value()).append(newline));
-        rtnstr.append("VPNC.Vendor = ").append(ui.comboBox_02_vendor->currentText().append(newline));
-        rtnstr.append("VPNC.NATTMode = ").append(ui.comboBox_02_nattmode->currentText().append(newline));
-        rtnstr.append(QString("VPNC.DPDTimeout = %1").arg(ui.spinBox_02_dpdt->value()).append(newline));
-        rtnstr.append("VPNC.DeviceType = ").append(ui.comboBox_02_interfacemode->currentText().append(newline));
-        if (ui.checkBox_02_singledes->isChecked()) rtnstr.append("VPNC.SingleDES").append(eqyes);
-        if (ui.checkBox_02_noencryption->isChecked()) rtnstr.append("VPNC.NoEncryption").append(eqyes);
-        break;
+         if (! ui.lineEdit_02_groupusername->text().isEmpty()) rtnstr.append("VPNC.IPSec.ID = ").append(ui.lineEdit_02_groupusername->text().append(newline));
+         if (! ui.lineEdit_02_grouppassword->text().isEmpty()) rtnstr.append("VPNC.IPSec.Secret = ").append(ui.lineEdit_02_grouppassword->text().append(newline));
+         if (! ui.lineEdit_02_username->text().isEmpty()) rtnstr.append("VPNC.Xauth.Username = ").append(ui.lineEdit_02_username->text().append(newline));
+         if (! ui.lineEdit_02_password->text().isEmpty()) rtnstr.append("VPNC.Xauth.Password = ").append(ui.lineEdit_02_password->text().append(newline));
+         if (! ui.lineEdit_02_applicationversion->text().isEmpty()) rtnstr.append("VPNC.AppVersion = ").append(ui.lineEdit_02_applicationversion->text().append(newline));
+         if (! ui.lineEdit_02_domain->text().isEmpty()) rtnstr.append("VPNC.Domain = ").append(ui.lineEdit_02_domain->text().append(newline));
+         rtnstr.append("VPNC.IKE.Authmode = ").append(ui.comboBox_02_ikeauthenticationmode->currentText().append(newline));
+         rtnstr.append("VPNC.IKE.DHGroup = ").append(ui.comboBox_02_ikedhgroup->currentText().append(newline));
+         rtnstr.append("VPNC.PFS = ").append(ui.comboBox_02_pfs->currentText().append(newline));
+         rtnstr.append(QString("VPNC.LocalPort = %1").arg(ui.spinBox_02_localport->value()).append(newline));
+         rtnstr.append(QString("VPNC.CiscoPort = %1").arg(ui.spinBox_02_udpport->value()).append(newline));
+         rtnstr.append("VPNC.Vendor = ").append(ui.comboBox_02_vendor->currentText().append(newline));
+         rtnstr.append("VPNC.NATTMode = ").append(ui.comboBox_02_nattmode->currentText().append(newline));
+         rtnstr.append(QString("VPNC.DPDTimeout = %1").arg(ui.spinBox_02_dpdt->value()).append(newline));
+         rtnstr.append("VPNC.DeviceType = ").append(ui.comboBox_02_interfacemode->currentText().append(newline));
+         if (ui.checkBox_02_singledes->isChecked()) rtnstr.append("VPNC.SingleDES").append(eqyes);
+         if (ui.checkBox_02_noencryption->isChecked()) rtnstr.append("VPNC.NoEncryption").append(eqyes);
+         break;
       case 3:
          if (! ui.lineEdit_03_user->text().isEmpty()) rtnstr.append("L2TP.User = ").append(ui.lineEdit_03_user->text().append(newline));
          if (! ui.lineEdit_03_password->text().isEmpty()) rtnstr.append("L2TP.Password = ").append(ui.lineEdit_03_password->text().append(newline));
@@ -293,15 +331,16 @@ void VPN_Create::createFile()
 void VPN_Create::checkInput()
 {
    if (
-      (! ui.lineEdit_name->text().isEmpty())                                                                                        &&
-      ui.lineEdit_host->hasAcceptableInput()                                                                                        &&
-      (ui.lineEdit_domain->text().isEmpty() || ui.lineEdit_domain->hasAcceptableInput())                                            &&
-      (ui.lineEdit_networks->text().isEmpty() || ui.lineEdit_networks->hasAcceptableInput())                                        &&
-      (ui.comboBox_type->currentIndex() != 2 || ! ui.lineEdit_02_groupusername->text().isEmpty())                                   &&
-      (ui.comboBox_type->currentIndex() != 5 || ui.lineEdit_05_address->hasAcceptableInput())                                       &&
-      (ui.comboBox_type->currentIndex() != 5 || ui.lineEdit_05_dns->text().isEmpty() || ui.lineEdit_05_dns->hasAcceptableInput())   &&
-      (ui.comboBox_type->currentIndex() != 5 || ! ui.lineEdit_05_privatekey->text().isEmpty())                                      &&
-      (ui.comboBox_type->currentIndex() != 5 || ! ui.lineEdit_05_publickey->text().isEmpty())                                       &&
+      (! ui.lineEdit_name->text().isEmpty())                                                                                              &&
+      ui.lineEdit_host->hasAcceptableInput()                                                                                              &&
+      (ui.lineEdit_domain->text().isEmpty() || ui.lineEdit_domain->hasAcceptableInput())                                                  &&
+      (ui.lineEdit_networks->text().isEmpty() || ui.lineEdit_networks->hasAcceptableInput())                                              &&
+      (ui.comboBox_type->currentIndex() != 0 || ui.lineEdit_00_vpnhost->text().isEmpty() || ui.lineEdit_00_vpnhost->hasAcceptableInput()) &&
+      (ui.comboBox_type->currentIndex() != 2 || ! ui.lineEdit_02_groupusername->text().isEmpty())                                         &&
+      (ui.comboBox_type->currentIndex() != 5 || ui.lineEdit_05_address->hasAcceptableInput())                                             &&
+      (ui.comboBox_type->currentIndex() != 5 || ui.lineEdit_05_dns->text().isEmpty() || ui.lineEdit_05_dns->hasAcceptableInput())         &&
+      (ui.comboBox_type->currentIndex() != 5 || ! ui.lineEdit_05_privatekey->text().isEmpty())                                            &&
+      (ui.comboBox_type->currentIndex() != 5 || ! ui.lineEdit_05_publickey->text().isEmpty())                                             &&
       (ui.comboBox_type->currentIndex() != 5 || ui.lineEdit_05_allowedips->hasAcceptableInput())
       )
       ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(false);
@@ -318,6 +357,15 @@ void VPN_Create::processAction(QAction* act)
    QString filterstring = tr("All Files (*.*)");
    QString filepath = QDir::homePath();
 
+   if (act == action_00_cacert)
+      ui.lineEdit_00_cacert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
+
+   if (act == action_00_clientcert)
+      ui.lineEdit_00_clientcert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
+
+   if (act == action_00_pkcsclientcert)
+      ui.lineEdit_00_pkcsclientcert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
+
    if (act == action_03_authfile)
       ui.lineEdit_03_authfile->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
 
@@ -332,4 +380,14 @@ void VPN_Create::showWhatsThis()
    QWhatsThis::enterWhatsThisMode();
 }
 
+//
+// Slot to enable and disable OpenConnect options when authentication type changes
+// Called when ui.comboBox_00_authtype emits a currentIndexChanged(int) signal
+void VPN_Create::openConnectAuthTypeChanged(const int& idx)
+{
+   ui.lineEdit_00_pkcsclientcert->setDisabled(idx != 4);
+   ui.lineEdit_00_clientcert->setDisabled(idx != 3);
+   ui.lineEdit_00_userprivatekey->setDisabled(idx != 3);
 
+   return;
+}
