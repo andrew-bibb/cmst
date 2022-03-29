@@ -107,6 +107,22 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
    action_00_pkcsclientcert->setToolTip(tr("Select the file containing the PKCS Client Certificate"));
    ui.lineEdit_00_pkcsclientcert->addAction(action_00_pkcsclientcert, QLineEdit::TrailingPosition);
 
+   action_01_cacert = new QAction(fileicon, "Certificate Authority File", qag);
+   action_01_cacert->setToolTip(tr("Select the file containing the Certificate Authority"));
+   ui.lineEdit_01_cacert->addAction(action_01_cacert, QLineEdit::TrailingPosition);
+
+   action_01_cert = new QAction(fileicon, "Local Peer Signed Certificate", qag);
+   action_01_cert->setToolTip(tr("Select the file containing the Local Peer's Signed Certificate"));
+   ui.lineEdit_01_cert->addAction(action_01_cert, QLineEdit::TrailingPosition);
+
+   action_01_key = new QAction(fileicon, "Local Peer Private Key", qag);
+   action_01_key->setToolTip(tr("Select the file containing the Local Peer's Private Key"));
+   ui.lineEdit_01_key->addAction(action_01_key, QLineEdit::TrailingPosition);
+
+   action_01_config = new QAction(fileicon, "Extra Options", qag);
+   action_01_config->setToolTip(tr("Select the file containing extra OpenVPN options"));
+   ui.lineEdit_01_config->addAction(action_01_config, QLineEdit::TrailingPosition);
+
    action_03_authfile = new QAction(fileicon, "Authority File", qag);
    action_03_authfile->setToolTip(tr("Select the L2TP Authority file"));
    ui.lineEdit_03_authfile->addAction(action_03_authfile, QLineEdit::TrailingPosition);
@@ -365,6 +381,21 @@ void VPN_Create::processAction(QAction* act)
 
    if (act == action_00_pkcsclientcert)
       ui.lineEdit_00_pkcsclientcert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
+
+   if (act == action_01_cacert) {
+      filterstring = tr("PEM FIles (*.pem);;All Files (*.*)");
+      ui.lineEdit_00_cacert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));}
+
+   if (act == action_01_cert) {
+      filterstring = tr("PEM FIles (*.pem);;All Files (*.*)");
+      ui.lineEdit_01_cert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));}
+
+   if (act == action_01_key) {
+      filterstring = tr("KEY FIles (*.key);;All Files (*.*)");
+      ui.lineEdit_01_key->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));}
+
+   if (act == action_01_config)
+      ui.lineEdit_01_config->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
 
    if (act == action_03_authfile)
       ui.lineEdit_03_authfile->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));

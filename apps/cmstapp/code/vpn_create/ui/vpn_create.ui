@@ -147,7 +147,7 @@
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="OpenConnect">
       <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -416,19 +416,270 @@
       </layout>
      </widget>
      <widget class="QWidget" name="OpenVPN">
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>30</y>
-         <width>191</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>OpenVPN Under Construction</string>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QPushButton" name="pushButton_01_importopvn">
+         <property name="text">
+          <string>Import OPVN File</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_16">
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_cert"/>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_key"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_01_cacert">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;CA Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_01_cert">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Signed Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_01_key">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Private Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_01_proto">
+           <property name="text">
+            <string>Protocol</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_cacert"/>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_proto"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_01_config">
+           <property name="text">
+            <string>Extra Config</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_config"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_17">
+         <item row="2" column="1">
+          <widget class="QComboBox" name="comboBox_01_remotecerttls">
+           <item>
+            <property name="text">
+             <string>client</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>server</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="checkBox_01_authnocache">
+           <property name="text">
+            <string>Don't cache password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="checkBox_01_askpass">
+           <property name="text">
+            <string>Ask Password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QCheckBox" name="checkBox_auth">
+           <property name="text">
+            <string>Auuthencicate HMAC</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_01_remotecerttls">
+           <property name="text">
+            <string>Remote Certificae TLS</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_01_complzo">
+           <property name="text">
+            <string>Fast LZO Compression</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="checkBox_01_authuserpass">
+           <property name="text">
+            <string>Authenticate with username/password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QComboBox" name="comboBox_01_complzo">
+           <item>
+            <property name="text">
+             <string>adaptive</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>yes</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>no</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_01_devtype">
+           <property name="text">
+            <string>Device Type</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QComboBox" name="comboBox_01_devtype">
+           <item>
+            <property name="text">
+             <string>None Specified</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tun</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tap</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_18">
+         <item row="0" column="3">
+          <widget class="QSpinBox" name="spinBox_01_port"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_01_mtu">
+           <property name="text">
+            <string>MTU</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_01_port">
+           <property name="text">
+            <string>Port</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="spinBox_01_mtu"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_01_certtype">
+           <property name="text">
+            <string>NS Certificate Type</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="comboBox_01_certtype">
+           <item>
+            <property name="text">
+             <string>server</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>client</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_01_cipher">
+           <property name="text">
+            <string>Cipher</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QComboBox" name="comboBox_01_cipher">
+           <item>
+            <property name="text">
+             <string>none</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AES-128-CBC</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AES-128-CFB</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AES-128-CFB1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AES-128-CFB8</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AES-128-GCM</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AES-128-0FB</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>New Item</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="VPNC">
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -811,7 +1062,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>482</width>
+            <width>479</width>
             <height>722</height>
            </rect>
           </property>
@@ -822,7 +1073,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
               <string/>
              </property>
              <property name="title">
-              <string>L2TPOptions</string>
+              <string>L2TP Options</string>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_6">
               <item>

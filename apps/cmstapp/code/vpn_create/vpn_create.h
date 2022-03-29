@@ -54,6 +54,10 @@ class VPN_Create : public QDialog
       QAction* action_00_cacert;
       QAction* action_00_clientcert;
       QAction* action_00_pkcsclientcert;
+      QAction* action_01_cacert;
+      QAction* action_01_cert;
+      QAction* action_01_key;
+      QAction* action_01_config;
       QAction* action_03_authfile;
 
 
