@@ -57,12 +57,19 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
       qid->setWindowModality(Qt::WindowModality::ApplicationModal);
       qid->setInputMode(QInputDialog::TextInput); qid->setWindowTitle(tr("%1 - Select File").arg(TranslateStrings::cmtr("cmst")) );
 
+   // Set up environment for where we need to store the file
+   QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+   datahome = QString(env.value("XDG_DATA_HOME", QString(QDir::homePath()) + "/.local/share") + "/%1").arg(QString(APP).toLower());
+
    // Set OK button to disable
    ui.buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
 
    // Assign validators to input boxes
-   // note: L2TP.DefaultRoute and L2TP.LisenAddr could have validators on them but the documentation is so sparse I don't actually know
+   // note:
+   // L2TP.DefaultRoute and L2TP.LisenAddr could have validators on them but the documentation is so sparse I don't actually know
    // what they should be.  For now don't put a validator on those fields.
+   //
+   // OpenVPN Do not validate any of the Mandatory fields as seems some (maybe all) can be provided in the config file
    QRegularExpressionValidator* qrex_46cidr= new QRegularExpressionValidator(QRegularExpression(shared::ValidatingDialog(this).getPattern(CMST::ValDialog_46cidr, false)), this);
       ui.lineEdit_host->setValidator(qrex_46cidr);
 
@@ -91,7 +98,6 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
       ui.comboBox_02_interfacemode->setDisabled(true); // no VPNC interface mode
       ui.stackedWidget->widget(5)->setDisabled(true);  // no wireguard
    } // if
-//      menu_OpenConnect->addAction(ui.actionOpenConnect_Usergroup);
 
    // QActionGroup and QActions
    qag = new QActionGroup(this);
@@ -123,11 +129,13 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
    action_01_config->setToolTip(tr("Select the file containing extra OpenVPN options"));
    ui.lineEdit_01_config->addAction(action_01_config, QLineEdit::TrailingPosition);
 
+   action_01_authuserpass = new QAction(fileicon, "User/Password File", qag);
+   action_01_authuserpass->setToolTip(tr("Select the file containing the User and Password credentials"));
+   ui.lineEdit_01_authuserpass->addAction(action_01_authuserpass, QLineEdit::TrailingPosition);
+
    action_03_authfile = new QAction(fileicon, "Authority File", qag);
    action_03_authfile->setToolTip(tr("Select the L2TP Authority file"));
    ui.lineEdit_03_authfile->addAction(action_03_authfile, QLineEdit::TrailingPosition);
-
-
 
    // Connect signals and slots
    connect (ui.lineEdit_name, SIGNAL(textChanged(const QString&)), this, SLOT(checkInput()));
@@ -145,6 +153,8 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
    connect (qag, SIGNAL(triggered(QAction*)), this, SLOT(processAction(QAction*)));
    connect (ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
    connect (ui.comboBox_00_authtype, SIGNAL(currentIndexChanged(int)), this, SLOT(openConnectAuthTypeChanged(int)));
+   connect (ui.pushButton_01_importopvn, SIGNAL(clicked()), this, SLOT(importOpenVPN()));
+   connect (ui.pushButton_01_createuserpass, SIGNAL(clicked()), this, SLOT(createUserPass()));
 
    // set index to something we're working on
    ui.comboBox_type->setCurrentIndex(4);
@@ -214,7 +224,22 @@ void VPN_Create::createFile()
          if (ui.lineEdit_00_userprivatekey->isEnabled() && (! ui.lineEdit_00_userprivatekey->text().isEmpty())) rtnstr.append("OpenConnect.UserPrivateKey = ").append(ui.lineEdit_00_userprivatekey->text().append(newline));
          break;
       case 1:
-         qDebug() << "OpenVPN";
+         if (! ui.lineEdit_01_cacert->text().isEmpty()) rtnstr.append("OpenVPN.CACert = ").append(ui.lineEdit_01_cacert->text().append(newline));
+         if (! ui.lineEdit_01_cert->text().isEmpty()) rtnstr.append("OpenVPN.Cert = ").append(ui.lineEdit_01_cert->text().append(newline));
+         if (! ui.lineEdit_01_key->text().isEmpty()) rtnstr.append("OpenVPN.Key = ").append(ui.lineEdit_01_key->text().append(newline));
+         if (! ui.lineEdit_01_proto->text().isEmpty()) rtnstr.append("OpenVPN.Proto = ").append(ui.lineEdit_01_proto->text().append(newline));
+         if (! ui.lineEdit_01_config->text().isEmpty()) rtnstr.append("OpenVPN.ConfigFile = ").append(ui.lineEdit_01_config->text().append(newline));
+         if (! ui.lineEdit_01_authuserpass->text().isEmpty()) rtnstr.append("OpenVPN.AuthUserPass = ").append(ui.lineEdit_01_authuserpass->text().append(newline));
+         if (ui.checkBox_01_authnocache->isChecked()) rtnstr.append("OpenVPN.AuthNoCache").append(eqyes);
+         if (ui.checkBox_01_auth->isChecked()) rtnstr.append("OpenVPN.Auth").append(eqyes);
+         if (ui.checkBox_01_askpass->isChecked()) rtnstr.append("OpenVPN.AskPass").append(eqyes);
+         rtnstr.append(QString("OpenVPN.RemoteCertTls = %1\n").arg(ui.comboBox_01_remotecerttls->currentText()));
+         rtnstr.append(QString("OpenVPN.CompLZO = %1\n").arg(ui.comboBox_01_complzo->currentText()));
+         if (ui.comboBox_01_devtype->currentIndex() > 0) rtnstr.append(QString("OpenVPN.DeviceType = %1\n").arg(ui.comboBox_01_devtype->currentText()));
+         if (ui.spinBox_01_mtu->value() > 0) rtnstr.append(QString("OpenVPN.MTU = %1").arg(ui.spinBox_01_mtu->value()).append(newline));
+         rtnstr.append(QString("OpenVPN.NSCertType = %1\n").arg(ui.comboBox_01_certtype->currentText()));
+         if (ui.spinBox_01_port->value() > 0) rtnstr.append(QString("OpenVPN.Port = %1").arg(ui.spinBox_01_port->value()).append(newline));
+         if (ui.comboBox_01_cipher->currentIndex() > 0) rtnstr.append(QString("OpenVPN.Cipher = %1\n").arg(ui.comboBox_01_cipher->currentText()));
          break;
       case 2:
          if (! ui.lineEdit_02_groupusername->text().isEmpty()) rtnstr.append("VPNC.IPSec.ID = ").append(ui.lineEdit_02_groupusername->text().append(newline));
@@ -371,34 +396,41 @@ void VPN_Create::checkInput()
 void VPN_Create::processAction(QAction* act)
 {
    QString filterstring = tr("All Files (*.*)");
-   QString filepath = QDir::homePath();
+   QDir target_dir(QDir::homePath());
 
    if (act == action_00_cacert)
-      ui.lineEdit_00_cacert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
+      ui.lineEdit_00_cacert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
 
    if (act == action_00_clientcert)
-      ui.lineEdit_00_clientcert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
+      ui.lineEdit_00_clientcert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
 
    if (act == action_00_pkcsclientcert)
-      ui.lineEdit_00_pkcsclientcert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
+      ui.lineEdit_00_pkcsclientcert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
 
    if (act == action_01_cacert) {
       filterstring = tr("PEM FIles (*.pem);;All Files (*.*)");
-      ui.lineEdit_00_cacert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));}
+      ui.lineEdit_00_cacert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));}
 
    if (act == action_01_cert) {
       filterstring = tr("PEM FIles (*.pem);;All Files (*.*)");
-      ui.lineEdit_01_cert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));}
+      ui.lineEdit_01_cert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));}
 
    if (act == action_01_key) {
       filterstring = tr("KEY FIles (*.key);;All Files (*.*)");
-      ui.lineEdit_01_key->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));}
+      ui.lineEdit_01_key->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));}
 
    if (act == action_01_config)
-      ui.lineEdit_01_config->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
+      ui.lineEdit_01_config->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
+
+   if (act == action_01_authuserpass) {
+      target_dir.setPath(QString(datahome + "/openvpn/userpass"));
+      if (! target_dir.exists()) target_dir.mkpath(target_dir.absolutePath() );
+      filterstring = tr("User/Pass Files (*.up)");
+      ui.lineEdit_01_authuserpass->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
+      }
 
    if (act == action_03_authfile)
-      ui.lineEdit_03_authfile->setText(QFileDialog::getOpenFileName(this, act->toolTip(), filepath, filterstring));
+      ui.lineEdit_03_authfile->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
 
    return;
 }
@@ -422,3 +454,170 @@ void VPN_Create::openConnectAuthTypeChanged(const int& idx)
 
    return;
 }
+
+// Slot to import an OpenVPN configuration file
+// Called when ui.pushButton_01_importopvn is pressed
+void VPN_Create::importOpenVPN()
+{
+   // To start things off we need some input from the user
+   QString fname = QFileDialog::getOpenFileName(this, tr("Select the configuration file to import"),
+                                QDir::homePath(),
+                                QString(tr("OpenVPN Configurations (*.ovpn  *.conf);;All Files (*.*)"))
+                                );
+   if (fname.isEmpty() ) return;
+
+   // Read the source file
+   QFile sourcefile(fname);
+   if (sourcefile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+      QString contents = QString(sourcefile.readAll());
+      sourcefile.close();
+
+      // Get the base name where we are going to store the .conf file created from the .opvn file
+      bool ok = false;
+      QFileInfo fi(fname); // need for a default in the QInputDialog
+      QString basename = QInputDialog::getText(this, tr("Base Name"),
+         tr("Please enter a name for the connection to be created from the imported .opvn file"),
+         QLineEdit::Normal,
+         fi.baseName(),
+         &ok);
+      if (! ok) return;
+
+      // Setup the data directories
+      QDir target_dir = QDir(QString(datahome + "/openvpn/" + basename));
+      if (! target_dir.exists()) target_dir.mkpath(target_dir.absolutePath() );
+
+      // If auth-user-pass will be in the conf file ask to remove it
+      if (contents.contains("auth-user-pass\n", Qt::CaseSensitive) ) {
+         if (QMessageBox::question (this,
+               tr("Keep --auth-user-pass"),
+               tr( "The conf file will contain the <b>auth-user-pass</b> entry which will require "
+                     "prompts sent to stdout and a reply on stdin.  This cannot be handled by "
+                     "Connman nor by CMST.<p>If this entry is removed you will need to create a "
+                     "\"user:pass\" file in order to have Connman make the VPN connection. In the "
+                     "next step you will be asked if you want to create this file and you will prompted "
+                     "for the user name and password.<p><b>Do you wish to remove this entry?</b>"),
+               QMessageBox::Yes | QMessageBox::No,
+               QMessageBox::Yes) == QMessageBox::Yes) {
+
+            // Remove auth-user-pass from conf file
+            contents.remove("auth-user-pass\n");
+
+            // Check to see if a user:pass file needs to be created.
+            if (QMessageBox::question (this,
+                  tr("Create User:Password File"),
+                  tr("Do you wish to create a user:password file for this connection?"),
+                  QMessageBox::Yes | QMessageBox::No,
+                  QMessageBox::Yes) == QMessageBox::Yes) {
+               this->createUserPass(basename);
+            } // if want to creat user/pass file
+         } // if we want to delete the auth-user-pass entry
+      } // if contents contains auth-user-pass
+
+      // If there is anything left write it to a conf file
+      contents = contents.trimmed();
+      if (! contents.isEmpty()) {
+         QFile outfile(QString(target_dir.absolutePath() + "/%1%2")
+            .arg(fi.baseName())
+            .arg(".conf") );
+
+         if (outfile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            QTextStream outstream(&outfile);
+            outstream << contents;
+            outfile.close();
+            ui.lineEdit_01_config->setText(outfile.fileName() );
+            } // if outfile opened for writing
+
+         else {
+            QMessageBox::warning(this, QString("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
+            tr("Unable to write conf file <b>%1</b>").arg(outfile.fileName() ),
+            QMessageBox::Ok,
+            QMessageBox::Ok);
+         } // else outfile (conf) failed to open
+      } // if contents not empty
+
+      // Copy the original conf file for safekeeping
+      if (target_dir.exists(fi.fileName()) ) target_dir.remove(fi.fileName());
+      sourcefile.copy(target_dir.absoluteFilePath(fi.fileName()) );
+
+   } // if we could read the source file
+
+   else {
+      QMessageBox::critical(this, QString("%1 - Critical").arg(TranslateStrings::cmtr("cmst")),
+         tr("Unable to read <b>%1</b> - Aborting the import").arg(sourcefile.fileName() ),
+         QMessageBox::Ok,
+         QMessageBox::Ok);
+      return;
+   } // else sourcefile failed to open
+
+   // Print a done message
+   QMessageBox::information(this, QString("%1 - Information").arg(TranslateStrings::cmtr("cmst")),
+      tr("OpenVPN import is complete."),
+      QMessageBox::Ok,
+      QMessageBox::Ok);
+
+
+   return;
+}
+
+//
+// Slot to create a user/password file which can be used by OpenVPN.AuthUserPass
+// Called when ui.pushButton_01_createuserpass is pressed
+// and from the importOpenVPN() function
+void VPN_Create::createUserPass(QString basename)
+{
+   // Data members
+   bool ok = false;
+   ui.lineEdit_01_authuserpass->clear();
+
+   // Get the base  name if none was provided
+   if (basename.isEmpty()) {
+      basename = QInputDialog::getText(this, tr("Base Name"),
+         tr("Please enter a name for the user/pass file"),
+         QLineEdit::Normal,
+         QString(),
+         &ok);
+      if (! ok) return;
+   } // if
+
+   // Get the user name
+   QString user = QInputDialog::getText(this, tr("User"),
+      tr("Enter the user name for this connection."),
+      QLineEdit::Normal,
+      QString(),
+      &ok);
+   if (! ok) return;
+
+   // Get the password
+   QString pass = QInputDialog::getText(this, tr("Password"),
+      tr("Enter the password for this connection."),
+      QLineEdit::Normal,
+      QString(),
+      &ok);
+   if (! ok) return;
+
+   // Make sure the user/pass directory exists
+   QDir target_dir = QDir(QString(datahome + "/openvpn/userpass"));
+   if (! target_dir.exists()) target_dir.mkpath(target_dir.absolutePath() );
+
+   // Write the user/pass file
+   QFile outfile(QString(target_dir.absolutePath() + "/%1%2")
+      .arg(basename)
+      .arg(".up") );
+
+   if (outfile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+      QTextStream outstream(&outfile);
+      outstream << user << "\n" << pass << "\n";
+      outfile.close();
+      ui.lineEdit_01_authuserpass->setText(outfile.fileName());
+   } // if outfile (up) could be opened for writing
+
+   else {
+      QMessageBox::warning(this, QString("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
+         tr("Unable to write user:password file <b>%1</b>").arg(outfile.fileName() ),
+         QMessageBox::Ok,
+         QMessageBox::Ok);
+   } // else outfile (up) failed to open
+
+return;
+}
+

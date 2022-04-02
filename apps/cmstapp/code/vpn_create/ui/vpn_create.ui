@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>485</width>
-    <height>607</height>
+    <height>665</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -143,6 +143,37 @@
       </item>
      </layout>
     </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QPushButton" name="pushButton_01_importopvn">
+       <property name="text">
+        <string>Import OPVN File</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_01_createuserpass">
+       <property name="text">
+        <string>Create User/Pass</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
@@ -418,38 +449,27 @@
      <widget class="QWidget" name="OpenVPN">
       <layout class="QVBoxLayout" name="verticalLayout_8">
        <item>
-        <widget class="QPushButton" name="pushButton_01_importopvn">
-         <property name="text">
-          <string>Import OPVN File</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <layout class="QGridLayout" name="gridLayout_16">
          <item row="1" column="1">
           <widget class="QLineEdit" name="lineEdit_01_cert"/>
          </item>
-         <item row="2" column="1">
-          <widget class="QLineEdit" name="lineEdit_01_key"/>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_01_cacert">
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_01_config">
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;CA Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>Extra Config</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_01_cert">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Signed Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_config"/>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_proto"/>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_01_key">
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Private Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Private Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
@@ -460,27 +480,81 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_01_cacert"/>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_key"/>
          </item>
-         <item row="3" column="1">
-          <widget class="QLineEdit" name="lineEdit_01_proto"/>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="label_01_config">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_01_cacert">
            <property name="text">
-            <string>Extra Config</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;CA Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="1">
-          <widget class="QLineEdit" name="lineEdit_01_config"/>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_01_cert">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Signed Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_cacert"/>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_01_authuserpass">
+           <property name="text">
+            <string>User/Password File</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_authuserpass"/>
          </item>
         </layout>
        </item>
        <item>
         <layout class="QGridLayout" name="gridLayout_17">
-         <item row="2" column="1">
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_01_remotecerttls">
+           <property name="text">
+            <string>Remote Certificae TLS</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_01_devtype">
+           <property name="text">
+            <string>Device Type</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="checkBox_01_authnocache">
+           <property name="text">
+            <string>Don't cache password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QComboBox" name="comboBox_01_devtype">
+           <item>
+            <property name="text">
+             <string>None Specified</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tun</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tap</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="3" column="1">
           <widget class="QComboBox" name="comboBox_01_remotecerttls">
            <item>
             <property name="text">
@@ -494,49 +568,7 @@
            </item>
           </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QCheckBox" name="checkBox_01_authnocache">
-           <property name="text">
-            <string>Don't cache password</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QCheckBox" name="checkBox_01_askpass">
-           <property name="text">
-            <string>Ask Password</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QCheckBox" name="checkBox_auth">
-           <property name="text">
-            <string>Auuthencicate HMAC</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_01_remotecerttls">
-           <property name="text">
-            <string>Remote Certificae TLS</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_01_complzo">
-           <property name="text">
-            <string>Fast LZO Compression</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QCheckBox" name="checkBox_01_authuserpass">
-           <property name="text">
-            <string>Authenticate with username/password</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
+         <item row="4" column="1">
           <widget class="QComboBox" name="comboBox_01_complzo">
            <item>
             <property name="text">
@@ -556,29 +588,24 @@
           </widget>
          </item>
          <item row="4" column="0">
-          <widget class="QLabel" name="label_01_devtype">
+          <widget class="QLabel" name="label_01_complzo">
            <property name="text">
-            <string>Device Type</string>
+            <string>Fast LZO Compression</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="1">
-          <widget class="QComboBox" name="comboBox_01_devtype">
-           <item>
-            <property name="text">
-             <string>None Specified</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>tun</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>tap</string>
-            </property>
-           </item>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="checkBox_01_askpass">
+           <property name="text">
+            <string>Ask Password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="checkBox_01_auth">
+           <property name="text">
+            <string>Authencicate HMAC</string>
+           </property>
           </widget>
          </item>
         </layout>

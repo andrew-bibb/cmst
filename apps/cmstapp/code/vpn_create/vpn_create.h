@@ -50,6 +50,7 @@ class VPN_Create : public QDialog
       Ui::VPN_Create ui;
       QDBusInterface* iface_rh1;
       QInputDialog* qid;
+      QString datahome;
       QActionGroup* qag;
       QAction* action_00_cacert;
       QAction* action_00_clientcert;
@@ -58,8 +59,8 @@ class VPN_Create : public QDialog
       QAction* action_01_cert;
       QAction* action_01_key;
       QAction* action_01_config;
+      QAction* action_01_authuserpass;
       QAction* action_03_authfile;
-
 
    private slots:
       void createFile();
@@ -67,6 +68,8 @@ class VPN_Create : public QDialog
       void processAction(QAction*);
       void showWhatsThis();
       void openConnectAuthTypeChanged(const int&);
+      void importOpenVPN();
+      void createUserPass(QString = QString());
 
    public:
       inline void setWhatsThisIcon(QIcon icon) {ui.toolButton_whatsthis->setIcon(icon);}
