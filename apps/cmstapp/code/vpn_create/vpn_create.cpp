@@ -419,8 +419,12 @@ void VPN_Create::processAction(QAction* act)
       filterstring = tr("KEY FIles (*.key);;All Files (*.*)");
       ui.lineEdit_01_key->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));}
 
-   if (act == action_01_config)
+   if (act == action_01_config) {
+      target_dir.setPath(QString(datahome + "/openvpn"));
+      if (! target_dir.exists()) target_dir.mkpath(target_dir.absolutePath() );
+      filterstring = tr("Config files (*.conf);;All Files (*.*)");
       ui.lineEdit_01_config->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
+      }
 
    if (act == action_01_authuserpass) {
       target_dir.setPath(QString(datahome + "/openvpn/userpass"));
