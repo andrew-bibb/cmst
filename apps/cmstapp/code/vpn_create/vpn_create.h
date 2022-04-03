@@ -43,7 +43,7 @@ class VPN_Create : public QDialog
    Q_OBJECT
 
    public:
-      VPN_Create(QWidget*, const float&, const QIcon&);
+      VPN_Create(QWidget*, const float& = -1.0 , const QIcon& = QIcon());
       inline void  callImportOpenVPN() {importOpenVPN();}
       inline QString getOpenVPNConfigLocation() {return ui.lineEdit_01_config->text();}
       inline QString getOpenVPNUserPassLocation() {return ui.lineEdit_01_authuserpass->text();}

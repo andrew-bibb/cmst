@@ -859,7 +859,7 @@ void VPN_Editor::importOpenVPN()
    inputValidated(ui.actionProviderOpenVPN, "Networks");
 
    // Use the VPN_Create class to read and process the .opvn file
-   VPN_Create* vpnc = new VPN_Create (this, 0.0, QIcon());
+   VPN_Create* vpnc = new VPN_Create (this);
    vpnc->callImportOpenVPN();
    if (! vpnc->getOpenVPNConfigLocation().isEmpty() )
       ui.plainTextEdit_main->insertPlainText(QString(ui.actionOpenVPN_ConfigFile->text() + " = " + vpnc->getOpenVPNConfigLocation() + "\n") );
