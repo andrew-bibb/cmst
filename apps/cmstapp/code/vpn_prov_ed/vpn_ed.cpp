@@ -43,6 +43,7 @@ DEALINGS IN THE SOFTWARE.
 # include "../resource.h"
 # include "./code/trstring/tr_strings.h"
 # include "./code/shared/shared.h"
+# include "./code/vpn_create/vpn_create.h"
 
 # define VPN_PATH "/var/lib/connman-vpn"
 //
@@ -849,128 +850,21 @@ void VPN_Editor::createProvider(QAction* act)
 // Slot to import an OpenVPN configuration file
 void VPN_Editor::importOpenVPN()
 {
-   // Variables
-   QString filterstring = tr("OpenVPN Configurations (*.ovpn  *.conf);;All Files (*.*)");
-   QString filepath = QDir::homePath();
-
    // To start things off we need some input from the user
    ui.plainTextEdit_main->insertPlainText("\n[provider_openvpn]\nType = OpenVPN\n");
    inputFreeForm(ui.actionProviderOpenVPN, "Name");
    inputValidated(ui.actionProviderOpenVPN, "Host");
    inputValidated(ui.actionProviderOpenVPN, "Domain");
    inputValidated(ui.actionProviderOpenVPN, "Networks");
-   QString fname = QFileDialog::getOpenFileName(this, tr("Select the configuration file to import"),
-                                 filepath,
-                                 filterstring);
-   // Return if the file name returned is empty (cancel pressed in the dialog)
-   if (fname.isEmpty() ) return;
 
-   // Read the source file
-   QFile sourcefile(fname);
-   if (sourcefile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-      QString contents = QString(sourcefile.readAll());
-      sourcefile.close();
-
-      // Setup the data directories
-      // APP defined in resource.h
-      QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
-      QFileInfo fi(fname); // need to extract the baseName
-      QDir target_dir = QDir(QString(env.value("XDG_DATA_HOME", QString(QDir::homePath()) + "/.local/share") + "/%1/openvpn/%2").arg(QString(APP).toLower()).arg(fi.baseName()) );
-      if (! target_dir.exists()) target_dir.mkpath(target_dir.absolutePath() );
-
-      // If auth-user-pass will be in the conf file ask to remove it
-      if (contents.contains("auth-user-pass\n", Qt::CaseSensitive) ) {
-         if (QMessageBox::question (this,
-            tr("Keep --auth-user-pass"),
-            tr( "The conf file will contain the <b>auth-user-pass</b> entry which will require "
-                  "prompts sent to stdout and a reply on stdin.  This cannot be handled by "
-                  "Connman nor by CMST.<p>If this entry is removed you will need to create a "
-                  "\"user:pass\" file in order to have Connman make the VPN connection. In the "
-                  "next step you will be asked if you want to create this file and you will prompted "
-                  "for the user name and password.<p><b>Do you wish to remove this entry?</b>"),
-            QMessageBox::Yes | QMessageBox::No,
-            QMessageBox::Yes) == QMessageBox::Yes) contents.remove("auth-user-pass\n");
-      } // if contents contains auth-user-pass
-
-      // If there is anything left write it to a conf file
-      contents = contents.trimmed();
-      if (! contents.isEmpty()) {
-         QFile outfile(QString(target_dir.absolutePath() + "/%1%2")
-            .arg(fi.baseName())
-            .arg(".conf") );
-
-         if (outfile.open(QIODevice::WriteOnly | QIODevice::Text)) {
-            QTextStream outstream(&outfile);
-            outstream << contents;
-            outfile.close();
-            ui.plainTextEdit_main->insertPlainText(QString(ui.actionOpenVPN_ConfigFile->text() + " = " + outfile.fileName() + "\n") );
-         } // if outfile opened for writing
-
-         else {
-            QMessageBox::warning(this, QString("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
-            tr("Unable to write conf file <b>%1</b>").arg(outfile.fileName() ),
-            QMessageBox::Ok,
-            QMessageBox::Ok);
-         } // else outfile (conf) failed to open
-      } // if contents not empty
-
-      // Copy the original conf file for safekeeping
-      if (target_dir.exists(fi.fileName()) ) target_dir.remove(fi.fileName());
-      sourcefile.copy(target_dir.absoluteFilePath(fi.fileName()) );
-
-      // Check to see if a user:pass file needs to be created.
-      if (QMessageBox::question (this,
-               tr("Create User:Password File"),
-               tr("Do you wish to create a user:password file for this connection?"),
-               QMessageBox::Yes | QMessageBox::No,
-               QMessageBox::Yes) == QMessageBox::Yes) {
-         bool b_continue = false;
-         QString pass;
-         QString user = QInputDialog::getText(this, tr("User"),
-            tr("Enter the user name for this connection."),
-            QLineEdit::Normal,
-            "",
-            &b_continue);
-         if (b_continue) {
-            pass = QInputDialog::getText(this, tr("Password"),
-            tr("Enter the password for this connection."),
-            QLineEdit::Normal,
-            "",
-            &b_continue);
-         } // if
-         if (b_continue) {
-            QFile outfile(QString(target_dir.absolutePath() + "/%1%2")
-            .arg(fi.baseName())
-            .arg(".up") );
-            if (outfile.open(QIODevice::WriteOnly | QIODevice::Text)) {
-               QTextStream outstream(&outfile);
-               outstream << user << "\n" << pass << "\n";
-               outfile.close();
-               ui.plainTextEdit_main->insertPlainText(QString(ui.actionOpenVPN_AuthUserPass->text() + " = " + outfile.fileName() + "\n") );
-            } // if outfile (up) could be opened for writing
-            else {
-               QMessageBox::warning(this, QString("%1 - Warning").arg(TranslateStrings::cmtr("cmst")),
-                  tr("Unable to write user:password file <b>%1</b>").arg(outfile.fileName() ),
-                  QMessageBox::Ok,
-                  QMessageBox::Ok);
-            } // else outfile (up) failed to open
-         } // b_continue - we have user and pass
-      } // messagebox yes - we wanted to create a user:pass file
-   } // If sourcefile opened for reading
-
-   else {
-      QMessageBox::critical(this, QString("%1 - Critical").arg(TranslateStrings::cmtr("cmst")),
-         tr("Unable to read <b>%1</b> - Aborting the import").arg(sourcefile.fileName() ),
-         QMessageBox::Ok,
-         QMessageBox::Ok);
-      return;
-   } // else sourcefile failed to open
-
-   // Print a done message
-   QMessageBox::information(this, QString("%1 - Information").arg(TranslateStrings::cmtr("cmst")),
-      tr("OpenVPN import is complete.  The provisioning file may now be saved."),
-      QMessageBox::Ok,
-      QMessageBox::Ok);
+   // Use the VPN_Create class to read and process the .opvn file
+   VPN_Create* vpnc = new VPN_Create (this, 0.0, QIcon());
+   vpnc->callImportOpenVPN();
+   if (! vpnc->getOpenVPNConfigLocation().isEmpty() )
+      ui.plainTextEdit_main->insertPlainText(QString(ui.actionOpenVPN_ConfigFile->text() + " = " + vpnc->getOpenVPNConfigLocation() + "\n") );
+   if (! vpnc->getOpenVPNUserPassLocation().isEmpty() )
+      ui.plainTextEdit_main->insertPlainText(QString(ui.actionOpenVPN_AuthUserPass->text() + " = " + vpnc->getOpenVPNUserPassLocation() + "\n") );
+   delete vpnc;
 
    return;
 }
