@@ -406,26 +406,35 @@ void VPN_Create::processAction(QAction* act)
    QString filterstring = tr("All Files (*.*)");
    QDir target_dir(QDir::homePath());
 
-   if (act == action_00_cacert)
+   if (act == action_00_cacert) {
+      filterstring = tr("Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)");
       ui.lineEdit_00_cacert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
+      }
 
-   if (act == action_00_clientcert)
+   if (act == action_00_clientcert) {
+      filterstring = tr("Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)");
       ui.lineEdit_00_clientcert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
+      }
 
-   if (act == action_00_pkcsclientcert)
+   if (act == action_00_pkcsclientcert) {
+      filterstring = tr("Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)");
       ui.lineEdit_00_pkcsclientcert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
+      }
 
    if (act == action_01_cacert) {
-      filterstring = tr("PEM FIles (*.pem);;All Files (*.*)");
-      ui.lineEdit_00_cacert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));}
+      filterstring = tr("Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)");
+      ui.lineEdit_00_cacert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
+      }
 
    if (act == action_01_cert) {
-      filterstring = tr("PEM FIles (*.pem);;All Files (*.*)");
-      ui.lineEdit_01_cert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));}
+      filterstring = tr("Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)");
+      ui.lineEdit_01_cert->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
+      }
 
    if (act == action_01_key) {
-      filterstring = tr("KEY FIles (*.key);;All Files (*.*)");
-      ui.lineEdit_01_key->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));}
+      filterstring = tr("Key Files (*.key *.ca *.cert *.crt *.pem);;All Files (*.*)");
+      ui.lineEdit_01_key->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
+      }
 
    if (act == action_01_config) {
       target_dir.setPath(QString(datahome + "/openvpn"));

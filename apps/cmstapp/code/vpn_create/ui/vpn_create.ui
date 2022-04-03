@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>543</width>
+    <width>546</width>
     <height>666</height>
    </rect>
   </property>
@@ -147,7 +147,7 @@
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="OpenConnect">
       <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -534,7 +534,11 @@
           </widget>
          </item>
          <item row="6" column="1">
-          <widget class="QLineEdit" name="lineEdit_01_askpass"/>
+          <widget class="QLineEdit" name="lineEdit_01_askpass">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For the extremely security conscious, it is possible to protect your private key with a password.  Location of the file containing the password is in this box. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -1181,7 +1185,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</string>
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>479</width>
+            <width>494</width>
             <height>722</height>
            </rect>
           </property>

@@ -105,7 +105,6 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
    group_freeform->addAction(ui.actionVPNC_Xauth_Password);
    group_freeform->addAction(ui.actionVPNC_Domain);
    group_freeform->addAction(ui.actionVPNC_AppVersion);
-   group_freeform->addAction(ui.actionOpenVPN_Cipher);
    group_freeform->addAction(ui.actionOpenVPN_Auth);
    group_freeform->addAction(ui.actionOpenConnect_Usergroup);
    group_freeform->addAction(ui.actionWireGuard_Address);
@@ -119,6 +118,7 @@ VPN_Editor::VPN_Editor(QWidget* parent, const float& ver) : QDialog(parent)
    group_combobox->addAction(ui.actionVPNC_DeviceType);
    group_combobox->addAction(ui.actionOpenVPN_NSCertType);
    group_combobox->addAction(ui.actionOpenVPN_Proto);
+   group_combobox->addAction(ui.actionOpenVPN_Cipher);
    group_combobox->addAction(ui.actionOpenVPN_CompLZO);
    group_combobox->addAction(ui.actionOpenVPN_RemoteCertTls);
    group_combobox->addAction(ui.actionOpenVPN_DeviceType);
@@ -532,10 +532,11 @@ void VPN_Editor::inputComboBox(QAction* act)
    if (act == ui.actionVPNC_NATTMode) sl << "natt" << "none" << "force-natt" << "cisco-udp";
    if (act == ui.actionVPNC_DeviceType) sl << "tun" << "tap";
    if (act == ui.actionOpenVPN_NSCertType) sl << "client" << "server";
-   if (act == ui.actionOpenVPN_Proto) sl << "udp" << "tcp-client" << "tcp-server";
+   if (act == ui.actionOpenVPN_Proto) sl << "udp" << "tcp-client" << "tcp-server" << "udp4" << "tcp4-client" << "tcp4-server" << "udp6" << "tcp6-client" << "tcp6-server";
    if (act == ui.actionOpenVPN_CompLZO) sl << "adaptive" << "yes" << "no";
    if (act == ui.actionOpenVPN_RemoteCertTls) sl << "client" << "server";
    if (act == ui.actionOpenVPN_DeviceType) sl << "tun" << "tap";
+   if (act == ui.actionOpenVPN_Cipher) sl << "AES-128-CBC" << "AES-128-CFB" << "AES-128-CFB1" << "AES-128-CFB8" << "AES-128-GCM" << "AES-128-OFB" << "AES-192-CBC" << "AES-192-CFB" << "AES-192-CFB1" << "AES-192-CFB8" << "AES-192-GCM"  << "AES-192-OFB" << "AES-256-CBC" << "AES-256-CFB" << "AES-256-CFB1" << "AES-256-CFB8" << "AES-256-GCM" << "AES-256-OFB" << "ARIA-128-CBC" << "ARIA-128-CFB"  << "ARIA-128-CFB1" << "ARIA-128-CFB" << "ARIA-128-OFB" << "ARIA-192-CBC" << "ARIA-192-CFB" << "ARIA-192-CFB1" << "ARIA-192-CFB8" << "ARIA-192-OFB" << "ARIA-256-CBC" << "ARIA-256-CFB" << "ARIA-256-CFB1" << "ARIA-256-CFB8" << "ARIA-256-OFB" << "CAMELLIA-128-CBC" << "CAMELLIA-128-CFB" << "CAMELLIA-128-CFB1" << "CAMELLIA-128-CFB8" << "CAMELLIA-128-OFB" << "CAMELLIA-192-CBC" << "CAMELLIA-192-CFB" << "CAMELLIA-192-CFB1" << "CAMELLIA-192-CFB8" << "CAMELLIA-192-OFB" << "CAMELLIA-256-CBC" << "CAMELLIA-256-CFB" << "CAMELLIA-256-CFB1" << "CAMELLIA-256-CFB8" << "CAMELLIA-256-OFB" << "CHACHA20-POLY1305" << "SEED-CBC" << "SEED-CFB" << "SEED-OFB" << "SM4-CBC" << "SM4-CFB" << "SM4-OFB" << "BF-CBC" << "BF-CFB" << "BF-OFB" << "CAST5-CBC" << "CAST5-CFB" << "CAST5-OFB" << "DES-CBC" << "DES-CFB" << "DES-CFB1" << "DES-CFB8" << "DES-EDE-CBC" << "DES-EDE-CFB" << "DES-EDE-OFB" << "DES-EDE3-CBC" << "DES-EDE3-CFB" << "DES-EDE3-CFB1" << "DES-EDE3-CFB8" << "DES-EDE3-OFB" << "DES-OFB" << "DESX-CBC" << "IDEA-CBC" << "IDEA-CFB" << "IDEA-OFB" << "RC2-40-CBC" << "RC2-64-CBC" << "RC2-CBC" << "RC2-CFB" << "RC2-OFB";
    if (act == ui.actionOpenConnect_AllowSelfSignedCert) sl << "false" << "true";
    if (act == ui.actionOpenConnect_AuthType) sl << "cookie" << "cookie_with_userpass" << "userpass" << "publickey" << "pkcs";
    if (act == ui.actionOpenConnect_DisableIPv6) sl << "false" << "true";
