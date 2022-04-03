@@ -62,6 +62,7 @@ class VPN_Create : public QDialog
       QAction* action_01_key;
       QAction* action_01_config;
       QAction* action_01_authuserpass;
+      QAction* action_01_askpass;
       QAction* action_03_authfile;
 
    private slots:

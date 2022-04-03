@@ -133,6 +133,10 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
    action_01_authuserpass->setToolTip(tr("Select the file containing the User and Password credentials"));
    ui.lineEdit_01_authuserpass->addAction(action_01_authuserpass, QLineEdit::TrailingPosition);
 
+   action_01_askpass = new QAction(fileicon, "Private Password Key File", qag);
+   action_01_askpass->setToolTip(tr("Select the file containing the password to unlock the private key"));
+   ui.lineEdit_01_askpass->addAction(action_01_askpass, QLineEdit::TrailingPosition);
+
    action_03_authfile = new QAction(fileicon, "Authority File", qag);
    action_03_authfile->setToolTip(tr("Select the L2TP Authority file"));
    ui.lineEdit_03_authfile->addAction(action_03_authfile, QLineEdit::TrailingPosition);
@@ -156,10 +160,14 @@ VPN_Create::VPN_Create(QWidget* parent, const float& ver, const QIcon& fileicon)
    connect (ui.pushButton_01_importopvn, SIGNAL(clicked()), this, SLOT(importOpenVPN()));
    connect (ui.pushButton_01_createuserpass, SIGNAL(clicked()), this, SLOT(createUserPass()));
 
+   // Load the OpenVPN cipher comboBox, this is way too long to enter via the QDesigner ui editor.
+   QStringList sl;
+   sl << "AES-128-CBC" << "AES-128-CFB" << "AES-128-CFB1" << "AES-128-CFB8" << "AES-128-GCM" << "AES-128-OFB" << "AES-192-CBC" << "AES-192-CFB" << "AES-192-CFB1" << "AES-192-CFB8" << "AES-192-GCM"  << "AES-192-OFB" << "AES-256-CBC" << "AES-256-CFB" << "AES-256-CFB1" << "AES-256-CFB8" << "AES-256-GCM" << "AES-256-OFB" << "ARIA-128-CBC" << "ARIA-128-CFB"  << "ARIA-128-CFB1" << "ARIA-128-CFB" << "ARIA-128-OFB" << "ARIA-192-CBC" << "ARIA-192-CFB" << "ARIA-192-CFB1" << "ARIA-192-CFB8" << "ARIA-192-OFB" << "ARIA-256-CBC" << "ARIA-256-CFB" << "ARIA-256-CFB1" << "ARIA-256-CFB8" << "ARIA-256-OFB" << "CAMELLIA-128-CBC" << "CAMELLIA-128-CFB" << "CAMELLIA-128-CFB1" << "CAMELLIA-128-CFB8" << "CAMELLIA-128-OFB" << "CAMELLIA-192-CBC" << "CAMELLIA-192-CFB" << "CAMELLIA-192-CFB1" << "CAMELLIA-192-CFB8" << "CAMELLIA-192-OFB" << "CAMELLIA-256-CBC" << "CAMELLIA-256-CFB" << "CAMELLIA-256-CFB1" << "CAMELLIA-256-CFB8" << "CAMELLIA-256-OFB" << "CHACHA20-POLY1305" << "SEED-CBC" << "SEED-CFB" << "SEED-OFB" << "SM4-CBC" << "SM4-CFB" << "SM4-OFB" << "BF-CBC" << "BF-CFB" << "BF-OFB" << "CAST5-CBC" << "CAST5-CFB" << "CAST5-OFB" << "DES-CBC" << "DES-CFB" << "DES-CFB1" << "DES-CFB8" << "DES-EDE-CBC" << "DES-EDE-CFB" << "DES-EDE-OFB" << "DES-EDE3-CBC" << "DES-EDE3-CFB" << "DES-EDE3-CFB1" << "DES-EDE3-CFB8" << "DES-EDE3-OFB" << "DES-OFB" << "DESX-CBC" << "IDEA-CBC" << "IDEA-CFB" << "IDEA-OFB" << "RC2-40-CBC" << "RC2-64-CBC" << "RC2-CBC" << "RC2-CFB" << "RC2-OFB";
+   ui.comboBox_01_cipher->insertItems(1, sl);
+
    // set index to something we're working on
    ui.comboBox_type->setCurrentIndex(4);
-
-   return;
+      return;
 }
 
 //////////////////////////////////////////////// Private Slots /////////////////////////////////////////
@@ -227,19 +235,19 @@ void VPN_Create::createFile()
          if (! ui.lineEdit_01_cacert->text().isEmpty()) rtnstr.append("OpenVPN.CACert = ").append(ui.lineEdit_01_cacert->text().append(newline));
          if (! ui.lineEdit_01_cert->text().isEmpty()) rtnstr.append("OpenVPN.Cert = ").append(ui.lineEdit_01_cert->text().append(newline));
          if (! ui.lineEdit_01_key->text().isEmpty()) rtnstr.append("OpenVPN.Key = ").append(ui.lineEdit_01_key->text().append(newline));
-         if (! ui.lineEdit_01_proto->text().isEmpty()) rtnstr.append("OpenVPN.Proto = ").append(ui.lineEdit_01_proto->text().append(newline));
          if (! ui.lineEdit_01_config->text().isEmpty()) rtnstr.append("OpenVPN.ConfigFile = ").append(ui.lineEdit_01_config->text().append(newline));
          if (! ui.lineEdit_01_authuserpass->text().isEmpty()) rtnstr.append("OpenVPN.AuthUserPass = ").append(ui.lineEdit_01_authuserpass->text().append(newline));
+         if (! ui.lineEdit_01_askpass->text().isEmpty()) rtnstr.append("OpenVPN.AskPass = ").append(ui.lineEdit_01_askpass->text().append(newline));
          if (ui.checkBox_01_authnocache->isChecked()) rtnstr.append("OpenVPN.AuthNoCache").append(eqyes);
-         if (ui.checkBox_01_auth->isChecked()) rtnstr.append("OpenVPN.Auth").append(eqyes);
-         if (ui.checkBox_01_askpass->isChecked()) rtnstr.append("OpenVPN.AskPass").append(eqyes);
-         rtnstr.append(QString("OpenVPN.RemoteCertTls = %1\n").arg(ui.comboBox_01_remotecerttls->currentText()));
-         rtnstr.append(QString("OpenVPN.CompLZO = %1\n").arg(ui.comboBox_01_complzo->currentText()));
-         if (ui.comboBox_01_devtype->currentIndex() > 0) rtnstr.append(QString("OpenVPN.DeviceType = %1\n").arg(ui.comboBox_01_devtype->currentText()));
+         if (ui.comboBox_01_proto->currentIndex() > 0) rtnstr.append(QString("OpenVPN.Proto = %1\n").arg(ui.comboBox_01_proto->currentText()));
          if (ui.spinBox_01_mtu->value() > 0) rtnstr.append(QString("OpenVPN.MTU = %1").arg(ui.spinBox_01_mtu->value()).append(newline));
-         rtnstr.append(QString("OpenVPN.NSCertType = %1\n").arg(ui.comboBox_01_certtype->currentText()));
+         if (ui.comboBox_01_certtype->currentIndex() > 0) rtnstr.append(QString("OpenVPN.NSCertType = %1\n").arg(ui.comboBox_01_certtype->currentText()));
+         if (ui.comboBox_01_devtype->currentIndex() > 0) rtnstr.append(QString("OpenVPN.DeviceType = %1\n").arg(ui.comboBox_01_devtype->currentText()));
          if (ui.spinBox_01_port->value() > 0) rtnstr.append(QString("OpenVPN.Port = %1").arg(ui.spinBox_01_port->value()).append(newline));
          if (ui.comboBox_01_cipher->currentIndex() > 0) rtnstr.append(QString("OpenVPN.Cipher = %1\n").arg(ui.comboBox_01_cipher->currentText()));
+         if (ui.comboBox_01_complzo->currentIndex() > 0) rtnstr.append(QString("OpenVPN.CompLZO = %1\n").arg(ui.comboBox_01_complzo->currentText()));
+         if (! ui.lineEdit_01_auth->text().isEmpty()) rtnstr.append("OpenVPN.Auth").append(ui.lineEdit_01_auth->text().append(newline));
+         if (ui.comboBox_01_remotecerttls->currentIndex() > 0) rtnstr.append(QString("OpenVPN.RemoteCertTls = %1\n").arg(ui.comboBox_01_remotecerttls->currentText()));
          break;
       case 2:
          if (! ui.lineEdit_02_groupusername->text().isEmpty()) rtnstr.append("VPNC.IPSec.ID = ").append(ui.lineEdit_02_groupusername->text().append(newline));
@@ -431,6 +439,10 @@ void VPN_Create::processAction(QAction* act)
       if (! target_dir.exists()) target_dir.mkpath(target_dir.absolutePath() );
       filterstring = tr("User/Pass Files (*.up)");
       ui.lineEdit_01_authuserpass->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
+      }
+
+   if (act == action_01_askpass) {
+      ui.lineEdit_01_askpass->setText(QFileDialog::getOpenFileName(this, act->toolTip(), target_dir.absolutePath(), filterstring));
       }
 
    if (act == action_03_authfile)

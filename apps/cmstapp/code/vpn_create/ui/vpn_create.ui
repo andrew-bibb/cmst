@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>485</width>
-    <height>665</height>
+    <width>543</width>
+    <height>666</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -143,37 +143,6 @@
       </item>
      </layout>
     </widget>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
-     <item>
-      <widget class="QPushButton" name="pushButton_01_importopvn">
-       <property name="text">
-        <string>Import OPVN File</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_01_createuserpass">
-       <property name="text">
-        <string>Create User/Pass</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_6">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
    </item>
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
@@ -449,44 +418,62 @@
      <widget class="QWidget" name="OpenVPN">
       <layout class="QVBoxLayout" name="verticalLayout_8">
        <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QPushButton" name="pushButton_01_importopvn">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This button will import an OpenVPN .opvn file. The .opvn file will be read, processed, and converted to a .conf file with the location of the resulting file entered into the Extra Config box below. The .conf file will be supplied as an argument to the &lt;span style=&quot; font-weight:600;&quot;&gt;--config&lt;/span&gt; option in OpenVPN.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Import OPVN File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_01_createuserpass">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This will allow the creation of a User/Password file.  You will be prompted to supply the OpenVPN user name and password for the VPN service.  This file is used in conjunction with the &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt; option.  The location of the file created will be automatically entered in the User/Password box below.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Create User/Pass</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
         <layout class="QGridLayout" name="gridLayout_16">
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_01_cert"/>
-         </item>
          <item row="5" column="0">
-          <widget class="QLabel" name="label_01_config">
+          <widget class="QLabel" name="label_01_authuserpass">
            <property name="text">
-            <string>Extra Config</string>
+            <string>User/Password File</string>
            </property>
           </widget>
-         </item>
-         <item row="5" column="1">
-          <widget class="QLineEdit" name="lineEdit_01_config"/>
-         </item>
-         <item row="3" column="1">
-          <widget class="QLineEdit" name="lineEdit_01_proto"/>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_01_key">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Private Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_01_proto">
-           <property name="text">
-            <string>Protocol</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLineEdit" name="lineEdit_01_key"/>
          </item>
          <item row="0" column="0">
           <widget class="QLabel" name="label_01_cacert">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;CA Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_cert">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local peer's signed certificate in .pem format which must be signed by a certificate authority whose certificate is in --ca file.&lt;/p&gt;&lt;p&gt;Each peer in an OpenVPN link running in TLS mode should have its own certificate and private key file. In addition, each certificate should have been signed by the key of a certificate authority whose public key resides in the --ca certificate authority file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
@@ -497,79 +484,82 @@
            </property>
           </widget>
          </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_01_config">
+           <property name="text">
+            <string>Extra Config</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_01_key">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Private Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_01_cacert"/>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_01_authuserpass">
-           <property name="text">
-            <string>User/Password File</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="1">
-          <widget class="QLineEdit" name="lineEdit_01_authuserpass"/>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QGridLayout" name="gridLayout_17">
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_01_remotecerttls">
-           <property name="text">
-            <string>Remote Certificae TLS</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="label_01_devtype">
-           <property name="text">
-            <string>Device Type</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QCheckBox" name="checkBox_01_authnocache">
-           <property name="text">
-            <string>Don't cache password</string>
+          <widget class="QLineEdit" name="lineEdit_01_cacert">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Certificate authority (CA) file in .pem format, also referred to as the root certificate. This file can have multiple certificates in  .pem  format,  concatenated together.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QComboBox" name="comboBox_01_devtype">
+          <widget class="QLineEdit" name="lineEdit_01_authuserpass">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Location of a user/password file to be used in conjunction with the &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt; option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_key">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local peer's private key in .pem format. Use the private key which was generated when you built your peer's certificate&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_config">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;OpenVPN config file that can contain extra options not supported by the ConnMan OpenVPN plugin.&lt;/p&gt;&lt;p&gt;When an OpenVPN .opvn file is imported the contents of that are placed in the extra config file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_01_askpass">
+           <property name="text">
+            <string>Certificate Password File</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLineEdit" name="lineEdit_01_askpass"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_01_authnocache">
+         <property name="whatsThis">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Don't cache &lt;span style=&quot; font-weight:600;&quot;&gt;--askpass&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt; username names and passwords in virtual memory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>Don't cache password</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_18">
+         <item row="1" column="3">
+          <widget class="QComboBox" name="comboBox_01_complzo">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;DEPRECATED&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Enable LZO compression algorithm.  Compression is generally not recommended.  VPN tunnels which use compression are suspectible to the VORALCE attack vector. Use LZO compression may add up to 1 byte per packet for incompressible data. mode may be yes, no, or adaptive (default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
            <item>
             <property name="text">
              <string>None Specified</string>
             </property>
            </item>
-           <item>
-            <property name="text">
-             <string>tun</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>tap</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QComboBox" name="comboBox_01_remotecerttls">
-           <item>
-            <property name="text">
-             <string>client</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>server</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QComboBox" name="comboBox_01_complzo">
            <item>
             <property name="text">
              <string>adaptive</string>
@@ -587,60 +577,128 @@
            </item>
           </widget>
          </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="label_01_complzo">
-           <property name="text">
-            <string>Fast LZO Compression</string>
+         <item row="0" column="3">
+          <widget class="QComboBox" name="comboBox_01_cipher">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is deprecated for server-client mode. Options &lt;span style=&quot; font-weight:600;&quot;&gt;--data-ciphers&lt;/span&gt; or possibly -&lt;span style=&quot; font-weight:600;&quot;&gt;-data-ciphers-fallback&lt;/span&gt; should be used instead. Encrypt data channel packets with the specified cipher algorithm.&lt;/p&gt;&lt;p&gt;The default is BF-CBC, an abbreviation for Blowfish in Cipher Block Chaining mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
+           <item>
+            <property name="text">
+             <string>None Specified</string>
+            </property>
+           </item>
           </widget>
          </item>
-         <item row="0" column="1">
-          <widget class="QCheckBox" name="checkBox_01_askpass">
-           <property name="text">
-            <string>Ask Password</string>
+         <item row="4" column="1">
+          <widget class="QSpinBox" name="spinBox_01_port">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP/UDP port number.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QCheckBox" name="checkBox_01_auth">
-           <property name="text">
-            <string>Authencicate HMAC</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QGridLayout" name="gridLayout_18">
-         <item row="0" column="3">
-          <widget class="QSpinBox" name="spinBox_01_port"/>
-         </item>
-         <item row="0" column="0">
           <widget class="QLabel" name="label_01_mtu">
            <property name="text">
             <string>MTU</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="2">
-          <widget class="QLabel" name="label_01_port">
-           <property name="text">
-            <string>Port</string>
-           </property>
-          </widget>
-         </item>
          <item row="0" column="1">
-          <widget class="QSpinBox" name="spinBox_01_mtu"/>
+          <widget class="QComboBox" name="comboBox_01_proto">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the protocol for communicating with remote host. The protocal can be &lt;span style=&quot; font-weight:600;&quot;&gt;udp, tcp-client, or tcp-server.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;You can also limit OpenVPN to use only IPv4 or only IPv6 by specifying the protocol as &lt;span style=&quot; font-weight:600;&quot;&gt;udp4, tcp4-client, tcp4-server or udp6, tcp6-client, tcp6-server&lt;/span&gt;, respectively. &lt;/p&gt;&lt;p&gt;The default protocol is udp when --proto is not specified.&lt;/p&gt;&lt;p&gt;For UDP operation, --proto udp should be specified on both peers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>None Specified</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>udp</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>udp4</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>udp6</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tcp-client</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tcp4-client</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tcp6-client</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tcp-server</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tcp4-server</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tcp6-server</string>
+            </property>
+           </item>
+          </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_01_certtype">
+         <item row="3" column="1">
+          <widget class="QComboBox" name="comboBox_01_devtype">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify which device type are we using. Device-type should be tun (OSI Layer 3) or tap (OSI Layer 2).&lt;/p&gt;&lt;p&gt;Only use this option if the TUN/TAP device used with &lt;span style=&quot; font-weight:600;&quot;&gt;--dev&lt;/span&gt;  does not begin with tun or tap.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>None Specified</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tun</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tap</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_01_proto">
            <property name="text">
-            <string>NS Certificate Type</string>
+            <string>Protocol</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
+         <item row="2" column="1">
           <widget class="QComboBox" name="comboBox_01_certtype">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Removed in OpenVPN 2.5.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The nsCertType field is no longer supported in recent SSL/TLS libraries. If your certificates does not include key usage and extended key usage fields, they must be upgraded and the &lt;span style=&quot; font-weight:600;&quot;&gt;--remote-cert-tls&lt;/span&gt; option should be used instead.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>None Specified</string>
+            </property>
+           </item>
            <item>
             <property name="text">
              <string>server</string>
@@ -653,55 +711,89 @@
            </item>
           </widget>
          </item>
+         <item row="2" column="3">
+          <widget class="QLineEdit" name="lineEdit_01_auth">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Authenticate data channel packets and (if enabled) tls-auth control channel packets with HMAC using the specified message digest algorithm. (The default is SHA1 ).&lt;/p&gt;&lt;p&gt;HMAC is a commonly used message authentication algorithm (MAC) that uses a data string, a secure hash algorithm and a key to produce a digital signature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLabel" name="label_01_remotecerttls">
+           <property name="text">
+            <string>Remote Certificate TLS</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_01_certtype">
+           <property name="text">
+            <string>NS Certificate Type</string>
+           </property>
+          </widget>
+         </item>
          <item row="1" column="2">
+          <widget class="QLabel" name="label_01_complzo">
+           <property name="text">
+            <string>Fast LZO Compression</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_01_port">
+           <property name="text">
+            <string>Port</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
           <widget class="QLabel" name="label_01_cipher">
            <property name="text">
             <string>Cipher</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="3">
-          <widget class="QComboBox" name="comboBox_01_cipher">
+         <item row="2" column="2">
+          <widget class="QLabel" name="label_01_auth">
+           <property name="text">
+            <string>Authenticate HMAC</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_01_devtype">
+           <property name="text">
+            <string>Device Type</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QComboBox" name="comboBox_01_remotecerttls">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require that peer certificate was signed with an explicit key usage and extended key usage based on RFC3280 TLS rules.&lt;/p&gt;&lt;p&gt;This is a useful security option for clients to ensure that the host they connect to is a designated server. Or the other way around; for a server to  verify that only hosts with a client certificate can connect.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
            <item>
             <property name="text">
-             <string>none</string>
+             <string>None Specified</string>
             </property>
            </item>
            <item>
             <property name="text">
-             <string>AES-128-CBC</string>
+             <string>client</string>
             </property>
            </item>
            <item>
             <property name="text">
-             <string>AES-128-CFB</string>
+             <string>server</string>
             </property>
            </item>
-           <item>
-            <property name="text">
-             <string>AES-128-CFB1</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>AES-128-CFB8</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>AES-128-GCM</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>AES-128-0FB</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>New Item</string>
-            </property>
-           </item>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="spinBox_01_mtu">
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the tunnel MTU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
           </widget>
          </item>
         </layout>
