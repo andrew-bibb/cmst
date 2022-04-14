@@ -35,7 +35,7 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>5</number>
      </property>
      <property name="movable">
       <bool>true</bool>
@@ -58,8 +58,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>349</width>
-            <height>408</height>
+            <width>818</width>
+            <height>778</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
@@ -502,8 +502,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>60</height>
+            <width>818</width>
+            <height>697</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_2">
@@ -917,8 +917,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>112</width>
-            <height>290</height>
+            <width>818</width>
+            <height>778</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -957,8 +957,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>98</width>
-                   <height>47</height>
+                   <width>774</width>
+                   <height>312</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1016,8 +1016,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>98</width>
-                   <height>47</height>
+                   <width>774</width>
+                   <height>312</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1090,8 +1090,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>620</width>
-            <height>693</height>
+            <width>818</width>
+            <height>778</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -1609,19 +1609,6 @@
                   </property>
                  </widget>
                 </item>
-                <item row="3" column="1">
-                 <widget class="QLineEdit" name="lineEdit_icontheme">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="whatsThis">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon theme to use. For this theme to be used it must be installed on your system. If the theme is not installed, or if you spell the name wrong CMST will fall back to using its internal icon set.&lt;/p&gt;&lt;p&gt;If this box is blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="clearButtonEnabled">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
                 <item row="8" column="0">
                  <widget class="QCheckBox" name="checkBox_waittime">
                   <property name="whatsThis">
@@ -1659,6 +1646,13 @@
                   </property>
                   <property name="singleStep">
                    <double>0.250000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QComboBox" name="comboBox_icontheme">
+                  <property name="editable">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -1918,8 +1912,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>98</width>
-            <height>414</height>
+            <width>708</width>
+            <height>778</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -2282,22 +2276,6 @@ p, li { white-space: pre-wrap; }
    </hints>
   </connection>
   <connection>
-   <sender>checkBox_systemicontheme</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>lineEdit_icontheme</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>451</x>
-     <y>179</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>816</x>
-     <y>189</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>checkBox_waittime</sender>
    <signal>clicked(bool)</signal>
    <receiver>spinBox_waittime</receiver>
@@ -2308,7 +2286,7 @@ p, li { white-space: pre-wrap; }
      <y>301</y>
     </hint>
     <hint type="destinationlabel">
-     <x>619</x>
+     <x>816</x>
      <y>303</y>
     </hint>
    </hints>
@@ -2324,7 +2302,7 @@ p, li { white-space: pre-wrap; }
      <y>331</y>
     </hint>
     <hint type="destinationlabel">
-     <x>619</x>
+     <x>816</x>
      <y>333</y>
     </hint>
    </hints>
@@ -2340,7 +2318,7 @@ p, li { white-space: pre-wrap; }
      <y>361</y>
     </hint>
     <hint type="destinationlabel">
-     <x>619</x>
+     <x>816</x>
      <y>363</y>
     </hint>
    </hints>
@@ -2356,7 +2334,7 @@ p, li { white-space: pre-wrap; }
      <y>391</y>
     </hint>
     <hint type="destinationlabel">
-     <x>619</x>
+     <x>816</x>
      <y>393</y>
     </hint>
    </hints>
@@ -2390,6 +2368,22 @@ p, li { white-space: pre-wrap; }
     <hint type="destinationlabel">
      <x>639</x>
      <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_systemicontheme</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>comboBox_icontheme</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>549</x>
+     <y>183</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>658</x>
+     <y>179</y>
     </hint>
    </hints>
   </connection>

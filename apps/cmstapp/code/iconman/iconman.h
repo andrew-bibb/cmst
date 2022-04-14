@@ -57,18 +57,21 @@ class IconManager : public QObject
    // functions
       QIcon getIcon(const QString&);
       QString getIconName(const QString&);
+      QStringList getInstalledIconThemes();
       inline void setIconColor(const QColor& col) {icon_color = col;}
 
    private:
    // members
       QMap<QString, IconElement> icon_map;
+      QMap<QString, QIcon> cached_icons;
+      QStringList faillist;
       QString cfg;
       QString qrc;
       QColor icon_color;
 
    // functions
       bool buildResourceIcon(QIcon&, const QString&, const QString&);
-      bool buildThemeIcon(QIcon&, const QString&);
+      bool buildFdoIcon(QIcon&, const QString&);
       QString getFallback(const QString&);
       void makeLocalFile();
       QString extractValue(const QString&);

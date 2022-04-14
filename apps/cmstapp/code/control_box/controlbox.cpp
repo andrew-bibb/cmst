@@ -196,7 +196,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    // Read saved settings which will set the ui controls in the preferences tab.
    this->readSettings();
 
-
    // Set the iconmanager color
    iconman->setIconColor(QColor(ui.lineEdit_colorize->text()) );
 
@@ -241,10 +240,10 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    } // if parser is set
    else {
       if (b_so && ui.checkBox_systemicontheme->isChecked() ) {
-         if (ui.lineEdit_icontheme->text().isEmpty() ) {
+         if (ui.comboBox_icontheme->currentText().isEmpty() ) {
             if (QIcon::themeName().isEmpty() ) QIcon::setThemeName(INTERNAL_THEME);
          } // if
-         else QIcon::setThemeName(ui.lineEdit_icontheme->text() );
+         else QIcon::setThemeName(ui.comboBox_icontheme->currentText() );
       } // if
       else QIcon::setThemeName(INTERNAL_THEME);
    } // else parser not set
@@ -529,7 +528,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       else if (b_so && ui.checkBox_waittime->isChecked() ) {
          timeout = ui.spinBox_waittime->value();
       }
-
       timeout *= 1000;
       if (timeout < mintrigger) timeout = mintrigger;
       if (parser.isSet("minimized") ? true : (b_so && ui.checkBox_startminimized->isChecked()) ) {
@@ -2456,7 +2454,7 @@ void ControlBox::assembleTrayIcon()
                stt.append(tr("Connection is in the Failure State, attempting to reestablish the connection", "icon_tool_tip") );
             } // if wifi and favorite
          } // if retry checked
-         prelimicon = iconman->getIcon("state_online");
+         prelimicon = iconman->getIcon("connection_failure");
          stt.append(tr("Connection is in the Failure State.", "icon_tool_tip"));
       } // else if failure state
 
@@ -2723,7 +2721,7 @@ void ControlBox::writeSettings()
    settings->setValue("disable_tray_icon", ui.checkBox_disabletrayicon->isChecked() );
    settings->setValue("disable_vpn", ui.checkBox_disablevpn->isChecked() );
    settings->setValue("use_icon_theme", ui.checkBox_systemicontheme->isChecked() );
-   settings->setValue("icon_theme", ui.lineEdit_icontheme->text() );
+   settings->setValue("icon_theme", ui.comboBox_icontheme->currentText() );
    settings->setValue("use_icon_scale", ui.checkBox_iconscale->isChecked() );
    settings->setValue("icon_scale", ui.doubleSpinBox_iconscale->value() );
    settings->setValue("start_minimized", ui.checkBox_startminimized->isChecked() );
@@ -2793,7 +2791,11 @@ void ControlBox::readSettings()
    ui.checkBox_disabletrayicon->setChecked(settings->value("disable_tray_icon").toBool() );
    ui.checkBox_disablevpn->setChecked(settings->value("disable_vpn").toBool() );
    ui.checkBox_systemicontheme->setChecked(settings->value("use_icon_theme").toBool() );
-   ui.lineEdit_icontheme->setText(settings->value("icon_theme").toString() );
+   ui.comboBox_icontheme->addItems(iconman->getInstalledIconThemes());
+   if (ui.comboBox_icontheme->findText(settings->value("icon_theme").toString()) < 0 )
+      ui.comboBox_icontheme->setEditText("");
+   else
+      ui.comboBox_icontheme->setEditText(settings->value("icon_theme").toString() );
    ui.checkBox_iconscale->setChecked(settings->value("use_icon_scale").toBool() );
    ui.doubleSpinBox_iconscale->setValue(settings->value("icon_scale").toFloat() );
    ui.checkBox_startminimized->setChecked(settings->value("start_minimized").toBool() );
@@ -2821,7 +2823,7 @@ void ControlBox::readSettings()
    settings->endGroup();
 
    // sync disabled boxes
-   ui.lineEdit_icontheme->setEnabled(ui.checkBox_systemicontheme->isChecked());
+   ui.comboBox_icontheme->setEnabled(ui.checkBox_systemicontheme->isChecked());
    ui.doubleSpinBox_iconscale->setEnabled(ui.checkBox_iconscale->isChecked());
    ui.spinBox_waittime->setEnabled(ui.checkBox_waittime->isChecked());
    ui.spinBox_counterrate->setEnabled(ui.checkBox_counterseconds->isChecked());

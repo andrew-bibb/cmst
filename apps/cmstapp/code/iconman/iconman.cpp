@@ -57,6 +57,10 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
    // Initialize icon_map
    icon_map.clear();
 
+   // Initalize the cache_icon map and faillist
+   faillist.clear();
+   cached_icons.clear();
+
    // Make the local conf file if necessary
    this->makeLocalFile();
 
@@ -85,17 +89,16 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
                else if (line.startsWith("colorize", Qt::CaseInsensitive) ) ie.colorize = extractValue(line);
                   else if (line.startsWith("fdo_name", Qt::CaseInsensitive) ) ie.fdo_name = extractValue(line);
                      else if (line.startsWith("theme_names", Qt::CaseInsensitive) )
-
-            #if QT_VERSION >= 0x050e00
-               ie.theme_names = extractValue(line).split(',', Qt::SkipEmptyParts) ;
-            #else
-               ie.theme_names = extractValue(line).split(',', QString::SkipEmptyParts) ;
-            #endif
+                     #if QT_VERSION >= 0x050e00
+                        ie.theme_names << extractValue(line).split(',', Qt::SkipEmptyParts) ;
+                     #else
+                        ie.theme_names << extractValue(line).split(',', QString::SkipEmptyParts) ;
+                     #endif
          } while ( ! line.isEmpty() );
 
          icon_map[iconame] = ie;
       }  // if [icon]
-   }  // while not atEnd()
+   }  // while not at End()
    f1.close();
 
    return;
@@ -106,6 +109,9 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 // Function to return a QIcon based on the name provided
 QIcon IconManager::getIcon(const QString& name)
 {
+   // Return a cached icon if we have one
+   if (cached_icons.contains(name)) return cached_icons.value(name);
+
    // Data members
    IconElement ie = icon_map.value(name);
    QIcon ico = QIcon();
@@ -113,30 +119,42 @@ QIcon IconManager::getIcon(const QString& name)
    // If the internal theme is being used (and the user has not
    // messed up the local config file) use that first.
    if (QIcon::themeName() == INTERNAL_THEME) {
-      if (buildResourceIcon(ico, ie.resource_path, ie.colorize) )
+      if (buildResourceIcon(ico, ie.resource_path, ie.colorize) ) {
+         cached_icons[name] = ico;
          return ico;
+         }
    } // if using internal theme
-
-   // Next look for a user specified theme icon
-   if (ie.theme_names.size() > 0 ) {
-      for (int i = 0; i < ie.theme_names.size(); ++i) {
-         if (buildThemeIcon(ico, ie.theme_names.at(i) )  )
-            return ico;
-      }  // for
-   } // if theme_names.size() > 0
 
    // Next look for a freedesktop.org named icon
    if (! ie.fdo_name.isEmpty() ) {
-      if (buildThemeIcon(ico, ie.fdo_name) )
+      if (buildFdoIcon(ico, ie.fdo_name) ) {
+         cached_icons[name] = ico;
          return ico;
+         }
    } // if freedesktop name not empty
 
+   // Next look for a user specified theme icon, add the first pixmap
+   // from our search list (in getIconName) and return the icon
+   if (ie.theme_names.size() > 0 ) {
+      for (int i = 0; i < ie.theme_names.size(); ++i) {
+         QString qs_icnm = getIconName(name);
+         if (! qs_icnm.isEmpty() ) {
+            ico.addFile(qs_icnm);
+            cached_icons[name] = ico;
+            return ico;
+         } // if iconName not empty
+      }  // for
+   } // if theme_names.size() > 0
+
    // Then look for hardcoded name in the users config dir
-   if (buildResourceIcon(ico, ie.resource_path, ie.colorize) )
+   if (buildResourceIcon(ico, ie.resource_path, ie.colorize) ) {
+      cached_icons[name] = ico;
       return ico;
+      }
 
    // Last stop is our fallback hard coded into the program
    buildResourceIcon(ico, getFallback(name), ie.colorize);
+   cached_icons[name] = ico;
    return ico;
 }
 
@@ -144,7 +162,7 @@ QIcon IconManager::getIcon(const QString& name)
 // Function to return a QString containing the fully qualified icon name or resource path
 QString IconManager::getIconName(const QString& name)
 {
-   // Data members
+// Data members
    IconElement ie = icon_map.value(name);
 
    // If the internal theme is being used (and the user has not
@@ -154,19 +172,6 @@ QString IconManager::getIconName(const QString& name)
       if (QFileInfo(res_path).exists() )
          return res_path;
    } // if using internal theme
-
-   // Next look for a user specified theme icon
-   if (ie.theme_names.size() > 0 ) {
-      for (int i = 0; i < ie.theme_names.size(); ++i) {
-         QString theme_icon = ie.theme_names.at(i).section('|', 0, 0).simplified();
-         if (QIcon::hasThemeIcon(theme_icon) ) {
-            QStringList filter_list;
-            filter_list << "64x64" << "48x48" << "40x40" << "36x36" << "32x32"<< "24x24" << "22x22" << "16x16";
-            QString rtn = findQualifiedName(theme_icon, filter_list);
-            if (! rtn.isEmpty() ) return rtn;
-         } // if has ThemeIcon
-      } // for
-   } // if namelist contains entries
 
    // Next look for a freedesktop.org named icon
    if (! ie.fdo_name.isEmpty() ) {
@@ -179,6 +184,22 @@ QString IconManager::getIconName(const QString& name)
       } // if has ThemeIcon
    } // if freedesktop name not empty
 
+   // Next look for a theme pixmap which does not follow the freedesktop.org specification
+   if (ie.theme_names.size() > 0 ) {
+      for (int i = 0; i < ie.theme_names.size(); ++i) {
+         QString theme_icon = ie.theme_names.at(i).section('|', 0, 0).simplified();
+         if (! faillist.contains(theme_icon) ) {
+            QStringList filter_list;
+            filter_list << "64x64" << "48x48" << "40x40" << "36x36" << "32x32"<< "24x24" << "22x22" << "16x16";
+            QString rtn = findQualifiedName(theme_icon, filter_list);
+            if (! rtn.isEmpty() )
+               return rtn;
+            else
+               faillist << theme_icon;
+         } // if theme_icon not on faillist
+      } // for
+   } // if namelist contains entries
+
    // Then look for hardcoded name in the users config dir
    if (! ie.resource_path.isEmpty() ) {
       const QString res_path = ie.fdo_name.section(' ', 0, 0).simplified();
@@ -189,6 +210,24 @@ QString IconManager::getIconName(const QString& name)
    // Last stop is our fallback hard coded into the program
    const QString res_path = getFallback(name).section(' ', 0, 0).simplified();
    return res_path;
+}
+
+//
+// Function to find the installed icon themes on the system
+QStringList IconManager::getInstalledIconThemes()
+{
+   QDir icondir = QDir("/usr/share/icons");
+   QStringList elist = icondir.entryList(QDir::Dirs | QDir::NoSymLinks | QDir::NoDotAndDotDot, QDir::Name);
+   QStringList sl_themes;
+   sl_themes.clear();
+
+   for (int i = 0; i < elist.size(); ++i) {
+      icondir.setPath(QString("/usr/share/icons/") + elist.at(i));
+      if (icondir.exists("index.theme"))
+         sl_themes << elist.at(i);
+   } // for
+
+   return sl_themes;
 }
 
 ////////////////////////////// Private Functions ////////////////////////////
@@ -225,12 +264,12 @@ bool IconManager::buildResourceIcon(QIcon& icon, const QString& name, const QStr
 
 
 //
-// Function to make an icon from theme file(s).  A reference to the Icon
+// Function to make an icon from Free Desktop theme file(s).  A reference to the Icon
 // is sent to this function and is modified by this function.  If the name
 // argument contains a | the name to the left is used for the "on" state
 // and the next name is used for the "off" state.  Additional text is ignored.
 // return true if we could find the theme files
-bool IconManager::buildThemeIcon(QIcon& icon, const QString& name)
+bool IconManager::buildFdoIcon(QIcon& icon, const QString& name)
 {
    const QString name_on = name.section('|',  0, 0).simplified();
    const QString name_off = name.section('|', 1, 1).simplified();
@@ -426,7 +465,7 @@ void IconManager::makeLocalFile()
 QString IconManager::extractValue(const QString& sv)
 {
    QString s = sv.section('=', 1, 1);
-   s = s.section("#", 0, 0);
+   s = s.section("#", 0, 0); // strip trailing comments
 
    return s.simplified();
 }
@@ -491,31 +530,21 @@ QPixmap IconManager::processArt(const QString& res, const QColor& color)
 // Called from the getIconName function
 QString IconManager::findQualifiedName(const QString& iconname, const QStringList& sl_filter)
 {
-   // variables
-   QStringList sl_results = QStringList();
-
    // get search paths
    QStringList sl_dirs = QIcon::themeSearchPaths();
    if (sl_dirs.size() < 1) return QString();
 
    // iterate over the search paths
    for (int i = 0; i < sl_dirs.size(); ++i) {
-      QDirIterator dit(QString(sl_dirs.at(i) + '/' + QIcon::themeName()) , QDirIterator::Subdirectories);
-      while (dit.hasNext()) {
-         QFileInfo fi(dit.next());
-         if (fi.completeBaseName() == iconname) sl_results << fi.canonicalFilePath();
-      } // while
-   } // for
-
-   // search the list for icons matching the filter list and return first found
-   if (sl_results.size() < 1) return QString();
-   if (sl_filter.size() < 1) return sl_results.at(0);
-   for (int i = 0; i < sl_filter.size(); ++i) {
-      for (int j = 0; j < sl_results.size(); ++j) {
-         if (sl_results.at(j).contains(sl_filter.at(i)) ) return sl_results.filter(sl_filter.at(i)).at(0);
+      for (int j = 0; j < sl_filter.size(); ++j) {
+         QDirIterator dit(QString(sl_dirs.at(i) + '/' + QIcon::themeName() + '/' + sl_filter.at(j)) , QDirIterator::Subdirectories);
+         while (dit.hasNext()) {
+            QFileInfo fi(dit.next());
+            if (fi.completeBaseName() == iconname) return(fi.canonicalFilePath() );
+         } // while
       } // j for
    } // i for
 
    // if no filter matches
-   return sl_results.at(0);
+   return QString();
 }

@@ -2,7 +2,8 @@
 <b><center>Change Log</center></b>
 <b> IN PROGRESS</b>
 <ul>
-<li>VPN tab - implemented Remove function</li>
+<li>Many improvements in IconManager.</li>
+<li>VPN tab - implemented Remove function.</li>
 <li>VPN tab - ipplemented Create function.</li>
 </ul>
 <b> 2022.03.13</b>
