@@ -63,8 +63,9 @@ class IconManager : public QObject
    private:
    // members
       QMap<QString, IconElement> icon_map;
-      QMap<QString, QIcon> cached_icons;
-      QStringList faillist;
+      QMap<QString,QIcon> cached_icons;
+      QMap<QString,QString> foundlist;
+      QStringList notfoundlist;
       QString cfg;
       QString qrc;
       QColor icon_color;

@@ -168,7 +168,7 @@ resource = :/icons/images/raw_art/network-idle.png
 colorize = yes
 fdo_name = network-idle
 theme_names (oxygen, breeze) = network-connect
-theme_names (adwaita) = network-transmit-idle-symbolic.symbolic
+theme_names (adwaita) = network-idle-symbolic.symbolic
 
 [icon]
 icon_name = connection_not_ready

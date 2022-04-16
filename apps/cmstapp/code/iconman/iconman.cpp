@@ -57,9 +57,10 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
    // Initialize icon_map
    icon_map.clear();
 
-   // Initalize the cache_icon map and faillist
-   faillist.clear();
+   // Initalize the foundlist, notfoundlist, and icon cache
    cached_icons.clear();
+   foundlist.clear();
+   notfoundlist.clear();
 
    // Make the local conf file if necessary
    this->makeLocalFile();
@@ -109,8 +110,9 @@ IconManager::IconManager(QObject* parent) : QObject(parent)
 // Function to return a QIcon based on the name provided
 QIcon IconManager::getIcon(const QString& name)
 {
-   // Return a cached icon if we have one
-   if (cached_icons.contains(name)) return cached_icons.value(name);
+   // Return a cached icon if we can
+   if (cached_icons.contains(name))
+   return cached_icons.value(name);
 
    // Data members
    IconElement ie = icon_map.value(name);
@@ -178,7 +180,7 @@ QString IconManager::getIconName(const QString& name)
       QString theme_icon = ie.fdo_name.section('|', 0, 0).simplified();
       if (QIcon::hasThemeIcon(theme_icon) ) {
          QStringList filter_list;
-         filter_list <<   "64x64" << "48x48" << "40x40" << "36x36" << "32x32"<< "24x24" << "22x22" << "16x16";
+         filter_list << "64x64" << "48x48" << "40x40" << "36x36" << "32x32"<< "24x24" << "22x22" << "16x16";
          QString rtn = findQualifiedName(theme_icon, filter_list);
          if (! rtn.isEmpty() ) return rtn;
       } // if has ThemeIcon
@@ -188,15 +190,18 @@ QString IconManager::getIconName(const QString& name)
    if (ie.theme_names.size() > 0 ) {
       for (int i = 0; i < ie.theme_names.size(); ++i) {
          QString theme_icon = ie.theme_names.at(i).section('|', 0, 0).simplified();
-         if (! faillist.contains(theme_icon) ) {
+         if (foundlist.contains(theme_icon) ) return foundlist.value(theme_icon);
+         if (! notfoundlist.contains(theme_icon) ) {
             QStringList filter_list;
-            filter_list << "64x64" << "48x48" << "40x40" << "36x36" << "32x32"<< "24x24" << "22x22" << "16x16";
+            filter_list << "48x48" << "40x40" << "36x36" << "32x32"<< "24x24" << "22x22" << "16x16";
             QString rtn = findQualifiedName(theme_icon, filter_list);
-            if (! rtn.isEmpty() )
+            if (! rtn.isEmpty() ) {
+               foundlist[theme_icon] = rtn;
                return rtn;
+            }
             else
-               faillist << theme_icon;
-         } // if theme_icon not on faillist
+               notfoundlist << theme_icon;
+         } // if theme_icon not on notfoundlist
       } // for
    } // if namelist contains entries
 
@@ -536,13 +541,18 @@ QString IconManager::findQualifiedName(const QString& iconname, const QStringLis
 
    // iterate over the search paths
    for (int i = 0; i < sl_dirs.size(); ++i) {
-      for (int j = 0; j < sl_filter.size(); ++j) {
-         QDirIterator dit(QString(sl_dirs.at(i) + '/' + QIcon::themeName() + '/' + sl_filter.at(j)) , QDirIterator::Subdirectories);
-         while (dit.hasNext()) {
-            QFileInfo fi(dit.next());
-            if (fi.completeBaseName() == iconname) return(fi.canonicalFilePath() );
-         } // while
-      } // j for
+      // dit_d will find all subdirectories (and subdirectories of subdirectories) containing an entry in sl_filter
+      QDirIterator dit_d(QString(sl_dirs.at(i) + '/' + QIcon::themeName()), sl_filter, QDir::Dirs | QDir::NoSymLinks | QDir::NoDotAndDotDot, QDirIterator::Subdirectories);
+      while (dit_d.hasNext()) {
+         QFileInfo fi_d (dit_d.next());
+//         qDebug() << "Looking for: " << iconname << " in " << fi_d.canonicalFilePath();
+         // dif_f will look for the icon in the current dit_d subdirectory and in any subdirectories below it.
+         QDirIterator dit_f(fi_d.canonicalFilePath(), QDirIterator::Subdirectories);
+         while (dit_f.hasNext()) {
+            QFileInfo fi_f(dit_f.next());
+            if (fi_f.completeBaseName() == iconname) return (fi_f.canonicalFilePath() );
+         } // while dit_f has next
+      } // while dit_d has next
    } // i for
 
    // if no filter matches
