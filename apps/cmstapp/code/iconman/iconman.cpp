@@ -180,7 +180,7 @@ QString IconManager::getIconName(const QString& name)
       QString theme_icon = ie.fdo_name.section('|', 0, 0).simplified();
       if (QIcon::hasThemeIcon(theme_icon) ) {
          QStringList filter_list;
-         filter_list << "64x64" << "48x48" << "40x40" << "36x36" << "32x32"<< "24x24" << "22x22" << "16x16";
+         filter_list << "48x48" << "32x32"<< "22x22" << "16x16" << "48" << "32" << "24" << "16";
          QString rtn = findQualifiedName(theme_icon, filter_list);
          if (! rtn.isEmpty() ) return rtn;
       } // if has ThemeIcon
@@ -193,7 +193,7 @@ QString IconManager::getIconName(const QString& name)
          if (foundlist.contains(theme_icon) ) return foundlist.value(theme_icon);
          if (! notfoundlist.contains(theme_icon) ) {
             QStringList filter_list;
-            filter_list << "48x48" << "40x40" << "36x36" << "32x32"<< "24x24" << "22x22" << "16x16";
+            filter_list << "48x48" << "32x32"<< "22x22" << "16x16" << "48" << "32" << "24" << "16";
             QString rtn = findQualifiedName(theme_icon, filter_list);
             if (! rtn.isEmpty() ) {
                foundlist[theme_icon] = rtn;
