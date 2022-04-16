@@ -292,7 +292,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    } // if parser set
    else
       if (b_so && ui.checkBox_faketransparency->isChecked() ) {
-         trayiconbackground = QColor(ui.spinBox_faketransparency->value() );
+         trayiconbackground = QColor(ui.lineEdit_faketransparency->text() );
       } // if
       else trayiconbackground = QColor();
 
@@ -444,11 +444,20 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    maximizeAction = new QAction(tr("Ma&ximize"), this);
    minMaxGroup->addAction(minimizeAction);
    minMaxGroup->addAction(maximizeAction);
+
    exitAction = new QAction(tr("&Exit"), this);
 
    moveGroup = new QActionGroup(this);
    moveGroup->addAction(ui.actionMove_Before);
    moveGroup->addAction(ui.actionMove_After);
+
+   colorGroup = new QActionGroup(this);
+   colorizeAction = new QAction(iconman->getIcon("caret-up"), tr("&Colorize"), this);
+   colorGroup->addAction(colorizeAction);
+   ui.lineEdit_colorize->addAction(colorizeAction, QLineEdit::TrailingPosition);
+   faketranspAction = new QAction(iconman->getIcon("caret-up"), tr("&Transparency"), this);
+   colorGroup->addAction(faketranspAction);
+   ui.lineEdit_faketransparency->addAction(faketranspAction, QLineEdit::TrailingPosition);
 
    // connect signals and slots - actions and action groups
    connect(minMaxGroup, SIGNAL(triggered(QAction*)), this, SLOT(minMaxWindow(QAction*)));
@@ -462,6 +471,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    connect(ui.actionRescan, SIGNAL (triggered()), this, SLOT(scanWiFi()));
    connect(ui.actionIDPass, SIGNAL (triggered()), this, SLOT(wifiIDPass()));
    connect(ui.actionOffline_Mode, SIGNAL(toggled(bool)), this, SLOT(toggleOfflineMode(bool)));
+   connect(colorGroup, SIGNAL(triggered(QAction*)), this, SLOT(callColorDialog(QAction*)));
 
    // connect signals and slots - ui elements
    connect(ui.toolButton_whatsthis, SIGNAL(clicked()), this, SLOT(showWhatsThis()));
@@ -495,7 +505,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    connect(ui.pushButton_vpn_editor, SIGNAL (clicked()), this, SLOT(provisionService()));
    connect(socketserver, SIGNAL(newConnection()), this, SLOT(socketConnectionDetected()));
    connect(ui.checkBox_runonstartup, SIGNAL(toggled(bool)), this, SLOT(enableRunOnStartup(bool)));
-   connect(ui.toolButton_colorize, SIGNAL(clicked()), this, SLOT(callColorDialog()));
    connect(ui.lineEdit_colorize, SIGNAL(textChanged(const QString&)), this, SLOT(iconColorChanged(const QString&)));
    connect(ui.checkBox_enablesystemtraytooltips, SIGNAL(clicked()), this, SLOT(updateDisplayWidgets()));
    connect(ui.pushButton_IDPass, SIGNAL(clicked()), this, SLOT(wifiIDPass()));
@@ -2731,7 +2740,7 @@ void ControlBox::writeSettings()
    settings->setValue("use_counter_update_rate", ui.checkBox_counterseconds->isChecked() );
    settings->setValue("counter_update_rate", ui.spinBox_counterrate->value() );
    settings->setValue("use_fake_transparency", ui.checkBox_faketransparency->isChecked() );
-   settings->setValue("fake_transparency_color", ui.spinBox_faketransparency->value() );
+   settings->setValue("fake_transparency_color", ui.lineEdit_faketransparency->text() );
    #ifdef XFCE
    settings->setValue("desktop_none", ui.radioButton_desktopnone->isChecked() );
    settings->setValue("desktop_xfce", ui.radioButton_desktopxfce->isChecked() );
@@ -2805,7 +2814,14 @@ void ControlBox::readSettings()
    ui.checkBox_counterseconds->setChecked(settings->value("use_counter_update_rate").toBool() );
    ui.spinBox_counterrate->setValue(settings->value("counter_update_rate").toInt() );
    ui.checkBox_faketransparency->setChecked(settings->value("use_fake_transparency").toBool() );
-   ui.spinBox_faketransparency->setValue(settings->value("fake_transparency_color").toInt() );
+
+   // lines below are for backwards compatability.  Used to store an integer, now it is a QColor string
+   bool ok = false;
+   QString ftc (settings->value("fake_transparency_color").toString() );
+   ftc.toInt(&ok, 16);
+   if (ok) ftc.prepend('#');
+   ui.lineEdit_faketransparency->setText(ftc);
+
    #ifdef XFCE
    ui.radioButton_desktopnone->setChecked(settings->value("desktop_none").toBool() );
    ui.radioButton_desktopxfce->setChecked(settings->value("desktop_xfce").toBool() );
@@ -2827,7 +2843,7 @@ void ControlBox::readSettings()
    ui.doubleSpinBox_iconscale->setEnabled(ui.checkBox_iconscale->isChecked());
    ui.spinBox_waittime->setEnabled(ui.checkBox_waittime->isChecked());
    ui.spinBox_counterrate->setEnabled(ui.checkBox_counterseconds->isChecked());
-   ui.spinBox_faketransparency->setEnabled(ui.checkBox_faketransparency->isChecked());
+   ui.lineEdit_faketransparency->setEnabled(ui.checkBox_faketransparency->isChecked());
    return;
 }
 
@@ -3372,10 +3388,17 @@ void ControlBox::cleanUp()
 
 //
 // Slot to open the color selection dialog and request input.
-void ControlBox::callColorDialog()
+void ControlBox::callColorDialog(QAction* act)
 {
-   QColor color = QColorDialog::getColor(QColor(ui.lineEdit_colorize->text()), this, tr("Colorize Icons"));
-   if (color.isValid() ) ui.lineEdit_colorize->setText(color.name() );
+   if (act == colorizeAction) {
+      QColor color = QColorDialog::getColor(QColor(ui.lineEdit_colorize->text()), this, tr("Colorize Icons"));
+      if (color.isValid() ) ui.lineEdit_colorize->setText(color.name() );
+      }
+
+   if (act == faketranspAction) {
+      QColor color = QColorDialog::getColor(QColor(ui.lineEdit_faketransparency->text()), this, tr("Background Color for Fake Transparency"));
+      if (color.isValid() ) ui.lineEdit_faketransparency->setText(color.name() );
+      }
 
    return;
 }

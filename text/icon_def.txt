@@ -247,4 +247,8 @@ colorize = yes
 fdo_name = document-open
 theme_names (adwaita) = document-open-symbolic.symbolic
 
+[icon]
+icon_name = caret-up
+resource = :/icons/images/interface/caret-arrow-up.png
+colorize = no
 

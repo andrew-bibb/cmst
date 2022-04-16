@@ -15,6 +15,7 @@
     <file>stylesheets/vpn_connecting.qss</file>
   </qresource>
   <qresource prefix="icons">
+    <file>images/interface/caret-arrow-up.png</file>
     <file>images/raw_art/document-open.png</file>
     <file>images/interface/radio.png</file>
     <file>images/interface/basic-plane.png</file>

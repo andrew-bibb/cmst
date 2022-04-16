@@ -140,9 +140,12 @@ class ControlBox : public QDialog
       QMenu* mvsrv_menu;
       QActionGroup* minMaxGroup;
       QActionGroup* moveGroup;
+      QActionGroup* colorGroup;
       QAction* minimizeAction;
       QAction* maximizeAction;
       QAction* exitAction;
+      QAction* colorizeAction;
+      QAction* faketranspAction;
       bool b_usexfce;
       bool b_usemate;
       QSettings* settings;
@@ -225,7 +228,7 @@ class ControlBox : public QDialog
       void provisionService();
       void socketConnectionDetected();
       void cleanUp();
-      void callColorDialog();
+      void callColorDialog(QAction*);
       void iconColorChanged(const QString&);
       void setStateRescan(bool);
 };
