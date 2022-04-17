@@ -221,17 +221,24 @@ QString IconManager::getIconName(const QString& name)
 // Function to find the installed icon themes on the system
 QStringList IconManager::getInstalledIconThemes()
 {
-   QDir icondir = QDir("/usr/share/icons");
-   QStringList elist = icondir.entryList(QDir::Dirs | QDir::NoSymLinks | QDir::NoDotAndDotDot, QDir::Name);
+   // get search paths
+   QStringList sl_dirs = QIcon::themeSearchPaths();
+   if (sl_dirs.size() < 1) return QStringList();
+
+   // string list of found themes
    QStringList sl_themes;
    sl_themes.clear();
 
-   for (int i = 0; i < elist.size(); ++i) {
-      icondir.setPath(QString("/usr/share/icons/") + elist.at(i));
-      if (icondir.exists("index.theme"))
-         sl_themes << elist.at(i);
+   // iterate over the search paths
+   for (int i = 0; i < sl_dirs.size(); ++i) {
+      QDirIterator dit_f(sl_dirs.at(i), QStringList("index.theme"), QDir::Files | QDir::NoSymLinks | QDir::NoDotAndDotDot, QDirIterator::Subdirectories);
+      while (dit_f.hasNext()) {
+         QFileInfo fi (dit_f.next());
+         sl_themes << fi.absoluteDir().dirName();
+      } // while
    } // for
 
+   sl_themes.sort();
    return sl_themes;
 }
 
