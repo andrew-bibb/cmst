@@ -547,10 +547,11 @@ QString IconManager::findQualifiedName(const QString& iconname, const QStringLis
          QFileInfo fi_d (dit_d.next());
 //         qDebug() << "Looking for: " << iconname << " in " << fi_d.canonicalFilePath();
          // dif_f will look for the icon in the current dit_d subdirectory and in any subdirectories below it.
-         QDirIterator dit_f(fi_d.canonicalFilePath(), QDirIterator::Subdirectories);
+         QDirIterator dit_f(fi_d.canonicalFilePath(), QStringList(iconname + ".*"), QDir::Files | QDir::NoSymLinks | QDir::NoDotAndDotDot,  QDirIterator::Subdirectories);
          while (dit_f.hasNext()) {
             QFileInfo fi_f(dit_f.next());
-            if (fi_f.completeBaseName() == iconname) return (fi_f.canonicalFilePath() );
+//            qDebug() << "Looking for: " << iconname << " in " << fi_f.canonicalFilePath();
+            return (fi_f.canonicalFilePath() );
          } // while dit_f has next
       } // while dit_d has next
    } // i for
