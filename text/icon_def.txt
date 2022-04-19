@@ -109,7 +109,7 @@ theme_names (oxygen, breeze) = network-disconnect
 theme_names (adwaita) = network-offline-symbolic.symbolic
 
 [icon]
-# This icon is only used in the wifi tab, not elsewhere.  Default is to same as state_not_ready
+# This icon is only used in the wifi tab, not elsewhere.  Default is same as state_not_ready
 # If you would prefer not to see any icon in the connected column uncomment the resource blank.png
 # line and remove the as shipped resource, colorize, fdo_name, and theme_names lines
 icon_name = wifi_tab_state_not_ready
@@ -138,12 +138,14 @@ theme_names (adwaita)  = emblem-favorite-symbolic.symbolic
 icon_name = offline_mode_engaged
 resource = :/icons/images/interface/basic-plane.png
 colorize = yes
+theme_names (oxygen) = network-wireless-disconnected
 theme_names (adwaita) = network-wireless-hardware-disabled-symbolic.symbolic
 
 [icon]
 icon_name = offline_mode_disengaged
 resource = :/icons/images/interface/radio.png
 colorize = yes
+theme_names (oxygen) = network-wireless-connected-100
 theme_names (adwaita) = network-wireless-signal-excellent-symbolic.symbolic
 
 [icon]
@@ -152,6 +154,19 @@ resource = :/icons/images/raw_art/info2.png
 colorize = 1361D9
 fdo_name = system-help
 theme_names (adwaita) = help-about-symbolic.symbolic
+
+[icon]
+icon_name = document-open
+resource = :/icons/images/raw_art/document-open.png
+colorize = yes
+fdo_name = document-open
+theme_names (oxygen) = inode-directory
+theme_names (adwaita) = document-open-symbolic.symbolic
+
+[icon]
+icon_name = caret-up
+resource = :/icons/images/interface/caret-arrow-up.png
+colorize = no
 
 #
 # systemtray icons
@@ -183,14 +198,8 @@ icon_name = connection_wired
 resource = :/icons/images/raw_art/network-transmit-receive.png
 colorize = yes
 fdo_name = network-wired
+theme_names (oxygen) = network-wired
 theme_names (adwaita) = network-wired-symbolic.symbolic
-
-[icon]
-icon_name = connection_wireless
-resource = :/icons/images/raw_art/nm-signal-100.png
-colorize = yes
-fdo_name = network-wireless
-theme_names (adwaita) = network-wireless-symbolic.symbolic
 
 [icon]
 icon_name = connection_wifi_000
@@ -231,7 +240,8 @@ theme_names (adwaita) = network-wireless-signal-excellent-symbolic.symbolic
 icon_name = connection_vpn
 resource = :/icons/images/raw_art/stock_lock.png
 colorize = yes
-theme_names (oxygen, breeze) =  emblem-locked
+theme_names (oxygen) = system-lock-screen
+theme_names (breeze) =  emblem-locked
 theme_names (adwaita) = network-vpn-symbolic.symbolic
 
 [icon]
@@ -239,16 +249,4 @@ icon_name = connection_vpn_acquiring
 resource = :/icons/images/raw_art/network-vpn-acquiring.png
 colorize = yes
 theme_names (adwaita) = network-vpn-acquiring-symbolic.symbolic
-
-[icon]
-icon_name = document-open
-resource = :/icons/images/raw_art/document-open.png
-colorize = yes
-fdo_name = document-open
-theme_names (adwaita) = document-open-symbolic.symbolic
-
-[icon]
-icon_name = caret-up
-resource = :/icons/images/interface/caret-arrow-up.png
-colorize = no
 
