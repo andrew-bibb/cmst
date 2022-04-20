@@ -234,14 +234,14 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    // Set icon theme if provided on the command line or in the settings
    if (parser.isSet("icon-theme") ) {
       if (parser.value("icon-theme").isEmpty() ) {
-         if (QIcon::themeName().isEmpty() ) QIcon::setThemeName(INTERNAL_THEME);
+         if (QIcon::themeName() == "hicolor") QIcon::setThemeName(INTERNAL_THEME);
       } // if
       else QIcon::setThemeName(parser.value("icon-theme") );
    } // if parser is set
    else {
       if (b_so && ui.checkBox_systemicontheme->isChecked() ) {
          if (ui.comboBox_icontheme->currentText().isEmpty() ) {
-            if (QIcon::themeName().isEmpty() ) QIcon::setThemeName(INTERNAL_THEME);
+            if (QIcon::themeName() == "hicolor") QIcon::setThemeName(INTERNAL_THEME);
          } // if
          else QIcon::setThemeName(ui.comboBox_icontheme->currentText() );
       } // if
