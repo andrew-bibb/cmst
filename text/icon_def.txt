@@ -131,8 +131,9 @@ theme_names (adwaita) = network-vpn-symbolic.symbolic
 icon_name = favorite
 resource = :/icons/images/raw_art/nm-signal-100.png
 colorize = yes
-fdo_name = emblem-favorite
-theme_names (adwaita)  = emblem-favorite-symbolic.symbolic
+fdo_name = network-wireless
+theme_names (oxygen, breeze) = network-wireless-connected-00
+theme_names (adwaita) = network-wireless-signal-none-symbolic.symbolic
 
 [icon]
 icon_name = offline_mode_engaged
