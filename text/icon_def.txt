@@ -132,8 +132,8 @@ icon_name = favorite
 resource = :/icons/images/raw_art/nm-signal-100.png
 colorize = yes
 fdo_name = network-wireless
-theme_names (oxygen, breeze) = network-wireless-connected-00
-theme_names (adwaita) = network-wireless-signal-none-symbolic.symbolic
+theme_names (oxygen, breeze) = network-wireless-connected-100
+theme_names (adwaita) = network-wireless-signal-excellent-symbolic.symbolic
 
 [icon]
 icon_name = offline_mode_engaged
