@@ -392,20 +392,20 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
          ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.Counters), false);
          }
 
-   // connect some dbus signals to our slots
+         // connect some dbus signals to our slots
          QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PropertyChanged", this, SLOT(dbsPropertyChanged(QString, QDBusVariant)));
          QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "ServicesChanged", this, SLOT(dbsServicesChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
          QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "PeersChanged", this, SLOT(dbsPeersChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage)));
          QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "TechnologyAdded", this, SLOT(dbsTechnologyAdded(QDBusObjectPath, QVariantMap)));
          QDBusConnection::systemBus().connect(DBUS_CON_SERVICE, DBUS_PATH, DBUS_CON_MANAGER, "TechnologyRemoved", this, SLOT(dbsTechnologyRemoved(QDBusObjectPath)));
 
-   // clear the counters if selected
+         // clear the counters if selected
          this->clearCounters();
 
          // find the connman version we are running
          findConnmanVersion();
 
-   // VPN manager. Disable vpn options if commandline or option is set
+         // VPN manager. Disable vpn options if commandline or option is set
          if (parser.isSet("disable-vpn") ? true : (b_so && ui.checkBox_disablevpn->isChecked()) ) {
             ui.tabWidget->setTabEnabled(ui.tabWidget->indexOf(ui.VPN), false);
             ui.pushButton_vpn_editor->setDisabled(true);
@@ -530,8 +530,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
       const short mintrigger = 100; // Minimum time (milliseconds) to wait before starting the tray icon.  We advertise zero, but not really.
       int timeout = 0;
       if (parser.isSet("wait-time") ) {
-         bool ok;
-         timeout = parser.value("wait-time").toInt(&ok, 10);
+         bool ok; timeout = parser.value("wait-time").toInt(&ok, 10);
          if (! ok) timeout = 0;
       } // if parser set
       else if (b_so && ui.checkBox_waittime->isChecked() ) {
@@ -636,7 +635,6 @@ void ControlBox::updateDisplayWidgets()
    // each assemble function will check q16_errors to make sure it can
    // get the information it needs. Only check for major errors since we
    // can't run the assemble functions if there are.
-
    if ( ((q16_errors & CMST::Err_No_DBus) | (q16_errors & CMST::Err_Invalid_Con_Iface)) == 0x00 ) {
       // rebuild our pages
       this->assembleTabStatus();
@@ -645,10 +643,34 @@ void ControlBox::updateDisplayWidgets()
       this->assembleTabVPN();
       this->assembleTabCounters();
       this->assembleTabPreferences();
-      if (trayicon != NULL ) this->assembleTrayIcon();
+      if (trayicon != NULL ) {
+         this->assembleTrayIcon();
+
+         bool b_dtaware = qApp->desktopSettingsAware();
+         qApp->setDesktopSettingsAware(false);
+         if (QSystemTrayIcon::isSystemTrayAvailable() ) {
+            ui.checkBox_hideIconFull->setEnabled(true);
+            ui.checkBox_hideIconAuto->setEnabled(true);
+            if (ui.checkBox_hideIconFull->isChecked() )
+               trayicon->setVisible(false);
+            else {
+               if (ui.checkBox_hideIconAuto->isChecked() && ((properties_map.value("State").toString() == "online") || (properties_map.value("State").toString() == "ready")) )
+                  trayicon->setVisible(false);
+               else
+                  trayicon->setVisible(true);
+               } //
+            } // if systemTrayAvailable
+         else {
+            ui.checkBox_hideIconFull->setDisabled(true);
+            ui.checkBox_hideIconAuto->setDisabled(true);
+            trayicon->setVisible(true); // visible needs to be true in case a tray becomes available later
+         } // else no systemTrayAvailable
+        qApp->setDesktopSettingsAware(b_dtaware);
+      } // if trayicon not NULL
 
       ui.pushButton_movebefore->setEnabled(false);
       ui.pushButton_moveafter->setEnabled(false);
+
    } // if there were no major errors
 
    return;
@@ -2514,13 +2536,6 @@ void ControlBox::assembleTrayIcon()
    else
       trayicon->setToolTip(QString());
 
-   // show or hide the icon depending on checkBoxes and connection state
-   if (ui.checkBox_hideIconFull->isChecked() ) trayicon->hide();
-   else
-      if (ui.checkBox_hideIconAuto->isChecked() && ((properties_map.value("State").toString() == "online") || (properties_map.value("State").toString() == "ready")) )
-         trayicon->hide();
-      else trayicon->show();
-
    // Don't continue if we can't get properties
    if ( (q16_errors & CMST::Err_Properties & CMST::Err_Technologies & CMST::Err_Services) != 0x00 ) return;
 
@@ -2849,15 +2864,14 @@ void ControlBox::readSettings()
 
 //
 // Slot to create the systemtray icon. Really part of the constructor
-// and called by a single shot QTimer.
+// and called by a single shot QTimer.  While working on issue 269 discovered
+// that if the tray is not available when the systemTrayIcon is created QT will
+// add the icon to the tray if one later becomes available.  I don't think this
+// always this way because that is why I added the wait-time option.  I've revised
+// the  code below for this behavior.
 void ControlBox::createSystemTrayIcon()
 {
-   // Search for a tray icon, don't read XDG_CURRENT_DESKTOP for the tray type
-   bool b_dtaware = qApp->desktopSettingsAware();
-   qApp->setDesktopSettingsAware(false);
-
-   // We still need to make sure there is a tray available
-   if (QSystemTrayIcon::isSystemTrayAvailable() ) {
+   if (trayicon != NULL) { // only NULL if the tray icon is disabled in Preferences or on the command line
 
       // Create the outline of the context menu.   Submenu contents are defined in the
       // assembletrayIcon() function.
@@ -2919,34 +2933,9 @@ void ControlBox::createSystemTrayIcon()
       } // if use xfce
       #endif
 
-      // Sync the visibility to the checkbox
-      ui.checkBox_hideIconFull->setEnabled(true);
-      trayicon->setVisible(true);
+   } // tray icon not NULL
 
-   } // if there is a systemtray available
-
-   // else no systemtray available
-   else {
-      ui.checkBox_hideIconFull->setDisabled(true);
-      trayicon = NULL;
-
-      QMessageBox::warning(this,
-         QString(TranslateStrings::cmtr("cmst")) + tr(" Warning"),
-         tr("<center><b>Unable to find a systemtray on this machine.</b>"
-         "<center><br>The program may still be used to manage your connections, but the tray icon will be disabled."
-         "<center><br><br>If you are seeing this message at system start up and you know a system tray exists once the "
-         "system is up, try starting with the <b>-w</b> switch and set a delay as necessary. The exact wait time will vary "
-         "from system to system."
-      ) );
-
-      // Even if we want to be minimized we can't there is no place to minimize to.
-      this->showNormal();
-   } // else
-
-   // Restore the desktopAware
-   qApp->setDesktopSettingsAware(b_dtaware);
-
-   // sync offlinemode checkbox and action b1ased on the saved value from settings
+   // sync offlinemode checkbox and action based on the saved value from settings
    if (settings->value("CheckBoxes/devices_off").toBool() ) {
       ui.actionOffline_Mode->trigger();
    }

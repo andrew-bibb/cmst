@@ -2,6 +2,7 @@
 <b><center>Change Log</center></b>
 <b> IN PROGRESS</b>
 <ul>
+<li>Revise startup process (issue #269).</li>
 <li>Many improvements in IconManager.</li>
 <li>VPN tab - implemented Remove function.</li>
 <li>VPN tab - ipplemented Create function.</li>
@@ -13,7 +14,7 @@
 <li>Added networks validator and use in networks fields in VPN Provisioning editor.</li>
 <li>Added cidr validators and use in server address fields in VPN Provisioning editor.</li>
 <li>Add fields to VPN Agent dialog to bring up to date with Connman.</li>
-<li>Added an option to scale icons and artwork (issue # 256).</li>
+<li>Added an option to scale icons and artwork (issue #256).</li>
 <li>Fixed deselecting WiFi entry after automatic rescan (issue #226).</li>
 <li>Added Edit button to Wifi Services (issue #202)</li>
 <li>Removed obsolete managerRescan() function, moved code to where needed.</li>
