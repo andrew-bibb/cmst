@@ -128,7 +128,7 @@
       <item row="1" column="1">
        <widget class="QLineEdit" name="lineEdit_oc_clientcert">
         <property name="whatsThis">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Informational field containing a pkcs11 URL or a ptth name for the client certificate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Informational field containing a pkcs11 URL or a path name for the client certificate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </item>
