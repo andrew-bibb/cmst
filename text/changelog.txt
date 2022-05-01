@@ -5,7 +5,7 @@
 <li>Revise startup process (issue #269).</li>
 <li>Many improvements in IconManager.</li>
 <li>VPN tab - implemented Remove function.</li>
-<li>VPN tab - ipplemented Create function.</li>
+<li>VPN tab - implemented Create function.</li>
 </ul>
 <b> 2022.03.13</b>
 <ul>
