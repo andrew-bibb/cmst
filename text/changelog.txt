@@ -1,6 +1,6 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b> IN PROGRESS</b>
+<b> 2022.05.01</b>
 <ul>
 <li>Revise startup process (issue #269).</li>
 <li>Many improvements in IconManager.</li>
