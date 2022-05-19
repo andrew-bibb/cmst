@@ -15,7 +15,7 @@ The [Wiki](https://github.com/andrew-bibb/cmst/wiki) has been started and announ
 
 [Screen shots:](https://github.com/andrew-bibb/cmst/wiki/Screenshots) are now included in the Wiki
 
-On Arch Linux CMST has been moved from the AUR and is now part of the community repository.
+On Arch Linux CMST has been dropped from the community repository and may be found in the AUR.
 
 The Provisioning Editor and VPN Provisioning Editor both register a root helper to assist in editing files in directories owned by root (/var/lib/connman and /var/lib/connman-vpn).  In order to use the root helper you must be a member of the proper group, and this group varies by distribution.  To get the proper file for your distribution you need to provide it on the qmake line. Currently there are files for Arch Linux, Slackware, and Debian.  If you are on Arch you don't actually need to supply the distro as that is the default if one is not supplied, but it is not wrong to do so. 
 
