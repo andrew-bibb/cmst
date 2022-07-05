@@ -1606,7 +1606,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="551"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5&lt;center&gt;Connman version %6</source>
-        <translation>&lt;center&gt;O %1 é um programa para fazer a interface gráfica do serviço ConnMan e para fornecer um controle na bandeja do sistema operacional.&lt;br&gt;&lt;center&gt;Versão &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Data de lançamento: %3&lt;center&gt;Direitos de Autor (c) %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, EUA&lt;br&gt;&lt;center&gt;&lt;b&gt;Tradutores Voluntários:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinês)&lt;center&gt;sqozz (Alemão)&lt;center&gt;Ilya Shestopalov (Russo)&lt;center&gt;Heimen Stoffels (Holandês)&lt;center&gt; Yaşar Çiv (Turco)&lt;center&gt; marcelocripe (Português do Brasil - Junho de 2022)&lt;br&gt;&lt;center&gt;&lt;b&gt;Informações da Versão:&lt;/b&gt;&lt;center&gt;Este programa foi compilado utilizando a versão&lt;center&gt;%5 do QT e a versão %6 do ConnMan</translation>
+        <translation>&lt;center&gt;O %1 é um programa para fazer a interface gráfica do serviço gerenciador de conexões de rede ConnMan e para fornecer um controle na bandeja do sistema operacional.&lt;br&gt;&lt;center&gt;Versão &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Data de lançamento: %3&lt;center&gt;Direitos de Autor (c) %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, EUA&lt;br&gt;&lt;center&gt;&lt;b&gt;Tradutores Voluntários:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinês)&lt;center&gt;sqozz (Alemão)&lt;center&gt;Ilya Shestopalov (Russo)&lt;center&gt;Heimen Stoffels (Holandês)&lt;center&gt; Yaşar Çiv (Turco)&lt;center&gt; marcelocripe (Português do Brasil - Junho de 2022)&lt;br&gt;&lt;center&gt;&lt;b&gt;Informações da Versão:&lt;/b&gt;&lt;center&gt;Este programa foi compilado utilizando a versão&lt;center&gt;%5 do QT e a versão %6 do ConnMan</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="592"/>
@@ -3335,7 +3335,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="43"/>
         <source>connman system tray</source>
         <comment>Main Window Title</comment>
-        <translation>ConnMan System Tray - Bandeja do Sistema do ConnMan</translation>
+        <translation>ConnMan System Tray - Gerenciador de Conexões de Rede da Bandeja do Sistema</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="44"/>
@@ -6468,7 +6468,7 @@ está mais conectado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="82"/>
         <source>Connman System Tray.</source>
-        <translation>ConnMan System Tray - Bandeja do Sistema do ConnMan.</translation>
+        <translation>ConnMan System Tray - Gerenciador de Conexões de Rede da Bandeja do Sistema.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="93"/>
