@@ -952,7 +952,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="630"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to remove the service. &lt;/p&gt;&lt;p&gt;If a service has previously been successfully connected (Favorite is true) this button will remove the Favorite property. The service will also be disconnected if it is currently connected. If the service required a passphrase then the passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;If a connection attempt failed this can slso be used to reset the service.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Виберіть службу Wi-Fi у таблиці нижче та натисніть цю кнопку, щоб видалити службу. &lt;/p&gt;&lt;p&gt;Якщо служба раніше була успішно підключена та занесена до &quot;Обраних&quot;, ця кнопка видалить властивість &quot;Обране&quot;. Служба також буде відключена, якщо вона зараз підключена. Якщо служба використовує парольну фразу, то її буде очищено та забуто.&lt;/p&gt;&lt;p&gt;Якщо спроба з&apos;єднання невдала, то цю кнопку також можна задіяти для скидання служби.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Виберіть службу Wi-Fi у таблиці нижче та натисніть цю кнопку, щоб видалити службу. &lt;/p&gt;&lt;p&gt;Якщо служба раніше була успішно під&apos;єднана та занесена до «Обраних», ця кнопка видалить властивість «Обране». Служба також буде від&apos;єднано, якщо вона зараз під&apos;єднана. Якщо служба використовує парольну фразу, то її буде очищено та забуто.&lt;/p&gt;&lt;p&gt;Якщо спроба з&apos;єднання невдала, то цю кнопку також можна використати для скидання служби.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="764"/>
@@ -1133,17 +1133,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="640"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to edit the service. &lt;/p&gt;&lt;p&gt;The service must have previously been successfully connected (Favorite is true) for this button to work. Pressing &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; will remove the service and then request credentials to establish the connection. If the service is currently connected it will be disconnected first. If the service required a passphrase then the old passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;Connman does not provide any methods to retrieve credentials (passphrases, etc.) as that is insecure. CMST will not work around this protection. All this button really does is automate pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Remove&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; buttons above. Make sure you know all of the credentials to reconnect as the existing credentials will be cleared when this button is pressed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Виберіть службу Wi-Fi у таблиці нижче та натисніть цю кнопку, щоб редагувати її. &lt;/p&gt;&lt;p&gt;Щоб ця кнопка працювала, служба повинна бути успішно під&apos;єднана раніше (Обране має значення true). Натискання &lt;span style=&quot; font-weight:600;&quot;&gt;Редагувати&lt;/span&gt; вилучить службу, а потім запитає облікові дані для встановлення з’єднання. Якщо служба наразі під&apos;єднана, вона спочатку буде від&apos;єднана. Якщо для служби потрібна парольна фраза, стару парольну фразу буде видалено та забуто.&lt;/p&gt;&lt;p&gt;Connman не надає жодних методів для отримання облікових даних (парольних фраз тощо), оскільки це небезпечно. CMST не обійде цей захист. Все, що ця кнопка насправді робить, це автоматизує натискання кнопок &lt;span style=&quot; font-weight:600;&quot;&gt;Вилучити&lt;/span&gt; та &lt;span style=&quot; font-weight:600;&quot;&gt;З&apos;єднати&lt;/span&gt; вище. Переконайтеся, що ви знаєте всі облікові дані для повторного під&apos;єднання, оскільки наявні облікові дані буде очищено після натискання цієї кнопки.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="643"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Редагувати</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="650"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.  This will also clear any selections in the table below.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Примусове повторне сканування всіх технологій Wi-Fi. Це схоже на виконання команди &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; з командного рядка. Це також скасує вибір у таблиці нижче.&lt;/p&gt;&lt;p&gt;Поки триває сканування, кнопка буде неактивною.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="692"/>
@@ -1153,7 +1153,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="815"/>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>Створити</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="832"/>
@@ -1173,42 +1173,42 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1216"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide the CMST tray icon during normal operations. Normal operations are defined as having the Global state in an &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; mode. Any other state will cause the icon to be displayed in the system tray.  CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ховати піктограму CMST у системному лотку під час звичайних операцій. Нормальні операції визначаються як глобальний стан у режимах &lt;span style=&quot; font-weight:600;&quot;&gt;Онлайн&lt;/span&gt; або &lt;span style=&quot; font-weight:600;&quot;&gt;Готовий&lt;/span&gt;. Будь-який інший стан призведе до показу піктограми у системному лотку. CMST продовжує працювати, навіть якщо піктограму сховано.&lt;/p&gt;&lt;p&gt;Якщо CMST згорнуто, а піктограма схована, вам потрібно буде запустити інший екземпляр CMST, щоб відновити інтерфейс. Цей другий екземпляр відновить інтерфейс із першого екземпляра, а потім негайно припинить роботу. &lt;/p&gt;&lt;p&gt;Якщо CMST згорнуто, а піктограму в системному лотку показано, просто клацніть піктограму в системному лотку, щоб відновити інтерфейс. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1219"/>
         <source>Hide Tray Icon Unless Needed</source>
-        <translation type="unfinished"></translation>
+        <translation>Ховати піктограму в системному лотку, якщо вона не потрібна</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1226"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the CMST icon will be hidden in the system tray. CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо позначено, піктограма CMST буде схована в системному лотку. CMST продовжує працювати, навіть якщо піктограму сховано.&lt;/p&gt;&lt;p&gt;Якщо CMST згорнуто, а піктограма схована, вам потрібно буде запустити інший екземпляр CMST, щоб відновити інтерфейс. Цей другий екземпляр відновить інтерфейс із першого екземпляра, а потім негайно припинить роботу. &lt;/p&gt;&lt;p&gt;Якщо CMST згорнуто, а піктограму в системному лотку показано, просто клацніть піктограму в системному лотку, щоб відновити інтерфейс. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1562"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-I&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-scale&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Scale  icons and other artwork in CMST.  For High DPI moitors it may be necessary to specify a scale factor on icons and other artwork in CMST.  Default scale is 1.0.  You may override the default using this option. &lt;/p&gt;&lt;p&gt;For High DPI monitors a factor of 2 has been found to be good.  Valid values of scale factor are  from 1.0 to 3.0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Опції командного рядка: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-I&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; або &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-scale&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Масштабовані піктограми та інші ілюстрації в CMST. Для моніторів з високою роздільною здатністю може знадобитися вказати коефіцієнт масштабування на піктограмах та інших ілюстраціях у CMST. Стандартний масштаб 1.0. За допомогою цієї опції ви можете змінити усталене значення. &lt;/p&gt;&lt;p&gt;Для моніторів з високою роздільною здатністю коефіцієнт 2 виявився нормальним. Допустимі значення коефіцієнта масштабування від 1.0 до 3.0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1565"/>
         <source>Icon Scale Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Коефіцієнт масштабування піктограми</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1471"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon scale factor. If the box is disabled by clearing the checkbox at the left the value contained in this field will be ignored.&lt;/p&gt;&lt;p&gt;For High DPI monitors a factor of 2 has been found to be good. Valid values of scale factor are from 1.0 to 3.0. Default value is 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Коефіцієнт масштабування піктограми. Якщо поле вимкнено шляхом прибирання прапорця ліворуч, значення, що міститься в цьому полі, нехтуватиметься.&lt;/p&gt;&lt;p&gt;Для моніторів з високою роздільною здатністю коефіцієнт 2 виявився нормальним. Допустимі значення коефіцієнта масштабування від 1.0 до 3.0. Усталене значення 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1503"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created the proram will not be able to start minimized. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;p&gt;If you plan to start with the main dialog shown on screen there is no reason to use this option. This is only intended to be used for starting minimized.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Укажіть час очікування в секундах перед запуском піктограми системного лотка (усталено 0 секунд).&lt;/p&gt;&lt;p&gt;Якщо CMST запущено та він намагається створити піктограму лотка до того, як буде створено сам лоток, програма не зможе згорнутися. Іноді це трапляється, коли програма запускається автоматично. Якщо ви знаєте, що системний лоток існуватиме після того, як система запуститься, ви можете вказати час очікування, і CMST зачекає цю кількість секунд, перш ніж спробувати створити піктограму в системному лотку. Це робиться, щоб дати менеджеру вікон або панелі час створити системний лоток, перш ніж ми спробуємо розмістити там піктограму.&lt;/p&gt;&lt;p&gt;Якщо ви плануєте почати з головного діалогового вікна, показаного на екрані, немає причин використовувати цей параметр. Це призначено лише для запуску згорнутої піктограми.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1626"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB. If the spedified color matches the tray background we&apos;ve effectively created fake transparency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Використовується для усунення помилки QT, коли піктограми системного лотка показуються не з прозорим тлом, а з білим або чорним.&lt;/p&gt;&lt;p&gt;Тут можна вказати колір тла піктограми. Формат — це шістнадцяткове число у формі RRGGBB. Якщо вказаний колір збігається з тлом панелі, ми фактично створюємо псевдопрозорість.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1639"/>
@@ -1441,7 +1441,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="593"/>
         <source>&lt;center&gt;This program uses artwork from &lt;b&gt;Freepik&lt;/b&gt; obtained from www.flaticon.com:&lt;br&gt;&lt;br&gt;Released under the Flaticon Basic License&lt;br&gt;&lt;br&gt;&lt;b&gt;Artwork files:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Ця програма використовує ілюстрацію з &lt;b&gt;Freepik&lt;/b&gt;, отриману з www.flaticon.com:&lt;br&gt;&lt;br&gt;Випущено згідно з базовою ліцензією Flaticon&lt;br&gt;&lt;br&gt;&lt;b&gt;Файли ілюстрацій:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="608"/>
@@ -1611,7 +1611,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="551"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5&lt;center&gt;Connman version %6</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;%1 це програма для взаємодії з фоновою службою Connman і забезпечення керування системним лотком.&lt;br&gt;&lt;center&gt;Версія &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Дата випуску: %3&lt;center&gt;Авторське право c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Переклади:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Китайська)&lt;center&gt;sqozz (Німецька)&lt;center&gt;Ilya Shestopalov (Російська)&lt;center&gt;Heimen Stoffels (Нідерландська)&lt;center&gt; Yaşar Çiv (Турецька)&lt;br&gt;&lt;center&gt;&lt;b&gt;Інформація про збірку:&lt;/b&gt;&lt;center&gt;Скомпільовано за допомогою QT версії %5&lt;center&gt;Версія Connman %6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="592"/>
@@ -1625,27 +1625,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1008"/>
         <source>You need to select a Wifi service before pressing the edit button.</source>
-        <translation type="unfinished"></translation>
+        <translation>Перш ніж натискати кнопку редагування, потрібно вибрати службу Wi-Fi.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1060"/>
         <source> Information</source>
-        <translation type="unfinished"> Інформація</translation>
+        <translation> Інформація</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1061"/>
         <source>No provisioning files created by %1 were found.&lt;br&gt;There are no VPN services which can be removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не знайдено файлів надання, створених %1.&lt;br&gt;Немає служб VPN, які можна вилучити.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1071"/>
         <source>%1 - Select File</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Вибрати файл</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1072"/>
         <source>Select a file to be deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл, який потрібно видалити.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1113"/>
@@ -1670,7 +1670,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1240"/>
         <source>VPN Kill Switch Engaged</source>
-        <translation>Залучений вимикач VPN з&apos;єднання</translation>
+        <translation>Залучений VPN Kill Switch</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1241"/>
@@ -1690,7 +1690,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1763"/>
         <source>Service Name: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Назва служби: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1764"/>
@@ -2108,7 +2108,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2612"/>
         <source>Favorite Connection</source>
-        <translation>Улюблені з&apos;єднання</translation>
+        <translation>Обрані з&apos;єднання</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2612"/>
@@ -2128,7 +2128,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3347"/>
         <source>Background Color for Fake Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>Колір тла для псевдопрозорості</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2607"/>
@@ -2144,12 +2144,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="447"/>
         <source>&amp;Colorize</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Розфарбувати</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="450"/>
         <source>&amp;Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Прозорість</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2008"/>
@@ -2328,7 +2328,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/iconman/iconman.cpp" line="401"/>
         <source>A new icon definition file will be installed to &lt;b&gt;%1&lt;/b&gt; and a backup of the old definition file has been created as &lt;b&gt;%2&lt;/b&gt;                   &lt;p&gt;If the original definition file was customized and you wish to retain those changes you will need to manually merge them into the new file.                    &lt;p&gt;If the original was never customized or you just wish to delete the backup now you may select &lt;i&gt;Discard&lt;/i&gt; to delete the backup or &lt;i&gt;Save&lt;/i&gt; to retain it.</source>
-        <translation type="unfinished"></translation>
+        <translation>Новий файл визначення піктограми буде встановлено в &lt;b&gt;%1&lt;/b&gt;, а резервну копію старого файлу визначення було створено як &lt;b&gt;%2&lt;/b&gt;                   &lt;p&gt;Якщо вихідний файл визначення було налаштовано та якщо ви хочете зберегти ці зміни, вам потрібно буде вручну об’єднати їх у новий файл.                    &lt;p&gt;Якщо оригінал ніколи не налаштовувався або ви просто хочете видалити резервну копію зараз, ви можете вибрати &lt;i&gt;Відхилити&lt;/i&gt;, щоб видалити резервну копію, або &lt;i&gt;Зберегти&lt;/i&gt;, щоб зберегти її.</translation>
     </message>
 </context>
 <context>
@@ -3221,7 +3221,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="372"/>
         <source>IPv4 Netmask. &lt;br&gt;&lt;br&gt;The entry can be a mask length (example 24) or in the form xxx.xxx.xxx.xxx</source>
-        <translation type="unfinished"></translation>
+        <translation>Маска мережі IPv4. &lt;br&gt;&lt;br&gt;Запис може бути довжиною маски (приклад 24) або у формі xxx.xxx.xxx.xxx</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="407"/>
@@ -3805,12 +3805,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="32"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Username for authentication.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ім&apos;я користувача для автентифікації.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="52"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Password for authentication.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль для автентифікації.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="62"/>
@@ -3820,22 +3820,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="69"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;End point of this VPN link i.e., the VPN gateway we re trying to connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Кінцева точка цього посилання VPN, тобто шлюз VPN, до якого ми намагаємося під&apos;єднатися.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="79"/>
         <source>Name</source>
-        <translation>Ім&apos;я</translation>
+        <translation>Назва</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="86"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the VPN connection we are trying to connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Назва з&apos;єднання VPN до якого ми намагаємося під&apos;єднатися.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="98"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Password for decrypting PKCS#8/PKCS#12 client certificate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль для розшифрування PKCS#8/PKCS#12 сертифіката клієнта.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="101"/>
@@ -3850,7 +3850,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="114"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Informational field containing a path name for an additional Certificate of Authority file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Інформаційне поле, що містить шлях до додаткового файлу сертифіката авторизації.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="124"/>
@@ -3860,7 +3860,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="131"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Informational field containing a pkcs11 URL or a path name for the client certificate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Інформаційне поле, що містить URL-адресу pkcs11 або ім&apos;я шляху для клієнтського сертифіката.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="138"/>
@@ -3870,32 +3870,32 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="145"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The OpenConnect cookie value that is used for authenticating the VPN session.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Значення файлу cookie OpenConnect, яке використовується для автентифікації сеансу VPN.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="152"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Група</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="159"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Authentication login group.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Автентифікація групи входу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="166"/>
         <source>PKCS Client Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>Клієнтський сертифікат PKCS.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="173"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Informational field containing a PKCS#1/PKCS#8/PKCS#12 URL or a path name for the client certificate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Інформаційне поле, що містить URL-адресу PKCS#1/PKCS#8/PKCS#12 або ім’я шляху для сертифіката клієнта.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="180"/>
         <source>PKCS Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль PKCS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="190"/>
@@ -3905,7 +3905,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="197"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The OpenConnect server hash used to identify the final server after possible web authentication logins, selections and redirections.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Хеш сервера OpenConnect, який використовується для ідентифікації кінцевого сервера після можливого входу в систему вебавтентифікації, вибору та перенаправлення.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="207"/>
@@ -3915,42 +3915,42 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="214"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The final VPN server to use after possible web authentication logins, selections and redirections.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Остаточний VPN-сервер для використання після можливого входу в систему вебавтентифікації, вибору та перенаправлення.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="221"/>
         <source>Second Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Другий пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="228"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Second factor password for authentication.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль другого етапу автентифікації.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="235"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indicates that the second factor password is used for the selected authentication group.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вказує, що для вибраної групи автентифікації використовується пароль другого фактора.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="238"/>
         <source>Use Second Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Використовувати другий пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="248"/>
         <source>Open VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="254"/>
         <source>Private Key Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль приватного ключа</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="261"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Private key password used to decrypt the encrypted OpenVPN private key file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль приватного ключа, який використовується для розшифрування зашифрованого файлу приватного ключа OpenVPN.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="293"/>
@@ -4003,189 +4003,189 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished">Діалог</translation>
+        <translation>Діалог</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="29"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;VPN Type&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Тип VPN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="36"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the type of VPN connection you wish to create.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Виберіть тип VPN-з&apos;єднання, яке ви хочете створити.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="46"/>
         <source>OpenConnect</source>
-        <translation type="unfinished">OpenConnect</translation>
+        <translation>OpenConnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="51"/>
         <source>OpenVPN</source>
-        <translation type="unfinished">OpenVPN</translation>
+        <translation>OpenVPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="56"/>
         <source>VPNC</source>
-        <translation type="unfinished">VPNC</translation>
+        <translation>VPNC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="61"/>
         <source>L2TP</source>
-        <translation type="unfinished">L2TP</translation>
+        <translation>L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="66"/>
         <source>PPTP</source>
-        <translation type="unfinished">PPTP</translation>
+        <translation>PPTP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="71"/>
         <source>WireGuard</source>
-        <translation type="unfinished">WireGuard</translation>
+        <translation>WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="82"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Назва&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="89"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A name for this connection. A name is mandatory but the name may be anything you wish and may contain spaces.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Назва цього з&apos;єднання. Назва обов’язкова, але вона може бути будь-якою за вашим бажанням і може містити пробіли.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="96"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The VPN server address (example: 1.2.3.4). You may use CIDR notaton if the VPN service accepts it (example: 1.2.3.0/24).  An entry in this field is mandatory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Адреса сервера VPN (приклад: 1.2.3.4). Ви можете використовувати примітку CIDR, якщо служба VPN приймає її (приклад: 1.2.3.0/24). Запис у цьому полі обов&apos;язковий.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="106"/>
         <source>VPN Domain Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Доменне ім&apos;я VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="113"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The domain name of the VPN connection (example: corporate.com).  An entry in this field is optional.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ім’я домену VPN-з’єднання (приклад: corporate.com). Запис у цьому полі необов’язковий.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="123"/>
         <source>Networks</source>
-        <translation type="unfinished"></translation>
+        <translation>Мережі</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Define networks behind the VPN link. If more than one separate by a comma. &lt;/p&gt;&lt;p&gt;Format is newtork/netmask/gateway and gateway may be omitted. Examples 10.10.20.0/255.255.255.0&lt;/p&gt;&lt;p&gt;10.10.20.0/255.255.255.0/10.20.1.5&lt;/p&gt;&lt;p&gt;10.10.20.0/24&lt;/p&gt;&lt;p&gt;2001:db8::1/64&lt;/p&gt;&lt;p&gt;This field is optional but if an entry is made it must follow the format above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Визначте мережі за посиланням VPN. Якщо більше одного, розділіть їх комою. &lt;/p&gt;&lt;p&gt;Формат: мережа/маска мережі/шлюз (шлюз можна не вказувати). Приклади 10.10.20.0/255.255.255.0&lt;/p&gt;&lt;p&gt;10.10.20.0/255.255.255.0/10.20.1.5&lt;/p&gt;&lt;p&gt;10.10.20.0/24&lt;/p&gt;&lt;p&gt;2001:db8::1/64&lt;/p&gt;&lt;p&gt;Це поле необов’язкове, але якщо запис зроблено, воно має відповідати формату, наведеному вище.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="140"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;VPN Server Address&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Адреса сервера VPN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="159"/>
         <source>CA Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Сертифікат центру сертифікації</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="166"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;SHA1 certificate fingerprint of the final VPN server after possible web authentication login, selection and redirection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Відбиток сертифіката SHA1 на кінцевому сервері VPN після можливого входу, вибору та перенаправлення у вебавтентифікацію.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="173"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;File containing other certificate authorities in addition to the ones in the system trust database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Файл, що містить інші центри сертифікації на додаток до тих, що містяться в системній базі даних довірених.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="180"/>
         <source>Server Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Сертифікат сервера</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="187"/>
         <source>VPN Host</source>
-        <translation type="unfinished">Вузол VPN</translation>
+        <translation>Вузол VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="194"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The final VPN server to use after completing web authentication. &lt;/p&gt;&lt;p&gt;Only usable for extremely simple VPN configurations and should normally be set only via the VPN Agent.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Кінцевий сервер VPN для використання після завершення вебавтентифікації. &lt;/p&gt;&lt;p&gt;Використовується лише для надзвичайно простих конфігурацій VPN і зазвичай має налаштовуватися лише через агента VPN.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="205"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="611"/>
         <source>MTU</source>
-        <translation type="unfinished"></translation>
+        <translation>MTU</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="212"/>
         <source>Request MTU from server as the MTU of the tunnel.</source>
-        <translation type="unfinished"></translation>
+        <translation>Запит MTU від сервера як MTU тунелю.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="215"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;Request&#xa0;&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;&#xa0;from server as the MTU of the tunnel.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;Request &lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt; from server as the MTU of the tunnel.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;Запит &lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt; від сервера як MTU тунелю.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="242"/>
         <source>Do not advertise IPv6 capability to server</source>
-        <translation type="unfinished"></translation>
+        <translation>Не пропонувати серверу можливість IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="245"/>
         <source>Disable IPv6</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="252"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="255"/>
         <source>Disable DTLS</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути DTLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="262"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Version 8.2.2.5 of the Cisco ASA software has a bug where it will forget the client&apos;s SSL certificate when HTTP connections are being re-used for multiple requests. So far, this has only been seen on the initial connection, where the server gives an HTTP/1.0 redirect response with an explicit Connection: Keep-Alive directive. OpenConnect as of v2.22 has an unconditional workaround for this, which is never to obey that directive after an HTTP/1.0 response. &lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;However, Cisco&apos;s support team has failed to give any competent response to the bug report and we don&apos;t know under what other circumstances their bug might manifest itself. So this option exists to disable ALL re-use of HTTP sessions and cause a new connection to be made for each request. If your server seems not to be recognising your certificate, try this option. If it makes a difference, please report this information to the openconnect-devel@lists.infradead.org mailing list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;У версії 8.2.2.5 програмного забезпечення Cisco ASA є помилка, через яку він забуває сертифікат SSL клієнта, коли HTTP-з’єднання повторно використовуються для кількох запитів. Наразі це спостерігалося лише під час початкового з’єднання, коли сервер надсилає відповідь перенаправлення HTTP/1.0 із явною директивою Connection: Keep-Alive. OpenConnect, починаючи з версії 2.22, має безумовний обхідний шлях для цього, тобто ніколи не виконувати цю директиву після відповіді HTTP/1.0. &lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Однак команда підтримки Cisco не дала жодної компетентної відповіді на звіт про помилку, і ми не знаємо, за яких інших обставин може проявитися їхня помилка. Таким чином, ця опція існує, щоб вимкнути ВСІ повторні використання сеансів HTTP та створювати нове з’єднання для кожного запиту. Якщо ваш сервер не розпізнає ваш сертифікат, спробуйте цей варіант. Якщо це допомагає, надішліть цю інформацію до списку розсилки openconnect-devel@lists.infradead.org mailing list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="265"/>
         <source>Disable Keep Alive</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути постійне з&apos;єднання</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="272"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Additional option to define if self signed server certificates are allowed. Not checked this value defaults to &amp;quot;false&amp;quot;.  Affects the OpenConnect internal function only: --servercert is not added to startup parameters and receiving self signed cert from server terminates the connection if set as false (or omitted)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Додатковий параметр, щоб визначити, чи дозволені самопідписані сертифікати сервера. Якщо не позначено, то усталено воно має значення &amp;quot;false&amp;quot;.  Впливає лише на внутрішню функцію OpenConnect: --servercert не додається до параметрів запуску, а отримання самопідписаного сертифіката від сервера припиняє з’єднання, якщо встановлено значення false (або опущено)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="275"/>
         <source>Allow Self Signed Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Дозволити самопідписані сертифікати</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="282"/>
         <source>Read cookie from standard input</source>
-        <translation type="unfinished"></translation>
+        <translation>Читати файли cookie зі стандартного вводу</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="285"/>
         <source>Cookie on stdin</source>
-        <translation type="unfinished"></translation>
+        <translation>Файли cookie в stdin</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="296"/>
         <source>Authentication Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип автентифікації</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="303"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;Type of authentication used with OpenConnect. Applicable values are:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;cookie - &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;basic cookie based authentication.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;cookie_with_userpass&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt; - the credentials are used to retrieve the connection cookie, which hides the username from commandline.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;userpass &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;- username and password are used.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;publickey - r&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;equires CACert and UserPrivateKey to be set.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;pkcs&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt; - uses the PKCSClientCert and requests password input.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;Defaults to &amp;quot;cookie&amp;quot;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;Тип автентифікації, який використовується з OpenConnect. Застосовні значення:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;cookie - &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;базова автентифікація на основі файлів cookie.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;cookie_with_userpass&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt; - облікові дані використовуються для отримання файлів cookie з&apos;єднання, які приховують ім’я користувача в командному рядку.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;userpass &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;- використовуються ім&apos;я користувача та пароль.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;publickey - r&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;вимагає встановлення сертифіката CA та приватного ключа користувача.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;pkcs&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt; - використовує PKCSClientCert і запитує введення пароля.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;Усталене значення — &amp;quot;cookie&amp;quot;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="307"/>
@@ -4202,1164 +4202,1168 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1113"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1172"/>
         <source>none specified</source>
-        <translation type="unfinished"></translation>
+        <translation>не вказано</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="312"/>
         <source>cookie</source>
-        <translation type="unfinished"></translation>
+        <translation>файли cookie</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="317"/>
         <source>cookie_with_userpass</source>
-        <translation type="unfinished"></translation>
+        <translation>файли_cookie_з_паролем_користувача</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="322"/>
         <source>userpass</source>
-        <translation type="unfinished"></translation>
+        <translation>пароль користувача</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="327"/>
         <source>publickey</source>
-        <translation type="unfinished"></translation>
+        <translation>відкритий ключ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="332"/>
         <source>pkcs</source>
-        <translation type="unfinished"></translation>
+        <translation>pkcs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="360"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;SSL private key file needed by beb authentication when AuthType is set as &lt;span style=&quot; font-weight:600;&quot;&gt;publickey&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Файл приватного ключа SSL, необхідний для автентифікації beb, коли типом автентифікації встановлено &lt;span style=&quot; font-weight:600;&quot;&gt;відкритий ключ&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="367"/>
         <source>User Private Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Приватний ключ користувача</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="374"/>
         <source>PKCS Client Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Клієнтський сертифікат PKCS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="384"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Certificate and private key in a PKCS#1/PKCS#8/PKCS#12 structure. Needed when AuthType is &lt;span style=&quot; font-weight:600;&quot;&gt;pkcs&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Сертифікат і приватний ключ у структурі PKCS#1/PKCS#8/PKCS#12. Потрібен, коли тип автентифікації &lt;span style=&quot; font-weight:600;&quot;&gt;pkcs&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="391"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set login usergroup on the remote server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Встановити групу користувачів для входу на віддалений сервер.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="398"/>
         <source>User Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Група користувачів</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="405"/>
         <source>Client Cerificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Клієнтський сертифікат</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="415"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Client certificate file, needed by web authentication when authentication type is set as &lt;span style=&quot; font-weight:600;&quot;&gt;publickey&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Файл сертифіката клієнта, необхідний для вебавтентифікації, якщо встановлено тип автентифікації &lt;span style=&quot; font-weight:600;&quot;&gt;відкрий ключ&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="430"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This button will import an OpenVPN .opvn file. The .opvn file will be read, processed, and converted to a .conf file with the location of the resulting file entered into the Extra Config box below. The .conf file will be supplied as an argument to the &lt;span style=&quot; font-weight:600;&quot;&gt;--config&lt;/span&gt; option in OpenVPN.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ця кнопка імпортує файл OpenVPN .opvn. Файл .opvn буде прочитано, оброблено та перетворено у файл .conf із розташуванням результівного файлу, введеного у вікно Extra Config нижче. Файл .conf буде надано аргументом параметра &lt;span style=&quot; font-weight:600;&quot;&gt;--config&lt;/span&gt; в OpenVPN.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="433"/>
         <source>Import OPVN File</source>
-        <translation type="unfinished"></translation>
+        <translation>Імпортувати файл OPVN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="440"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This will allow the creation of a User/Password file.  You will be prompted to supply the OpenVPN user name and password for the VPN service.  This file is used in conjunction with the &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt; option.  The location of the file created will be automatically entered in the User/Password box below.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Це дозволить створити файл користувача/пароля. Вам буде запропоновано ввести ім&apos;я користувача та пароль OpenVPN для служби VPN. Цей файл використовується в поєднанні з параметром &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt;. Розташування створеного файлу буде автоматично введено в поле Користувач/Пароль нижче.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="443"/>
         <source>Create User/Pass</source>
-        <translation type="unfinished"></translation>
+        <translation>Створити користувача/пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="467"/>
         <source>User/Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл користувача/пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="474"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;CA Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Сертифікат центру сертифікації&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="481"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local peer&apos;s signed certificate in .pem format which must be signed by a certificate authority whose certificate is in --ca file.&lt;/p&gt;&lt;p&gt;Each peer in an OpenVPN link running in TLS mode should have its own certificate and private key file. In addition, each certificate should have been signed by the key of a certificate authority whose public key resides in the --ca certificate authority file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Підписаний локальним вузлом сертифікат у форматі .pem, який має бути підписаний центром сертифікації, чий сертифікат міститься у файлі --ca.&lt;/p&gt;&lt;p&gt;Кожен вузол у посиланні OpenVPN, що працює в режимі TLS, повинен мати власний сертифікат і файл приватного ключа. Крім того, кожен сертифікат повинен бути підписаний ключем центру сертифікації, відкритий ключ якого міститься у файлі центру сертифікації --ca.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="488"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Signed Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Підписаний сертифікат Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="495"/>
         <source>Extra Config</source>
-        <translation type="unfinished"></translation>
+        <translation>Додаткові конфігурації</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="502"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Private Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Приватний ключ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="509"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Certificate authority (CA) file in .pem format, also referred to as the root certificate. This file can have multiple certificates in  .pem  format,  concatenated together.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Файл центру сертифікації (CA) у форматі .pem, який також називають кореневим сертифікатом. Цей файл може містити кілька сертифікатів у форматі .pem, об’єднаних разом.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="516"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Location of a user/password file to be used in conjunction with the &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt; option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Розташування файлу користувача/пароля, який використовуватиметься разом із параметром &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local peer&apos;s private key in .pem format. Use the private key which was generated when you built your peer&apos;s certificate&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Приватний ключ локального вузла у форматі .pem. Використовуйте приватний ключ, який було згенеровано під час створення сертифіката вашого вузла&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="530"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;OpenVPN config file that can contain extra options not supported by the ConnMan OpenVPN plugin.&lt;/p&gt;&lt;p&gt;When an OpenVPN .opvn file is imported the contents of that are placed in the extra config file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Файл конфігурації OpenVPN, який може містити додаткові параметри, які не підтримуються плагіном ConnMan OpenVPN.&lt;/p&gt;&lt;p&gt;Після імпорту файлу .opvn OpenVPN його вміст розміщується в додатковому файлі конфігурації.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="537"/>
         <source>Certificate Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл пароля сертифіката</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="544"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For the extremely security conscious, it is possible to protect your private key with a password.  Location of the file containing the password is in this box. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Для тих, хто дуже піклується про безпеку, можна захистити свій приватний ключ паролем.  У цьому блоці розміщено файл із паролем. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="553"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Don&apos;t cache &lt;span style=&quot; font-weight:600;&quot;&gt;--askpass&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt; username names and passwords in virtual memory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Не кешувати &lt;span style=&quot; font-weight:600;&quot;&gt;--askpass&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt; імена користувачів і паролі до віртуальної пам&apos;яті.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="556"/>
         <source>Don&apos;t cache password</source>
-        <translation type="unfinished"></translation>
+        <translation>Не кешувати пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="565"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;DEPRECATED&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Enable LZO compression algorithm.  Compression is generally not recommended.  VPN tunnels which use compression are suspectible to the VORALCE attack vector. Use LZO compression may add up to 1 byte per packet for incompressible data. mode may be yes, no, or adaptive (default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ПІДТРИМКУ ПРИПИНЕНО&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Увімкніть алгоритм стиснення LZO. Стиснення, як правило, не рекомендується.  Тунелі VPN, які використовують стиснення підозрюються у векторі атаки VORALCE. Використання стиснення LZO може додати до 1 байта на пакет для нестискуваних даних. режим може бути так, ні або адаптивний (усталено).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="574"/>
         <source>adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>адаптивний</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="579"/>
         <source>yes</source>
-        <translation type="unfinished"></translation>
+        <translation>так</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="584"/>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>ні</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="592"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is deprecated for server-client mode. Options &lt;span style=&quot; font-weight:600;&quot;&gt;--data-ciphers&lt;/span&gt; or possibly -&lt;span style=&quot; font-weight:600;&quot;&gt;-data-ciphers-fallback&lt;/span&gt; should be used instead. Encrypt data channel packets with the specified cipher algorithm.&lt;/p&gt;&lt;p&gt;The default is BF-CBC, an abbreviation for Blowfish in Cipher Block Chaining mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Цей параметр застарів для режиму сервер-клієнт. Натомість варто використовувати параметр &lt;span style=&quot; font-weight:600;&quot;&gt;--data-ciphers&lt;/span&gt; або, можливо, -&lt;span style=&quot; font-weight:600;&quot;&gt;-data-ciphers-fallback&lt;/span&gt;. Шифруйте пакети каналу даних за допомогою вказаного алгоритму шифрування.&lt;/p&gt;&lt;p&gt;Усталено це BF-CBC, абревіатура від Blowfish in Cipher Block Chaining mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="604"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP/UDP port number.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Номер порту TCP/UDP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="618"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the protocol for communicating with remote host. The protocal can be &lt;span style=&quot; font-weight:600;&quot;&gt;udp, tcp-client, or tcp-server.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;You can also limit OpenVPN to use only IPv4 or only IPv6 by specifying the protocol as &lt;span style=&quot; font-weight:600;&quot;&gt;udp4, tcp4-client, tcp4-server or udp6, tcp6-client, tcp6-server&lt;/span&gt;, respectively. &lt;/p&gt;&lt;p&gt;The default protocol is udp when --proto is not specified.&lt;/p&gt;&lt;p&gt;For UDP operation, --proto udp should be specified on both peers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вкажіть протокол зв&apos;язку з віддаленим хостом. Протокол може бути &lt;span style=&quot; font-weight:600;&quot;&gt;udp, tcp-client або tcp-server.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Ви також можете обмежити використання OpenVPN лише IPv4 або лише IPv6, вказавши протокол як &lt;span style=&quot; font-weight:600;&quot;&gt;udp4, tcp4-client, tcp4-server або udp6, tcp6-client, tcp6-server&lt;/span&gt; відповідно. &lt;/p&gt;&lt;p&gt;Усталений протокол — udp, якщо --proto не вказано.&lt;/p&gt;&lt;p&gt;Для операції UDP, --proto udp має бути вказано на обох вузлах.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="627"/>
         <source>udp</source>
-        <translation type="unfinished"></translation>
+        <translation>udp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="632"/>
         <source>udp4</source>
-        <translation type="unfinished"></translation>
+        <translation>udp4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="637"/>
         <source>udp6</source>
-        <translation type="unfinished"></translation>
+        <translation>udp6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="642"/>
         <source>tcp-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="647"/>
         <source>tcp4-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp4-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="652"/>
         <source>tcp6-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp6-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="657"/>
         <source>tcp-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="662"/>
         <source>tcp4-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp4-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="667"/>
         <source>tcp6-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp6-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="675"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify which device type are we using. Device-type should be tun (OSI Layer 3) or tap (OSI Layer 2).&lt;/p&gt;&lt;p&gt;Only use this option if the TUN/TAP device used with &lt;span style=&quot; font-weight:600;&quot;&gt;--dev&lt;/span&gt;  does not begin with tun or tap.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вкажіть, який тип пристрою ми використовуємо. Тип пристрою має бути tun (OSI Layer 3) або tap (OSI Layer 2).&lt;/p&gt;&lt;p&gt;Використовуйте цей параметр, лише якщо пристрій TUN/TAP використовується з &lt;span style=&quot; font-weight:600;&quot;&gt;--dev&lt;/span&gt;  не починається з tun або tap.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="684"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1177"/>
         <source>tun</source>
-        <translation type="unfinished"></translation>
+        <translation>tun</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="689"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1182"/>
         <source>tap</source>
-        <translation type="unfinished"></translation>
+        <translation>tap</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="697"/>
         <source>Protocol</source>
-        <translation type="unfinished"></translation>
+        <translation>Протокол</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="704"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Removed in OpenVPN 2.5.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The nsCertType field is no longer supported in recent SSL/TLS libraries. If your certificates does not include key usage and extended key usage fields, they must be upgraded and the &lt;span style=&quot; font-weight:600;&quot;&gt;--remote-cert-tls&lt;/span&gt; option should be used instead.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Вилучено в OpenVPN 2.5.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Поле nsCertType більше не підтримується в останніх бібліотеках SSL/TLS. Якщо ваші сертифікати не містять полів використання ключа та розширеного використання ключа, їх потрібно оновити й замість цього використовувати параметр &lt;span style=&quot; font-weight:600;&quot;&gt;--remote-cert-tls&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="713"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="796"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="978"/>
         <source>server</source>
-        <translation type="unfinished"></translation>
+        <translation>сервер</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="718"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="791"/>
         <source>client</source>
-        <translation type="unfinished"></translation>
+        <translation>клієнт</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="726"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Authenticate data channel packets and (if enabled) tls-auth control channel packets with HMAC using the specified message digest algorithm. (The default is SHA1 ).&lt;/p&gt;&lt;p&gt;HMAC is a commonly used message authentication algorithm (MAC) that uses a data string, a secure hash algorithm and a key to produce a digital signature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Автентифікуйте пакети каналу даних і (якщо ввімкнено) пакети каналу керування tls-auth за допомогою HMAC за допомогою вказаного алгоритму дайджесту повідомлень. (Усталено — SHA1 ).&lt;/p&gt;&lt;p&gt;HMAC — це поширений алгоритм автентифікації повідомлень (MAC), який використовує рядок даних, безпечний хеш-алгоритм і ключ для створення цифрового підпису.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="733"/>
         <source>Remote Certificate TLS</source>
-        <translation type="unfinished"></translation>
+        <translation>Віддалений сертифікат TLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="740"/>
         <source>NS Certificate Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип сертифіката NS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="747"/>
         <source>Fast LZO Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Швидке стиснення LZO</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="754"/>
         <source>Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Порт</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="761"/>
         <source>Cipher</source>
-        <translation type="unfinished"></translation>
+        <translation>Шифр</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="768"/>
         <source>Authenticate HMAC</source>
-        <translation type="unfinished"></translation>
+        <translation>Автентифікувати HMAC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="775"/>
         <source>Device Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип пристрою</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="782"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require that peer certificate was signed with an explicit key usage and extended key usage based on RFC3280 TLS rules.&lt;/p&gt;&lt;p&gt;This is a useful security option for clients to ensure that the host they connect to is a designated server. Or the other way around; for a server to  verify that only hosts with a client certificate can connect.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вимагати, щоб одноранговий сертифікат був підписаний із явним використанням ключа та розширеним використанням ключа на основі правил RFC3280 TLS.&lt;/p&gt;&lt;p&gt;Це корисний параметр безпеки для клієнтів, щоб переконатися, що хост, до якого вони під&apos;єднуються, є призначеним сервером. Або навпаки; для сервера, щоб перевірити, що лише хости з сертифікатом клієнта можуть під&apos;єднатися.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="804"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the tunnel MTU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Установити тунель MTU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="819"/>
         <source>User Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль користувача</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="826"/>
         <source>Group Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль групи</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="833"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your group password in cleartext.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль вашої групи відкритим текстом.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="840"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Group User Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Ім&apos;я користувача групи&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="847"/>
         <source>User Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ім&apos;я користувача</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="854"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your Xauth username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ваше ім&apos;я Xauth.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="861"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your group username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ваше ім&apos;я користувача групи.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="868"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your Xauth password in clear text.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ваш пароль Xauth відкритим текстом.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="879"/>
         <source>Domain</source>
-        <translation type="unfinished">Домен</translation>
+        <translation>Домен</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="886"/>
         <source>Application Version to report. Note: Default string is generated at runtime.
 Default: Cisco Systems VPN Client 0.5.3:Linux</source>
-        <translation type="unfinished"></translation>
+        <translation>Версія застосунку для звіту. Примітка. Усталено рядок генерується під час виконання.
+Усталено: Cisco Systems VPN Client 0.5.3:Linux</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="894"/>
         <source>Application Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Версія застосунку</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="901"/>
         <source>(NT-) Domain name for authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>(NT-) Доменне ім&apos;я для автентифікації</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="912"/>
         <source>Diffie-Hellman Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Група Diffie-Hellman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="919"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Authentication mode: &lt;/p&gt;&lt;p&gt;psk: pre-shared key (default)&lt;/p&gt;&lt;p&gt;cert: server + client certificate (not implemented yet) &lt;/p&gt;&lt;p&gt;hybrid: server certificate + xauth (if built with openssl support)&lt;/p&gt;&lt;p&gt;&lt;br/&gt;Default: psk&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Режим автентифікації: &lt;/p&gt;&lt;p&gt;psk: попередній спільний ключ (усталений)&lt;/p&gt;&lt;p&gt;cert: сервер + сертифікат клієнта (ще не реалізовано) &lt;/p&gt;&lt;p&gt;hybrid: сертифікат сервера + xauth (якщо створено з підтримкою openssl)&lt;/p&gt;&lt;p&gt;&lt;br/&gt;Усталено: psk&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="928"/>
         <source>psk</source>
-        <translation type="unfinished">psk</translation>
+        <translation>psk</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="933"/>
         <source>cert</source>
-        <translation type="unfinished"></translation>
+        <translation>cert</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="938"/>
         <source>hybrid</source>
-        <translation type="unfinished"></translation>
+        <translation>hybrid</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="946"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Diffie-Hellman group to use for Perfect Forward Secrecy (PFS).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Група Diffie-Hellman використовується для ідеальної секретності (PFS).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="958"/>
         <source>nopfs</source>
-        <translation type="unfinished"></translation>
+        <translation>nopfs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="963"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1045"/>
         <source>dh1</source>
-        <translation type="unfinished"></translation>
+        <translation>dh1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="968"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1050"/>
         <source>dh2</source>
-        <translation type="unfinished"></translation>
+        <translation>dh2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="973"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1055"/>
         <source>dh5</source>
-        <translation type="unfinished"></translation>
+        <translation>dh5</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="986"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1367"/>
         <source>UDP Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Порт UDP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="993"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local ISAKMP port number to use (0 == use random port).&lt;/p&gt;&lt;p&gt;Default: 500&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Локальний номер порту ISAKMP для використання (0 == використовувати випадковий порт).&lt;/p&gt;&lt;p&gt;Усталено: 500&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1006"/>
         <source>Local Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Локальний порт</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1013"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local UDP port number to use (0 == use random port). This is only relevant if cisco-udp nat-traversal is used. This is the _local_ port, the remote udp port is discovered automatically. It is especially not the cisco-tcp port.&lt;/p&gt;&lt;p&gt;Default: 10000&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Номер локального порту UDP для використання (0 == використовувати випадковий порт). Це актуально, лише якщо використовується cisco-udp nat-traversal. Це _локальний_ порт, віддалений порт udp виявляється автоматично. Особливо це не порт cisco-tcp.&lt;/p&gt;&lt;p&gt;Усталено: 10000&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1026"/>
         <source>IKE Authentication Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим автентифікації IKE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1033"/>
         <source>Name of the IKE DH Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Назва групи IKE DH</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1063"/>
         <source>IKE DH Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Група IKE DH</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1070"/>
         <source>Vendor</source>
-        <translation type="unfinished"></translation>
+        <translation>Постачальник</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1077"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vendor of your IPSec gateway.&lt;/p&gt;&lt;p&gt;Default: cisco&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Постачальник шлюзу вашого IPSec.&lt;/p&gt;&lt;p&gt;Усталено: cisco&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1086"/>
         <source>cisco</source>
-        <translation type="unfinished"></translation>
+        <translation>cisco</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1091"/>
         <source>netscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>netscreen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1099"/>
         <source>Nat Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим Nat</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1106"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Which NAT-Traversal Method to use:&lt;/p&gt;&lt;p&gt;natt -- NAT-T as defined in RFC3947&lt;/p&gt;&lt;p&gt;none -- disable use of any NAT-T method &lt;/p&gt;&lt;p&gt;force-natt -- always use NAT-T encapsulation even without presence of a NAT device (useful if the OS captures all ESP traffic)&lt;/p&gt;&lt;p&gt;cisco-udp -- Cisco proprietary UDP encapsulation, commonly over Port 10000 Note: cisco-tcp encapsulation is not yet supported &lt;/p&gt;&lt;p&gt;Default: natt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Який метод NAT-Traversal використовувати:&lt;/p&gt;&lt;p&gt;natt -- NAT-T як визначено у RFC3947&lt;/p&gt;&lt;p&gt;none -- вимикає використання всіх методів NAT-T &lt;/p&gt;&lt;p&gt;force-natt -- завжди використовувати інкапсуляцію NAT-T навіть без наявності пристрою NAT (корисно, якщо ОС захоплює весь трафік ESP)&lt;/p&gt;&lt;p&gt;cisco-udp -- Власна інкапсуляція UDP Cisco, зазвичай через порт 10000 Примітка: інкапсуляція cisco-tcp ще не підтримується &lt;/p&gt;&lt;p&gt;Усталено: natt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1118"/>
         <source>none</source>
-        <translation type="unfinished">нічого</translation>
+        <translation>нічого</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1123"/>
         <source>natt</source>
-        <translation type="unfinished"></translation>
+        <translation>natt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1128"/>
         <source>force-natt</source>
-        <translation type="unfinished"></translation>
+        <translation>force-natt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1133"/>
         <source>cisco-udp</source>
-        <translation type="unfinished"></translation>
+        <translation>cisco-udp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1141"/>
         <source>DPD Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Простій DPD</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1148"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Send DPD packet after not receiving anything for &lt;span style=&quot; font-style:italic;&quot;&gt;idle&lt;/span&gt; seconds. Use 0 to disable DPD completely (both ways). &lt;/p&gt;&lt;p&gt;Default: 600&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Надіслати пакет DPD, не отримавши нічого протягом &lt;span style=&quot; font-style:italic;&quot;&gt;неактивних&lt;/span&gt; секунд. Використовуйте 0, щоб повністю вимкнути DPD (в обидві сторони). &lt;/p&gt;&lt;p&gt;Усталено: 600&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1161"/>
         <source>Interface Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим інтерфейсу</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1168"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mode of TUN/TAP interface:&lt;/p&gt;&lt;p&gt;tun: virtual point to point interface (default) &lt;/p&gt;&lt;p&gt;tap: virtual ethernet interface&lt;/p&gt;&lt;p&gt;Default: tun&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Режим інтерфейсу TUN/TAP:&lt;/p&gt;&lt;p&gt;tun: інтерфейс віртуальної точки до точки інтерфейсу (усталено) &lt;/p&gt;&lt;p&gt;tap: інтерфейс віртуальної мережі Ethernet&lt;/p&gt;&lt;p&gt;Усталено: tun&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1190"/>
         <source>Enables weak single DES encryption</source>
-        <translation type="unfinished"></translation>
+        <translation>Вмикає слабке одинарне шифрування DES</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1193"/>
         <source>Single DES</source>
-        <translation type="unfinished"></translation>
+        <translation>Одинарне DES</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1200"/>
         <source>Enables using no encryption for data traffic (key exchanged must be encrypted)</source>
-        <translation type="unfinished"></translation>
+        <translation>Дає змогу не використовувати шифрування для трафіку даних (обмінювані ключі мають бути зашифровані)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1203"/>
         <source>No Encrypton</source>
-        <translation type="unfinished"></translation>
+        <translation>Без шифрування</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1234"/>
         <source>L2TP Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Опції L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1242"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L2TP user name. If left blank you will be asked for a username by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ім&apos;я користувача L2TP. Якщо залишити порожнім, агент запитає вас про ім’я користувача під час спроби з’єднання.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1249"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1748"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1256"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1755"/>
         <source>User:</source>
-        <translation type="unfinished"></translation>
+        <translation>Користувач:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1263"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1769"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP password. If left blank the password will be asked from the user by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль PPTP. Якщо залишити порожнім, агент запитуватиме пароль у користувача під час спроби з&apos;єднання.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1266"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L2TP password. If left blank you will be asked for the password by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль L2TP. Якщо залишити порожнім, агент запитуватиме пароль під час спроби з&apos;єднання.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1273"/>
         <source>Authentication File</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл автентифікації</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1280"/>
         <source>Specify where to find the authentication file used to authenticate l2tp tunnels. The default is /etc/xl2tpd/l2tp-secrets</source>
-        <translation type="unfinished"></translation>
+        <translation>Укажіть, де знайти файл автентифікації, який використовується для автентифікації тунелів l2tp. Усталений — /etc/xl2tpd/l2tp-secrets</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1291"/>
         <source>BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1298"/>
         <source>Maximum bandwidth to use.</source>
-        <translation type="unfinished">Максимальна пропускна здатність.</translation>
+        <translation>Максимальна пропускна здатність.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1308"/>
         <source>Default Route</source>
-        <translation type="unfinished"></translation>
+        <translation>Усталений маршрут</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1318"/>
         <source>TX BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>TX BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1325"/>
         <source>If set, the transmit bandwidth maximum will be set to this value
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо встановлено, максимальна пропускна здатність передачі дорівнюватиме цьому значенню
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1336"/>
         <source>Listen Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Слухати адресу</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1343"/>
         <source>The IP address of the interface on which the daemon listens. By default, it listens on INADDR_ANY (0.0.0.0), meaning it listens on all interfaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>IP-адреса інтерфейсу, який слухає фонова служба. Усталено він прослуховує INADDR_ANY (0.0.0.0), тобто прослуховує всі інтерфейси.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1350"/>
         <source>RX BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>RX BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1357"/>
         <source>If set, the receive bandwidth maximum will be set to this value</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо встановлено, максимальна пропускна здатність приймання дорівнюватиме цьому значенню</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1374"/>
         <source>Specify which UDP port xl2tpd should use. The default is 1701.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вкажіть, який порт UDP xl2tpd потрібно використовувати. Усталено 1701.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1384"/>
         <source>Tunnel RWS</source>
-        <translation type="unfinished"></translation>
+        <translation>Тунель RWS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1391"/>
         <source>This defines the window size of the control channel. The window size is defined as the number of outstanding unacknowledged packets, not as a number of bytes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Це визначає розмір вікна каналу керування. Розмір вікна визначається як кількість неопрацьованих непідтверджених пакетів, а не як кількість байтів.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1405"/>
         <source>If checked xl2tpd will attempt to redial if the call get disconnected. Note that, if enabled, xl2tpd will keep passwords in memory: a potential security risk.</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо позначено, xl2tpd спробує повторний набір, якщо виклик буде розірвано. Зауважте, що якщо ввімкнено, xl2tpd зберігатиме паролі в пам’яті: потенційна загроза безпеці.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1408"/>
         <source>Redial</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторний виклик</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1415"/>
         <source>Will require the remote peer to get authenticated via PAP for the ppp authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагатиме автентифікацію віддаленого вузла через PAP для автентифікації ppp.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1418"/>
         <source>Require PAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагати PAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1425"/>
         <source>Use IPsec Security Association tracking. When this is enabled, packets received by xl2tpd should have to extra fields (refme and refhim) which allows tracking of multiple clients using the same internal NATed IP address, and allows tracking of multiple clients behind the same NAT router. This needs to be supported by the kernel. Currently, this only works with Openswan KLIPS in &quot;mast&quot; mode. (see http://www.openswan.org/)</source>
-        <translation type="unfinished"></translation>
+        <translation>Використовуйте відстеження IPsec Security Association. Коли це ввімкнено, пакети, отримані xl2tpd, повинні мати додаткові поля (refme та refhim), які уможливлюють стежити за кількома клієнтами, які використовують ту саму внутрішню IP-адресу NATed, а також дають змогу стежити за кількома клієнтами одного маршрутизатора NAT. Це має підтримуватися ядром. Наразі це працює лише з Openswan KLIPS у режимі «mast». (див. http://www.openswan.org/)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1428"/>
         <source>IPsec Security Association</source>
-        <translation type="unfinished"></translation>
+        <translation>IPsec Security Association</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1435"/>
         <source>Will require the remote peer to get authenticated via CHAP for the ppp authentication.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагатиме автентифікації віддаленого вузла через CHAP для автентифікації ppp.
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1439"/>
         <source>Require CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагати CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1446"/>
         <source>Require the remote peer to authenticate itself.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагати від віддаленого вузла автентифікації.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1449"/>
         <source>Require Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагати автентифікацію</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1456"/>
         <source>If checked the length bit present in the l2tp packet payload will be used.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо позначено, використовуватиметься біт довжини, присутній у корисному навантаженні пакета l2tp.
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1460"/>
         <source>Use Length Bit</source>
-        <translation type="unfinished"></translation>
+        <translation>Використовувати біт довжини</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1467"/>
         <source>When checked use challenge authentication to authenticate peer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо позначено, використовуватиметься перевірка автентифікації на вимогу для автентифікації однорангового пристрою.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1470"/>
         <source>Challenge Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>Автентифікація на вимогу</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1477"/>
         <source>If checked sequence numbers will be included in the communication. The feature to use sequence numbers in sessions is currently broken and does not function.</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо позначено, порядкові номери будуть включені в комунікацію. Функція використання порядкових номерів у сеансах наразі не працює.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1480"/>
         <source>Flow Bit</source>
-        <translation type="unfinished"></translation>
+        <translation>Біт потоку</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1487"/>
         <source>If checked the xl2tpd process will only accept connections from peers addresses specified in the following sections. The default is no.</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо позначено, процес xl2tpd прийматиме під&apos;єднання лише від однорангових адрес, указаних у наступних розділах. Усталено — ні.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1490"/>
         <source>Access Control</source>
-        <translation type="unfinished"></translation>
+        <translation>Керування доступом</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1497"/>
         <source>If checked only one control tunnel will be allowed to be built between 2 peers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо позначено, лише один тунель керування буде дозволено будувати між 2 одноранговими вузлами.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1500"/>
         <source>Exclusive</source>
-        <translation type="unfinished"></translation>
+        <translation>Винятковість</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1527"/>
         <source>Wait X seconds before redial. The redial option must be set to yes to use this option. Defaults to 30 seconds.</source>
-        <translation type="unfinished"></translation>
+        <translation>Очікувати X секунд перед повторним набором. Для користування цією опцією для параметра повторного набору має бути встановлено значення «Так». Усталено 30 секунд.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1537"/>
         <source>Redial Timeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Час очікування повторного виклику</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1544"/>
         <source>Maximum Redials</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальна кількість повторних викликів</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1567"/>
         <source>Will give up redial tries after X attempts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Спроби повторного набору припиняться після X спроб.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1582"/>
         <source>PPTP Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Опції PPTP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1588"/>
         <source>Disable Address Control Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути стиснення керування адресами</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1595"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1866"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disables Deflate compression; pppd will not request or agree to compress packets using the Deflate scheme.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вимикає стиснення Deflate; pppd не запитуватиме та не погоджуватиме стискати пакети за допомогою схеми Deflate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1598"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1869"/>
         <source>Disable Deflate Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути стиснення Deflate</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1605"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1793"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable Van Jacobson style TCP/IP header compression in both the transmit and the receive direction.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вимкнути стиснення заголовка TCP/IP у стилі Якобсона як у напрямку передавання, так і в напрямку отримання.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1608"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1796"/>
         <source>Disable Van Jacobson Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути стиснення Якобсона</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1615"/>
         <source>Disable protocol field compression negotiation in both the receive and the transmit direction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути узгодження стиснення полів протоколу як у напрямку отримання, так і в напрямку передавання.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1618"/>
         <source>Disable Protocol Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути стиснення протоколу</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1625"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1836"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disables BSD-Compress compression; pppd will not request or agree to compress packets using the BSD-Compress scheme.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вимикає стиснення BSD-Compress; pppd не запитуватиме та не погоджуватиметься стискати пакети за допомогою схеми BSD-Compress.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1628"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1839"/>
         <source>Disable BSD Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути стиснення BSD</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1635"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1946"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables  connection  debugging  facilities.  If this option is given, pppd will log the contents of all control packets sent or received in a readable form.  The packets are logged through syslog with facility daemon and level debug.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вмикає засоби налагодження з&apos;єднання. Якщо вказано цей параметр, pppd реєструватиме вміст усіх контрольних пакетів, надісланих або отриманих у читабельній формі. Пакети реєструються через системний журнал з фоновою службою та рівнем налагодження.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1638"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1949"/>
         <source>Debug</source>
-        <translation type="unfinished"></translation>
+        <translation>Зневдження</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1645"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1936"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE, with 40-bit encryption.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вимагати використовувати MPPE з 40-розрядним шифруванням.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1648"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1939"/>
         <source>Require MPPE40</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагати MPPE40</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1655"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1926"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE, with 128-bit encryption.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вимагати використовувати MPPE зі 128-розрядним шифруванням.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1658"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1929"/>
         <source>Require MPPE128</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагати MPPE128</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1665"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1876"/>
         <source>With this option, pppd will not agree to authenticate itself to the peer using EAP.</source>
-        <translation type="unfinished"></translation>
+        <translation>З цим параметром pppd не погоджуватиметься автентифікувати себе на одноранговому пристрої за допомогою EAP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1668"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1879"/>
         <source>Refuse EAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Відмовитися від EAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1675"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1896"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using PAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;З цим параметром pppd не погоджуватиметься автентифікувати себе на одноранговому пристрої за допомогою PAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1678"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1899"/>
         <source>Refuse PAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Відмовитися від PAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1685"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1846"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using CHAP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;З цим параметром pppd не погоджуватиметься автентифікувати себе на одноранговому пристрої за допомогою CHAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1688"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1849"/>
         <source>Refuse CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Відмовитися від CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1695"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1783"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using MS-CHAP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;З цим параметром pppd не погоджуватиметься автентифікувати себе на одноранговому пристрої за допомогою MS-CHAP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1698"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1786"/>
         <source>Refuse MS CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Відмовитися від MS CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1705"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1826"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using MS-CHAPv2.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;З цим параметром pppd не погоджуватиметься автентифікувати себе на одноранговому пристрої за допомогою MS-CHAPv2.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1708"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1829"/>
         <source>Refuse MS CHAP 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Відмовитися від MS CHAP 2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1715"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1856"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE (Microsoft Point to Point Encryption).  This option disables all other compression types.  This option  enables  both 40-bit  and  128-bit  encryption.   In  order for MPPE to successfully come up, you must have authenticated with either MS-CHAP or MS-CHAPv2. This option is presently only supported under Linux, and only if your kernel has been configured to include MPPE support.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вимагати використовувати MPPE (Microsoft Point to Point Encryption). Цей параметр вимикає всі інші типи стиснення. Вмикається як для 40-розрядного, так і 128-розрядного шифрування. Щоб MPPE успішно працював, ви повинні мати автентифікацію або з MS-CHAP, або MS-CHAPv2. Цей параметр зараз підтримується лише на Linux, і лише якщо ваше ядро було налаштовано так, щоб воно включало підтримку MPPE.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1718"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1859"/>
         <source>Require MPPE</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимагати MPPE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1725"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1916"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allow MPPE to use stateful mode.  Stateless mode is still attempted first.  The default is to disallow stateful mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Дозволити MPPE використовувати режим зі збереженням стану. Спочатку все одно намагатиметься запуститися режим без збереження стану. Усталено режим збереження стану заборонено.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1728"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1919"/>
         <source>Allow MPPE Stateful Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Дозволити режим збереження стану MPPE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1762"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP user name. If left blank you will be asked for a username by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ім&apos;я користувача PPTP. Якщо залишити порожнім, агент запитає вас про ім’я користувача під час спроби з’єднання.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1772"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP password. If left blank you will be asked for the password by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль PPTP. Якщо залишити порожнім, агент запитуватиме пароль під час спроби з&apos;єднання.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1809"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If this option is given, pppd will presume the peer to be dead if n LCP echo-requests are sent without receiving a valid LCP echo-reply. If this happens, pppd will terminate the connection. Use of this option requires a non-zero value for the lcp-echo-interval parameter. This option can be used to enable pppd to terminate after the physical connection has been broken (e.g., the modem has hung up) in situations where no hardware modem control lines are available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо вказано цей параметр, pppd вважатиме вузол не під&apos;єднаним, якщо n ехо-запитів LCP буде надіслано без отримання дійсної ехо-відповіді LCP. Якщо це станеться, pppd припинить з’єднання. Застосування цього параметра вимагає ненульового значення для параметра lcp-echo-interval. Цей параметр можна використати, щоб налаштувати pppd завершувати роботу після розриву фізичного з’єднання (наприклад, модем завершив сеанс зв&apos;язку) у ситуаціях, коли недоступні апаратні лінії керування модемом.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1819"/>
         <source>Dead Peer Check Interval</source>
-        <translation type="unfinished"></translation>
+        <translation>Інтервал перевірки від&apos;єднання однорангового пристрою</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1889"/>
         <source>Dead Peer Check Count</source>
-        <translation type="unfinished"></translation>
+        <translation>Кількість разів перевірки про від&apos;єднання однорангового пристрою</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1906"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If  this  option  is  given,  pppd  will send an LCP echo-request frame to the peer every n seconds.  Normally the peer should respond to the echo-request by sending an echo-reply.  This option can be used with the lcp-echo-failure option to detect that the peer is no longer connected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо вказано цей параметр, pppd надсилатиме фрейм ехо-запиту LCP партнеру кожні n секунд. Зазвичай одноранговий вузол повинен відповісти на ехо-запит, надіславши ехо-відповідь. Цей параметр можна використовувати з параметром lcp-echo-failure, щоб виявити від&apos;єднання вузла.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1967"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Allowed IP&apos;s&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Дозволені IP-адреси&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1974"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A base64 preshared key generated by &lt;span style=&quot; font-style:italic;&quot;&gt;wg genpsk&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Optional, and may be omitted. This option adds an additional layer of symmetric-key cryptography to be mixed into the already existing public-key cryptography, for post-quantum resistance.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Спільний ключ base64, згенерований &lt;span style=&quot; font-style:italic;&quot;&gt;wg genpsk&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Необов’язковий, його можна опустити. Цей параметр додає ще один рівень криптографії з симетричним ключем, який буде змішано з уже наявною криптографією з відкритим ключем, для постквантової стійкості.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1981"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A list of nameservers separated by comma.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Список серверів імен, розділений комами.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1988"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A comma-separated list of IP (v4 or v6) addresses with CIDR masks from which this peer is allowed to send incoming traffic and to which outgoing traffic for this peer is directed.&lt;/p&gt;&lt;p&gt;The catch-all 0.0.0.0/0 may be specified for matching all IPv4 addresses, and ::/0 may be specified for matching all IPv6 addresses.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Розділений комами список IP-адрес (v4 або v6) із масками CIDR, з яких цьому одноранговому вузлу дозволено надсилати вхідний трафік і на який спрямовується вихідний трафік для цього однорангового вузла.&lt;/p&gt;&lt;p&gt;Ccatch-all 0.0.0.0/0 можна вказати для відповідності всім IPv4-адресам, а ::/0 можна вказати для відповідності всім IPv6-адресам.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1998"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Public Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Відкритий ключ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2008"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Internal IP Address&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Внутрішня IP-адреса&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2015"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Internal IP address. Format is local/netmask/peer.&lt;/p&gt;&lt;p&gt;Example 10.2.0.2/24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Внутрішня IP-адреса. Формат: локаль/маска мережі/однорівневий вузол.&lt;/p&gt;&lt;p&gt;Приклад 10.2.0.2/24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2022"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A base64 private key generated by &lt;span style=&quot; font-style:italic;&quot;&gt;wg genkey.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Приватний ключ base64, згенерований &lt;span style=&quot; font-style:italic;&quot;&gt;wg genkey.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2032"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Private Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Приватний ключ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2039"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A base64 public key calculated by &lt;span style=&quot; font-style:italic;&quot;&gt;wg pubkey&lt;/span&gt; from a private key, and usually transmitted out of band to the author of the configuration file.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Відкритий ключ base64, який обчислює &lt;span style=&quot; font-style:italic;&quot;&gt;wg pubkey&lt;/span&gt; із приватного ключа та зазвичай передається автору конфігураційного файлу.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2049"/>
         <source>Preshared Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Спільний ключ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2059"/>
         <source>Name Servers</source>
-        <translation type="unfinished"></translation>
+        <translation>Сервери імен</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2073"/>
         <source>Local Listen Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Локальний порт прослуховування</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2080"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Open Sans&apos;,&apos;Helvetica&apos;,&apos;Helvetica Neue&apos;,&apos;Arial&apos;; font-size:14px; color:#535353; background-color:#fefefe;&quot;&gt;A 16-bit port for listening. Optional; if not specified, automatically generated based on interface name.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Open Sans&apos;,&apos;Helvetica&apos;,&apos;Helvetica Neue&apos;,&apos;Arial&apos;; font-size:14px; color:#535353; background-color:#fefefe;&quot;&gt;16-розрядний порт для прослуховування. Необов&apos;язковий; якщо не вказано, автоматично генерується на основі назви інтерфейсу.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2090"/>
         <source>Endpoint Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Порт кінцевої точки</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2097"/>
         <source>Endpoint listen port number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Номер порту прослуховування кінцевої точки.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2107"/>
         <source>Keep Alive</source>
-        <translation type="unfinished"></translation>
+        <translation>Не розривати з&apos;єднання</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2114"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A seconds interval, between 10 and 3600 inclusive, of how often to send an empty UDP packet to the peer for the purpose of keeping a stateful firewall or NAT mapping valid persistently. For example, if the interface very rarely sends traffic, but it might at anytime receive traffic from a peer, and it is behind NAT, the interface might benefit from having a persistent keepalive interval of 25 seconds. If set to 0 or &amp;quot;off&amp;quot;, this option is disabled. By default or when unspecified, this option is off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Інтервал у секундах, від 10 до 3600 включно, частоти надсилання порожнього UDP-пакета до однорангового пристрою з метою постійної підтримки стану брандмауера або зіставлення NAT. Наприклад, якщо інтерфейс дуже рідко надсилає трафік, але він може в будь-який час отримати трафік від однорангового вузла, і він знаходиться за NAT, інтерфейсу може бути корисним наявність постійного інтервалу підтримки активності 25 секунд. Якщо встановлено значення 0 або &amp;quot;вимкнено&amp;quot;, цей параметр буде вимкнено. Усталено або якщо не вказано, цей параметр вимкнено.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2143"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Items shown in &lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#aa0000;&quot;&gt;red&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; are mandatory and must be provided to create a VPN connection&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Елементи &lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#aa0000;&quot;&gt;червоного&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; кольору обов’язкові та мають бути вказані для створення з’єднання VPN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="58"/>
         <source>%1 - Select File</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Вибрати файл</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="105"/>
         <source>Select the file containing other Certificate Authorities</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл, що містить інші центри сертифікації</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="109"/>
         <source>Select the file containing the Client Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл, що містить сертифікат клієнта</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="113"/>
         <source>Select the file containing the PKCS Client Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл, що містить сертифікат клієнта PKCS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="117"/>
         <source>Select the file containing the Certificate Authority</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл, що містить центр сертифікації</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="121"/>
         <source>Select the file containing the Local Peer&apos;s Signed Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл, що містить підписаний сертифікат локального вузла</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="125"/>
         <source>Select the file containing the Local Peer&apos;s Private Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл, що містить приватний ключ локального вузла</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="129"/>
         <source>Select the file containing extra OpenVPN options</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл із додатковими параметрами OpenVPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="133"/>
         <source>Select the file containing the User and Password credentials</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл, що містить облікові дані користувача та пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="137"/>
         <source>Select the file containing the password to unlock the private key</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл, що містить пароль, щоб розблокувати приватний ключ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="141"/>
         <source>Select the L2TP Authority file</source>
-        <translation type="unfinished"></translation>
+        <translation>Виберіть файл центру L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="352"/>
         <source>Enter a new file name or select&lt;br&gt;an existing file to overwrite.</source>
-        <translation type="unfinished">Введіть нову назву файлу або виберіть&lt;br&gt;наявний файл для перезапису.</translation>
+        <translation>Введіть нову назву файлу або виберіть&lt;br&gt;наявний файл для перезапису.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="406"/>
         <source>All Files (*.*)</source>
-        <translation type="unfinished">Усі файли (*.*)</translation>
+        <translation>Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="410"/>
@@ -5368,108 +5372,108 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="425"/>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="430"/>
         <source>Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished">Файли сертифікатів (*.ca *.cert *.crt *.pem);;Усі файли (*.*)</translation>
+        <translation>Файли сертифікатів (*.ca *.cert *.crt *.pem);;Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="435"/>
         <source>Key Files (*.key *.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished">Файли ключів (*.key *.ca *.cert *.crt *.pem);;Усі файли (*.*)</translation>
+        <translation>Файли ключів (*.key *.ca *.cert *.crt *.pem);;Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="442"/>
         <source>Config files (*.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файли конфігурації (*.conf);;Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="449"/>
         <source>User/Pass Files (*.up)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файли користувач/пароль (*.up)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="488"/>
         <source>Select the configuration file to import</source>
-        <translation type="unfinished">Виберіть файли конфігурацій для імпорту</translation>
+        <translation>Виберіть файли конфігурацій для імпорту</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="490"/>
         <source>OpenVPN Configurations (*.ovpn  *.conf);;All Files (*.*)</source>
-        <translation type="unfinished">Конфігурації OpenVPN (*.ovpn  *.conf);;Усі файли (*.*)</translation>
+        <translation>Конфігурації OpenVPN (*.ovpn  *.conf);;Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="503"/>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="599"/>
         <source>Base Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Базове ім&apos;я</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="504"/>
         <source>Please enter a name for the connection to be created from the imported .opvn file</source>
-        <translation type="unfinished"></translation>
+        <translation>Введіть назву для з&apos;єднання, яку буде створено з імпортованого файлу .ovpn</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="517"/>
         <source>Keep --auth-user-pass</source>
-        <translation type="unfinished">Залишити --auth-user-pass</translation>
+        <translation>Залишити --auth-user-pass</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="518"/>
         <source>The conf file will contain the &lt;b&gt;auth-user-pass&lt;/b&gt; entry which will require prompts sent to stdout and a reply on stdin.  This cannot be handled by Connman nor by CMST.&lt;p&gt;If this entry is removed you will need to create a &quot;user:pass&quot; file in order to have Connman make the VPN connection. In the next step you will be asked if you want to create this file and you will prompted for the user name and password.&lt;p&gt;&lt;b&gt;Do you wish to remove this entry?&lt;/b&gt;</source>
-        <translation type="unfinished">Файл конфігурації міститиме запис &lt;b&gt;auth-user-pass&lt;/b&gt;, який вимагатиме надсилання запитів на stdout та відповіді на stdin. Це не може обробляти ні Connman, ні CMST.&lt;p&gt;Якщо цей запис буде вилучено, вам потрібно буде створити файл &quot;user:pass&quot;, щоб Connman установив VPN-з&apos;єднання. На наступному кроці вам буде запропоновано створити цей файл і ввести ім’я користувача та пароль.&lt;p&gt;&lt;b&gt;Видалити цей запис?&lt;/b&gt;</translation>
+        <translation>Файл конфігурації міститиме запис &lt;b&gt;auth-user-pass&lt;/b&gt;, який вимагатиме надсилання запитів на stdout та відповіді на stdin. Це не може обробляти ні Connman, ні CMST.&lt;p&gt;Якщо цей запис буде вилучено, вам потрібно буде створити файл &quot;user:pass&quot;, щоб Connman установив VPN-з&apos;єднання. На наступному кроці вам буде запропоновано створити цей файл і ввести ім’я користувача та пароль.&lt;p&gt;&lt;b&gt;Вилучити цей запис?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="532"/>
         <source>Create User:Password File</source>
-        <translation type="unfinished">Створити користувача: файл паролю</translation>
+        <translation>Створити користувача:файл пароля</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="533"/>
         <source>Do you wish to create a user:password file for this connection?</source>
-        <translation type="unfinished">Ви бажаєте створити файл користувач:пароль для цього з&apos;єднання?</translation>
+        <translation>Бажаєте створити файл користувач:пароль для цього з&apos;єднання?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="557"/>
         <source>Unable to write conf file &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation type="unfinished">Не вдалося записати файл конфігурації &lt;b&gt;%1&lt;/b&gt;</translation>
+        <translation>Не вдалося записати файл конфігурації &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="571"/>
         <source>Unable to read &lt;b&gt;%1&lt;/b&gt; - Aborting the import</source>
-        <translation type="unfinished">Не вдалося прочитати &lt;b&gt;%1&lt;/b&gt; - Скасовування імпорту</translation>
+        <translation>Не вдалося прочитати &lt;b&gt;%1&lt;/b&gt; - Скасовування імпорту</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="579"/>
         <source>OpenVPN import is complete.</source>
-        <translation type="unfinished"></translation>
+        <translation>Імпорт OpenVPN завершено.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="600"/>
         <source>Please enter a name for the user/pass file</source>
-        <translation type="unfinished"></translation>
+        <translation>Введіть назву для файлу користувача/паролю</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="608"/>
         <source>User</source>
-        <translation type="unfinished">Користувач</translation>
+        <translation>Користувач</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="609"/>
         <source>Enter the user name for this connection.</source>
-        <translation type="unfinished">Введіть ім&apos;я користувача для цього з&apos;єднання.</translation>
+        <translation>Введіть ім&apos;я користувача для цього з&apos;єднання.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="616"/>
         <source>Password</source>
-        <translation type="unfinished">Пароль</translation>
+        <translation>Пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="617"/>
         <source>Enter the password for this connection.</source>
-        <translation type="unfinished">Введіть пароль для цього з&apos;єднання.</translation>
+        <translation>Введіть пароль для цього з&apos;єднання.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="641"/>
         <source>Unable to write user:password file &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation type="unfinished">Неможливо записати файл користувач:пароль &lt;b&gt;%1&lt;/b&gt;</translation>
+        <translation>Неможливо записати файл користувач:пароль &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -5555,7 +5559,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="460"/>
         <source>Domain Name for the VPN Service</source>
-        <translation type="unfinished"></translation>
+        <translation>Доменне ім’я для служби VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="463"/>
@@ -5564,7 +5568,11 @@ Format is network/netmask/gateway, and gateway can be omitted.
 Ex: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:db8::1/16
 
 Networks = entry is optional and may be left blank.</source>
-        <translation type="unfinished"></translation>
+        <translation>Мережі за посиланням VPN, якщо їх більше однієї, розділіть їх комою.
+Формат: мережа/маска мережі/шлюз (шлюз можна не вказувати).
+Наприклад: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:db8::1/16
+
+Мережі = запис необов’язковий і його можна залишити порожнім.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="548"/>
@@ -6486,12 +6494,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="109"/>
         <source>Scale program artwork for high DPI monitors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштабувати ілюстрацію застосунку для моніторів з високою роздільністю.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="110"/>
         <source>Icon Scale1</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштаб піктограми1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="115"/>
