@@ -57,7 +57,9 @@ DEALINGS IN THE SOFTWARE.
 # include <QColorDialog>
 # include <QPainter>
 # include <QImage>
+# if QT_VERSION < 0x060000
 # include <QDesktopWidget>
+#endif
 # include <QInputDialog>
 # include <QDateTime>
 
@@ -216,7 +218,11 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    }
 
    // Make sure the controlbox will fit onto small screens (& resize to sizeHint() for HiDPI screens)
+#if QT_VERSION < 0x060000
    QSize sz_target = (qApp->desktop()->availableGeometry(this)).size();
+#else
+   QSize sz_target = qApp->primaryScreen()->availableGeometry().size();
+#endif
    QSize sz_source = this->sizeHint();
    if (sz_source.width() > sz_target.width() || sz_source.height() > sz_target.height() ) {
       sz_source.scale(sz_target.width() - 100, sz_target.height() - 100, Qt::KeepAspectRatio); // keep min. 100 pixels around dialog
@@ -1752,7 +1758,7 @@ void ControlBox::getServiceDetails(int index)
    QMap<QString,QVariant> submap;
 
    // Get a QFileInfo associated with the index and display the connection
-   QFileInfo fi = services_list.at(index).objpath.path();
+   QFileInfo fi(services_list.at(index).objpath.path());
    ui.label_details_connection->setText(tr("<b>Connection:</b> %1").arg(fi.baseName()) );
 
    // Start building the string for the left label
@@ -2094,7 +2100,7 @@ void ControlBox::assembleTabStatus()
          ui.tableWidget_services->setItem(row, 2, qtwi02);
 
          QTableWidgetItem* qtwi03 = new QTableWidgetItem();
-         QFileInfo fi = services_list.at(row).objpath.path();
+         QFileInfo fi(services_list.at(row).objpath.path());
          qtwi03->setText(fi.baseName() );
          qtwi03->setTextAlignment(Qt::AlignVCenter|Qt::AlignLeft);
          ui.tableWidget_services->setItem(row, 3, qtwi03);
@@ -2345,7 +2351,7 @@ void ControlBox::assembleTabVPN()
          ui.tableWidget_vpn->setCellWidget(rowcount, 3, ql03);
 
          QLabel* ql04 = new QLabel(ui.tableWidget_vpn);
-         QFileInfo fi = services_list.at(row).objpath.path();
+         QFileInfo fi(services_list.at(row).objpath.path());
          ql04->setText(fi.baseName() );
          ql04->setAlignment(Qt:: AlignCenter);
          ui.tableWidget_vpn->setCellWidget(rowcount, 4, ql04);
