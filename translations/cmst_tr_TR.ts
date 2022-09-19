@@ -1155,17 +1155,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="640"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to edit the service. &lt;/p&gt;&lt;p&gt;The service must have previously been successfully connected (Favorite is true) for this button to work. Pressing &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; will remove the service and then request credentials to establish the connection. If the service is currently connected it will be disconnected first. If the service required a passphrase then the old passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;Connman does not provide any methods to retrieve credentials (passphrases, etc.) as that is insecure. CMST will not work around this protection. All this button really does is automate pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Remove&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; buttons above. Make sure you know all of the credentials to reconnect as the existing credentials will be cleared when this button is pressed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aşağıdaki tabloda bir wifi hizmeti seçin ve hizmeti düzenlemek için bu düğmeye basın. &lt;/p&gt;&lt;p&gt;Bu düğmenin çalışması için hizmetin daha önce başarıyla bağlanmış (Favori doğrudur) olması gerekir. &lt;span style=&quot; font-weight:600;&quot;&gt;Düzenle&lt;/span&gt;&apos;e basmak, hizmeti kaldırır ve ardından bağlantı kurmak için kimlik bilgilerini ister. Hizmet şu anda bağlıysa, önce bağlantısı kesilecektir. Hizmet bir parola gerektiriyorsa, eski parola silinir ve unutulur.&lt;/p&gt;&lt;p&gt;Connman, güvenli olmadığı için kimlik bilgilerini (parolalar vb.) almak için herhangi bir yöntem sağlamaz. CMST bu koruma etrafında çalışmayacaktır.  Bu düğmenin gerçekten yaptığı tek şey, yukarıdaki &lt;span style=&quot; font-weight:600;&quot;&gt;Kaldır&lt;/span&gt; ve &lt;span style=&quot; font-weight:600;&quot;&gt;Bağlan&lt;/span&gt; düğmelerine basmayı otomatik hale getirmektir.  Bu düğmeye basıldığında mevcut kimlik bilgileri silineceğinden, yeniden bağlanmak için tüm kimlik bilgilerini bildiğinizden emin olun.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="643"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Düzenlemek</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="650"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.  This will also clear any selections in the table below.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head /&gt;&lt;body&gt;&lt;p&gt;Tüm WiFi teknolojilerinin yeniden taranmasını zorla. Bu, komut satırından &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; komutunu vermeye benzer. Bu, aşağıdaki tablodaki tüm seçimleri de temizleyecektir.&lt;/p&gt;&lt;p&gt;Tarama gerçekleşirken düğme etkin olmayacaktır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="692"/>
@@ -1175,7 +1175,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="815"/>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>Oluşturmak</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="832"/>
@@ -1195,42 +1195,42 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1216"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide the CMST tray icon during normal operations. Normal operations are defined as having the Global state in an &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; mode. Any other state will cause the icon to be displayed in the system tray.  CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normal işlemler sırasında CMST tepsi simgesini gizleyin. Normal işlemler, Genel durumun &lt;span style=&quot; font-weight:600;&quot;&gt;Çevrimiçi&lt;/span&gt; veya &lt;span style=&quot; font-weight:600;&quot;&gt;Hazır&lt;/span&gt; modunda olması olarak tanımlanır. Başka herhangi bir durum, simgenin sistem tepsisinde görüntülenmesine neden olur. Simge gizlenmiş olsa bile CMST hala çalışıyor.&lt;/p&gt;&lt;p&gt;Simge gizlenirken CMST simge durumuna küçültülürse, arabirimi geri almak için başka bir örnek CMST başlatmanız gerekir. Bu ikinci örnek, arabirimi ilk örnekten geri yükler ve hemen iptal eder. &lt;/p&gt;&lt;p&gt;Tepsi simgesi görünür durumdayken CMST simge durumuna küçültülürse, tepsi simgesine tıklamanız arayüzü geri yükleyecektir. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1219"/>
         <source>Hide Tray Icon Unless Needed</source>
-        <translation type="unfinished"></translation>
+        <translation>Gerekmedikçe Tepsi Simgesini Gizle</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1226"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the CMST icon will be hidden in the system tray. CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretli ise CMST simgesi sistem tepsisinde gizlenir. Simge gizlenmiş olsa bile CMST hala çalışıyor.&lt;/p&gt;&lt;p&gt;Simge gizlenirken CMST simge durumuna küçültülürse, arabirimi geri almak için başka bir örnek CMST başlatmanız gerekir. Bu ikinci örnek, arabirimi ilk örnekten geri yükler ve hemen iptal eder. &lt;/p&gt;&lt;p&gt;Tepsi simgesi görünür durumdayken CMST simge durumuna küçültülürse, tepsi simgesine tıklamanız arayüzü geri yükleyecektir. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1562"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-I&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-scale&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Scale  icons and other artwork in CMST.  For High DPI moitors it may be necessary to specify a scale factor on icons and other artwork in CMST.  Default scale is 1.0.  You may override the default using this option. &lt;/p&gt;&lt;p&gt;For High DPI monitors a factor of 2 has been found to be good.  Valid values of scale factor are  from 1.0 to 3.0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Kurye Yeni, kurye&apos;;&quot;&gt;Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Kurye Yeni, kurye&apos;; font-weight: 600;&quot;&gt;-İ&lt;/span&gt; &lt;span style=&quot; font-family:&apos;Kurye Yeni, kurye&apos;;&quot;&gt; veya &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Kurye Yeni, kurye&apos;; font-weight: 600;&quot;&gt;-- simge ölçeği&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Simgeleri ve diğer resimleri CMST cinsinden ölçeklendirin. Yüksek DPI monitörler için cmst&apos;deki simgeler ve diğer resimler üzerinde bir ölçek faktörü belirtmeniz gerekebilir. Varsayılan ölçek 1.0&apos;dır. Bu seçeneği kullanarak varsayılanı geçersiz kılabilirsiniz. &lt;/p&gt;&lt;p&gt;Yüksek DPI monitörler için 2 faktörün iyi olduğu bulunmuştur. Ölçek faktörünün geçerli değerleri 1.0 ile 3.0 arasındadır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1565"/>
         <source>Icon Scale Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Simge Ölçek Faktörü</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1471"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon scale factor. If the box is disabled by clearing the checkbox at the left the value contained in this field will be ignored.&lt;/p&gt;&lt;p&gt;For High DPI monitors a factor of 2 has been found to be good. Valid values of scale factor are from 1.0 to 3.0. Default value is 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Simge ölçek faktörü. Soldaki onay kutusunu işaretleyerek kutu devre dışı bırakılırsa, bu alanda bulunan değer yoksayılır.&lt;/p&gt;&lt;p&gt;Yüksek DPI monitörler için 2 faktörün iyi olduğu bulunmuştur. Ölçek faktörünün geçerli değerleri 1.0 ile 3.0 arasındadır. Varsayılan değer 1&apos;dir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1503"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created the proram will not be able to start minimized. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;p&gt;If you plan to start with the main dialog shown on screen there is no reason to use this option. This is only intended to be used for starting minimized.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; kenar boşluğu-üst: 12px; kenar boşluğu-alt: 12px; kenar boşluğu-sol: 0px; kenar boşluğu-sağ: 0px; -qt-blok-girinti: 0; metin-girinti: 0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Kurye Yeni, kurye&apos;;&quot;&gt; Komut Satırı Seçeneği: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Kurye Yeni, kurye&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Kurye Yeni, kurye&apos;;&quot;&gt; veya &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Kurye Yeni, kurye&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Sistem tepsisi simgesini başlatmadan önce bekleme süresini saniye cinsinden belirtin (varsayılan değer 0 saniyedir).&lt;/p&gt;&lt;p&gt;CMST başlatılır ve sistem tepsisinin kendisi oluşturulmadan önce bir tepsi simgesi oluşturmaya çalışırsa proram simge durumuna küçültülmeye başlayamaz. Bu bazen program otomatik olarak başlatıldığında gerçekleşir. Sistem dolduğunda tepsinin var olacağını biliyorsanız bir bekleme süresi belirtebilirsiniz ve CMST tepsi simgesini oluşturmaya çalışmadan önce bu saniye sayısını bekleyecektir. Bu, simgeyi oraya yerleştirmeye çalışmadan önce pencere yöneticisine veya panelin tepsiyi oluşturması için zaman vermektir.&lt;/p&gt;&lt;p&gt;Ekranda gösterilen ana iletişim kutusuyla başlamayı planlıyorsanız, bu seçeneği kullanmak için hiçbir neden yoktur. Bu yalnızca simge durumuna küçültülmüş başlatmak için kullanılmak üzere tasarlanmıştır.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1626"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB. If the spedified color matches the tray background we&apos;ve effectively created fake transparency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sistem tepsisi simgelerinin saydam olmak yerine beyaz veya siyah arka planlarla görüntülendiği bir QT hatasına geçici bir çözüm bulmak için kullanılır.&lt;/p&gt;&lt;p&gt;Simge arka plan rengini buradan belirleyebilirsiniz. Biçim, RRGGBB biçimindeki onaltılık bir sayıdır. Belirtilen renk tepsi arka planıyla eşleşiyorsa, sahte saydamlığı etkin bir şekilde oluşturduk.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1639"/>
@@ -1454,12 +1454,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="447"/>
         <source>&amp;Colorize</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Renklendirmek</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="450"/>
         <source>&amp;Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Şeffaf</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="578"/>
@@ -1469,7 +1469,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="593"/>
         <source>&lt;center&gt;This program uses artwork from &lt;b&gt;Freepik&lt;/b&gt; obtained from www.flaticon.com:&lt;br&gt;&lt;br&gt;Released under the Flaticon Basic License&lt;br&gt;&lt;br&gt;&lt;b&gt;Artwork files:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Bu program, &lt;b&gt;Freepik&lt;/b&gt;&apos;den elde edilen resmi kullanır. www.flaticon.com :&lt;br&gt;&lt;br&gt;Flaticon Temel Lisansı altında yayınlandı&lt;br&gt;&lt;br&gt;&lt;b&gt;Resim dosyaları:&lt;/b&gt;&lt;li&gt;radyo.png&lt;/li&gt;&lt;li&gt;temel düzlem.png&lt;/li&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="608"/>
@@ -1604,14 +1604,16 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
         <source>Strength: %1%
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Güç: %1%
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2460"/>
         <source>VPN Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished"></translation>
+        <translation>VPN Bağlantısı
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2461"/>
@@ -1650,7 +1652,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1008"/>
         <source>You need to select a Wifi service before pressing the edit button.</source>
-        <translation type="unfinished"></translation>
+        <translation>Düzenleme düğmesine basmadan önce bir Wifi hizmeti seçmeniz gerekir.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1060"/>
@@ -1660,7 +1662,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1061"/>
         <source>No provisioning files created by %1 were found.&lt;br&gt;There are no VPN services which can be removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 tarafından oluşturulmuş hiçbir ön hazırlık dosyası bulunamadı.&lt;br&gt;Kaldırılabilecek hiçbir VPN hizmeti yok.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1071"/>
@@ -4183,7 +4185,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="215"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;Request&#xa0;&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;&#xa0;from server as the MTU of the tunnel.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;Request &lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt; from server as the MTU of the tunnel.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
