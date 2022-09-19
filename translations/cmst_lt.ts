@@ -1634,13 +1634,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1765"/>
         <source>Yes</source>
         <comment>favorite</comment>
-        <translation type="unfinished"></translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1765"/>
         <source>No</source>
         <comment>favorite</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1766"/>
@@ -1651,13 +1651,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1766"/>
         <source>Yes</source>
         <comment>immutable</comment>
-        <translation type="unfinished"></translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1766"/>
         <source>No</source>
         <comment>immutable</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1768"/>
@@ -1679,7 +1679,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1770"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1772"/>
@@ -1691,7 +1691,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1780"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1815"/>
         <source>IP Address: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>IP adresas: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1774"/>
@@ -1702,12 +1702,12 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1775"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1786"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>IP tinklų sietuvas: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1777"/>
         <source>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1779"/>
@@ -1728,22 +1728,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1787"/>
         <source>Privacy: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Privatumas: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1789"/>
         <source>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;Įgaliotasis serveris&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1794"/>
         <source>URL: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>URL: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1797"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Serveriai:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1798"/>
@@ -1753,7 +1753,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1803"/>
         <source>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
@@ -1764,13 +1764,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
         <source>Yes</source>
         <comment>mdns</comment>
-        <translation type="unfinished"></translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
         <source>No</source>
         <comment>mdns</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1813"/>
@@ -1780,7 +1780,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1817"/>
         <source>MAC Address: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>MAC adresas: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1818"/>
@@ -1796,13 +1796,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1819"/>
         <source>Yes</source>
         <comment>last_address_conflict</comment>
-        <translation type="unfinished"></translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1819"/>
         <source>No</source>
         <comment>last_address_conflict</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1828"/>
@@ -1832,17 +1832,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1840"/>
         <source>Interface: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Sąsaja: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1841"/>
         <source>Device Address: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Įrenginio adresas: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1842"/>
         <source>MTU: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>MTU: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1844"/>
@@ -1852,12 +1852,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1849"/>
         <source>Security: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Saugumas: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1850"/>
         <source>Strength: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Stiprumas: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1851"/>
@@ -1868,13 +1868,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1851"/>
         <source>Yes</source>
         <comment>roaming</comment>
-        <translation type="unfinished"></translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1851"/>
         <source>No</source>
         <comment>roaming</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1853"/>
@@ -1899,12 +1899,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1858"/>
         <source>Type: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipas: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1951"/>
         <source>State: </source>
-        <translation type="unfinished"></translation>
+        <translation>Būsena: </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1957"/>
@@ -1927,25 +1927,25 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2022"/>
         <source>Yes</source>
         <comment>connected</comment>
-        <translation type="unfinished"></translation>
+        <translation>Taip</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2022"/>
         <source>No</source>
         <comment>connected</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2029"/>
         <source>On</source>
         <comment>tethering</comment>
-        <translation type="unfinished"></translation>
+        <translation>Įjungta</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2035"/>
         <source>Off</source>
         <comment>tethering</comment>
-        <translation type="unfinished"></translation>
+        <translation>Išjungta</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2377"/>
@@ -1956,7 +1956,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2435"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2449"/>
         <source>Interface: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sąsaja: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2477"/>
@@ -1989,7 +1989,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2542"/>
         <source>Type: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipas: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2543"/>
@@ -1999,12 +1999,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2544"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>Įjungta</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2544"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungta</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2546"/>
@@ -2020,23 +2020,23 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2548"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2621"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Įjungta</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2608"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2638"/>
         <source>Connection : %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ryšys : %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2610"/>
         <source>Signal Strength: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Signalo stiprumas: %1%</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2612"/>
         <source>Favorite Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>Mėgstamas ryšys</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2612"/>
@@ -2067,7 +2067,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3065"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3070"/>
         <source>%1 - Critical Error</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Kritinė klaida</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3066"/>
@@ -2094,7 +2094,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3080"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3085"/>
         <source>%1 - Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Įspėjimas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3076"/>
@@ -2149,13 +2149,13 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3342"/>
         <source>Colorize Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Spalvinti piktogramas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2607"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2637"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="579"/>
@@ -2166,18 +2166,18 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2008"/>
         <source>On</source>
         <comment>powered</comment>
-        <translation type="unfinished"></translation>
+        <translation>Įjungta</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2014"/>
         <source>Off</source>
         <comment>powered</comment>
-        <translation type="unfinished"></translation>
+        <translation>Išjungta</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2618"/>
         <source>Security: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Saugumas: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="606"/>
@@ -2197,7 +2197,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2541"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 Properties&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 savybės&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2177"/>
@@ -2210,7 +2210,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="214"/>
         <source>File save failed.</source>
-        <translation type="unfinished">Nepavyko įrašyti failo.</translation>
+        <translation>Nepavyko įrašyti failo.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="217"/>
@@ -2251,7 +2251,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="35"/>
         <source>&amp;General</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bendra</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="44"/>
@@ -2271,24 +2271,24 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="187"/>
         <source>IPv&amp;4</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv&amp;4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="209"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="422"/>
         <source>Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="230"/>
         <source>Netmask</source>
-        <translation type="unfinished"></translation>
+        <translation>Tinklo kaukė</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="240"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="369"/>
         <source>Gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>Tinklų sietuvas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="268"/>
@@ -2300,7 +2300,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="299"/>
         <source>IPv&amp;6</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv&amp;6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="399"/>
@@ -2310,7 +2310,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="355"/>
         <source>Privacy</source>
-        <translation type="unfinished"></translation>
+        <translation>Privatumas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="471"/>
@@ -2320,7 +2320,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="474"/>
         <source>&amp;Proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>Į&amp;galiotasis serveris</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="518"/>
@@ -2330,7 +2330,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="511"/>
         <source>URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="114"/>
@@ -2579,12 +2579,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="68"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delete a config file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ištrinti konfigūracijos failą.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Iš&amp;trinti</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="94"/>
@@ -2599,7 +2599,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="117"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kas tai&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kas tai&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="120"/>
@@ -2614,7 +2614,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="146"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation>Iš&amp;eiti</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="158"/>
@@ -3978,7 +3978,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="215"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;Request&#xa0;&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;&#xa0;from server as the MTU of the tunnel.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;Request &lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt; from server as the MTU of the tunnel.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
