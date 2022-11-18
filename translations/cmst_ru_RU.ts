@@ -1203,7 +1203,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="815"/>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>Создать</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="832"/>
@@ -1243,7 +1243,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1565"/>
         <source>Icon Scale Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Коэффициент масштаба значка</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1471"/>
@@ -1608,12 +1608,12 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="447"/>
         <source>&amp;Colorize</source>
-        <translation type="unfinished"></translation>
+        <translation>Раскра&amp;сить</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="450"/>
         <source>&amp;Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Прозрачность</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="551"/>
@@ -1839,7 +1839,7 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1763"/>
         <source>Service Name: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя службы: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1764"/>
@@ -3111,7 +3111,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="389"/>
         <source>AnonymousIdentity</source>
-        <translation type="unfinished"></translation>
+        <translation>Анонимизация</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="392"/>
@@ -3141,7 +3141,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="413"/>
         <source>DomainSuffixMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>DomainSuffixMatch</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="416"/>
@@ -3151,7 +3151,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="421"/>
         <source>DomainMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>DomainMatch</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="424"/>
@@ -3569,12 +3569,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="14"/>
         <source>Scrollbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Панель прокрутки</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="38"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Текстовая метка</translation>
     </message>
 </context>
 <context>
@@ -3751,7 +3751,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="76"/>
         <source>wps_advertising</source>
         <comment>connman security string</comment>
-        <translation type="unfinished"></translation>
+        <translation>wps_advertising</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="78"/>
@@ -3859,37 +3859,37 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="95"/>
         <source>Invalid service</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Неправильная служба</translation>
+        <translation>Неверная служба</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="96"/>
         <source>Invalid property</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Неправильное свойство</translation>
+        <translation>Неверное свойство</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="98"/>
         <source>disabled</source>
         <comment>connman privacy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>отключено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="99"/>
         <source>enabled</source>
         <comment>connman privacy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>включено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="100"/>
         <source>prefered</source>
         <comment>connman privacy string - known misspelling but needed to avoid breaking code</comment>
-        <translation type="unfinished"></translation>
+        <translation>предпочтительно</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="101"/>
         <source>preferred</source>
         <comment>connman privacy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>предпочтительно</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="103"/>
@@ -3925,7 +3925,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="109"/>
         <source>fixed</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>исправлено</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="110"/>
@@ -3961,7 +3961,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="117"/>
         <source>openconnect</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>openconnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="118"/>
@@ -4111,7 +4111,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="14"/>
         <source>VPN Agent Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Данные агента VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="22"/>
@@ -4139,7 +4139,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="52"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Password for authentication.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль аутентификации.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="62"/>
@@ -4204,17 +4204,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="152"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Группа</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="159"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Authentication login group.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Аутентификация группы входа.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="166"/>
         <source>PKCS Client Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сертификат клиента PKCS.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="173"/>
@@ -4224,7 +4224,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="180"/>
         <source>PKCS Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль PKCS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="190"/>
@@ -4249,7 +4249,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="221"/>
         <source>Second Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Вторичный пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="228"/>
@@ -4264,17 +4264,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="238"/>
         <source>Use Second Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать вторичный пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="248"/>
         <source>Open VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="254"/>
         <source>Private Key Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль закрытого ключа</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="261"/>
@@ -4357,27 +4357,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="56"/>
         <source>VPNC</source>
-        <translation type="unfinished"></translation>
+        <translation>VPNC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="61"/>
         <source>L2TP</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="66"/>
         <source>PPTP</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="71"/>
         <source>WireGuard</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="82"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Имя&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="89"/>
@@ -4392,7 +4392,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="106"/>
         <source>VPN Domain Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Доменное имя VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="113"/>
@@ -4402,7 +4402,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="123"/>
         <source>Networks</source>
-        <translation type="unfinished"></translation>
+        <translation>Сети</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="130"/>
@@ -4417,7 +4417,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="159"/>
         <source>CA Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Сертификат центра сертификации</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="166"/>
@@ -4432,7 +4432,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="180"/>
         <source>Server Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Сертификат сервера</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="187"/>
@@ -4448,7 +4448,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="205"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="611"/>
         <source>MTU</source>
-        <translation type="unfinished"></translation>
+        <translation>MTU</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="212"/>
@@ -4468,13 +4468,13 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="245"/>
         <source>Disable IPv6</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="252"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="255"/>
         <source>Disable DTLS</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить DTLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="262"/>
@@ -4484,7 +4484,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="265"/>
         <source>Disable Keep Alive</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить поддержание связи</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="272"/>
@@ -4504,12 +4504,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="285"/>
         <source>Cookie on stdin</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы куки в stdin</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="296"/>
         <source>Authentication Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип аутентификации</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="303"/>
@@ -4531,32 +4531,32 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1113"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1172"/>
         <source>none specified</source>
-        <translation type="unfinished"></translation>
+        <translation>не указано</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="312"/>
         <source>cookie</source>
-        <translation type="unfinished"></translation>
+        <translation>файлы куки</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="317"/>
         <source>cookie_with_userpass</source>
-        <translation type="unfinished"></translation>
+        <translation>куки_с_паролем_пользователя</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="322"/>
         <source>userpass</source>
-        <translation type="unfinished"></translation>
+        <translation>пароль пользователя</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="327"/>
         <source>publickey</source>
-        <translation type="unfinished"></translation>
+        <translation>открытый ключ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="332"/>
         <source>pkcs</source>
-        <translation type="unfinished"></translation>
+        <translation>pkcs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="360"/>
@@ -4566,12 +4566,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="367"/>
         <source>User Private Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Закрытый ключ пользователя</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="374"/>
         <source>PKCS Client Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Сертификат клиента PKCS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="384"/>
@@ -4586,12 +4586,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="398"/>
         <source>User Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Группа пользователей</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="405"/>
         <source>Client Cerificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Сертификат сервера</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="415"/>
@@ -4606,7 +4606,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="433"/>
         <source>Import OPVN File</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортировать файл OPVN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="440"/>
@@ -4616,12 +4616,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="443"/>
         <source>Create User/Pass</source>
-        <translation type="unfinished"></translation>
+        <translation>Создать пользователя/пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="467"/>
         <source>User/Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл пользователя/пароля</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="474"/>
@@ -4641,7 +4641,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="495"/>
         <source>Extra Config</source>
-        <translation type="unfinished"></translation>
+        <translation>Дополнительная конфигурация</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="502"/>
@@ -4671,7 +4671,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="537"/>
         <source>Certificate Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл пароля сертификата</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="544"/>
@@ -4686,7 +4686,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="556"/>
         <source>Don&apos;t cache password</source>
-        <translation type="unfinished"></translation>
+        <translation>Не кэшировать пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="565"/>
@@ -4696,17 +4696,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="574"/>
         <source>adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>адаптивный</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="579"/>
         <source>yes</source>
-        <translation type="unfinished"></translation>
+        <translation>да</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="584"/>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>нет</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="592"/>
@@ -4716,7 +4716,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="604"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP/UDP port number.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Номер порта TCP/UDP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="618"/>
@@ -4726,47 +4726,47 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="627"/>
         <source>udp</source>
-        <translation type="unfinished"></translation>
+        <translation>udp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="632"/>
         <source>udp4</source>
-        <translation type="unfinished"></translation>
+        <translation>udp4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="637"/>
         <source>udp6</source>
-        <translation type="unfinished"></translation>
+        <translation>udp6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="642"/>
         <source>tcp-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="647"/>
         <source>tcp4-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp4-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="652"/>
         <source>tcp6-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp6-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="657"/>
         <source>tcp-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="662"/>
         <source>tcp4-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp4-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="667"/>
         <source>tcp6-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp6-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="675"/>
@@ -4777,18 +4777,18 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="684"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1177"/>
         <source>tun</source>
-        <translation type="unfinished"></translation>
+        <translation>tun</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="689"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1182"/>
         <source>tap</source>
-        <translation type="unfinished"></translation>
+        <translation>tap</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="697"/>
         <source>Protocol</source>
-        <translation type="unfinished"></translation>
+        <translation>Протокол</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="704"/>
@@ -4800,13 +4800,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="796"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="978"/>
         <source>server</source>
-        <translation type="unfinished"></translation>
+        <translation>сервер</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="718"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="791"/>
         <source>client</source>
-        <translation type="unfinished"></translation>
+        <translation>клиент</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="726"/>
@@ -4816,37 +4816,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="733"/>
         <source>Remote Certificate TLS</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалённый сертификат TLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="740"/>
         <source>NS Certificate Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип сертификата NS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="747"/>
         <source>Fast LZO Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Быстрое сжатие LZO</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="754"/>
         <source>Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Порт</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="761"/>
         <source>Cipher</source>
-        <translation type="unfinished"></translation>
+        <translation>Шифр</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="768"/>
         <source>Authenticate HMAC</source>
-        <translation type="unfinished"></translation>
+        <translation>Аутентификация HMAC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="775"/>
         <source>Device Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип устройства</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="782"/>
@@ -4861,17 +4861,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="819"/>
         <source>User Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль пользователя</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="826"/>
         <source>Group Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль группы</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="833"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your group password in cleartext.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пароль вашей группы в нешифрованном виде.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="840"/>
@@ -4881,17 +4881,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="847"/>
         <source>User Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя пользователя</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="854"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your Xauth username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ваше имя Xauth.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="861"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your group username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ваше имя пользователя группы.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="868"/>
@@ -4912,7 +4912,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="894"/>
         <source>Application Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия приложения</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="901"/>
@@ -4922,7 +4922,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="912"/>
         <source>Diffie-Hellman Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Группа Diffie-Hellman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="919"/>
@@ -4932,17 +4932,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="928"/>
         <source>psk</source>
-        <translation type="unfinished">PSK</translation>
+        <translation>psk</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="933"/>
         <source>cert</source>
-        <translation type="unfinished"></translation>
+        <translation>cert</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="938"/>
         <source>hybrid</source>
-        <translation type="unfinished"></translation>
+        <translation>hybrid</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="946"/>
@@ -4952,31 +4952,31 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="958"/>
         <source>nopfs</source>
-        <translation type="unfinished"></translation>
+        <translation>nopfs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="963"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1045"/>
         <source>dh1</source>
-        <translation type="unfinished"></translation>
+        <translation>dh1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="968"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1050"/>
         <source>dh2</source>
-        <translation type="unfinished"></translation>
+        <translation>dh2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="973"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1055"/>
         <source>dh5</source>
-        <translation type="unfinished"></translation>
+        <translation>dh5</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="986"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1367"/>
         <source>UDP Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Порт UDP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="993"/>
@@ -4986,7 +4986,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1006"/>
         <source>Local Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Локальный порт</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1013"/>
@@ -4996,7 +4996,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1026"/>
         <source>IKE Authentication Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим аутентификации IKE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1033"/>
@@ -5006,12 +5006,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1063"/>
         <source>IKE DH Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Группа IKE DH</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1070"/>
         <source>Vendor</source>
-        <translation type="unfinished"></translation>
+        <translation>Поставщик</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1077"/>
@@ -5021,17 +5021,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1086"/>
         <source>cisco</source>
-        <translation type="unfinished"></translation>
+        <translation>cisco</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1091"/>
         <source>netscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>netscreen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1099"/>
         <source>Nat Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим Nat</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1106"/>
@@ -5041,27 +5041,27 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1118"/>
         <source>none</source>
-        <translation type="unfinished">отсутствует</translation>
+        <translation>нет</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1123"/>
         <source>natt</source>
-        <translation type="unfinished"></translation>
+        <translation>natt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1128"/>
         <source>force-natt</source>
-        <translation type="unfinished"></translation>
+        <translation>force-natt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1133"/>
         <source>cisco-udp</source>
-        <translation type="unfinished"></translation>
+        <translation>cisco-udp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1141"/>
         <source>DPD Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>Простой DPD</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1148"/>
@@ -5071,7 +5071,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1161"/>
         <source>Interface Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим интерфейса</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1168"/>
@@ -5086,7 +5086,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1193"/>
         <source>Single DES</source>
-        <translation type="unfinished"></translation>
+        <translation>Одиночный DES</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1200"/>
@@ -5096,12 +5096,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1203"/>
         <source>No Encrypton</source>
-        <translation type="unfinished"></translation>
+        <translation>Без шифрования</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1234"/>
         <source>L2TP Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Параметры L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1242"/>
@@ -5112,13 +5112,13 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1249"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1748"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1256"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1755"/>
         <source>User:</source>
-        <translation type="unfinished"></translation>
+        <translation>Пользователь:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1263"/>
@@ -5134,7 +5134,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1273"/>
         <source>Authentication File</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл аутентификации</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1280"/>
@@ -5144,7 +5144,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1291"/>
         <source>BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1298"/>
@@ -5154,12 +5154,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1308"/>
         <source>Default Route</source>
-        <translation type="unfinished"></translation>
+        <translation>Стандартный маршрут</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1318"/>
         <source>TX BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>TX BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1325"/>
@@ -5170,7 +5170,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1336"/>
         <source>Listen Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Прослушать адрес</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1343"/>
@@ -5180,7 +5180,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1350"/>
         <source>RX BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>RX BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1357"/>
@@ -5195,7 +5195,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1384"/>
         <source>Tunnel RWS</source>
-        <translation type="unfinished"></translation>
+        <translation>Тоннель RWS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1391"/>
@@ -5210,7 +5210,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1408"/>
         <source>Redial</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторный набор</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1415"/>
@@ -5220,7 +5220,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1418"/>
         <source>Require PAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Требовать PAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1425"/>
@@ -5230,7 +5230,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1428"/>
         <source>IPsec Security Association</source>
-        <translation type="unfinished"></translation>
+        <translation>IPsec Security Association</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1435"/>
@@ -5241,7 +5241,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1439"/>
         <source>Require CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Требовать CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1446"/>
@@ -5251,7 +5251,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1449"/>
         <source>Require Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>Требовать атентификацию</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1456"/>
@@ -5262,7 +5262,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1460"/>
         <source>Use Length Bit</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать бит длины</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1467"/>
@@ -5272,7 +5272,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1470"/>
         <source>Challenge Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>Оспаривать аутентификацию</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1477"/>
@@ -5282,7 +5282,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1480"/>
         <source>Flow Bit</source>
-        <translation type="unfinished"></translation>
+        <translation>Бит потока</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1487"/>
@@ -5292,7 +5292,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1490"/>
         <source>Access Control</source>
-        <translation type="unfinished"></translation>
+        <translation>Контроль доступа</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1497"/>
@@ -5302,7 +5302,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1500"/>
         <source>Exclusive</source>
-        <translation type="unfinished"></translation>
+        <translation>Исключительсноть</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1527"/>
@@ -5312,12 +5312,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1537"/>
         <source>Redial Timeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Интервал повторного набора</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1544"/>
         <source>Maximum Redials</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимум повторных наборов</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1567"/>
@@ -5327,7 +5327,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1582"/>
         <source>PPTP Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Параметры PPTP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1588"/>
@@ -5344,7 +5344,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1598"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1869"/>
         <source>Disable Deflate Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить сжатие Deflate</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1605"/>
@@ -5366,7 +5366,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1618"/>
         <source>Disable Protocol Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить сжатие протокола</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1625"/>
@@ -5378,7 +5378,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1628"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1839"/>
         <source>Disable BSD Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить сжатие BSD</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1635"/>
@@ -5390,7 +5390,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1638"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1949"/>
         <source>Debug</source>
-        <translation type="unfinished"></translation>
+        <translation>Отладка</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1645"/>
@@ -5402,7 +5402,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1648"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1939"/>
         <source>Require MPPE40</source>
-        <translation type="unfinished"></translation>
+        <translation>Требовать MPPE40</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1655"/>
@@ -5414,7 +5414,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1658"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1929"/>
         <source>Require MPPE128</source>
-        <translation type="unfinished"></translation>
+        <translation>Требовать MPPE128</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1665"/>
@@ -5426,7 +5426,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1668"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1879"/>
         <source>Refuse EAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Отклонять EAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1675"/>
@@ -5438,7 +5438,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1678"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1899"/>
         <source>Refuse PAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Отклонять PAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1685"/>
@@ -5450,7 +5450,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1688"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1849"/>
         <source>Refuse CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Отклонять CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1695"/>
@@ -5462,7 +5462,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1698"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1786"/>
         <source>Refuse MS CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>Отклонить MS CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1705"/>
@@ -5486,7 +5486,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1718"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1859"/>
         <source>Require MPPE</source>
-        <translation type="unfinished"></translation>
+        <translation>Требовать MPPE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1725"/>
@@ -5583,17 +5583,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2049"/>
         <source>Preshared Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Предварительный общий ключ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2059"/>
         <source>Name Servers</source>
-        <translation type="unfinished"></translation>
+        <translation>Серверы имён</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2073"/>
         <source>Local Listen Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Локальный порт прослушивания</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2080"/>
@@ -5603,7 +5603,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2090"/>
         <source>Endpoint Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Порт конечной точки</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2097"/>
@@ -5613,7 +5613,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2107"/>
         <source>Keep Alive</source>
-        <translation type="unfinished"></translation>
+        <translation>Поддерживать связь</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2114"/>
@@ -5712,7 +5712,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="449"/>
         <source>User/Pass Files (*.up)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы пользователя/пароля (*.up)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="488"/>
@@ -5728,7 +5728,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="503"/>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="599"/>
         <source>Base Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Базовое имя</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="504"/>
@@ -5738,7 +5738,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="517"/>
         <source>Keep --auth-user-pass</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить --auth-user-pass</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="518"/>
@@ -5748,7 +5748,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="532"/>
         <source>Create User:Password File</source>
-        <translation type="unfinished">Создать файл идентификации</translation>
+        <translation>Создать файл пользователь:пароль</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="533"/>
@@ -5821,17 +5821,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="264"/>
         <source>VPNC</source>
-        <translation type="unfinished"></translation>
+        <translation>VPNC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="291"/>
         <source>L2TP</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="343"/>
         <source>PPTP</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="413"/>
@@ -5854,7 +5854,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="368"/>
         <source>WireGuard</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="420"/>
@@ -5903,7 +5903,7 @@ Networks = entry is optional and may be left blank.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="566"/>
         <source>%1 - Verify Option</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Параметр проверки</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="586"/>
@@ -6063,7 +6063,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="14"/>
         <source>VPN Provisioning Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактор поставщика VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="23"/>
@@ -6141,7 +6141,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="166"/>
         <source>Name of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя сети.</translation>
     </message>
     <message>
         <source>Description</source>
@@ -6150,17 +6150,17 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="174"/>
         <source>Description of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>Описание сети.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="207"/>
         <source>PPTP User Name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя пользователя PPTP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="215"/>
         <source>PPTP Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль PPTP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="223"/>
@@ -6178,42 +6178,42 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="242"/>
         <source>Debug level.</source>
-        <translation type="unfinished"></translation>
+        <translation>Уровень отладки.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="250"/>
         <source>Deny EAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>Отклонить авторизацию EAP?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="258"/>
         <source>Deny PAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>Отклонить авторизацию PAP?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="266"/>
         <source>Deny CHAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>Отклонить авторизацию CHAP?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="274"/>
         <source>Deny MSCHAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>Отклонить авторизацию MSCHAP?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="282"/>
         <source>Deny MSCHAPV2 authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>Отклонить авторизацию MSCHAPV2?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="290"/>
         <source>Disables BSD compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить сжатие BSD?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="298"/>
         <source>Disable deflate compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить сжатие Deflate?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="306"/>
@@ -6242,22 +6242,22 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="338"/>
         <source>Disable Van Jacobson compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить сжатие Вана Якобсона?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="346"/>
         <source>L2TP User Name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя пользователя L2TP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="354"/>
         <source>L2TP Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль L2TP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="362"/>
         <source>Maximum bandwidth to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимум используемой ширины канала.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="370"/>
@@ -6272,12 +6272,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="386"/>
         <source>Use length bit?</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать бит длины?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="394"/>
         <source>Use challenge authentication?</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать оспаривание аутентификации?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="402"/>
@@ -6302,7 +6302,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="434"/>
         <source>Redial if disconnected?</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторный вызов при отключении?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="442"/>
@@ -6337,7 +6337,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="490"/>
         <source>Authentication file location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Расположение файла аутентификации.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="498"/>
@@ -6357,37 +6357,37 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="522"/>
         <source>Disable protocol compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить сжатие протокола?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="530"/>
         <source>Disable address/control compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключить сжатие адреса/управления?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="570"/>
         <source>Your Group username.</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя пользователя вашей группы.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="578"/>
         <source>Your group password (cleartext).</source>
-        <translation type="unfinished"></translation>
+        <translation>Пароль вашей группы (нешифрованный).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="586"/>
         <source>Your username.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ваше имя пользователя.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="594"/>
         <source>Your password (cleartext).</source>
-        <translation type="unfinished"></translation>
+        <translation>Ваш пароль (нешифрованный).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="602"/>
         <source>IKE authentication mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим аутентификации IKE.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="610"/>
@@ -6397,7 +6397,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="626"/>
         <source>Domain name for authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Доменное имя для аутентификации.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="634"/>
@@ -6442,7 +6442,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="698"/>
         <source>Certificate authority file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл центра сертификации.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="706"/>
@@ -6462,17 +6462,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="868"/>
         <source>Provider WireGuard</source>
-        <translation type="unfinished"></translation>
+        <translation>Поставщик WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="871"/>
         <source>Provider Wire Guard</source>
-        <translation type="unfinished"></translation>
+        <translation>Поставщик Wire Guard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="876"/>
         <source>VPNC.DeviceType</source>
-        <translation type="unfinished"></translation>
+        <translation>VPNC.DeviceType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="879"/>
@@ -6482,17 +6482,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="884"/>
         <source>WireGuard.Address</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.Address</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="887"/>
         <source>Internal IP Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Внутренний адрес IP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="892"/>
         <source>WireGuard.ListPort</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.ListPort</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="895"/>
@@ -6502,7 +6502,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="900"/>
         <source>WireGuard.DNS</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.DNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="903"/>
@@ -6512,7 +6512,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="908"/>
         <source>WireGuard.PrivateKey</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.PrivateKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="911"/>
@@ -6522,7 +6522,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="916"/>
         <source>WireGuard.PublicKey</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.PublicKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="919"/>
@@ -6532,7 +6532,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="924"/>
         <source>WireGuard.PresharedKey</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.PresharedKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="927"/>
@@ -6542,17 +6542,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="932"/>
         <source>WireGuard.AllowedIPs</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.AllowedIPs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="935"/>
         <source>See cryptokey routing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Смотрите маршрутизацию криптоключей.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="940"/>
         <source>WireGuard.EndpointPort</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.EndpointPort</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="943"/>
@@ -6562,7 +6562,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="948"/>
         <source>WireGuard.PersistentKeepalive</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.PersistentKeepalive</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="951"/>
@@ -6572,7 +6572,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="956"/>
         <source>OpenVPN.DeviceType</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN.DeviceType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="959"/>
@@ -6582,7 +6582,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="964"/>
         <source>OpenConnect.AllowSelfSignedCert</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.AllowSelfSignedCert</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="967"/>
@@ -6592,7 +6592,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="972"/>
         <source>OpenConnect.AuthType</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.AuthType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="975"/>
@@ -6602,7 +6602,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="980"/>
         <source>OpenConnect.DisableIPv6</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.DisableIPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="983"/>
@@ -6612,7 +6612,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="988"/>
         <source>OpenConnect.NoDTLS</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.NoDTLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="991"/>
@@ -6622,7 +6622,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="996"/>
         <source>OpenConnect.NoHTTPKeepalive</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.NoHTTPKeepalive</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="999"/>
@@ -6632,7 +6632,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1004"/>
         <source>OpenConnect.PKCSClientCert</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.PKCSClientCert</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1007"/>
@@ -6642,7 +6642,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1012"/>
         <source>OpenConnect.Usergroup</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.Usergroup</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1015"/>
@@ -6652,7 +6652,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1020"/>
         <source>OpenConnect.UserPrivateKey</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.UserPrivateKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1023"/>
@@ -6677,12 +6677,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="738"/>
         <source>Protocol type (udp/tcp-client/tcp-server).</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип протокола (udp/tcp-client/tcp-server).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="746"/>
         <source>TCP/UDP port number.</source>
-        <translation type="unfinished"></translation>
+        <translation>Номер порта TCP/UDP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="762"/>
@@ -6804,7 +6804,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="110"/>
         <source>Icon Scale1</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштаб значка1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="115"/>
