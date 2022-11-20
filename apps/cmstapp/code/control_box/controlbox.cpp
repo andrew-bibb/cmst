@@ -1975,8 +1975,8 @@ void ControlBox::assembleTabStatus()
       bool bt;
       ui.tableWidget_technologies->clearContents();
       ui.tableWidget_technologies->setRowCount(technologies_list.size() );
-      ui.tableWidget_technologies->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Fixed);
-      ui.tableWidget_technologies->horizontalHeader()->setSectionResizeMode(4, QHeaderView::Fixed);
+      ui.tableWidget_technologies->horizontalHeader()->defaultSectionSize();
+      ui.tableWidget_technologies->horizontalHeader()->defaultSectionSize();
 
       if (ui.checkBox_hidetethering->isChecked() ) {
          ui.tableWidget_technologies->hideColumn(4);

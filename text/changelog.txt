@@ -1,5 +1,10 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<b> In Progress</b>
+<ul>
+<li>Numerous translation updates</li>
+<li>All columns can be resized in the Technologies windows in the Status tab.</li>
+</ul>
 <b> 2022.05.01</b>
 <ul>
 <li>Revise startup process (issue #269).</li>
