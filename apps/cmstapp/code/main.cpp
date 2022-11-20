@@ -54,11 +54,10 @@ void signalhandler(int sig) {
 
 int main(int argc, char *argv[])
 {
-   // set core application attributes
+
+# if QT_VERSION < 0x060000
    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-//   #if QT_VERSION >= 0x050600
-//   QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-//   #endif
+# endif
 
    QApplication::setApplicationName(LONG_NAME);
    QApplication::setApplicationVersion(VERSION);
@@ -169,8 +168,13 @@ int main(int argc, char *argv[])
 
    // Setup translations
    QTranslator qtTranslator;
-   qtTranslator.load("qt_" + QLocale::system().name(),
-   QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+   # if QT_VERSION < 0x060000
+      qtTranslator.load("qt_" + QLocale::system().name(),
+      QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+   # else
+      (void) qtTranslator.load("qt_" + QLocale::system().name(),
+      QLibraryInfo::path(QLibraryInfo::TranslationsPath));
+   # endif
    app.installTranslator(&qtTranslator);
 
    QTranslator cmstTranslator;

@@ -19,7 +19,9 @@ class QByteArray;
 template<class T> class QList;
 template<class Key, class Value> class QMap;
 class QString;
-class QStringList;
+# if QT_VERSION < 0x060000
+   class QStringList;
+# endif
 class QVariant;
 QT_END_NAMESPACE
 
