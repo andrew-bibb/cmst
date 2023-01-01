@@ -1416,7 +1416,7 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1839"/>
         <source>&amp;QT</source>
-        <translation></translation>
+        <translation>&amp;Qt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1846"/>
