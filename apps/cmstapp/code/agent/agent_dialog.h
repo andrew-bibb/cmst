@@ -5,7 +5,7 @@ needs to communicate with the user it does so through the agent.  The
 agent has a QDialog as a class member, and agent_dialog.cpp manages
 that dialog.
 
-Copyright (C) 2013-2022
+Copyright (C) 2013-2023
 by: Andrew J. Bibb
 License: MIT
 

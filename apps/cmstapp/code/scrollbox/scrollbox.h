@@ -3,7 +3,7 @@
 Dialog to display text to the user.  Kind of like a neutered QMessageBox
 except it has scroll bars built in.
 
-Copyright (C) 2013-2022
+Copyright (C) 2013-2023
 by: Andrew J. Bibb
 License: MIT 
 

@@ -2,7 +2,7 @@
 
 Code to manage the Provisioning Editor dialog.
 
-Copyright (C) 2013-2022
+Copyright (C) 2013-2023
 by: Andrew J. Bibb
 License: MIT
 

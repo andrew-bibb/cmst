@@ -2,7 +2,7 @@
 
 Code to edit already existing config files
 
-Copyright (C) 2016-2022
+Copyright (C) 2016-2023
 by: Andrew J. Bibb
 License: MIT 
 
