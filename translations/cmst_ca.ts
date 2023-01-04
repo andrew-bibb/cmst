@@ -131,32 +131,33 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="310"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter a WPS pin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Introduïu un pin WPS.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="329"/>
         <source>Browser Login Requested</source>
-        <translation type="unfinished"></translation>
+        <translation>Sol·licitud d&apos;inici de sessió del navegador</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="338"/>
         <source>Choose or enter a browser:</source>
-        <translation type="unfinished"></translation>
+        <translation>Trieu o introduïu un navegador:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="345"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login. If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Browser Users:&lt;/span&gt; Note that Brave does not seem to accept a URL to start with. After the browser starts you will need to enter the URL manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan està demanant que obriu un navegador web per a completar el procés d&apos;inici de sessió&lt;/p&gt;&lt;p&gt;
+Hem escanejat el vostre PATH per a trobar navegadors i qualsevol navegador trobat es mostra a la llista següent. Podeu seleccionar qualsevol navegador per utilitzar-lo per a l&apos;inici de sessió. Si el vostre navegador web no es mostra a la llista, podeu introduir-lo directament a la&lt;span style=&quot; font-weight:600;&quot;&gt;caixa Trieu o introduïu un navegador&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Per llançar el navegador, feu clic al botó&lt;span style=&quot; font-weight:600;&quot;&gt;Inicia el navegador&lt;/span&gt; &lt;/p&gt;&lt;p&gt;Si voleu iniciar la sessió manualment tanqueu aquest diàleg, inicieu el navegador web i continueu amb l&apos;URL mostrat a &lt;span style=&quot; font-weight:600;&quot;&gt;URL d&apos;inici de sessió&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Usuaris del navegador Brave:&lt;/span&gt; Tingueu en compte que Brave no sembla acceptar un URL per començar. Després d&apos;iniciar el navegador, haureu d&apos;introduir l&apos;URL manualment.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="360"/>
         <source>Login URL:</source>
-        <translation type="unfinished"></translation>
+        <translation>URL d&apos;inici de sessió:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="367"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting you continue login with a web browser. This box shows the URL that contains the login page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman us demana que continueu l&apos;inici de sessió amb un navegador web. Aquest quadre mostra l&apos;URL que conté la pàgina d&apos;inici de sessió&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use  the Firefox browser.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -166,27 +167,27 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="379"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to launch the selected browser. The browser will open at the page shown in the Login URL box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utilitzeu aquest botó per a llançar el navegador seleccionat. El navegador s&apos;obrirà a la pàgina que es mostra al quadre URL d&apos;inici de sessió.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="382"/>
         <source>Launch &amp;Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Inicia el &amp;navegador</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="420"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Què és això?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="423"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="447"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continua el procés de connexió.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="450"/>
