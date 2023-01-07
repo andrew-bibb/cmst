@@ -634,13 +634,15 @@ void ControlBox::updateDisplayWidgets()
    // get the information it needs. Only check for major errors since we
    // can't run the assemble functions if there are.
    if ( ((q16_errors & CMST::Err_No_DBus) | (q16_errors & CMST::Err_Invalid_Con_Iface)) == 0x00 ) {
-      // rebuild our pages
-      this->assembleTabStatus();
-      this->assembleTabDetails();
-      this->assembleTabWireless();
-      this->assembleTabVPN();
-      this->assembleTabCounters();
-      this->assembleTabPreferences();
+      // rebuild our pages if the UI is visible and not minimized
+      if (this->isVisible() && ! this->isMinimized() ) {
+         this->assembleTabStatus();
+         this->assembleTabDetails();
+         this->assembleTabWireless();
+         this->assembleTabVPN();
+         this->assembleTabCounters();
+         this->assembleTabPreferences();
+      } // if visible
       if (trayicon != NULL ) {
          this->assembleTrayIcon();
 

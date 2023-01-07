@@ -2,6 +2,7 @@
 <b><center>Change Log</center></b>
 <b> In Progress</b>
 <ul>
+<li>Do not update display widgets if minimized or running in the system tray.</li>
 <li>Changes to allow compile with QT6 (PR #278 from kitsnotes).</li>
 <li>Numerous translation updates</li>
 <li>All columns can be resized in the Technologies windows in the Status tab.</li>
