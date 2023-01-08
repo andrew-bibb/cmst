@@ -1649,6 +1649,7 @@ void ControlBox::minMaxWindow(QAction* act)
          ui.comboBox_service->setCurrentIndex(ui.comboBox_service->findText(act->text()) );
          this->showNormal();
       } // inner else
+      this->updateDisplayWidgets();
    } // outer else
 
    return;
