@@ -285,8 +285,8 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="97"/>
         <source>%Ln Packet(s)</source>
         <translation>
-            <numerusform>%Ln Paquete(s)</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%Ln Paquete</numerusform>
+            <numerusform>%Ln Paquetes</numerusform>
         </translation>
     </message>
     <message>
@@ -303,32 +303,32 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="111"/>
         <source>%n Day(s)</source>
         <translation>
-            <numerusform>%n Día(s)</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n Día</numerusform>
+            <numerusform>%n Días</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="118"/>
         <source>%n Hour(s)</source>
         <translation>
-            <numerusform>%n Hora(s)</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n Hora</numerusform>
+            <numerusform>%n Horas</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="125"/>
         <source>%n Minute(s)</source>
         <translation>
-            <numerusform>%n Minuto(s)</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n Minuto</numerusform>
+            <numerusform>%n Minutos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="131"/>
         <source>%n Second(s)</source>
         <translation>
-            <numerusform>%n Segundo(s)</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n Segundo</numerusform>
+            <numerusform>%n Segundos</numerusform>
         </translation>
     </message>
 </context>
@@ -1117,17 +1117,53 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="582"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service is of type VPN. It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La configuración predeterminada para todos los servicios es automático o similar a DHCP. Esto es suficiente para un uso típico, en caso de no serlo, este botón permite la configuración manual de los ajustes de Internet e IP para el servicio seleccionado.&lt;/p&gt;&lt;p&gt;Este botón se deshabilitará, si el servicio se está proporcionado a través de un archivo de configuración externo o un servicio VPN.  Las propiedades de este servicio no se pueden modificar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="692"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta página muestra los servicios WiFi conocidos.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favoritos:&lt;/span&gt; Un símbolo de corazón en esta columna indica que esta computadora se ha conectado previamente a la red usando este servicio.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Conectado:&lt;/span&gt; Muestra el estado de conexión de este servicio. Pase el mouse sobre el ícono para que aparezca una descripción de texto. En línea indica que una conexión a Internet está disponible y ha sido verificada. Listo señala un dispositivo conectado con éxito.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Seguridad: &lt;/span&gt;Describe el tipo de seguridad utilizada para este servicio. Los valores posibles son &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, y &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Intensidad de señal:&lt;/span&gt; Intensidad de la señal WiFi, en una escala de 0 a 100..&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="832"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Español
+&lt;h1&gt;Sintaxis de formato de fecha/hora personalizado&lt;/h1&gt;
+&lt;p&gt;Un patrón de la fecha es una cadena de caracteres, las cadenas de caracteres que sé específica se reemplazan con los datos de la fecha y hora del calendario cuando se da formato o se usa para generar datos para un calendario cuando se analiza.&lt;/p&gt;
+&lt;p&gt;La siguiente tabla de símbolos del campo de la fecha, contiene los caracteres utilizados para mostrar los formatos apropiados en un lugar determinado, como &apos;yyyy&apos; para el año.  Los caracteres se pueden usar varias veces. Por ejemplo, si se usa &apos;y&apos; para el año, &apos;yy&apos; podría producir &apos;99&apos;, mientras que &apos;yyyy&apos; , muestra &apos;1999&apos;. Para la mayoría de los campos numéricos, el ancho es especificado por el  número de caracteres. Por ejemplo, la hora es, &apos;h&apos; y muestra &apos;5&apos;, pero con &apos;hh&apos; muestra &apos;05&apos;. Para algunos caracteres, se puede específicar si se debe usar una forma abreviada o completa, además puede haber otras opciones, como se indica a continuación.&lt;/p&gt;
+&lt;p&gt;Dos comillas simples representan una comilla simple literal, ya sea por dentro o fuera de las comillas simples. El texto entre comillas simples no se interpreta de ninguna manera (excepto si hay dos comillas simples próximas). De lo contrario, todas las letras ASCII de la a - z  y de la A - Z están reservadas como caracteres de sintaxis y requieren comillas si van a representar caracteres literales. Además, ciertos caracteres de puntuación ASCII pueden volverse variables en el futuro (ej., &quot;:&quot; se interpreta como el separador de tiempo y &apos;/&apos; como un separador para la fecha, y se reemplaza por los respectivos caracteres sensibles a la configuración regional en la pantalla).&lt;br /&gt;&lt;/p&gt;
+&lt;table border=&quot;1&quot; width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;
+&lt;tr&gt;&lt;th width=&quot;20%&quot;&gt;Sintaxis&lt;/th&gt;&lt;th&gt;Descripción&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;d&lt;/td&gt;&lt;td&gt;el día en número sin cero al comienzo (1 a  31)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;dd&lt;/td&gt;&lt;td&gt;el día con el número cero al comienzo (01 a 31)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ddd&lt;/td&gt;&lt;td&gt;la abreviatura del nombre del dia (ej. &apos;Lun&apos; a &apos;Dom&apos; )&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;dddd&lt;/td&gt;&lt;td&gt;el nombre del día (ej. &apos;Lunes&apos; &apos;Domingo&apos;)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;M&lt;/td&gt;&lt;td&gt;el mes en numero sin cero al inicio (1-12)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;MM&lt;/td&gt;&lt;td&gt;el mes en numero con el cero al inicio (01-12)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;MMM&lt;/td&gt;&lt;td&gt;el nombre abreviado del mes (ej. &apos;Ene&apos; a &apos;Dic&apos;)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;MMMM&lt;/td&gt;&lt;td&gt;el nombre completo del mes (ej. &apos;Enero&apos; a &apos;Diciembre&apos;)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;yy&lt;/td&gt;&lt;td&gt;el año en número de dos dígitos (00-99)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;yyyy&lt;/td&gt;&lt;td&gt;el año en numero de cuatro dígitos&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;h&lt;/td&gt;&lt;td&gt;la hora sin cero al inicio (0 a 23 o 1 a 12, si muestra AM/PM)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;hh&lt;/td&gt;&lt;td&gt;la hora sin cero al inicio (0 a 23 o 1 a 12, si muestra AM/PM)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;H&lt;/td&gt;&lt;td&gt;la hora sin el cero inicial (0 a 23, incluido en la pantalla AM/PM)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;HH&lt;/td&gt;&lt;td&gt;la hora con el cero inicial (00 a 23, incluido en la pantalla AM/PM)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;m&lt;/td&gt;&lt;td&gt;el minuto sin cero al inicio (0 a 59)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;mm&lt;/td&gt;&lt;td&gt;el minuto con cero al inicio (00 a 59)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;s&lt;/td&gt;&lt;td&gt;el segundo sin cero al inicio (0 a 59)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ss&lt;/td&gt;&lt;td&gt;el segundo con el cero al inicio (00 a 59)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;AP &lt;i&gt;o&lt;/i&gt; A&lt;/td&gt;&lt;td&gt;mostrar en pantalla AM/PM. &lt;b&gt;A/AP&lt;/b&gt; será reemplazado por &quot;AM&quot; o &quot;PM&quot;.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ap &lt;i&gt;o&lt;/i&gt; a&lt;/td&gt;&lt;td&gt;usar en pantalla am/pm. &lt;b&gt;a/ap&lt;/b&gt; Será reemplazado por &quot;am&quot; o &quot;pm&quot;.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;t&lt;/td&gt;&lt;td&gt;zona horaria (ej. &quot;CEST&quot;)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;T&lt;/td&gt;&lt;td&gt;tiempo universal coordinado UTC&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;TT&lt;/td&gt;&lt;td&gt;la zona horaria IANA id&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;TTT&lt;/td&gt;&lt;td&gt;abreviatura de la zona horaria&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;TTTT&lt;/td&gt;&lt;td&gt;mostrar nombre corto de la zona horaria&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;TTTTT&lt;/td&gt;&lt;td&gt;mostrar nombre largo de la zona horaria&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;TTTTTT&lt;/td&gt;&lt;td&gt;nombre personalizado para la zona horaria. Puede cambiarlo en la pestaña &apos;Zonas horarias&apos; dentro de configuración.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;br /&gt;&lt;b&gt;Notes:&lt;/b&gt; &lt;ul&gt;&lt;li&gt;Cualquier letra dentro del rango de [&apos;a&apos;..&apos;z&apos;] y [&apos;A&apos;..&apos;Z&apos;] será tratado como un texto citado. Por ejemplo, caracteres como &apos;:&apos;, &apos;.&apos;, &apos; &apos;, &apos;#&apos; y &apos;@&apos; aparecerán en el texto del tiempo resultante, incluso si no están encerrados entre comillas simples. La comilla simple se utiliza para &quot;saltar&quot; de las letras. Dos comillas simples seguidas, ya sea dentro o fuera de una secuencia entrecomillada, representan una comilla simple &apos;real&apos;.&lt;/li&gt;&lt;li&gt;El intervalo mínimo de actualización es de 1 segundo. Si z o zzz están configurados, el tiempo se muestra con la fracción de milisegundos, pero no se actualiza en milisegundos (evitando un gran impacto en el rendimiento).&lt;/li&gt;&lt;ul&gt;
+
+Clave LXQtWorldClockConfigurationManualFormat</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1318"/>
@@ -1162,7 +1198,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="640"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to edit the service. &lt;/p&gt;&lt;p&gt;The service must have previously been successfully connected (Favorite is true) for this button to work. Pressing &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; will remove the service and then request credentials to establish the connection. If the service is currently connected it will be disconnected first. If the service required a passphrase then the old passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;Connman does not provide any methods to retrieve credentials (passphrases, etc.) as that is insecure. CMST will not work around this protection. All this button really does is automate pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Remove&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; buttons above. Make sure you know all of the credentials to reconnect as the existing credentials will be cleared when this button is pressed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta página muestra los servicios WiFi conocidos.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favoritos:&lt;/span&gt; Un símbolo de corazón en esta columna indica que esta computadora se ha conectado previamente a la red usando este servicio.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Conectado:&lt;/span&gt; Muestra el estado de conexión de este servicio. Pase el mouse sobre el ícono para que aparezca una descripción de texto. En línea indica que una conexión a Internet está disponible y ha sido verificada. Listo señala un dispositivo conectado con éxito.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Seguridad: &lt;/span&gt;Describe el tipo de seguridad utilizada para este servicio. Los valores posibles son &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, y &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Intensidad de señal:&lt;/span&gt; Intensidad de la señal WiFi, en una escala de 0 a 100..&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="643"/>
@@ -1592,7 +1628,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
         <source>Strength: %1%
 </source>
-        <translation>Fortaleza: %1&#xa0;%
+        <translation>Fortaleza: %1 %
 </translation>
     </message>
     <message>
@@ -2655,7 +2691,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="607"/>
         <source>&amp;mDNS</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="622"/>
@@ -2924,7 +2960,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="373"/>
         <source>DeviceName</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre del dispositivo</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="376"/>
@@ -4182,7 +4218,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="215"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;Request&#xa0;&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;&#xa0;from server as the MTU of the tunnel.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;Request &lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt; from server as the MTU of the tunnel.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
