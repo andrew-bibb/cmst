@@ -3810,7 +3810,8 @@ Networks = entry is optional and may be left blank.</source>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="580"/>
         <source>Network address in the form address/netmask/peer.
 Ex: 10.2.0.2/24</source>
-        <translation type="unfinished"></translation>
+        <translation>주소/넷마스크/피어 형식의 네트워크 주소입니다.
+예: 10.2.0.2/24</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="595"/>
@@ -4079,7 +4080,9 @@ before starting to send configure-Rejects (default is 10).</source>
         <source>Send an LCP echo-request frame to the peer every n seconds.
  This option can be used with the lcp-echo-failure option to detect
 that the peer is no longer connected.</source>
-        <translation type="unfinished"></translation>
+        <translation>n초마다 피어에 LCP 에코 요청 프레임을 보냅니다.
+ 이 옵션은 lcp-echo-failure 옵션과 함께 사용하여 피어가 더 이상
+연결되어 있지 않음을 감지할 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="236"/>
@@ -4183,12 +4186,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="388"/>
         <source>Use challenge authentication?</source>
-        <translation type="unfinished"></translation>
+        <translation>챌린지 인증을 사용하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="396"/>
         <source>Add a default route to the system routing tables, using the peer as the gatewa?</source>
-        <translation type="unfinished"></translation>
+        <translation>피어를 게이트웨이로 사용하여 시스템 라우팅 테이블에 기본 경로를 추가하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="404"/>
@@ -4198,62 +4201,62 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="412"/>
         <source>The window size of the control channel (number of unacknowledged packets, not bytes)</source>
-        <translation type="unfinished"></translation>
+        <translation>제어 채널의 창 크기(바이트가 아닌 승인되지 않은 패킷 수)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="420"/>
         <source>Use only one control channel?</source>
-        <translation type="unfinished"></translation>
+        <translation>하나의 제어 채널만 사용하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="428"/>
         <source>Redial if disconnected?</source>
-        <translation type="unfinished"></translation>
+        <translation>연결이 끊어지면 다시 전화를 거시겠습니까?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="436"/>
         <source>Wait n seconds before redial.</source>
-        <translation type="unfinished"></translation>
+        <translation>다시 전화를 걸기 전에 n초 동안 기다리십시오.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="444"/>
         <source>Give up redial tries after X attempts.</source>
-        <translation type="unfinished"></translation>
+        <translation>X번 시도 후 전화 다시 걸기를 중지합니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="452"/>
         <source>Require the remote peer to get authenticated via PAP?</source>
-        <translation type="unfinished"></translation>
+        <translation>원격 피어가 PAP를 통해 인증을 받도록 요구하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="460"/>
         <source>Require the remote peer to get authenticated via CHAP?</source>
-        <translation type="unfinished"></translation>
+        <translation>원격 피어가 CHAP를 통해 인증을 받도록 요구하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="468"/>
         <source>Require the remote peer to authenticate itself?</source>
-        <translation type="unfinished"></translation>
+        <translation>원격 피어가 자체 인증하도록 요구하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="476"/>
         <source>Only accept connections from specified peer addresses?</source>
-        <translation type="unfinished"></translation>
+        <translation>지정된 피어 주소의 연결만 허용하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="484"/>
         <source>Authentication file location.</source>
-        <translation type="unfinished"></translation>
+        <translation>인증 파일 위치입니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="492"/>
         <source>The IP address of the interface on which the daemon listens.</source>
-        <translation type="unfinished"></translation>
+        <translation>데몬이 수신하는 인터페이스의 IP 주소입니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="500"/>
         <source>Use IPsec Security Association tracking?</source>
-        <translation type="unfinished"></translation>
+        <translation>IPsec 보안 연관 추적을 사용하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="508"/>
@@ -4353,12 +4356,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="700"/>
         <source>File containing peer&apos;s signed certificate.</source>
-        <translation type="unfinished"></translation>
+        <translation>피어의 서명된 인증서를 포함하는 파일입니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="708"/>
         <source>File containing local peer&apos;s private key.</source>
-        <translation type="unfinished"></translation>
+        <translation>로컬 피어의 개인 키를 포함하는 파일입니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="748"/>
@@ -4433,7 +4436,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="913"/>
         <source>Public key of peer.</source>
-        <translation type="unfinished"></translation>
+        <translation>피어의 공개 키입니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="918"/>
@@ -4443,7 +4446,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="921"/>
         <source>Preshared key of peer (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>피어의 미리 공유된 키입니다(선택 사항).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="926"/>
@@ -4578,7 +4581,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="724"/>
         <source>Peer certificate type (server/client).</source>
-        <translation type="unfinished"></translation>
+        <translation>피어 인증서 유형입니다(서버/클라이언트).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="732"/>
@@ -4618,7 +4621,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="796"/>
         <source>Require peer certificate signed (client/server).</source>
-        <translation type="unfinished"></translation>
+        <translation>서명된 피어 인증서가 필요합니다(클라이언트/서버).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="804"/>
@@ -4716,7 +4719,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="121"/>
         <source>Disable VPN support.</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 지원을 비활성화합니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="127"/>
