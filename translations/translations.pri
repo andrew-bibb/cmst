@@ -10,25 +10,25 @@
 #  to the directory cmstapp.
 #
 
-TRANSLATIONS += ../../cmst_bg_BG.ts
-TRANSLATIONS += ../../cmst_ca.ts
-TRANSLATIONS += ../../cmst_cs.ts
-TRANSLATIONS += ../../cmst_de_DE.ts
-TRANSLATIONS += ../../cmst_en_US.ts
-TRANSLATIONS += ../../cmst_es_CO.ts
-TRANSLATIONS += ../../cmst_es_ES.ts
-TRANSLATIONS += ../../cmst_fr_FR.ts
-TRANSLATIONS += ../../cmst_hu_HU.ts
-TRANSLATIONS += ../../cmst_it_IT.ts
-TRANSLATIONS += ../../cmst_ko.ts
-TRANSLATIONS += ../../cmst_lt.ts
-TRANSLATIONS += ../../cmst_nb_NO.ts
-TRANSLATIONS += ../../cmst_nl_NL.ts
-TRANSLATIONS += ../../cmst_pl_PL.ts
-TRANSLATIONS += ../../cmst_pt_BR.ts
-TRANSLATIONS += ../../cmst_pt.ts
-TRANSLATIONS += ../../cmst_ru_RU.ts
-TRANSLATIONS += ../../cmst_si.ts
-TRANSLATIONS += ../../cmst_tr_TR.ts
-TRANSLATIONS += ../../cmst_uk.ts
-TRANSLATIONS += ../../cmst_zh_CN.ts
+TRANSLATIONS += ../../translations/cmst_bg_BG.ts
+TRANSLATIONS += ../../translations/cmst_ca.ts
+TRANSLATIONS += ../../translations/cmst_cs.ts
+TRANSLATIONS += ../../translations/cmst_de_DE.ts
+TRANSLATIONS += ../../translations/cmst_en_US.ts
+TRANSLATIONS += ../../translations/cmst_es_CO.ts
+TRANSLATIONS += ../../translations/cmst_es_ES.ts
+TRANSLATIONS += ../../translations/cmst_fr_FR.ts
+TRANSLATIONS += ../../translations/cmst_hu_HU.ts
+TRANSLATIONS += ../../translations/cmst_it_IT.ts
+TRANSLATIONS += ../../translations/cmst_ko.ts
+TRANSLATIONS += ../../translations/cmst_lt.ts
+TRANSLATIONS += ../../translations/cmst_nb_NO.ts
+TRANSLATIONS += ../../translations/cmst_nl_NL.ts
+TRANSLATIONS += ../../translations/cmst_pl_PL.ts
+TRANSLATIONS += ../../translations/cmst_pt_BR.ts
+TRANSLATIONS += ../../translations/cmst_pt.ts
+TRANSLATIONS += ../../translations/cmst_ru_RU.ts
+TRANSLATIONS += ../../translations/cmst_si.ts
+TRANSLATIONS += ../../translations/cmst_tr_TR.ts
+TRANSLATIONS += ../../translations/cmst_uk.ts
+TRANSLATIONS += ../../translations/cmst_zh_CN.ts
