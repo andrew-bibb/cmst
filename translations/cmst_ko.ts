@@ -370,7 +370,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="100"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This checkbox controls the global setting for switching all radios on or off. When checked all radios are powered down.&lt;/p&gt;&lt;p&gt;When the system is In offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 확인란은 모든 라디오를 켜거나 끄는 전역 설정을 제어합니다. 선택하면 모든 라디오의 전원이 꺼집니다.&lt;/p&gt;&lt;p&gt;시스템이 오프라인 모드일 때 개별 장치를 다시 켤 수 있습니다. 오프라인 모드를 종료할 때 각 장치의 개별 정책에 따라 라디오가 다시 켜지는지 여부가 결정됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="103"/>
@@ -380,7 +380,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="69"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OfflineMode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The offline mode indicates the global setting for switching all radios on or off. Changing offline mode to true results in powering down all devices. When leaving offline mode the individual policy of each device decides to switch the radio back on or not. &lt;/p&gt;&lt;p&gt;During offline mode, it is still possible to switch certain technologies manually back on. For example the limited usage of WiFi or Bluetooth devices might be allowed in some situations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;오프라인모드&lt;/span&gt;&lt;/p&gt;&lt;p&gt;오프라인 모드는 모든 라디오를 켜거나 끄는 전역 설정을 나타냅니다. 오프라인 모드를 참으로 변경하면 모든 장치의 전원이 꺼집니다. 오프라인 모드를 종료하면 각 장치의 개별 정책에 따라 라디오를 다시 켤지 여부가 결정됩니다. &lt;/p&gt;&lt;p&gt;오프라인 모드에서도 특정 기술을 수동으로 다시 켤 수 있습니다. 예를 들어 일부 상황에서는 WiFi 또는 Bluetooth 장치의 제한된 사용이 허용될 수 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="35"/>
@@ -401,7 +401,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="80"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="132"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;모든 무선 장치를 켜거나 끄는 전역 설정입니다. 오프라인 모드가 활성화되면 모든 무선 장치의 전원이 꺼집니다.&lt;/p&gt;&lt;p&gt;오프라인 모드에 있는 동안 개별 장치를 다시 켤 수 있습니다. 오프라인 모드를 종료할 때 각 장치의 개별 정책에 따라 무전 장치를 다시 켤지 여부가 결정됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="83"/>
@@ -504,7 +504,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="424"/>
         <source>&amp;Less</source>
-        <translation type="unfinished"></translation>
+        <translation>더 적게(&amp;L)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="445"/>
@@ -561,12 +561,12 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="605"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="777"/>
         <source>Disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>연결끊기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="615"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>제거하기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="648"/>
@@ -576,7 +576,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="651"/>
         <source>Wifi State</source>
-        <translation type="unfinished"></translation>
+        <translation>Wifi 상태</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1293"/>
@@ -611,7 +611,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1342"/>
         <source>Start Up Options</source>
-        <translation type="unfinished"></translation>
+        <translation>시작 옵션</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1516"/>
@@ -636,12 +636,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1366"/>
         <source>Counter Update Rate </source>
-        <translation type="unfinished"></translation>
+        <translation>카운터 업데이트 속도 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1594"/>
         <source>External Programs</source>
-        <translation type="unfinished"></translation>
+        <translation>외부 프로그램</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1774"/>
@@ -651,17 +651,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1781"/>
         <source>A&amp;rtwork</source>
-        <translation type="unfinished"></translation>
+        <translation>아트워크(&amp;R)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1963"/>
         <source>Rescan</source>
-        <translation type="unfinished"></translation>
+        <translation>다시 스캔</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1971"/>
         <source>Offline Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>오프라인 모드</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="250"/>
@@ -671,17 +671,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="719"/>
         <source>Favorite</source>
-        <translation type="unfinished"></translation>
+        <translation>즐겨찾기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="729"/>
         <source>Security</source>
-        <translation type="unfinished"></translation>
+        <translation>보안</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="734"/>
         <source>Signal Strength</source>
-        <translation type="unfinished"></translation>
+        <translation>신호 강도</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="875"/>
@@ -697,7 +697,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="899"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1658"/>
         <source>Service:</source>
-        <translation type="unfinished"></translation>
+        <translation>서비스:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="942"/>
@@ -707,7 +707,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="915"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>홈</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="945"/>
@@ -723,12 +723,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="974"/>
         <source>Roaming</source>
-        <translation type="unfinished"></translation>
+        <translation>로밍</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1021"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counter Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;카운터 설정&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1024"/>
@@ -738,12 +738,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1027"/>
         <source>Settings:</source>
-        <translation type="unfinished"></translation>
+        <translation>설정:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1042"/>
         <source>&amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>기본설정(&amp;P)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1527"/>
@@ -753,7 +753,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1530"/>
         <source>Enable Counters</source>
-        <translation type="unfinished"></translation>
+        <translation>카운터 활성화</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1503"/>
@@ -763,7 +763,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1506"/>
         <source>Disable VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 비활성화</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1471"/>
@@ -773,7 +773,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1474"/>
         <source>Disable Minimized</source>
-        <translation type="unfinished"></translation>
+        <translation>최소화됨 비활성화</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1071"/>
@@ -783,7 +783,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1074"/>
         <source>Interface</source>
-        <translation type="unfinished"></translation>
+        <translation>인터페이스</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1090"/>
@@ -803,7 +803,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1106"/>
         <source>Reset Counters</source>
-        <translation type="unfinished"></translation>
+        <translation>카운터 재설정</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1113"/>
@@ -850,17 +850,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1520"/>
         <source>Start Minimized</source>
-        <translation type="unfinished"></translation>
+        <translation>최소화된 시작</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1352"/>
         <source>Wait Time</source>
-        <translation type="unfinished"></translation>
+        <translation>대기 시간</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1464"/>
         <source>Disable Tray Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>트레이 아이콘 비활성화</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1080"/>
@@ -870,7 +870,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1083"/>
         <source>Retain State</source>
-        <translation type="unfinished"></translation>
+        <translation>상태 유지하기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1450"/>
@@ -880,7 +880,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1453"/>
         <source>Use Icon Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>아이콘 테마 사용하기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1553"/>
@@ -902,12 +902,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="746"/>
         <source>&amp;VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="752"/>
         <source>VPN Services</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 서비스</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="761"/>
@@ -922,7 +922,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="858"/>
         <source>Host</source>
-        <translation type="unfinished"></translation>
+        <translation>호스트</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1399"/>
@@ -952,7 +952,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
         <source>Hide Tray Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>트레이 아이콘 숨기기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1230"/>
@@ -977,17 +977,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1252"/>
         <source>Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>알림</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1261"/>
         <source>Notification Daemon</source>
-        <translation type="unfinished"></translation>
+        <translation>알림 데몬</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1274"/>
         <source>Server Status</source>
-        <translation type="unfinished"></translation>
+        <translation>서버 상태</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="163"/>
@@ -1032,7 +1032,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1287"/>
         <source>Program Control</source>
-        <translation type="unfinished"></translation>
+        <translation>프로그램 제어</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1313"/>
@@ -1042,7 +1042,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1316"/>
         <source>Enable Autostart</source>
-        <translation type="unfinished"></translation>
+        <translation>자동시작 활성화</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1303"/>
@@ -1068,7 +1068,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="135"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1147"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="564"/>
@@ -1083,7 +1083,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="625"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>편집하기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="632"/>
@@ -1163,7 +1163,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1673"/>
         <source>Modify Service File</source>
-        <translation type="unfinished"></translation>
+        <translation>서비스 파일 수정하기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1682"/>
@@ -1173,7 +1173,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1685"/>
         <source>FIle: </source>
-        <translation type="unfinished"></translation>
+        <translation>파일: </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1722"/>
@@ -1192,12 +1192,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1749"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>도움말(&amp;H)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1755"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>정보(&amp;A)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1761"/>
@@ -1207,7 +1207,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1764"/>
         <source>C&amp;MST</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;MST</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1771"/>
@@ -1222,7 +1222,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1791"/>
         <source>&amp;QT</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;QT</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1798"/>
@@ -1232,7 +1232,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1801"/>
         <source>&amp;License</source>
-        <translation type="unfinished"></translation>
+        <translation>라이선스(&amp;L)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1808"/>
@@ -1242,7 +1242,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1811"/>
         <source>ChangeLo&amp;g</source>
-        <translation type="unfinished"></translation>
+        <translation>변경로그(&amp;G)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1849"/>
@@ -1267,7 +1267,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1901"/>
         <source>Provisioning Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>권한설정 편집기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1908"/>
@@ -1277,7 +1277,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1911"/>
         <source>VPN Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 편집기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1918"/>
@@ -1298,7 +1298,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1944"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="423"/>
         <source>Mi&amp;nimize</source>
-        <translation type="unfinished"></translation>
+        <translation>최소화(&amp;N)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1976"/>
@@ -1313,7 +1313,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="424"/>
         <source>Ma&amp;ximize</source>
-        <translation type="unfinished"></translation>
+        <translation>최대화(&amp;X)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="427"/>
@@ -1323,32 +1323,32 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="529"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 정보</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="150"/>
         <source>Service Details</source>
-        <translation type="unfinished"></translation>
+        <translation>서비스 세부사항</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="151"/>
         <source>WiFi Connections</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi 연결</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="152"/>
         <source>VPN Connections</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 연결</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="557"/>
         <source>About AwOken</source>
-        <translation type="unfinished"></translation>
+        <translation>AwOken 정보</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="588"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>라이선스</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="596"/>
@@ -1358,19 +1358,19 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="598"/>
         <source>ChangeLog</source>
-        <translation type="unfinished"></translation>
+        <translation>변경로그</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="721"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2756"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>취소하기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="746"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="751"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;서비스:&lt;/b&gt; %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="751"/>
