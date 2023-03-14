@@ -2,6 +2,7 @@
 <b><center>Change Log</center></b>
 <b> 2023.03.14</b>
 <ul>
+<li>Use short options in gzip for Alpine Linux PR #292</li>
 <li>Do not update display widgets if minimized or running in the system tray.</li>
 <li>Added translations for Catalan, Korean</li>
 <li>Numberous translation updates</li>
