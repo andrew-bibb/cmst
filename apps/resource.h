@@ -34,9 +34,9 @@ DEALINGS IN THE SOFTWARE.
 ///////////////////////////////// Program Values ///////////////////////
 //
 // Program Info (may be visible, but don't mark for tranalation)
-#define VERSION "2023.01.28-1"
+#define VERSION "2023.03.14-1"
 
-#define RELEASE_DATE "30 Nov 2022"
+#define RELEASE_DATE "14 March 2023"
 #define COPYRIGHT_DATE "2013-2023"
 
 // Program Values:

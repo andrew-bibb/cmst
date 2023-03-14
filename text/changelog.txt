@@ -1,9 +1,10 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
-<b> In Progress</b>
+<b> 2023.03.14</b>
 <ul>
 <li>Do not update display widgets if minimized or running in the system tray.</li>
 <li>Added translations for Catalan, Korean</li>
+<li>Numberous translation updates</li>
 </ul>
 <b> 2022.11.30</b>
 <ul>
