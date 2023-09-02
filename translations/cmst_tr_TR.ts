@@ -291,7 +291,7 @@
         <source>%Ln Packet(s)</source>
         <translation>
             <numerusform>%Ln Paket</numerusform>
-            <numerusform>%Ln Paket</numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -309,7 +309,7 @@
         <source>%n Day(s)</source>
         <translation>
             <numerusform>%n Gün</numerusform>
-            <numerusform>%n Gün</numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -317,7 +317,7 @@
         <source>%n Hour(s)</source>
         <translation>
             <numerusform>%n Saat</numerusform>
-            <numerusform>%n Saat</numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -325,7 +325,7 @@
         <source>%n Minute(s)</source>
         <translation>
             <numerusform>%n Dakika</numerusform>
-            <numerusform>%n Dakika</numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -333,7 +333,7 @@
         <source>%n Second(s)</source>
         <translation>
             <numerusform>%n Saniye</numerusform>
-            <numerusform>%n Saniye</numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -599,7 +599,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1318"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will implement an internet kill switch for VPN connections. If a VPN connection drops while the kill switch is enabled all technologies will be powered off.&lt;/p&gt;&lt;p&gt;The way this works is the service order is monitored. If the topmost service is of type VPN and then if it changes to something other than VPN and if the change was not initiated by the user (for instance by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Disconnect&lt;/span&gt; button in the VPN tab), then CMST will cycle through all technologies powering each one down in turn. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse CMST, VPN bağlantıları için bir internet kapatma anahtarı uygular. Kill anahtarı etkinken bir VPN bağlantısı kesilirse, tüm teknolojiler kapatılacaktır.&lt;/p&gt;&lt;p&gt;Bunun çalışma şekli servis sırasının izlenmesidir. En üstteki hizmet VPN türündeyse ve ardından VPN dışında bir şeye dönüşürse ve değişiklik kullanıcı tarafından başlatılmadıysa (örneğin VPN sekmesindeki  &lt;span style=&quot; font-weight:600;&quot;&gt;Bağlantıyı Kes&lt;/span&gt;  düğmesine basın) ardından CMST sırayla her birini kapatan tüm teknolojiler arasında geçiş yapacaktır.. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse CMST, VPN bağlantıları için bir internet kapatma anahtarı uygular. Kill anahtarı etkinken bir VPN bağlantısı kesilirse, tüm teknolojiler kapatılacaktır.&lt;/p&gt;&lt;p&gt;Bunun çalışma şekli servis sırasının izlenmesidir. En üstteki hizmet VPN türündeyse ve ardından VPN dışında bir şeye dönüşürse ve değişiklik kullanıcı tarafından başlatılmadıysa (örneğin VPN sekmesindeki &lt;span style=&quot; font-weight:600;&quot;&gt;Bağlantıyı Kes&lt;/span&gt; düğmesine basın) ardından CMST sırayla her birini kapatan tüm teknolojiler arasında geçiş yapacaktır.. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1321"/>
@@ -736,7 +736,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="974"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection that is not marked roaming. &lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dolaşım olarak işaretlenmemiş &amp;quot;çevrimiçi&amp;quot; hizmet bağlantısı için sayaçlar. &lt;/p&gt;&lt;p&gt;Sayaçlar her zaman mevcut olmayabilir. Sayaçlar komut satırında (-c veya --disable-counters) devre dışı bırakılmış olabilir veya bazen bağlantı  &amp;quot;çevrimiçi &amp;quot; yerine &amp;quot;hazır &amp;quot; olarak kaydedilecektir. Çevrimiçi, internet bağlantısını doğrulayan &amp;quot;hazır&amp;quot; bir bağlantıdır. Yalnızca &amp;quot;hazır&amp;quot; bir bağlantıyla çevrimiçi olmak mümkündür, ancak sayaçlar yalnızca &amp;quot;çevrimiçi&amp;quot; bağlantı için çalışır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dolaşım olarak işaretlenmemiş &amp;quot;çevrimiçi&amp;quot; hizmet bağlantısı için sayaçlar. &lt;/p&gt;&lt;p&gt;Sayaçlar her zaman mevcut olmayabilir. Sayaçlar komut satırında (-c veya --disable-counters) devre dışı bırakılmış olabilir veya bazen bağlantı &amp;quot;çevrimiçi &amp;quot; yerine &amp;quot;hazır &amp;quot; olarak kaydedilecektir. Çevrimiçi, internet bağlantısını doğrulayan &amp;quot;hazır&amp;quot; bir bağlantıdır. Yalnızca &amp;quot;hazır&amp;quot; bir bağlantıyla çevrimiçi olmak mümkündür, ancak sayaçlar yalnızca &amp;quot;çevrimiçi&amp;quot; bağlantı için çalışır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="947"/>
@@ -1155,12 +1155,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="582"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service is of type VPN. It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tüm hizmetler için varsayılan yapılandırma yöntemi otomatiktir veya DHCP gibi bir şeydir.  Bu, çoğu tipik kullanım için yeterince iyi olmalıdır, ancak değilse, bu düğme, seçilen Hizmet için Ethernet ve IP ayarlarının manuel olarak yapılandırılmasına izin verir.&lt;/p&gt;&lt;p&gt;Hizmet, harici bir yapılandırma dosyası aracılığıyla sağlanırsa veya hizmet VPN türündeyse bu düğme devre dışı bırakılır.  Bu hizmetlerin özelliklerini değiştirmek mümkün değildir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tüm hizmetler için varsayılan yapılandırma yöntemi otomatiktir veya DHCP gibi bir şeydir. Bu, çoğu tipik kullanım için yeterince iyi olmalıdır, ancak değilse, bu düğme, seçilen Hizmet için Ethernet ve IP ayarlarının manuel olarak yapılandırılmasına izin verir.&lt;/p&gt;&lt;p&gt;Hizmet, harici bir yapılandırma dosyası aracılığıyla sağlanırsa veya hizmet VPN türündeyse bu düğme devre dışı bırakılır. Bu hizmetlerin özelliklerini değiştirmek mümkün değildir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="640"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to edit the service. &lt;/p&gt;&lt;p&gt;The service must have previously been successfully connected (Favorite is true) for this button to work. Pressing &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; will remove the service and then request credentials to establish the connection. If the service is currently connected it will be disconnected first. If the service required a passphrase then the old passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;Connman does not provide any methods to retrieve credentials (passphrases, etc.) as that is insecure. CMST will not work around this protection. All this button really does is automate pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Remove&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; buttons above. Make sure you know all of the credentials to reconnect as the existing credentials will be cleared when this button is pressed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aşağıdaki tabloda bir wifi hizmeti seçin ve hizmeti düzenlemek için bu düğmeye basın. &lt;/p&gt;&lt;p&gt;Bu düğmenin çalışması için hizmetin daha önce başarıyla bağlanmış (Favori doğrudur) olması gerekir. &lt;span style=&quot; font-weight:600;&quot;&gt;Düzenle&lt;/span&gt;&apos;e basmak, hizmeti kaldırır ve ardından bağlantı kurmak için kimlik bilgilerini ister. Hizmet şu anda bağlıysa, önce bağlantısı kesilecektir. Hizmet bir parola gerektiriyorsa, eski parola silinir ve unutulur.&lt;/p&gt;&lt;p&gt;Connman, güvenli olmadığı için kimlik bilgilerini (parolalar vb.) almak için herhangi bir yöntem sağlamaz. CMST bu koruma etrafında çalışmayacaktır.  Bu düğmenin gerçekten yaptığı tek şey, yukarıdaki &lt;span style=&quot; font-weight:600;&quot;&gt;Kaldır&lt;/span&gt; ve &lt;span style=&quot; font-weight:600;&quot;&gt;Bağlan&lt;/span&gt; düğmelerine basmayı otomatik hale getirmektir.  Bu düğmeye basıldığında mevcut kimlik bilgileri silineceğinden, yeniden bağlanmak için tüm kimlik bilgilerini bildiğinizden emin olun.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aşağıdaki tabloda bir wifi hizmeti seçin ve hizmeti düzenlemek için bu düğmeye basın. &lt;/p&gt;&lt;p&gt;Bu düğmenin çalışması için hizmetin daha önce başarıyla bağlanmış (Favori doğrudur) olması gerekir. &lt;span style=&quot; font-weight:600;&quot;&gt;Düzenle&lt;/span&gt;&apos;e basmak, hizmeti kaldırır ve ardından bağlantı kurmak için kimlik bilgilerini ister. Hizmet şu anda bağlıysa, önce bağlantısı kesilecektir. Hizmet bir parola gerektiriyorsa, eski parola silinir ve unutulur.&lt;/p&gt;&lt;p&gt;Connman, güvenli olmadığı için kimlik bilgilerini (parolalar vb.) almak için herhangi bir yöntem sağlamaz. CMST bu koruma etrafında çalışmayacaktır. Bu düğmenin gerçekten yaptığı tek şey, yukarıdaki &lt;span style=&quot; font-weight:600;&quot;&gt;Kaldır&lt;/span&gt; ve &lt;span style=&quot; font-weight:600;&quot;&gt;Bağlan&lt;/span&gt; düğmelerine basmayı otomatik hale getirmektir. Bu düğmeye basıldığında mevcut kimlik bilgileri silineceğinden, yeniden bağlanmak için tüm kimlik bilgilerini bildiğinizden emin olun.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="643"/>
@@ -1175,7 +1175,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="692"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu sayfa bilinen WiFi hizmetlerini gösterir.  &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ad:&lt;/span&gt; Ağın SSID&apos;si.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favori:&lt;/span&gt; Bu sütundaki kalp simgesi, bu bilgisayarın daha önce bu hizmeti kullanarak ağa bağlantı kurduğunu gösterir.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;  Bağlandı:&lt;/span&gt; Bu hizmetin bağlantı durumunu gösterir.  Bir metin açıklaması açmak için fareyi simgenin üzerine getirin.  İnternet bağlantısının mevcut olduğunu ve doğrulandığını gösteren çevrimiçi sinyaller.  Hazır, başarıyla bağlanmış bir aygıtı işaret eder.  &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Güvenlik: &lt;/span&gt;Bu hizmet için kullanılan güvenlik türünü açıklar.  Olası değerler &quot;none&quot;, &quot;wep&quot;, &quot;psk&quot;, &quot;ieee8021x&quot; ve &quot;wps&quot; şeklindedir.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sinyal Gücü:&lt;/span  &gt; 0 ile 100 arasında bir ölçekte normalleştirilmiş WiFi sinyalinin gücü.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu sayfa bilinen WiFi hizmetlerini gösterir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ad:&lt;/span&gt; Ağın SSID&apos;si.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favori:&lt;/span&gt; Bu sütundaki kalp simgesi, bu bilgisayarın daha önce bu hizmeti kullanarak ağa bağlantı kurduğunu gösterir.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt; Bağlandı:&lt;/span&gt; Bu hizmetin bağlantı durumunu gösterir. Bir metin açıklaması açmak için fareyi simgenin üzerine getirin. İnternet bağlantısının mevcut olduğunu ve doğrulandığını gösteren çevrimiçi sinyaller. Hazır, başarıyla bağlanmış bir aygıtı işaret eder. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Güvenlik: &lt;/span&gt;Bu hizmet için kullanılan güvenlik türünü açıklar. Olası değerler &quot;none&quot;, &quot;wep&quot;, &quot;psk&quot;, &quot;ieee8021x&quot; ve &quot;wps&quot; şeklindedir.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sinyal Gücü:&lt;/span &gt; 0 ile 100 arasında bir ölçekte normalleştirilmiş WiFi sinyalinin gücü.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="815"/>
@@ -1185,7 +1185,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="832"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu sayfa, sağlanan VPN hizmetlerini gösterir.  Tablodaki bazı hücreler yalnızca bir bağlantı kurulduğunda kullanılabilir.  &lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Ad:&lt;/span&gt; Temel hazırlık dosyasında verilen ad.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:  600;&quot;&gt;Tür:&lt;/span&gt; VPN türü (OpenConnect, OpenVPN, PPTP, vb.)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Durum:&lt;/span&gt;  Bu hizmetin bağlantı durumu.  Bir metin açıklaması açmak için fareyi simgenin üzerine getirin.  &lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Ana Bilgisayar: &lt;/span&gt;VPN Ana Bilgisayar IP&apos;si.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;  Etki Alanı:&lt;/span&gt; VPN Etki Alanı.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu sayfa, sağlanan VPN hizmetlerini gösterir. Tablodaki bazı hücreler yalnızca bir bağlantı kurulduğunda kullanılabilir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Ad:&lt;/span&gt; Temel hazırlık dosyasında verilen ad.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight: 600;&quot;&gt;Tür:&lt;/span&gt; VPN türü (OpenConnect, OpenVPN, PPTP, vb.)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Durum:&lt;/span&gt; Bu hizmetin bağlantı durumu. Bir metin açıklaması açmak için fareyi simgenin üzerine getirin. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Ana Bilgisayar: &lt;/span&gt;VPN Ana Bilgisayar IP&apos;si.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt; Etki Alanı:&lt;/span&gt; VPN Etki Alanı.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1176"/>
@@ -1245,7 +1245,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1661"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This area is to specify a program or process to run after a wifi or vpn service button is pressed, but before the connect method is sent to ConnMan. This is mainly used to modify a .cmst.config file which seems useful to modify certain short lived entries for openConnect vpn connections.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;Execute&lt;/span&gt; box will only be executed prior to making a connection for the single service shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Service&lt;/span&gt; box. It will not be called when connecting to any other service. If a .cmst.config file is to be modified a check must in the &lt;span style=&quot; font-weight:600;&quot;&gt;Modify Service File&lt;/span&gt; box and the path and name of the file to be modified must be provided.&lt;/p&gt;&lt;p&gt;To modify a .cmst.config file CMST will read stdout of the program or process being called. Program output should be individual lines in KEY=VALUE format. If KEY exists in the .cmst.config file it will be replaced by the new VALUE. If KEY does not exist it will be appended. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu alan, bir wifi veya vpn hizmet düğmesine basıldıktan sonra, ancak bağlantı yöntemi ConnMan&apos;a gönderilmeden önce çalıştırılacak bir program veya işlemi belirtmek içindir.  Bu çoğunlukla, openConnect vpn bağlantıları için belirli kısa ömürlü girdileri değiştirmek için yararlı görünen bir .cmst.config dosyasını değiştirmek için kullanılır.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Yürüt&lt;/span&gt; kutusu yalnızca &lt;span style=&quot;font-weight:600;&quot;&gt;Hizmet&lt;/span&gt; kutusunda gösterilen tek hizmet için bağlantı kurulmadan önce yürütülür.  Başka bir hizmete bağlanırken çağrılmayacak.  Bir .cmst.config dosyası değiştirilecekse, &lt;span style=&quot;font-weight:600;&quot;&gt;Hizmet Dosyasını Değiştir&lt;/span&gt; kutusunda bir kontrol yapılmalı ve değiştirilecek dosyanın yolu ve adı belirtilmelidir.  sağlanmıştır.&lt;/p&gt;&lt;p&gt;.cmst.config dosyasını değiştirmek için CMST, çağrılan programın veya işlemin stdout&apos;unu okuyacaktır.  Program çıktısı ANAHTAR=DEĞER formatında ayrı satırlar olmalıdır. .cmst.config dosyasında ANAHTAR varsa, yeni DEĞER ile değiştirilecektir.  ANAHTAR yoksa eklenecektir. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu alan, bir wifi veya vpn hizmet düğmesine basıldıktan sonra, ancak bağlantı yöntemi ConnMan&apos;a gönderilmeden önce çalıştırılacak bir program veya işlemi belirtmek içindir. Bu çoğunlukla, openConnect vpn bağlantıları için belirli kısa ömürlü girdileri değiştirmek için yararlı görünen bir .cmst.config dosyasını değiştirmek için kullanılır.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Yürüt&lt;/span&gt; kutusu yalnızca &lt;span style=&quot;font-weight:600;&quot;&gt;Hizmet&lt;/span&gt; kutusunda gösterilen tek hizmet için bağlantı kurulmadan önce yürütülür. Başka bir hizmete bağlanırken çağrılmayacak. Bir .cmst.config dosyası değiştirilecekse, &lt;span style=&quot;font-weight:600;&quot;&gt;Hizmet Dosyasını Değiştir&lt;/span&gt; kutusunda bir kontrol yapılmalı ve değiştirilecek dosyanın yolu ve adı belirtilmelidir. sağlanmıştır.&lt;/p&gt;&lt;p&gt;.cmst.config dosyasını değiştirmek için CMST, çağrılan programın veya işlemin stdout&apos;unu okuyacaktır. Program çıktısı ANAHTAR=DEĞER formatında ayrı satırlar olmalıdır. .cmst.config dosyasında ANAHTAR varsa, yeni DEĞER ile değiştirilecektir. ANAHTAR yoksa eklenecektir. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1664"/>
@@ -1609,7 +1609,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
         <source>Strength: %1%
 </source>
-        <translation>Güç: %1%
+        <translation>Güç: %1
 </translation>
     </message>
     <message>
@@ -2478,7 +2478,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable or disable the IPv6 privacy extension as described in RFC 4941.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Disabled&lt;/span&gt;: privacy extension is disabled and normal autoconf addresses are used.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled&lt;/span&gt;: the system prefers to use public addresses over temporary addresses.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prefered&lt;/span&gt;: privacy extension is enabled and the system prefers temporary addresses over public addresses.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IPv6 gizlilik uzantısını RFC 4941&apos;de açıklandığı gibi etkinleştirin veya devre dışı bırakın,&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Devre Dışı&lt;/span&gt;: gizlilik uzantısı devre dışı bırakılır ve normal autoconf adresleri kullanılır.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Etkin&lt;/span&gt;: sistem genel adresleri geçici adresler yerine kullanmayı tercih eder.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tercih Edilen&lt;/span&gt;: gizlilik uzantısı etkinleştirilir ve sistem genel adreslere göre geçici adresleri tercih eder.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {6 ?} {4941.?} {600;?} {600;?} {600;?}</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IPv6 gizlilik uzantısını RFC 4941&apos;de açıklandığı gibi etkinleştirin veya devre dışı bırakın,&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Devre Dışı&lt;/span&gt;: gizlilik uzantısı devre dışı bırakılır ve normal autoconf adresleri kullanılır.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Etkin&lt;/span&gt;: sistem genel adresleri geçici adresler yerine kullanmayı tercih eder.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tercih Edilen&lt;/span&gt;: gizlilik uzantısı etkinleştirilir ve sistem genel adreslere göre geçici adresleri tercih eder.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {6 ?} {4941.?} {600;?} {600;?} {600;?}</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="399"/>
@@ -2534,7 +2534,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="41"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked this service will auto-connect when no other connection is available. This is only available for services marked &amp;quot;Favorite&amp;quot;. &lt;/p&gt;&lt;p&gt;The service will not auto-connect while roaming.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse, başka bir bağlantı olmadığında bu hizmet otomatik olarak bağlanır. Bu yalnızca &amp;quot;Sık Kullanılan&amp;quot; olarak işaretlenmiş hizmetler için kullanılabilir. &lt;/p&gt;&lt;p&gt;Hizmet dolaşım sırasında otomatik olarak bağlanmaz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşaretlenirse, başka bir bağlantı olmadığında bu hizmet otomatik olarak bağlanır. Bu yalnızca &amp;quot;Sık Kullanılan&amp;quot; olarak işaretlenmiş hizmetler için kullanılabilir. &lt;/p&gt;&lt;p&gt;Hizmet dolaşım sırasında otomatik olarak bağlanmaz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="73"/>
@@ -2646,7 +2646,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="619"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check to enable mDNS.  Note that mDNS requires a DNS backend which supports it.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MDNS&apos;yi etkinleştirmek için işaretleyin. MDNS&apos;nin onu destekleyen bir DNS arka ucu gerektirdiğini unutmayın.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MDNS&apos;yi etkinleştirmek için işaretleyin. MDNS&apos;nin onu destekleyen bir DNS arka ucu gerektirdiğini unutmayın.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used when &amp;quot;manual&amp;quot; is set.List of proxy URIs.  The URI without a protocol will be interpreted as the generic proxy URI.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -3503,7 +3503,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="63"/>
         <source>gadget</source>
         <comment>connman type string</comment>
-        <translation type="unfinished">gadget</translation>
+        <translation>gereç</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="64"/>
@@ -3665,7 +3665,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="93"/>
         <source>Operation aborted</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Operation aborted</translation>
+        <translation>İşlem iptal edildi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="94"/>
@@ -4774,7 +4774,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1118"/>
         <source>none</source>
-        <translation type="unfinished">yok</translation>
+        <translation>yok</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1123"/>
@@ -5476,7 +5476,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="518"/>
         <source>The conf file will contain the &lt;b&gt;auth-user-pass&lt;/b&gt; entry which will require prompts sent to stdout and a reply on stdin.  This cannot be handled by Connman nor by CMST.&lt;p&gt;If this entry is removed you will need to create a &quot;user:pass&quot; file in order to have Connman make the VPN connection. In the next step you will be asked if you want to create this file and you will prompted for the user name and password.&lt;p&gt;&lt;b&gt;Do you wish to remove this entry?&lt;/b&gt;</source>
-        <translation type="unfinished">Yapılandırma dosyası, stdout&apos;a gönderilen komut istemlerini ve stdin&apos;de yanıt gerektiren &lt;b&gt;auth-user-pass&lt;/b&gt; girişini içerecektir. Bu Connman veya CMST tarafından ele alınamaz.&lt;p&gt;Bu giriş kaldırılırsa, Connman&apos;ın VPN bağlantısını yapmasını sağlamak için bir &quot;kullanıcı:parola&quot; dosyası oluşturmanız gerekir. Bir sonraki adımda, bu dosyayı oluşturmak isteyip istemediğiniz sorulacak ve sizden kullanıcı adı ve parola istenecektir.&lt;p&gt;&lt;b&gt;Bu girişi kaldırmak istiyor musunuz?&lt;/b&gt;</translation>
+        <translation>Yapılandırma dosyası, stdout&apos;a gönderilen komut istemlerini ve stdin&apos;de yanıt gerektiren &lt;b&gt;auth-user-pass&lt;/b&gt; girişini içerecektir. Bu Connman veya CMST tarafından ele alınamaz.&lt;p&gt;Bu giriş kaldırılırsa, Connman&apos;ın VPN bağlantısını yapmasını sağlamak için bir &quot;kullanıcı:parola&quot; dosyası oluşturmanız gerekir. Bir sonraki adımda, bu dosyayı oluşturmak isteyip istemediğiniz sorulacak ve sizden kullanıcı adı ve parola istenecektir.&lt;p&gt;&lt;b&gt;Bu girişi kaldırmak istiyor musunuz?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="532"/>
