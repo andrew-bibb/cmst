@@ -150,7 +150,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="345"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login. If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Browser Users:&lt;/span&gt; Note that Brave does not seem to accept a URL to start with. After the browser starts you will need to enter the URL manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login. If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Browser Users:&lt;/span&gt; Note that Brave does not seem to accept a URL to start with. After the browser starts you will need to enter the URL manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan 要求您打开网络浏览器以完成登录过程.&lt;/p&gt;&lt;p&gt;我们已对您的 PATH 进行了浏览器扫描，所有找到的浏览器都显示在下面的列表中。您可以选择任何一个浏览器进行登录。如果列表中未显示您的浏览器，您可以直接在&lt;span style=&quot; font-weight:600;&quot;&gt; 选择或输入浏览器&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;要启动浏览器，请点击 &lt;span style=&quot; font-weight:600;&quot;&gt;启动浏览器&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;如果您想手动登录，请关闭此对话框，启动网络浏览器，然后进入显示在 &lt;span style=&quot; font-weight:600;&quot;&gt;登录网址&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave 浏览器用户:&lt;/span&gt; 请注意，Brave 似乎不接受 URL。浏览器启动后，您需要手动输入 URL. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers we found are shown below as active. You may select any one browser to use it for the login. If your web browser is not shown active, or is not listed at all, select &lt;span style=&quot; font-weight:600;&quot;&gt;Other&lt;/span&gt; and type the command you would use to start your browser from a command line in the text box. To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown below:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -1134,7 +1134,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="294"/>
         <source>ID:Pass</source>
-        <translation type="unfinished">ID:Pass</translation>
+        <translation>ID:通过</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="301"/>
@@ -1198,17 +1198,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="582"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service is of type VPN. It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;所有服务的默认配置方法都是自动或类似 DHCP 的方法.对于大多数典型使用情况来说，这已经足够好了，但如果不是这样，此按钮将允许手动配置所选服务的以太网和 IP 设置.&lt;/p&gt;&lt;p&gt;如果服务是通过外部配置文件提供的，或者服务类型为 VPN，则此按钮将被禁用.无法修改这些服务的属性.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="692"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;本页显示了已知的 WiFi 服务. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; 网络的 SSID.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; 此栏中的心形符号表示该计算机以前曾使用此服务连接过网络.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; 显示此服务的连接状态。将鼠标悬停在图标上可弹出文字说明。在线表示互联网连接可用并已验证。就绪 &quot;表示已成功连接设备。 &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;描述此服务使用的安全类型。可能的值是 &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;信号强度:&lt;/span&gt; WiFi 信号的强度，标准值为 0 至 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="832"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;本页显示已配置的 VPN 服务。表中某些单元格可能只有在建立连接后才可用. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; 配置文件中的名称.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; VPN 类型 (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; 显示此服务的连接状态.将鼠标悬停在图标上可弹出文字说明. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;主机: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1318"/>
@@ -1218,7 +1218,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1321"/>
         <source>Enable VPN Internet Kill Switch</source>
-        <translation>启用 VPN 互联网阻却开关</translation>
+        <translation>启用 VPN 互联网开关</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1268"/>
@@ -1243,42 +1243,42 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="640"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to edit the service. &lt;/p&gt;&lt;p&gt;The service must have previously been successfully connected (Favorite is true) for this button to work. Pressing &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; will remove the service and then request credentials to establish the connection. If the service is currently connected it will be disconnected first. If the service required a passphrase then the old passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;Connman does not provide any methods to retrieve credentials (passphrases, etc.) as that is insecure. CMST will not work around this protection. All this button really does is automate pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Remove&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; buttons above. Make sure you know all of the credentials to reconnect as the existing credentials will be cleared when this button is pressed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;从下表中选择一项 WIFI 服务，然后按此按钮编辑该服务. &lt;/p&gt;&lt;p&gt;服务之前必须已成功连接（Favorite 为 true），此按钮才会起作用. Pressing &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; 将删除服务，然后请求凭证以建立连接。如果服务当前已连接，则会首先断开连接。如果服务需要口令，那么旧口令将被清除和遗忘.&lt;/p&gt;&lt;p&gt;Connman 不提供任何检索凭据的方法(密码,等) 因为这是不安全的。CMST 无法绕过这种保护。这个按钮的真正作用是自动按下 &lt;span style=&quot; font-weight:600;&quot;&gt;移除&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; 按钮。请确保您知道重新连接的所有凭据，因为按下此按钮后，现有凭据将被清除.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="643"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>编辑</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="650"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.  This will also clear any selections in the table below.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;强制重新扫描所有 WiFi 。这类似于发出命令&lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; 命令行。 这也将清除下表中的任何选择.&lt;/p&gt;&lt;p&gt;扫描进行时，按钮将处于非活动状态.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="815"/>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>创建</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1179"/>
         <source>Colorize</source>
-        <translation>上色</translation>
+        <translation>颜色</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1216"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide the CMST tray icon during normal operations. Normal operations are defined as having the Global state in an &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; mode. Any other state will cause the icon to be displayed in the system tray.  CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在正常运行期间隐藏 CMST 托盘图标。正常运行的定义是全局状态处于 &lt;span style=&quot; font-weight:600;&quot;&gt;在线&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;准备&lt;/span&gt; 模式。任何其他状态都会导致图标显示在系统托盘中。 即使图标被隐藏，CMST 仍在运行.&lt;/p&gt;&lt;p&gt;如果在图标隐藏时 CMST 已最小化，则需要启动另一个 CMST 实例才能恢复界面。第二个实例将从第一个实例恢复界面，然后立即终止。 &lt;/p&gt;&lt;p&gt;如果 CMST 在托盘图标可见时被最小化，则只需单击托盘图标即可恢复界面. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1219"/>
         <source>Hide Tray Icon Unless Needed</source>
-        <translation type="unfinished"></translation>
+        <translation>除非需要，否则隐藏托盘图标</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1226"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the CMST icon will be hidden in the system tray. CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果选中，CMST 图标将隐藏在系统托盘中。即使图标被隐藏，CMST 仍在运行.&lt;/p&gt;&lt;p&gt;如果在图标隐藏时 CMST 已最小化，则需要启动另一个 CMST 实例才能恢复界面。第二个实例将从第一个实例恢复界面，然后立即终止. &lt;/p&gt;&lt;p&gt;如果 CMST 在托盘图标可见时被最小化，则只需单击托盘图标即可恢复界面. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1377"/>
@@ -1293,27 +1293,27 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1562"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-I&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-scale&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Scale  icons and other artwork in CMST.  For High DPI moitors it may be necessary to specify a scale factor on icons and other artwork in CMST.  Default scale is 1.0.  You may override the default using this option. &lt;/p&gt;&lt;p&gt;For High DPI monitors a factor of 2 has been found to be good.  Valid values of scale factor are  from 1.0 to 3.0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;命令行选项: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-I&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-scale&lt;/span&gt;&lt;/p&gt;&lt;p&gt;缩放 CMST 中的图标和其他图样。 对于高分辨率显示器，可能有必要在 CMST 中指定图标和其他图样的比例因子。 默认比例为 1.0。 您可以使用此选项覆盖默认值. &lt;/p&gt;&lt;p&gt;对于高 DPI 显示器来说，2 倍的比例比较合适。 比例系数的有效值为 1.0 至 3.0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1565"/>
         <source>Icon Scale Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>图标比例系数</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1471"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon scale factor. If the box is disabled by clearing the checkbox at the left the value contained in this field will be ignored.&lt;/p&gt;&lt;p&gt;For High DPI monitors a factor of 2 has been found to be good. Valid values of scale factor are from 1.0 to 3.0. Default value is 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图标比例系数。如果通过清除左侧的复选框禁用了该框，则该字段中包含的值将被忽略.&lt;/p&gt;&lt;p&gt;对于高 DPI 显示器来说，2 倍的比例比较合适。比例系数的有效值为 1.0 至 3.0。默认值为 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1503"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created the proram will not be able to start minimized. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;p&gt;If you plan to start with the main dialog shown on screen there is no reason to use this option. This is only intended to be used for starting minimized.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;命令行选项: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;以秒为单位指定启动系统托盘图标前的等待时间（默认为 0 秒）.&lt;/p&gt;&lt;p&gt;如果启动 CMST 并试图在系统托盘本身创建之前创建一个托盘图标，则该程序将无法最小化启动。程序自动启动时有时会出现这种情况。如果您知道托盘将在系统启动后存在，您可以指定一个等待时间，CMST 将等待该秒数后再尝试创建托盘图标。这样做是为了让窗口管理器或面板有时间创建托盘，然后我们再尝试在托盘中放置图标。.&lt;/p&gt;&lt;p&gt;如果您计划从屏幕上显示的主对话框启动，则没有理由使用此选项。该选项仅用于启动最小化的.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1626"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB. If the spedified color matches the tray background we&apos;ve effectively created fake transparency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用于解决系统托盘图标显示为白色或黑色背景而非透明的 QT bug.&lt;/p&gt;&lt;p&gt;您可以在此指定图标背景颜色。格式为 RRGGBB 形式的十六进制数字。如果加速后的颜色与托盘背景相匹配，我们就有效地创建了虚假透明度.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1639"/>
@@ -1497,7 +1497,7 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2030"/>
         <source>IDPass</source>
-        <translation>IDPass</translation>
+        <translation>ID 通行证</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2033"/>
@@ -1541,17 +1541,17 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="447"/>
         <source>&amp;Colorize</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;着色</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="450"/>
         <source>&amp;Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;透明度</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="551"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5&lt;center&gt;Connman version %6</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;%1 是一个程序，用于连接 Connman 守护进程，并提供系统托盘控制功能.&lt;br&gt;&lt;center&gt;版本 &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;发布日期: %3&lt;center&gt;版权声明c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;构建信息:&lt;/b&gt;&lt;center&gt;使用 QT 版本编译 %5&lt;center&gt;Connman version %6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="578"/>
@@ -1792,27 +1792,27 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="593"/>
         <source>&lt;center&gt;This program uses artwork from &lt;b&gt;Freepik&lt;/b&gt; obtained from www.flaticon.com:&lt;br&gt;&lt;br&gt;Released under the Flaticon Basic License&lt;br&gt;&lt;br&gt;&lt;b&gt;Artwork files:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;该程序使用的作品来自 &lt;b&gt;Freepik&lt;/b&gt;从 www.flaticon.com 获取:&lt;br&gt;&lt;br&gt;根据 Flaticon Basic License 发布&lt;br&gt;&lt;br&gt;&lt;b&gt;图样文件:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1060"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation> 信息</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1061"/>
         <source>No provisioning files created by %1 were found.&lt;br&gt;There are no VPN services which can be removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>未找到由 %1 创建的配置文件. &lt;br&gt;没有可以删除的 VPN 服务.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1071"/>
         <source>%1 - Select File</source>
-        <translation type="unfinished">%1 - 选择文件</translation>
+        <translation>%1 - 选择文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1072"/>
         <source>Select a file to be deleted.</source>
-        <translation type="unfinished">选择要删除的文件。</translation>
+        <translation>选择要删除的文件。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1756"/>
@@ -1832,7 +1832,7 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1763"/>
         <source>Service Name: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>服务名称: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1764"/>
@@ -2140,7 +2140,7 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3347"/>
         <source>Background Color for Fake Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>伪透明背景颜色</translation>
     </message>
     <message>
         <source>%1On%1%1</source>
@@ -2254,7 +2254,7 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2543"/>
         <source>&lt;br&gt;Powered </source>
-        <translation>&lt;br&gt;加电 </translation>
+        <translation>&lt;br&gt;电源 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2544"/>
@@ -2340,7 +2340,7 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1008"/>
         <source>You need to select a Wifi service before pressing the edit button.</source>
-        <translation type="unfinished"></translation>
+        <translation>按编辑按钮前，您需要选择 Wifi 服务.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1118"/>
@@ -2534,7 +2534,7 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/iconman/iconman.cpp" line="401"/>
         <source>A new icon definition file will be installed to &lt;b&gt;%1&lt;/b&gt; and a backup of the old definition file has been created as &lt;b&gt;%2&lt;/b&gt;                   &lt;p&gt;If the original definition file was customized and you wish to retain those changes you will need to manually merge them into the new file.                    &lt;p&gt;If the original was never customized or you just wish to delete the backup now you may select &lt;i&gt;Discard&lt;/i&gt; to delete the backup or &lt;i&gt;Save&lt;/i&gt; to retain it.</source>
-        <translation type="unfinished"></translation>
+        <translation>新图标定义文件将安装到 &lt;b&gt;%1&lt;/b&gt; 旧文件的备份已创建为&lt;b&gt;%2&lt;/b&gt;                   &lt;p&gt;如果原始定义文件经过定制，而您希望保留这些更改，则需要手动将它们合并到新文件中.                    &lt;p&gt;如果原始文件从未定制过，或者您只想现在删除备份，您可以选择 &lt;i&gt;丢弃&lt;/i&gt; 删除备份或 &lt;i&gt;Save&lt;/i&gt; 保留它.</translation>
     </message>
 </context>
 <context>
@@ -2718,12 +2718,12 @@ p，li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="111"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The list of manually configured time servers.&lt;/p&gt;&lt;p&gt;The first entry in the list represents the timeserver with the highest priority.&lt;/p&gt;&lt;p&gt;When using manual configuration this setting is useful to override all the other timeserver settings. This is service specific, hence only the values for the default service are used.&lt;/p&gt;&lt;p&gt;Changes to this property will result in restart of NTP query.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, vertical bar, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;手动配置的时间服务器列表.&lt;/p&gt;&lt;p&gt;列表中的第一个条目代表最高优先级的时间服务器.&lt;/p&gt;&lt;p&gt;使用手动配置时，该设置可覆盖所有其他时间服务器设置。该设置针对特定服务，因此只使用默认服务的值.&lt;/p&gt;&lt;p&gt;更改该属性将导致 NTP 查询重启.&lt;/p&gt;&lt;p&gt;输入一个或多个 IP 地址。用逗号、分号、竖线或空格分隔输入的每个地址.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="149"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;List of manually configures search domains.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, vertical bar, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;手动配置搜索域列表.&lt;/p&gt;&lt;p&gt;输入一个或多个 IP 地址。用逗号、分号、竖线或空格分隔输入的每个地址.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="195"/>
@@ -2733,7 +2733,11 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The IPv4 address to use for this connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;此连接使用的 IPv4 地址.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="216"/>
@@ -2743,7 +2747,11 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The IPv4 gateway for this connection. This field is optional and may be left blank&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;此连接的网关。此字段为可选项，可以留空&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="247"/>
@@ -2753,12 +2761,16 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The IPv4 netmask for this connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;此连接的子网掩码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Possible values of &lt;span style=&quot; font-weight:600;&quot;&gt;dhcp&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt;, and &lt;span style=&quot; font-weight:600;&quot;&gt;off&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt; is selected boxes for &lt;span style=&quot; font-weight:600;&quot;&gt;Address&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Netmask&lt;/span&gt; and&lt;span style=&quot; font-weight:600;&quot;&gt; Gateway&lt;/span&gt; will become visible.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Possible values of &lt;span style=&quot; font-weight:600;&quot;&gt;dhcp&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt;, and &lt;span style=&quot; font-weight:600;&quot;&gt;off&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt; is selected boxes for &lt;span style=&quot; font-weight:600;&quot;&gt;Address&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Netmask&lt;/span&gt; and&lt;span style=&quot; font-weight:600;&quot;&gt; Gateway&lt;/span&gt; 将变得可见.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="321"/>
@@ -2771,30 +2783,38 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled&lt;/span&gt;: the system prefers to use public addresses over temporary addresses.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prefered&lt;/span&gt;: privacy extension is enabled and the system prefers temporary addresses over public addresses.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;启用或禁用 RFC 4941 中的 IPv6 隐私扩展,&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;禁用&lt;/span&gt;: 隐私扩展被禁用，并使用正常的 autoconf 地址.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;启用&lt;/span&gt;: 系统更愿意使用公共地址而不是临时地址.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;优先选择&lt;/span&gt;: 启用隐私扩展，系统优先选择临时地址而不是公共地址.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="366"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv6 gateway for this connection. This field is optional and may be left blank&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;该连接的 IPv4 网关。此文本框为可选，可以留空&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {6 ?}</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;该连接的 IPv4 网关。此文本框为可选，可以留空&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {6 ?}</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="379"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="396"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The prefix length of the IPv6 connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IPv6 连接前缀长度.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="409"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="419"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The IPv6 address to use for this connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将为该连接使用IPv4 地址&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {6 ?}</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;此连接使用的 IPv6 地址&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {6 ?}</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="450"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Possible values are &amp;quot;auto&amp;quot;, &amp;quot;manual&amp;quot;,  and &amp;quot;off&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;可能的值为 &amp;quot;auto&amp;quot;, &amp;quot;manual&amp;quot;,  and &amp;quot;off&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="542"/>
@@ -2805,7 +2825,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="619"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check to enable mDNS.  Note that mDNS requires a DNS backend which supports it.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;选中以启用 mDNS。 注意: mDNS 需要一个支持它的 DNS 后端.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used when &amp;quot;manual&amp;quot; is set.List of proxy URIs.  The URI without a protocol will be interpreted as the generic proxy URI.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -2814,7 +2834,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable or disable the IPv6 privacy extension as described in RFC 4941.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Disabled&lt;/span&gt;: privacy extension is disabled and normal autoconf addresses are used.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled&lt;/span&gt;: the system prefers to use public addresses over temporary addresses.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prefered&lt;/span&gt;: privacy extension is enabled and the system prefers temporary addresses over public addresses.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;启用或禁用 RFC 4941 中描述的 IPv6 隐私扩展.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Disabled&lt;/span&gt;: 隐私扩展被禁用，并使用正常的 autoconf 地址.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled&lt;/span&gt;: 系统更愿意使用公共地址而不是临时地址.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;优先选择&lt;/span&gt;: 启用隐私扩展，系统优先选择临时地址而不是公共地址.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="549"/>
@@ -2825,7 +2845,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Used when &amp;quot;manual&amp;quot; is set. List of proxy URIs. The URI without a protocol will be interpreted as the generic proxy URI.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;设置为 &amp;quot;manual&amp;quot; 时使用. 代理 URI 列表. 不含协议的 URI 将被解释为通用代理 URI.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;输入一个或多个 IP 地址。用逗号、分号或空格分隔输入的每个地址.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="561"/>
@@ -2842,17 +2867,19 @@ p, li { white-space: pre-wrap; }
         <source>Check to enable mDNS. Note that mDNS requires a DNS backend which supports it.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>选中以启用 mDNS。注意:mDNS 需要一个支持它的 DNS 后端.
+
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="607"/>
         <source>&amp;mDNS</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="622"/>
         <source>Enable mDNS </source>
-        <translation type="unfinished"></translation>
+        <translation>启用 mDNS </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="646"/>
@@ -3096,110 +3123,110 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="328"/>
         <source>IPv4</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="331"/>
         <source>Set IPv4 to &quot;off&quot;, &quot;dhcp&quot;, or enter IPV4 address information</source>
-        <translation type="unfinished"></translation>
+        <translation>将 IPv4 设置为 &quot;关闭&quot;、&quot;dhcp &quot;或输入 IPV4 地址信息</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="336"/>
         <source>IPv6</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="339"/>
         <source>Set IPv6 to &quot;off, &quot;auto&quot;, or enter IPv6 address information</source>
-        <translation type="unfinished"></translation>
+        <translation>将 IPv6 设置为 &quot;关闭&quot;、&quot;自动 &quot;或手动输入 IPv6 地址信息</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="373"/>
         <source>DeviceName</source>
-        <translation type="unfinished"></translation>
+        <translation>设备名</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="376"/>
         <source>Interface name where this provisioning applies (ex: eth0)</source>
-        <translation type="unfinished"></translation>
+        <translation>适用此配置的接口名称 (ex: eth0)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="381"/>
         <source>mDNS</source>
-        <translation type="unfinished"></translation>
+        <translation>mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="384"/>
         <source>Set to true if mDNS domains can be resolved and the hostname registered.</source>
-        <translation type="unfinished"></translation>
+        <translation>设为 true可以解析 mDNS 域名并注册主机名.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="389"/>
         <source>AnonymousIdentity</source>
-        <translation type="unfinished"></translation>
+        <translation>匿名用户</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="392"/>
         <source>Anonymous identity string for EAP</source>
-        <translation type="unfinished"></translation>
+        <translation>用于 EAP 的匿名身份字符串</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="397"/>
         <source>SubjectMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>对象匹配</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="400"/>
         <source>Substring to be matched against the subject of the authentication server certificate for EAP</source>
-        <translation type="unfinished"></translation>
+        <translation>要与身份验证服务器证书进行匹配的 EAP 子字符串</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="405"/>
         <source>AltSubjectMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>主题匹配</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="408"/>
         <source>Semicolon separated string of entries to be matched against the alternative subject name of the authentication server certificate for EAP</source>
-        <translation type="unfinished"></translation>
+        <translation>用分号分隔的条目字符串，用于与 EAP 验证服务器证书的替代主题名称匹配</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="413"/>
         <source>DomainSuffixMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>域名后缀匹配</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="416"/>
         <source>A FQDN used as a suffix match requirement for the authentication server.</source>
-        <translation type="unfinished"></translation>
+        <translation>用作身份验证服务器后缀匹配要求的 FQDN.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="421"/>
         <source>DomainMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>域名匹配</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="424"/>
         <source>A FQDN used as a full match requirement for the authentication server.</source>
-        <translation type="unfinished"></translation>
+        <translation>用作身份验证服务器完全匹配要求的 FQDN.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="349"/>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="352"/>
         <source>EAP-PEAP</source>
-        <translation type="unfinished"></translation>
+        <translation>EAP-PEAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="357"/>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="360"/>
         <source>EAP-TLS</source>
-        <translation type="unfinished"></translation>
+        <translation>EAP-TLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="365"/>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="368"/>
         <source>EAP-TTLS</source>
-        <translation type="unfinished"></translation>
+        <translation>EAP-TTLS</translation>
     </message>
     <message>
         <source>IPv4 Address</source>
@@ -3307,22 +3334,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="244"/>
         <source>Substring to be matched against the subject of the authentication server</source>
-        <translation type="unfinished"></translation>
+        <translation>与身份验证服务器主题匹配的子字符串</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="245"/>
         <source>List of entries to be matched against the alternative subject name.</source>
-        <translation type="unfinished"></translation>
+        <translation>与备选主题名称匹配的条目列表.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="246"/>
         <source>A fully qualified domain name used as a full match requirement for the authentication server</source>
-        <translation type="unfinished"></translation>
+        <translation>作为验证服务完全匹配要求的完全合格域名</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="247"/>
         <source>A fully qualified domain name used as a suffix match requirement for the authentication server</source>
-        <translation type="unfinished"></translation>
+        <translation>作为身份验证服务器后缀匹配要求的完全合格域名</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="282"/>
@@ -3357,27 +3384,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="288"/>
         <source>IPv4 Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4 设置</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="289"/>
         <source>IPv6 Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv6 设置</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="290"/>
         <source>Enable mDNS</source>
-        <translation type="unfinished"></translation>
+        <translation>启用 mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="333"/>
         <source>The interface name in which to apply the provisioning (ex. eth0)</source>
-        <translation type="unfinished"></translation>
+        <translation>应用配置的接口名称 (例如. eth0)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="372"/>
         <source>IPv4 Netmask. &lt;br&gt;&lt;br&gt;The entry can be a mask length (example 24) or in the form xxx.xxx.xxx.xxx</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4 子网掩码. &lt;br&gt;&lt;br&gt;条目可以是掩码长度 (例如 24) 或者以 xxx.xxx.xxx.xxx</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="294"/>
@@ -3412,7 +3439,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="330"/>
         <source>Anonymous identity string for EAP.</source>
-        <translation type="unfinished"></translation>
+        <translation>用于 EAP 的匿名身份字符串.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="331"/>
@@ -3432,12 +3459,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="367"/>
         <source>IPv4 Address. &lt;br&gt;&lt;br&gt;Enter the IPv4 network address in the form xxx.xxx.xxx.xxx</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4 地址. &lt;br&gt;&lt;br&gt;输入 IPv4 网络地址，格式为 xxx.xxx.xxx.xxx</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="414"/>
         <source>IPv6 Gateway .&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv6 网关 .&lt;br&gt;&lt;br&gt;这是一个可选条目，如果没有网关条目，请按取消</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="513"/>
@@ -3460,7 +3487,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="378"/>
         <source>IPv4 Gateway.&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4 网关.&lt;br&gt;&lt;br&gt;这是一个可选条目，如果没有网关条目，请按取消</translation>
     </message>
     <message>
         <source>IPv4 Gateway (This is an optional entry)</source>
@@ -3600,7 +3627,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="43"/>
         <source>connman system tray</source>
         <comment>Main Window Title</comment>
-        <translation></translation>
+        <translation>connman 系统托盘</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="44"/>
@@ -3702,7 +3729,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="63"/>
         <source>gadget</source>
         <comment>connman type string</comment>
-        <translation></translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="64"/>
@@ -3762,163 +3789,163 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="75"/>
         <source>wps</source>
         <comment>connman security string</comment>
-        <translation type="unfinished"></translation>
+        <translation>wps</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="76"/>
         <source>wps_advertising</source>
         <comment>connman security string</comment>
-        <translation type="unfinished"></translation>
+        <translation>wps_advertising</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="78"/>
         <source>Invalid arguments</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">非法参数</translation>
+        <translation>非法参数</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="79"/>
         <source>Permission denied</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">拒绝访问</translation>
+        <translation>拒绝访问</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="80"/>
         <source>Passphrase required</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">需要密码</translation>
+        <translation>需要密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="81"/>
         <source>Not registered</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">未注册</translation>
+        <translation>未注册</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="82"/>
         <source>Not unique</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">不唯一</translation>
+        <translation>不唯一</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="83"/>
         <source>Not supported</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">不支持</translation>
+        <translation>不支持</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="84"/>
         <source>Not implemented</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">未实现</translation>
+        <translation>未实现</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="85"/>
         <source>Not found</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">未找到</translation>
+        <translation>未找到</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="86"/>
         <source>No carrier</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">无法承载网络</translation>
+        <translation>无法承载网络</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="87"/>
         <source>In progress</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">进行中</translation>
+        <translation>进行中</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="88"/>
         <source>Already exists</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">已经存在</translation>
+        <translation>已经存在</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="89"/>
         <source>Already enabled</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">已启用</translation>
+        <translation>已启用</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="90"/>
         <source>Already disabled</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">已禁用</translation>
+        <translation>已禁用</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="91"/>
         <source>Already connected</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">已连接</translation>
+        <translation>已连接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="92"/>
         <source>Not connected</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">未连接</translation>
+        <translation>未连接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="93"/>
         <source>Operation aborted</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">操作退出</translation>
+        <translation>操作终止</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="94"/>
         <source>Operation timeout</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">操作超时</translation>
+        <translation>操作超时</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="95"/>
         <source>Invalid service</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">非法服务</translation>
+        <translation>非法服务</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="96"/>
         <source>Invalid property</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">非法属性</translation>
+        <translation>非法属性</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="98"/>
         <source>disabled</source>
         <comment>connman privacy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>禁用</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="99"/>
         <source>enabled</source>
         <comment>connman privacy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>启用</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="100"/>
         <source>prefered</source>
         <comment>connman privacy string - known misspelling but needed to avoid breaking code</comment>
-        <translation type="unfinished"></translation>
+        <translation>首选项</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="101"/>
         <source>preferred</source>
         <comment>connman privacy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>首选项</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="103"/>
         <source>auto</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished">自动</translation>
+        <translation>自动</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="104"/>
         <source>manual</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished">手动</translation>
+        <translation>手动</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="106"/>
@@ -3954,13 +3981,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="112"/>
         <source>auto</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished">自动</translation>
+        <translation>自动</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="113"/>
         <source>manual</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished">手动</translation>
+        <translation>手动</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="114"/>
@@ -3978,7 +4005,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="117"/>
         <source>openconnect</source>
         <comment>connman vpn connection type</comment>
-        <translation>openconnect</translation>
+        <translation>开放连接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="118"/>
@@ -4156,12 +4183,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="32"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Username for authentication.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用于验证的用户名.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="52"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Password for authentication.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用于验证的密码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="62"/>
@@ -4171,27 +4198,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="69"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;End point of this VPN link i.e., the VPN gateway we re trying to connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;此 VPN 链接的终点，即我们试图连接的 VPN 网关.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="79"/>
         <source>Name</source>
-        <translation type="unfinished">名称</translation>
+        <translation>名称</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="86"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the VPN connection we are trying to connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;我们试图连接的 VPN名称.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="98"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Password for decrypting PKCS#8/PKCS#12 client certificate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用于解密的密码 PKCS#8/PKCS#12 客户端证书.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="101"/>
         <source>OpenConnect</source>
-        <translation>OpenConnect</translation>
+        <translation>开放连接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="107"/>
@@ -4201,7 +4228,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="114"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Informational field containing a path name for an additional Certificate of Authority file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;包含附加授权证书文件路径名的信息字段.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="124"/>
@@ -4211,7 +4238,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="131"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Informational field containing a pkcs11 URL or a path name for the client certificate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;包含 pkcs11 URL 或客户证书路径名的信息字段.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="138"/>
@@ -4221,32 +4248,32 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="145"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The OpenConnect cookie value that is used for authenticating the VPN session.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用于验证 VPN 会话的 OpenConnect cookie 值.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="152"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>组</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="159"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Authentication login group.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;身份验证登录组.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="166"/>
         <source>PKCS Client Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>PKCS 客户端证书.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="173"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Informational field containing a PKCS#1/PKCS#8/PKCS#12 URL or a path name for the client certificate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;信息字段包含 PKCS#1/PKCS#8/PKCS#12 客户端证书的 URL 或路径名.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="180"/>
         <source>PKCS Password</source>
-        <translation type="unfinished"></translation>
+        <translation>PKCS 密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="190"/>
@@ -4256,57 +4283,57 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="197"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The OpenConnect server hash used to identify the final server after possible web authentication logins, selections and redirections.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;OpenConnect 服务器哈希值用于在可能的网络验证登录、选择和重定向后识别最终服务器.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="207"/>
         <source>VPN Host</source>
-        <translation>VPN Host</translation>
+        <translation>VPN 主机</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="214"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The final VPN server to use after possible web authentication logins, selections and redirections.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在可能的网络验证登录、选择和重定向后使用的最终 VPN 服务器.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="221"/>
         <source>Second Password</source>
-        <translation type="unfinished"></translation>
+        <translation>第二个密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="228"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Second factor password for authentication.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用于验证的第二要素密码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="235"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indicates that the second factor password is used for the selected authentication group.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;表示所选身份验证组使用第二要素密码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="238"/>
         <source>Use Second Password</source>
-        <translation type="unfinished"></translation>
+        <translation>使用第二密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="248"/>
         <source>Open VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>Open VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="254"/>
         <source>Private Key Password</source>
-        <translation type="unfinished"></translation>
+        <translation>私钥密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="261"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Private key password used to decrypt the encrypted OpenVPN private key file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用于解密加密 OpenVPN 私钥文件的私钥密码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="293"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;这是什么？&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;这是什么？&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="296"/>
@@ -4354,189 +4381,189 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished">会话</translation>
+        <translation>对话框</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="29"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;VPN Type&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;VPN 类型&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="36"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select the type of VPN connection you wish to create.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;选择要创建的 VPN 连接类型.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="46"/>
         <source>OpenConnect</source>
-        <translation type="unfinished">OpenConnect</translation>
+        <translation>OpenConnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="51"/>
         <source>OpenVPN</source>
-        <translation type="unfinished">OpenVPN</translation>
+        <translation>OpenVPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="56"/>
         <source>VPNC</source>
-        <translation type="unfinished">VPNC</translation>
+        <translation>VPNC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="61"/>
         <source>L2TP</source>
-        <translation type="unfinished">L2TP</translation>
+        <translation>L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="66"/>
         <source>PPTP</source>
-        <translation type="unfinished">PPTP</translation>
+        <translation>PPTP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="71"/>
         <source>WireGuard</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="82"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;名称&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="89"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A name for this connection. A name is mandatory but the name may be anything you wish and may contain spaces.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;此连接的名称。名称是必填项，但名称可以是您希望的任何内容，也可以包含空格.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="96"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The VPN server address (example: 1.2.3.4). You may use CIDR notaton if the VPN service accepts it (example: 1.2.3.0/24).  An entry in this field is mandatory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VPN 服务器地址(例如: 1.2.3.4). 如果 VPN 服务接受 CIDR notaton，您可以使用它 (例如: 1.2.3.0/24). 该字段为必填字段.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="106"/>
         <source>VPN Domain Name</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 域名</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="113"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The domain name of the VPN connection (example: corporate.com).  An entry in this field is optional.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VPN 连接的域名（例如：corporate.com）。 此字段中的条目为可选项.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="123"/>
         <source>Networks</source>
-        <translation type="unfinished"></translation>
+        <translation>网络</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Define networks behind the VPN link. If more than one separate by a comma. &lt;/p&gt;&lt;p&gt;Format is newtork/netmask/gateway and gateway may be omitted. Examples 10.10.20.0/255.255.255.0&lt;/p&gt;&lt;p&gt;10.10.20.0/255.255.255.0/10.20.1.5&lt;/p&gt;&lt;p&gt;10.10.20.0/24&lt;/p&gt;&lt;p&gt;2001:db8::1/64&lt;/p&gt;&lt;p&gt;This field is optional but if an entry is made it must follow the format above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定义 VPN 链接后面的网络。如果多于一个，请用逗号隔开. &lt;/p&gt;&lt;p&gt;格式为 网络/子网掩码/网关，网关可以省略。示例10.10.20.0/255.255.255.0&lt;/p&gt;&lt;p&gt;10.10.20.0/255.255.255.0/10.20.1.5&lt;/p&gt;&lt;p&gt;10.10.20.0/24&lt;/p&gt;&lt;p&gt;2001:db8::1/64&lt;/p&gt;&lt;p&gt;此栏为可选项，但如果输入，则必须遵循上述格式.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="140"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;VPN Server Address&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;VPN 服务器地址&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="159"/>
         <source>CA Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>CA 证书</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="166"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;SHA1 certificate fingerprint of the final VPN server after possible web authentication login, selection and redirection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;经过可能的网络验证登录、选择和重定向后，最终 VPN 服务器的 SHA1 证书指纹.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="173"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;File containing other certificate authorities in addition to the ones in the system trust database.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;除系统信任数据库中的证书颁发机构外，还包含其他证书颁发机构的文件.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="180"/>
         <source>Server Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>服务器证书</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="187"/>
         <source>VPN Host</source>
-        <translation type="unfinished">VPN Host</translation>
+        <translation>VPN 主机</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="194"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The final VPN server to use after completing web authentication. &lt;/p&gt;&lt;p&gt;Only usable for extremely simple VPN configurations and should normally be set only via the VPN Agent.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;完成网络验证后使用的最终 VPN 服务器. &lt;/p&gt;&lt;p&gt;仅适用于极其简单的 VPN 配置，通常只能通过 VPN 代理进行设置.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="205"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="611"/>
         <source>MTU</source>
-        <translation type="unfinished"></translation>
+        <translation>MTU</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="212"/>
         <source>Request MTU from server as the MTU of the tunnel.</source>
-        <translation type="unfinished"></translation>
+        <translation>请求服务器将 MTU 作为隧道的 MTU.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="215"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;Request &lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt; from server as the MTU of the tunnel.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;请求 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt; 作为隧道的 MTU.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="242"/>
         <source>Do not advertise IPv6 capability to server</source>
-        <translation type="unfinished"></translation>
+        <translation>不向服务器通告 IPv6 功能</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="245"/>
         <source>Disable IPv6</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用 IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="252"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="255"/>
         <source>Disable DTLS</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用 DTLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="262"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Version 8.2.2.5 of the Cisco ASA software has a bug where it will forget the client&apos;s SSL certificate when HTTP connections are being re-used for multiple requests. So far, this has only been seen on the initial connection, where the server gives an HTTP/1.0 redirect response with an explicit Connection: Keep-Alive directive. OpenConnect as of v2.22 has an unconditional workaround for this, which is never to obey that directive after an HTTP/1.0 response. &lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;However, Cisco&apos;s support team has failed to give any competent response to the bug report and we don&apos;t know under what other circumstances their bug might manifest itself. So this option exists to disable ALL re-use of HTTP sessions and cause a new connection to be made for each request. If your server seems not to be recognising your certificate, try this option. If it makes a difference, please report this information to the openconnect-devel@lists.infradead.org mailing list.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cisco ASA 软件 8.2.2.5 版存在一个bug，当 HTTP 连接被重复用于多个请求时，它会忘记客户端的 SSL 证书。到目前为止，这种情况只出现在初始连接上，服务器会给出一个带有明确 Connection.Keep-Alive 指令的 HTTP/1.0 重定向响应： Keep-Alive 指令。OpenConnect 从 v2.22 版开始无条件地解决了这一问题，即在 HTTP/1.0 响应后不再遵守该指令. &lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;但是，思科的支持团队没有对错误报告做出任何合格的回应，我们也不知道在其他什么情况下他们的错误会显现出来。因此，这个选项的存在是为了禁止所有 HTTP 会话的重复使用，并为每个请求建立一个新的连接。如果您的服务器似乎无法识别您的证书，请尝试此选项。如果效果显著，请将此信息报告给 openconnect-devel@lists.infradead.org 邮件列表.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="265"/>
         <source>Disable Keep Alive</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用 Keep Alive</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="272"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Additional option to define if self signed server certificates are allowed. Not checked this value defaults to &amp;quot;false&amp;quot;.  Affects the OpenConnect internal function only: --servercert is not added to startup parameters and receiving self signed cert from server terminates the connection if set as false (or omitted)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用于定义是否允许自签名服务器证书的附加选项。未选中时，该值默认为 &amp;quot;false&amp;quot;.  仅影响 OpenConnect 内部功能：--servercert 不会添加到启动参数中，如果设置为 false（或省略），从服务器接收自签名证书将终止连接. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="275"/>
         <source>Allow Self Signed Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>允许自签名证书</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="282"/>
         <source>Read cookie from standard input</source>
-        <translation type="unfinished"></translation>
+        <translation>从标准输入中读取 cookie</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="285"/>
         <source>Cookie on stdin</source>
-        <translation type="unfinished"></translation>
+        <translation>Cookie on stdin</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="296"/>
         <source>Authentication Type</source>
-        <translation type="unfinished"></translation>
+        <translation>认证类型</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="303"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;Type of authentication used with OpenConnect. Applicable values are:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;cookie - &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;basic cookie based authentication.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;cookie_with_userpass&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt; - the credentials are used to retrieve the connection cookie, which hides the username from commandline.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;userpass &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;- username and password are used.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;publickey - r&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;equires CACert and UserPrivateKey to be set.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;pkcs&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt; - uses the PKCSClientCert and requests password input.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;Defaults to &amp;quot;cookie&amp;quot;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;OpenConnect 使用的身份验证类型。适用值为:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;cookie - &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;基于 cookie 的基本身份验证.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;带用户密码的 cookie&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt; -凭据用于检索连接 cookie，从而从命令行中隐藏用户名.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;用户密码 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;- 使用用户名和密码.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;公钥 - r&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;需要设置 CACert 和 UserPrivateKey.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600; color:#000000; background-color:#ffffff;&quot;&gt;pkcs&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt; - 使用 PKCSClientCert 并要求输入密码.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; color:#000000; background-color:#ffffff;&quot;&gt;默认为 &amp;quot;cookie&amp;quot;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="307"/>
@@ -4553,1164 +4580,1168 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1113"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1172"/>
         <source>none specified</source>
-        <translation type="unfinished"></translation>
+        <translation>未指定</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="312"/>
         <source>cookie</source>
-        <translation type="unfinished"></translation>
+        <translation>cookie</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="317"/>
         <source>cookie_with_userpass</source>
-        <translation type="unfinished"></translation>
+        <translation>带有用户密码的 cookie</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="322"/>
         <source>userpass</source>
-        <translation type="unfinished"></translation>
+        <translation>用户密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="327"/>
         <source>publickey</source>
-        <translation type="unfinished"></translation>
+        <translation>公钥</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="332"/>
         <source>pkcs</source>
-        <translation type="unfinished"></translation>
+        <translation>pkcs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="360"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;SSL private key file needed by beb authentication when AuthType is set as &lt;span style=&quot; font-weight:600;&quot;&gt;publickey&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;beb 验证所需的 SSL 私钥文件 当 AuthType 设置为 &lt;span style=&quot; font-weight:600;&quot;&gt;公钥&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="367"/>
         <source>User Private Key</source>
-        <translation type="unfinished"></translation>
+        <translation>用户私钥</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="374"/>
         <source>PKCS Client Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>PKCS 客户端证书</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="384"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Certificate and private key in a PKCS#1/PKCS#8/PKCS#12 structure. Needed when AuthType is &lt;span style=&quot; font-weight:600;&quot;&gt;pkcs&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;证书和私人密钥在 PKCS#1/PKCS#8/PKCS#12 structure. 需要当AuthType 为&lt;span style=&quot; font-weight:600;&quot;&gt;pkcs&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="391"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set login usergroup on the remote server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设置远程服务器上的登录用户组.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="398"/>
         <source>User Group</source>
-        <translation type="unfinished"></translation>
+        <translation>用户组</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="405"/>
         <source>Client Cerificate</source>
-        <translation type="unfinished"></translation>
+        <translation>客户端证书</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="415"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Client certificate file, needed by web authentication when authentication type is set as &lt;span style=&quot; font-weight:600;&quot;&gt;publickey&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;客户端证书文件，当身份验证类型设置为 &lt;span style=&quot; font-weight:600;&quot;&gt;公钥&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="430"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This button will import an OpenVPN .opvn file. The .opvn file will be read, processed, and converted to a .conf file with the location of the resulting file entered into the Extra Config box below. The .conf file will be supplied as an argument to the &lt;span style=&quot; font-weight:600;&quot;&gt;--config&lt;/span&gt; option in OpenVPN.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;此按钮将导入 OpenVPN .opvn 文件。将读取、处理 .opvn 文件并将其转换为 .conf 文件，并在下面的 &quot;额外配置 &quot;框中输入生成文件的位置。.conf 文件将作为参数提供给 &lt;span style=&quot; font-weight:600;&quot;&gt;--配置&lt;/span&gt; OpenVPN中的选项.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="433"/>
         <source>Import OPVN File</source>
-        <translation type="unfinished"></translation>
+        <translation>导入 OPVN 文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="440"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This will allow the creation of a User/Password file.  You will be prompted to supply the OpenVPN user name and password for the VPN service.  This file is used in conjunction with the &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt; option.  The location of the file created will be automatically entered in the User/Password box below.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;这将允许创建一个用户/密码文件。 系统会提示你提供 VPN 服务的 OpenVPN 用户名和密码。 该文件与 &lt;span style=&quot; font-weight:600;&quot;&gt;--授权用户密码&lt;/span&gt; 选项。 创建文件的位置将自动输入下面的用户/密码框中.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="443"/>
         <source>Create User/Pass</source>
-        <translation type="unfinished"></translation>
+        <translation>创建用户/密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="467"/>
         <source>User/Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>用户/密码文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="474"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;CA Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;CA 证书&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="481"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local peer&apos;s signed certificate in .pem format which must be signed by a certificate authority whose certificate is in --ca file.&lt;/p&gt;&lt;p&gt;Each peer in an OpenVPN link running in TLS mode should have its own certificate and private key file. In addition, each certificate should have been signed by the key of a certificate authority whose public key resides in the --ca certificate authority file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;本地同行的签名证书（.pem 格式），必须由--ca 文件中的证书颁发机构签署.&lt;/p&gt;&lt;p&gt;以 TLS 模式运行的 OpenVPN 链路中的每个对端都应有自己的证书和私钥文件。此外，每份证书都应由证书颁发机构的密钥签署，该机构的公钥位于 --ca 证书颁发机构文件中.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="488"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Signed Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;签名证书&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="495"/>
         <source>Extra Config</source>
-        <translation type="unfinished"></translation>
+        <translation>其他配置</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="502"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Private Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;私钥&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="509"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Certificate authority (CA) file in .pem format, also referred to as the root certificate. This file can have multiple certificates in  .pem  format,  concatenated together.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;.pem 格式的证书颁发机构 (CA) 文件，也称为根证书。该文件可包含多个 .pem 格式的证书，并将其连接在一起.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="516"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Location of a user/password file to be used in conjunction with the &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt; option.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用户/密码文件的位置，该文件将与&lt;span style=&quot; font-weight:600;&quot;&gt;--授权用户密码&lt;/span&gt; 选项.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="523"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local peer&apos;s private key in .pem format. Use the private key which was generated when you built your peer&apos;s certificate&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;本地同行的 .pem 格式私钥。使用建立同行证书时生成的私钥&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="530"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;OpenVPN config file that can contain extra options not supported by the ConnMan OpenVPN plugin.&lt;/p&gt;&lt;p&gt;When an OpenVPN .opvn file is imported the contents of that are placed in the extra config file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;可包含 ConnMan OpenVPN 插件不支持的额外选项的 OpenVPN 配置文件.&lt;/p&gt;&lt;p&gt;导入 OpenVPN .opvn 文件时，其内容会被放入额外的配置文件中.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="537"/>
         <source>Certificate Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>证书密码文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="544"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For the extremely security conscious, it is possible to protect your private key with a password.  Location of the file containing the password is in this box. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;对于安全意识极强的用户，可以使用密码保护私人密钥。 包含密码的文件位置在此框中. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="553"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Don&apos;t cache &lt;span style=&quot; font-weight:600;&quot;&gt;--askpass&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;--auth-user-pass&lt;/span&gt; username names and passwords in virtual memory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;无缓存 &lt;span style=&quot; font-weight:600;&quot;&gt;--请求通行&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;--授权用户密码&lt;/span&gt; 虚拟内存中的用户名和密码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="556"/>
         <source>Don&apos;t cache password</source>
-        <translation type="unfinished"></translation>
+        <translation>不缓存密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="565"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;DEPRECATED&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Enable LZO compression algorithm.  Compression is generally not recommended.  VPN tunnels which use compression are suspectible to the VORALCE attack vector. Use LZO compression may add up to 1 byte per packet for incompressible data. mode may be yes, no, or adaptive (default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;取消&lt;/span&gt;&lt;/p&gt;&lt;p&gt;启用 LZO 压缩算法.  一般不建议压缩。 使用压缩的 VPN 隧道容易受到 VORALCE 攻击向量的攻击。对于不可压缩的数据，使用 LZO 压缩可能会使每个数据包增加 1 个字节.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="574"/>
         <source>adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>适应性</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="579"/>
         <source>yes</source>
-        <translation type="unfinished"></translation>
+        <translation>是</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="584"/>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>否</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="592"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This option is deprecated for server-client mode. Options &lt;span style=&quot; font-weight:600;&quot;&gt;--data-ciphers&lt;/span&gt; or possibly -&lt;span style=&quot; font-weight:600;&quot;&gt;-data-ciphers-fallback&lt;/span&gt; should be used instead. Encrypt data channel packets with the specified cipher algorithm.&lt;/p&gt;&lt;p&gt;The default is BF-CBC, an abbreviation for Blowfish in Cipher Block Chaining mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;对于服务器-客户端模式，该选项已被弃用。选项 &lt;span style=&quot; font-weight:600;&quot;&gt;--数据密码&lt;/span&gt;或者 -&lt;span style=&quot; font-weight:600;&quot;&gt;-数据密码校验&lt;/span&gt; 而应使用 使用指定的加密算法加密数据通道数据包.&lt;/p&gt;&lt;p&gt;默认值为 BF-CBC，是 &quot; Blowfish in Cipher Block Chaining mode&quot;的缩写.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="604"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP/UDP port number.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP/UDP 端口号.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="618"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the protocol for communicating with remote host. The protocal can be &lt;span style=&quot; font-weight:600;&quot;&gt;udp, tcp-client, or tcp-server.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;You can also limit OpenVPN to use only IPv4 or only IPv6 by specifying the protocol as &lt;span style=&quot; font-weight:600;&quot;&gt;udp4, tcp4-client, tcp4-server or udp6, tcp6-client, tcp6-server&lt;/span&gt;, respectively. &lt;/p&gt;&lt;p&gt;The default protocol is udp when --proto is not specified.&lt;/p&gt;&lt;p&gt;For UDP operation, --proto udp should be specified on both peers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;指定与远程主机通信的协议。协议可以是 &lt;span style=&quot; font-weight:600;&quot;&gt;udp, tcp-client, or tcp-server.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;您还可以通过将协议指定为 &lt;span style=&quot; font-weight:600;&quot;&gt;udp4, tcp4-client, tcp4-server or udp6, tcp6-client, tcp6-server&lt;/span&gt;, respectively. &lt;/p&gt;&lt;p&gt;未指定 --proto 时，默认协议为 udp.&lt;/p&gt;&lt;p&gt;对于 UDP 操作，应在两个对等机上指定--proto udp.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="627"/>
         <source>udp</source>
-        <translation type="unfinished"></translation>
+        <translation>udp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="632"/>
         <source>udp4</source>
-        <translation type="unfinished"></translation>
+        <translation>udp4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="637"/>
         <source>udp6</source>
-        <translation type="unfinished"></translation>
+        <translation>udp6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="642"/>
         <source>tcp-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="647"/>
         <source>tcp4-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp4-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="652"/>
         <source>tcp6-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp6-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="657"/>
         <source>tcp-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="662"/>
         <source>tcp4-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp4-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="667"/>
         <source>tcp6-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp6-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="675"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify which device type are we using. Device-type should be tun (OSI Layer 3) or tap (OSI Layer 2).&lt;/p&gt;&lt;p&gt;Only use this option if the TUN/TAP device used with &lt;span style=&quot; font-weight:600;&quot;&gt;--dev&lt;/span&gt;  does not begin with tun or tap.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;指定我们使用的设备类型。设备类型应为 tun（OSI 第 3 层）或 tap（OSI 第 2 层）.&lt;/p&gt;&lt;p&gt;只有在与 TUN/TAP 设备一起使用时才使用该选项&lt;span style=&quot; font-weight:600;&quot;&gt;--dev&lt;/span&gt;  不以 tun 或 tap 开头.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="684"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1177"/>
         <source>tun</source>
-        <translation type="unfinished"></translation>
+        <translation>tun</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="689"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1182"/>
         <source>tap</source>
-        <translation type="unfinished"></translation>
+        <translation>tap</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="697"/>
         <source>Protocol</source>
-        <translation type="unfinished"></translation>
+        <translation>协议</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="704"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Removed in OpenVPN 2.5.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The nsCertType field is no longer supported in recent SSL/TLS libraries. If your certificates does not include key usage and extended key usage fields, they must be upgraded and the &lt;span style=&quot; font-weight:600;&quot;&gt;--remote-cert-tls&lt;/span&gt; option should be used instead.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;已在 OpenVPN 2.5 中删除.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;最近的 SSL/TLS 库不再支持 nsCertType 字段。如果证书不包含密钥使用和扩展密钥使用字段，则必须升级证书，并将 &lt;span style=&quot; font-weight:600;&quot;&gt;--remote-cert-tls&lt;/span&gt;选项来代替.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="713"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="796"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="978"/>
         <source>server</source>
-        <translation type="unfinished"></translation>
+        <translation>服务器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="718"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="791"/>
         <source>client</source>
-        <translation type="unfinished"></translation>
+        <translation>客户端</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="726"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Authenticate data channel packets and (if enabled) tls-auth control channel packets with HMAC using the specified message digest algorithm. (The default is SHA1 ).&lt;/p&gt;&lt;p&gt;HMAC is a commonly used message authentication algorithm (MAC) that uses a data string, a secure hash algorithm and a key to produce a digital signature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用指定的消息摘要算法通过 HMAC 验证数据通道数据包和 tls-auth 控制通道数据包（如果启用）。(默认为 SHA1）.&lt;/p&gt;&lt;p&gt;HMAC 是一种常用的信息验证算法 (MAC)，它使用数据字符串、安全散列算法和密钥来生成数字签名.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="733"/>
         <source>Remote Certificate TLS</source>
-        <translation type="unfinished"></translation>
+        <translation>TLS 远程证书</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="740"/>
         <source>NS Certificate Type</source>
-        <translation type="unfinished"></translation>
+        <translation>NS 证书类型</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="747"/>
         <source>Fast LZO Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>LZO 快速压缩</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="754"/>
         <source>Port</source>
-        <translation type="unfinished"></translation>
+        <translation>端口</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="761"/>
         <source>Cipher</source>
-        <translation type="unfinished"></translation>
+        <translation>加密</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="768"/>
         <source>Authenticate HMAC</source>
-        <translation type="unfinished"></translation>
+        <translation>验证 HMAC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="775"/>
         <source>Device Type</source>
-        <translation type="unfinished"></translation>
+        <translation>硬件类型</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="782"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require that peer certificate was signed with an explicit key usage and extended key usage based on RFC3280 TLS rules.&lt;/p&gt;&lt;p&gt;This is a useful security option for clients to ensure that the host they connect to is a designated server. Or the other way around; for a server to  verify that only hosts with a client certificate can connect.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要求根据 RFC3280 TLS 规则，以明确的密钥用法和扩展密钥用法签署对等方证书.&lt;/p&gt;&lt;p&gt;对于客户端来说，这是一个有用的安全选项，可以确保他们连接的主机是指定的服务器。反之亦然，服务器可验证只有持有客户证书的主机才能连接.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="804"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the tunnel MTU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设置隧道 MTU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="819"/>
         <source>User Password</source>
-        <translation type="unfinished"></translation>
+        <translation>用户密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="826"/>
         <source>Group Password</source>
-        <translation type="unfinished"></translation>
+        <translation>组密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="833"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your group password in cleartext.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;您的组密码为明文.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="840"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Group User Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;用户组名称&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="847"/>
         <source>User Name</source>
-        <translation type="unfinished"></translation>
+        <translation>用户名</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="854"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your Xauth username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;您的 Xauth 用户名.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="861"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your group username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;您的群组用户名.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="868"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your Xauth password in clear text.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;您的 Xauth 密码为明文.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="879"/>
         <source>Domain</source>
-        <translation type="unfinished"></translation>
+        <translation>域</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="886"/>
         <source>Application Version to report. Note: Default string is generated at runtime.
 Default: Cisco Systems VPN Client 0.5.3:Linux</source>
-        <translation type="unfinished"></translation>
+        <translation>要报告的应用程序版本。注：默认字符串在运行时生成。
+默认值： Cisco Systems VPN Client 0.5.3:Linux</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="894"/>
         <source>Application Version</source>
-        <translation type="unfinished"></translation>
+        <translation>应用程序版本</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="901"/>
         <source>(NT-) Domain name for authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>(NT-) 认证域名</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="912"/>
         <source>Diffie-Hellman Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Diffie-Hellman 组</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="919"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Authentication mode: &lt;/p&gt;&lt;p&gt;psk: pre-shared key (default)&lt;/p&gt;&lt;p&gt;cert: server + client certificate (not implemented yet) &lt;/p&gt;&lt;p&gt;hybrid: server certificate + xauth (if built with openssl support)&lt;/p&gt;&lt;p&gt;&lt;br/&gt;Default: psk&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;认证模式: &lt;/p&gt;&lt;p&gt;psk: pre-shared key (default)&lt;/p&gt;&lt;p&gt;cert: server + client certificate (尚未实施) &lt;/p&gt;&lt;p&gt;hybrid: server certificate + xauth (如果构建时支持 openssl)&lt;/p&gt;&lt;p&gt;&lt;br/&gt;默认: psk&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="928"/>
         <source>psk</source>
-        <translation type="unfinished"></translation>
+        <translation>psk</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="933"/>
         <source>cert</source>
-        <translation type="unfinished"></translation>
+        <translation>证书</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="938"/>
         <source>hybrid</source>
-        <translation type="unfinished"></translation>
+        <translation>hybrid</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="946"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Diffie-Hellman group to use for Perfect Forward Secrecy (PFS).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;为了实现Perfect Forward Secrecy（PFS）而采用的 Diffie-Hellman 群组.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="958"/>
         <source>nopfs</source>
-        <translation type="unfinished"></translation>
+        <translation>nopfs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="963"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1045"/>
         <source>dh1</source>
-        <translation type="unfinished"></translation>
+        <translation>dh1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="968"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1050"/>
         <source>dh2</source>
-        <translation type="unfinished"></translation>
+        <translation>dh2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="973"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1055"/>
         <source>dh5</source>
-        <translation type="unfinished"></translation>
+        <translation>dh5</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="986"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1367"/>
         <source>UDP Port</source>
-        <translation type="unfinished"></translation>
+        <translation>UDP 端口</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="993"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local ISAKMP port number to use (0 == use random port).&lt;/p&gt;&lt;p&gt;Default: 500&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要使用的本地 ISAKMP 端口号（0 == 使用随机端口）.&lt;/p&gt;&lt;p&gt;默认值: 500&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1006"/>
         <source>Local Port</source>
-        <translation type="unfinished"></translation>
+        <translation>本地端口</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1013"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Local UDP port number to use (0 == use random port). This is only relevant if cisco-udp nat-traversal is used. This is the _local_ port, the remote udp port is discovered automatically. It is especially not the cisco-tcp port.&lt;/p&gt;&lt;p&gt;Default: 10000&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要使用的本地 UDP 端口号（0 == 使用随机端口）。只有在使用 cisco-udp nat-traversal 时才与此相关。这是本地端口，远程 udp 端口会被自动发现。尤其不是 cisco-tcp 端口.&lt;/p&gt;&lt;p&gt;默认值: 10000&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1026"/>
         <source>IKE Authentication Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE 认证模式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1033"/>
         <source>Name of the IKE DH Group</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE DH 组名称</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1063"/>
         <source>IKE DH Group</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE DH 组</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1070"/>
         <source>Vendor</source>
-        <translation type="unfinished"></translation>
+        <translation>供应商</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1077"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vendor of your IPSec gateway.&lt;/p&gt;&lt;p&gt;Default: cisco&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;IPSec 网关的供应商.&lt;/p&gt;&lt;p&gt;默认值: cisco&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1086"/>
         <source>cisco</source>
-        <translation type="unfinished"></translation>
+        <translation>cisco</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1091"/>
         <source>netscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>netscreen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1099"/>
         <source>Nat Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Nat 模式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1106"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Which NAT-Traversal Method to use:&lt;/p&gt;&lt;p&gt;natt -- NAT-T as defined in RFC3947&lt;/p&gt;&lt;p&gt;none -- disable use of any NAT-T method &lt;/p&gt;&lt;p&gt;force-natt -- always use NAT-T encapsulation even without presence of a NAT device (useful if the OS captures all ESP traffic)&lt;/p&gt;&lt;p&gt;cisco-udp -- Cisco proprietary UDP encapsulation, commonly over Port 10000 Note: cisco-tcp encapsulation is not yet supported &lt;/p&gt;&lt;p&gt;Default: natt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用哪种 NAT 穿越方法:&lt;/p&gt;&lt;p&gt;natt -- RFC3947 中定义的 NAT-T&lt;/p&gt;&lt;p&gt;无 -- 禁用任何 NAT-T 方法 &lt;/p&gt;&lt;p&gt;force-natt -- 始终使用 NAT-T 封装，即使没有 NAT 设备（如果操作系统捕获了所有 ESP 流量，则非常有用）&lt;/p&gt;&lt;p&gt;cisco-udp -- Cisco 专有的 UDP 封装，通常通过端口 10000 注意：尚不支持 cisco-tcp 封装 &lt;/p&gt;&lt;p&gt;默认值: natt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1118"/>
         <source>none</source>
-        <translation type="unfinished">无</translation>
+        <translation>无</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1123"/>
         <source>natt</source>
-        <translation type="unfinished"></translation>
+        <translation>natt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1128"/>
         <source>force-natt</source>
-        <translation type="unfinished"></translation>
+        <translation>force-natt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1133"/>
         <source>cisco-udp</source>
-        <translation type="unfinished"></translation>
+        <translation>cisco-udp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1141"/>
         <source>DPD Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>DPD 空闲</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1148"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Send DPD packet after not receiving anything for &lt;span style=&quot; font-style:italic;&quot;&gt;idle&lt;/span&gt; seconds. Use 0 to disable DPD completely (both ways). &lt;/p&gt;&lt;p&gt;Default: 600&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;未收到任何数据包后发送 DPD 数据包 &lt;span style=&quot; font-style:italic;&quot;&gt;idle&lt;/span&gt; 秒。使用 0 可完全禁用 DPD（双向）。. &lt;/p&gt;&lt;p&gt;默认值: 600&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1161"/>
         <source>Interface Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>接口模式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1168"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mode of TUN/TAP interface:&lt;/p&gt;&lt;p&gt;tun: virtual point to point interface (default) &lt;/p&gt;&lt;p&gt;tap: virtual ethernet interface&lt;/p&gt;&lt;p&gt;Default: tun&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TUN/TAP 接口模式:&lt;/p&gt;&lt;p&gt;tun：虚拟点对点接口（默认）&lt;/p&gt;&lt;p&gt;tap: 虚拟以太网接口&lt;/p&gt;&lt;p&gt;默认值: tun&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1190"/>
         <source>Enables weak single DES encryption</source>
-        <translation type="unfinished"></translation>
+        <translation>启用弱单个 DES 加密</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1193"/>
         <source>Single DES</source>
-        <translation type="unfinished"></translation>
+        <translation>单个 DES</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1200"/>
         <source>Enables using no encryption for data traffic (key exchanged must be encrypted)</source>
-        <translation type="unfinished"></translation>
+        <translation>允许不对数据流量进行加密（交换的密钥必须加密）</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1203"/>
         <source>No Encrypton</source>
-        <translation type="unfinished"></translation>
+        <translation>不加密</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1234"/>
         <source>L2TP Options</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP 选项</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1242"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L2TP user name. If left blank you will be asked for a username by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L2TP 用户名。如果留空，在尝试连接时，代理会要求你输入用户名.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1249"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1748"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>密码:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1256"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1755"/>
         <source>User:</source>
-        <translation type="unfinished"></translation>
+        <translation>用户名:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1263"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1769"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP password. If left blank the password will be asked from the user by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP 密码.如果留空,代理将在尝试连接时向用户询问密码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1266"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L2TP password. If left blank you will be asked for the password by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L2TP 密码。如果留空，代理将在尝试连接时向用户询问密码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1273"/>
         <source>Authentication File</source>
-        <translation type="unfinished"></translation>
+        <translation>认证文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1280"/>
         <source>Specify where to find the authentication file used to authenticate l2tp tunnels. The default is /etc/xl2tpd/l2tp-secrets</source>
-        <translation type="unfinished"></translation>
+        <translation>指定用于验证 l2tp 隧道的验证文件的位置。默认值为 /etc/xl2tpd/l2tp-secrets</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1291"/>
         <source>BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1298"/>
         <source>Maximum bandwidth to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>最大带宽.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1308"/>
         <source>Default Route</source>
-        <translation type="unfinished"></translation>
+        <translation>默认路由</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1318"/>
         <source>TX BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>发送 BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1325"/>
         <source>If set, the transmit bandwidth maximum will be set to this value
 </source>
-        <translation type="unfinished"></translation>
+        <translation>如果设置，最大传输带宽将设为该值
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1336"/>
         <source>Listen Address</source>
-        <translation type="unfinished"></translation>
+        <translation>监听地址</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1343"/>
         <source>The IP address of the interface on which the daemon listens. By default, it listens on INADDR_ANY (0.0.0.0), meaning it listens on all interfaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>守护进程监听的接口 IP 地址。默认情况下，它会监听 INADDR_ANY (0.0.0.0)，即监听所有接口。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1350"/>
         <source>RX BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>接收 BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1357"/>
         <source>If set, the receive bandwidth maximum will be set to this value</source>
-        <translation type="unfinished"></translation>
+        <translation>如果设置，接收带宽最大值将设为该值</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1374"/>
         <source>Specify which UDP port xl2tpd should use. The default is 1701.</source>
-        <translation type="unfinished"></translation>
+        <translation>指定 xl2tpd 应使用的 UDP 端口。默认为 1701.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1384"/>
         <source>Tunnel RWS</source>
-        <translation type="unfinished"></translation>
+        <translation>Tunnel RWS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1391"/>
         <source>This defines the window size of the control channel. The window size is defined as the number of outstanding unacknowledged packets, not as a number of bytes.</source>
-        <translation type="unfinished"></translation>
+        <translation>定义控制通道的窗口大小。窗口大小定义为未确认的数据包数量，而不是字节数.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1405"/>
         <source>If checked xl2tpd will attempt to redial if the call get disconnected. Note that, if enabled, xl2tpd will keep passwords in memory: a potential security risk.</source>
-        <translation type="unfinished"></translation>
+        <translation>如果选中，xl2tpd 将在通话断开时尝试重拨。请注意，如果启用，xl2tpd 将在内存中保留密码：这是一个潜在的安全风险.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1408"/>
         <source>Redial</source>
-        <translation type="unfinished"></translation>
+        <translation>重拨</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1415"/>
         <source>Will require the remote peer to get authenticated via PAP for the ppp authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>将要求远程对等设备通过 PAP 进行 ppp 验证.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1418"/>
         <source>Require PAP</source>
-        <translation type="unfinished"></translation>
+        <translation>需要 PAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1425"/>
         <source>Use IPsec Security Association tracking. When this is enabled, packets received by xl2tpd should have to extra fields (refme and refhim) which allows tracking of multiple clients using the same internal NATed IP address, and allows tracking of multiple clients behind the same NAT router. This needs to be supported by the kernel. Currently, this only works with Openswan KLIPS in &quot;mast&quot; mode. (see http://www.openswan.org/)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 IPsec 安全关联跟踪。启用此功能后，xl2tpd 收到的数据包应包含额外字段（refme 和 refhim），以便跟踪使用同一内部 NAT IP 地址的多个客户端，并跟踪同一 NAT 路由器后的多个客户端。这需要内核的支持。目前，这只能在 Openswan KLIPS 的 &quot;mast &quot;模式下运行。(参见 http://www.openswan.org/）</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1428"/>
         <source>IPsec Security Association</source>
-        <translation type="unfinished"></translation>
+        <translation>IPsec 安全联盟</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1435"/>
         <source>Will require the remote peer to get authenticated via CHAP for the ppp authentication.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>将要求远程对等设备通过 CHAP 进行 ppp 身份验证.
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1439"/>
         <source>Require CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>要求 CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1446"/>
         <source>Require the remote peer to authenticate itself.</source>
-        <translation type="unfinished"></translation>
+        <translation>要求远程对等设备进行身份验证.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1449"/>
         <source>Require Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>要求验证</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1456"/>
         <source>If checked the length bit present in the l2tp packet payload will be used.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>如果选中，将使用 l2tp 数据包有效载荷中的长度位
+</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1460"/>
         <source>Use Length Bit</source>
-        <translation type="unfinished"></translation>
+        <translation>使用长度位</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1467"/>
         <source>When checked use challenge authentication to authenticate peer.</source>
-        <translation type="unfinished"></translation>
+        <translation>如果选中，则使用挑战验证来验证对等设备.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1470"/>
         <source>Challenge Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>挑战身份验证</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1477"/>
         <source>If checked sequence numbers will be included in the communication. The feature to use sequence numbers in sessions is currently broken and does not function.</source>
-        <translation type="unfinished"></translation>
+        <translation>如果选中，通信中将包含序列号。在会话中使用序列号的功能目前已被破坏，无法运行.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1480"/>
         <source>Flow Bit</source>
-        <translation type="unfinished"></translation>
+        <translation>流量位</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1487"/>
         <source>If checked the xl2tpd process will only accept connections from peers addresses specified in the following sections. The default is no.</source>
-        <translation type="unfinished"></translation>
+        <translation>如果选中此选项，xl2tpd 进程将只接受来自以下部分指定的对等地址的连接。默认情况下不接受.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1490"/>
         <source>Access Control</source>
-        <translation type="unfinished"></translation>
+        <translation>访问控制</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1497"/>
         <source>If checked only one control tunnel will be allowed to be built between 2 peers.</source>
-        <translation type="unfinished"></translation>
+        <translation>如果选中，则只允许在 2 个对等点之间建立一条控制隧道.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1500"/>
         <source>Exclusive</source>
-        <translation type="unfinished"></translation>
+        <translation>唯一</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1527"/>
         <source>Wait X seconds before redial. The redial option must be set to yes to use this option. Defaults to 30 seconds.</source>
-        <translation type="unfinished"></translation>
+        <translation>重拨前等待 X 秒。重拨选项必须设置为 &quot;是 &quot;才能使用该选项。默认为 30 秒.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1537"/>
         <source>Redial Timeout</source>
-        <translation type="unfinished"></translation>
+        <translation>重拨超时</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1544"/>
         <source>Maximum Redials</source>
-        <translation type="unfinished"></translation>
+        <translation>最大重拨次数</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1567"/>
         <source>Will give up redial tries after X attempts.</source>
-        <translation type="unfinished"></translation>
+        <translation>尝试 X 次后将放弃重拨.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1582"/>
         <source>PPTP Options</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP 选项</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1588"/>
         <source>Disable Address Control Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用地址控制压缩功能</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1595"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1866"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disables Deflate compression; pppd will not request or agree to compress packets using the Deflate scheme.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;禁用 Deflate 压缩；ppd 不会请求或同意使用 Deflate 方案压缩数据包.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1598"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1869"/>
         <source>Disable Deflate Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用 Deflate 压缩</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1605"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1793"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable Van Jacobson style TCP/IP header compression in both the transmit and the receive direction.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在发送和接收方向上禁用Jacobson 式 TCP/IP 报头压缩.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1608"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1796"/>
         <source>Disable Van Jacobson Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用 Van Jacobson 压缩</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1615"/>
         <source>Disable protocol field compression negotiation in both the receive and the transmit direction.</source>
-        <translation type="unfinished"></translation>
+        <translation>在接收和发送方向都禁用协议字段压缩协商.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1618"/>
         <source>Disable Protocol Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用协议压缩</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1625"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1836"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disables BSD-Compress compression; pppd will not request or agree to compress packets using the BSD-Compress scheme.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;禁用 BSD-Compress 压缩；ppd 不会请求或同意使用 BSD-Compress 方案压缩数据包.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1628"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1839"/>
         <source>Disable BSD Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用 BSD 压缩</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1635"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1946"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enables  connection  debugging  facilities.  If this option is given, pppd will log the contents of all control packets sent or received in a readable form.  The packets are logged through syslog with facility daemon and level debug.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;启用连接调试功能。 如果给定了该选项，ppd 将以可读形式记录所有发送或接收的控制数据包的内容。 数据包将通过 syslog 以 daemon 设施和 debug 级别记录.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1638"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1949"/>
         <source>Debug</source>
-        <translation type="unfinished"></translation>
+        <translation>调试</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1645"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1936"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE, with 40-bit encryption.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要求使用 MPPE，40 位加密.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1648"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1939"/>
         <source>Require MPPE40</source>
-        <translation type="unfinished"></translation>
+        <translation>要求 MPPE40</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1655"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1926"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE, with 128-bit encryption.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要求使用 128 位加密的 MPPE.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1658"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1929"/>
         <source>Require MPPE128</source>
-        <translation type="unfinished"></translation>
+        <translation>要求 MPPE128</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1665"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1876"/>
         <source>With this option, pppd will not agree to authenticate itself to the peer using EAP.</source>
-        <translation type="unfinished"></translation>
+        <translation>使用该选项后，ppd 将不同意使用 EAP 向对等设备进行身份验证。.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1668"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1879"/>
         <source>Refuse EAP</source>
-        <translation type="unfinished"></translation>
+        <translation>拒绝 EAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1675"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1896"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using PAP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用该选项后，ppd 将不同意使用 PAP 向对等设备进行身份验证&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1678"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1899"/>
         <source>Refuse PAP</source>
-        <translation type="unfinished"></translation>
+        <translation>拒绝 PAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1685"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1846"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using CHAP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用该选项后，ppd 将不同意使用 CHAP 向对等设备进行身份验证.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1688"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1849"/>
         <source>Refuse CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>拒绝 CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1695"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1783"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using MS-CHAP.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用此选项，pppd 将不同意使用 MS-CHAP 向对等设备进行身份验证.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1698"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1786"/>
         <source>Refuse MS CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>拒绝MS CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1705"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1826"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;With this option, pppd will not agree to authenticate itself to the peer using MS-CHAPv2.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用该选项后，pppd 将不同意使用 MS-CHAPv2 向对等设备进行身份验证.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1708"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1829"/>
         <source>Refuse MS CHAP 2</source>
-        <translation type="unfinished"></translation>
+        <translation>拒绝 MS CHAP 2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1715"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1856"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require the use of MPPE (Microsoft Point to Point Encryption).  This option disables all other compression types.  This option  enables  both 40-bit  and  128-bit  encryption.   In  order for MPPE to successfully come up, you must have authenticated with either MS-CHAP or MS-CHAPv2. This option is presently only supported under Linux, and only if your kernel has been configured to include MPPE support.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要求使用 MPPE（微软点对点加密）。 该选项禁用所有其他压缩类型。 该选项可启用 40 位和 128 位加密。  为使 MPPE 成功启动，必须使用 MS-CHAP 或 MS-CHAPv2 进行身份验证。该选项目前仅在 Linux 下支持，而且只有在内核已配置为支持 MPPE 的情况下才支持.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1718"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1859"/>
         <source>Require MPPE</source>
-        <translation type="unfinished"></translation>
+        <translation>要求 MPPE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1725"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1916"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allow MPPE to use stateful mode.  Stateless mode is still attempted first.  The default is to disallow stateful mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;允许 MPPE 使用有状态模式。 无状态模式仍会首先尝试。 默认为不允许有状态模式.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1728"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1919"/>
         <source>Allow MPPE Stateful Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>允许 MPPE 有状态模式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1762"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP user name. If left blank you will be asked for a username by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PTP 用户名。如果留空，代理将在尝试连接时询问用户名.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1772"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP password. If left blank you will be asked for the password by the agent when a connection is attempted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PPTP 密码。如果留空，代理将在尝试连接时要求您输入密码.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1809"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If this option is given, pppd will presume the peer to be dead if n LCP echo-requests are sent without receiving a valid LCP echo-reply. If this happens, pppd will terminate the connection. Use of this option requires a non-zero value for the lcp-echo-interval parameter. This option can be used to enable pppd to terminate after the physical connection has been broken (e.g., the modem has hung up) in situations where no hardware modem control lines are available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果给定了该选项，在发送了 n 次 LCP echo-request而没有收到有效的 LCP echo-reply时，pppd 将假定对等设备已死机。如果出现这种情况，ppd 将终止连接。使用此选项需要 lcp-echo-interval 参数的值不为零。在没有硬件调制解调器控制线的情况下，该选项可用于使 pppd 在物理连接中断（如调制解调器挂断）后终止连接.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1819"/>
         <source>Dead Peer Check Interval</source>
-        <translation type="unfinished"></translation>
+        <translation>死机对等检查时间间隔</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1889"/>
         <source>Dead Peer Check Count</source>
-        <translation type="unfinished"></translation>
+        <translation>死机对等体检查计数</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1906"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If  this  option  is  given,  pppd  will send an LCP echo-request frame to the peer every n seconds.  Normally the peer should respond to the echo-request by sending an echo-reply.  This option can be used with the lcp-echo-failure option to detect that the peer is no longer connected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果给定了该选项，ppd 将每隔 n 秒向对等设备发送一个 LCP echo-request帧。 通常情况下，对等设备应通过发送（echo-reply）来响应。 该选项可与 lcp-echo-failure 选项一起使用，以检测对等体是否已不再连接.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1967"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Allowed IP&apos;s&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;允许的 IP&apos;s&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1974"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A base64 preshared key generated by &lt;span style=&quot; font-style:italic;&quot;&gt;wg genpsk&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Optional, and may be omitted. This option adds an additional layer of symmetric-key cryptography to be mixed into the already existing public-key cryptography, for post-quantum resistance.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;生成的 base64 预共享密钥&lt;span style=&quot; font-style:italic;&quot;&gt;wg genpsk&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;可选项，可以省略。该选项在已有的公钥加密技术中增加了一层对称密钥加密技术，为了抵抗量子计算.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1981"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A list of nameservers separated by comma.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;以逗号分隔的名称服务器列表.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1988"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A comma-separated list of IP (v4 or v6) addresses with CIDR masks from which this peer is allowed to send incoming traffic and to which outgoing traffic for this peer is directed.&lt;/p&gt;&lt;p&gt;The catch-all 0.0.0.0/0 may be specified for matching all IPv4 addresses, and ::/0 may be specified for matching all IPv6 addresses.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;以逗号分隔的 IP（v4 或 v6）地址（带 CIDR 掩码）列表，允许该对等体从该地址发送入站流量，并将该对等体的出站流量导向该地址.&lt;/p&gt;&lt;p&gt;为匹配所有 IPv4 地址，可指定全局 0.0.0.0/0；为匹配所有 IPv6 地址，可指定 ::/0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1998"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Public Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;公钥&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2008"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Internal IP Address&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;内部 IP 地址&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2015"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Internal IP address. Format is local/netmask/peer.&lt;/p&gt;&lt;p&gt;Example 10.2.0.2/24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;内部 IP 地址。格式为本地/网络掩码/对等体.&lt;/p&gt;&lt;p&gt;举例 10.2.0.2/24&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2022"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A base64 private key generated by &lt;span style=&quot; font-style:italic;&quot;&gt;wg genkey.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;生成的 base64 私钥&lt;span style=&quot; font-style:italic;&quot;&gt;wg genkey.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2032"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Private Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;私钥&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2039"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A base64 public key calculated by &lt;span style=&quot; font-style:italic;&quot;&gt;wg pubkey&lt;/span&gt; from a private key, and usually transmitted out of band to the author of the configuration file.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用以下方法计算的 base64 公钥 &lt;span style=&quot; font-style:italic;&quot;&gt;wg pubkey&lt;/span&gt; 由私人密钥生成，通常在带外传输给配置文件的作者.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2049"/>
         <source>Preshared Key</source>
-        <translation type="unfinished"></translation>
+        <translation>预共享密钥</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2059"/>
         <source>Name Servers</source>
-        <translation type="unfinished"></translation>
+        <translation>域名服务器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2073"/>
         <source>Local Listen Port</source>
-        <translation type="unfinished"></translation>
+        <translation>本地监听端口</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2080"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Open Sans&apos;,&apos;Helvetica&apos;,&apos;Helvetica Neue&apos;,&apos;Arial&apos;; font-size:14px; color:#535353; background-color:#fefefe;&quot;&gt;A 16-bit port for listening. Optional; if not specified, automatically generated based on interface name.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Open Sans&apos;,&apos;Helvetica&apos;,&apos;Helvetica Neue&apos;,&apos;Arial&apos;; font-size:14px; color:#535353; background-color:#fefefe;&quot;&gt;用于监听的 16 位端口。可选；如果未指定，则根据接口名称自动生成.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2090"/>
         <source>Endpoint Port</source>
-        <translation type="unfinished"></translation>
+        <translation>终端端口</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2097"/>
         <source>Endpoint listen port number.</source>
-        <translation type="unfinished"></translation>
+        <translation>终端监听端口号.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2107"/>
         <source>Keep Alive</source>
-        <translation type="unfinished"></translation>
+        <translation>保活</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2114"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A seconds interval, between 10 and 3600 inclusive, of how often to send an empty UDP packet to the peer for the purpose of keeping a stateful firewall or NAT mapping valid persistently. For example, if the interface very rarely sends traffic, but it might at anytime receive traffic from a peer, and it is behind NAT, the interface might benefit from having a persistent keepalive interval of 25 seconds. If set to 0 or &amp;quot;off&amp;quot;, this option is disabled. By default or when unspecified, this option is off.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;10 到 3600 之间（含 3600）的秒数间隔，表示向对等设备发送空 UDP 数据包的频率，以保持状态防火墙或 NAT 映射的持续有效性。例如，如果接口很少发送流量，但随时都可能接收到来自对等设备的流量，而且接口位于 NAT 后方，那么该接口可能会受益于 25 秒的持续保持时间间隔。如果设置为 0 或 &amp;quot;关闭&amp;quot;，则禁用该选项。默认情况下或未指定时，该选项关闭.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2143"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Items shown in &lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#aa0000;&quot;&gt;red&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; are mandatory and must be provided to create a VPN connection&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;所示项目 &lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#aa0000;&quot;&gt;red&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; 是必填项，必须提供这些信息才能创建 VPN 连接&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="58"/>
         <source>%1 - Select File</source>
-        <translation type="unfinished">%1 - 选择文件</translation>
+        <translation>%1 - 选择文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="105"/>
         <source>Select the file containing other Certificate Authorities</source>
-        <translation type="unfinished"></translation>
+        <translation>选择包含其他证书颁发机构的文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="109"/>
         <source>Select the file containing the Client Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>选择包含客户证书的文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="113"/>
         <source>Select the file containing the PKCS Client Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>选择包含 PKCS 客户端证书的文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="117"/>
         <source>Select the file containing the Certificate Authority</source>
-        <translation type="unfinished"></translation>
+        <translation>选择包含证书颁发机构的文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="121"/>
         <source>Select the file containing the Local Peer&apos;s Signed Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>选择包含本地对等体签名证书的文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="125"/>
         <source>Select the file containing the Local Peer&apos;s Private Key</source>
-        <translation type="unfinished"></translation>
+        <translation>选择包含本地对等体私钥的文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="129"/>
         <source>Select the file containing extra OpenVPN options</source>
-        <translation type="unfinished"></translation>
+        <translation>选择包含额外 OpenVPN 选项的文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="133"/>
         <source>Select the file containing the User and Password credentials</source>
-        <translation type="unfinished"></translation>
+        <translation>选择包含用户名和密码凭证的文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="137"/>
         <source>Select the file containing the password to unlock the private key</source>
-        <translation type="unfinished"></translation>
+        <translation>选择包含解锁私钥密码的文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="141"/>
         <source>Select the L2TP Authority file</source>
-        <translation type="unfinished"></translation>
+        <translation>选择 L2TP 授权文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="352"/>
         <source>Enter a new file name or select&lt;br&gt;an existing file to overwrite.</source>
-        <translation type="unfinished">输入新的文件名或选择并&lt;br&gt;替换一个已经存在的文件。</translation>
+        <translation>输入新的文件名或选择并&lt;br&gt;替换一个已经存在的文件。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="406"/>
         <source>All Files (*.*)</source>
-        <translation type="unfinished">全部文件 (*.*)</translation>
+        <translation>全部文件 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="410"/>
@@ -5719,108 +5750,108 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="425"/>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="430"/>
         <source>Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>证书文件 (*.ca *.cert *.crt *.pem);;所有文件 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="435"/>
         <source>Key Files (*.key *.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Key 文件 (*.key *.ca *.cert *.crt *.pem);;所有文件 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="442"/>
         <source>Config files (*.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>配置文件 (*.conf);;所有文件 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="449"/>
         <source>User/Pass Files (*.up)</source>
-        <translation type="unfinished"></translation>
+        <translation>用户名/密码文件 (*.up)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="488"/>
         <source>Select the configuration file to import</source>
-        <translation type="unfinished"></translation>
+        <translation>选择要导入的配置文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="490"/>
         <source>OpenVPN Configurations (*.ovpn  *.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN 配置 (*.ovpn  *.conf);;所有文件 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="503"/>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="599"/>
         <source>Base Name</source>
-        <translation type="unfinished"></translation>
+        <translation>基础名称</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="504"/>
         <source>Please enter a name for the connection to be created from the imported .opvn file</source>
-        <translation type="unfinished"></translation>
+        <translation>请为要从导入的.opvn 文件创建的连接输入一个名称</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="517"/>
         <source>Keep --auth-user-pass</source>
-        <translation type="unfinished">保留--auth-user-pass</translation>
+        <translation>保留--auth-user-pass</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="518"/>
         <source>The conf file will contain the &lt;b&gt;auth-user-pass&lt;/b&gt; entry which will require prompts sent to stdout and a reply on stdin.  This cannot be handled by Connman nor by CMST.&lt;p&gt;If this entry is removed you will need to create a &quot;user:pass&quot; file in order to have Connman make the VPN connection. In the next step you will be asked if you want to create this file and you will prompted for the user name and password.&lt;p&gt;&lt;b&gt;Do you wish to remove this entry?&lt;/b&gt;</source>
-        <translation type="unfinished">配置文件将包含&lt;b&gt; auth-user-pass &lt;/ b&gt;条目，该条目要求将提示发送到stdout并在stdin上进行回复。 &lt;p&gt;如果删除此条目，则需要创建“ user：pass”文件，以使Connman建立VPN连接。&lt;p&gt;在下一步中，系统将询问您是否要创建此文件，并提示您输入用户名和密码。&lt;p&gt; &lt;b&gt;是否要删除此条目？&lt;/ b&gt;</translation>
+        <translation>配置文件将包含&lt;b&gt; auth-user-pass &lt;/ b&gt;条目，该条目要求将提示发送到stdout并在stdin上进行回复。 &lt;p&gt;如果删除此条目，则需要创建“ user：pass”文件，以使Connman建立VPN连接。&lt;p&gt;在下一步中，系统将询问您是否要创建此文件，并提示您输入用户名和密码。&lt;p&gt; &lt;b&gt;是否要删除此条目？&lt;/ b&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="532"/>
         <source>Create User:Password File</source>
-        <translation type="unfinished">创建用户：密码文件</translation>
+        <translation>创建用户：密码文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="533"/>
         <source>Do you wish to create a user:password file for this connection?</source>
-        <translation type="unfinished">您是否要为此连接创建一个user：password文件？</translation>
+        <translation>您是否要为此连接创建一个user：password文件？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="557"/>
         <source>Unable to write conf file &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation type="unfinished">无法写入conf文件&lt;b&gt;％1 &lt;/ b&gt;</translation>
+        <translation>无法写入conf文件&lt;b&gt;％1 &lt;/ b&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="571"/>
         <source>Unable to read &lt;b&gt;%1&lt;/b&gt; - Aborting the import</source>
-        <translation type="unfinished"></translation>
+        <translation>无法读取 &lt;b&gt;%1&lt;/b&gt; - 取消导入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="579"/>
         <source>OpenVPN import is complete.</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN 导入完成.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="600"/>
         <source>Please enter a name for the user/pass file</source>
-        <translation type="unfinished"></translation>
+        <translation>请输入用户/密码文件的名称</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="608"/>
         <source>User</source>
-        <translation type="unfinished">用户</translation>
+        <translation>用户</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="609"/>
         <source>Enter the user name for this connection.</source>
-        <translation type="unfinished">输入此连接的用户名。</translation>
+        <translation>输入此连接的用户名。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="616"/>
         <source>Password</source>
-        <translation type="unfinished">密码</translation>
+        <translation>密码</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="617"/>
         <source>Enter the password for this connection.</source>
-        <translation type="unfinished">输入此连接的密码。</translation>
+        <translation>输入此连接的密码。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="641"/>
         <source>Unable to write user:password file &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>无法写入用户:密码文件 &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -5866,47 +5897,47 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="428"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="429"/>
         <source>Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>证书文件 (*.pem *.ca *.crt *.cert);;所有文件(*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="417"/>
         <source>User:Pass Files (*.up *.txt *.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>用户名:密码文件 (*.up *.txt *.conf);;所有文件s (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="368"/>
         <source>WireGuard</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="420"/>
         <source>CA Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>CA 文件(*.ca *.cert *.crt *.pem);;所有文件 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="421"/>
         <source>Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>证书文件 (*.ca *.cert *.crt *.pem);;所有文件 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="422"/>
         <source>Key Files (*.key *.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Key 文件 (*.key *.ca *.cert *.crt *.pem);;所有文件(*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="423"/>
         <source>Config Files (*.ovpn *.conf *.config);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>配置文件(*.ovpn *.conf *.config);;所有文件 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="458"/>
         <source>VPN server IP address (ex: 1.2.3.4)</source>
-        <translation>VPN 服务的IP地址（例如：1.2.3.4）</translation>
+        <translation>VPN 服务器的IP地址（例如：1.2.3.4）</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="460"/>
         <source>Domain Name for the VPN Service</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 服务域名</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="463"/>
@@ -5915,7 +5946,11 @@ Format is network/netmask/gateway, and gateway can be omitted.
 Ex: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:db8::1/16
 
 Networks = entry is optional and may be left blank.</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 链接后面的网络，如果不止一个，请用逗号隔开。
+格式为 network/netmask/gateway，网关可以省略。
+例如: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:db8::1/16
+
+网络 = 条目为可选项，可以留空.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="548"/>
@@ -5930,7 +5965,7 @@ Networks = entry is optional and may be left blank.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="586"/>
         <source>User defined name for the VPN</source>
-        <translation>VPN的用户定义名称</translation>
+        <translation>用户定义的 VPN 名称</translation>
     </message>
     <message>
         <source>Domain name for the VPN Service
@@ -5942,7 +5977,8 @@ Networks = entry is optional and may be left blank.</source>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="588"/>
         <source>Network address in the form address/netmask/peer.
 Ex: 10.2.0.2/24</source>
-        <translation type="unfinished"></translation>
+        <translation>网络地址，格式为地址/网络掩码/对等体.
+Ex: 10.2.0.2/24</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="602"/>
@@ -6003,7 +6039,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="783"/>
         <source>File deleted</source>
-        <translation>文件已删除</translation>
+        <translation>已删除文件</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="785"/>
@@ -6013,17 +6049,17 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="799"/>
         <source>File save failed.</source>
-        <translation>文件保存失败。</translation>
+        <translation>保存文件失败。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="802"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished">%L1 KB 已写入</translation>
+        <translation>%L1 KB 已写入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="804"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished">%L1 Bytes 已写入</translation>
+        <translation>%L1 Bytes 已写入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="816"/>
@@ -6077,7 +6113,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="14"/>
         <source>VPN Provisioning Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 配置编辑器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="23"/>
@@ -6092,7 +6128,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="35"/>
         <source>&amp;Open</source>
-        <translation>打开(&amp;O)</translation>
+        <translation>&amp;打开</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="48"/>
@@ -6102,7 +6138,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation>保存(&amp;S)</translation>
+        <translation>&amp;保存</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="68"/>
@@ -6112,7 +6148,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation>删除(&amp;D)</translation>
+        <translation>&amp;删除</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="94"/>
@@ -6122,7 +6158,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="97"/>
         <source>&amp;Clear Page</source>
-        <translation>清除页面(&amp;C)</translation>
+        <translation>&amp;清空页面</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="117"/>
@@ -6132,7 +6168,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="120"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter &amp;quot;Whats This&amp;quot; mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;进入 &amp;quot;这是什么？&amp;quot; 模式。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;确认 &amp;quot;这是什么？&amp;quot; 模式。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="143"/>
@@ -6142,7 +6178,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="146"/>
         <source>E&amp;xit</source>
-        <translation>退出(&amp;X)</translation>
+        <translation>E&amp;xit</translation>
     </message>
     <message>
         <source>Name</source>
@@ -6151,12 +6187,12 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="166"/>
         <source>Name of the network.</source>
-        <translation>网络名称。</translation>
+        <translation>网络名称.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="174"/>
         <source>Description of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>网络描述.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="207"/>
@@ -6166,594 +6202,595 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="215"/>
         <source>PPTP Password.</source>
-        <translation>PPTP 密码。</translation>
+        <translation>PPTP 密码.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="223"/>
         <source>Set the maximum number of LCP configure-NAKs returned
 before starting to send configure-Rejects (default is 10).</source>
-        <translation type="unfinished"></translation>
+        <translation>设置在开始发送configure-Rejects之前返回的 LCP configure-NAKs的最大数量（默认值为 10）.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="232"/>
         <source>Send an LCP echo-request frame to the peer every n seconds.
  This option can be used with the lcp-echo-failure option to detect
 that the peer is no longer connected.</source>
-        <translation type="unfinished"></translation>
+        <translation>每 n 秒向对等设备发送一个 LCP echo-request帧。
+ 该选项可与 lcp-echo-failure 选项一起使用，以检测对等网络是否已不再连接.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="242"/>
         <source>Debug level.</source>
-        <translation type="unfinished"></translation>
+        <translation>调试级别.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="250"/>
         <source>Deny EAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>是否拒绝 EAP 授权?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="258"/>
         <source>Deny PAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>是否拒绝 PAP 授权？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="266"/>
         <source>Deny CHAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>是否拒绝CHAP 授权？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="274"/>
         <source>Deny MSCHAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>是否拒绝 MSCHAP 授权？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="282"/>
         <source>Deny MSCHAPV2 authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>是否拒绝 MSCHAPV2授权？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="290"/>
         <source>Disables BSD compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用 BSD 压缩？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="298"/>
         <source>Disable deflate compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用deflate 压缩?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="306"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="538"/>
         <source>Require the use of MPPE?</source>
-        <translation type="unfinished"></translation>
+        <translation>要求使用 MPPE？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="314"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="546"/>
         <source>Require the use of MPPE 40 bit?</source>
-        <translation type="unfinished"></translation>
+        <translation>要求使用 MPPE 40 bit？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="322"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="554"/>
         <source>Require the use of MPPE 128 bit?</source>
-        <translation type="unfinished"></translation>
+        <translation>要求使用 MPPE 128 bit?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="330"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="562"/>
         <source>Allow MPPE to use stateful mode?</source>
-        <translation type="unfinished"></translation>
+        <translation>允许 MPPE 使用有状态模式？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="338"/>
         <source>Disable Van Jacobson compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用 Van Jacobson 压缩?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="346"/>
         <source>L2TP User Name.</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP 用户名.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="354"/>
         <source>L2TP Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP 密码.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="362"/>
         <source>Maximum bandwidth to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>最大使用带宽.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="370"/>
         <source>Maximum transmit bandwidth to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>要使用的最大传输带宽.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="378"/>
         <source>Maximum receive bandwidth to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>要使用的最大接收带宽.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="386"/>
         <source>Use length bit?</source>
-        <translation type="unfinished"></translation>
+        <translation>使用长度bit?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="394"/>
         <source>Use challenge authentication?</source>
-        <translation type="unfinished"></translation>
+        <translation>使用挑战认证?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="402"/>
         <source>Add a default route to the system routing tables, using the peer as the gatewa?</source>
-        <translation type="unfinished"></translation>
+        <translation>在系统路由表中添加默认路由，将对等设备作为网关?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="410"/>
         <source>Sequence numbers included in the communication?</source>
-        <translation type="unfinished"></translation>
+        <translation>通信中是否包括序列号?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="418"/>
         <source>The window size of the control channel (number of unacknowledged packets, not bytes)</source>
-        <translation type="unfinished"></translation>
+        <translation>控制通道的窗口大小（未确认数据包的个数，而不是字节数）</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="426"/>
         <source>Use only one control channel?</source>
-        <translation type="unfinished"></translation>
+        <translation>只使用一个控制通道?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="434"/>
         <source>Redial if disconnected?</source>
-        <translation type="unfinished"></translation>
+        <translation>断线时重拨?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="442"/>
         <source>Wait n seconds before redial.</source>
-        <translation type="unfinished"></translation>
+        <translation>重拨前等待 n 秒.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="450"/>
         <source>Give up redial tries after X attempts.</source>
-        <translation type="unfinished"></translation>
+        <translation>尝试 X 次后放弃重拨.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="458"/>
         <source>Require the remote peer to get authenticated via PAP?</source>
-        <translation type="unfinished"></translation>
+        <translation>要求远程对等设备通过 PAP 进行身份验证？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="466"/>
         <source>Require the remote peer to get authenticated via CHAP?</source>
-        <translation type="unfinished"></translation>
+        <translation>要求远程对等设备通过 CPAP 进行身份验证？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="474"/>
         <source>Require the remote peer to authenticate itself?</source>
-        <translation type="unfinished"></translation>
+        <translation>要求远程对等设备进行身份验证?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="482"/>
         <source>Only accept connections from specified peer addresses?</source>
-        <translation type="unfinished"></translation>
+        <translation>只接受来自指定对等地址的连接?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="490"/>
         <source>Authentication file location.</source>
-        <translation type="unfinished"></translation>
+        <translation>身份验证文件位置.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="498"/>
         <source>The IP address of the interface on which the daemon listens.</source>
-        <translation type="unfinished"></translation>
+        <translation>守护进程所监听的接口的 IP 地址.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="506"/>
         <source>Use IPsec Security Association tracking?</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 IPsec 安全关联跟踪?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="514"/>
         <source>Specify which UDP port should be used.</source>
-        <translation type="unfinished"></translation>
+        <translation>指定使用哪个 UDP 端口.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="522"/>
         <source>Disable protocol compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用协议压缩?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="530"/>
         <source>Disable address/control compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用地址/控制压缩?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="570"/>
         <source>Your Group username.</source>
-        <translation type="unfinished"></translation>
+        <translation>您的组用户名.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="578"/>
         <source>Your group password (cleartext).</source>
-        <translation type="unfinished"></translation>
+        <translation>您的组密码（明文）.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="586"/>
         <source>Your username.</source>
-        <translation type="unfinished"></translation>
+        <translation>您的用户名.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="594"/>
         <source>Your password (cleartext).</source>
-        <translation type="unfinished"></translation>
+        <translation>您的密码（明文).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="602"/>
         <source>IKE authentication mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE 认证模式.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="610"/>
         <source>Name of the IKE DH Group.</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE DH 组名.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="626"/>
         <source>Domain name for authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>用于验证的域名.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="634"/>
         <source>Vendor of your IPSec gateway.</source>
-        <translation type="unfinished"></translation>
+        <translation>IPSec 网关的供应商.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="642"/>
         <source>Local ISAKMP port to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>本地 ISAKMP 端口.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="650"/>
         <source>Local UDP port number to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>本地 UDP 端口号.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="658"/>
         <source>Application version to report.</source>
-        <translation type="unfinished"></translation>
+        <translation>要报告的应用程序版本.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="666"/>
         <source>NAT-Traversal method to employ.</source>
-        <translation type="unfinished"></translation>
+        <translation>使用的 NAT 穿越方法.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="674"/>
         <source>Send DPD packet after not receiving anything for n seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>n 秒未收到任何信息后发送 DPD 数据包</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="682"/>
         <source>Enable single DES encryption.</source>
-        <translation type="unfinished"></translation>
+        <translation>启用单一 DES 加密.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="690"/>
         <source>Enables using no encryption for data traffic.</source>
-        <translation type="unfinished"></translation>
+        <translation>启用不对数据流量加密.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="698"/>
         <source>Certificate authority file.</source>
-        <translation type="unfinished"></translation>
+        <translation>证书授权文件.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="706"/>
         <source>File containing peer&apos;s signed certificate.</source>
-        <translation type="unfinished"></translation>
+        <translation>包含对等体已签名证书的文件.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="714"/>
         <source>File containing local peer&apos;s private key.</source>
-        <translation type="unfinished"></translation>
+        <translation>包含本地对等体私钥的文件.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="754"/>
         <source>File containing the user:password credentials.</source>
-        <translation type="unfinished"></translation>
+        <translation>包含用户:密码凭证的文件.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="868"/>
         <source>Provider WireGuard</source>
-        <translation type="unfinished"></translation>
+        <translation>供应商WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="871"/>
         <source>Provider Wire Guard</source>
-        <translation type="unfinished"></translation>
+        <translation>供应商 Wire Guard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="876"/>
         <source>VPNC.DeviceType</source>
-        <translation type="unfinished"></translation>
+        <translation>VPNC.DeviceType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="879"/>
         <source>Wheher the VPN should use tun or tap.</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 使用 tun 还是 tap.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="884"/>
         <source>WireGuard.Address</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.Address</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="887"/>
         <source>Internal IP Address</source>
-        <translation type="unfinished"></translation>
+        <translation>内部 IP 地址</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="892"/>
         <source>WireGuard.ListPort</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.ListPort</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="895"/>
         <source>Local listen port (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>本地监听端口(可选).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="900"/>
         <source>WireGuard.DNS</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.DNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="903"/>
         <source>List of name servers (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>域名服务器列表(可选).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="908"/>
         <source>WireGuard.PrivateKey</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.私钥</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="911"/>
         <source>Private key of the interface.</source>
-        <translation type="unfinished"></translation>
+        <translation>接口的私钥.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="916"/>
         <source>WireGuard.PublicKey</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.公钥</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="919"/>
         <source>Public key of peer.</source>
-        <translation type="unfinished"></translation>
+        <translation>对等体公钥.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="924"/>
         <source>WireGuard.PresharedKey</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.预共享密钥</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="927"/>
         <source>Preshared key of peer (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>对等体预共享密钥(可选).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="932"/>
         <source>WireGuard.AllowedIPs</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.允许的IP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="935"/>
         <source>See cryptokey routing.</source>
-        <translation type="unfinished"></translation>
+        <translation>请参阅加密路由.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="940"/>
         <source>WireGuard.EndpointPort</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.终端端口</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="943"/>
         <source>Endpoint listen port (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>终端监听端口(可选).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="948"/>
         <source>WireGuard.PersistentKeepalive</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.持续保活</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="951"/>
         <source>Keep alive in seconds (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>以秒为单位保活(可选).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="956"/>
         <source>OpenVPN.DeviceType</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN.设备类型</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="959"/>
         <source>Whether the VPN should use tun or tap.</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 使用 tun 还是 tap.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="964"/>
         <source>OpenConnect.AllowSelfSignedCert</source>
-        <translation type="unfinished"></translation>
+        <translation>开放连接.允许自签名证书</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="967"/>
         <source>Define if self signed server certificates are allowed.</source>
-        <translation type="unfinished"></translation>
+        <translation>定义是否允许自签名服务器证书.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="972"/>
         <source>OpenConnect.AuthType</source>
-        <translation type="unfinished"></translation>
+        <translation>开放连接.认证类型</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="975"/>
         <source>Type of authentication used.</source>
-        <translation type="unfinished"></translation>
+        <translation>使用的身份验证类型.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="980"/>
         <source>OpenConnect.DisableIPv6</source>
-        <translation type="unfinished"></translation>
+        <translation>开放连接.关闭IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="983"/>
         <source>Do not ask for IPv6 connectivity.</source>
-        <translation type="unfinished"></translation>
+        <translation>不要求 IPv6 连接.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="988"/>
         <source>OpenConnect.NoDTLS</source>
-        <translation type="unfinished"></translation>
+        <translation>开放连接.无DTLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="991"/>
         <source>Disable DTLS and ESP.</source>
-        <translation type="unfinished"></translation>
+        <translation>关闭DTLS 和 ESP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="996"/>
         <source>OpenConnect.NoHTTPKeepalive</source>
-        <translation type="unfinished"></translation>
+        <translation>开放连接.无HTTP保活</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="999"/>
         <source>Disable HTTP connection re-use.</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用 HTTP 连接重用.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1004"/>
         <source>OpenConnect.PKCSClientCert</source>
-        <translation type="unfinished"></translation>
+        <translation>开放连接.PKCS客户端证书</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1007"/>
         <source>Certificate and privatekey in a PKCS#1/PKCS#8/PKCS#12 structure.</source>
-        <translation type="unfinished"></translation>
+        <translation>PKCS#1/PKCS#8/PKCS#12 结构中的证书和私钥.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1012"/>
         <source>OpenConnect.Usergroup</source>
-        <translation type="unfinished"></translation>
+        <translation>开放连接.用户组</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1015"/>
         <source>Set login usergroup on remote server.</source>
-        <translation type="unfinished"></translation>
+        <translation>在远程服务器上设置登录用户组.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1020"/>
         <source>OpenConnect.UserPrivateKey</source>
-        <translation type="unfinished"></translation>
+        <translation>开放连接.用户私钥</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1023"/>
         <source>SSL private key file needed by web authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>网络身份验证所需的 SSL 私钥文件.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="722"/>
         <source>MTU of the tunnel.</source>
-        <translation type="unfinished"></translation>
+        <translation>隧道MTU .</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="618"/>
         <source>DH group to use for perfect forward secrecy. </source>
-        <translation type="unfinished"></translation>
+        <translation>用于完美前向保密的 DH 组. </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="730"/>
         <source>Peer certificate type (server/client).</source>
-        <translation type="unfinished"></translation>
+        <translation>对等体证书类型(服务器/客户端).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="738"/>
         <source>Protocol type (udp/tcp-client/tcp-server).</source>
-        <translation type="unfinished"></translation>
+        <translation>协议类型 (udp/tcp-client/tcp-server).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="746"/>
         <source>TCP/UDP port number.</source>
-        <translation type="unfinished"></translation>
+        <translation>TCP/UDP 端口号.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="762"/>
         <source>Get certificate password from console or file?</source>
-        <translation type="unfinished"></translation>
+        <translation>从控制台或文件中获取证书密码?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="770"/>
         <source>Don&apos;t cache --askpass or --auth-user-pass values?</source>
-        <translation type="unfinished"></translation>
+        <translation>不缓存--askpass 或--auth-user-pass 值?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="778"/>
         <source>Encrypt packets with cipher algorithm:</source>
-        <translation type="unfinished"></translation>
+        <translation>用密码算法加密数据包:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="786"/>
         <source>Authenticate packets using algorithm:</source>
-        <translation type="unfinished"></translation>
+        <translation>使用算法认证数据包:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="794"/>
         <source>Use fast LZO compression (yes/no/adaptive).</source>
-        <translation type="unfinished"></translation>
+        <translation>使用快速 LZO 压缩（是/否/自适应）.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="802"/>
         <source>Require peer certificate signed (client/server).</source>
-        <translation type="unfinished"></translation>
+        <translation>要求签署对等体证书(客户端/服务器).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="810"/>
         <source>OpenVPN config file that can contain extra options.</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN 配置文件，可包含额外选项.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="818"/>
         <source>SHA1 certificate fingerprint of the final VPN server.</source>
-        <translation type="unfinished"></translation>
+        <translation>最终 VPN 服务器的 SHA1 证书指纹.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="826"/>
         <source>File containing other certificate authorities.</source>
-        <translation type="unfinished"></translation>
+        <translation>包含其他证书颁发机构的文件.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="834"/>
         <source>Client certificate file, if needed for web authentication. </source>
-        <translation type="unfinished"></translation>
+        <translation>客户端证书文件（如果需要用于网络验证）. </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="842"/>
         <source>Request MTU from server to use as MTU of tunnel?</source>
-        <translation type="unfinished"></translation>
+        <translation>请求服务器将 MTU 用作隧道的 MTU?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="850"/>
         <source>Read cookie from standard input?</source>
-        <translation type="unfinished"></translation>
+        <translation>从标准输入读取 cookie?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="858"/>
         <source>The final VPN server to use after completing web authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>完成网络身份验证后要使用的最终 VPN 服务器.</translation>
     </message>
 </context>
 <context>
@@ -6766,17 +6803,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="82"/>
         <source>Connman System Tray.</source>
-        <translation></translation>
+        <translation>Connman 系统托盘.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="85"/>
         <source>Bypass restoring the window state if restoring window state is specified in the settings file.</source>
-        <translation type="unfinished"></translation>
+        <translation>如果在设置文件中指定了恢复窗口状态，则绕过恢复窗口状态.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="89"/>
         <source>Bypass restoring any start options in the settings file.</source>
-        <translation type="unfinished"></translation>
+        <translation>绕过恢复设置文件中的启动选项.</translation>
     </message>
     <message>
         <source>[Experimental] Disable data counters.  May be used to minimize load on your system.</source>
@@ -6785,7 +6822,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="97"/>
         <source>Disable the system tray icon.  May be needed for system trays not compliant with the Freedesktop.org system tray specification.</source>
-        <translation>禁用系统托盘图标。  可能在系统托盘不符合 Freedesktop.org system tray 规范时需要。</translation>
+        <translation>禁用系统托盘图标。  可能在系统托盘不符合 Freedesktop.org system tray 规范需要.</translation>
     </message>
     <message>
         <source>Use the icon theme from your system if one is defined.</source>
@@ -6794,52 +6831,52 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="93"/>
         <source>[Experimental] Enable data counters.</source>
-        <translation type="unfinished"></translation>
+        <translation>[实验] 启用数据计数器.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="103"/>
         <source>Use an icon theme from your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>使用系统中的图标主题.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="104"/>
         <source>Icon Theme Name</source>
-        <translation type="unfinished"></translation>
+        <translation>图标主题名</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="109"/>
         <source>Scale program artwork for high DPI monitors.</source>
-        <translation type="unfinished"></translation>
+        <translation>针对高 DPI 显示器调整程序的大小.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="110"/>
         <source>Icon Scale1</source>
-        <translation type="unfinished"></translation>
+        <translation>图标比例1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="115"/>
         <source>Log the connman inputRequest for debugging purposes.</source>
-        <translation>记录connman的inputRequest日志以供调试。</translation>
+        <translation>记录connman的inputRequest日志以供调试.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="119"/>
         <source>Start the GUI minimized in the system tray.</source>
-        <translation>启动GUI时最小化到系统托盘。</translation>
+        <translation>启动GUI时最小化到系统托盘.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="123"/>
         <source>Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用最小化按钮。当您希望窗口管理器独自控制最小化界面时使用.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="127"/>
         <source>Disable VPN support.</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用 VPN 支持.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="133"/>
         <source>Specify the wait time in seconds before starting the system tray icon.</source>
-        <translation>指定系统托盘启动钱的等待时间，以秒为单位。</translation>
+        <translation>以秒为单位指定启动系统托盘图标前的等待时间.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="134"/>
@@ -6850,7 +6887,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="139"/>
         <source>[Experimental] The number of kb that have to be transmitted before the counter updates.</source>
-        <translation>[实验性] 统计更新前传输的数据量，以kb为单位。</translation>
+        <translation>[实验性] 统计更新前传输的数据量，以kb为单位.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="140"/>
@@ -6860,7 +6897,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="145"/>
         <source>[Experimental] The interval in seconds between counter updates.</source>
-        <translation>[实验性] 统计更新的间隔时间，以秒为单位。</translation>
+        <translation>[实验性] 统计更新的间隔时间，以秒为单位.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="152"/>
@@ -6875,12 +6912,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="161"/>
         <source>Use XFCE specific code.</source>
-        <translation>使用为XFCE准备的代码。</translation>
+        <translation>使用为XFCE准备的代码.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="166"/>
         <source>Use MATE DE specific code.</source>
-        <translation>使用为MATE准备的代码。</translation>
+        <translation>使用为MATE准备的代码.</translation>
     </message>
 </context>
 <context>
@@ -6888,12 +6925,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="44"/>
         <source> Warning</source>
-        <translation type="unfinished"> 警告</translation>
+        <translation> 警告</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="45"/>
         <source>&lt;center&gt;&lt;b&gt;We received a DBUS reply message indicating an error.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;Error Name: %1&lt;br&gt;&lt;br&gt;Error Message: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;b&gt;我们收到一条 DBUS信息，显示错误.&lt;/b&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;错误名称: %1&lt;br&gt;&lt;br&gt;错误信息: %2</translation>
     </message>
 </context>
 </TS>
