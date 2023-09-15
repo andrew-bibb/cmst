@@ -1157,8 +1157,7 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
             QStringList args = text.split(' ');
             QString cmd = args.first();
             args.removeFirst();
-            QProcess* proc = new QProcess(this);
-            proc->startDetached(cmd, args);
+            QProcess::startDetached(cmd, args);
          } // if online or ready and not online before
       } // if lineedit not empty
 

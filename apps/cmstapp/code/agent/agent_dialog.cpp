@@ -264,9 +264,6 @@ void AgentDialog::enteringBrowser()
 //	Called when ui.pushButton_launch_browser is pressed
 void AgentDialog::launchBrowser()
 {
-	// variables
-	QProcess* process = new QProcess(this);
-
 	// find installed terminals that we can deal with
 	QStringList sl_terminals = QStringList();	
 	if (! sys_env_path.isEmpty() ) {
@@ -287,11 +284,11 @@ void AgentDialog::launchBrowser()
 		QStringList sl_args = QStringList();
 		if (sl_terminals.contains("roxterm")) {
 			sl_args << "-T" << "Web Login" << "--execute" << chosenBrowser << ui.lineEdit_url->text();
-			 process->startDetached(QString("roxterm"), sl_args);
+			 QProcess::startDetached(QString("roxterm"), sl_args);
 		 }
 		 else if (sl_terminals.contains("xterm")) {
 			 sl_args << "-T"  << "Web Login" << "-e" << chosenBrowser << ui.lineEdit_url->text();
-			 process->startDetached(QString("xterm"), sl_args);
+			 QProcess::startDetached(QString("xterm"), sl_args);
 		 }
 		 else
 		 	QMessageBox::information(qobject_cast<QWidget *> (parent()),
@@ -300,7 +297,7 @@ void AgentDialog::launchBrowser()
 				"Currenty we can start %1 using these terminals: <b>roxterm</b> and <b>xterm</b>." \
 				"<br><br>To continue you need to manually open a terminal and then enter: \"%1 %2\"").arg(chosenBrowser).arg(ui.lineEdit_url->text()) );
 	} else {
-		process->startDetached(chosenBrowser, QStringList(ui.lineEdit_url->text()) );	
+		QProcess::startDetached(chosenBrowser, QStringList(ui.lineEdit_url->text()) );
 	}
 	
 	return;
