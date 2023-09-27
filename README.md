@@ -1,5 +1,8 @@
 cmst
 ====
+## Important Announcement
+## As of late June 2023 I was diagnosed with stage 4 cancer.  Fighting this has taken almost all of my time in addition to shutting down my consulting business.  As such this project is pretty much going to be left alone from my end.  I may be able to deal with pull requests but that is about it.  
+
 QT GUI for Connman with system tray icon.
 
 The program provides graphical user interface to control the connman daemon.  The connman daemon
