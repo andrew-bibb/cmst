@@ -1,5 +1,9 @@
 <b><center>Connman System Tray (CMST)</center></b>
 <b><center>Change Log</center></b>
+<b> In Progress</b>
+<ul>
+<li>Translations from PR #294 and #300.</li>
+</ul>
 <b> 2023.03.14</b>
 <ul>
 <li>Use short options in gzip for Alpine Linux (PR #292 from 154pinkchairs).</li>
