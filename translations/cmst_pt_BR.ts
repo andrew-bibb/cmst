@@ -171,7 +171,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="382"/>
         <source>Launch &amp;Browser</source>
-        <translation>&amp;Abrir o Navegador  de Internet</translation>
+        <translation>A&amp;brir o Navegador de Internet</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="420"/>
@@ -5434,7 +5434,7 @@ O padrão é: Cisco Systems VPN Client 0.5.3:Linux
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="579"/>
         <source>OpenVPN import is complete.</source>
-        <translation></translation>
+        <translation>A importação do OpenVPN está completa.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="600"/>
