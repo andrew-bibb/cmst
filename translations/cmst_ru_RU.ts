@@ -1628,7 +1628,7 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="606"/>
         <source>%1 license is the MIT (Expat) license.</source>
-        <translation>% 1 license - это лицензия MIT (Expat).</translation>
+        <translation> %1 license - это лицензия MIT (Expat).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="827"/>
@@ -1687,7 +1687,7 @@ p, li {пробел: предварительный перенос; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2462"/>
         <source>Service: %1
 </source>
-        <translation>Сервис:% 1
+        <translation>Сервис: %1
 </translation>
     </message>
     <message>
@@ -1702,21 +1702,21 @@ p, li {пробел: предварительный перенос; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2442"/>
         <source>SSID: %1
 </source>
-        <translation>SSID:% 1
+        <translation>SSID: %1
 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2447"/>
         <source>Security: %1
 </source>
-        <translation>Безопасность:% 1
+        <translation>Безопасность: %1
 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
         <source>Strength: %1%
 </source>
-        <translation>Крепость:% 1%
+        <translation>Крепость: %1%
 </translation>
     </message>
     <message>
@@ -1737,12 +1737,12 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2463"/>
         <source>Host: %1</source>
-        <translation>Хост:% 1</translation>
+        <translation>Хост: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2618"/>
         <source>Security: %1</source>
-        <translation>Безопасность:% 1</translation>
+        <translation>Безопасность: %1</translation>
     </message>
     <message>
         <source> Warning</source>
@@ -1755,7 +1755,7 @@ p, li {пробел: предварительный перенос; }
     </message>
     <message>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5</source>
-        <translation type="vanished">&lt;center&gt;% 1 - это программа, взаимодействующая с демоном Connman и обеспечивающая управление на панели задач. &lt;br&gt; &lt;center&gt; Версия &lt;b&gt;%2&lt;/b&gt; &lt;center&gt; Дата выпуска:% 3 &lt;center&gt; Авторские права c% 4 &lt;center&gt; от &lt;center&gt; Эндрю Дж. Бибб &lt;center&gt; Вермонт, США &lt;br&gt; &lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt; &lt;center&gt; Цзяньфэн Чжан (китайский) &lt;center&gt; sqozz (немецкий) &lt;center&gt; Илья Шестопалов (русский) &lt;center&gt; Heimen Stoffels (голландский) &lt;center&gt; Yaşar iv (турецкий) &lt;br&gt; &lt;center&gt; &lt;b&gt; Информация о сборке: &lt;/b&gt; &lt;center&gt; Скомпилировано с использованием QT версии% 5</translation>
+        <translation type="vanished">&lt;center&gt;%1 - это программа, взаимодействующая с демоном Connman и обеспечивающая управление на панели задач. &lt;br&gt; &lt;center&gt; Версия &lt;b&gt;%2&lt;/b&gt; &lt;center&gt; Дата выпуска: %3 &lt;center&gt; Авторские права c %4 &lt;center&gt; от &lt;center&gt; Эндрю Дж. Бибб &lt;center&gt; Вермонт, США &lt;br&gt; &lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt; &lt;center&gt; Цзяньфэн Чжан (китайский) &lt;center&gt; sqozz (немецкий) &lt;center&gt; Илья Шестопалов (русский) &lt;center&gt; Heimen Stoffels (голландский) &lt;center&gt; Yaşar iv (турецкий) &lt;br&gt; &lt;center&gt; &lt;b&gt; Информация о сборке: &lt;/b&gt; &lt;center&gt; Скомпилировано с использованием QT версии %5</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="579"/>
@@ -1824,17 +1824,17 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1241"/>
         <source>The connection to VPN service %1 was dropped and the VPN kill switch was engaged. All network devices are powered off.</source>
-        <translation>Подключение к службе VPN% 1 было прервано, и был задействован аварийный выключатель VPN. Все сетевые устройства выключены.</translation>
+        <translation>Подключение к службе VPN %1 было прервано, и был задействован аварийный выключатель VPN. Все сетевые устройства выключены.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1526"/>
         <source>&lt;b&gt;Technology: %1&lt;/b&gt;&lt;p&gt;Please enter the WiFi AP SSID that clients will&lt;br&gt;have to join in order to gain internet connectivity.</source>
-        <translation>&lt;b&gt; Технология:% 1 &lt;/b&gt; &lt;p&gt; Введите SSID точки доступа Wi-Fi, к которой клиенты &lt;br&gt; должны будут присоединиться, чтобы получить доступ к Интернету.</translation>
+        <translation>&lt;b&gt; Технология: %1 &lt;/b&gt; &lt;p&gt; Введите SSID точки доступа Wi-Fi, к которой клиенты &lt;br&gt; должны будут присоединиться, чтобы получить доступ к Интернету.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1538"/>
         <source>&lt;b&gt;Technology: %1&lt;/b&gt;&lt;p&gt;Please enter the WPA pre-shared key clients will&lt;br&gt;have to use in order to establish a connection.&lt;p&gt;PSK length: minimum of 8 characters.</source>
-        <translation>&lt;b&gt; Технология:% 1 &lt;/b&gt; &lt;p&gt; Введите общий ключ WPA, который клиенты &lt;br&gt; должны будут использовать для установления соединения. &lt;p&gt; Длина PSK: минимум 8 символов.</translation>
+        <translation>&lt;b&gt; Технология: %1 &lt;/b&gt; &lt;p&gt; Введите общий ключ WPA, который клиенты &lt;br&gt; должны будут использовать для установления соединения. &lt;p&gt; Длина PSK: минимум 8 символов.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1763"/>
@@ -1979,7 +1979,7 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
         <source>Support Enabled: %1&lt;br&gt;</source>
-        <translation>Поддержка включена:% 1 &lt;br&gt;</translation>
+        <translation>Поддержка включена: %1 &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
@@ -2001,17 +2001,17 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1817"/>
         <source>MAC Address: %1&lt;br&gt;</source>
-        <translation>MAC-адрес:% 1 &lt;br&gt;</translation>
+        <translation>MAC-адрес: %1 &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1818"/>
         <source>Conflict detected on: %1&lt;br&gt;</source>
-        <translation>Обнаружен конфликт:% 1 &lt;br&gt;</translation>
+        <translation>Обнаружен конфликт: %1 &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1819"/>
         <source>Resolved: %1&lt;br&gt;</source>
-        <translation>Решено:% 1 &lt;br&gt;</translation>
+        <translation>Решено: %1 &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1819"/>
@@ -2105,22 +2105,22 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1855"/>
         <source>Host: %1&lt;br&gt;</source>
-        <translation>Хост:% 1 &lt;br&gt;</translation>
+        <translation>Хост: %1 &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1856"/>
         <source>Domain: %1&lt;br&gt;</source>
-        <translation>Домен:% 1 &lt;br&gt;</translation>
+        <translation>Домен: %1 &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1857"/>
         <source>Name: %1&lt;br&gt;</source>
-        <translation>Имя:% 1 &lt;br&gt;</translation>
+        <translation>Имя: %1 &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1858"/>
         <source>Type: %1&lt;br&gt;</source>
-        <translation>Тип:% 1 &lt;br&gt;</translation>
+        <translation>Тип: %1 &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1951"/>
@@ -2250,7 +2250,7 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2542"/>
         <source>Type: %1</source>
-        <translation>Тип:% 1 &lt;br&gt;</translation>
+        <translation>Тип: %1 &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2543"/>
@@ -2287,12 +2287,12 @@ p, li {пробел: предварительный перенос; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2608"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2638"/>
         <source>Connection : %1</source>
-        <translation>Подключение:% 1</translation>
+        <translation>Подключение: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2610"/>
         <source>Signal Strength: %1%</source>
-        <translation>Мощность сигнала:% 1%</translation>
+        <translation>Мощность сигнала: %1%</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2612"/>
@@ -2410,12 +2410,12 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3222"/>
         <source>Attempt %1 of %2 looking for notification server.</source>
-        <translation>Попытка% 1 из% 2 найти сервер уведомлений.</translation>
+        <translation>Попытка %1 из %2 найти сервер уведомлений.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3225"/>
         <source>Unable to connect to a notification server after %1 tries.</source>
-        <translation>Не удалось подключиться к серверу уведомлений после попытки% 1.</translation>
+        <translation>Не удалось подключиться к серверу уведомлений после попытки %1.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3342"/>
@@ -2430,7 +2430,7 @@ p, li {пробел: предварительный перенос; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2541"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 Properties&lt;/b&gt;&lt;/center&gt;</source>
-        <translation>&lt;p style = &apos;white-space: pre&apos;&gt; &lt;center&gt; &lt;b&gt; Свойства% 1 &lt;/b&gt; &lt;/center&gt;</translation>
+        <translation>&lt;p style = &apos;white-space: pre&apos;&gt; &lt;center&gt; &lt;b&gt; Свойства %1 &lt;/b&gt; &lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3210"/>
@@ -2482,7 +2482,7 @@ p, li {пробел: предварительный перенос; }
     <name>IconManager</name>
     <message>
         <source>A new icon definition file will be installed to &lt;b&gt;%1&lt;/b&gt; and a backup of the old definition file has been created as &lt;b&gt;%2&lt;/b&gt; 						&lt;p&gt;If the original definition file was customized and you wish to retain those changes you will need to manually merge them into the new file.							&lt;p&gt;If the original was never customized or you just wish to delete the backup now you may select &lt;i&gt;Discard&lt;/i&gt; to delete the backup or &lt;i&gt;Save&lt;/i&gt; to retain it.</source>
-        <translation type="vanished">Новый файл определения значка будет установлен в &lt;b&gt;% 1 &lt;/b&gt;, а резервная копия старого файла определения будет создана как &lt;b&gt;% 2 &lt;/b&gt; &lt;p&gt; Если исходный файл определения был настроен и если вы хотите сохранить эти изменения, вам нужно будет вручную объединить их в новый файл. &lt;p&gt; Если оригинал никогда не настраивался или вы просто хотите удалить резервную копию сейчас, вы можете выбрать &lt;i&gt; Отменить &lt;/i&gt;, чтобы удалить резервную копию, или &lt;i&gt; Сохранить &lt;/i&gt;, чтобы сохранить ее.</translation>
+        <translation type="vanished">Новый файл определения значка будет установлен в &lt;b&gt; %1 &lt;/b&gt;, а резервная копия старого файла определения будет создана как &lt;b&gt; %2 &lt;/b&gt; &lt;p&gt; Если исходный файл определения был настроен и если вы хотите сохранить эти изменения, вам нужно будет вручную объединить их в новый файл. &lt;p&gt; Если оригинал никогда не настраивался или вы просто хотите удалить резервную копию сейчас, вы можете выбрать &lt;i&gt; Отменить &lt;/i&gt;, чтобы удалить резервную копию, или &lt;i&gt; Сохранить &lt;/i&gt;, чтобы сохранить ее.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/iconman/iconman.cpp" line="401"/>
