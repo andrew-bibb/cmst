@@ -2,6 +2,7 @@
 <b><center>Change Log</center></b>
 <b> In Progress</b>
 <ul>
+<li>PR #301 fix tray icon on HiDPI displays.</li>
 <li>Translations from PR #294 and #300.</li>
 <li>Use QProcess static function, PR #299.</li>
 </ul>
