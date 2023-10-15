@@ -2528,6 +2528,7 @@ void ControlBox::assembleTrayIcon()
    QPixmap pxm = prelimicon.pixmap(prelimicon.actualSize((QSize(22,22) *= iconscale)) );
    QImage src = pxm.toImage();
    QImage dest = QImage(src.width(), src.height(), QImage::Format_ARGB32);
+   dest.setDevicePixelRatio(src.devicePixelRatio());
    QPainter painter(&dest);
    if (trayiconbackground.isValid() && src.hasAlphaChannel() ) {
       painter.setCompositionMode(QPainter::CompositionMode_Source);
