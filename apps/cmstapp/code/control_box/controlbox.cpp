@@ -146,7 +146,6 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
    wifi_list.clear();
    peer_list.clear();
    vpn_list.clear();
-   vpnconn_list.clear();
    agent = new ConnmanAgent(this);
    vpnagent = new ConnmanVPNAgent(this);
    counter = new ConnmanCounter(this);
@@ -422,16 +421,7 @@ ControlBox::ControlBox(const QCommandLineParser& parser, QWidget *parent)
                ui.pushButton_vpn_editor->setEnabled(true);
                ui.checkBox_killswitch->setEnabled(true);
                shared::processReply(vpn_manager->call(QDBus::AutoDetect, "RegisterAgent", QVariant::fromValue(QDBusObjectPath(VPN_AGENT_OBJECT))) );
-
-               // connect vpn services to slots
-               QDBusMessage reply = vpn_manager->call("GetConnections");
-               shared::processReply(reply);
-               vpnconn_list.clear();
-               getArray(vpnconn_list, reply);
-               for (int i = 0; i < vpnconn_list.size(); ++i) {
-                  QDBusConnection::systemBus().connect(DBUS_VPN_SERVICE, vpnconn_list.at(i).objpath.path(), "net.connman.vpn.Connection", "PropertyChanged", this, SLOT(dbsVPNPropertyChanged(QString, QDBusVariant, QDBusMessage)));
-               } // vpnconn_list for loop
-            } // else enable vpn widgets, register agent, connect signals
+           } // else enable vpn widgets, register agent, connect signals
          } // else vpn_manager is valid
       } // else have valid connection
    } // else have connected systemBus
@@ -1174,9 +1164,13 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
 // of a service object changes.
 void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath> removed, QDBusMessage msg)
 {
-   // save the current service at the top of the list, used for vpn internet kill switch
+   // save the current service at the top of the list, used for vpn internet kill switch and VPN Disengaged notification
    QMap<QString,QVariant> topmap;
-   if (services_list.size() > 0) topmap = services_list.at(0).objmap;
+   QFileInfo top_fi;
+   if (services_list.size() > 0) {
+      topmap = services_list.at(0).objmap;
+      top_fi = QFileInfo(services_list.at(0).objpath.path());
+   }
 
    // process removed services
    if (! removed.isEmpty() ) {
@@ -1188,7 +1182,7 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
       } // for
    } // if we needed to remove something
 
-   // process added or changed servcies
+   // process added or changed services
    // Demarshall the raw QDBusMessage instead of vlist as it is easier..
    if (! vlist.isEmpty() ) {
       QList<arrayElement> revised_list;
@@ -1228,6 +1222,29 @@ void ControlBox::dbsServicesChanged(QList<QVariant> vlist, QList<QDBusObjectPath
 
    // clear the counters (if selected) and update the widgets
    clearCounters();
+
+   // notifications VPN Disengaged and VPN Engaged
+   QMap <QString,QVariant> curtopmap;
+   if (services_list.size() > 0) curtopmap = services_list.at(0).objmap;
+   QFileInfo fi (services_list.at(0).objpath.path());
+   if (topmap.value("Type").toString() == "vpn") {
+         if (fi.baseName() != top_fi.baseName() ) {
+         notifyclient->init();
+         notifyclient->setSummary(QString(tr("VPN Disengaged")) );
+         notifyclient->setIcon(iconman->getIconName("connection_not_ready") );
+         notifyclient->setBody(top_fi.baseName() );
+         notifyclient->setUrgency(Nc::UrgencyNormal);
+         this->sendNotifications();
+      }
+   }
+   else if (curtopmap.value("Type").toString() == "vpn") {
+      notifyclient->setSummary(QString(tr("VPN Engaged")) );
+      notifyclient->setIcon(iconman->getIconName("connection_vpn") );
+      notifyclient->setBody(fi.baseName() );
+      notifyclient->setUrgency(Nc::UrgencyNormal);
+      this->sendNotifications();
+      }
+
 
    // see if we need to engage the vpn internet kill switch
    // could probably animateClick the airplane mode checkbox or just call airplane mode via dBus, but I would prefer to look at each technology
@@ -1422,43 +1439,6 @@ void ControlBox::dbsServicePropertyChanged(QString property, QDBusVariant dbvalu
    updateDisplayWidgets();
 
    return;
-}
-
-//
-// Slot called whenever a vpn connection issues a PropertyChanged signal on DBUS
-void ControlBox::dbsVPNPropertyChanged(QString property, QDBusVariant dbvalue, QDBusMessage msg)
-{
-   QString s_path = msg.path();
-   QVariant value = dbvalue.variant();
-
-   if (property == "State") {
-      // This is sort of a hack.  Not all VPN service properties are signaled when they change (for instance Provider, IPV4).  This slot was created to address that, plus we moved the notification code from dbsServicePropertyChanged to here. Force a new service list to be created.
-      getServices();
-
-      // Send notification if vpn changed
-      for (int i = 0; i < vpnconn_list.count(); ++i) {
-         if (s_path == vpnconn_list.at(i).objpath.path() ) {
-            notifyclient->init();
-            if (value.toString() == "ready") {
-               notifyclient->setSummary(QString(tr("VPN Engaged")) );
-               notifyclient->setIcon(iconman->getIconName("connection_vpn") );
-            }
-            else {
-               notifyclient->setSummary(QString(tr("VPN Disengaged")) );
-               notifyclient->setIcon(iconman->getIconName("connection_not_ready") );
-            }
-            notifyclient->setBody(QString(tr("Object Path: %1")).arg(s_path) );
-            notifyclient->setUrgency(Nc::UrgencyNormal);
-            this->sendNotifications();
-            break;
-         } // if
-      } // for
-   } // if property = State
-
-// update the widgets
-  updateDisplayWidgets();
-
-  return;
 }
 
 //

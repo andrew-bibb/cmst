@@ -121,7 +121,6 @@ class ControlBox : public QDialog
       QList<arrayElement> wifi_list;
       QList<arrayElement> peer_list;
       QList<arrayElement> vpn_list;       // extracted from our services list
-      QList<arrayElement> vpnconn_list;   // from vpn manager used for signals and slots
       ConnmanAgent* agent;
       ConnmanVPNAgent* vpnagent;
       ConnmanCounter* counter;
@@ -197,7 +196,6 @@ class ControlBox : public QDialog
       void dbsServicesChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage);
       void dbsPeersChanged(QList<QVariant>, QList<QDBusObjectPath>, QDBusMessage);
       void dbsServicePropertyChanged(QString, QDBusVariant, QDBusMessage);
-      void dbsVPNPropertyChanged(QString, QDBusVariant, QDBusMessage);
       void dbsTechnologyPropertyChanged(QString, QDBusVariant, QDBusMessage);
       void dbsTechnologyAdded(QDBusObjectPath, QVariantMap);
       void dbsTechnologyRemoved(QDBusObjectPath);
