@@ -2,6 +2,7 @@
 <b><center>Change Log</center></b>
 <b> In Progress</b>
 <ul>
+<li>Fixed clear counters not working.</li>
 <li>Fixed extraneous VPN Disengaged notification when connecting to a VPN.</li>
 <li>PR #301 fix tray icon on HiDPI displays.</li>
 <li>Translations from PR #294 and #300.</li>

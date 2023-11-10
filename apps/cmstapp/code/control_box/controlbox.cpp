@@ -2080,8 +2080,7 @@ void ControlBox::assembleTabStatus()
          ui.tableWidget_services->setItem(row, 1, qtwi01);
 
          QTableWidgetItem* qtwi02 = new QTableWidgetItem();
-         ss = services_list.at(row).objmap.value("State").toString();
-         qtwi02->setText(TranslateStrings::cmtr(ss) );
+         ss = services_list.at(row).objmap.value("State").toString(); qtwi02->setText(TranslateStrings::cmtr(ss) );
          qtwi02->setTextAlignment(Qt::AlignCenter);
          ui.tableWidget_services->setItem(row, 2, qtwi02);
 
@@ -3124,11 +3123,20 @@ QString ControlBox::readResourceText(const char* textfile)
 // and from dbsServicesChanged
 void ControlBox::clearCounters()
 {
-   if (ui.checkBox_resetcounters->isChecked() && ! onlineobjectpath.isEmpty() ) {
+   QString ss = QString();
+   for (int row = 0; row < services_list.size(); ++row) {
+      ss = services_list.at(row).objmap.value("State").toString();
+      if (ss == "online") {
+         onlineobjectpath = services_list.at(row).objpath.path();
+         break;
+      } // if ss=="online"
+   } // for loop
+
+   if (ui.checkBox_resetcounters->isChecked() && !onlineobjectpath.isEmpty() ) {
       QDBusInterface* iface_serv = new QDBusInterface(DBUS_CON_SERVICE, onlineobjectpath, "net.connman.Service", QDBusConnection::systemBus(), this);
       shared::processReply(iface_serv->call(QDBus::AutoDetect, "ResetCounters") );
       iface_serv->deleteLater();
-   }
+   } // if resetcounters is checked
 
    return;
 }

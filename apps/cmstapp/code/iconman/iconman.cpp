@@ -258,7 +258,7 @@ bool IconManager::buildResourceIcon(QIcon& icon, const QString& name, const QStr
    // see if we need to colorize
    QColor qc_col = QColor();
    if (s_col.contains("yes", Qt::CaseInsensitive) || s_col == "1" ) qc_col = icon_color;
-   else if (s_col.size() == 6) qc_col.setNamedColor(QString("#" + s_col) );
+   else if (s_col.size() == 6) qc_col.fromString(QString("#" + s_col) );
 
    // check to see if the names exist, if they do build the icon
    if (QFileInfo(name_on.section(' ', 0, 0)).exists() ) {
