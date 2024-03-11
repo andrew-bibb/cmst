@@ -1059,7 +1059,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="294"/>
         <source>ID:Pass</source>
-        <translation>ID:Passe</translation>
+        <translation>ID:Pass</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="301"/>
