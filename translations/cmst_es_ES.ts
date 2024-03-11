@@ -2583,7 +2583,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Possible values of &lt;span style=&quot; font-weight:600;&quot;&gt;dhcp&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt;, and &lt;span style=&quot; font-weight:600;&quot;&gt;off&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt; is selected boxes for &lt;span style=&quot; font-weight:600;&quot;&gt;Address&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Netmask&lt;/span&gt; and&lt;span style=&quot; font-weight:600;&quot;&gt; Gateway&lt;/span&gt; will become visible.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Posibles valores de &lt;span style=&quot; font-weight:600;&quot;&gt;dhcp&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt;, and &lt;span style=&quot; font-weight:600;&quot;&gt;off&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt; se seleccionan casillas para &lt;span style=&quot; font-weight:600;&quot;&gt;Address&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Netmask&lt;/span&gt; and&lt;span style=&quot; font-weight:600;&quot;&gt; Puerta de enlace&lt;/span&gt; se hará visible.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Valores posibles: &lt;span style=&quot; font-weight:600;&quot;&gt;dhcp&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt;, y &lt;span style=&quot; font-weight:600;&quot;&gt;desactivado&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Si se selecciona &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt;, se mostrarán las casillas &lt;span style=&quot; font-weight:600;&quot;&gt;Dirección&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Máscara de red&lt;/span&gt; y&lt;span style=&quot; font-weight:600;&quot;&gt; Puerta de enlace&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="321"/>
@@ -2631,7 +2631,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="450"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Possible values are &amp;quot;auto&amp;quot;, &amp;quot;manual&amp;quot;,  and &amp;quot;off&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Valores posibles: &amp;quot;auto&amp;quot;, &amp;quot;manual&amp;quot; y &amp;quot;desactivado&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="542"/>
@@ -2657,7 +2657,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Used when &amp;quot;manual&amp;quot; is set. List of proxy URIs. The URI without a protocol will be interpreted as the generic proxy URI.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Utilizado cuando &amp;quot;manual&amp;quot; está seleccionado. Muestra una lista de URI proxy. El URI sin protocolo se interpretará como un URI de proxy genérico.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Introduzca una o varias direcciones IP. Separe cada dirección introducida con una coma, un punto y coma o un espacio en blanco.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="561"/>
@@ -2885,7 +2890,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="271"/>
         <source>PrivateKeyPassphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>ContraseñaDeClavePrivada</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="279"/>
@@ -2900,7 +2905,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="292"/>
         <source>Phase2</source>
-        <translation type="unfinished"></translation>
+        <translation>Phase2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="297"/>
@@ -2970,7 +2975,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="389"/>
         <source>AnonymousIdentity</source>
-        <translation type="unfinished"></translation>
+        <translation>IdentidadAnónima</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="392"/>
