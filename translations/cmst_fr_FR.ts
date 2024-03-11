@@ -6,7 +6,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="14"/>
         <source>Agent Input</source>
-        <translation>0x00000000219ab540356cbb839cbe05303d7705fa</translation>
+        <translation>Saisie de l’agent</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="45"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="64"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;0x00000000219ab540356cbb839cbe05303d7705fa&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si 0x00000000219ab540356cbb839cbe05303d7705fa phrase de passe est 0x00000000219ab540356cbb839cbe05303d7705fa, 0x00000000219ab540356cbb839cbe05303d7705fa sera 0x00000000219ab540356cbb839cbe05303d7705fa pour 0x00000000219ab540356cbb839cbe05303d7705fa&lt;/p&gt;&lt;/body&gt;&lt;/0x00000000219ab540356cbb839cbe05303d7705fa&gt;</translation>
+        <translation>&amp;lt;html&amp;gt;&amp;lt;head/&amp;gt;&amp;lt;body&amp;gt;&amp;lt;p&amp;gt;Si une ancienne phrase de passe est disponible, elle sera affichée ici pour référence.&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="74"/>
