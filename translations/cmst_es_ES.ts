@@ -2560,7 +2560,11 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The IPv4 gateway for this connection. This field is optional and may be left blank&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;La puerta de enlace IPv4 para esta conexión. Este campo es opcional y puede dejarse en blanco&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="247"/>
@@ -2579,7 +2583,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="265"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Possible values of &lt;span style=&quot; font-weight:600;&quot;&gt;dhcp&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt;, and &lt;span style=&quot; font-weight:600;&quot;&gt;off&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt; is selected boxes for &lt;span style=&quot; font-weight:600;&quot;&gt;Address&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Netmask&lt;/span&gt; and&lt;span style=&quot; font-weight:600;&quot;&gt; Gateway&lt;/span&gt; will become visible.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Posibles valores de &lt;span style=&quot; font-weight:600;&quot;&gt;dhcp&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt;, and &lt;span style=&quot; font-weight:600;&quot;&gt;off&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:600;&quot;&gt;manual&lt;/span&gt; se seleccionan casillas para &lt;span style=&quot; font-weight:600;&quot;&gt;Address&lt;/span&gt;, &lt;span style=&quot; font-weight:600;&quot;&gt;Netmask&lt;/span&gt; and&lt;span style=&quot; font-weight:600;&quot;&gt; Puerta de enlace&lt;/span&gt; se hará visible.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="321"/>
@@ -2976,7 +2980,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="397"/>
         <source>SubjectMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Coincidencia de tema</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="400"/>
@@ -3137,7 +3141,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="244"/>
         <source>Substring to be matched against the subject of the authentication server</source>
-        <translation type="unfinished"></translation>
+        <translation>Subcadena que se comparará con el asunto del servidor de autenticación</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="245"/>
@@ -3202,12 +3206,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="333"/>
         <source>The interface name in which to apply the provisioning (ex. eth0)</source>
-        <translation type="unfinished"></translation>
+        <translation>El nombre de la interfaz en la que aplicar el aprovisionamiento (ej. eth0)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="372"/>
         <source>IPv4 Netmask. &lt;br&gt;&lt;br&gt;The entry can be a mask length (example 24) or in the form xxx.xxx.xxx.xxx</source>
-        <translation type="unfinished"></translation>
+        <translation>Máscara de Red IPv4. &lt;br&gt;&lt;br&gt;La entrada puede ser una longitud de máscara (ejemplo 24) o de la forma xxx.xxx.xxx.xxx</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="294"/>
@@ -3242,7 +3246,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="330"/>
         <source>Anonymous identity string for EAP.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cadena de identidad anónima para EAP.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="331"/>
@@ -3267,7 +3271,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="414"/>
         <source>IPv6 Gateway .&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>Puerta de enlace IPv6.&lt;br&gt;&lt;br&gt;Esta es una entrada opcional, pulse Cancelar si no hay ninguna entrada para la pasarela</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="513"/>
@@ -3290,7 +3294,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="378"/>
         <source>IPv4 Gateway.&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>Puerta de enlace IPv4.&lt;br&gt;&lt;br&gt;Esta es una entrada opcional, pulse Cancelar si no hay ninguna entrada para la pasarela</translation>
     </message>
     <message>
         <source>IPv4 Gateway (This is an optional entry)</source>
@@ -3416,12 +3420,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="14"/>
         <source>Scrollbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Cuadro de desplazamiento</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="38"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiqueta de texto</translation>
     </message>
 </context>
 <context>
