@@ -71,7 +71,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="175"/>
         <source>Wireless Internet Service Provider roaming (WISPr)</source>
-        <translation>Reencaminhamento do Provedor de Serviços de Internet Sem Fio/Wi-Fi (WISPr)</translation>
+        <translation>Reencaminhamento do Provedor de Serviços de Internet Sem Fios/Wi-Fi (WISPr)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="181"/>
@@ -549,7 +549,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one wifi service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço de uma rede sem fios (Wi-Fi) na tabela abaixo e prima este botão para conectar o serviço.&lt;/p&gt;&lt;p&gt;Se houver apenas um serviço de rede sem fios (Wi-Fi) listado na tabela, prima este botão para selecionar automaticamente esse serviço e tentará se conectar.&lt;/p&gt;&lt;p&gt;Se forem necessárias mais informações sobre o serviço, por exemplo, uma palavra-passe poderá ser-lhe solicitado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço de uma rede sem fios (Wi-Fi) na tabela abaixo e prima este botão para ligar o serviço.&lt;/p&gt;&lt;p&gt;Se houver apenas um serviço de rede sem fios (Wi-Fi) listado na tabela, prima este botão para selecionar automaticamente esse serviço e tentará se ligar.&lt;/p&gt;&lt;p&gt;Se forem necessárias mais informações sobre o serviço, por exemplo, uma palavra-passe poderá ser-lhe solicitado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="613"/>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="620"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one wifi service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço de rede sem fios (Wi-Fi) na tabela abaixo e prima este botão para desconectá-lo. &lt;/p&gt;&lt;p&gt;Se houver apenas um serviço de rede sem fios (Wi-Fi) no estado &amp;quot;pronto&amp;quot; ou &amp;quot;ligado (on-line)&amp;quot;, prima este botão para selecionar automaticamente esse serviço e desconectá-lo.&lt;/p&gt;&lt;p&gt;Este procedimento também pode ser utilizado para abortar uma tentativa de ligação anterior.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço de rede sem fios (Wi-Fi) na tabela abaixo e prima este botão para desligá-lo. &lt;/p&gt;&lt;p&gt;Se houver apenas um serviço de rede sem fios (Wi-Fi) no estado &amp;quot;pronto&amp;quot; ou &amp;quot;ligado (on-line)&amp;quot;, prima este botão para selecionar automaticamente esse serviço e desligá-lo.&lt;/p&gt;&lt;p&gt;Este procedimento também pode ser utilizado para abortar uma tentativa de ligação anterior.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="623"/>
@@ -676,7 +676,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="268"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Força uma nova varredura de todas as tecnologias de rede sem fios (Wi-Fi). Isto é semelhante a emitir o comando &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; a partir da linha de comando.&lt;/p&gt;&lt;p&gt;O botão ficará inativo durante a varredura.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Força uma nova análise de todas as tecnologias de rede sem fios (Wi-Fi). Isto é semelhante a emitir o comando &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; a partir da linha de comando.&lt;/p&gt;&lt;p&gt;O botão ficará inativo durante a análise.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="737"/>
@@ -1116,7 +1116,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="640"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to edit the service. &lt;/p&gt;&lt;p&gt;The service must have previously been successfully connected (Favorite is true) for this button to work. Pressing &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; will remove the service and then request credentials to establish the connection. If the service is currently connected it will be disconnected first. If the service required a passphrase then the old passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;Connman does not provide any methods to retrieve credentials (passphrases, etc.) as that is insecure. CMST will not work around this protection. All this button really does is automate pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Remove&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; buttons above. Make sure you know all of the credentials to reconnect as the existing credentials will be cleared when this button is pressed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço de rede sem fios (Wi-Fi) na tabela abaixo e prima este botão para editar as credenciais deste serviço. &lt;/p&gt;&lt;p&gt;O serviço de ligação de rede deve ter sido previamente ligado com sucesso (o favorito será verdadeiro) para que este botão funcione. Pressione o botão &lt;span style=&quot; font-weight:600;&quot;&gt;Editar&lt;/span&gt; para remover o serviço e solicitar as credenciais para estabelecer a ligação com a rede. Se o serviço estiver ligado neste momento, ele será desligado primeiro. Se o serviço exigir uma palavra-passe, a palavra-passe antiga será apagada e esquecida.&lt;/p&gt;&lt;p&gt;O ConnMan não fornece nenhum método para recuperar as credenciais (frase-palavra-passe, palavra-passe, passphrase, password, etc.) inseridas anteriormente, pois isso não é seguro. O CMST não irá contornar esta proteção. Tudo o que este botão realmente faz é automatizar o pressionamento do botão &lt;span style=&quot; font-weight:600;&quot;&gt;Remover&lt;/span&gt; e &lt;span style=&quot; font-weight:600;&quot;&gt;Conectar&lt;/span&gt;. Certifique-se de conhecer todas as credenciais para ligar novamente, pois as credenciais existentes serão apagadas quando este botão for pressionado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço de rede sem fios (Wi-Fi) na tabela abaixo e prima este botão para editar as credenciais deste serviço. &lt;/p&gt;&lt;p&gt;O serviço de ligação de rede deve ter sido previamente ligado com sucesso (o favorito será verdadeiro) para que este botão funcione. Pressione o botão &lt;span style=&quot; font-weight:600;&quot;&gt;Editar&lt;/span&gt; para remover o serviço e solicitar as credenciais para estabelecer a ligação com a rede. Se o serviço estiver ligado neste momento, ele será desligado primeiro. Se o serviço exigir uma palavra-passe, a palavra-passe antiga será apagada e esquecida.&lt;/p&gt;&lt;p&gt;O ConnMan não fornece nenhum método para recuperar as credenciais (frase-palavra-passe, palavra-passe, passphrase, password, etc.) inseridas anteriormente, pois isso não é seguro. O CMST não irá contornar esta proteção. Tudo o que este botão realmente faz é automatizar o premir do botão &lt;span style=&quot; font-weight:600;&quot;&gt;Remover&lt;/span&gt; e &lt;span style=&quot; font-weight:600;&quot;&gt;Ligar&lt;/span&gt;. Certifique-se de conhecer todas as credenciais para ligar novamente, pois as credenciais existentes serão apagadas quando este botão for pressionado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="643"/>
@@ -1201,7 +1201,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1661"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This area is to specify a program or process to run after a wifi or vpn service button is pressed, but before the connect method is sent to ConnMan. This is mainly used to modify a .cmst.config file which seems useful to modify certain short lived entries for openConnect vpn connections.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;Execute&lt;/span&gt; box will only be executed prior to making a connection for the single service shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Service&lt;/span&gt; box. It will not be called when connecting to any other service. If a .cmst.config file is to be modified a check must in the &lt;span style=&quot; font-weight:600;&quot;&gt;Modify Service File&lt;/span&gt; box and the path and name of the file to be modified must be provided.&lt;/p&gt;&lt;p&gt;To modify a .cmst.config file CMST will read stdout of the program or process being called. Program output should be individual lines in KEY=VALUE format. If KEY exists in the .cmst.config file it will be replaced by the new VALUE. If KEY does not exist it will be appended. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta área é para especificar um programa ou processo a ser executado após um botão do serviço de rede sem fios (Wi-Fi) ou de VPN ser pressionado, mas antes que o método de ligação seja enviado ao ConnMan. Isto é utilizado principalmente para modificar o ficheiro .cmst.config que parece útil para modificar certas entradas de curta duração para ligações de VPN do openConnect.&lt;/p&gt;&lt;p&gt;O programa ou processo na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Executar&lt;/span&gt; só será executado antes de fazer uma ligação para o único serviço exibido na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Serviço&lt;/span&gt;. Ele não será chamado ao se conectar a qualquer outro serviço. Se um ficheiro .cmst.config tiver que ser modificado, uma marca de seleção deverá ser feita na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Modificar o Ficheiro de Serviço&lt;/span&gt;, o caminho e o nome do ficheiro a ser modificado deverão ser fornecidos.&lt;/p&gt;&lt;p&gt;Para modificar o ficheiro .cmst.config, o CMST irá ler o stdout do programa ou processo que está sendo chamado. A saída do programa deve ser de linhas individuais no formato KEY=VALUE. Se KEY existir no ficheiro .cmst.config, ele será substituído pelo novo valor de VALUE. Se KEY não existir, ele será anexado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta área é para especificar um programa ou processo a ser executado após um botão do serviço de rede sem fios (Wi-Fi) ou de VPN ser pressionado, mas antes que o método de ligação seja enviado ao ConnMan. Isto é utilizado principalmente para modificar o ficheiro .cmst.config que parece útil para modificar certas entradas de curta duração para ligações de VPN do openConnect.&lt;/p&gt;&lt;p&gt;O programa ou processo na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Executar&lt;/span&gt; só será executado antes de fazer uma ligação para o único serviço exibido na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Serviço&lt;/span&gt;. Ele não será chamado ao se conectar a qualquer outro serviço. Se um ficheiro .cmst.config tiver que ser modificado, uma marca de seleção deverá ser feita na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Modificar o Ficheiro de Serviço&lt;/span&gt;, o caminho e o nome do ficheiro a ser modificado deverão ser fornecidos.&lt;/p&gt;&lt;p&gt;Para modificar o ficheiro .cmst.config, o CMST irá ler o stdout do programa ou processo que está sendo chamado. A saída do programa deve ser de linhas individuais no formato KEY=VALUE. Se a KEY existir no ficheiro .cmst.config, a mesma será substituída pelo novo valor de VALUE. Se a KEY não existir, ele será anexado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1664"/>
@@ -1380,7 +1380,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2033"/>
         <source>Set ID and Password for tethered wifi</source>
-        <translation>Definir o ID e a Palavra-passe para a de rede sem fios (Wi-Fi) compartilhada</translation>
+        <translation>Definir o ID e a Palavra-passe para a de rede sem fios (Wi-Fi) partilhada</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="436"/>
@@ -1469,7 +1469,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="974"/>
         <source>You need to select a Wifi service before pressing the remove button.</source>
-        <translation>Você tem que selecionar um serviço de rede sem fios (Wi-Fi) antes de pressionar o botão Remover.</translation>
+        <translation>Tem que selecionar um serviço de rede sem fios (Wi-Fi) antes de pressionar o botão Remover.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1111"/>
@@ -1510,7 +1510,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1526"/>
         <source>&lt;b&gt;Technology: %1&lt;/b&gt;&lt;p&gt;Please enter the WiFi AP SSID that clients will&lt;br&gt;have to join in order to gain internet connectivity.</source>
-        <translation>&lt;b&gt;Tecnologia: %1&lt;/b&gt;&lt;p&gt;Por favor, insira o nome da rede (SSID) do ponto de &lt;br&gt;acesso (AP) da rede sem fios (Wi-Fi) que os clientes &lt;br&gt;terão que ingressar para obter conectividade com a &lt;br&gt;Internet.</translation>
+        <translation>&lt;b&gt;Tecnologia: %1&lt;/b&gt;&lt;p&gt;Insira o nome da rede (SSID) do ponto de &lt;br&gt;acesso (AP) da rede sem fios (Wi-Fi) que os clientes &lt;br&gt;terão que ingressar para obter ligação com a &lt;br&gt;Internet.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1538"/>
@@ -1609,7 +1609,7 @@ aplicativoa
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1008"/>
         <source>You need to select a Wifi service before pressing the edit button.</source>
-        <translation>Você precisa selecionar um serviço de rede sem fios (Wi-Fi) antes de pressionar o botão Editar.</translation>
+        <translation>Precisa de selecionar um serviço de rede sem fios (Wi-Fi) antes de pressionar o botão Editar.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1060"/>
@@ -2227,7 +2227,7 @@ aplicativoa
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3156"/>
         <source>[Hidden Wifi]</source>
-        <translation>[Ocultar a Rede Sem Fio - Wi-Fi]</translation>
+        <translation>[Ocultar a Rede Sem Fios - Wi-Fi]</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3210"/>
@@ -2967,7 +2967,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="144"/>
         <source>WiFi</source>
-        <translation>Sem Fio (Wi-Fi)</translation>
+        <translation>Sem Fios (Wi-Fi)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="171"/>
