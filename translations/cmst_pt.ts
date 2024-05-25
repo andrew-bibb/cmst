@@ -375,7 +375,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This checkbox controls the global setting for switching all radios on or off. When checked all radios are powered down.&lt;/p&gt;&lt;p&gt;When the system is In offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta caixa de seleção controla a configuração global para ligar ou desligar todos os rádios. Quando esta caixa de opção é marcada, todos os rádios são desligados.&lt;/p&gt;&lt;p&gt;Quando o sistema está em modo desligado (off) ou desligado (off-line), é possível ligar ou conectar os dispositivos individuais novamente. Ao sair do modo desligado (off-line), a política individual de cada dispositivo determina se o rádio está ou não ligado novamente.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta caixa de verificação controla a definição global para ligar ou desligar todos os rádios. Quando marcada, todos os rádios são desligados.&lt;/p&gt;&lt;p&gt;Quando o sistema está no modo offline, é possível ligar novamente dispositivos individuais. Ao sair do modo offline, a política individual de cada dispositivo determina se o rádio é ligado novamente ou não.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="121"/>
@@ -406,7 +406,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="92"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="150"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A configuração global para ligar ou desligar todos os rádios. Quando o modo desligado ou modo desligado (off-line) é ligado ou ligado, todos os rádios são desligados.&lt;/p&gt;&lt;p&gt;Enquanto que no modo desligado (off-line) é possível conectar ou ligar os dispositivos individuais novamente. Ao sair do modo desligado (off-line), a política individual de cada dispositivo determina se o rádio está ou não ligado novamente.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A configuração global para ligar ou desligar todos os rádios. Quando o modo offline está ativado, todos os rádios são desligados.&lt;/p&gt;&lt;p&gt;Enquanto estiver no modo offline, é possível voltar a ligar dispositivos individuais. Ao sair do modo offline, a política individual de cada dispositivo determina se o rádio é ligado novamente ou não.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="95"/>
@@ -470,7 +470,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="320"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This box lists all services that connman can connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta caixa lista todos os serviços que o ConnMan pode se conectar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta caixa lista todos os serviços aos quais o connman pode se ligar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="323"/>
@@ -514,7 +514,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page will show the details of the service selected in the box at the top. If the selected service is not in the READY or ONLINE state then most of the details will be blank. &lt;/p&gt;&lt;p&gt;You may override service details by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Configuration&lt;/span&gt; button at the bottom right. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta página exibirá os detalhes do serviço selecionado na caixa no topo. Se o serviço selecionado não estiver no estado PRONTO ou CONECTADO (ON-LINE), a maioria dos detalhes estarão vazios.&lt;/p&gt;&lt;p&gt;Você pode substituir os detalhes do serviço utilizando o botão &lt;span style=&quot; font-weight:600;&quot;&gt;Configurações&lt;/span&gt; no canto inferior direito.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta página mostrará os detalhes do serviço selecionado na caixa em cima. Se o serviço selecionado não estiver no estado PRONTO ou ONLINE, a maior parte dos detalhes estará em branco.&lt;/p&gt;&lt;p&gt;Pode substituir os detalhes do serviço utilizando o botão &lt;span style=&quot; font-weight:600;&quot;&gt;Configuração&lt;/span&gt; no canto inferior direito.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="466"/>
@@ -555,7 +555,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="613"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="782"/>
         <source>Connect</source>
-        <translation>Conectar</translation>
+        <translation>Ligar</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="620"/>
@@ -587,7 +587,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1318"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will implement an internet kill switch for VPN connections. If a VPN connection drops while the kill switch is enabled all technologies will be powered off.&lt;/p&gt;&lt;p&gt;The way this works is the service order is monitored. If the topmost service is of type VPN and then if it changes to something other than VPN and if the change was not initiated by the user (for instance by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Disconnect&lt;/span&gt; button in the VPN tab), then CMST will cycle through all technologies powering each one down in turn. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se esta opção estiver ativada, o CMST implementará uma comutação de internet para as ligações de VPN. Se uma ligação de VPN cair enquanto o comutador &apos;kill&apos; estiver ativado, todas as tecnologias serão desligadas.&lt;/p&gt;&lt;p&gt;A forma como este serviço funciona é a ordem de serviço monitorada. Se o serviço mais alto for do tipo VPN e, em seguida, se ocorrer uma alteração para algo diferente de VPN e se a alteração não foi iniciada pelo utilizador (por exemplo, utilizando o botão &lt;span style=&quot; font-weight:600;&quot;&gt;Desligar&lt;/span&gt; no separador VPN, o CMST percorrerá todas as tecnologias desconectando todos os dispositivos, um de cada vez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se esta opção estiver ativada, o CMST implementará uma comutação de internet para as ligações de VPN. Se uma ligação de VPN cair enquanto o comutador &apos;kill&apos; estiver ativado, todas as tecnologias serão desligadas.&lt;/p&gt;&lt;p&gt;A forma como este serviço funciona é a ordem de serviço monitorizada. Se o serviço mais alto for do tipo VPN e, em seguida, se ocorrer uma alteração para algo diferente de VPN e se a alteração não foi iniciada pelo utilizador (por exemplo, utilizando o botão &lt;span style=&quot; font-weight:600;&quot;&gt;Desligar&lt;/span&gt; no separador VPN, o CMST percorrerá todas as tecnologias desligando todos os dispositivos, um de cada vez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1321"/>
@@ -712,7 +712,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="974"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection that is not marked roaming. &lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Contadores para a ligação de serviço &amp;quot;ligado (on-line)&amp;quot; que não estão marcados como &amp;quot;reencaminhamento&amp;quot; (roaming).&lt;/p&gt;&lt;p&gt;Os contadores podem nem sempre estarem disponíveis. Os contadores podem ter sido desativados através da linha de comando (-c or --disable-counters) ou ocasionalmente a ligação será registrada como sendo &amp;quot;pronta&amp;quot; em vez de &amp;quot;ligado (on-line)&amp;quot;. Quando exibe &amp;quot;ligado (on-line)&amp;quot;, significa que é uma ligação &amp;quot;pronta&amp;quot; que possui conectividade verificada com à Internet. É possível estar &amp;quot;ligado (on-line)&amp;quot; apenas com uma ligação &amp;quot;pronta&amp;quot;, porém os contadores só funcionam em uma ligação &amp;quot;conectada (on-line)&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Contadores para a ligação de serviço &amp;quot;online&amp;quot; que não está marcada como roaming. &lt;/p&gt;&lt;p&gt;Os contadores podem não estar sempre disponíveis. Os contadores podem ter sido desativados na linha de comandos (-c ou --disable-counters) ou, ocasionalmente, a ligação registará &amp;quot;pronta&amp;quot; em vez de &amp;quot;online&amp;quot;. Online é uma ligação &amp;quot;pronta&amp;quot; que verificou a conetividade com a Internet. É possível estar online apenas com uma ligação &amp;quot;pronta&amp;quot;, no entanto os contadores só funcionam para uma ligação &amp;quot;online&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="947"/>
@@ -728,7 +728,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1003"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection marked &amp;quot;roaming&amp;quot;.&lt;/p&gt;&lt;p&gt;In the case of cellular services this normally indicates connections to a foreign provider.&lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Contadores para a ligação de serviço &amp;quot;ligado&amp;quot; (on-line) marcados como &amp;quot;reencaminhamento&amp;quot; (roaming).&lt;/p&gt;&lt;p&gt;No caso de serviços de telefonia móvel, isto normalmente indica ligações com um provedor de internet estrangeiro&lt;/p&gt;&lt;p&gt;Os contadores podem nem sempre estarem disponíveis. Os contadores podem ter sido desativados através da linha de comando (-c ou --disable-counters) ou ocasionalmente a ligação será registrada como sendo &amp;quot;pronta&amp;quot; em vez de &amp;quot;conectada&amp;quot; (on-line). Quando exibe &amp;quot;ligado&amp;quot; (on-line), significa que uma ligação &amp;quot;pronta&amp;quot; que possui conectividade verificada com à internet. É possível estar &amp;quot;ligado&amp;quot; (on-line) apenas com uma ligação &amp;quot;pronta&amp;quot;, porém os contadores só funcionam para uma ligação &amp;quot;ligado&amp;quot; (on-line).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Contadores para a ligação de serviço &amp;quot;online&amp;quot; marcada como &amp;quot;roaming&amp;quot;.&lt;/p&gt;&lt;p&gt;No caso de serviços celulares isso normalmente indica ligações com uma operadora estrangeira.&lt;/p&gt;&lt;p&gt;Os contadores podem não estar sempre disponíveis. Os contadores podem ter sido desativados na linha de comando (-c ou --disable-counters) ou, ocasionalmente, a ligação registrará &amp;quot;pronta&amp;quot; em vez de &amp;quot;online&amp;quot;. Online é uma ligação &amp;quot;pronta&amp;quot; que verificou a conetividade com a Internet. É possível estar online apenas com uma ligação &amp;quot;pronta&amp;quot;, no entanto os contadores só funcionam para uma ligação &amp;quot;online&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1006"/>
@@ -950,12 +950,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="779"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one vpn service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço de VPN (Virtual Private Network) na tabela abaixo e prima este botão para conectar o serviço.&lt;/p&gt;&lt;p&gt;Se houver apenas um serviço de VPN listado na tabela, prima este botão que selecionará automaticamente este serviço e tentará se conectar.&lt;/p&gt;&lt;p&gt;Se forem necessárias mais informações sobre o serviço, por exemplo, uma palavra-passe poderá ser solicitada a você.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço de VPN (Virtual Private Network) na tabela abaixo e prima este botão para conectar o serviço.&lt;/p&gt;&lt;p&gt;Se houver apenas um serviço de VPN listado na tabela, prima este botão que selecionará automaticamente este serviço e tentará se ligar.&lt;/p&gt;&lt;p&gt;Se forem necessárias informações sobre o serviço, por exemplo, uma palavra-passe, ser-lhe-á pedido que as forneça.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="792"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one vpn service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço de VPN na tabela abaixo e prima este botão para desconectá-lo.&lt;/p&gt;&lt;p&gt;Se houver apenas um serviço de VPN no estado &amp;quot;pronto&amp;quot; ou &amp;quot;ligado&amp;quot; (on-line), pressionando este botão irá selecionar automaticamente este serviço e o desligará.&lt;/p&gt;&lt;p&gt;Este procedimento também pode ser utilizado para abortar uma tentativa de ligação anterior.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione um serviço de VPN na tabela abaixo e prima este botão para o desligar.&lt;/p&gt;&lt;p&gt;Se houver apenas um serviço de VPN no estado &amp;quot;pronto&amp;quot; ou &amp;quot;online&amp;quot; (on-line), pressionando este botão irá selecionar automaticamente este serviço e o desligará.&lt;/p&gt;&lt;p&gt;Este procedimento também pode ser utilizado para abortar uma tentativa de ligação anterior.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="890"/>
@@ -1042,7 +1042,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="291"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To edit the ID and Password of a tethered WiFi device click this button.&lt;/p&gt;&lt;p&gt;The ID and Password are what clients will have to enter to connect to the ad-hoc network. This is only valid for WiFi connections&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique neste botão para editar o ID e a Palavra-passe de um dispositivo de rede sem fios (Wi-Fi) ligado.&lt;/p&gt;&lt;p&gt;O ID e a Palavra-passe são o que os clientes terão que inserir para se conectar à rede ad-hoc. Isto é válido apenas para ligações de rede sem fios (Wi-Fi).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clique neste botão para editar o ID e a Palavra-passe de um dispositivo de rede sem fios (Wi-Fi) ligado.&lt;/p&gt;&lt;p&gt;O ID e a Palavra-passe são o que os clientes terão que inserir para se ligar à rede ad-hoc. Isto é válido apenas para ligações de rede sem fios (Wi-Fi).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="294"/>
@@ -1087,7 +1087,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1328"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If a Connman service falls into the &amp;quot;Failed&amp;quot; state it will normally remain in that state.&lt;/p&gt;&lt;p&gt;If this box is checked CMST will try to automatically reconnect a WiFi service that enters the &amp;quot;Failed&amp;quot; state. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se um serviço ConnMan passar a ter o estado de &amp;quot;Falha&amp;quot;, normalmente será exibido esta mensagem no estado.&lt;/p&gt;&lt;p&gt;Se esta caixa de opção estiver marcada, o CMST tentará reconectar automaticamente em um serviço de rede sem fios (Wi-Fi) que passou a ter o estado de &amp;quot;Falha&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se um serviço ConnMan passar a ter o estado de &amp;quot;Falha&amp;quot;, normalmente será exibido esta mensagem no estado.&lt;/p&gt;&lt;p&gt;Se esta caixa de opção estiver marcada, o CMST tentará restabelecer automaticamente a ligação de um serviço sem fios (Wi-Fi) que passou a ter o estado de &amp;quot;Falha&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1331"/>
@@ -1196,17 +1196,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1639"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line. Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Two events are checked. &lt;span style=&quot; font-weight:600;&quot;&gt;Before Connecting&lt;/span&gt; events are called after the Connect button is pressed in either the Wireless or VPN tabs. The program or process in the Execute box will only be executed prior to making a connection for the service shown in the Service box.  It will not be called when connecting to any other service.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;After Connecting&lt;/span&gt; box will be called after Connman enters the ready or online state.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programas ou processos a serem executados após a ocorrência de vários eventos.&lt;/p&gt;&lt;p&gt;Se o programa ou processo exigir argumentos de linha de comando, forneça-os aqui, como se você estivesse digitando em uma linha de comando no terminal. Por exemplo:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/caminho/para/o/programa argumento1 argumento2 argumento3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Os dois eventos são verificados.&lt;span style=&quot; font-weight:600;&quot;&gt;Antes de Conectar&lt;/span&gt;, os eventos são chamados depois que o botão Conectar é pressionado nas guias Wireless (sem fios) ou VPN. O programa ou processo na caixa Executar só será executado antes de fazer uma ligação para o serviço exibido na caixa Serviço. Ele não será chamado ao se conectar a qualquer outro serviço.&lt;/p&gt;&lt;p&gt;O programa ou processo na caixa de diálogo &lt;span style=&quot; font-weight:600;&quot;&gt;Depois de Conectar&lt;/span&gt; será chamado depois que ConnMan entrar no estado pronto ou ligado (on-line).&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programas ou processos a serem executados após a ocorrência de vários eventos.&lt;/p&gt;&lt;p&gt;Se o programa ou processo exigir argumentos de linha de comandos, forneça-os aqui, como se estivesse a escrever numa linha de comando no terminal. Por exemplo:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/caminho/para/o/programa argumento1 argumento2 argumento3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Os dois eventos são verificados.&lt;span style=&quot; font-weight:600;&quot;&gt;Antes de ligar&lt;/span&gt;, os eventos são chamados depois que o botão Ligar é pressionado nos separadores Sem fios (Wireless) ou VPN. O programa ou processo na caixa Executar só será executado antes de fazer uma ligação para o serviço exibido na caixa Serviço. Ele não será chamado ao se ligar a qualquer outro serviço.&lt;/p&gt;&lt;p&gt;O programa ou processo na caixa de diálogo &lt;span style=&quot; font-weight:600;&quot;&gt;Depois de se ligar&lt;/span&gt; será chamado depois que ConnMan entrar no estado pronto ou ligado (on-line).&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1661"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This area is to specify a program or process to run after a wifi or vpn service button is pressed, but before the connect method is sent to ConnMan. This is mainly used to modify a .cmst.config file which seems useful to modify certain short lived entries for openConnect vpn connections.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;Execute&lt;/span&gt; box will only be executed prior to making a connection for the single service shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Service&lt;/span&gt; box. It will not be called when connecting to any other service. If a .cmst.config file is to be modified a check must in the &lt;span style=&quot; font-weight:600;&quot;&gt;Modify Service File&lt;/span&gt; box and the path and name of the file to be modified must be provided.&lt;/p&gt;&lt;p&gt;To modify a .cmst.config file CMST will read stdout of the program or process being called. Program output should be individual lines in KEY=VALUE format. If KEY exists in the .cmst.config file it will be replaced by the new VALUE. If KEY does not exist it will be appended. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta área é para especificar um programa ou processo a ser executado após um botão do serviço de rede sem fios (Wi-Fi) ou de VPN ser pressionado, mas antes que o método de ligação seja enviado ao ConnMan. Isto é utilizado principalmente para modificar o ficheiro .cmst.config que parece útil para modificar certas entradas de curta duração para ligações de VPN do openConnect.&lt;/p&gt;&lt;p&gt;O programa ou processo na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Executar&lt;/span&gt; só será executado antes de fazer uma ligação para o único serviço exibido na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Serviço&lt;/span&gt;. Ele não será chamado ao se conectar a qualquer outro serviço. Se um ficheiro .cmst.config tiver que ser modificado, uma marca de seleção deverá ser feita na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Modificar o Ficheiro de Serviço&lt;/span&gt;, o caminho e o nome do ficheiro a ser modificado deverão ser fornecidos.&lt;/p&gt;&lt;p&gt;Para modificar o ficheiro .cmst.config, o CMST irá ler o stdout do programa ou processo que está sendo chamado. A saída do programa deve ser de linhas individuais no formato KEY=VALUE. Se a KEY existir no ficheiro .cmst.config, a mesma será substituída pelo novo valor de VALUE. Se a KEY não existir, ele será anexado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Esta área é para especificar um programa ou processo a ser executado após um botão do serviço de rede sem fios (Wi-Fi) ou de VPN ser pressionado, mas antes que o método de ligação seja enviado ao ConnMan. Isto é utilizado principalmente para modificar o ficheiro .cmst.config que parece útil para modificar certas entradas de curta duração para ligações de VPN do openConnect.&lt;/p&gt;&lt;p&gt;O programa ou processo na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Executar&lt;/span&gt; só será executado antes de fazer uma ligação para o único serviço exibido na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Serviço&lt;/span&gt;. Ele não será chamado ao se ligar a qualquer outro serviço. Se um ficheiro .cmst.config tiver que ser modificado, uma marca de seleção deverá ser feita na caixa &lt;span style=&quot; font-weight:600;&quot;&gt;Modificar o Ficheiro de Serviço&lt;/span&gt;, o caminho e o nome do ficheiro a ser modificado deverão ser fornecidos.&lt;/p&gt;&lt;p&gt;Para modificar o ficheiro .cmst.config, o CMST irá ler o stdout do programa ou processo que está sendo chamado. A saída do programa deve ser de linhas individuais no formato KEY=VALUE. Se a KEY existir no ficheiro .cmst.config, a mesma será substituída pelo novo valor de VALUE. Se a KEY não existir, ele será anexado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1664"/>
         <source>Before Connecting</source>
-        <translation>Antes de Conectar</translation>
+        <translation>Antes de ligar</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1680"/>
@@ -1221,7 +1221,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1703"/>
         <source>Specify the service you are connecting to where you want a program or process to execute prior to initiating the connection.</source>
-        <translation>Especifique o serviço que você está se conectando, onde quer que um programa ou processo seja executado antes de iniciar a ligação.</translation>
+        <translation>Especifique o serviço ao qual se está a ligar e onde pretende que um programa ou processo seja executado antes de iniciar a ligação.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1718"/>
@@ -1259,7 +1259,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1777"/>
         <source>After Connecting</source>
-        <translation>Depois de Conectar</translation>
+        <translation>Depois de ligar</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1797"/>
@@ -2242,7 +2242,7 @@ aplicativoa
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3225"/>
         <source>Unable to connect to a notification server after %1 tries.</source>
-        <translation>Não foi possível conectar a um servidor de notificação após %1 tentativas.</translation>
+        <translation>Não foi possível estabelecer ligação a um servidor de notificações após %1 tentativas.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3342"/>
@@ -2430,7 +2430,7 @@ aplicativoa
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="41"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked this service will auto-connect when no other connection is available. This is only available for services marked &amp;quot;Favorite&amp;quot;. &lt;/p&gt;&lt;p&gt;The service will not auto-connect while roaming.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>property editor</comment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se esta opção estiver ativada, este serviço se conectará automaticamente quando nenhuma outra ligação estiver disponível. Esta opção só está disponível para os serviços marcados como &amp;quot;Favoritos&amp;quot;. &lt;/p&gt;&lt;p&gt;O serviço não se conecta automaticamente se estiver em modo de reencaminhamento (roaming).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se estiver selecionado, este serviço ligar-se-á automaticamente quando não estiver disponível outra ligação. Isto só está disponível para serviços marcados como &amp;quot;Favorito&amp;quot;. &lt;/p&gt;&lt;p&gt;O serviço não se ligará automaticamente em roaming.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="73"/>
@@ -4488,7 +4488,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="782"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Require that peer certificate was signed with an explicit key usage and extended key usage based on RFC3280 TLS rules.&lt;/p&gt;&lt;p&gt;This is a useful security option for clients to ensure that the host they connect to is a designated server. Or the other way around; for a server to  verify that only hosts with a client certificate can connect.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exigir que o certificado de mesmo nível tenha sido assinado com um uso de chave explícito e uso de chave estendido com base nas regras do TLS RFC3280.&lt;/p&gt;&lt;p&gt;Esta é uma opção de segurança útil para os clientes garantirem que o hospedeiro (host) ao qual eles se conectam seja um servidor designado. Ou o contrário, para um servidor verificar se apenas hospedeiros (hosts) com um certificado de cliente podem se conectar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exigir que o certificado de mesmo nível tenha sido assinado com um uso de chave explícito e uso de chave estendido com base nas regras do TLS RFC3280.&lt;/p&gt;&lt;p&gt;Esta é uma opção de segurança útil para os clientes garantirem que o hospedeiro (host) ao qual eles se ligam seja um servidor designado. Ou o contrário, para um servidor verificar se apenas hospedeiros (hosts) com um certificado de cliente podem se ligar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="804"/>
@@ -4844,7 +4844,7 @@ O padrão é: Cisco Systems VPN Client 0.5.3:Linux</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1405"/>
         <source>If checked xl2tpd will attempt to redial if the call get disconnected. Note that, if enabled, xl2tpd will keep passwords in memory: a potential security risk.</source>
-        <translation>Se esta opção estiver ativada, o xl2tpd tentará rediscar se a chamada for desconectada. Observe que, se for ativado, o xl2tpd manterá as palavras-passe na memória, sendo um risco potencial de segurança.</translation>
+        <translation>Se esta opção estiver ativada, o xl2tpd tentará rediscar se a chamada for desligada. Observe que, se for ativado, o xl2tpd manterá as palavras-passe na memória, sendo um risco potencial de segurança.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1408"/>
