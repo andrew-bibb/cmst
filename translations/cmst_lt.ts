@@ -3001,12 +3001,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="326"/>
         <source>Enter the network name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Įveskite tinklo pavadinimą.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="327"/>
         <source>Enter a description of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>Įveskite tinklo aprašą.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="328"/>
@@ -3036,12 +3036,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="367"/>
         <source>IPv4 Address. &lt;br&gt;&lt;br&gt;Enter the IPv4 network address in the form xxx.xxx.xxx.xxx</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4 adresas. &lt;br&gt;&lt;br&gt;Įveskite IPv4 tinklo adresą xxx.xxx.xxx.xxx pavidalu</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="414"/>
         <source>IPv6 Gateway .&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv6 tinklų sietuvas.&lt;br&gt;&lt;br&gt;Tai yra nebūtinas įrašas, paspauskite „Atsisakyti“, jei nėra tinklų sietuvo įrašo</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="513"/>
@@ -3052,7 +3052,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="378"/>
         <source>IPv4 Gateway.&lt;br&gt;&lt;br&gt;This is an optional entry, press cancel if there is no entry for gateway</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4 tinklų sietuvas.&lt;br&gt;&lt;br&gt;Tai yra nebūtinas įrašas, paspauskite „Atsisakyti“, jei nėra tinklų sietuvo įrašo</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="655"/>
@@ -3082,12 +3082,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="372"/>
         <source>IPv4 Netmask. &lt;br&gt;&lt;br&gt;The entry can be a mask length (example 24) or in the form xxx.xxx.xxx.xxx</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv4 tinklų sietuvas. &lt;br&gt;&lt;br&gt;Įrašas gali būti kaukės ilgio (pvz., 24) arba xxx.xxx.xxx.xxx pavidalo</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="407"/>
         <source>%1 - Integer Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 – Sveikųjų skaičių įvestis</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="408"/>
@@ -3097,7 +3097,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="514"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;You may use this dialog to create one.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;Nebuvo rasta jokių konfigūracijos failų.&lt;br&gt;Galite naudoti šį dialogą, kad sukurtumėte konfigūracijos failą.</translation>
     </message>
     <message>
         <source>%1 - Information</source>
@@ -3132,7 +3132,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="573"/>
         <source>Enter a new file name or select&lt;br&gt;an existing file to overwrite.</source>
-        <translation type="unfinished"></translation>
+        <translation>Įveskite naujo failo pavadinimą arba pasirinkite&lt;br&gt;esamą failą, kurį norite perrašyti.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="611"/>
@@ -3167,7 +3167,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="656"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;DBus klaidos pavadinimas:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Eilutė:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Žinutė:&lt;/b&gt; %3</translation>
     </message>
 </context>
 <context>
@@ -3695,7 +3695,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="107"/>
         <source>CA Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>LĮ liudijimas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="114"/>
@@ -3750,7 +3750,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="190"/>
         <source>Server Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>Serverio liudijimas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="197"/>
@@ -3903,7 +3903,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="89"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A name for this connection. A name is mandatory but the name may be anything you wish and may contain spaces.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Šio ryšio pavadinimas. Pavadinimas yra privalomas, bet jis gali būti bet koks ir jame gali būti tarpų.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="96"/>
@@ -3953,7 +3953,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="180"/>
         <source>Server Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Serverio liudijimas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="187"/>
@@ -3989,13 +3989,13 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="245"/>
         <source>Disable IPv6</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungti IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="252"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="255"/>
         <source>Disable DTLS</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungti DTLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="262"/>
@@ -4030,7 +4030,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="296"/>
         <source>Authentication Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tapatybės nustatymo tipas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="303"/>
@@ -4107,12 +4107,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="398"/>
         <source>User Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Naudotojų grupė</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="405"/>
         <source>Client Cerificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Kliento liudijimas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="415"/>
@@ -4162,7 +4162,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="495"/>
         <source>Extra Config</source>
-        <translation type="unfinished"></translation>
+        <translation>Papildoma konfigūracija</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="502"/>
@@ -4237,7 +4237,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="604"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP/UDP port number.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP/UDP prievado numeris&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="618"/>
@@ -4309,7 +4309,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="697"/>
         <source>Protocol</source>
-        <translation type="unfinished"></translation>
+        <translation>Protokolas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="704"/>
@@ -4352,12 +4352,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="754"/>
         <source>Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Prievadas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="761"/>
         <source>Cipher</source>
-        <translation type="unfinished"></translation>
+        <translation>Šifras</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="768"/>
@@ -4367,7 +4367,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="775"/>
         <source>Device Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Įrenginio tipas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="782"/>
@@ -4433,7 +4433,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="894"/>
         <source>Application Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Programos versija</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="901"/>
@@ -4497,7 +4497,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="986"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1367"/>
         <source>UDP Port</source>
-        <translation type="unfinished"></translation>
+        <translation>UDP prievadas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="993"/>
@@ -4507,7 +4507,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1006"/>
         <source>Local Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Vietinis prievadas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1013"/>
@@ -4517,17 +4517,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1026"/>
         <source>IKE Authentication Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE tapatybės nustatymo veiksena</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1033"/>
         <source>Name of the IKE DH Group</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE DH grupės pavadinimas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1063"/>
         <source>IKE DH Group</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE DH grupė</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1070"/>
@@ -4592,7 +4592,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1161"/>
         <source>Interface Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Sąsajos veiksena</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1168"/>
@@ -4633,13 +4633,13 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1249"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1748"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Slaptažodis:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1256"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1755"/>
         <source>User:</source>
-        <translation type="unfinished"></translation>
+        <translation>Naudotojas:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1263"/>
@@ -4848,7 +4848,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1582"/>
         <source>PPTP Options</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP parinktys</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1588"/>
@@ -4887,7 +4887,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1618"/>
         <source>Disable Protocol Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungti protokolo glaudinimą</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1625"/>
@@ -5289,7 +5289,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="579"/>
         <source>OpenVPN import is complete.</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN importavimas yra užbaigtas.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="600"/>
@@ -5380,7 +5380,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="420"/>
         <source>CA Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>LĮ failai (*.ca *.cert *.crt *.pem);;Visi failai (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="421"/>
@@ -5526,7 +5526,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="817"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;DBus klaidos pavadinimas:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;Eilutė:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Žinutė:&lt;/b&gt; %3</translation>
     </message>
     <message>
         <source>OpenVPN Configurations (*.ovpn  *.conf);;All Files (*.*)</source>
@@ -5576,22 +5576,22 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="68"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delete a config file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ištrinti konfigūracijos failą.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Iš&amp;trinti</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="94"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear all text from the editor window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Šalinti iš redaktoriaus lango visą tekstą.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="97"/>
         <source>&amp;Clear Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Iš&amp;valyti puslapį</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="117"/>
@@ -5601,37 +5601,37 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="120"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter &amp;quot;Whats This&amp;quot; mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Įžengti į „Kas tai“ veikseną.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="143"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exit the dialog.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Išeiti iš dialogo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="146"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation>Iš&amp;eiti</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="166"/>
         <source>Name of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tinklo pavadinimas.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="174"/>
         <source>Description of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tinklo aprašas.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="207"/>
         <source>PPTP User Name.</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP naudotojo vardas.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="215"/>
         <source>PPTP Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP slaptažodis.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="223"/>
@@ -5718,12 +5718,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="346"/>
         <source>L2TP User Name.</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP naudotojo vardas.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="354"/>
         <source>L2TP Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP slaptažodis.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="362"/>
@@ -5808,7 +5808,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="490"/>
         <source>Authentication file location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tapatybės nustatymo failo vieta.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="498"/>
@@ -5828,7 +5828,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="522"/>
         <source>Disable protocol compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungti protokolo glaudinimą?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="530"/>
@@ -5838,7 +5838,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="570"/>
         <source>Your Group username.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jūsų grupės naudotojo vardas.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="578"/>
@@ -5848,7 +5848,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="586"/>
         <source>Your username.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jūsų naudotojo vardas.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="594"/>
@@ -5858,12 +5858,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="602"/>
         <source>IKE authentication mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE tapatybės nustatymo veiksena.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="610"/>
         <source>Name of the IKE DH Group.</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE DH grupės pavadinimas.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="626"/>
@@ -5913,7 +5913,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="698"/>
         <source>Certificate authority file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Liudijimų įstaigos failas.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="706"/>
@@ -6153,12 +6153,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="746"/>
         <source>TCP/UDP port number.</source>
-        <translation type="unfinished"></translation>
+        <translation>TCP/UDP prievado numeris.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="762"/>
         <source>Get certificate password from console or file?</source>
-        <translation type="unfinished"></translation>
+        <translation>Gauti liudijimo slaptažodį iš pulto ar failo?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="770"/>
@@ -6291,7 +6291,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="127"/>
         <source>Disable VPN support.</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungti VPN palaikymą.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="133"/>
@@ -6345,7 +6345,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="44"/>
         <source> Warning</source>
-        <translation type="unfinished"></translation>
+        <translation> Įspėjimas</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="45"/>
