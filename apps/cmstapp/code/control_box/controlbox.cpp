@@ -1116,6 +1116,7 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
          notifyclient->setBody(tr("Power has been restored to all previously powered network devices.") );
       }
       this->sendNotifications();
+      updateDisplayWidgets();
    } // if contains offlinemode
 
    // state property
@@ -1131,12 +1132,14 @@ void ControlBox::dbsPropertyChanged(QString prop, QDBusVariant dbvalue)
             notifyclient->setBody(tr("The system is online.") );
             notifyclient->setIcon(iconman->getIconName("state_online") );
             this->sendNotifications();
+            updateDisplayWidgets();
          } // if
       } // if
       else {
          notifyclient->setBody(tr("The system is offline.") );
          notifyclient->setIcon(iconman->getIconName("state_not_ready") );
          this->sendNotifications();
+         updateDisplayWidgets();
       } // else
 
       // execute external program if specified
