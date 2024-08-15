@@ -1,7 +1,7 @@
 cmst
 ====
 ## Important Announcement
-## As of late June 2023 I was diagnosed with stage 4 cancer.  Fighting this has taken almost all of my time in addition to shutting down my consulting business.  As such this project is pretty much going to be left alone from my end.  I may be able to deal with pull requests but that is about it.  
+## The original creator of this program will no longer be maintaining it. @trevorbibb will be approving translation PRs and anything else that comes in but any additional feature requests would need to be handled by the community, or fork this and work from there. In the future as spare time permits, I would like to be able to provide more substantial contributions but for now, please tag @trevorbibb if you need a PR reviewed. 
 
 QT GUI for Connman with system tray icon.
 
