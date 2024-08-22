@@ -6,7 +6,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="14"/>
         <source>Agent Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Εισαγωγή παράγοντα</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="45"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="87"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this box to obscure the password characters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Επιλέξτε το πλαίσιο για απόκρυψη των χαρακτήρων του κωδικού πρόσβασης.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="90"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="175"/>
         <source>Wireless Internet Service Provider roaming (WISPr)</source>
-        <translation type="unfinished"></translation>
+        <translation>Περιαγωγή παρόχου υπηρεσίας ασύρματου διαδικτύου (WISPr)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="181"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="191"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Όνομα χρήστη WISPr.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="201"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="211"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr password.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Κωδικός πρόσβασης WISPr.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="224"/>
@@ -141,7 +141,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="338"/>
         <source>Choose or enter a browser:</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή ή καταχώρηση ενός προγράμματος περιήγησης:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="345"/>
@@ -171,12 +171,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="382"/>
         <source>Launch &amp;Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκκίνηση &amp;Προγράμματος περιήγησης</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="420"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Τί είναι αυτό&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="423"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="447"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Συνέχιση της διαδικασίας σύνδεσης.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="450"/>
@@ -201,7 +201,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="460"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ακύρωση της διαδικασίας σύνδεσης.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="463"/>
@@ -232,22 +232,22 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Σφάλμα του Connman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation type="unfinished"></translation>
+        <translation>Το Connman επέστρεψε το ακόλουθο σφάλμα:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Θα θέλατε να ξαναπροσπαθήσετε;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="131"/>
         <source>Agent Request Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποτυχία αιτήματος παράγοντα</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="132"/>
         <source>The agent request failed before a reply was returned.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το αίτημα παράγοντα απέτυχε προτού επιστραφεί κάποια απόκριση.</translation>
     </message>
 </context>
 <context>
@@ -256,25 +256,25 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="67"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="84"/>
         <source>%L1 Bytes</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 Bytes</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="69"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="86"/>
         <source>%L1 KB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 KB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="71"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="88"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="73"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="90"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="76"/>
@@ -302,7 +302,7 @@
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="100"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Connect Time:&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Χρόνος σύνδεσης:&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="111"/>
@@ -342,22 +342,22 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="86"/>
         <source>Connman Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Σφάλμα του Connman</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="87"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation type="unfinished"></translation>
+        <translation>Το Connman επέστρεψε το ακόλουθο σφάλμα:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Θα θέλατε να ξαναπροσπαθήσετε;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="123"/>
         <source>Agent Request Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποτυχία αιτήματος παράγοντα</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="124"/>
         <source>The agent request failed before a reply was returned.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το αίτημα παράγοντα απέτυχε προτού επιστραφεί κάποια απόκριση.</translation>
     </message>
 </context>
 <context>
@@ -395,7 +395,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="904"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="944"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="78"/>
@@ -493,13 +493,13 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="406"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2007"/>
         <source>Move Before</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετακίνηση πριν</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="419"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2012"/>
         <source>Move After</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετακίνηση μετά</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="439"/>
@@ -544,7 +544,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="604"/>
         <source>Wireless Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Ασύρματες υπηρεσίες</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="610"/>
@@ -639,7 +639,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1642"/>
         <source>External Programs</source>
-        <translation type="unfinished"></translation>
+        <translation>Εξωτερικά προγράμματα</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1822"/>
@@ -918,7 +918,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="890"/>
         <source>Host</source>
-        <translation type="unfinished"></translation>
+        <translation>Οικοδεσπότης</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1520"/>
@@ -968,7 +968,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1280"/>
         <source>Notification Daemon</source>
-        <translation type="unfinished"></translation>
+        <translation>Δαίμονας ειδοποιήσεων</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1293"/>
@@ -1148,7 +1148,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1664"/>
         <source>Before Connecting</source>
-        <translation type="unfinished"></translation>
+        <translation>Πριν τη σύνδεση</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1680"/>
@@ -1197,7 +1197,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1777"/>
         <source>After Connecting</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετά τη σύνδεση</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1797"/>
@@ -1232,17 +1232,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1839"/>
         <source>&amp;QT</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;QT</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1846"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the program license.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Χρησιμοποιήστε αυτό το κουμπί για να δείτε την άδεια του προγράμματος.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1849"/>
         <source>&amp;License</source>
-        <translation type="unfinished"></translation>
+        <translation>Ά&amp;δεια</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1856"/>
@@ -1262,7 +1262,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1939"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Τί είναι αυτό&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1942"/>
@@ -1363,7 +1363,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="608"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Άδεια</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="616"/>
@@ -1423,7 +1423,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1397"/>
         <source>Service Error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Σφάλμα υπηρεσίας: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1398"/>
@@ -1510,7 +1510,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2463"/>
         <source>Host: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Οικοδεσπότης: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1756"/>
@@ -1545,7 +1545,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1060"/>
         <source> Information</source>
-        <translation type="unfinished"></translation>
+        <translation> Πληροφορίες</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1061"/>
@@ -1560,7 +1560,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1072"/>
         <source>Select a file to be deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλογή αρχείου προς διαγραφή.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1113"/>
@@ -1730,7 +1730,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1797"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Διακομιστές:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1798"/>
@@ -1762,7 +1762,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1813"/>
         <source>&lt;br&gt;&lt;b&gt;Last Address Conflict&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;Διένεξη τελευταίας διεύθυνσης&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1817"/>
@@ -1794,12 +1794,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1828"/>
         <source>&lt;br&gt;&lt;b&gt;Name Servers&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;Διακομιστές ονόματος&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1831"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Time Servers&lt;/b&gt;&lt;br&gt;  </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Διακομιστές ώρας&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1834"/>
@@ -1871,7 +1871,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1855"/>
         <source>Host: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Οικοδεσπότης: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1856"/>
