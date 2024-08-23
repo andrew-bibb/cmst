@@ -3935,7 +3935,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="114"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Informational field containing a path name for an additional Certificate of Authority file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Campo informativo que contiene un nombre de ruta para un archivo adicional de Certificado de Autoridad.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="124"/>
