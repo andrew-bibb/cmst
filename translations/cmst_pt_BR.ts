@@ -1168,7 +1168,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1216"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide the CMST tray icon during normal operations. Normal operations are defined as having the Global state in an &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; mode. Any other state will cause the icon to be displayed in the system tray.  CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide the CMST tray icon during normal operations. Normal operations are defined as having the Global state in an &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; mode. Any other state will cause the icon to be displayed in the system tray.  CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ocultar o ícone da área de notificação do CMST durante as operações normais. As operações normais são definidas como tendo o estado Global num modo &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; ou &lt;span style=&quot; font-weight:600;&quot;&gt;Pronto&lt;/span&gt;. Qualquer outro estado fará com que o ícone seja exibido na área de notificação do sistema. O CMST ainda está em execução mesmo se o ícone estiver oculto.&lt;/p&gt;&lt;p&gt;Se o CMST for minimizado enquanto o ícone estiver oculto, precisará iniciar outra instância do CMST para obter a interface de volta. Esta segunda instância restaurará a interface da primeira instância e abortará imediatamente. &lt;/p&gt;&lt;p&gt;Se o CMST for minimizado enquanto o ícone da área de notificação estiver visível, basta clicar no ícone da área de notificação para restaurar a interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1219"/>
@@ -2931,7 +2931,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="405"/>
         <source>AltSubjectMatch</source>
-        <translation>AltSubjectMatch</translation>
+        <translation>Comparação Alternativa da Cadeia de Texto</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="408"/>
