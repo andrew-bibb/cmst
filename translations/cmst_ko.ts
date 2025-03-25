@@ -290,7 +290,7 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="97"/>
         <source>%Ln Packet(s)</source>
         <translation>
-            <numerusform>%Ln 패킷</numerusform>
+            <numerusform>%Ln개 패킷</numerusform>
         </translation>
     </message>
     <message>
@@ -411,7 +411,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="90"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global connection state of the system.  Possible values are &amp;quot;offline&amp;quot;, &amp;quot;idle&amp;quot;, &amp;quot;ready&amp;quot;, and &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;시스템의 전역 연결 상태입니다. 가능한 값은 &amp;quot;오프라인(offline)&amp;quot;, &amp;quot;유휴(idle)&amp;quot;, &amp;quot;준비(ready)&amp;quot;, 그리고 &amp;quot;온라인(online)&amp;quot;입니다. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="93"/>
@@ -509,7 +509,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="445"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page will show the details of the service selected in the box at the top. If the selected service is not in the READY or ONLINE state then most of the details will be blank. &lt;/p&gt;&lt;p&gt;You may override service details by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Configuration&lt;/span&gt; button at the bottom right. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 페이지는 상단 상자에 선택된 서비스의 상세 정보를 표시합니다. 선택된 서비스가 &apos;준비&apos; 또는 &apos;온라인&apos; 상태가 아니면 대부분의 상세 정보는 공란으로 표시됩니다. &lt;/p&gt;&lt;p&gt;오른쪽 아래의 &lt;span style=&quot; font-weight:600;&quot;&gt;구성&lt;/span&gt; 버튼을 사용하여 서비스 세부 정보를 재정의할 수 있습니다. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="448"/>
@@ -1073,7 +1073,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="564"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service is of type VPN. It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;모든 서비스에 대한 기본 구성 방법은 자동 또는 DHCP와 같은 것입니다. 이는 대부분의 일반적인 사용에는 충분하지만, 그렇지 않은 경우 이 버튼을 사용하면 선택한 서비스에 대한 이더넷 및 IP 설정을 수동으로 구성할 수 있습니다.&lt;/p&gt;&lt;p&gt;서비스가 외부 구성 파일을 통해 프로비저닝되거나 서비스가 VPN 유형인 경우 이 버튼은 비활성화됩니다. 이러한 서비스의 속성을 수정할 수 없습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="622"/>
@@ -1158,7 +1158,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1670"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the configuration file shown below will be modified by whatever output the program provides.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 옵션을 체크하면, 아래에 표시된 구성 파일은 프로그램이 제공하는 출력에 따라 수정됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1673"/>
@@ -1168,7 +1168,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1682"/>
         <source>Service configuration file to be modified by the program.</source>
-        <translation type="unfinished"></translation>
+        <translation>프로그램에서 수정할 서비스 구성 파일입니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1685"/>
@@ -1266,7 +1266,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1898"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the provisioning editor to create or edit Connman configuration (provisioning) files.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. &lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;프로비저닝 편집기를 열어 ConnMan 구성(프로비저닝) 파일을 만들거나 편집합니다.&lt;/p&gt;&lt;p&gt;이러한 구성 파일은 root:root 소유의 /var/lib/connman 디렉터리에 저장됩니다. CMST는 이 디렉터리에서 파일을 읽고 쓸 수 있도록 roothelper를 등록합니다. &lt;/p&gt;&lt;p&gt;루트 권한을 남용하지 않기 위해 편집기는 이름이 &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;로 끝나는 파일에서만 작동합니다. 이 파일 이름 끝은 파일 저장 중에 자동으로 추가되며 변경할 수 없습니다. &lt;/p&gt;&lt;p&gt;이 편집기를 사용하면 다른 방법으로 생성된 구성 파일을 편집하거나 삭제할 수 없습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1901"/>
@@ -1276,7 +1276,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1908"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the VPN provisioning editor to create or edit Connman configuration (provisioning) files for VPN connections.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman-vpn which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. &lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VPN 연결을 위한 Connman 구성(프로비저닝) 파일을 만들거나 편집하려면 VPN 프로비저닝 편집기를 엽니다.&lt;/p&gt;&lt;p&gt;이러한 구성 파일은 root:root 소유의 /var/lib/connman-vpn 디렉터리에 위치합니다. CMST는 이 디렉터리에서 파일을 읽고 쓸 수 있도록 roothelper를 등록합니다. &lt;/p&gt;&lt;p&gt;루트 권한을 남용하지 않기 위해 편집기는 이름이 &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;로 끝나는 파일에서만 작동합니다. 이 파일 이름 끝은 파일 저장 중에 자동으로 추가되며 변경할 수 없습니다. &lt;/p&gt;&lt;p&gt;이 편집기를 사용하면 다른 방법으로 만든 구성 파일을 편집하거나 삭제할 수 없습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1911"/>
@@ -2283,7 +2283,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="518"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic proxy configuration URL.  Used by the &amp;quot;auto&amp;quot; method.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;자동 프록시 구성 URL입니다. &amp;quot;자동&amp;quot; 방식에서 사용됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="511"/>
@@ -2319,12 +2319,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="73"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The list of manually configured domain name servers. Some cellular networks don&apos;t provide correct name servers and this allows for an override.&lt;/p&gt;&lt;p&gt;This array is sorted by priority and the first entry in the list represents the nameserver with the highest priority.&lt;/p&gt;&lt;p&gt;When using manual configuration and no global nameservers are configured, then it is useful to configure this setting.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, vertical bar, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;수동으로 구성된 도메인 이름 서버 목록입니다. 일부 이동통신망은 올바른 이름 서버를 제공하지 않으므로 이를 통해 재정의할 수 있습니다.&lt;/p&gt;&lt;p&gt;이 배열은 우선순위에 따라 정렬되며 목록의 첫 번째 항목은 우선순위가 가장 높은 네임서버를 나타냅니다.&lt;/p&gt;&lt;p&gt;수동 구성을 사용하고 글로벌 네임서버가 구성되지 않은 경우 이 설정을 구성하는 것이 유용합니다.&lt;/p&gt;&lt;p&gt;하나 이상의 IP 주소를 입력합니다. 입력하는 각 주소를 쉼표, 세미콜론, 세로줄 또는 공백으로 구분합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="111"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The list of manually configured time servers.&lt;/p&gt;&lt;p&gt;The first entry in the list represents the timeserver with the highest priority.&lt;/p&gt;&lt;p&gt;When using manual configuration this setting is useful to override all the other timeserver settings. This is service specific, hence only the values for the default service are used.&lt;/p&gt;&lt;p&gt;Changes to this property will result in restart of NTP query.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, vertical bar, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;수동으로 구성된 시간 서버 목록입니다.&lt;/p&gt;&lt;p&gt;목록의 첫 번째 항목은 우선순위가 가장 높은 시간 서버를 나타냅니다.&lt;/p&gt;&lt;p&gt;수동 구성을 사용할 때 이 설정은 다른 모든 타임서버 설정을 재정의하는 데 유용합니다. 이는 서비스별이므로 기본 서비스에 대한 값만 사용됩니다.&lt;/p&gt;&lt;p&gt;이 속성을 변경하면 NTP 쿼리가 다시 시작됩니다.&lt;/p&gt;&lt;p&gt;하나 이상의 IP 주소를 입력합니다. 입력하는 각 주소는 쉼표, 세미콜론, 세로줄 또는 공백으로 구분합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="149"/>
@@ -3055,7 +3055,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="512"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;You may use this dialog to create one.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일을 찾을 수 없습니다.&lt;br&gt;이 대화상자를 사용하여 구성 파일을 만들 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="518"/>
@@ -3065,7 +3065,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="519"/>
         <source>&lt;center&gt;Reading configuration file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일 읽는 중: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="526"/>
@@ -3082,7 +3082,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="551"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;Nothing will be deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일을 찾을 수 없습니다.&lt;br&gt;아무것도 삭제되지 않습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="558"/>
@@ -3831,7 +3831,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="664"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;You may use this dialog to create one.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일을 찾을 수 없습니다.&lt;br&gt;이 대화상자를 사용하여 구성 파일을 만들 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="670"/>
@@ -3841,7 +3841,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="671"/>
         <source>&lt;center&gt;Reading configuration file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일 읽는 중: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="678"/>
@@ -3858,7 +3858,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="704"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;Nothing will be deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일을 찾을 수 없습니다.&lt;br&gt;아무것도 삭제되지 않습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="711"/>
@@ -3913,12 +3913,12 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="851"/>
         <source>OpenVPN Configurations (*.ovpn  *.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN 구성 (*.ovpn  *.conf);;모든 파일 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="860"/>
         <source>Select the configuration file to import</source>
-        <translation type="unfinished"></translation>
+        <translation>가져올 구성 파일 선택하기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="882"/>
