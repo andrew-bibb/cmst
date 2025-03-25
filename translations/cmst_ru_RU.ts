@@ -844,7 +844,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1496"/>
         <source>Counter Update KB</source>
-        <translation>Обновление счётчиков, КБ</translation>
+        <translation>Обновление счётчиков, кБ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1452"/>
@@ -854,7 +854,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1413"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Укажите объем данных в килобайтах, который должен быть передан до обновления счетчиков (по умолчанию 1024 КБ).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Укажите объем данных в килобайтах, который должен быть передан до обновления счетчиков (по умолчанию 1024 кБ).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1442"/>
@@ -4420,7 +4420,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Define networks behind the VPN link. If more than one separate by a comma. &lt;/p&gt;&lt;p&gt;Format is newtork/netmask/gateway and gateway may be omitted. Examples 10.10.20.0/255.255.255.0&lt;/p&gt;&lt;p&gt;10.10.20.0/255.255.255.0/10.20.1.5&lt;/p&gt;&lt;p&gt;10.10.20.0/24&lt;/p&gt;&lt;p&gt;2001:db8::1/64&lt;/p&gt;&lt;p&gt;This field is optional but if an entry is made it must follow the format above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Определите сети за соединением VPN. Если их несколько, разделите их запятой. &lt;/p&gt;&lt;p&gt;Формат — newtork/netmask/gateway, шлюз может быть опущен. Например: 10.10.20.0/255.255.255.0&lt;/p&gt;&lt;p&gt;10.10.20.0/255.255.255.0/10.20.1.5&lt;/p&gt;&lt;p&gt;10.10.20.0/24&lt;/p&gt;&lt;p&gt;2001:db8::1/64&lt;/p&gt;&lt;p&gt;Это поле является необязательным, но если запись сделана, она должна соответствовать формату, указанному выше.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Определите сети за соединением VPN. Если их несколько, разделите их запятой. &lt;/p&gt;&lt;p&gt;Формат — network/netmask/gateway, шлюз может быть опущен. Например: 10.10.20.0/255.255.255.0&lt;/p&gt;&lt;p&gt;10.10.20.0/255.255.255.0/10.20.1.5&lt;/p&gt;&lt;p&gt;10.10.20.0/24&lt;/p&gt;&lt;p&gt;2001:db8::1/64&lt;/p&gt;&lt;p&gt;Это поле является необязательным, но если запись сделана, она должна соответствовать формату, указанному выше.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="140"/>
@@ -6870,7 +6870,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="140"/>
         <source>KB</source>
-        <translation>КБ</translation>
+        <translation>кБ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="145"/>

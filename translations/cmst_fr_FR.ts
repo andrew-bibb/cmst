@@ -16,7 +16,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="64"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&amp;lt;html&amp;gt;&amp;lt;head/&amp;gt;&amp;lt;body&amp;gt;&amp;lt;p&amp;gt;Si une ancienne phrase de passe est disponible, elle sera affichée ici pour référence.&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si une ancienne phrase de passe est disponible, elle sera affichée ici pour référence.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="74"/>
@@ -257,19 +257,19 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="69"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="86"/>
         <source>%L1 KB</source>
-        <translation>%L1 ko</translation>
+        <translation>%L1 kB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="71"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="88"/>
         <source>%L1 MB</source>
-        <translation>%L1 Mo</translation>
+        <translation>%L1 MB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="73"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="90"/>
         <source>%L1 GB</source>
-        <translation>%L1 Go</translation>
+        <translation>%L1 GB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="76"/>
@@ -846,7 +846,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1496"/>
         <source>Counter Update KB</source>
-        <translation>Mise à jour du compteur Ko</translation>
+        <translation>Mise à jour du compteur kB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1452"/>
@@ -856,7 +856,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1413"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spécifiez la quantité de données en Ko à transmettre avant la mise à jour des compteurs (la valeur par défaut est de 1024 Ko). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spécifiez la quantité de données en kB à transmettre avant la mise à jour des compteurs (la valeur par défaut est de 1024 kB). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1438"/>
@@ -2511,15 +2511,15 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled&lt;/span&gt;: the system prefers to use public addresses over temporary addresses.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prefered&lt;/span&gt;: privacy extension is enabled and the system prefers temporary addresses over public addresses.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt; !DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http ://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Activer ou désactiver l’extension de confidentialité IPv6 comme décrit dans la RFC 4941,&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Désactivé&lt;/span&gt; :l’extension de confidentialité est désactivée et les adresses de configuration automatique normales sont utilisées.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Activé&lt;/span&gt; : le système préfère utiliser des adresses publiques plutôt que des adresses temporaires.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Préféré&lt;/span&gt; : l’extension de confidentialité est activée et le système préfère les adresses temporaires aux adresses publiques.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+p, li { white-space : pre-wrap ; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family :&apos;Sans Serif&apos; ; font-size :9pt ; font-weight :400 ; font-style :normal ;&quot;&gt;
+&lt;p style=&quot; margin-top :12px ; margin-bottom :12px ; margin-left :0px ; margin-right :0px ; -qt-block-indent :0 ; text-indent :0px ;&quot;&gt;Activer ou désactiver l’extension de confidentialité IPv6 comme décrit dans la RFC 4941,&lt;/p&gt;
+&lt;p style=&quot; margin-top :12px ; margin-bottom :12px ; margin-left :0px ; margin-right :0px ; -qt-block-indent :0 ; text-indent :0px ;&quot;&gt;&lt;span style=&quot; font-weight :600 ;&quot;&gt;Désactivé&lt;/span&gt; :l’extension de confidentialité est désactivée et les adresses de configuration automatique normales sont utilisées.&lt;/p&gt;
+&lt;p style=&quot; margin-top :12px ; margin-bottom :12px ; margin-left :0px ; margin-right :0px ; -qt-block-indent :0 ; text-indent :0px ;&quot;&gt;&lt;span style=&quot; font-weight :600 ;&quot;&gt;Activé&lt;/span&gt; : le système préfère utiliser des adresses publiques plutôt que des adresses temporaires.&lt;/p&gt;
+&lt;p style=&quot; margin-top :12px ; margin-bottom :12px ; margin-left :0px ; margin-right :0px ; -qt-block-indent :0 ; text-indent :0px ;&quot;&gt;&lt;span style=&quot; font-weight :600 ;&quot;&gt;Préféré&lt;/span&gt; : l’extension de confidentialité est activée et le système préfère les adresses temporaires aux adresses publiques.&lt;/p&gt;
+&lt;p style=&quot; margin-top :12px ; margin-bottom :12px ; margin-left :0px ; margin-right :0px ; -qt-block-indent :0 ; text-indent :0px ;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable or disable the IPv6 privacy extension as described in RFC 4941,&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Disabled&lt;/span&gt;: privacy extension is disabled and normal autoconf addresses are used.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Enabled&lt;/span&gt;: the system prefers to use public addresses over temporary addresses.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prefered&lt;/span&gt;: privacy extension is enabled and the system prefers temporary addresses over public addresses.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -4054,7 +4054,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Define networks behind the VPN link. If more than one separate by a comma. &lt;/p&gt;&lt;p&gt;Format is newtork/netmask/gateway and gateway may be omitted. Examples 10.10.20.0/255.255.255.0&lt;/p&gt;&lt;p&gt;10.10.20.0/255.255.255.0/10.20.1.5&lt;/p&gt;&lt;p&gt;10.10.20.0/24&lt;/p&gt;&lt;p&gt;2001:db8::1/64&lt;/p&gt;&lt;p&gt;This field is optional but if an entry is made it must follow the format above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Définir les réseaux derrière le lien VPN. S’il y en a plusieurs, séparez-les par une virgule. &lt;/p&gt;&lt;p&gt;Le format est newtork/netmask/gateway et la passerelle peut être omise. Exemples 10.10.20.0/255.255.255.0&lt;/p&gt;&lt;p&gt;10.10.20.0/255.255.255.0/10.20.1.5&lt;/p&gt;&lt;p&gt;10.10.20.0/24&lt;/p&gt;&lt;p&gt;2001:db8::1/64&lt;/p&gt;&lt;p&gt;Ce champ est facultatif mais si une entrée est faite, elle doit respecter le format ci-dessus.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Définir les réseaux derrière le lien VPN. S’il y en a plusieurs, séparez-les par une virgule. &lt;/p&gt;&lt;p&gt;Le format est network/netmask/gateway et la passerelle peut être omise. Exemples 10.10.20.0/255.255.255.0&lt;/p&gt;&lt;p&gt;10.10.20.0/255.255.255.0/10.20.1.5&lt;/p&gt;&lt;p&gt;10.10.20.0/24&lt;/p&gt;&lt;p&gt;2001:db8::1/64&lt;/p&gt;&lt;p&gt;Ce champ est facultatif mais si une entrée est faite, elle doit respecter le format ci-dessus.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="140"/>
@@ -6516,7 +6516,7 @@ que le pair n’est plus connecté.</translation>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="140"/>
         <source>KB</source>
-        <translation>Ko</translation>
+        <translation>kB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="145"/>
