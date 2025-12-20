@@ -504,7 +504,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="439"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked hide the connection name in the Services box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kun tämä on valittuna, piilota yhteyden nimi Palvelut-ruudussa.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="442"/>
@@ -529,7 +529,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="488"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this Combobox to select the service for which you wish to view the detailed information.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Valitse palvelu, jonka yksityiskohtaisia tietoja haluat tarkastella.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="585"/>
@@ -549,7 +549,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one wifi service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Valitse alla olevasta taulukosta wifi-palvelu ja paina tätä painiketta muodostaaksesi yhteyden palveluun. &lt;/p&gt;&lt;p&gt;Jos taulukossa on vain yksi wifi-palvelu, tämän painikkeen painaminen valitsee automaattisesti kyseisen palvelun ja yrittää muodostaa yhteyden. &lt;/p&gt;&lt;p&gt;Jos palvelusta tarvitaan lisätietoja, esimerkiksi salasana, sinua pyydetään antamaan ne. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="613"/>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="620"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one wifi service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Valitse alla olevasta taulukosta wifi-palvelu ja paina tätä painiketta katkaistaksesi yhteyden. &lt;/p&gt;&lt;p&gt;Jos ”valmis” tai ”verkossa” -tilassa on vain yksi wifi-palvelu, tämän painikkeen painaminen valitsee automaattisesti kyseisen palvelun ja katkaisee yhteyden. &lt;/p&gt;&lt;p&gt;Tätä voidaan käyttää myös edellisen yhteyden muodostusyrityksen keskeyttämiseen. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="623"/>
@@ -577,7 +577,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This label shows the number of WiFi technologies (devices) that were found, and the number that are powered on. There must be at least one WiFi technology found and powered in order for the box below to show services.&lt;/p&gt;&lt;p&gt;To turn a technology on or off go to the &lt;span style=&quot; font-weight:600;&quot;&gt;Technologies&lt;/span&gt; box in the &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; tab and double click on the text that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tämä nimike näyttää löydettyjen WiFi-tekniikoiden (laitteiden) lukumäärän ja niiden lukumäärän, jotka ovat päällä. Jotta alla oleva ruutu näyttää palvelut, on löydettävä ja oltava päällä vähintään yksi WiFi-tekniikka. &lt;/p&gt;&lt;p&gt;Voit kytkeä tekniikan päälle tai pois päältä siirtymällä &lt;span style=&quot; font-weight:600;&quot;&gt;Tekniikat&lt;/span&gt;-ruutuun &lt;span style=&quot; font-weight:600;&quot;&gt;Tila&lt;/span&gt;-välilehdessä ja kaksoisnapsauttamalla tekniikan &lt;span style=&quot; font-weight:600;&quot;&gt;Käynnissä&lt;/span&gt;-sarakkeessa näkyvää tekstiä. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="669"/>
@@ -659,7 +659,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2025"/>
         <source>Offline Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Yhteydetön tila</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="268"/>
@@ -1328,17 +1328,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="440"/>
         <source>&amp;Exit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lopeta</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="550"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="153"/>
         <source>Service Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Yhteyden tiedot</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="154"/>
@@ -1348,7 +1348,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="155"/>
         <source>VPN Connections</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN yhteydet</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="578"/>
@@ -1379,7 +1379,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="764"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2880"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Peruuta</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="789"/>
@@ -1617,7 +1617,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1765"/>
         <source>Yes</source>
         <comment>favorite</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kyllä</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1765"/>
@@ -1657,7 +1657,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1768"/>
         <source>No</source>
         <comment>autoconnect</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ei</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1770"/>
