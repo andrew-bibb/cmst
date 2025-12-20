@@ -16,7 +16,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="64"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Als een oud wachtwoord beschikbaar is, dan wordt die hier getoond ter referentie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Als er een oud wachtwoord beschikbaar is, dan wordt dat hier getoond ter referentie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="74"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="87"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this box to obscure the password characters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vink aan om het wachtwoord te verbergen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om het wachtwoord te verbergen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="90"/>
@@ -56,12 +56,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="136"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the name of the hidden network you wish to connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Voer de naam in van het verborgen netwerk waarmee u wilt verbinden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Voer de naam in van het verborgen netwerk waarmee u verbinding wilt maken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="149"/>
         <source>Service Set Identifier</source>
-        <translation>Service Set Identificatie</translation>
+        <translation>Service Set-identificatie</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="155"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="175"/>
         <source>Wireless Internet Service Provider roaming (WISPr)</source>
-        <translation>Roaming van draadloze internetserviceproviders (WISPr)</translation>
+        <translation>Roaming van draadloze internetproviders (WISPr)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="181"/>
@@ -96,12 +96,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="224"/>
         <source>Extensible Authentication Protocol (EAP)</source>
-        <translation>Uitbreidbaar Authenticatieprotocol (EAP)</translation>
+        <translation>Uitbreidbaar authenticatieprotocol (EAP)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="230"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type your Identity for the Extensible Authentication Protocol&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Voer hier uw identiteit voor het Uitbreidbaar Authenticatieprotocol (EAP) in&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Voer hier uw identiteit van het Uitbreidbaar authenticatieprotocol (EAP) in&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="240"/>
@@ -111,17 +111,17 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="253"/>
         <source>WiFi Protected Setup (WPS)</source>
-        <translation>Beveiligde Wi-Fi-configuratie (WPS)</translation>
+        <translation>WiFi Protected Setup (WPS)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="261"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked use WPS push button authentication.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vink dit aan om de WPS-pushknopauthenticatie te gebruiken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om de WPS-pushknopauthenticatie te gebruiken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="264"/>
         <source>Use Push &amp;Button Authentication</source>
-        <translation>Ge&amp;bruik WPS-pushknopauthenticatie</translation>
+        <translation>WPS-pushknopauthenticatie ge&amp;bruiken</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="294"/>
@@ -141,12 +141,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="338"/>
         <source>Choose or enter a browser:</source>
-        <translation>Kies een webbrowser of voer er een in:</translation>
+        <translation>Kies een webbrowser of voer de naam ervan in:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="345"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login. If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Browser Users:&lt;/span&gt; Note that Brave does not seem to accept a URL to start with. After the browser starts you will need to enter the URL manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan vraagt u om een webbrowser te openen om het inlogproces te voltooien.&lt;/p&gt;&lt;p&gt;We hebben uw PATH gescand op browsers en alle gevonden browsers worden hieronder weergegeven. Kies een browser om u aan te melden. Als uw browser niet in de lijst staat, kunt u die rechtstreeks invoeren in het&lt;span style=&quot; font-weight:600;&quot;&gt;webbrowser keuze of invulveld&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Klik op de&lt;span style=&quot; font-weight:600;&quot;&gt;Open webbrowser&lt;/span&gt;knop om een browser te openen.&lt;/p&gt;&lt;p&gt;Als u handmatig wilt inloggen, sluit dan dit venster, open uw browser en ga naar de URL die wordt weergegeven in het&lt;span style=&quot; font-weight:600;&quot;&gt;Inlog-URL&lt;/span&gt; invulveld.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gebruikers van Brave Browser:&lt;/span&gt; Let op dat Brave blijkbaar geen URL-adres accepteert om direct te openen. Nadat u de browser heeft gestart, moet u de URL handmatig invoeren.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan vraagt u om een webbrowser te openen om het inlogproces te voltooien.&lt;/p&gt;&lt;p&gt;We hebben uw PATH gescand op browsers en alle gevonden browsers worden hieronder getoond. Kies een browser om u mee aan te melden. Als uw browser niet op de lijst staat, kunt u die rechtstreeks invoeren in het veld&lt;span style=&quot; font-weight:600;&quot;&gt;Kies een webbrowser of voer de naam ervan in&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Klik op de&lt;span style=&quot; font-weight:600;&quot;&gt;Webbrowser openen&lt;/span&gt;-knop om de browser te openen.&lt;/p&gt;&lt;p&gt;Als u handmatig wilt inloggen, sluit dan dit venster, open uw browser en ga naar de url die wordt getoond in het invoerveld&lt;span style=&quot; font-weight:600;&quot;&gt;inlog-url&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gebruikers van Brave Browser:&lt;/span&gt; let op dat Brave blijkbaar geen url&apos;s accepteert die direct worden geopend. Nadat u de browser heeft gestart, moet u de url dus handmatig invoeren.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login.  If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -155,12 +155,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="360"/>
         <source>Login URL:</source>
-        <translation>Inlog-URL:</translation>
+        <translation>Inlog-url:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="367"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting you continue login with a web browser. This box shows the URL that contains the login page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan vraagt u om in te loggen via een webbrowser. Dit veld toont de URL van de inlogpagina.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan vraagt u om in te loggen via een webbrowser. Dit veld toont de url van de inlogpagina.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use  the Firefox browser.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -170,12 +170,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="379"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to launch the selected browser. The browser will open at the page shown in the Login URL box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klik op deze knop om de gekozen browser te openen. De browser opent de pagina weergegeven in het inlog-URL-veld.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klik op deze knop om de gekozen webbrowser te openen. De browser opent de pagina zoals getoond in het veld ‘Inlog-url’.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="382"/>
         <source>Launch &amp;Browser</source>
-        <translation>&amp;Browser openen</translation>
+        <translation>Web&amp;browser openen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="420"/>
@@ -185,7 +185,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="423"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation>…</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="447"/>
@@ -195,7 +195,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="450"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accept and use the answers you have provided in this dialog. &lt;/p&gt;&lt;p&gt;This will send your input to the connman daemon to continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accepteer en gebruik de antwoorden die je hier hebt opgegeven. &lt;/p&gt;&lt;p&gt;Dit verstuurt je invoer naar de connman-achtergronddienst om de procedure voort te zetten.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accepteer en gebruik de antwoorden die u hier heeft opgegeven. &lt;/p&gt;&lt;p&gt;Dit verstuurt uw invoer naar de connman-achtergronddienst om de procedure voort te zetten.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="453"/>
@@ -210,7 +210,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the dialog. &lt;/p&gt;&lt;p&gt;This will send a message to the connman daemon that you have cancelled the connection request.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Verwerp dit venster. &lt;/p&gt;&lt;p&gt;Dit verstuurt een bericht aan de ConnMan-achtergronddienst dat je het verzoek hebt afgebroken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sluit dit venster. &lt;/p&gt;&lt;p&gt;Dit verstuurt een bericht aan de connman-achtergronddienst dat u het verzoek heeft afgebroken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="466"/>
@@ -228,7 +228,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="299"/>
         <source>You have requested the %1 browser, but we cannot find a terminal program to open it with.  Currenty we can start %1 using these terminals: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;To continue you need to manually open a terminal and then enter: &quot;%1 %2&quot;</source>
-        <translation>Je hebt verzocht %1 te gebruiken, maar er is geen terminalprogramma aangetroffen om deze mee te openen.  %1 kan worden gestart middels de terminals &lt;b&gt;roxterm&lt;/b&gt; en &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;Open handmatig een terminalvenster en voer daar het volgende in: &apos;%1 %2&apos;</translation>
+        <translation>U heeft verzocht om %1 te gebruiken, maar er is geen terminalprogramma aangetroffen om deze browser mee te openen. %1 kan worden gestart middels de terminals &lt;b&gt;roxterm&lt;/b&gt; en &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;Open handmatig een terminalvenster en voer daar het volgende in: ‘%1 %2’</translation>
     </message>
 </context>
 <context>
@@ -236,12 +236,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation>ConnMan-fout</translation>
+        <translation>ConnMan-foutmelding</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation>ConnMan gaf de volgende fout aan:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Wil je het opnieuw proberen?</translation>
+        <translation>ConnMan gaf de volgende fout aan:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Wilt u het opnieuw proberen?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="131"/>
@@ -260,7 +260,7 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="67"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="84"/>
         <source>%L1 Bytes</source>
-        <translation>%L1 Bytes</translation>
+        <translation>%L1 bytes</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="69"/>
@@ -321,7 +321,7 @@
         <source>%n Hour(s)</source>
         <translation>
             <numerusform>%n uur</numerusform>
-            <numerusform>%n uren</numerusform>
+            <numerusform>%n uur</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -346,7 +346,7 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="86"/>
         <source>Connman Error</source>
-        <translation>ConnMan-fout</translation>
+        <translation>ConnMan-foutmelding</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="87"/>
@@ -379,7 +379,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This checkbox controls the global setting for switching all radios on or off. When checked all radios are powered down.&lt;/p&gt;&lt;p&gt;When the system is In offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dit selectievakje beheert de globale instelling voor het in- of uitschakelen van alle draadloze verbindingen. Als het is aangevinkt worden alle draadloze verbindingen uitgeschakeld.&lt;/p&gt;&lt;p&gt;Tijdens de offline modus is het nog steeds mogelijk om bepaalde technologieën handmatig weer in te schakelen. Bij het verlaten van de offline modus beslist het individuele beleid van elk apparaat of de draadloze verbinding weer wordt ingeschakeld of niet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Met behulp van dit keuzevakje bedient u de globale instelling voor het in- of uitschakelen van alle draadloze verbindingen. Kruis het vakje aan om alle draadloze verbindingen uit te schakelen.&lt;/p&gt;&lt;p&gt;Tijdens de offline-modus is het nog steeds mogelijk om bepaalde technologieën handmatig in te schakelen. Bij het verlaten van de offline-modus beslist het individuele beleid van ieder apparaat of de draadloze verbinding weer wordt ingeschakeld of niet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="121"/>
@@ -389,7 +389,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="75"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OfflineMode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The offline mode indicates the global setting for switching all radios on or off. Changing offline mode to true results in powering down all devices. When leaving offline mode the individual policy of each device decides to switch the radio back on or not. &lt;/p&gt;&lt;p&gt;During offline mode, it is still possible to switch certain technologies manually back on. For example the limited usage of WiFi or Bluetooth devices might be allowed in some situations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Offline Modus&lt;/span&gt;&lt;/p&gt;&lt;p&gt;De offline modus geeft de globale instelling aan voor het in- of uitschakelen van alle draadloze verbindingen. Als u de offline modus activeert worden alle netwerkapparaten uitgeschakeld. Bij het verlaten van de offline modus beslist het individuele beleid van elk apparaat of de draadloze verbinding weer wordt ingeschakeld of niet.&lt;/p&gt;&lt;p&gt;Tijdens de offline modus is het nog steeds mogelijk om bepaalde technologieën handmatig weer in te schakelen. Bijvoorbeeld, het beperkte gebruik van Wi-Fi- of Bluetooth-apparaten kan in sommige situaties zijn toegestaan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Offline-modus&lt;/span&gt;&lt;/p&gt;&lt;p&gt;De offline-modus geeft de globale instelling aan voor het in- of uitschakelen van alle draadloze verbindingen. Als u de offline-modus inschakelt, worden alle netwerkapparaten uitgeschakeld. Bij het verlaten van de offline-modus beslist het individuele beleid van ieder apparaat of de draadloze verbinding weer wordt ingeschakeld of niet.&lt;/p&gt;&lt;p&gt;Tijdens de offline-modus is het nog steeds mogelijk om bepaalde technologieën weer in te schakelen. Voorbeeld: het beperkte gebruik van wifi- of bluetoothapparaten kan in sommige situaties zijn toegestaan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="35"/>
@@ -410,12 +410,12 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="92"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="150"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;De globale instelling voor het in- of uitschakelen van alle draadloze verbindingen. Als de offline modus actief is, worden alle draadloze verbindingen uitgeschakeld.&lt;/p&gt;&lt;p&gt;Tijdens de offline modus is het nog steeds mogelijk om bepaalde technologieën handmatig weer in te schakelen. Bij het verlaten van de offline modus beslist het individuele beleid van elk apparaat of de draadloze verbinding weer wordt ingeschakeld of niet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;De globale instelling voor het in- of uitschakelen van alle draadloze verbindingen. Als de offline-modus actief is, worden alle draadloze verbindingen uitgeschakeld.&lt;/p&gt;&lt;p&gt;Tijdens de offline-modus is het nog steeds mogelijk om bepaalde technologieën weer in te schakelen. Bij het verlaten van de offline-modus beslist het individuele beleid van ieder apparaat of de draadloze verbinding weer wordt ingeschakeld of niet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="95"/>
         <source>OfflineMode: Unavailable</source>
-        <translation>Offline modus: Niet beschikbaar</translation>
+        <translation>Offline-modus: niet beschikbaar</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="108"/>
@@ -425,7 +425,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="111"/>
         <source>State: Unavailable</source>
-        <translation>Status: Niet beschikbaar</translation>
+        <translation>Status: niet beschikbaar</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="184"/>
@@ -497,18 +497,18 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="406"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2007"/>
         <source>Move Before</source>
-        <translation>Omhoog verplaatsen</translation>
+        <translation>Omhoog</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="419"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2012"/>
         <source>Move After</source>
-        <translation>Omlaag verplaatsen</translation>
+        <translation>Omlaag</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="439"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked hide the connection name in the Services box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vink dit aan om de naam van de verbinding te verbergen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om de naam van de verbinding te verbergen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="442"/>
@@ -518,7 +518,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page will show the details of the service selected in the box at the top. If the selected service is not in the READY or ONLINE state then most of the details will be blank. &lt;/p&gt;&lt;p&gt;You may override service details by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Configuration&lt;/span&gt; button at the bottom right. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deze pagina toont de details van de geselecteerde service in het vak bovenaan. Als de geselecteerde service niet in de GEREED of ONLINE status staat, zullen er weinig details beschikbaar zijn.&lt;/p&gt;&lt;p&gt;U kunt de detail van de service vervangen door de &lt;span style=&quot;font-weight:600;&quot;&gt;Configuratie&lt;/span&gt; knop rechtsonder te gebruiken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deze pagina toont de details van de in het vak hierboven gekozen dienst. Als de gekozen dienst niet de ‘klaar voor gebruik’- of ‘online’-status heeft, zullen er weinig details beschikbaar zijn.&lt;/p&gt;&lt;p&gt;U kunt de details van de dienst vervangen door de &lt;span style=&quot;font-weight:600;&quot;&gt;instellingen&lt;/span&gt;knop rechtsonder te gebruiken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="466"/>
@@ -528,12 +528,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="478"/>
         <source>Ser&amp;vice</source>
-        <translation>Ser&amp;vice</translation>
+        <translation>Dien&amp;st</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="488"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this Combobox to select the service for which you wish to view the detailed information.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecteer een service uit de keuzelijst waarvan u gedetailleerde informatie wilt bekijken.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kies een dienst van de lijst waarvan u uitgebreide informatie wilt bekijken.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service  is a hidden wifi service.  It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -552,13 +552,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="604"/>
         <source>Wireless Services</source>
-        <translation>Draadloze netwerkdiensten (Wifi)</translation>
+        <translation>Draadloze netwerkdiensten</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one wifi service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecteer een wifi-service uit de onderstaande tabel en klik op deze knop om ermee te verbinden.&lt;/p&gt;&lt;p&gt;Als er slechts één wifi-service in de tabel staat, druk dan op deze knop om automatisch die service te selecteren en proberen verbinding te maken.
-&lt;/p&gt;&lt;p&gt;Als er informatie over de service nodig is, bijvoorbeeld een wachtwoordzin, dan wordt hierom gevraagd.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kies een wifidienst uit onderstaande tabel en klik op deze knop om ermee te verbinden.&lt;/p&gt;&lt;p&gt;Als er slechts één wifidienst in de tabel staat, klik dan op deze knop om automatisch die dienst te kiezen en een verbindingspoging te wagen. &lt;/p&gt;&lt;p&gt;Als er informatie over de dienst nodig is, bijvoorbeeld een wachtwoord, dan wordt hierom gevraagd.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="613"/>
@@ -569,7 +568,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="620"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one wifi service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecteer een wifi-service in de onderstaande tabel en druk op deze knop om de verbinding te verbreken.&lt;/p&gt;&lt;p&gt;Als er slechts één wifi-service staat in de &amp;quot;gereed&amp;quot; of &amp;quot;online&amp;quot; status, dan wordt, na klikken op deze knop, automatisch die dienst gekozen en de verbinding ermee verbroken. &lt;/p&gt;&lt;p&gt;Dit kan ook gebruikt worden om een vorige verbindingspoging af te breken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kies een wifidienst uit onderstaande tabel en klik op deze knop om de verbinding te verbreken.&lt;/p&gt;&lt;p&gt;Als er slechts één wifidienst staat met de ‘klaar voor gebruik’- of ‘online’-status, dan wordt - na een klik op deze knop - automatisch die dienst gekozen en de verbinding ermee verbroken. &lt;/p&gt;&lt;p&gt;Dit kan ook worden gebruikt om een vorige verbindingspoging af te breken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="623"/>
@@ -586,42 +585,42 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This label shows the number of WiFi technologies (devices) that were found, and the number that are powered on. There must be at least one WiFi technology found and powered in order for the box below to show services.&lt;/p&gt;&lt;p&gt;To turn a technology on or off go to the &lt;span style=&quot; font-weight:600;&quot;&gt;Technologies&lt;/span&gt; box in the &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; tab and double click on the text that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dit label toont het aantal wifi-apparaten dat is gevonden en het aantal dat is ingeschakeld. Er moet minstens één wifi-aparaat zijn gevonden en ingeschakeld om in het onderstaande vakje wifi-services te laten zien.&lt;/p&gt;&lt;p&gt;Ga naar &lt;span style=&quot; font-weight:600;&quot;&gt;Wifi-apparaten&lt;/span&gt; op het tabblad &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; om wifi-apparaten in of uit te schakelen door te dubbelklikken op &lt;span style=&quot; font-weight:600;&quot;&gt;Aan/Uit&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dit label toont het aantal wifiapparaten dat is aangetroffen en het aantal dat is ingeschakeld. Er moet minstens één ingeschakeld wifiapparaat zijn om in het onderstaande vakje de wifidiensten te laten zien.&lt;/p&gt;&lt;p&gt;Ga naar &lt;span style=&quot; font-weight:600;&quot;&gt;Wifiapparaten&lt;/span&gt; op het tabblad &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; om wifiapparaten in of uit te schakelen door te dubbelklikken op &lt;span style=&quot; font-weight:600;&quot;&gt;Aan/Uit&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="669"/>
         <source>Wifi State</source>
-        <translation>Wifi-status</translation>
+        <translation>Wifistatus</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1318"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will implement an internet kill switch for VPN connections. If a VPN connection drops while the kill switch is enabled all technologies will be powered off.&lt;/p&gt;&lt;p&gt;The way this works is the service order is monitored. If the topmost service is of type VPN and then if it changes to something other than VPN and if the change was not initiated by the user (for instance by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Disconnect&lt;/span&gt; button in the VPN tab), then CMST will cycle through all technologies powering each one down in turn. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Als deze optie is ingeschakeld, implementeert CMST een internet kill switch voor VPN-verbindingen. Als een VPN-verbinding wegvalt als de kill switch actief is, worden alle netwerk-apparaten uitgeschakeld.&lt;/p&gt;&lt;p&gt;Dit werkt doordat de volgorde van de netwerkdiensten wordt gecontroleerd. Als de bovenste service een VPN-service is en er vervolgens een wijziging plaatsvindt naar iets anders dan VPN en de wijziging niet is geïnitieerd door de gebruiker (bijvoorbeeld met de knop &lt;span style=“ font-weight:600;”&gt;verbinding verbreken&lt;/span&gt; op het tabblad VPN, dan zal CMST alle netwerk-apparaten doorlopen en ze een-voor-een uitschakelen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Als deze optie is ingeschakeld, implementeert CMST een internet ‘kill switch’ voor vpn-verbindingen. Als een vpn-verbinding wegvalt als de kill switch actief is, worden alle netwerkapparaten uitgeschakeld.&lt;/p&gt;&lt;p&gt;Dit werkt doordat de volgorde van de netwerkdiensten wordt gecontroleerd. Als de bovenste dienst een vpn-dienst is en er vervolgens een wijziging plaatsvindt naar iets anders dan vpn, en de wijziging niet is geïnitieerd door de gebruiker (bijvoorbeeld met de knop &lt;span style=“ font-weight:600;”&gt;Verbinding verbreken&lt;/span&gt; op het tabblad ‘vpn’), dan zal CMST alle netwerkapparaten doorlopen en ze een-voor-een uitschakelen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1321"/>
         <source>Enable VPN Internet Kill Switch</source>
-        <translation>Internetverbinding automatisch verbreken als de VPN-verbinding wegvalt</translation>
+        <translation>Internetverbinding verbreken als vpn-verbinding wegvalt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1268"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system notification daemon will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed. Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vink aan om belangrijke ConnMan-meldingsberichten te ontvangen via de systeemmeldingsdaemon.&lt;/p&gt;&lt;p&gt;Meldingen kunnen worden afgehandeld door het systeemvakpictogram of door een meldingsdaemon als deze is geïnstalleerd. Beide kunnen niet tegelijkertijd actief zijn.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om belangrijke ConnMan-berichten te ontvangen via systeemmeldingen.&lt;/p&gt;&lt;p&gt;Meldingen kunnen worden afgehandeld door het systeemvakpictogram of door een meldingsdienst, indien die is geïnstalleerd. Ze kunnen echter niet tegelijkertijd actief zijn.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1191"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the Start Up Options in the right hand pane will be enabled. Start up options set in this pane will be read and used next time the program starts. Start up options are also available as command line switches and an option provided on the command line will take precedence over an option set in the right hand pane. The options in this pane are provided as a convienence to avoid the necessity of editing a systemd service or other start up file. &lt;/p&gt;&lt;p&gt;Settings are stored in&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Als deze optie is aangevinkt, worden de opstartopties in het rechterpaneel geactiveerd. De opstartopties die hier zijn gedefineerd, worden gelezen en gebruikt als u het programma de volgende keer opstart. De opstartopties zijn ook beschikbaar als opdrachtregel-switches en opties in de opdrachtregel hebben voorrang over de opities in het rechterpanneel. De opties in dit venster zijn bedoeld om te voorkomen dat u een systemd service of een ander opstartbestand moet bewerken.&lt;/p&gt;&lt;p&gt;Instellingen worden opgeslagen in&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;Dit is een standaard ini-achtig tekstbestand.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om de opstartopties op het rechterpaneel te kunnen gebruiken. De opstartopties die hier staan, worden gelezen en gebruikt als u het programma de volgende keer opstart. De opties zijn ook beschikbaar op de opdrachtregel en opties van de opdrachtregel hebben voorrang over de opties op het rechterpanneel. De opties in dit venster zijn bedoeld om te voorkomen dat u een systemd-dienst of ander opstartbestand moet bewerken.&lt;/p&gt;&lt;p&gt;De instellingen worden opgeslagen in&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;Dit is een standaard ini-achtig tekstbestand.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1194"/>
         <source>Enable Start Options from GUI (right hand pane)</source>
-        <translation>Activeer de grafisch interface Startopties (rechterpaneel)</translation>
+        <translation>Grafische opstartopties inschakelen (rechterpaneel)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1377"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. Changing or setting these will only take effect at the next program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deze instellingen regelen de verschillenden opties voor het opstarten van het CMST-programma. Aanpassingen aan deze opties worden pas van kracht wanneer het programma de volgende keer wordt gestart.&lt;/p&gt;&lt;p&gt;Al deze opties zijn beschikbaar op de commandoregel en als er een commandoregeloptie is opgegeven, heeft die voorrang over deze instellingen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deze instellingen regelen de verschillenden opties voor het opstarten van het CMST-programma. Aanpassingen aan deze opties worden pas van kracht als het programma de volgende keer wordt gestart.&lt;/p&gt;&lt;p&gt;Al deze opties zijn beschikbaar op de opdrachtregel en als er een opdrachtregeloptie is opgegeven, heeft die voorrang boven deze instellingen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1380"/>
@@ -631,19 +630,19 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1527"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=“ margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;”&gt;&lt;span style=“ font-family:‘monospace’;”&gt;Command line options: &lt;/span&gt;&lt;span style=” font-family: &apos;monospace&apos;; font-weight:600;“&gt;-c&lt;/span&gt;&lt;span style=” font-family:&apos;monospace&apos;;“&gt; of &lt;/span&gt;&lt;span style=” font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Zet de RX en TX tellers van ConnMan aan. De tellers zijn experimenteel in ConnMan en het inschakelen ervan schrijft een grote hoeveelheid gegevens naar de logboeken van het besturingssysteem.&lt;/p&gt;&lt;p&gt;De tellers zijn standaard uitgeschakeld en zijn veranderd ten opzichte van wat ze oorspronkelijk waren. Tot de versie van 19.09.2017 waren tellers standaard ingeschakeld. Alle versies daarna zijn tellers standaard uitgeschakeld.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=“ margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;”&gt;&lt;span style=“ font-family:‘monospace’;”&gt;Command line options: &lt;/span&gt;&lt;span style=” font-family: &apos;monospace&apos;; font-weight:600;“&gt;-c&lt;/span&gt;&lt;span style=” font-family:&apos;monospace&apos;;“&gt; of &lt;/span&gt;&lt;span style=” font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Zet de RX- en TX-tellers van ConnMan aan. De tellers zijn experimenteel in ConnMan en het inschakelen ervan schrijft een grote hoeveelheid gegevens naar de logboeken van het besturingssysteem.&lt;/p&gt;&lt;p&gt;De tellers zijn standaard uitgeschakeld en zijn veranderd ten opzichte van wat ze oorspronkelijk waren. Tot de versie van 19-09-2017 waren tellers standaard ingeschakeld. In alle versies daarna zijn tellers standaard uitgeschakeld.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1530"/>
         <source>Enable Counters</source>
-        <translation>Houd aantallen bij</translation>
+        <translation>Tellers inschakelen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1438"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Opdrachtregeloptie: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; of &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start cmst geminimaliseerd op in het systeemvak.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start CMST geminimaliseerd op in het systeemvak.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
@@ -667,7 +666,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1393"/>
         <source>Counter Update Rate </source>
-        <translation>Teller-bijwerktempo </translation>
+        <translation>Teller-bijwerktussenpoos </translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line.&lt;/p&gt;&lt;p&gt;Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -717,7 +716,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="268"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Forceer een nieuwe scan van alle wifi-apparaten. Dit is vergelijkbaar met het uitvoeren van de opdracht&lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt;op de opdrachtregel.&lt;/p&gt;&lt;p&gt;De knop wordt inactief terwijl de scan wordt uitgevoerd.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dwing een nieuwe scan van alle wifiapparaten af. Dit is vergelijkbaar met het uitvoeren van de opdracht&lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt;op de opdrachtregel.&lt;/p&gt;&lt;p&gt;De knop is niet te gebruiken terwijl de scan wordt uitgevoerd.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="737"/>
@@ -753,7 +752,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="974"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection that is not marked roaming. &lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tellers voor de &amp;quot;online&amp;quot;-verbinding (roaming uitgezonderd). &lt;/p&gt;&lt;p&gt;Tellers zijn niet altijd beschikbaar: ze kunnen uitgeschakeld zijn middels de opdrachtregel (-c of --disable-counters) of als de verbinding &amp;quot;klaar voor gebruik&amp;quot; aangeeft in plaats van &amp;quot;online&amp;quot;. Online is een verbinding die &amp;quot;klaar voor gebruik&amp;quot; is en goedgekeurd. Je kunt verbonden zijn met een netwerk dat alleen &amp;quot;klaar voor gebruik&amp;quot; aangeeft, maar de tellers werken dan niet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tellers voor de &amp;quot;online&amp;quot;-verbinding (roaming uitgezonderd). &lt;/p&gt;&lt;p&gt;Tellers zijn niet altijd beschikbaar: ze kunnen uitgeschakeld zijn middels de opdrachtregel (-c of --disable-counters) of als de verbinding &amp;quot;klaar voor gebruik&amp;quot; aangeeft in plaats van &amp;quot;online&amp;quot;. Online is een verbinding die &amp;quot;klaar voor gebruik&amp;quot; is en goedgekeurd. U kunt verbonden zijn met een netwerk dat alleen &amp;quot;klaar voor gebruik&amp;quot; aangeeft, maar de tellers werken dan niet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="947"/>
@@ -769,7 +768,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1003"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection marked &amp;quot;roaming&amp;quot;.&lt;/p&gt;&lt;p&gt;In the case of cellular services this normally indicates connections to a foreign provider.&lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tellers voor de &amp;quot;online&amp;quot;-roamingverbinding. &lt;/p&gt;&lt;p&gt;Bij mobiel internet duidt dit meestal op een verbinding met een buitenlandse provider. Tellers zijn niet altijd beschikbaar: ze kunnen uitgeschakeld zijn middels de opdrachtregel (-c of --disable-counters) of als de verbinding &amp;quot;klaar voor gebruik&amp;quot; aangeeft in plaats van &amp;quot;online&amp;quot;. Online is een verbinding die &amp;quot;klaar voor gebruik&amp;quot; is en goedgekeurd. Je kunt verbonden zijn met een netwerk dat alleen &amp;quot;klaar voor gebruik&amp;quot; aangeeft, maar de tellers werken dan niet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tellers voor de &amp;quot;online&amp;quot;-roamingverbinding. &lt;/p&gt;&lt;p&gt;Bij mobiel internet duidt dit meestal op een verbinding met een buitenlandse provider. Tellers zijn niet altijd beschikbaar: ze kunnen uitgeschakeld zijn middels de opdrachtregel (-c of --disable-counters) of als de verbinding &amp;quot;klaar voor gebruik&amp;quot; aangeeft in plaats van &amp;quot;online&amp;quot;. Online is een verbinding die &amp;quot;klaar voor gebruik&amp;quot; is en goedgekeurd. U kunt verbonden zijn met een netwerk dat alleen &amp;quot;klaar voor gebruik&amp;quot; aangeeft, maar de tellers werken dan niet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1006"/>
@@ -799,17 +798,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1103"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the interface are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hier vind je de instellingen omtrent het uiterlijk van cmst.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hier vindt u de instellingen omtrent de vormgeving van cmst.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1106"/>
         <source>Interface</source>
-        <translation>Uiterlijk</translation>
+        <translation>Vormgeving</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1122"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the display of tooltips will be enabled for the interface widgets.&lt;/p&gt;&lt;p&gt;Tooltips are the small popups that appear when you hover the mouse pointer over an area of the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vink dit aan om hulpballonnen te tonen in het cmst-venster.&lt;/p&gt;&lt;p&gt;Hulpballonnen zijn de informatieve berichten die verschijnen als je met de cursor boven een optie of tekstvak zweeft. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om hulpballonnen te tonen binnen het cmst-venster.&lt;/p&gt;&lt;p&gt;Hulpballonnen zijn informatieve berichten die verschijnen als u de cursor boven een optie of tekstvak houdt. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1125"/>
@@ -819,7 +818,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1135"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cumulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normaal gesproken zijn tellers cumulatief; de verbindingstijd en TX- and RX-tellingen blijven behouden na een herstart. &lt;/p&gt;&lt;p&gt;Vink dit aan om alle tellers op nul te zetten telkens als CMST wordt gestart, en als CMST is draait telkens als er een Connman-dienst wordt gestart. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normaliter zijn tellers cumulatief; de verbindingstijd en TX- and RX-tellingen blijven behouden na een herstart. &lt;/p&gt;&lt;p&gt;Kruis aan om alle tellers op nul te zetten telkens als CMST wordt gestart, en als CMST is draait telkens als er een ConnMan-dienst wordt gestart. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1138"/>
@@ -829,7 +828,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1145"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked additional controls for advanced users are displayed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vink dit aan om bediening voor gevorderde gebruikers te tonen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om bediening voor gevorderde gebruikers te tonen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1148"/>
@@ -849,32 +848,32 @@
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Opdrachtregeloptie: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; of &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Schakelt het systeemvakpictogram uit.&lt;/p&gt;&lt;p&gt;Dit kan nuttig zijn als je systeemvak afwijkt van de Freedesktop.org-systeemvakspecificatie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Schakelt het systeemvakpictogram uit.&lt;/p&gt;&lt;p&gt;Dit kan nuttig zijn als uw systeemvak afwijkt van de Freedesktop.org-systeemvakspecificatie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1490"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Momenteel niet beschikbaar omdat Connman deze optie aanneemt zonder er iets mee te doen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Momenteel niet beschikbaar, omdat ConnMan deze optie aanneemt zonder er iets mee te doen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1493"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Geef de hoeveelheid gegevens op in kB die moet worden verzonden voordat de tellers worden bijgewerkt (standaard: 1024 kB).&lt;/p&gt;&lt;p&gt;ConnMan accepteert deze invoer, maar volgens een opmerking in de ConnMan-code moet de feitelijke functie nog worden geïmplementeerd. De selectie daarom vooralsnog uitgeschakeld.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Geef de hoeveelheid gegevens in kB op die moet worden verzonden voordat de tellers worden bijgewerkt (standaard: 1024 kB).&lt;/p&gt;&lt;p&gt;ConnMan accepteert deze invoer, maar volgens een opmerking in de ConnMan-code moet de feitelijke functie nog worden geïmplementeerd. De keuze is daarom vooralsnog uitgeschakeld.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1496"/>
         <source>Counter Update KB</source>
-        <translation>Werk de kB-teller bij</translation>
+        <translation>kB-teller bijwerken</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1452"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Geef aan hoe lang er moet worden gewacht voordat het systeemvakpictogram wordt geladen (standaard: 0 seconden).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Geef aan hoelang er moet worden gewacht voordat het systeemvakpictogram wordt geladen (standaard: 0 seconden).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1413"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Geef het aantal gegevens op in KB dat moet worden overgedragen voordat de tellers worden bijgewerkt (standaard: 1024 kB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Geef het aantal gegevens in KB op dat moet worden overgedragen voordat de tellers worden bijgewerkt (standaard: 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1442"/>
@@ -902,17 +901,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1112"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the state of the GUI will be restored from settings saved on disk. Settings include the geometry and position of the dialog and the current tab. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p&gt;The settings file is: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vink dit aan om alle instellingen op te slaan op de schijf en ze bij de volgende opstart te herstellen. Dit omvat onder meer de vensterafmetingen en -positie, alsmede dat van het huidige tabblad. &lt;/p&gt;&lt;p&gt;Het instellingenbestand is: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;Dit is een standaard ini-tekstbestand.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om alle instellingen te bewaren op de schijf en ze bij de volgende opstart te herstellen. Dit omvat onder meer de vensterafmetingen en -positie, alsmede dat van het huidige tabblad. &lt;/p&gt;&lt;p&gt;Het instellingenbestand is ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;Dit is een standaard ini-tekstbestand.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1115"/>
         <source>Retain State</source>
-        <translation>Sessie-opties opslaan</translation>
+        <translation>Sessieopties onthouden</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1616"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Opdrachtregeloptie: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; of &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Gebruik een geïnstalleerd pictogramthema; je kunt het thema in het veld hiernaast opgeven. Als je het veld leeglaat, dan gebruikt CMST het op het systeem ingestelde pictogramthema.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Opdrachtregeloptie: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; of &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Gebruik een geïnstalleerd pictogramthema - u kunt het thema in het veld hiernaast opgeven. Als u het veld leeglaat, dan gebruikt CMST het op het systeem ingestelde pictogramthema.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1619"/>
@@ -931,22 +930,22 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=“ margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;”&gt;&lt;span style=“ font-family:‘Courier New,courier’;”&gt;Command line option: &lt;/span&gt;&lt;span style=“ font-family:‘Courier New,courier’; font-weight:600;”&gt;-M&lt;/span&gt;&lt;span style=“ font-family:‘Courier New,courier’;”&gt; of &lt;/span&gt;&lt;span style=“ font-family:‘Courier New,courier’; font-weight:600;”&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;De knop voor minimaliseren uitschakelen. Gebruik deze optie als u wilt dat de vensterbeheerder de volledige controle heeft over het minimaliseren van de interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=“ margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;”&gt;&lt;span style=“ font-family:‘Courier New,courier’;”&gt;Command line option: &lt;/span&gt;&lt;span style=“ font-family:‘Courier New,courier’; font-weight:600;”&gt;-M&lt;/span&gt;&lt;span style=“ font-family:‘Courier New,courier’;”&gt; of &lt;/span&gt;&lt;span style=“ font-family:‘Courier New,courier’; font-weight:600;”&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;De knop voor minimaliseren uitschakelen. Gebruik deze optie als u wilt dat de vensterbeheerder de volledige controle heeft over het minimaliseren van het venster.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1403"/>
         <source>Disable Minimized</source>
-        <translation>Schakel minimaliseren uit</translation>
+        <translation>Minimaliseren uitschakelen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1603"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command line option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; of &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;VPN uitschakelen. Dit verbergt het VPN-tabblad en slaat ook het maken van een verbinding met ConnMan-vpn over. Dit laatste is handig als uw Connman is gebouwd met de --disable-vpn functie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Opdrachtregelotie: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; of &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Schakel vpn uit. Hiermee wordt het vpn-tabblad uitgeschakeld en het maken van een verbinding met connman-vpn overgeslagen. Dit laatste is handig als uw ConnMan gebouwd is met de functie --disable-vpn.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1606"/>
         <source>Disable VPN</source>
-        <translation>Schakel de VPN uit</translation>
+        <translation>Vpn uitschakelen</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use code specific for the selected desktop environment.&lt;/p&gt;&lt;p&gt;As of 2014.11.24 there seems to be a problem with QT5.3 and some system trays. There is code in the program to try and work around this issue, and selecting one of these buttons will invoke the code specific to the desktop.&lt;/p&gt;&lt;p&gt;If the bug gets fixed these options will remain so that start up scripts do not break, but the options will do nothing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -981,32 +980,32 @@
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB.  If the spedified color matches the tray background we&apos;ve effectively created fake transparency. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Opdrachtregeloptie: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kan worden gebruikt om een Qt-bug te omzeilen die er toe leidt dat systeemvakpictogrammen witte of zwarte achtergronden hebben in plaats van doorzichtig te zijn.&lt;/p&gt;&lt;p&gt;Geef hier de achtergrondkleur op. De opmaak is een hexadecimaal getal in de vorm van RRGGBB.  Als de opgegeven kleur overeenkomt met die van het systeemvak, dan heb je doorzichtigheid nagebootst. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kan worden gebruikt om een Qt-bug te omzeilen die ertoe leidt dat systeemvakpictogrammen witte of zwarte achtergronden hebben in plaats van doorzichtig te zijn.&lt;/p&gt;&lt;p&gt;Geef hier de achtergrondkleur op. De opmaak is een hexadecimaal getal in de vorm van RRGGBB.  Als de opgegeven kleur overeenkomt met die van het systeemvak, dan heeft u doorzichtigheid nagebootst. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="630"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to remove the service. &lt;/p&gt;&lt;p&gt;If a service has previously been successfully connected (Favorite is true) this button will remove the Favorite property. The service will also be disconnected if it is currently connected. If the service required a passphrase then the passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;If a connection attempt failed this can slso be used to reset the service.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecteer hieronder een Wi-Fi-netwerk en klik hier om het te verwijderen van de lijst. &lt;/p&gt;&lt;p&gt;Als je al eens verbonden was met het netwerk (&apos;favoriet&apos;), dan verwijdert deze knop de &apos;favoriet&apos;-ster. Ook wordt de verbinding verbroken. Als er een toegangssleutel was, dan wordt deze gewist en vergeten.&lt;/p&gt;&lt;p&gt;Deze knop kan ook worden gebruikt als de verbinding niet tot stand kan worden gebracht.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kies hieronder een wifi-netwerk en klik hier om het te verwijderen van de lijst. &lt;/p&gt;&lt;p&gt;Als u al eens verbonden was met het netwerk (‘favoriet’), dan haalt deze knop de ‘favoriet’-ster weg. Ook wordt de verbinding verbroken. Als er een toegangssleutel was, dan wordt deze gewist en vergeten.&lt;/p&gt;&lt;p&gt;Deze knop kan tevens worden gebruikt als de verbinding niet tot stand kan worden gebracht.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="764"/>
         <source>&amp;VPN</source>
-        <translation>&amp;VPN</translation>
+        <translation>&amp;Vpn</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="770"/>
         <source>VPN Services</source>
-        <translation>VPN-diensten</translation>
+        <translation>Vpn-diensten</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="779"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one vpn service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecteer een VPN-service in de onderstaande tabel en druk op deze knop om verbinding te maken met de service. &lt;/p&gt;&lt;p&gt;Als er slechts één VPN-service in de tabel wordt weergegeven, wordt deze service automatisch geselecteerd en wordt geprobeerd verbinding te maken door op deze knop te drukken. &lt;/p&gt;&lt;p&gt;Als er informatie over de service nodig is, bijvoorbeeld een wachtwoordzin, wordt u hierom gevraagd. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kies een vpn-dienst van onderstaande tabel en klik op deze knop om er verbinding mee te maken. &lt;/p&gt;&lt;p&gt;Als er slechts één vpn-dienst in de tabel wordt getoond, dan wordt na het aanklikken van deze knop de dienst automatisch gekozen en wordt er geprobeerd verbinding te maken. &lt;/p&gt;&lt;p&gt;Als er informatie over de dienst nodig is, bijvoorbeeld een wachtwoord, wordt u hierom gevraagd. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="792"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one vpn service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecteer hieronder een VPN en klik hier om de verbinding te verbreken. &lt;/p&gt;&lt;p&gt;Als er slechts één VPN verschijnt met status &amp;quot;Klaar voor gebruik&amp;quot; of &amp;quot;Online&amp;quot;, dan verbreekt deze knop automatisch met die VPN. &lt;/p&gt;&lt;p&gt;Dit kan ook worden gebruikt om een verbindingspoging af te breken. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kies hieronder een vpn en klik hier om de verbinding te verbreken. &lt;/p&gt;&lt;p&gt;Als er slechts één vpn verschijnt met status &amp;quot;Klaar voor gebruik&amp;quot; of &amp;quot;Online&amp;quot;, dan verbreekt deze knop automatisch de verbinding. &lt;/p&gt;&lt;p&gt;Dit kan ook worden gebruikt om een verbindingspoging af te breken. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services.  Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. . &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -1020,7 +1019,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1520"/>
         <source>Fake Transparency</source>
-        <translation>Nagebootste doorzichtigheid</translation>
+        <translation>Doorzichtigheid nabootsen</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the background color as a hex number in the format: RRGGBB.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -1033,7 +1032,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1207"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the system tray are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;De voorkeuren voor het systeemvlak staan in dit vak.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;De systeemvakinstellingen staan in dit vak.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
@@ -1052,22 +1051,22 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1249"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray icon will popup a status message when you hover the mouse over it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vink aan om een hulpballon te tonen als u met de muis over het systeemvakpictogram beweegt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om een hulpballon te tonen als u de muis boven het systeemvakpictogram houdt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1252"/>
         <source>Enable System Tray Popups</source>
-        <translation>Systeemvakhulpballonnen gebruiken</translation>
+        <translation>Systeemvakhulpballonnen tonen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1239"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vink aan om een systeemvakbericht te tonen als er een belangrijke connman-gebeurtenis plaatsvindt.&lt;/p&gt;&lt;p&gt;Meldingen kunnen worden afgehandeld door het systeemvakpictogram zelf of door de meldingsdienst van het systeem.  Er kan slechts één tegelijk actief zijn.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om meldingen te tonen als er belangrijke ConnMan-gebeurtenissen plaatsvinden.&lt;/p&gt;&lt;p&gt;Meldingen kunnen worden afgehandeld door het systeemvakpictogram of door de meldingsdienst van het systeem. Er kan slechts een van de twee actief zijn.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1242"/>
         <source>System Tray Notifications</source>
-        <translation>Systeemvakmeldingen gebruiken</translation>
+        <translation>Systeemvakmeldingen tonen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1271"/>
@@ -1081,7 +1080,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1280"/>
         <source>Notification Daemon</source>
-        <translation>Meldingsdaemon</translation>
+        <translation>Meldingsdienst</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1293"/>
@@ -1091,7 +1090,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="181"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman refers to hardware devices as technologies. This box will display information about all known technologies.&lt;/p&gt;&lt;p&gt;To turn a technology on or off click on the button that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;p&gt;To tether a technology click the button in the &lt;span style=&quot; font-weight:600;&quot;&gt;Tethering&lt;/span&gt; column to on. When tethering is enabled the default service is bridged to all clients connected through the tethered technology. If the &lt;span style=&quot; font-weight:600;&quot;&gt;Tethering&lt;/span&gt; columns are not shown clear the check in &lt;span style=&quot; font-weight:600;&quot;&gt;Less&lt;/span&gt; checkbox below this window.&lt;/p&gt;&lt;p&gt;Note that by default wired connections cannot be tethered. This behavior can be overwritten in the connman.conf file. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman verwijst naar hardwarematige apparaten als &apos;technologieën&apos;. Dit vak toont informatie over alle bekende technologieën.&lt;/p&gt;&lt;p&gt;Schakel een technologie in of uit door te klikken op &lt;span style=&quot; font-weight:600;&quot;&gt;Aan&lt;/span&gt; in de juiste kolom.&lt;/p&gt;&lt;p&gt;Tether een technologie door te klikken op &lt;span style=&quot; font-weight:600;&quot;&gt;Tethering&lt;/span&gt;. Als tethering is ingeschakeld, dan wordt de standaarddienst gebridged naar alle clients die ermee verbonden zijn. Als de &lt;span style=&quot; font-weight:600;&quot;&gt;Tethering&lt;/span&gt;-kolommen niet worden getoond, haal dan het vinkje weg bij &lt;span style=&quot; font-weight:600;&quot;&gt;Minder&lt;/span&gt; onder dit vak.&lt;/p&gt;&lt;p&gt;Let op: standaard kunnen bedrade verbindingen niet worden getethered. Dit kan worden afgedwongen in het connman.conf-bestand. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan verwijst naar hardwarematige apparaten als ‘technologieën’. Dit vak toont informatie over alle bekende technologieën.&lt;/p&gt;&lt;p&gt;Schakel een technologie in of uit door te klikken op &lt;span style=&quot; font-weight:600;&quot;&gt;Aan&lt;/span&gt; in de juiste kolom.&lt;/p&gt;&lt;p&gt;Tether een technologie door te klikken op &lt;span style=&quot; font-weight:600;&quot;&gt;Tethering&lt;/span&gt;. Als tethering is ingeschakeld, dan wordt de standaarddienst gebridged naar alle clients die ermee verbonden zijn. Als de &lt;span style=&quot; font-weight:600;&quot;&gt;Tethering&lt;/span&gt;-kolommen niet worden getoond, haal dan het vinkje weg bij &lt;span style=&quot; font-weight:600;&quot;&gt;Minder&lt;/span&gt; onder dit vak.&lt;/p&gt;&lt;p&gt;Let op: standaard kunnen bedrade verbindingen niet worden getethered. Dit kan worden afgedwongen in het connman.conf-bestand. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="258"/>
@@ -1101,7 +1100,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="291"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To edit the ID and Password of a tethered WiFi device click this button.&lt;/p&gt;&lt;p&gt;The ID and Password are what clients will have to enter to connect to the ad-hoc network. This is only valid for WiFi connections&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klik hier om de id en het wachtwoord van een getethered Wi-Fi-apparaat aan te passen.&lt;/p&gt;&lt;p&gt;De id en het wachtwoord worden gebruikt door clients om te verbinden met het ad-hocnetwerk. Dit geldt alleen voor Wi-Fi-verbindingen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klik hier om de id en het wachtwoord van een getethered wifiapparaat aan te passen.&lt;/p&gt;&lt;p&gt;De id en het wachtwoord worden gebruikt door clients om te verbinden met het ad-hocnetwerk. Dit geldt alleen voor wifiverbindingen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="294"/>
@@ -1111,7 +1110,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="301"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked the tethering columns will be hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vink dit aan om de tetheringkolommen te verbergen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om de tetheringkolommen te verbergen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="304"/>
@@ -1121,12 +1120,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="403"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Move the selected service before another in the list.&lt;/p&gt;&lt;p&gt;The button will only become active if the selected service can be moved and if there is another valid service which it can be used as a target.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Verplaats de geselecteerde dienst omhoog in de lijst.&lt;/p&gt;&lt;p&gt;De knop is alleen actief als de geselecteerde dienst verplaatst kán worden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Verplaats de geselecteerde dienst omhoog op de lijst.&lt;/p&gt;&lt;p&gt;De knop is alleen actief als de geselecteerde dienst verplaatst kán worden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="416"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Move the selected service after another in the list.&lt;/p&gt;&lt;p&gt;The button will only become active if the selected service can be moved and if there is another valid service which it can be used as a target.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Verplaats de geselecteerde dienst omlaag in de lijst.&lt;/p&gt;&lt;p&gt;De knop is alleen actief als de geselecteerde dienst verplaatst kán worden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Verplaats de geselecteerde dienst omlaag op de lijst.&lt;/p&gt;&lt;p&gt;De knop is alleen actief als de geselecteerde dienst verplaatst kán worden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1312"/>
@@ -1136,7 +1135,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1338"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will place an entry in the autostart directory for the current user, unchecking will remove said entry. This directory is typically: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST only add or remove the .desktop file from the autostart directory. Autostarting is typically dependent upon your Desktop Environment and must be enabled from there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vink dit aan om CMST toe te voegen aan de &apos;autostart&apos;-map van de huidige gebruiker; vink uit voor het omgekeerde. Deze map is doorgaans &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;Automatisch opstarten afhankelijk van je werkomgeving en moet daar worden ingeschakeld.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kruis aan om CMST toe te voegen aan de ‘autostart’-map van de huidige gebruiker; kruis af voor het omgekeerde. Deze map is doorgaans &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;Automatisch opstarten is afhankelijk van uw werkomgeving en moet daar worden ingeschakeld.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1341"/>
@@ -1146,7 +1145,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1328"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If a Connman service falls into the &amp;quot;Failed&amp;quot; state it will normally remain in that state.&lt;/p&gt;&lt;p&gt;If this box is checked CMST will try to automatically reconnect a WiFi service that enters the &amp;quot;Failed&amp;quot; state. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Als een Connman-dienst de status &amp;quot;Mislukt&amp;quot; heeft, dan blijft dat normaal ook zo.&lt;/p&gt;&lt;p&gt;Vink dit aan als je wilt dat CMST automatisch probeert opnieuw te verbinden als de status &amp;quot;Mislukt&amp;quot; is. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Als een ConnMan-dienst de status &amp;quot;Mislukt&amp;quot; heeft, dan blijft dat normaal ook zo.&lt;/p&gt;&lt;p&gt;Kruis aan als u wilt dat CMST automatisch probeert opnieuw te verbinden als de status &amp;quot;Mislukt&amp;quot; is. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1331"/>
@@ -1156,7 +1155,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1166"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Color in #RGB format to colorize the internal icons with.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;De kleur in #RGB-opmaak waarmee interne pictogrammen worden ingekleurd.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;De kleur in #rgb-opmaak waarmee interne pictogrammen worden ingekleurd.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the color selection dialog. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -1165,32 +1164,32 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="153"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation>…</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="582"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service is of type VPN. It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;De standaardconfiguratiemethode voor alle services is automatisch of zoiets als DHCP. Dit zou goed genoeg moeten zijn voor de meeste toepassingen, maar als dat niet het geval is, kunt u met deze knop de ethernet- en IP-instellingen voor de geselecteerde service handmatig configureren.&lt;/p&gt;&lt;p&gt;Deze knop wordt uitgeschakeld als de service wordt geleverd via een extern configuratiebestand of als de service van het type VPN is. Het is niet mogelijk om de eigenschappen van deze services te wijzigen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;De standaard instelmethode voor alle diensten is automatisch of zoiets als DHCP. Dit zou goed genoeg moeten zijn voor de meeste toepassingen, maar als dat niet het geval is, kunt u met behulp van deze knop de ethernet- en ip-instellingen van de gekozen dienst handmatig instellen.&lt;/p&gt;&lt;p&gt;Deze knop wordt uitgeschakeld als de dienst wordt geleverd via een extern configuratiebestand of als het een vpn betreft. Het is niet mogelijk om de eigenschappen van deze diensten aan te passen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="640"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to edit the service. &lt;/p&gt;&lt;p&gt;The service must have previously been successfully connected (Favorite is true) for this button to work. Pressing &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; will remove the service and then request credentials to establish the connection. If the service is currently connected it will be disconnected first. If the service required a passphrase then the old passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;Connman does not provide any methods to retrieve credentials (passphrases, etc.) as that is insecure. CMST will not work around this protection. All this button really does is automate pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Remove&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; buttons above. Make sure you know all of the credentials to reconnect as the existing credentials will be cleared when this button is pressed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecteer een wifi-service in de onderstaande tabel en druk op deze knop om de service te bewerken. &lt;/p&gt;&lt;p&gt;De service moet eerder met succes zijn verbonden (Favoriet is waar) om deze knop te laten werken. Als je op &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; drukt, wordt de service verwijderd en worden referenties gevraagd om de verbinding tot stand te brengen. Als de service momenteel is verbonden, wordt deze eerst losgekoppeld. Als de service een wachtwoordzin vereist, wordt de oude wachtwoordzin gewist en vergeten.&lt;/p&gt;&lt;p&gt;Connman biedt geen methoden om referenties (wachtwoordzinnen, enz.) op te vragen omdat dit onveilig is. CMST kan deze beveiliging niet omzeilen. Het enige wat deze knop doet is het automatiseren van de &lt;span style=&quot; font-weight:600;&quot;&gt;Remove&lt;/span&gt; en &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; knoppen hierboven. Zorg ervoor dat u alle referenties kent om opnieuw verbinding te maken, want de bestaande referenties worden gewist als u op deze knop drukt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kies een wifidienst van onderstaande tabel en klik op deze knop om te bewerken. &lt;/p&gt;&lt;p&gt;Er moet eerder verbinding met de dienst zijn gemaakt (‘favoriet’) om deze knop te laten werken. Als u op &lt;span style=&quot; font-weight:600;&quot;&gt;Bewerken&lt;/span&gt; klikt, wordt de dienst verwijderd en wordt er om inloggegevens gevraagd om de verbinding tot stand te brengen. Als de dienst momenteel is verbonden, wordt de verbinding eerst verbroken. Als de dienst een wachtwoord vereist, wordt het oude gewist en vergeten.&lt;/p&gt;&lt;p&gt;ConnMan biedt geen methoden om inloggegevens (wachtwoorden e.d.) op te vragen, omdat dit onveilig is. CMST kan deze beveiliging niet omzeilen. Het enige wat deze knop doet is het automatiseren van de &lt;span style=&quot; font-weight:600;verwijder&lt;/span&gt;- en &lt;span style=&quot; font-weight:600;&quot;&gt;verbind&lt;/span&gt;knoppen hierboven. Zorg ervoor dat u de inloggegevens kent om opnieuw verbinding te maken, want de bestaande worden gewist als u op deze knop klikt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="643"/>
         <source>Edit</source>
-        <translation>Aanpassen</translation>
+        <translation>Bewerken</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="650"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.  This will also clear any selections in the table below.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Forceer een herscan van alle wifi-technologieën. Dit is vergelijkbaar met het uitvoeren van de opdracht &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; vanaf de opdrachtregel. Hiermee worden ook alle selecties in de onderstaande tabel gewist.&lt;/p&gt;&lt;p&gt;De knop wordt inactief als de scan bezig is.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dwing het opnieuw zoeken naar wifitechnologieën af. Dit is vergelijkbaar met het uitvoeren van de opdracht &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; vanaf de opdrachtregel. Hiermee worden ook alle selecties op onderstaande tabel gewist.&lt;/p&gt;&lt;p&gt;De knop wordt uitgeschakeld als de scan bezig is.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="692"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deze pagina toont de bekende wifi-services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Naam:&lt;/span&gt; De SSID van het netwerk.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favoriet:&lt;/span&gt; Een hartsymbool in deze kolom geeft aan dat deze computer eerder verbinding heeft gemaakt met het netwerk via deze service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Verbonden:&lt;/span&gt; Geeft de verbindingsstatus van deze service weer. Beweeg de muis over het pictogram om een tekstbeschrijving te zien. Online geeft aan dat er een internetverbinding beschikbaar is en dat deze is geverifieerd. Ready geeft aan dat er een succesvolle verbinding is. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Beveiliging: &lt;/span&gt;Beschrijft het type beveiliging dat wordt gebruikt voor deze service. Mogelijke waarden zijn &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot; en &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signaalsterkte:&lt;/span&gt; De sterkte van het WiFi-signaal, genormaliseerd op een schaal van 0 tot 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deze pagina toont de bekende wifidiensten. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Naam:&lt;/span&gt; de ssid van het netwerk.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favoriet:&lt;/span&gt; een hartsymbool in deze kolom geeft aan dat deze computer eerder verbinding heeft gemaakt met het netwerk via deze dienst.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Verbonden:&lt;/span&gt; toont de verbindingsstatus van deze dienst. Houd de muis op het pictogram om een tekstbeschrijving te tonen. ‘Online’ geeft aan dat er een internetverbinding beschikbaar is en dat deze is geverifieerd. ‘Klaar voor gebruik’ geeft aan dat er een verbinding mogelijk is. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Beveiliging: &lt;/span&gt;beschrijft het type beveiliging dat wordt gebruikt voor deze dienst. Mogelijke waarden zijn &amp;quot;geen&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot; en &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signaalsterkte:&lt;/span&gt; De sterkte van het wifisignaal, genormaliseerd op een schaal van 0 tot 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="815"/>
@@ -1200,12 +1199,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="832"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deze pagina geeft de beschikbare VPN-services weer. Sommige cellen in de tabel zijn mogelijk pas beschikbaar nadat de verbinding tot stand is gebracht. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Naam:&lt;/span&gt; De naam die is opgegeven in het provisioningbestand.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; Het type VPN (OpenConnect, OpenVPN, PPTP, enz.)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Status:&lt;/span&gt; Geeft de verbindingsstatus van deze service weer. Beweeg de muis over het pictogram om een tekstbeschrijving weer te geven. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;IP van de VPN-host.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; Het VPN-domein.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deze pagina toont de beschikbare vpn-diensten. Sommige cellen in de tabel zijn mogelijk pas beschikbaar nadat de verbinding tot stand is gebracht. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Naam:&lt;/span&gt; de naam die is opgegeven in het provisioningbestand.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; het soort vpn (OpenConnect, OpenVPN, PPTP, enz.)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Status:&lt;/span&gt; toont de verbindingsstatus van deze dienst. Houd de muis op het pictogram om een tekstbeschrijving te tonen. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;het ip-adres van de vpn-host.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; het vpn-domein.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1176"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Internal icons can be colorized. You may select a color using the button to the left, or you may type in the #RGB color yourself.&lt;/p&gt;&lt;p&gt;If you type the entry it must have leading # sign. Example: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interne pictogrammen kunnen worden ingekleurd. Kies een kleur middels de knop links, of voer handmatig een #RGB-kleur in.&lt;/p&gt;&lt;p&gt;De kleurcode móet beginnen met het #-teken. Voorbeeld: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interne pictogrammen kunnen worden ingekleurd. Kies een kleur middels de knop links of voer handmatig een #rgb-kleur in.&lt;/p&gt;&lt;p&gt;De kleurcode móet beginnen met het #-teken. Voorbeeld: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1179"/>
@@ -1215,7 +1214,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1216"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide the CMST tray icon during normal operations. Normal operations are defined as having the Global state in an &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; mode. Any other state will cause the icon to be displayed in the system tray.  CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Het pictogram van het CMST-meldingsgebied verbergen tijdens normaal gebruik. Normale gebruik betekent: de globale status in een &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; of &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; modus staat. Elke andere status zorgt ervoor dat het pictogram in het systeemvak wordt weergegeven. CMST is nog steeds actief, zelfs als het pictogram verborgen is.&lt;/p&gt;&lt;p&gt;Als CMST wordt geminimaliseerd terwijl het pictogram verborgen is, moet u een andere instantie van CMST starten om de interface terug te krijgen. Deze tweede instantie herstelt de interface van de eerste instantie en breekt daarna onmiddellijk af. &lt;/p&gt;&lt;p&gt;Als CMST wordt geminimaliseerd terwijl het pictogram in het systeemvak zichtbaar is, klikt u gewoon op het pictogram in het systeemvak om de interface te herstellen. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Verberg het pictogram in het CMST-meldingsgebied tijdens normaal gebruik. Normaal gebruik houdt in: de globale status is &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; of &lt;span style=&quot; font-weight:600;&quot;&gt;Gereed&lt;/span&gt;. Elke andere status zorgt ervoor dat het pictogram in het systeemvak wordt getoond. CMST is nog steeds actief, zelfs als het pictogram verborgen is.&lt;/p&gt;&lt;p&gt;Als CMST wordt geminimaliseerd terwijl het pictogram verborgen is, dient u een nieuw venster van CMST te openen om alles weer terug te krijgen. Deze tweede instantie herstelt de interface van de eerste en breekt daarna onmiddellijk af. &lt;/p&gt;&lt;p&gt;Als CMST wordt geminimaliseerd terwijl het pictogram in het systeemvak zichtbaar is, klikt u gewoon op het pictogram in het systeemvak om de interface te herstellen. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1219"/>
@@ -3346,8 +3345,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="367"/>
         <source>IPv4 Address. &lt;br&gt;&lt;br&gt;Enter the IPv4 network address in the form xxx.xxx.xxx.xxx</source>
-        <translation>IPv4-adres. &lt;br&gt;&lt;br&gt;Voer het IPv4-netwerkadres in in de vorm
-xxx.xxx.xxx.xxx</translation>
+        <translation>IPv4-adres. &lt;br&gt;&lt;br&gt;Voer het ipv4-netwerkadres in in de vorm van xxx.xxx.xxx.xxx</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="372"/>
@@ -4121,7 +4119,7 @@ xxx.xxx.xxx.xxx</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="248"/>
         <source>Open VPN</source>
-        <translation>Open VPN</translation>
+        <translation>OpenVPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="254"/>
@@ -6357,7 +6355,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="876"/>
         <source>VPNC.DeviceType</source>
-        <translation type="unfinished">VPNC.DeviceType</translation>
+        <translation>VPNC.DeviceType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="879"/>
@@ -6367,7 +6365,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="884"/>
         <source>WireGuard.Address</source>
-        <translation type="unfinished">WireGuard.Address</translation>
+        <translation>WireGuard.Address</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="887"/>
@@ -6417,7 +6415,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="924"/>
         <source>WireGuard.PresharedKey</source>
-        <translation type="unfinished">WireGuard.PresharedKey</translation>
+        <translation>WireGuard.PresharedKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="927"/>
@@ -6427,7 +6425,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="932"/>
         <source>WireGuard.AllowedIPs</source>
-        <translation type="unfinished">WireGuard.AllowedIPs</translation>
+        <translation>WireGuard.AllowedIPs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="935"/>
@@ -6437,7 +6435,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="940"/>
         <source>WireGuard.EndpointPort</source>
-        <translation type="unfinished">WireGuard.EndpointPort</translation>
+        <translation>WireGuard.EndpointPort</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="943"/>
@@ -6447,12 +6445,12 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="948"/>
         <source>WireGuard.PersistentKeepalive</source>
-        <translation type="unfinished">WireGuard.PersistentKeepalive</translation>
+        <translation>WireGuard.PersistentKeepalive</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="951"/>
         <source>Keep alive in seconds (optional).</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbinding in stand houden, in seconden (optioneel).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="956"/>
@@ -6467,7 +6465,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="964"/>
         <source>OpenConnect.AllowSelfSignedCert</source>
-        <translation type="unfinished">OpenConnect.AllowSelfSignedCert</translation>
+        <translation>OpenConnect.AllowSelfSignedCert</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="967"/>
@@ -6477,7 +6475,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="972"/>
         <source>OpenConnect.AuthType</source>
-        <translation type="unfinished">OpenConnect.AuthType</translation>
+        <translation>OpenConnect.AuthType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="975"/>
@@ -6487,7 +6485,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="980"/>
         <source>OpenConnect.DisableIPv6</source>
-        <translation type="unfinished">OpenConnect.DisableIPv6</translation>
+        <translation>OpenConnect.DisableIPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="983"/>
@@ -6497,7 +6495,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="988"/>
         <source>OpenConnect.NoDTLS</source>
-        <translation type="unfinished">OpenConnect.NoDTLS</translation>
+        <translation>OpenConnect.NoDTLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="991"/>
@@ -6507,7 +6505,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="996"/>
         <source>OpenConnect.NoHTTPKeepalive</source>
-        <translation type="unfinished">OpenConnect.NoHTTPKeepalive</translation>
+        <translation>OpenConnect.NoHTTPKeepalive</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="999"/>
@@ -6517,7 +6515,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1004"/>
         <source>OpenConnect.PKCSClientCert</source>
-        <translation type="unfinished">OpenConnect.PKCSClientCert</translation>
+        <translation>OpenConnect.PKCSClientCert</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1007"/>
@@ -6527,7 +6525,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1012"/>
         <source>OpenConnect.Usergroup</source>
-        <translation type="unfinished">OpenConnect.Usergroup</translation>
+        <translation>OpenConnect.Usergroup</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1015"/>
@@ -6537,7 +6535,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1020"/>
         <source>OpenConnect.UserPrivateKey</source>
-        <translation type="unfinished">OpenConnect.UserPrivateKey</translation>
+        <translation>OpenConnect.UserPrivateKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1023"/>
@@ -6552,7 +6550,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="618"/>
         <source>DH group to use for perfect forward secrecy. </source>
-        <translation type="unfinished"></translation>
+        <translation>De te gebruiken DH-groep voor geheimhouding van doorverwijzingen. </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="730"/>
@@ -6669,7 +6667,7 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="93"/>
         <source>[Experimental] Enable data counters.</source>
-        <translation type="unfinished"></translation>
+        <translation>[Experimenteel] Houd gegevenstellers bij.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="103"/>
@@ -6684,12 +6682,12 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="109"/>
         <source>Scale program artwork for high DPI monitors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de vormgeving aan aan beeldschermen met een hoge dpi.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="110"/>
         <source>Icon Scale1</source>
-        <translation type="unfinished"></translation>
+        <translation>Pictogramgroottes1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="115"/>
@@ -6704,12 +6702,12 @@ of de peer niet langer verbonden is.</translation>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="123"/>
         <source>Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.</source>
-        <translation type="unfinished"></translation>
+        <translation>Schakel de minimaliseerknop uit. Gebruik dit als u wilt dat alleen de vensterbeheerder de minimaliseeractie mag uitvoeren.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="127"/>
         <source>Disable VPN support.</source>
-        <translation type="unfinished"></translation>
+        <translation>Schakel vpn-ondersteuning uit.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="133"/>
