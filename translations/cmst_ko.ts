@@ -26,7 +26,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="87"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this box to obscure the password characters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;암호 문자를 가리려면 이 확인란을 선택합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;비밀번호 문자를 가리려면 이 확인란을 선택하세요.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="90"/>
@@ -86,12 +86,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="201"/>
         <source>Passwor&amp;d</source>
-        <translation>암호(&amp;D)</translation>
+        <translation>비밀번호(&amp;D)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="211"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr password.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr 암호입니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr 비밀번호입니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="224"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="264"/>
         <source>Use Push &amp;Button Authentication</source>
-        <translation>푸시 버튼 인증 사용하기(&amp;B)</translation>
+        <translation>푸시 버튼 인증 사용(&amp;B)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="294"/>
@@ -171,12 +171,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="382"/>
         <source>Launch &amp;Browser</source>
-        <translation>브라우저 시작하기(&amp;B)</translation>
+        <translation>브라우저 실행(&amp;B)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="414"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이건 뭘까요&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;도움말 보기&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="417"/>
@@ -211,7 +211,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="460"/>
         <source>&amp;Cancel</source>
-        <translation>취소하기(&amp;C)</translation>
+        <translation>취소(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="299"/>
         <source>You have requested the %1 browser, but we cannot find a terminal program to open it with.  Currenty we can start %1 using these terminals: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;To continue you need to manually open a terminal and then enter: &quot;%1 %2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 브라우저를 요청하셨지만, 실행할 터미널 프로그램을 찾을 수 없습니다. 현재 &lt;b&gt;roxterm&lt;/b&gt; 및 &lt;b&gt;xterm&lt;/b&gt; 터미널을 사용하여 %1을(를) 시작할 수 있습니다.&lt;br&gt;&lt;br&gt;계속하려면 터미널을 수동으로 열고 다음 명령을 입력하세요: &quot;%1 %2&quot;</translation>
     </message>
 </context>
 <context>
@@ -290,7 +290,7 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="97"/>
         <source>%Ln Packet(s)</source>
         <translation>
-            <numerusform>%Ln 패킷</numerusform>
+            <numerusform>%Ln개 패킷</numerusform>
         </translation>
     </message>
     <message>
@@ -411,7 +411,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="90"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global connection state of the system.  Possible values are &amp;quot;offline&amp;quot;, &amp;quot;idle&amp;quot;, &amp;quot;ready&amp;quot;, and &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;시스템의 전역 연결 상태입니다. 가능한 값은 &amp;quot;오프라인(offline)&amp;quot;, &amp;quot;유휴(idle)&amp;quot;, &amp;quot;준비(ready)&amp;quot;, 그리고 &amp;quot;온라인(online)&amp;quot;입니다. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="93"/>
@@ -504,17 +504,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="424"/>
         <source>&amp;Less</source>
-        <translation>더 적게(&amp;L)</translation>
+        <translation>줄이기(&amp;L)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="445"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page will show the details of the service selected in the box at the top. If the selected service is not in the READY or ONLINE state then most of the details will be blank. &lt;/p&gt;&lt;p&gt;You may override service details by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Configuration&lt;/span&gt; button at the bottom right. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 페이지는 상단 상자에 선택된 서비스의 상세 정보를 표시합니다. 선택된 서비스가 &apos;준비&apos; 또는 &apos;온라인&apos; 상태가 아니면 대부분의 상세 정보는 공란으로 표시됩니다. &lt;/p&gt;&lt;p&gt;오른쪽 아래의 &lt;span style=&quot; font-weight:600;&quot;&gt;구성&lt;/span&gt; 버튼을 사용하여 서비스 세부 정보를 재정의할 수 있습니다. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="448"/>
         <source>&amp;Details</source>
-        <translation>세부 정보(&amp;D)</translation>
+        <translation>세부정보(&amp;D)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="460"/>
@@ -555,7 +555,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="602"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one wifi service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;아래 표에서 WiFi 서비스를 선택하고 이 버튼을 눌러 연결을 끊으세요. &lt;/p&gt;&lt;p&gt;&quot;준비&quot; 또는 &quot;온라인&quot; 상태인 WiFi 서비스가 하나뿐인 경우, 이 버튼을 누르면 해당 서비스가 자동으로 선택되고 연결이 끊깁니다. &lt;/p&gt;&lt;p&gt;이전 연결 시도를 중단하는 데에도 사용할 수 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="605"/>
@@ -571,7 +571,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="648"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This label shows the number of WiFi technologies (devices) that were found, and the number that are powered on. There must be at least one WiFi technology found and powered in order for the box below to show services.&lt;/p&gt;&lt;p&gt;To turn a technology on or off go to the &lt;span style=&quot; font-weight:600;&quot;&gt;Technologies&lt;/span&gt; box in the &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; tab and double click on the text that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 라벨은 발견된 WiFi 기술(기기)의 수와 전원이 켜진 WiFi 기술의 수를 보여줍니다. 아래 상자에 서비스가 표시되려면 최소 하나의 WiFi 기술이 발견되고 전원이 켜져 있어야 합니다.&lt;/p&gt;&lt;p&gt;기술을 켜거나 끄려면 &lt;span style=&quot; font-weight:600;&quot;&gt;상태&lt;/span&gt; 탭의 &lt;span style=&quot; font-weight:600;&quot;&gt;기술&lt;/span&gt; 상자로 이동하여 해당 기술의 &lt;span style=&quot; font-weight:600;&quot;&gt;전원 켜짐&lt;/span&gt; 열에 표시되는 텍스트를 두 번 클릭하세요.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="651"/>
@@ -581,12 +581,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1293"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will implement an internet kill switch for VPN connections. If a VPN connection drops while the kill switch is enabled all technologies will be powered off.&lt;/p&gt;&lt;p&gt;The way this works is the service order is monitored. If the topmost service is of type VPN and then if it changes to something other than VPN and if the change was not initiated by the user (for instance by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Disconnect&lt;/span&gt; button in the VPN tab), then CMST will cycle through all technologies powering each one down in turn. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 옵션을 선택하면 CMST는 VPN 연결에 대해 인터넷 킬 스위치를 구현합니다. 킬 스위치가 활성화된 상태에서 VPN 연결이 끊어지면 모든 기술의 전원이 꺼집니다.&lt;/p&gt;&lt;p&gt;이 기능은 서비스 순서를 모니터링하는 방식으로 작동합니다. 최상위 서비스가 VPN 유형이고 VPN이 아닌 다른 유형으로 변경되었으며, 사용자가 변경을 시도하지 않은 경우(예: VPN 탭의 &lt;span style=&quot; font-weight:600;&quot;&gt;연결 끊기&lt;/span&gt; 버튼 사용), CMST는 모든 기술을 차례로 종료합니다. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1296"/>
         <source>Enable VPN Internet Kill Switch</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 인터넷 킬 스위치 활성화</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1249"/>
@@ -596,17 +596,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1172"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the Start Up Options in the right hand pane will be enabled. Start up options set in this pane will be read and used next time the program starts. Start up options are also available as command line switches and an option provided on the command line will take precedence over an option set in the right hand pane. The options in this pane are provided as a convienence to avoid the necessity of editing a systemd service or other start up file. &lt;/p&gt;&lt;p&gt;Settings are stored in&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 옵션을 선택하면 오른쪽 창의 시작 옵션이 활성화됩니다. 이 창에서 설정한 시작 옵션은 다음에 프로그램을 시작할 때 읽어와 사용됩니다. 시작 옵션은 명령줄 스위치로도 사용할 수 있으며, 명령줄에서 입력한 옵션은 오른쪽 창에서 설정한 옵션보다 우선합니다. 이 창의 옵션은 systemd 서비스나 다른 시작 파일을 편집할 필요가 없도록 편의를 위해 제공됩니다. &lt;/p&gt;&lt;p&gt;설정은 &lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf에 저장됩니다. &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;이 파일은 표준 ini 형식의 텍스트 파일입니다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1175"/>
         <source>Enable Start Options from GUI (right hand pane)</source>
-        <translation type="unfinished"></translation>
+        <translation>GUI에서 시작 옵션 활성화 (오른쪽 창)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1339"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. Changing or setting these will only take effect at the next program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 항목들은 프로그램 시작 시 CMST의 다양한 옵션을 제어합니다. 이 항목들을 변경하거나 설정하면 다음 프로그램 시작 시에만 적용됩니다. &lt;/p&gt;&lt;p&gt;이러한 모든 옵션은 명령줄에서 사용할 수 있으며, 명령줄 옵션을 제공하면 해당 옵션이 이 설정보다 우선 적용됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1342"/>
@@ -631,7 +631,8 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1362"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;명령줄 옵션: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;카운터 업데이트 간격을 초 단위로 지정합니다(기본값 10초). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1366"/>
@@ -666,7 +667,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="250"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;모든 WiFi 기술을 강제로 다시 검사합니다. 이는 명령줄에서 &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; 명령을 실행하는 것과 유사합니다.&lt;/p&gt;&lt;p&gt;검사가 진행되는 동안에는 버튼이 비활성화됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="719"/>
@@ -686,12 +687,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="875"/>
         <source>&amp;Counters</source>
-        <translation type="unfinished"></translation>
+        <translation>네트워크 통계(&amp;C)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="896"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The service being monitored by the counters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;카운터에서 서비스를 모니터링하고 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="899"/>
@@ -702,7 +703,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="942"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection that is not marked roaming. &lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;로밍으로 표시되지 않은 &amp;quot;온라인&amp;quot; 서비스 연결에 대한 카운터입니다. &lt;/p&gt;&lt;p&gt;카운터가 항상 사용 가능한 것은 아닙니다. 명령줄에서 카운터를 비활성화했을 수도 있고(-c 또는 --disable-counters), 경우에 따라 연결이 &amp;quot;온라인&amp;quot; 대신 &amp;quot;준비됨&amp;quot; 상태로 등록되는 경우도 있습니다. 온라인은 인터넷 연결이 확인된 &amp;quot;준비된&amp;quot; 연결입니다. &quot;준비된&amp;quot; 연결만으로도 온라인 상태가 될 수 있지만, 카운터는 &amp;quot;온라인&amp;quot; 연결에서만 작동합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="915"/>
@@ -713,12 +714,12 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="945"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1001"/>
         <source>Counter not available.</source>
-        <translation type="unfinished"></translation>
+        <translation>카운터를 이용할 수 없습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="971"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection marked &amp;quot;roaming&amp;quot;.&lt;/p&gt;&lt;p&gt;In the case of cellular services this normally indicates connections to a foreign provider.&lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&amp;quot;로밍&amp;quot;으로 표시된 &amp;quot;온라인&amp;quot; 서비스 연결에 대한 카운터입니다.&lt;/p&gt;&lt;p&gt;이동통신 서비스의 경우 일반적으로 해외 통신사에 대한 연결을 나타냅니다.&lt;/p&gt;&lt;p&gt;카운터가 항상 사용 가능한 것은 아닙니다. 명령줄에서 카운터를 비활성화했을 수도 있고(-c 또는 --disable-counters), 경우에 따라 연결이 &amp;quot;온라인&amp;quot; 대신 &amp;quot;준비됨&amp;quot;으로 표시될 수 있습니다. 온라인은 인터넷 연결이 확인된 &amp;quot;준비된&amp;quot; 연결입니다. &amp;quot;준비된&amp;quot; 연결만으로도 온라인 상태가 될 수 있지만, 카운터는 &amp;quot;온라인&amp;quot; 연결에서만 작동합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="974"/>
@@ -733,7 +734,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1024"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The threshold values for counter updates (counter resolution).  Data and time work together to define how often the fields are updated.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;카운터 업데이트(카운터 해상도)에 대한 임계값입니다. 데이터와 시간을 함께 사용하여 필드 업데이트 빈도를 정의합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1027"/>
@@ -748,7 +749,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1527"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;명령줄 옵션: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; 또는 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Connman RX 및 TX 카운터를 활성화합니다. Connman에서는 카운터가 실험적으로 사용 중이며, 활성화하면 시스템 로그에 많은 양의 데이터가 기록됩니다.&lt;/p&gt;&lt;p&gt;카운터는 기본적으로 꺼져 있으며, 이는 원래 방식과 다른 변경 사항입니다. 2017.09.19 버전까지 카운터는 기본적으로 활성화되어 있었습니다. 이후 모든 버전의 카운터는 기본적으로 비활성화되어 있습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1530"/>
@@ -758,7 +759,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1503"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;명령줄 옵션: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; 또는 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;VPN을 비활성화합니다. 이렇게 하면 VPN 탭이 숨겨지고 connman-vpn에 대한 연결 시도도 생략됩니다. 후자는 Connman이 --disable-vpn 기능으로 빌드된 경우에 유용합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1506"/>
@@ -768,7 +769,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1471"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;명령줄 옵션: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; 또는 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;최소화 버튼을 비활성화합니다. 창 관리자가 인터페이스 최소화를 단독으로 제어하도록 하려는 경우 사용합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1474"/>
@@ -798,7 +799,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1103"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cumulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;일반적으로 카운터는 누적되며 부팅 간의 연결 시간과 TX 및 RX 카운트를 유지합니다. 이 상자를 선택하면 CMST가 시작될 때마다 카운터가 0으로 재설정되고, CMST가 실행 중인 경우 Connman 서비스가 시작될 때마다 카운터가 재설정됩니다. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1106"/>
@@ -808,12 +809,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1113"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked additional controls for advanced users are displayed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;체크 시 상급 사용자를 위한 추가 제어 항목이 표시됩니다..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1116"/>
         <source>Advanced Controls</source>
-        <translation type="unfinished"></translation>
+        <translation>고급 설정</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1460"/>
@@ -1073,7 +1074,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="564"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service is of type VPN. It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;모든 서비스에 대한 기본 구성 방법은 자동 또는 DHCP와 같은 것입니다. 이는 대부분의 일반적인 사용에는 충분하지만, 그렇지 않은 경우 이 버튼을 사용하면 선택한 서비스에 대한 이더넷 및 IP 설정을 수동으로 구성할 수 있습니다.&lt;/p&gt;&lt;p&gt;서비스가 외부 구성 파일을 통해 프로비저닝되거나 서비스가 VPN 유형인 경우 이 버튼은 비활성화됩니다. 이러한 서비스의 속성을 수정할 수 없습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="622"/>
@@ -1158,7 +1159,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1670"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the configuration file shown below will be modified by whatever output the program provides.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 옵션을 체크하면, 아래에 표시된 구성 파일은 프로그램이 제공하는 출력에 따라 수정됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1673"/>
@@ -1168,7 +1169,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1682"/>
         <source>Service configuration file to be modified by the program.</source>
-        <translation type="unfinished"></translation>
+        <translation>프로그램에서 수정할 서비스 구성 파일입니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1685"/>
@@ -1226,7 +1227,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1791"/>
         <source>&amp;QT</source>
-        <translation>QT(&amp;Q)</translation>
+        <translation>&amp;QT</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1798"/>
@@ -1256,7 +1257,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1885"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;도움말 보기&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1888"/>
@@ -1266,7 +1267,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1898"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the provisioning editor to create or edit Connman configuration (provisioning) files.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. &lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;프로비저닝 편집기를 열어 ConnMan 구성(프로비저닝) 파일을 만들거나 편집합니다.&lt;/p&gt;&lt;p&gt;이러한 구성 파일은 root:root 소유의 /var/lib/connman 디렉터리에 저장됩니다. CMST는 이 디렉터리에서 파일을 읽고 쓸 수 있도록 roothelper를 등록합니다. &lt;/p&gt;&lt;p&gt;루트 권한을 남용하지 않기 위해 편집기는 이름이 &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;로 끝나는 파일에서만 작동합니다. 이 파일 이름 끝은 파일 저장 중에 자동으로 추가되며 변경할 수 없습니다. &lt;/p&gt;&lt;p&gt;이 편집기를 사용하면 다른 방법으로 생성된 구성 파일을 편집하거나 삭제할 수 없습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1901"/>
@@ -1276,7 +1277,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1908"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open the VPN provisioning editor to create or edit Connman configuration (provisioning) files for VPN connections.&lt;/p&gt;&lt;p&gt;These config files reside in /var/lib/connman-vpn which is owned by root:root. CMST will register a roothelper to allow reading and writing files in this directory. &lt;/p&gt;&lt;p&gt;To avoid abusing the root privileges the editor will only operate on files with names ending in &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;. This file name ending will be added automatically during a file save and cannot be altered. &lt;/p&gt;&lt;p&gt;Using this editor it is not possible to edit or delete config files created by other means.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VPN 연결을 위한 Connman 구성(프로비저닝) 파일을 만들거나 편집하려면 VPN 프로비저닝 편집기를 엽니다.&lt;/p&gt;&lt;p&gt;이러한 구성 파일은 root:root 소유의 /var/lib/connman-vpn 디렉터리에 위치합니다. CMST는 이 디렉터리에서 파일을 읽고 쓸 수 있도록 roothelper를 등록합니다. &lt;/p&gt;&lt;p&gt;루트 권한을 남용하지 않기 위해 편집기는 이름이 &lt;span style=&quot; font-style:italic;&quot;&gt;.cmst.config&lt;/span&gt;로 끝나는 파일에서만 작동합니다. 이 파일 이름 끝은 파일 저장 중에 자동으로 추가되며 변경할 수 없습니다. &lt;/p&gt;&lt;p&gt;이 편집기를 사용하면 다른 방법으로 만든 구성 파일을 편집하거나 삭제할 수 없습니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1911"/>
@@ -1291,7 +1292,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1921"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation>종료(&amp;X)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1941"/>
@@ -1706,7 +1707,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1683"/>
         <source>Excludes:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>제외:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1688"/>
@@ -2209,7 +2210,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="35"/>
         <source>&amp;General</source>
-        <translation type="unfinished"></translation>
+        <translation>일반(&amp;G)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="44"/>
@@ -2219,7 +2220,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="76"/>
         <source>&amp;Nameservers</source>
-        <translation type="unfinished"></translation>
+        <translation>네임서버(&amp;N)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="152"/>
@@ -2258,7 +2259,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="299"/>
         <source>IPv&amp;6</source>
-        <translation type="unfinished"></translation>
+        <translation>IPv&amp;6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="399"/>
@@ -2278,12 +2279,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="474"/>
         <source>&amp;Proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>프록시(&amp;P)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="518"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Automatic proxy configuration URL.  Used by the &amp;quot;auto&amp;quot; method.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;자동 프록시 구성 URL입니다. &amp;quot;자동&amp;quot; 방식에서 사용됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="511"/>
@@ -2293,7 +2294,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="114"/>
         <source>&amp;Timeservers</source>
-        <translation type="unfinished"></translation>
+        <translation>타임서버(&amp;T)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="206"/>
@@ -2319,12 +2320,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="73"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The list of manually configured domain name servers. Some cellular networks don&apos;t provide correct name servers and this allows for an override.&lt;/p&gt;&lt;p&gt;This array is sorted by priority and the first entry in the list represents the nameserver with the highest priority.&lt;/p&gt;&lt;p&gt;When using manual configuration and no global nameservers are configured, then it is useful to configure this setting.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, vertical bar, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;수동으로 구성된 도메인 이름 서버 목록입니다. 일부 이동통신망은 올바른 이름 서버를 제공하지 않으므로 이를 통해 재정의할 수 있습니다.&lt;/p&gt;&lt;p&gt;이 배열은 우선순위에 따라 정렬되며 목록의 첫 번째 항목은 우선순위가 가장 높은 네임서버를 나타냅니다.&lt;/p&gt;&lt;p&gt;수동 구성을 사용하고 글로벌 네임서버가 구성되지 않은 경우 이 설정을 구성하는 것이 유용합니다.&lt;/p&gt;&lt;p&gt;하나 이상의 IP 주소를 입력합니다. 입력하는 각 주소를 쉼표, 세미콜론, 세로줄 또는 공백으로 구분합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="111"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The list of manually configured time servers.&lt;/p&gt;&lt;p&gt;The first entry in the list represents the timeserver with the highest priority.&lt;/p&gt;&lt;p&gt;When using manual configuration this setting is useful to override all the other timeserver settings. This is service specific, hence only the values for the default service are used.&lt;/p&gt;&lt;p&gt;Changes to this property will result in restart of NTP query.&lt;/p&gt;&lt;p&gt;Enter one or more IP addresses. Separate each address you enter by a comma, semi-colon, vertical bar, or by white space.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;수동으로 구성된 시간 서버 목록입니다.&lt;/p&gt;&lt;p&gt;목록의 첫 번째 항목은 우선순위가 가장 높은 시간 서버를 나타냅니다.&lt;/p&gt;&lt;p&gt;수동 구성을 사용할 때 이 설정은 다른 모든 타임서버 설정을 재정의하는 데 유용합니다. 이는 서비스별이므로 기본 서비스에 대한 값만 사용됩니다.&lt;/p&gt;&lt;p&gt;이 속성을 변경하면 NTP 쿼리가 다시 시작됩니다.&lt;/p&gt;&lt;p&gt;하나 이상의 IP 주소를 입력합니다. 입력하는 각 주소는 쉼표, 세미콜론, 세로줄 또는 공백으로 구분합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="149"/>
@@ -2449,7 +2450,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="607"/>
         <source>&amp;mDNS</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="622"/>
@@ -2459,7 +2460,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="640"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;도움말 보기&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="663"/>
@@ -2469,7 +2470,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="666"/>
         <source>Reset Pa&amp;ge</source>
-        <translation type="unfinished"></translation>
+        <translation>페이지 재설정(&amp;G)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="673"/>
@@ -2522,7 +2523,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="35"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>열기(&amp;O)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="48"/>
@@ -2532,7 +2533,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation>저장하기(&amp;S)</translation>
+        <translation>저장(&amp;S)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="68"/>
@@ -2542,7 +2543,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>삭제(&amp;D)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="94"/>
@@ -2552,17 +2553,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="97"/>
         <source>&amp;Clear Page</source>
-        <translation type="unfinished"></translation>
+        <translation>페이지 지우기(&amp;C)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="111"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;도움말 보기&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="114"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter &amp;quot;Whats This&amp;quot; mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&amp;quot;도움말 보기&amp;quot; 모드로 들어가세요.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="137"/>
@@ -2572,7 +2573,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="140"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation>종료(&amp;X)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="152"/>
@@ -2658,7 +2659,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="273"/>
         <source>PrivateKeyPassphraseType</source>
-        <translation>개인키 암호문구 유형</translation>
+        <translation>개인키암호문구유형</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="278"/>
@@ -2969,7 +2970,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="328"/>
         <source>Password/Passphrase for the private key file.</source>
-        <translation>개인 키 파일에 대한 암호/암호문구 입니다.</translation>
+        <translation>개인 키 파일에 대한 비밀번호/암호문구 입니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="329"/>
@@ -3055,7 +3056,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="512"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;You may use this dialog to create one.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일을 찾을 수 없습니다.&lt;br&gt;이 대화상자를 사용하여 구성 파일을 만들 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="518"/>
@@ -3065,7 +3066,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="519"/>
         <source>&lt;center&gt;Reading configuration file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일 읽는 중: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="526"/>
@@ -3082,7 +3083,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="551"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;Nothing will be deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일을 찾을 수 없습니다.&lt;br&gt;아무것도 삭제되지 않습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="558"/>
@@ -3347,19 +3348,19 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="82"/>
         <source>Not unique</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>중복됨</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="83"/>
         <source>Not supported</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>미지원</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="84"/>
         <source>Not implemented</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>미구현</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="85"/>
@@ -3371,13 +3372,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="86"/>
         <source>No carrier</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>신호 없음</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="87"/>
         <source>In progress</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>처리 중</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="88"/>
@@ -3407,55 +3408,55 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="92"/>
         <source>Not connected</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>연결되지 않음</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="93"/>
         <source>Operation aborted</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>작업 중단됨</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="94"/>
         <source>Operation timeout</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>작업 시간초과</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="95"/>
         <source>Invalid service</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>잘못된 서비스</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="96"/>
         <source>Invalid property</source>
         <comment>connman error string</comment>
-        <translation type="unfinished"></translation>
+        <translation>잘못된 속성</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="98"/>
         <source>disabled</source>
         <comment>connman privacy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>비활성화됨</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="99"/>
         <source>enabled</source>
         <comment>connman privacy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>활성화됨</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="100"/>
         <source>prefered</source>
         <comment>connman privacy string - known misspelling but needed to avoid breaking code</comment>
-        <translation type="unfinished"></translation>
+        <translation>선호됨</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="101"/>
         <source>preferred</source>
         <comment>connman privacy string</comment>
-        <translation type="unfinished"></translation>
+        <translation>선호됨</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="103"/>
@@ -3467,7 +3468,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="104"/>
         <source>manual</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished"></translation>
+        <translation>수동</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="106"/>
@@ -3479,73 +3480,73 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="107"/>
         <source>manual</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>수동</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="108"/>
         <source>off</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>끄기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="109"/>
         <source>fixed</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>고정</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="110"/>
         <source>address</source>
         <comment>connamn ipv4 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>주소</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="112"/>
         <source>auto</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>자동</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="113"/>
         <source>manual</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>수동</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="114"/>
         <source>6to4</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>6to4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="115"/>
         <source>off</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>끄기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="117"/>
         <source>openconnect</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>openconnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="118"/>
         <source>openvpn</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>openvpn</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="119"/>
         <source>vpnc</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>vpnc</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="120"/>
         <source>l2tp</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>l2tp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="121"/>
@@ -3557,19 +3558,19 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="122"/>
         <source>wireguard</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>wireguard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="124"/>
         <source>true</source>
         <comment>connman mdns setting</comment>
-        <translation type="unfinished"></translation>
+        <translation>활성화</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="125"/>
         <source>false</source>
         <comment>connman mdns setting</comment>
-        <translation type="unfinished"></translation>
+        <translation>비활성화</translation>
     </message>
     <message>
         <source>auto</source>
@@ -3592,7 +3593,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="14"/>
         <source>VPN Agent Input</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 에이전트 입력</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="20"/>
@@ -3607,47 +3608,47 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="40"/>
         <source>Password</source>
-        <translation>암호</translation>
+        <translation>비밀번호</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="50"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr password.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr 비밀번호.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="60"/>
         <source>Host</source>
-        <translation type="unfinished"></translation>
+        <translation>호스트</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="74"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>이름</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="88"/>
         <source>OpenConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="94"/>
         <source>CA Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>인증 기관 인증서.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="108"/>
         <source>Client Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>클라이언트 인증서.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="118"/>
         <source>Cookie</source>
-        <translation type="unfinished"></translation>
+        <translation>쿠키</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="128"/>
         <source>Server Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>서버 인증서.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="142"/>
@@ -3657,7 +3658,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="157"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;도움말 보기&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="160"/>
@@ -3667,12 +3668,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="184"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;연결 프로세스를 계속합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="187"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accept and use the answers you have provided in this dialog. &lt;/p&gt;&lt;p&gt;This will send your input to the connman daemon to continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;이 대화상자에서 제공한 답변을 수락하고 사용하세요.&lt;/p&gt;&lt;p&gt;이렇게 하면 연결 프로세스를 계속하기 위해 입력 내용이 connman 데몬으로 전송됩니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="190"/>
@@ -3682,22 +3683,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="197"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;연결 프로세스를 취소합니다.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="200"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the dialog. &lt;/p&gt;&lt;p&gt;This will send a message to the connman daemon that you have cancelled the connection request.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the dialog. &lt;/p&gt;&lt;p&gt;이 작업은 연결 요청을 취소했음을 connman 데몬에 알리는 메시지를 전송합니다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="203"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>취소(&amp;C)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="225"/>
         <source>Save Credentials</source>
-        <translation type="unfinished"></translation>
+        <translation>로그인 정보 저장</translation>
     </message>
 </context>
 <context>
@@ -3705,12 +3706,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="206"/>
         <source>Global</source>
-        <translation type="unfinished"></translation>
+        <translation>전역</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="212"/>
         <source>OpenConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="235"/>
@@ -3720,17 +3721,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="262"/>
         <source>VPNC</source>
-        <translation type="unfinished"></translation>
+        <translation>VPNC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="289"/>
         <source>L2TP</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="341"/>
         <source>PPTP</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="411"/>
@@ -3743,63 +3744,64 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="426"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="427"/>
         <source>Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>인증서 파일 (*.pem *.ca *.crt *.cert);;모든 파일 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="415"/>
         <source>User:Pass Files (*.up *.txt *.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>사용자:비번 파일 (*.up *.txt *.conf);;모든 파일 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="366"/>
         <source>WireGuard</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="418"/>
         <source>CA Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>인증기관 파일 (*.ca *.cert *.crt *.pem);;모든 파일 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="419"/>
         <source>Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>인증서 파일 (*.ca *.cert *.crt *.pem);;모든 파일 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="420"/>
         <source>Key Files (*.key *.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>키 파일 (*.key *.ca *.cert *.crt *.pem);;모든 파일 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="421"/>
         <source>Config Files (*.ovpn *.conf *.config);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>구성 파일 (*.ovpn *.conf *.config);;모든 파일 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="456"/>
         <source>VPN server IP address (ex: 1.2.3.4)</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 서버 IP 주소 (예: 1.2.3.4)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="536"/>
         <source>%1 - Item Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 항목 입력</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="554"/>
         <source>%1 - Verify Option</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 확인 옵션</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="574"/>
         <source>User defined name for the VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN에 대한 사용자 정의 이름</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="575"/>
         <source>Domain name for the VPN Service
 (ex: corporate.com)</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 서비스의 도메인 이름
+(예: corporate.com)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="576"/>
@@ -3808,7 +3810,11 @@ Format is network/netmask/gateway, and gateway can be omitted.
 Ex: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:Ldb8::1/16
 
 Networks = entry is optional and may be left blank.</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 링크 뒤에 있는 네트워크 (여러 개일 경우 쉼표로 구분)
+형식은 network/netmask/gateway이며, gateway는 생략할 수 있습니다.
+예: 10.10.20.0/255.255.255.0/10.20.1.5,192.168.99.1/24,2001:Ldb8::1/16
+
+네트워크 = 항목은 선택 사항이므로 비워 둘 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="580"/>
@@ -3820,7 +3826,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="595"/>
         <source>%1 - Text Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 텍스트 입력</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="663"/>
@@ -3831,94 +3837,94 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="664"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;You may use this dialog to create one.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일을 찾을 수 없습니다.&lt;br&gt;이 대화상자를 사용하여 구성 파일을 만들 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="670"/>
         <source>%1 - Information</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 정보</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="671"/>
         <source>&lt;center&gt;Reading configuration file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일 읽는 중: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="678"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="710"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="731"/>
         <source>%1 - Select File</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 파일 선택</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="679"/>
         <source>Select a file to load.</source>
-        <translation type="unfinished"></translation>
+        <translation>불러올 파일을 선택하세요.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="704"/>
         <source>&lt;center&gt;No configuration files were found.&lt;br&gt;Nothing will be deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;구성 파일을 찾을 수 없습니다.&lt;br&gt;아무것도 삭제되지 않습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="711"/>
         <source>Select a file to be deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>삭제할 파일을 선택하세요.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="732"/>
         <source>Enter a new file name or select&lt;br&gt;an existing file to overwrite.</source>
-        <translation type="unfinished"></translation>
+        <translation>새 파일 이름을 입력하거나 기존 파일을 선택하여 덮어씁니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="767"/>
         <source>File read completed</source>
-        <translation type="unfinished"></translation>
+        <translation>파일 읽기 완료</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="779"/>
         <source>File deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>파일이 삭제되었습니다</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="781"/>
         <source>Error encountered deleting.</source>
-        <translation type="unfinished"></translation>
+        <translation>삭제하는 중 오류가 발생했습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="795"/>
         <source>File save failed.</source>
-        <translation type="unfinished"></translation>
+        <translation>파일 저장에 실패했습니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="798"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 KB 기록됨</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="800"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 바이트 기록됨</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="812"/>
         <source> Critical</source>
-        <translation type="unfinished"></translation>
+        <translation> 긴급</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="813"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;DBus 오류 이름:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;문자열:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;메시지:&lt;/b&gt; %3</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="851"/>
         <source>OpenVPN Configurations (*.ovpn  *.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN 구성 (*.ovpn  *.conf);;모든 파일 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="860"/>
         <source>Select the configuration file to import</source>
-        <translation type="unfinished"></translation>
+        <translation>가져올 구성 파일 선택하기</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="882"/>
@@ -3958,7 +3964,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="933"/>
         <source>Password</source>
-        <translation>암호</translation>
+        <translation>비밀번호</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="934"/>
@@ -4011,7 +4017,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>저장(&amp;S)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="68"/>
@@ -4021,7 +4027,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>삭제(&amp;D)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="94"/>
@@ -4031,17 +4037,17 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="97"/>
         <source>&amp;Clear Page</source>
-        <translation type="unfinished"></translation>
+        <translation>페이지 지우기(&amp;C)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="111"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;도움말 보기&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="114"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter &amp;quot;Whats This&amp;quot; mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&amp;quot;도움말 보기&amp;quot; 모드로 들어가세요.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="137"/>
@@ -4051,7 +4057,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="140"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation>종료(&amp;X)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="160"/>
@@ -4061,7 +4067,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="168"/>
         <source>Description of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>네트워크에 대한 설명입니다.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="201"/>
