@@ -970,17 +970,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1242"/>
         <source>System Tray Notifications</source>
-        <translation>Systemkurvsmerknader</translation>
+        <translation>Systemkurvvarsler</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1271"/>
         <source>Notifications</source>
-        <translation>Merknader</translation>
+        <translation>Varsler</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1280"/>
         <source>Notification Daemon</source>
-        <translation>Merknadsnisse</translation>
+        <translation>Bakgrunnstjeneste for varsling</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1293"/>
@@ -1540,7 +1540,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="551"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5&lt;center&gt;Connman version %6</source>
-        <translation>&lt;center&gt;%1 er et program for å bruke Connman-nissen og for å tilby systemkurvskontroll.&lt;br&gt;&lt;center&gt;Versjon &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Utgivelsesdato: %3&lt;center&gt;Opphavsrett c %4&lt;center&gt;tilhørende&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Oversettelser:&lt;/b&gt;&lt;center&gt;Allan Nordhøy, (bokmål), Jianfeng Zhang (Kinesisk)&lt;center&gt;sqozz (Tysk)&lt;center&gt;Ilya Shestopalov (Russisk)&lt;center&gt;Heimen Stoffels (Nederlandsk)&lt;center&gt; Yaşar Çiv (Tyrkisk)&lt;br&gt;&lt;center&gt;&lt;b&gt;Bygginfo:&lt;/b&gt;&lt;center&gt;Kompilert med Qt verrsjon %5&lt;center&gt;Connman versjon %6</translation>
+        <translation>&lt;center&gt;%1 er et program for å bruke Connman-bakgrunnstjenesten og for å tilby systemkurvkontroll.&lt;br&gt;&lt;center&gt;Versjon &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Utgivelsesdato: %3&lt;center&gt;Opphavsrett c %4&lt;center&gt;tilhørende&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Oversettelser:&lt;/b&gt;&lt;center&gt;Allan Nordhøy, (bokmål), Jianfeng Zhang (Kinesisk)&lt;center&gt;sqozz (Tysk)&lt;center&gt;Ilya Shestopalov (Russisk)&lt;center&gt;Heimen Stoffels (Nederlandsk)&lt;center&gt; Yaşar Çiv (Tyrkisk)&lt;br&gt;&lt;center&gt;&lt;b&gt;Bygginfo:&lt;/b&gt;&lt;center&gt;Kompilert med Qt-versjon %5&lt;center&gt;Connman-versjon %6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="447"/>
