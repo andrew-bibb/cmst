@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nb_NO">
+<TS version="2.1" language="zh_TW">
 <context>
     <name>Agent</name>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="14"/>
         <source>Agent Input</source>
-        <translation>Inndata fra agenten</translation>
+        <translation>代理輸入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="45"/>
         <source>Passphrase</source>
-        <translation type="unfinished">Passord</translation>
+        <translation>密碼片語</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="64"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hvis en gammel passordfrase er tilgjengelig, vises den her som referanse.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果有舊的密碼片語可用，將會在此顯示以供參考。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="74"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the passphrase here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skriv inn passordet her.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在此輸入密碼片語。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="87"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this box to obscure the password characters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Merk av i denne boksen for å skjule passordtegnene.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾選此框以隱蔽密碼字符。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="90"/>
         <source>&amp;Hide Passphrase</source>
-        <translation type="unfinished">&amp;Skjul passord</translation>
+        <translation>隱藏密碼片語(&amp;H)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="97"/>
         <source>O&amp;ld Passphrase</source>
-        <translation type="unfinished">G&amp;ammelt passord</translation>
+        <translation>舊的密碼片語(&amp;L)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="107"/>
         <source>&amp;Passphrase</source>
-        <translation type="unfinished">&amp;Passord</translation>
+        <translation>密碼片語(&amp;P)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="120"/>
         <source>Hidden Network</source>
-        <translation>Skjult nettverk</translation>
+        <translation>隱藏網路</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="126"/>
         <source>&amp;Name</source>
-        <translation>&amp;Navn</translation>
+        <translation>名稱(&amp;N)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="136"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the name of the hidden network you wish to connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skriv inn navnet på det skjulte nettverket du ønsker å koble til.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;輸入您希望連接到的隱藏網絡的名稱。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="149"/>
         <source>Service Set Identifier</source>
-        <translation>Tjenestesett-identifikator</translation>
+        <translation>服務集識別碼 SSID</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="155"/>
@@ -71,92 +71,92 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="175"/>
         <source>Wireless Internet Service Provider roaming (WISPr)</source>
-        <translation>Trådløs internettleverandør roaming (WISPr)</translation>
+        <translation>無線網路服務供應商漫遊 (WISPr)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="181"/>
         <source>&amp;Username</source>
-        <translation>&amp;Brukernavn</translation>
+        <translation>使用者名稱(&amp;U)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="191"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr-brukernavn.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr 使用者名稱。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="201"/>
         <source>Passwor&amp;d</source>
-        <translation>Passor&amp;d</translation>
+        <translation>密碼(&amp;D)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="211"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr password.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr-passord.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr 密碼。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="224"/>
         <source>Extensible Authentication Protocol (EAP)</source>
-        <translation>Utvidbar autentiseringsprotokoll (EAP)</translation>
+        <translation>可延伸的驗證通訊協定 (EAP)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="230"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type your Identity for the Extensible Authentication Protocol&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skriv inn identiteten din for Extensible Authentication Protocol&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;輸入您的 ID 用於 EAP (可延伸的驗證通訊協定)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="240"/>
         <source>&amp;Identity</source>
-        <translation>&amp;Identitet</translation>
+        <translation>身份 &amp;ID</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="253"/>
         <source>WiFi Protected Setup (WPS)</source>
-        <translation>Beskyttet Wi-Fi oppsett (WPS)</translation>
+        <translation>Wi-Fi 保護設定 (WPS)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="261"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked use WPS push button authentication.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Når avkrysset, bruk WPS-trykknappautentisering.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;當已經勾選時，使用 WPS 按鈕身份驗證。  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="264"/>
         <source>Use Push &amp;Button Authentication</source>
-        <translation>Bruk Push &amp;Button-godkjenning</translation>
+        <translation>使用按下按鈕身份驗證(&amp;B)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="294"/>
         <source>&amp;WPS Pin</source>
-        <translation>&amp;WPS Pin</translation>
+        <translation>&amp;WPS Pin 碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="310"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter a WPS pin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Angi en WPS-pin-kode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;輸入 WPS pin 碼。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="329"/>
         <source>Browser Login Requested</source>
-        <translation>Pålogging i nettleseren forespurt</translation>
+        <translation>瀏覽器登入要求</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="338"/>
         <source>Choose or enter a browser:</source>
-        <translation>Velg eller skriv inn en nettleser:</translation>
+        <translation>選擇或進入瀏覽器：</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="345"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login. If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Browser Users:&lt;/span&gt; Note that Brave does not seem to accept a URL to start with. After the browser starts you will need to enter the URL manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan ber deg om å åpne en nettleser for å fullføre påloggingsprosessen..&lt;/p&gt;&lt;p&gt;Vi har skannet PATH for nettlesere, og alle nettlesere som ble funnet, vises i listen nedenfor. Du kan velge hvilken som helst nettleser og bruke den til innlogging. Hvis nettleseren din ikke vises i listen, kan du skrive den inn direkte i feltet&lt;span style=&quot; font-weight:600;&quot;&gt; Velg eller skriv inn en nettleserboks&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For å starte nettleseren klikker du på &lt;span style=&quot; font-weight:600;&quot;&gt;Start nettleser&lt;/span&gt; knapp. &lt;/p&gt;&lt;p&gt;Hvis du ønsker å logge inn manuelt, lukker du denne dialogboksen, starter nettleseren og går til nettadressen som vises i &lt;span style=&quot; font-weight:600;&quot;&gt;Logg inn URL&lt;/span&gt; boks.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Modige nettleserbrukere:&lt;/span&gt; Merk at Brave ikke ser ut til å godta en URL til å begynne med. Etter at nettleseren har startet, må du skrive inn URL-adressen manuelt. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan 要求您開啟 Web 瀏覽器以完成登錄過程。&lt;/p&gt;&lt;p&gt;我們已經掃描了您的瀏覽器路徑，並且在下方中顯示所找到的瀏覽器。您可以選擇任何一個瀏覽器將其用於登錄。如果您的網路瀏覽器未顯示其中，則可以直接&lt;span style=&quot; font-weight:600;&quot;&gt; 選擇 或是進入瀏覽器中&lt;/span&gt;。&lt;/p&gt;&lt;p&gt;要啟動瀏覽器就點按 &lt;span style=&quot; font-weight:600;&quot;&gt;啟動瀏覽器&lt;/span&gt; 按鈕。 &lt;/p&gt;&lt;p&gt;如果您希望手動登入，請關閉此對話框，啟動您的網路瀏覽器並處理 URL 顯示於 &lt;span style=&quot; font-weight:600;&quot;&gt;登入 URL&lt;/span&gt; 框中。&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave 瀏覽器用戶：&lt;/span&gt; 請注意 Brave 似乎不接受由 URL 啟動。在瀏覽器啟動之後，需要手動輸入 URL。 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="360"/>
         <source>Login URL:</source>
-        <translation>Logg inn URL::</translation>
+        <translation>登入 URL ：</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="367"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting you continue login with a web browser. This box shows the URL that contains the login page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman ber deg fortsette påloggingen med en nettleser. Denne boksen viser URL-adressen som inneholder påloggingssiden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman 需要使用瀏覽器登入。本框顯示的 URL 網址包含登入頁面&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use  the Firefox browser.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -166,32 +166,32 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="379"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to launch the selected browser. The browser will open at the page shown in the Login URL box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bruk denne knappen til å starte den valgte nettleseren. Nettleseren åpnes på siden som vises i påloggings-URL-boksen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用此按鈕來啟動所選擇的瀏覽器。瀏覽器將會開啟網址，頁面顯示 “Login URL&quot; 框。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="382"/>
         <source>Launch &amp;Browser</source>
-        <translation>Start &amp;Nettleser</translation>
+        <translation>啟動瀏覽器(&amp;B)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="420"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hva er dette&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;這是什麼&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="423"/>
         <source>...</source>
-        <translation>…</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="447"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fortsett tilkoblingsprosessen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;繼續連接處理。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="450"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accept and use the answers you have provided in this dialog. &lt;/p&gt;&lt;p&gt;This will send your input to the connman daemon to continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Godta og bruk svarene du har gitt i denne dialogen. &lt;/p&gt;&lt;p&gt;Dette vil sende inndataene dine til connman-daemon for å fortsette tilkoblingsprosessen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;接受並使用您在此對話框提供的回答。&lt;/p&gt;&lt;p&gt;此將傳送至 ConnMan 背景程式來繼續連接處理。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="453"/>
@@ -201,17 +201,17 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="460"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avbryt tilkoblingsprosessen.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;取消連接處理。&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the dialog. &lt;/p&gt;&lt;p&gt;This will send a message to the connman daemon that you have cancelled the connection request.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avbryt dialogboksen. &lt;/p&gt;&lt;p&gt;Dette sender en melding til connman-demonen om at du har kansellert tilkoblingsforespørselen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;取消對話框。 &lt;/p&gt;&lt;p&gt;此將傳送訊息至 ConnMan 背景程式，您已經取消連接請求。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="466"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Avbryt</translation>
+        <translation>取消(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -219,12 +219,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="298"/>
         <source> Information</source>
-        <translation> Informasjon</translation>
+        <translation> 資訊</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="299"/>
         <source>You have requested the %1 browser, but we cannot find a terminal program to open it with.  Currenty we can start %1 using these terminals: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;To continue you need to manually open a terminal and then enter: &quot;%1 %2&quot;</source>
-        <translation>Du har bedt om nettleseren %1, men vi finner ikke noe terminalprogram å åpne den med.  For øyeblikket kan vi starte %1 med disse terminalene: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;For å fortsette må du manuelt åpne en terminal og deretter skrive inn: &quot;%1 %2&quot;</translation>
+        <translation>您已要求 %1 瀏覽器，但是找不到用以開啟的終端程式。 目前可以啟動 1% 使用這些終端機： &lt;b&gt;roxterm&lt;/b&gt; 和 &lt;b&gt;xterm&lt;/b&gt;。&lt;br&gt;&lt;br&gt;要繼續進行，須要手動開啟終端機，然後輸入：&quot;%1 %2&quot;</translation>
     </message>
 </context>
 <context>
@@ -232,22 +232,22 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation>ConnMan-feil</translation>
+        <translation>Connman 錯誤</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation>Connman returnerte følgende feilmelding:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Ønsker du å prøve på nytt?</translation>
+        <translation>Connman 回傳下列錯誤：&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;是否重試？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="131"/>
         <source>Agent Request Failed</source>
-        <translation>Agentforespørsel mislyktes</translation>
+        <translation>代理請求失敗</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="132"/>
         <source>The agent request failed before a reply was returned.</source>
-        <translation>Agentforespørselen mislyktes før et svar ble returnert.</translation>
+        <translation>代理請求失敗，在回應回傳之前。</translation>
     </message>
 </context>
 <context>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="76"/>
         <source>&lt;b&gt;Transmit:&lt;/b&gt;&lt;br&gt;TX Total: %1 (%2),  TX Errors: %3,  TX Dropped: %4</source>
-        <translation>&lt;b&gt;Overføre:&lt;/b&gt;&lt;br&gt;TX Totalt: %1 (%2),  TX-feil: %3,  TX droppet: %4</translation>
+        <translation>&lt;b&gt;傳遞：&lt;/b&gt;&lt;br&gt;TX 總計： %1 (%2),  TX 錯誤： %3,  TX 遺失： %4</translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="77"/>
@@ -290,50 +290,45 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="97"/>
         <source>%Ln Packet(s)</source>
         <translation>
-            <numerusform>%Ln pakke</numerusform>
-            <numerusform>%Ln pakker</numerusform>
+            <numerusform>%Ln 個數據包</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="93"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Received:&lt;/b&gt;&lt;br&gt;RX Total: %1 (%2),  RX Errors: %3,  RX Dropped: %4</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Mottatt:&lt;/b&gt;&lt;br&gt;RX Totalt: %1 (%2),  RX-feil: %3,  RX droppet: %4</translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;已經接收：&lt;/b&gt;&lt;br&gt;RX 總計： %1 (%2),  RX 錯誤： %3,  RX 遺失： %4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="100"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Connect Time:&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Koble til tid:&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;連接時間：&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="111"/>
         <source>%n Day(s)</source>
         <translation>
-            <numerusform>%n dag</numerusform>
-            <numerusform>%n dager</numerusform>
+            <numerusform>%n 日</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="118"/>
         <source>%n Hour(s)</source>
         <translation>
-            <numerusform>%n Time</numerusform>
-            <numerusform>%n Timer</numerusform>
+            <numerusform>%n 時</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="125"/>
         <source>%n Minute(s)</source>
         <translation>
-            <numerusform>%n minutt</numerusform>
-            <numerusform>%n minutter</numerusform>
+            <numerusform>%n 分</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="131"/>
         <source>%n Second(s)</source>
         <translation>
-            <numerusform>%n sekund</numerusform>
-            <numerusform>%n sekunder</numerusform>
+            <numerusform>%n 秒</numerusform>
         </translation>
     </message>
 </context>
@@ -342,22 +337,22 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="86"/>
         <source>Connman Error</source>
-        <translation>ConnMan-feil</translation>
+        <translation>ConnMan 錯誤</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="87"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation>Connman returnerte følgende feilmelding:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Ønsker du å prøve på nytt?</translation>
+        <translation>ConnMan 回傳下列錯誤：&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;是否要重試？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="123"/>
         <source>Agent Request Failed</source>
-        <translation>Agentforespørsel mislyktes</translation>
+        <translation>代理請求失敗</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="124"/>
         <source>The agent request failed before a reply was returned.</source>
-        <translation>Agentforespørselen mislyktes før et svar ble returnert.</translation>
+        <translation>代理請求失敗，在回應回傳之前。</translation>
     </message>
 </context>
 <context>
@@ -365,27 +360,27 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="20"/>
         <source>Dialog</source>
-        <translation>Dialog</translation>
+        <translation>對話框</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="48"/>
         <source>&amp;Status</source>
-        <translation>&amp;Status</translation>
+        <translation>狀態(&amp;S)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This checkbox controls the global setting for switching all radios on or off. When checked all radios are powered down.&lt;/p&gt;&lt;p&gt;When the system is In offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Denne avmerkingsboksen styrer den globale innstillingen for å slå alle radioer på eller av. Når den er avmerket, slås alle radioer av.&lt;/p&gt;&lt;p&gt;Når systemet er i frakoblet modus, er det mulig å slå på enkelte enheter igjen. Når du forlater frakoblet modus, avgjør de individuelle retningslinjene for hver enhet om radioen slås på igjen eller ikke..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This checkbox controls the global setting for switching all radios on or off. When checked all radios are powered down.&lt;/p&gt;&lt;p&gt;When the system is In offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="121"/>
         <source>All Devices &amp;Off</source>
-        <translation>Alle enheter &amp;Av</translation>
+        <translation>全部裝置離線(&amp;O)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="75"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OfflineMode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The offline mode indicates the global setting for switching all radios on or off. Changing offline mode to true results in powering down all devices. When leaving offline mode the individual policy of each device decides to switch the radio back on or not. &lt;/p&gt;&lt;p&gt;During offline mode, it is still possible to switch certain technologies manually back on. For example the limited usage of WiFi or Bluetooth devices might be allowed in some situations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OfflineMode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Frakoblet modus angir den globale innstillingen for å slå alle radioer på eller av. Hvis frakoblet modus endres til true, slås alle enhetene av. Når du forlater frakoblet modus, bestemmer den individuelle policyen for hver enhet om radioen skal slås på igjen eller ikke. &lt;/p&gt;&lt;p&gt;I frakoblet modus er det fortsatt mulig å slå på visse teknologier manuelt. Begrenset bruk av WiFi- eller Bluetooth-enheter kan for eksempel være tillatt i enkelte situasjoner.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OfflineMode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The offline mode indicates the global setting for switching all radios on or off. Changing offline mode to true results in powering down all devices. When leaving offline mode the individual policy of each device decides to switch the radio back on or not. &lt;/p&gt;&lt;p&gt;During offline mode, it is still possible to switch certain technologies manually back on. For example the limited usage of WiFi or Bluetooth devices might be allowed in some situations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="35"/>
@@ -400,34 +395,34 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="78"/>
         <source>Global Properties</source>
-        <translation>Globale eiendommer</translation>
+        <translation>整體屬性</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="92"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="150"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Den globale innstillingen for å slå alle radioer på eller av. Når frakoblet modus er aktivert, slås alle radioer av..&lt;/p&gt;&lt;p&gt;I frakoblet modus er det mulig å slå på enkelte enheter igjen. Når du forlater frakoblet modus, avgjør de individuelle retningslinjene for hver enhet om radioen slås på igjen eller ikke.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="95"/>
         <source>OfflineMode: Unavailable</source>
-        <translation>FrakobletModus: Ikke tilgjengelig</translation>
+        <translation>離線模式：無可使用</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="108"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global connection state of the system.  Possible values are &amp;quot;offline&amp;quot;, &amp;quot;idle&amp;quot;, &amp;quot;ready&amp;quot;, and &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Systemets globale tilkoblingsstatus.  Mulige verdier er  &amp;quot;offline&amp;quot;, &amp;quot;idle&amp;quot;, &amp;quot;ready&amp;quot;, and &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;系統的整體連接狀態。可能值為 &amp;quot;離線&amp;quot;, &amp;quot;間置&amp;quot;, &amp;quot;就緒&amp;quot;, 及 &amp;quot;連線&amp;quot;。  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="111"/>
         <source>State: Unavailable</source>
-        <translation>Status: Ikke tilgjengelig</translation>
+        <translation>狀態：無可使用</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="184"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="152"/>
         <source>Technologies</source>
-        <translation>Teknologier</translation>
+        <translation>科技</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="233"/>
@@ -435,477 +430,469 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="732"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="875"/>
         <source>Name</source>
-        <translation>Navn</translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="238"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="380"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="880"/>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation>類型</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="243"/>
         <source>Powered</source>
-        <translation>Drevet</translation>
+        <translation>已經發動</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="248"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="742"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2546"/>
         <source>Connected</source>
-        <translation>Tilkoblet</translation>
+        <translation>已經連接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="253"/>
         <source>Tethering</source>
-        <translation>Tjudring</translation>
+        <translation>繫連</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="271"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="653"/>
         <source>Resc&amp;an</source>
-        <translation>Resc&amp;an</translation>
+        <translation>重新掃瞄(&amp;A)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="320"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This box lists all services that connman can connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Denne boksen viser alle tjenester som connman kan koble seg til.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;此框列出全部的服務，是 connman 所能連接的。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="323"/>
         <source>Services</source>
-        <translation>Tjenester</translation>
+        <translation>服務</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="385"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="885"/>
         <source>State</source>
-        <translation>Tilstand</translation>
+        <translation>狀態</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="390"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="895"/>
         <source>Connection</source>
-        <translation>Tilkobling</translation>
+        <translation>連接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="406"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2007"/>
         <source>Move Before</source>
-        <translation>Flytt før</translation>
+        <translation>移動於前</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="419"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2012"/>
         <source>Move After</source>
-        <translation>Flytt etter</translation>
+        <translation>移動於後</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="439"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked hide the connection name in the Services box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Når det er merket av, skjules tilkoblingsnavnet i boksen Tjenester.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;當有勾選，隱藏連接名稱於服務框。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="442"/>
         <source>&amp;Less</source>
-        <translation>&amp;Mindre</translation>
+        <translation>較少(&amp;L)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page will show the details of the service selected in the box at the top. If the selected service is not in the READY or ONLINE state then most of the details will be blank. &lt;/p&gt;&lt;p&gt;You may override service details by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Configuration&lt;/span&gt; button at the bottom right. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Denne siden viser detaljene for tjenesten som er valgt i boksen øverst. Hvis den valgte tjenesten ikke er KLAR eller ONLINE, vil de fleste detaljene være tomme. &lt;/p&gt;&lt;p&gt;Du kan overstyre tjenestedetaljer ved å bruke &lt;span style=&quot; font-weight:600;&quot;&gt;Konfigurasjon&lt;/span&gt; nederst til høyre. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page will show the details of the service selected in the box at the top. If the selected service is not in the READY or ONLINE state then most of the details will be blank. &lt;/p&gt;&lt;p&gt;You may override service details by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Configuration&lt;/span&gt; button at the bottom right. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="466"/>
         <source>&amp;Details</source>
-        <translation>&amp;Detaljer</translation>
+        <translation>詳細資訊(&amp;D)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="478"/>
         <source>Ser&amp;vice</source>
-        <translation>Tje&amp;neste</translation>
+        <translation>服務(&amp;V)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="488"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this Combobox to select the service for which you wish to view the detailed information.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bruk denne kombinasjonsboksen til å velge den tjenesten du ønsker å se detaljert informasjon om.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;使用此 Combobox 來選擇服務，此為您希望查看詳細資訊。&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="585"/>
         <source>Configuration</source>
-        <translation>Konfigurasjon</translation>
+        <translation>設定</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="598"/>
         <source>&amp;Wireless</source>
-        <translation>&amp;Trådløs</translation>
+        <translation>無線(&amp;W)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="604"/>
         <source>Wireless Services</source>
-        <translation>Trådløstjenester</translation>
+        <translation>無線服務</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="610"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one wifi service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one wifi service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="613"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="782"/>
         <source>Connect</source>
-        <translation>Koble til</translation>
+        <translation>連接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="620"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one wifi service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Velg en wifi-tjeneste i tabellen nedenfor og trykk på denne knappen for å koble den fra. &lt;/p&gt;&lt;p&gt;Hvis det bare finnes én wifi-tjeneste i &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; Hvis du trykker på denne knappen, vil tjenesten automatisk bli valgt og frakoblet. &lt;/p&gt;&lt;p&gt;Dette kan også brukes til å avbryte et tidligere tilkoblingsforsøk.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one wifi service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="623"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="795"/>
         <source>Disconnect</source>
-        <translation>Koble fra</translation>
+        <translation>斷線</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="633"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="822"/>
         <source>Remove</source>
-        <translation>Fjern</translation>
+        <translation>移除</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This label shows the number of WiFi technologies (devices) that were found, and the number that are powered on. There must be at least one WiFi technology found and powered in order for the box below to show services.&lt;/p&gt;&lt;p&gt;To turn a technology on or off go to the &lt;span style=&quot; font-weight:600;&quot;&gt;Technologies&lt;/span&gt; box in the &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; tab and double click on the text that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Denne etiketten viser antall WiFi-teknologier (enheter) som ble funnet, og hvor mange som er slått på. Minst én WiFi-teknologi må være funnet og slått på for at boksen nedenfor skal vise tjenester.&lt;/p&gt;&lt;p&gt;Hvis du vil slå en teknologi av eller på, går du til &lt;span style=&quot; font-weight:600;&quot;&gt;Teknologier&lt;/span&gt; boksen i &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; fanen og dobbeltklikk på teksten som vises i vinduet &lt;span style=&quot; font-weight:600;&quot;&gt;Drevet&lt;/span&gt; spalte for teknologien.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This label shows the number of WiFi technologies (devices) that were found, and the number that are powered on. There must be at least one WiFi technology found and powered in order for the box below to show services.&lt;/p&gt;&lt;p&gt;To turn a technology on or off go to the &lt;span style=&quot; font-weight:600;&quot;&gt;Technologies&lt;/span&gt; box in the &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; tab and double click on the text that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="669"/>
         <source>Wifi State</source>
-        <translation>Wi-Fi-tilstand</translation>
+        <translation>Wifi 狀態</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1318"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will implement an internet kill switch for VPN connections. If a VPN connection drops while the kill switch is enabled all technologies will be powered off.&lt;/p&gt;&lt;p&gt;The way this works is the service order is monitored. If the topmost service is of type VPN and then if it changes to something other than VPN and if the change was not initiated by the user (for instance by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Disconnect&lt;/span&gt; button in the VPN tab), then CMST will cycle through all technologies powering each one down in turn. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will implement an internet kill switch for VPN connections. If a VPN connection drops while the kill switch is enabled all technologies will be powered off.&lt;/p&gt;&lt;p&gt;The way this works is the service order is monitored. If the topmost service is of type VPN and then if it changes to something other than VPN and if the change was not initiated by the user (for instance by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Disconnect&lt;/span&gt; button in the VPN tab), then CMST will cycle through all technologies powering each one down in turn. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1321"/>
         <source>Enable VPN Internet Kill Switch</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用 VPN Internet Kill Switch</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1268"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system notification daemon will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed. Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system notification daemon will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed. Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1191"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the Start Up Options in the right hand pane will be enabled. Start up options set in this pane will be read and used next time the program starts. Start up options are also available as command line switches and an option provided on the command line will take precedence over an option set in the right hand pane. The options in this pane are provided as a convienence to avoid the necessity of editing a systemd service or other start up file. &lt;/p&gt;&lt;p&gt;Settings are stored in&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the Start Up Options in the right hand pane will be enabled. Start up options set in this pane will be read and used next time the program starts. Start up options are also available as command line switches and an option provided on the command line will take precedence over an option set in the right hand pane. The options in this pane are provided as a convienence to avoid the necessity of editing a systemd service or other start up file. &lt;/p&gt;&lt;p&gt;Settings are stored in&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;: ~&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1194"/>
         <source>Enable Start Options from GUI (right hand pane)</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用啟動選項，來自 GUI (右側面板)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1377"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. Changing or setting these will only take effect at the next program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These entries control various options for CMST at program start. Changing or setting these will only take effect at the next program start. &lt;/p&gt;&lt;p&gt;All of these options are available from the command line, and if a command line option is provided it will take precedence over these settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1380"/>
         <source>Start Up Options</source>
-        <translation type="unfinished">Oppstartsvalg</translation>
+        <translation>啟動選項</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1438"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--minimized&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Start the GUI minimized in the system tray.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--counter-update-rate&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1393"/>
         <source>Counter Update Rate </source>
-        <translation type="unfinished"></translation>
+        <translation>計算更新率 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1642"/>
         <source>External Programs</source>
-        <translation>Eksterne programmer</translation>
+        <translation>外部程式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1822"/>
         <source>Aw&amp;Oken</source>
-        <translation type="unfinished">&amp;Ikoner</translation>
+        <translation>喚醒(&amp;O)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1829"/>
         <source>A&amp;rtwork</source>
-        <translation>K&amp;unstverk</translation>
+        <translation>美編(&amp;R)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2017"/>
         <source>Rescan</source>
-        <translation>Skann på ny</translation>
+        <translation>重新掃瞄</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2025"/>
         <source>Offline Mode</source>
-        <translation>Frakoblet modus</translation>
+        <translation>離線模式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="268"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="737"/>
         <source>Favorite</source>
-        <translation>Favoritt</translation>
+        <translation>最愛</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="747"/>
         <source>Security</source>
-        <translation>Sikkerhet</translation>
+        <translation>安全</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="752"/>
         <source>Signal Strength</source>
-        <translation>Signalstyrke</translation>
+        <translation>訊號長度</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="907"/>
         <source>&amp;Counters</source>
-        <translation>&amp;Telleverk</translation>
+        <translation>計數(&amp;C)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="928"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The service being monitored by the counters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;正由計數器監視的服務。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="931"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1706"/>
         <source>Service:</source>
-        <translation>Tjeneste:</translation>
+        <translation>服務：</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="974"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection that is not marked roaming. &lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection that is not marked roaming. &lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="947"/>
         <source>Home</source>
-        <translation>Hjem</translation>
+        <translation>主頁</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="977"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1033"/>
         <source>Counter not available.</source>
-        <translation type="unfinished"></translation>
+        <translation>計數無可使用。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1003"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection marked &amp;quot;roaming&amp;quot;.&lt;/p&gt;&lt;p&gt;In the case of cellular services this normally indicates connections to a foreign provider.&lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counters for the &amp;quot;online&amp;quot; service connection marked &amp;quot;roaming&amp;quot;.&lt;/p&gt;&lt;p&gt;In the case of cellular services this normally indicates connections to a foreign provider.&lt;/p&gt;&lt;p&gt;Counters may not always be available. The counters could have been disabled at the command line (-c or --disable-counters) or occasionally the connection will register &amp;quot;ready&amp;quot; instead of &amp;quot;online&amp;quot;. Online is a &amp;quot;ready&amp;quot; connection that has verified internet connectivity. It is possible to be online with only a &amp;quot;ready&amp;quot; connection, however the counters only work for they &amp;quot;online&amp;quot; connection.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1006"/>
         <source>Roaming</source>
-        <translation>Tjudring</translation>
+        <translation>漫遊</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1053"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counter Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;計數設定&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1056"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The threshold values for counter updates (counter resolution).  Data and time work together to define how often the fields are updated.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The threshold values for counter updates (counter resolution).  Data and time work together to define how often the fields are updated.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1059"/>
         <source>Settings:</source>
-        <translation>Innstillinger:</translation>
+        <translation>設定：</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1074"/>
         <source>&amp;Preferences</source>
-        <translation>&amp;Innstillinger</translation>
+        <translation>偏好設定(&amp;P)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1527"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;-c&lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;monospace&apos;; font-weight:600;&quot;&gt;--enable-counters&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Enable Connman RX and TX counters.  Counters are experimental in Connman and enabling them will write a large amount of data to the system logs.&lt;/p&gt;&lt;p&gt;Counters are turned off by default, and is a change from the way it was originally.  Up to and including version 2017.09.19 counters were enabled by default.  All versions subsequent to that counters are disabled by default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1530"/>
         <source>Enable Counters</source>
-        <translation>Skru på telleverk</translation>
+        <translation>啟用計數器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1603"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-n&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-vpn&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable VPN. This will hide the VPN tab and will also skip trying to make a connection to connman-vpn. The later is useful if your Connman was built with the --disable-vpn feature.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1606"/>
         <source>Disable VPN</source>
-        <translation>Skru av VPN</translation>
+        <translation>停用 VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-M&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-minimized&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Disable the minimize button. Use when you want to have the window manager have sole control of minimizing the interface.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1403"/>
         <source>Disable Minimized</source>
-        <translation type="unfinished"></translation>
+        <translation>停用最小化</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1103"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the interface are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用於介面的偏好設定位於此框中。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1106"/>
         <source>Interface</source>
-        <translation>Grensesnitt</translation>
+        <translation>介面</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1122"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the display of tooltips will be enabled for the interface widgets.&lt;/p&gt;&lt;p&gt;Tooltips are the small popups that appear when you hover the mouse pointer over an area of the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the display of tooltips will be enabled for the interface widgets.&lt;/p&gt;&lt;p&gt;Tooltips are the small popups that appear when you hover the mouse pointer over an area of the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1125"/>
         <source>Enable ToolTips (Interface)</source>
-        <translation>Skru på verktøytips (grensesnitt)</translation>
+        <translation>啟用工具提示 (介面)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1135"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cumulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Normally counters are cumulative and will retain the connect time and the TX and RX counts between boots. &lt;/p&gt;&lt;p&gt;When this box is checked the counters will reset to zero every time CMST is started, and if CMST is running everytime a Connman service is started. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1138"/>
         <source>Reset Counters</source>
-        <translation>Tilbakestill tellere</translation>
+        <translation>重設計數器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1145"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked additional controls for advanced users are displayed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked additional controls for advanced users are displayed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1148"/>
         <source>Advanced Controls</source>
-        <translation>Avanserte kontroller</translation>
+        <translation>進階控制</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1572"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disable the system tray icon.&lt;/p&gt;&lt;p&gt;May be needed for system trays not compliant with the Freedesktop.org system tray specification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;指令行選項： &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-d&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--disable-tray-icon&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;停用系統匣圖示。&lt;/p&gt;&lt;p&gt;可能需要用於系統匣與 Freedesktop.org 系統匣規格不相容。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1490"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disabled because currently Connman will accept this option but will do nothing with it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1493"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;p&gt;Connman will accept this entry, but according to a comment in the Connman code the actual feature still needs to be implemented and the selection is therefore disabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1496"/>
         <source>Counter Update KB</source>
-        <translation type="unfinished"></translation>
+        <translation>計數更新 KB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1452"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;指定等待秒數，在啟動系統匣圖示之前 (預設是 0 秒)。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1413"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1442"/>
         <source>Start Minimized</source>
-        <translation>Start minimert</translation>
+        <translation>啟動最小化</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1506"/>
         <source>Wait Time</source>
-        <translation>Ventetid</translation>
+        <translation>等待時間</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1576"/>
         <source>Disable Tray Icon</source>
-        <translation>Skru av systemkurvsikon</translation>
+        <translation>停用系統匣圖示</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1112"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the state of the GUI will be restored from settings saved on disk. Settings include the geometry and position of the dialog and the current tab. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p&gt;The settings file is: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the state of the GUI will be restored from settings saved on disk. Settings include the geometry and position of the dialog and the current tab. &lt;/p&gt;&lt;p&gt;These settings will be used at next boot to restore the user interface to the way it was at shutdown.&lt;/p&gt;&lt;p&gt;The settings file is: ~&lt;span style=&quot; font-weight:600;&quot;&gt;/.config/cmst/cmst.conf &lt;/span&gt;&lt;br/&gt;This is a standard ini type text file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1115"/>
         <source>Retain State</source>
-        <translation>Behold tilstand</translation>
+        <translation>保留狀態</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1616"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-i&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-theme&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Use an icon theme from your system. You may specify the theme in the box at the right, or if the box is left blank CMST will try and use the system wide icon theme (if one is defined).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1619"/>
         <source>Use Icon Theme</source>
-        <translation>Bruk ikondrakt</translation>
+        <translation>使用圖示主題</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1540"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>None</source>
-        <translation type="obsolete">Ingen</translation>
-    </message>
-    <message>
-        <source>XFCE</source>
-        <translation type="vanished">XFCE</translation>
-    </message>
-    <message>
-        <source>MATE</source>
-        <translation type="vanished">MATE</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1516"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB.  If the spedified color matches the tray background we&apos;ve effectively created fake transparency. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--fake-transparency&lt;/span&gt;&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB.  If the spedified color matches the tray background we&apos;ve effectively created fake transparency. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="630"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to remove the service. &lt;/p&gt;&lt;p&gt;If a service has previously been successfully connected (Favorite is true) this button will remove the Favorite property. The service will also be disconnected if it is currently connected. If the service required a passphrase then the passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;If a connection attempt failed this can slso be used to reset the service.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to remove the service. &lt;/p&gt;&lt;p&gt;If a service has previously been successfully connected (Favorite is true) this button will remove the Favorite property. The service will also be disconnected if it is currently connected. If the service required a passphrase then the passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;If a connection attempt failed this can slso be used to reset the service.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="764"/>
@@ -915,287 +902,287 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="770"/>
         <source>VPN Services</source>
-        <translation>VPN-tjenere</translation>
+        <translation>VPN 服務</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="779"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one vpn service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to connect the service. &lt;/p&gt;&lt;p&gt;If there is only one vpn service listed in the table pressing this button will automatically select that service and attempt to connect. &lt;/p&gt;&lt;p&gt;If information about the service is needed, a passphrase for instance, you will be prompted for it. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="792"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one vpn service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a vpn service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one vpn service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="890"/>
         <source>Host</source>
-        <translation>Vert</translation>
+        <translation>主機</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1520"/>
         <source>Fake Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>偽透明</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1207"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preferences for the system tray are in this box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;系統匣的偏好設定在此框中。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
         <source>System Tray</source>
-        <translation>Systemkurv</translation>
+        <translation>系統匣</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1229"/>
         <source>Hide Tray Icon</source>
-        <translation>Skjul systemkurvsikon</translation>
+        <translation>隱藏系統匣圖示</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1249"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray icon will popup a status message when you hover the mouse over it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray icon will popup a status message when you hover the mouse over it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1252"/>
         <source>Enable System Tray Popups</source>
-        <translation>Skru på oppsprett fra systemkurven</translation>
+        <translation>啟用系統匣彈出</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1239"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the system tray will popup a notify message when a significant connman related event is received.&lt;/p&gt;&lt;p&gt;Notifications can be handled by the System Tray Icon, or by a Notify daemon if one is installed.  Both can not be active at the same time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1242"/>
         <source>System Tray Notifications</source>
-        <translation>Systemkurvvarsler</translation>
+        <translation>系統匣通知</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1271"/>
         <source>Notifications</source>
-        <translation>Varsler</translation>
+        <translation>通知</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1280"/>
         <source>Notification Daemon</source>
-        <translation>Bakgrunnstjeneste for varsling</translation>
+        <translation>通知背景程式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1293"/>
         <source>Server Status</source>
-        <translation>Tjenerstatus</translation>
+        <translation>服務狀態</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="181"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman refers to hardware devices as technologies. This box will display information about all known technologies.&lt;/p&gt;&lt;p&gt;To turn a technology on or off click on the button that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;p&gt;To tether a technology click the button in the &lt;span style=&quot; font-weight:600;&quot;&gt;Tethering&lt;/span&gt; column to on. When tethering is enabled the default service is bridged to all clients connected through the tethered technology. If the &lt;span style=&quot; font-weight:600;&quot;&gt;Tethering&lt;/span&gt; columns are not shown clear the check in &lt;span style=&quot; font-weight:600;&quot;&gt;Less&lt;/span&gt; checkbox below this window.&lt;/p&gt;&lt;p&gt;Note that by default wired connections cannot be tethered. This behavior can be overwritten in the connman.conf file. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman refers to hardware devices as technologies. This box will display information about all known technologies.&lt;/p&gt;&lt;p&gt;To turn a technology on or off click on the button that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;p&gt;To tether a technology click the button in the &lt;span style=&quot; font-weight:600;&quot;&gt;Tethering&lt;/span&gt; column to on. When tethering is enabled the default service is bridged to all clients connected through the tethered technology. If the &lt;span style=&quot; font-weight:600;&quot;&gt;Tethering&lt;/span&gt; columns are not shown clear the check in &lt;span style=&quot; font-weight:600;&quot;&gt;Less&lt;/span&gt; checkbox below this window.&lt;/p&gt;&lt;p&gt;Note that by default wired connections cannot be tethered. This behavior can be overwritten in the connman.conf file. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="258"/>
         <source>ID:Password</source>
-        <translation>ID:Passord</translation>
+        <translation>ID：密碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="291"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To edit the ID and Password of a tethered WiFi device click this button.&lt;/p&gt;&lt;p&gt;The ID and Password are what clients will have to enter to connect to the ad-hoc network. This is only valid for WiFi connections&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To edit the ID and Password of a tethered WiFi device click this button.&lt;/p&gt;&lt;p&gt;The ID and Password are what clients will have to enter to connect to the ad-hoc network. This is only valid for WiFi connections&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="294"/>
         <source>ID:Pass</source>
-        <translation type="unfinished">ID:Pass</translation>
+        <translation>ID：通過</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="301"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked the tethering columns will be hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked the tethering columns will be hidden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="304"/>
         <source>Less</source>
-        <translation>Mindre</translation>
+        <translation>較少</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="403"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Move the selected service before another in the list.&lt;/p&gt;&lt;p&gt;The button will only become active if the selected service can be moved and if there is another valid service which it can be used as a target.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Move the selected service before another in the list.&lt;/p&gt;&lt;p&gt;The button will only become active if the selected service can be moved and if there is another valid service which it can be used as a target.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="416"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Move the selected service after another in the list.&lt;/p&gt;&lt;p&gt;The button will only become active if the selected service can be moved and if there is another valid service which it can be used as a target.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Move the selected service after another in the list.&lt;/p&gt;&lt;p&gt;The button will only become active if the selected service can be moved and if there is another valid service which it can be used as a target.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1312"/>
         <source>Program Control</source>
-        <translation>Programkontroll</translation>
+        <translation>程式控制</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1338"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will place an entry in the autostart directory for the current user, unchecking will remove said entry. This directory is typically: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST only add or remove the .desktop file from the autostart directory. Autostarting is typically dependent upon your Desktop Environment and must be enabled from there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked CMST will place an entry in the autostart directory for the current user, unchecking will remove said entry. This directory is typically: &lt;span style=&quot; font-weight:600;&quot;&gt;${HOME}/.config/autostart&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;CMST only add or remove the .desktop file from the autostart directory. Autostarting is typically dependent upon your Desktop Environment and must be enabled from there.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1341"/>
         <source>Enable Autostart</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用自動啟動</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1328"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If a Connman service falls into the &amp;quot;Failed&amp;quot; state it will normally remain in that state.&lt;/p&gt;&lt;p&gt;If this box is checked CMST will try to automatically reconnect a WiFi service that enters the &amp;quot;Failed&amp;quot; state. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If a Connman service falls into the &amp;quot;Failed&amp;quot; state it will normally remain in that state.&lt;/p&gt;&lt;p&gt;If this box is checked CMST will try to automatically reconnect a WiFi service that enters the &amp;quot;Failed&amp;quot; state. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1331"/>
         <source>Retry Failed Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>重試失敗連接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1166"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Color in #RGB format to colorize the internal icons with.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Color in #RGB format to colorize the internal icons with.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="153"/>
         <source>...</source>
-        <translation type="unfinished">…</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="582"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service is of type VPN. It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The default configuration method for all services is automatic or something like DHCP. This should be good enough for most typical usage, but if it is not this button will allow manual configuration of Ethernet and IP settings for the selected Service.&lt;/p&gt;&lt;p&gt;This button will be disabled if the service is provisioned via an external config file or if the service is of type VPN. It is not possible to modify the properties of these services.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="640"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to edit the service. &lt;/p&gt;&lt;p&gt;The service must have previously been successfully connected (Favorite is true) for this button to work. Pressing &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; will remove the service and then request credentials to establish the connection. If the service is currently connected it will be disconnected first. If the service required a passphrase then the old passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;Connman does not provide any methods to retrieve credentials (passphrases, etc.) as that is insecure. CMST will not work around this protection. All this button really does is automate pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Remove&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; buttons above. Make sure you know all of the credentials to reconnect as the existing credentials will be cleared when this button is pressed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to edit the service. &lt;/p&gt;&lt;p&gt;The service must have previously been successfully connected (Favorite is true) for this button to work. Pressing &lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt; will remove the service and then request credentials to establish the connection. If the service is currently connected it will be disconnected first. If the service required a passphrase then the old passphrase it will be cleared and forgotten.&lt;/p&gt;&lt;p&gt;Connman does not provide any methods to retrieve credentials (passphrases, etc.) as that is insecure. CMST will not work around this protection. All this button really does is automate pressing the &lt;span style=&quot; font-weight:600;&quot;&gt;Remove&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Connect&lt;/span&gt; buttons above. Make sure you know all of the credentials to reconnect as the existing credentials will be cleared when this button is pressed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="643"/>
         <source>Edit</source>
-        <translation>Rediger</translation>
+        <translation>編輯</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="650"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.  This will also clear any selections in the table below.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.  This will also clear any selections in the table below.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="692"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the known WiFi services. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The SSID of the network.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Favorite:&lt;/span&gt; A heart symbol in this column indicates that this computer has previously made a connection to the network using this service.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connected:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. Online signals that an Internet connectionis available and has been verified. Ready signals a successfully connected device. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Security: &lt;/span&gt;Describes the type of security used for this service. Possible values are &amp;quot;none&amp;quot;, &amp;quot;wep&amp;quot;, &amp;quot;psk&amp;quot;, &amp;quot;ieee8021x&amp;quot;, and &amp;quot;wps&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Signal Strength:&lt;/span&gt; The strength of the WiFi signal, normalized to a scale of 0 to 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="815"/>
         <source>Create</source>
-        <translation>Opprett</translation>
+        <translation>建立</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="832"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page shows the provisioned VPN services. Some cells in the table may only be available once a connection is estlablished. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt; The name given in the provisioning file.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Type:&lt;/span&gt; The VPN type (OpenConnect, OpenVPN, PPTP, etc)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;State:&lt;/span&gt; Shows the connection state of this service. Hover the mouse over the icon to popup a text description. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Host: &lt;/span&gt;VPN Host IP.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Domain:&lt;/span&gt; The VPN Domain.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1176"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Internal icons can be colorized. You may select a color using the button to the left, or you may type in the #RGB color yourself.&lt;/p&gt;&lt;p&gt;If you type the entry it must have leading # sign. Example: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Internal icons can be colorized. You may select a color using the button to the left, or you may type in the #RGB color yourself.&lt;/p&gt;&lt;p&gt;If you type the entry it must have leading # sign. Example: #22aa44 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1179"/>
         <source>Colorize</source>
-        <translation>Fargelegg</translation>
+        <translation>上色</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1216"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide the CMST tray icon during normal operations. Normal operations are defined as having the Global state in an &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; mode. Any other state will cause the icon to be displayed in the system tray.  CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hide the CMST tray icon during normal operations. Normal operations are defined as having the Global state in an &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; mode. Any other state will cause the icon to be displayed in the system tray.  CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1219"/>
         <source>Hide Tray Icon Unless Needed</source>
-        <translation>Skjul systemkurvsikon med mindre det trengs</translation>
+        <translation>隱藏系統匣圖示，除非需要</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1226"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the CMST icon will be hidden in the system tray. CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the CMST icon will be hidden in the system tray. CMST is still running even if the icon is hidden.&lt;/p&gt;&lt;p&gt;If CMST is minimized while the icon is hiddden you will need to start another instance CMST to get the interface back. This second instance will restore interface from the first instance and then immediately abort. &lt;/p&gt;&lt;p&gt;If CMST is minimized while the tray icon is visible then simply clicking the tray icon will restore the interface. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1562"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-I&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-scale&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Scale  icons and other artwork in CMST.  For High DPI moitors it may be necessary to specify a scale factor on icons and other artwork in CMST.  Default scale is 1.0.  You may override the default using this option. &lt;/p&gt;&lt;p&gt;For High DPI monitors a factor of 2 has been found to be good.  Valid values of scale factor are  from 1.0 to 3.0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-I&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--icon-scale&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Scale  icons and other artwork in CMST.  For High DPI moitors it may be necessary to specify a scale factor on icons and other artwork in CMST.  Default scale is 1.0.  You may override the default using this option. &lt;/p&gt;&lt;p&gt;For High DPI monitors a factor of 2 has been found to be good.  Valid values of scale factor are  from 1.0 to 3.0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1565"/>
         <source>Icon Scale Factor</source>
-        <translation>Ikon-skaleringsfaktor</translation>
+        <translation>圖示縮放因數</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1471"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon scale factor. If the box is disabled by clearing the checkbox at the left the value contained in this field will be ignored.&lt;/p&gt;&lt;p&gt;For High DPI monitors a factor of 2 has been found to be good. Valid values of scale factor are from 1.0 to 3.0. Default value is 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Icon scale factor. If the box is disabled by clearing the checkbox at the left the value contained in this field will be ignored.&lt;/p&gt;&lt;p&gt;For High DPI monitors a factor of 2 has been found to be good. Valid values of scale factor are from 1.0 to 3.0. Default value is 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1503"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created the proram will not be able to start minimized. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;p&gt;If you plan to start with the main dialog shown on screen there is no reason to use this option. This is only intended to be used for starting minimized.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Command Line Option: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;-w&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; or &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-weight:600;&quot;&gt;--wait-time&lt;/span&gt;&lt;/pre&gt;&lt;p&gt;Specify the wait time in seconds before starting the system tray icon (default is 0 seconds).&lt;/p&gt;&lt;p&gt;If CMST is started and tries to create a tray icon before the system tray itself is created the proram will not be able to start minimized. This sometimes happens when the program is started automatically. If you know the tray will exist once the system is up you may specify a wait time and CMST will wait that number of seconds before trying to create the tray icon. This is to give the window manager or panel time to create the tray before we try to place the icon there.&lt;/p&gt;&lt;p&gt;If you plan to start with the main dialog shown on screen there is no reason to use this option. This is only intended to be used for starting minimized.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1626"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB. If the spedified color matches the tray background we&apos;ve effectively created fake transparency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to work around a QT bug where system tray icons display with white or black backgrounds instead of being transparent.&lt;/p&gt;&lt;p&gt;You can specify the icon background color here. Format is a hex number in the form RRGGBB. If the spedified color matches the tray background we&apos;ve effectively created fake transparency.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1639"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line. Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Two events are checked. &lt;span style=&quot; font-weight:600;&quot;&gt;Before Connecting&lt;/span&gt; events are called after the Connect button is pressed in either the Wireless or VPN tabs. The program or process in the Execute box will only be executed prior to making a connection for the service shown in the Service box.  It will not be called when connecting to any other service.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;After Connecting&lt;/span&gt; box will be called after Connman enters the ready or online state.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programs or processes to execute after various events occur.&lt;/p&gt;&lt;p&gt;If the program or process requires command line arguments provide them here just as if you were typing at a command line. Example:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;/path/to/program arg1 arg2 arg3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Two events are checked. &lt;span style=&quot; font-weight:600;&quot;&gt;Before Connecting&lt;/span&gt; events are called after the Connect button is pressed in either the Wireless or VPN tabs. The program or process in the Execute box will only be executed prior to making a connection for the service shown in the Service box.  It will not be called when connecting to any other service.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;After Connecting&lt;/span&gt; box will be called after Connman enters the ready or online state.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1661"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This area is to specify a program or process to run after a wifi or vpn service button is pressed, but before the connect method is sent to ConnMan. This is mainly used to modify a .cmst.config file which seems useful to modify certain short lived entries for openConnect vpn connections.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;Execute&lt;/span&gt; box will only be executed prior to making a connection for the single service shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Service&lt;/span&gt; box. It will not be called when connecting to any other service. If a .cmst.config file is to be modified a check must in the &lt;span style=&quot; font-weight:600;&quot;&gt;Modify Service File&lt;/span&gt; box and the path and name of the file to be modified must be provided.&lt;/p&gt;&lt;p&gt;To modify a .cmst.config file CMST will read stdout of the program or process being called. Program output should be individual lines in KEY=VALUE format. If KEY exists in the .cmst.config file it will be replaced by the new VALUE. If KEY does not exist it will be appended. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This area is to specify a program or process to run after a wifi or vpn service button is pressed, but before the connect method is sent to ConnMan. This is mainly used to modify a .cmst.config file which seems useful to modify certain short lived entries for openConnect vpn connections.&lt;/p&gt;&lt;p&gt;The program or process in the &lt;span style=&quot; font-weight:600;&quot;&gt;Execute&lt;/span&gt; box will only be executed prior to making a connection for the single service shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Service&lt;/span&gt; box. It will not be called when connecting to any other service. If a .cmst.config file is to be modified a check must in the &lt;span style=&quot; font-weight:600;&quot;&gt;Modify Service File&lt;/span&gt; box and the path and name of the file to be modified must be provided.&lt;/p&gt;&lt;p&gt;To modify a .cmst.config file CMST will read stdout of the program or process being called. Program output should be individual lines in KEY=VALUE format. If KEY exists in the .cmst.config file it will be replaced by the new VALUE. If KEY does not exist it will be appended. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1664"/>
         <source>Before Connecting</source>
-        <translation>Før tilkobling</translation>
+        <translation>連接之前</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1680"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the program or process to be executed before Connman initiates a connection to the service listed in the box above. If left blank no program or process will be executed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the program or process to be executed before Connman initiates a connection to the service listed in the box above. If left blank no program or process will be executed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1683"/>
         <source>Execute:</source>
-        <translation>Kjør:</translation>
+        <translation>執行：</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1703"/>
         <source>Specify the service you are connecting to where you want a program or process to execute prior to initiating the connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>指定您正要連接到的服務，您希望在啟動連接之前在此執行程式或流程。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1718"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the configuration file shown below will be modified by whatever output the program provides.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the configuration file shown below will be modified by whatever output the program provides.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1721"/>
         <source>Modify Service File</source>
-        <translation>Endre tjenestefil</translation>
+        <translation>修改服務檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1730"/>
         <source>Service configuration file to be modified by the program.</source>
-        <translation>Tjenesteoppsettsfil som skal endres av programmet.</translation>
+        <translation>服務設定檔案由程式進行修改。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1733"/>
         <source>FIle: </source>
-        <translation>Fil: </translation>
+        <translation>檔案： </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1770"/>
@@ -1204,22 +1191,26 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enter the program or process to be executed after Connman enters the &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; state.  If left blank no program or process will be executed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enter the program or process to be executed after Connman enters the &lt;span style=&quot; font-weight:600;&quot;&gt;Ready&lt;/span&gt; or &lt;span style=&quot; font-weight:600;&quot;&gt;Online&lt;/span&gt; state.  If left blank no program or process will be executed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1777"/>
         <source>After Connecting</source>
-        <translation>Etter tilkobling</translation>
+        <translation>連接之後</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1797"/>
         <source>&amp;Help</source>
-        <translation>&amp;Hjelp</translation>
+        <translation>說明(&amp;H)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1803"/>
         <source>&amp;About</source>
-        <translation>&amp;Om</translation>
+        <translation>關於(&amp;A)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1809"/>
@@ -1229,7 +1220,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1812"/>
         <source>C&amp;MST</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;MST</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1819"/>
@@ -1244,37 +1235,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1839"/>
         <source>&amp;QT</source>
-        <translation type="unfinished">&amp;Qt</translation>
+        <translation>&amp;QT</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1846"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the program license.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bruk denne knappen for å vise programlisensen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1849"/>
         <source>&amp;License</source>
-        <translation type="unfinished">&amp;Lisens</translation>
+        <translation>授權(&amp;L)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1856"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the change log of the program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bruk denne knappen for å endre loggføringen for programmet&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1859"/>
         <source>ChangeLo&amp;g</source>
-        <translation>Endringslog&amp;g</translation>
+        <translation>變更日誌(&amp;G)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1897"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Help&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Program help is mainly provided by the &amp;quot;What&apos;s This&amp;quot; button in the lower left corner. Press the button and then click on an item you are interested in. &amp;quot;What&apos;s This&amp;quot; is also available via context menu by right clicking on a button, box or text area.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hjelp&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Programhjelp tilbys i hovedsak av &amp;quot;Hva er dette&amp;quot;-knappen nede til venstre. Trykk på den og deretter et element du er interessert i. &amp;quot;Hva er dette&amp;quot; er også tilgjengelig via bindeleddsmeny ved å høyreklikke en knapp, boks, eller et tekstområde.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1939"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hva er dette&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;這是什麼&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1942"/>
@@ -1289,7 +1280,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1955"/>
         <source>Provisioning Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>服務開通編輯器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1962"/>
@@ -1299,7 +1290,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1965"/>
         <source>VPN Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 編輯器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1972"/>
@@ -1309,7 +1300,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1975"/>
         <source>E&amp;xit</source>
-        <translation>A&amp;vslutt</translation>
+        <translation>退出(&amp;X)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1995"/>
@@ -1320,89 +1311,89 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1998"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="435"/>
         <source>Mi&amp;nimize</source>
-        <translation>Mi&amp;nimer</translation>
+        <translation>最小化(&amp;N)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2030"/>
         <source>IDPass</source>
-        <translation type="unfinished"></translation>
+        <translation>ID通行</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2033"/>
         <source>Set ID and Password for tethered wifi</source>
-        <translation type="unfinished"></translation>
+        <translation>設定 ID 及密碼 用於已經繫連的 wifi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="436"/>
         <source>Ma&amp;ximize</source>
-        <translation type="unfinished"></translation>
+        <translation>最大化(&amp;X)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="440"/>
         <source>&amp;Exit</source>
-        <translation>&amp;Avslutt</translation>
+        <translation>退出(&amp;E)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="550"/>
         <source>About %1</source>
-        <translation>Om %1</translation>
+        <translation>關於 %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="153"/>
         <source>Service Details</source>
-        <translation>Tjenestedetaljer</translation>
+        <translation>服務詳情</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="154"/>
         <source>WiFi Connections</source>
-        <translation type="unfinished">Wi-Fi-tilkoblinger</translation>
+        <translation>WiFi 連接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="155"/>
         <source>VPN Connections</source>
-        <translation>VPN-tilkoblinger</translation>
+        <translation>VPN 連接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="578"/>
         <source>About AwOken</source>
-        <translation>Om AwOken</translation>
+        <translation>關於 AwOken</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="593"/>
         <source>&lt;center&gt;This program uses artwork from &lt;b&gt;Freepik&lt;/b&gt; obtained from www.flaticon.com:&lt;br&gt;&lt;br&gt;Released under the Flaticon Basic License&lt;br&gt;&lt;br&gt;&lt;b&gt;Artwork files:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;center&gt;This program uses artwork from &lt;b&gt;Freepik&lt;/b&gt; obtained from www.flaticon.com:&lt;br&gt;&lt;br&gt;Released under the Flaticon Basic License&lt;br&gt;&lt;br&gt;&lt;b&gt;Artwork files:&lt;/b&gt;&lt;li&gt;radio.png&lt;/li&gt;&lt;li&gt;basic-plane.png&lt;/li&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="608"/>
         <source>License</source>
-        <translation>Lisens</translation>
+        <translation>授權</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="616"/>
         <source>%1 change log is not available.</source>
-        <translation type="unfinished">%1 endringslogg utilgjengelig.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="618"/>
         <source>ChangeLog</source>
-        <translation type="unfinished">Endringslogg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="764"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2880"/>
         <source>Cancel</source>
-        <translation>Avbryt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="789"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="794"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;Tjeneste:&lt;/b&gt; %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="794"/>
         <source>Unable to determine service</source>
-        <translation>Kunne ikke fastsette tjeneste</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="826"/>
@@ -1410,48 +1401,48 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="973"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1007"/>
         <source>No Services Selected</source>
-        <translation>Ingen tjenester valgt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="974"/>
         <source>You need to select a Wifi service before pressing the remove button.</source>
-        <translation type="unfinished">Du må velge en Wi-Fi-tjeneste før du trykker «Fjern».</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1111"/>
         <source>Offline Mode Engaged</source>
-        <translation>Frakoblet modus på</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1116"/>
         <source>Offline Mode Disabled</source>
-        <translation>Frakoblet modus av</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1130"/>
         <source>Network Services:</source>
-        <translation>Nettverkstjenester:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1397"/>
         <source>Service Error: %1</source>
-        <translation>Tjenestefeil: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1398"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1443"/>
         <source>Object Path: %1</source>
-        <translation>Objektsti: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1436"/>
         <source>VPN Engaged</source>
-        <translation>VPN påslått</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1440"/>
         <source>VPN Disengaged</source>
-        <translation>VPN avslått</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1526"/>
@@ -1468,79 +1459,67 @@ p, li { white-space: pre-wrap; }
         <source>Ethernet Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation>Ethernet-tilkobling
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2434"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2462"/>
         <source>Service: %1
 </source>
-        <translation>Tjeneste: %1
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2440"/>
         <source>WiFi Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished">Wi-Fi-tilkobling
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2442"/>
         <source>SSID: %1
 </source>
-        <translation>SSID: %1
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2447"/>
         <source>Security: %1
 </source>
-        <translation>Sikkerhet: %1
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
         <source>Strength: %1%
 </source>
-        <translation>Styrke: %1
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2460"/>
         <source>VPN Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation>VPN-tilkobling: %1
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2461"/>
         <source>Type: %1
 </source>
-        <translation>Type: %1
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2463"/>
         <source>Host: %1</source>
-        <translation>Vert: %1</translation>
-    </message>
-    <message>
-        <source> Warning</source>
-        <translation type="vanished"> Advarsel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1756"/>
         <source>&lt;b&gt;Connection:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;Tilkobling:&lt;/b&gt; %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="551"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5&lt;center&gt;Connman version %6</source>
-        <translation>&lt;center&gt;%1 er et program for å bruke Connman-bakgrunnstjenesten og for å tilby systemkurvkontroll.&lt;br&gt;&lt;center&gt;Versjon &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Utgivelsesdato: %3&lt;center&gt;Opphavsrett c %4&lt;center&gt;tilhørende&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Oversettelser:&lt;/b&gt;&lt;center&gt;Allan Nordhøy, (bokmål), Jianfeng Zhang (Kinesisk)&lt;center&gt;sqozz (Tysk)&lt;center&gt;Ilya Shestopalov (Russisk)&lt;center&gt;Heimen Stoffels (Nederlandsk)&lt;center&gt; Yaşar Çiv (Tyrkisk)&lt;br&gt;&lt;center&gt;&lt;b&gt;Bygginfo:&lt;/b&gt;&lt;center&gt;Kompilert med Qt-versjon %5&lt;center&gt;Connman-versjon %6</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="447"/>
@@ -1550,7 +1529,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="450"/>
         <source>&amp;Transparency</source>
-        <translation>&amp;Gjennomsiktighet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="592"/>
@@ -1560,12 +1539,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1008"/>
         <source>You need to select a Wifi service before pressing the edit button.</source>
-        <translation type="unfinished">Du må velge en Wi-Fi-tjeneste før du trykker «Rediger»-knappen.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1060"/>
         <source> Information</source>
-        <translation type="unfinished"> Info</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1061"/>
@@ -1575,12 +1554,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1071"/>
         <source>%1 - Select File</source>
-        <translation>%1 — velg fil</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1072"/>
         <source>Select a file to be deleted.</source>
-        <translation type="unfinished">Velg fil å slette.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1113"/>
@@ -1615,12 +1594,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1759"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;Tjenestedetaljer:&lt;/b&gt;&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1761"/>
         <source>Service Type: %1&lt;br&gt;</source>
-        <translation>Tjenestetype: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1763"/>
@@ -1630,41 +1609,41 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1764"/>
         <source>Service State: %1&lt;br&gt;</source>
-        <translation>Tjenestetilstand: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1765"/>
         <source>Favorite: %1&lt;br&gt;</source>
-        <translation>Favoritt: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1765"/>
         <source>Yes</source>
         <comment>favorite</comment>
-        <translation>Ja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1765"/>
         <source>No</source>
         <comment>favorite</comment>
-        <translation>Nei</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1766"/>
         <source>External Configuration File: %1&lt;br&gt;</source>
-        <translation>Ekstern oppsettsfil: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1766"/>
         <source>Yes</source>
         <comment>immutable</comment>
-        <translation>Ja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1766"/>
         <source>No</source>
         <comment>immutable</comment>
-        <translation>Nei</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1768"/>
@@ -1675,52 +1654,52 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1768"/>
         <source>On</source>
         <comment>autoconnect</comment>
-        <translation type="unfinished">På</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1768"/>
         <source>No</source>
         <comment>autoconnect</comment>
-        <translation>Nei</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1770"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished">&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt; {4&lt;?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1772"/>
         <source>IP Address Acquisition: %1&lt;br&gt;</source>
-        <translation>IP-adresseinnhenting: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1773"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1780"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1815"/>
         <source>IP Address: %1&lt;br&gt;</source>
-        <translation>IP-adresse: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1774"/>
         <source>IP Netmask: %1&lt;br&gt;</source>
-        <translation>IP-nettmaske: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1775"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1786"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
-        <translation>IP-portner: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1777"/>
         <source>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1779"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1792"/>
         <source>Address Acquisition: %1&lt;br&gt;</source>
-        <translation>Adresseinnhenting: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1783"/>
@@ -1735,22 +1714,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1787"/>
         <source>Privacy: %1&lt;br&gt;</source>
-        <translation>Personvern: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1789"/>
         <source>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;Mellomtjener&lt;/b&gt;&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1794"/>
         <source>URL: %1&lt;br&gt;</source>
-        <translation>Nettadresse: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1797"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
-        <translation>Tjenere:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1798"/>
@@ -1760,7 +1739,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1803"/>
         <source>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;mDNS&lt;/b&gt;&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
@@ -1771,13 +1750,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
         <source>Yes</source>
         <comment>mdns</comment>
-        <translation>Ja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
         <source>No</source>
         <comment>mdns</comment>
-        <translation>Nei</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1813"/>
@@ -1787,7 +1766,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1817"/>
         <source>MAC Address: %1&lt;br&gt;</source>
-        <translation>MAC-adresse: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1818"/>
@@ -1803,28 +1782,28 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1819"/>
         <source>Yes</source>
         <comment>last_address_conflict</comment>
-        <translation>Ja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1819"/>
         <source>No</source>
         <comment>last_address_conflict</comment>
-        <translation>Nei</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1828"/>
         <source>&lt;br&gt;&lt;b&gt;Name Servers&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;Navnetjenere&lt;/b&gt;&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1831"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Time Servers&lt;/b&gt;&lt;br&gt;  </source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Tidstjenere&lt;/b&gt;&lt;br&gt;  </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1834"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Search Domains&lt;/b&gt;&lt;br&gt;  </source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Søkedomener&lt;/b&gt;&lt;br&gt;  </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1837"/>
@@ -1834,125 +1813,125 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1839"/>
         <source>Connection Method: %1&lt;br&gt;</source>
-        <translation>Tilkoblingsmetode: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1840"/>
         <source>Interface: %1&lt;br&gt;</source>
-        <translation>Grensesnitt: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1841"/>
         <source>Device Address: %1&lt;br&gt;</source>
-        <translation>Enhetsadresse: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1842"/>
         <source>MTU: %1&lt;br&gt;</source>
-        <translation>MTU: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1844"/>
         <source>&lt;br&gt;&lt;b&gt;Wireless&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;Trådløs&lt;/b&gt;&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1849"/>
         <source>Security: %1&lt;br&gt;</source>
-        <translation>Sikkerhet: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1850"/>
         <source>Strength: %1&lt;br&gt;</source>
-        <translation>Styrke: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1851"/>
         <source>Roaming: %1&lt;br&gt;</source>
-        <translation>Tjudring: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1851"/>
         <source>Yes</source>
         <comment>roaming</comment>
-        <translation>Ja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1851"/>
         <source>No</source>
         <comment>roaming</comment>
-        <translation>Nei</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1853"/>
         <source>&lt;br&gt;&lt;b&gt;VPN Provider&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;VPN-tilbyder&lt;/b&gt;&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1855"/>
         <source>Host: %1&lt;br&gt;</source>
-        <translation>Vert: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1856"/>
         <source>Domain: %1&lt;br&gt;</source>
-        <translation>Domene: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1857"/>
         <source>Name: %1&lt;br&gt;</source>
-        <translation>Navn: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1858"/>
         <source>Type: %1&lt;br&gt;</source>
-        <translation>Type: %1&lt;br&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1951"/>
         <source>State: </source>
-        <translation>Tilstand: </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1957"/>
         <source>Engaged</source>
-        <translation>Påslått</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1962"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2548"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2621"/>
         <source>Disabled</source>
-        <translation>Avslått</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1966"/>
         <source>Offline Mode </source>
-        <translation>Frakoblet modus </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2022"/>
         <source>Yes</source>
         <comment>connected</comment>
-        <translation>Ja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2022"/>
         <source>No</source>
         <comment>connected</comment>
-        <translation>Nei</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2029"/>
         <source>On</source>
         <comment>tethering</comment>
-        <translation>På</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2035"/>
         <source>Off</source>
         <comment>tethering</comment>
-        <translation>Av</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2377"/>
@@ -1963,7 +1942,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2435"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2449"/>
         <source>Interface: %1</source>
-        <translation>Grensesnitt: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2477"/>
@@ -1981,7 +1960,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2487"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
-        <translation>Ikke tilkoblet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2494"/>
@@ -1991,12 +1970,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2495"/>
         <source>Connection status is unknown</source>
-        <translation>Tilkoblingsstatus ukjent</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2542"/>
         <source>Type: %1</source>
-        <translation>Type: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2543"/>
@@ -2006,22 +1985,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2544"/>
         <source>On</source>
-        <translation>På</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2544"/>
         <source>Off</source>
-        <translation>Av</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2546"/>
         <source>Not Connected</source>
-        <translation>Ikke tilkoblet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2547"/>
         <source>&lt;br&gt;Tethering </source>
-        <translation>&lt;br&gt;Tjudring </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2548"/>
@@ -2033,27 +2012,27 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2608"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2638"/>
         <source>Connection : %1</source>
-        <translation>Tilkobling: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2610"/>
         <source>Signal Strength: %1%</source>
-        <translation>Signalstyrke: %1%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2612"/>
         <source>Favorite Connection</source>
-        <translation>Favoritt-tilkobling</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2612"/>
         <source>Never Connected</source>
-        <translation type="unfinished">Aldri tilkoblet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2619"/>
         <source>&lt;br&gt;Roaming</source>
-        <translation>&lt;br&gt;Tjudring</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2620"/>
@@ -2074,7 +2053,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3065"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3070"/>
         <source>%1 - Critical Error</source>
-        <translation>%1 — kritisk feil</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3066"/>
@@ -2101,7 +2080,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3080"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3085"/>
         <source>%1 - Warning</source>
-        <translation type="unfinished">%1 — advarsel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3076"/>
@@ -2136,7 +2115,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3156"/>
         <source>[Hidden Wifi]</source>
-        <translation type="unfinished">[Skjult Wi-Fi]</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3210"/>
@@ -2156,13 +2135,13 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3342"/>
         <source>Colorize Icons</source>
-        <translation>Fargelegg ikoner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2607"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2637"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="579"/>
@@ -2173,18 +2152,18 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2008"/>
         <source>On</source>
         <comment>powered</comment>
-        <translation>På</translation>
+        <translation>開</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2014"/>
         <source>Off</source>
         <comment>powered</comment>
-        <translation>Av</translation>
+        <translation>關</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2618"/>
         <source>Security: %1</source>
-        <translation>Sikkerhet: %1</translation>
+        <translation>安全性： %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="606"/>
@@ -2209,7 +2188,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2177"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
-        <translation type="unfinished">  Wi-Fi-kort:&lt;br&gt;  %1 funnet, %2 påslått</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2217,27 +2196,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="214"/>
         <source>File save failed.</source>
-        <translation type="unfinished">Kunne ikke lagre fil.</translation>
+        <translation>檔案儲存失敗。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="217"/>
         <source>%L1 KB written</source>
-        <translation>%L1 KB skrevet</translation>
+        <translation>%L1 KB 已經寫入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="219"/>
         <source>%L1 Bytes written</source>
-        <translation>%L1 byte skrevet</translation>
+        <translation>%L1 Bytes 已經寫入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="232"/>
         <source> Critical</source>
-        <translation type="unfinished"> Kritisk</translation>
+        <translation> 緊急</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="233"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;DBus 錯誤名稱：&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;字串：&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;訊息：&lt;/b&gt; %3</translation>
     </message>
 </context>
 <context>
@@ -2253,27 +2232,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="14"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>屬性編輯器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="35"/>
         <source>&amp;General</source>
-        <translation>&amp;Generelt</translation>
+        <translation>通則(&amp;G)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="44"/>
         <source>AutoConnect</source>
-        <translation type="unfinished">Koble til automatisk</translation>
+        <translation>自動連接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="76"/>
         <source>&amp;Nameservers</source>
-        <translation>&amp;Navnetjenester</translation>
+        <translation>名稱伺服器(&amp;N)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="152"/>
         <source>&amp;Domains</source>
-        <translation>&amp;Domener</translation>
+        <translation>網域(&amp;D)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="187"/>
@@ -2284,25 +2263,25 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="209"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="422"/>
         <source>Address</source>
-        <translation>Adresse</translation>
+        <translation>網址</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="230"/>
         <source>Netmask</source>
-        <translation>Nettmaske</translation>
+        <translation>網路遮罩</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="240"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="369"/>
         <source>Gateway</source>
-        <translation>Portner</translation>
+        <translation>閘道器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="268"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="453"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="489"/>
         <source>Method</source>
-        <translation>Metode</translation>
+        <translation>方法</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="299"/>
@@ -2312,12 +2291,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="399"/>
         <source>Prefix Length</source>
-        <translation type="unfinished"></translation>
+        <translation>前綴長度</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="355"/>
         <source>Privacy</source>
-        <translation>Personvern</translation>
+        <translation>隱私</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="471"/>
@@ -2327,7 +2306,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="474"/>
         <source>&amp;Proxy</source>
-        <translation>&amp;Mellomtjener</translation>
+        <translation>代理伺服器(&amp;P)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="518"/>
@@ -2337,12 +2316,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="511"/>
         <source>URL</source>
-        <translation>Nettadresse</translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="114"/>
         <source>&amp;Timeservers</source>
-        <translation>&amp;Tidstjenere</translation>
+        <translation>時間伺服器(&amp;T)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="206"/>
@@ -2454,7 +2433,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="542"/>
         <source>Servers</source>
-        <translation>Tjenere</translation>
+        <translation>伺服器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="619"/>
@@ -2465,7 +2444,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="561"/>
         <source>Excludes</source>
-        <translation type="unfinished"></translation>
+        <translation>排除</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="352"/>
@@ -2498,17 +2477,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="607"/>
         <source>&amp;mDNS</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="622"/>
         <source>Enable mDNS </source>
-        <translation type="unfinished">Skru på mDNS </translation>
+        <translation>啟用 mDNS </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="646"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;這是什麼&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="669"/>
@@ -2518,7 +2497,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="672"/>
         <source>Reset Pa&amp;ge</source>
-        <translation>Tilbakestill s&amp;ide</translation>
+        <translation>重設頁面(&amp;G)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="679"/>
@@ -2528,7 +2507,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="682"/>
         <source>Reset &amp;All</source>
-        <translation type="unfinished">Tilbakestill &amp;alle</translation>
+        <translation>重設全部(&amp;A)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="709"/>
@@ -2548,7 +2527,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="722"/>
         <source>Cancel</source>
-        <translation>Avbryt</translation>
+        <translation>取消</translation>
     </message>
 </context>
 <context>
@@ -2556,7 +2535,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="14"/>
         <source>Provisioning Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>服務開通編輯器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="23"/>
@@ -2566,12 +2545,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="32"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open an existing config file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;開啟現有的設定檔案。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="35"/>
         <source>&amp;Open</source>
-        <translation>&amp;Åpne</translation>
+        <translation>開啟(&amp;O)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="48"/>
@@ -2581,7 +2560,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation>&amp;Lagre</translation>
+        <translation>儲存(&amp;S)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="68"/>
@@ -2591,7 +2570,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Slett</translation>
+        <translation>刪除(&amp;D)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="94"/>
@@ -2601,12 +2580,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="97"/>
         <source>&amp;Clear Page</source>
-        <translation>&amp;Tøm side</translation>
+        <translation>清除頁面(&amp;C)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="117"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;這是什麼&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="120"/>
@@ -2616,63 +2595,63 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="143"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exit the dialog.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;退出對話框。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="146"/>
         <source>E&amp;xit</source>
-        <translation>A&amp;vslutt</translation>
+        <translation>退出(&amp;X)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="158"/>
         <source>[global]</source>
-        <translation type="unfinished"></translation>
+        <translation>[整體]</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="163"/>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="226"/>
         <source>Name</source>
-        <translation>Navn</translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="168"/>
         <source>Description</source>
-        <translation>Beskrivelse</translation>
+        <translation>描述</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="173"/>
         <source>[service_*]</source>
-        <translation>[tjeneste_*]</translation>
+        <translation>[service_*]</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="181"/>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation>類型</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="189"/>
         <source>MAC</source>
-        <translation type="unfinished">MAC</translation>
+        <translation>MAC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="197"/>
         <source>Nameservers</source>
-        <translation>Navnetjenere</translation>
+        <translation>名稱伺服器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="205"/>
         <source>Timeservers</source>
-        <translation>Tidstjenere</translation>
+        <translation>時間伺服器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="213"/>
         <source>SearchDomains</source>
-        <translation type="unfinished">Søkedomener</translation>
+        <translation>搜尋網域</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="221"/>
         <source>Domain</source>
-        <translation>Domene</translation>
+        <translation>網域</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="234"/>
@@ -2687,62 +2666,62 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="250"/>
         <source>CACertFile</source>
-        <translation type="unfinished"></translation>
+        <translation>CA 認證檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="258"/>
         <source>ClientCertFile</source>
-        <translation type="unfinished"></translation>
+        <translation>客端認證檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="266"/>
         <source>PrivateKeyFile</source>
-        <translation type="unfinished"></translation>
+        <translation>私鑰檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="271"/>
         <source>PrivateKeyPassphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>私鑰密碼片語</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="279"/>
         <source>PrivateKeyPassphraseType</source>
-        <translation type="unfinished"></translation>
+        <translation>私鑰密碼片語類型</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="284"/>
         <source>Identity</source>
-        <translation>Identitet</translation>
+        <translation>身分</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="292"/>
         <source>Phase2</source>
-        <translation type="unfinished"></translation>
+        <translation>Phase2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="297"/>
         <source>Passphrase</source>
-        <translation type="unfinished">Passord</translation>
+        <translation>密碼片語</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="305"/>
         <source>Security</source>
-        <translation>Sikkerhet</translation>
+        <translation>安全性</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="313"/>
         <source>Hidden</source>
-        <translation>Skjult</translation>
+        <translation>隱藏</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="318"/>
         <source>Eduroam (long)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eduroam (長)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="323"/>
         <source>Eduroam (short)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eduroam (短)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="328"/>
@@ -2752,7 +2731,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="331"/>
         <source>Set IPv4 to &quot;off&quot;, &quot;dhcp&quot;, or enter IPV4 address information</source>
-        <translation type="unfinished"></translation>
+        <translation>設定 IPv4 為 &quot;關閉&quot;、 &quot;dhcp&quot;、或輸入 IPV4 位址資訊</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="336"/>
@@ -2762,17 +2741,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="339"/>
         <source>Set IPv6 to &quot;off, &quot;auto&quot;, or enter IPv6 address information</source>
-        <translation type="unfinished"></translation>
+        <translation>設定 IPv6 為 &quot;關閉&quot;、&quot;自動&quot;、或輸入 IPv6 位址資訊</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="373"/>
         <source>DeviceName</source>
-        <translation type="unfinished">Enhetsnavn</translation>
+        <translation>裝置名稱</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="376"/>
         <source>Interface name where this provisioning applies (ex: eth0)</source>
-        <translation type="unfinished"></translation>
+        <translation>介面名稱，於此所在配備套用 (例： eth0)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="381"/>
@@ -2787,7 +2766,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="389"/>
         <source>AnonymousIdentity</source>
-        <translation type="unfinished"></translation>
+        <translation>匿名用戶</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="392"/>
@@ -2855,7 +2834,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="344"/>
         <source>IPv6.Privacy</source>
-        <translation type="unfinished">IPv6-personvern {6.?}</translation>
+        <translation>IPv6.隱私</translation>
     </message>
 </context>
 <context>
@@ -2863,22 +2842,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="118"/>
         <source>Global</source>
-        <translation type="unfinished"></translation>
+        <translation>整體</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="124"/>
         <source>Service</source>
-        <translation>Tjeneste</translation>
+        <translation>服務</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="144"/>
         <source>WiFi</source>
-        <translation type="unfinished">Wi-Fi</translation>
+        <translation>WiFi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="171"/>
         <source>Templates</source>
-        <translation>Maler</translation>
+        <translation>範本</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="205"/>
@@ -2903,7 +2882,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="237"/>
         <source>MAC address.</source>
-        <translation>MAC-adresse</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="238"/>
@@ -2913,22 +2892,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="239"/>
         <source>List of Nameservers</source>
-        <translation>Liste over navnetjenere</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="240"/>
         <source>List of Timeservers</source>
-        <translation>Liste over tidstjenere</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="241"/>
         <source>List of DNS Search Domains</source>
-        <translation>Liste over DNS-søkedomener</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="242"/>
         <source>Domain name to be used</source>
-        <translation type="unfinished">Domenenavn å bruke</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="243"/>
@@ -2958,47 +2937,47 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="282"/>
         <source>Service type.</source>
-        <translation>Tjenestetype.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="283"/>
         <source>EAP type.</source>
-        <translation>EAP-type.</translation>
+        <translation>EAP 類型。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="284"/>
         <source>Private key passphrase type.</source>
-        <translation type="unfinished"></translation>
+        <translation>私鑰密碼片語類型。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="285"/>
         <source>Network security type.</source>
-        <translation>Nettverkssikkerhetstype.</translation>
+        <translation>網路安全類型。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="286"/>
         <source>Hidden network</source>
-        <translation>Skjult nettverk</translation>
+        <translation>隱藏網路</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="287"/>
         <source>IPv6 Privacy</source>
-        <translation>IPv6-personvern</translation>
+        <translation>IPv6 隱私</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="288"/>
         <source>IPv4 Settings</source>
-        <translation>IPv4-innstillinger</translation>
+        <translation>IPv4 設定</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="289"/>
         <source>IPv6 Settings</source>
-        <translation>IPv6-innstillinger</translation>
+        <translation>IPv6 設定</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="294"/>
         <source>%1 - Item Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 項目輸入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="325"/>
@@ -3008,27 +2987,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="326"/>
         <source>Enter the network name.</source>
-        <translation>Skriv inn nettverksnavnet.</translation>
+        <translation>輸入網路名稱。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="327"/>
         <source>Enter a description of the network.</source>
-        <translation>Skriv inn en beskrivelse av nettverket.</translation>
+        <translation>輸入網路的描述。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="328"/>
         <source>Password/Passphrase for the private key file.</source>
-        <translation type="unfinished"></translation>
+        <translation>密碼/密碼片語 用於私鑰檔案。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="329"/>
         <source>Identity string for EAP.</source>
-        <translation>Identitetsstreng for EAP.</translation>
+        <translation>身分字串 用於 EAP。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="331"/>
         <source>RSN/WPA/WPA2 Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>RSN/WPA/WPA2 密碼片語</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="332"/>
@@ -3038,7 +3017,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="344"/>
         <source>%1 - Text Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 文字輸入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="367"/>
@@ -3054,7 +3033,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="513"/>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="546"/>
         <source> Information</source>
-        <translation type="unfinished"> Info</translation>
+        <translation> 資訊</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="378"/>
@@ -3064,22 +3043,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="655"/>
         <source> Critical</source>
-        <translation type="unfinished"> Kritisk</translation>
+        <translation> 嚴重</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="402"/>
         <source>IPv6 Address</source>
-        <translation>IPv6-adresse</translation>
+        <translation>IPv6 位址</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="290"/>
         <source>Enable mDNS</source>
-        <translation type="unfinished">Skru på mDNS</translation>
+        <translation>啟用 mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="330"/>
         <source>Anonymous identity string for EAP.</source>
-        <translation type="unfinished">Anonym identitetsstreng for EAP.</translation>
+        <translation>匿名字串 用於 EAP。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="333"/>
@@ -3094,12 +3073,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="407"/>
         <source>%1 - Integer Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 整數輸入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="408"/>
         <source>Enter the IPv6 prefix length</source>
-        <translation type="unfinished"></translation>
+        <translation>輸入 IPv6 前綴長度</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="514"/>
@@ -3111,12 +3090,12 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="552"/>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="572"/>
         <source>%1 - Select File</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 選擇檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="523"/>
         <source>Select a file to load.</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇檔案進行載入。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="547"/>
@@ -3126,7 +3105,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="553"/>
         <source>Select a file to be deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇檔案進行刪除。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="573"/>
@@ -3136,37 +3115,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="611"/>
         <source>File read completed</source>
-        <translation type="unfinished"></translation>
+        <translation>檔案讀取完成</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="623"/>
         <source>File deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>檔案已經刪除</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="625"/>
         <source>Error encountered deleting.</source>
-        <translation type="unfinished"></translation>
+        <translation>刪除時發生錯誤。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="638"/>
         <source>File save failed.</source>
-        <translation type="unfinished">Kunne ikke lagre fil.</translation>
+        <translation>檔案儲存失敗。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="641"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished">%L1 KB skrevet</translation>
+        <translation>%L1 KB 已經寫入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="643"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished">%L1 byte skrevet</translation>
+        <translation>%L1 Bytes 已經寫入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="656"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;DBus 錯誤名稱：&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;字串：&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;訊息：&lt;/b&gt; %3</translation>
     </message>
 </context>
 <context>
@@ -3174,12 +3153,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="14"/>
         <source>Scrollbox</source>
-        <translation>Rullefelt</translation>
+        <translation>捲動框</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="38"/>
         <source>TextLabel</source>
-        <translation type="unfinished">Tekstetikett</translation>
+        <translation>文字標籤</translation>
     </message>
 </context>
 <context>
@@ -3188,97 +3167,97 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="43"/>
         <source>connman system tray</source>
         <comment>Main Window Title</comment>
-        <translation type="unfinished">Connman systemkurv</translation>
+        <translation>ConnMan 系統匣</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="44"/>
         <source>cmst</source>
         <comment>Abbreviated Program Name - used for QMessageBox titles</comment>
-        <translation type="unfinished"></translation>
+        <translation>cmst</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="47"/>
         <source>idle</source>
         <comment>connman state string</comment>
-        <translation>ledig</translation>
+        <translation>間置</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="48"/>
         <source>association</source>
         <comment>connman state string</comment>
-        <translation>tilknytning</translation>
+        <translation>關聯</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="49"/>
         <source>configuration</source>
         <comment>connman state string</comment>
-        <translation>oppsett</translation>
+        <translation>設定組態</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="50"/>
         <source>ready</source>
         <comment>connman state string</comment>
-        <translation>klar</translation>
+        <translation>就緒</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="51"/>
         <source>online</source>
         <comment>connman state string</comment>
-        <translation type="unfinished"></translation>
+        <translation>線上</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="52"/>
         <source>disconnect</source>
         <comment>connman state string</comment>
-        <translation>koble fra</translation>
+        <translation>離線</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="53"/>
         <source>failure</source>
         <comment>connman state string</comment>
-        <translation type="unfinished"></translation>
+        <translation>失誤</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="54"/>
         <source>offline</source>
         <comment>connman state string</comment>
-        <translation>frakoblet</translation>
+        <translation>離線</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="56"/>
         <source>system</source>
         <comment>connman type string</comment>
-        <translation>system</translation>
+        <translation>系統</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="57"/>
         <source>ethernet</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>乙太網路</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="58"/>
         <source>wifi</source>
         <comment>connman type string</comment>
-        <translation type="unfinished">Wi-Fi</translation>
+        <translation>WiFi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="59"/>
         <source>bluetooth</source>
         <comment>connman type string</comment>
-        <translation type="unfinished">Blåtann</translation>
+        <translation>藍牙</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="60"/>
         <source>cellular</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>蜂巢通訊</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="61"/>
         <source>gps</source>
         <comment>connman type string</comment>
-        <translation type="unfinished">GPS</translation>
+        <translation>GPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="62"/>
@@ -3290,325 +3269,325 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="63"/>
         <source>gadget</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>小工具</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="64"/>
         <source>p2p</source>
         <comment>connman type string</comment>
-        <translation type="unfinished">P2P</translation>
+        <translation>P2P</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="65"/>
         <source>wired</source>
         <comment>connman type string</comment>
-        <translation>trådbunden</translation>
+        <translation>有線網路</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="67"/>
         <source>direct</source>
         <comment>connman proxy string</comment>
-        <translation>direkte</translation>
+        <translation>導向</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="68"/>
         <source>manual</source>
         <comment>connman proxy string</comment>
-        <translation type="unfinished">Manual</translation>
+        <translation>手動</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="69"/>
         <source>auto</source>
         <comment>connman proxy string</comment>
-        <translation type="unfinished">Auto</translation>
+        <translation>自動</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="71"/>
         <source>psk</source>
         <comment>connman security string</comment>
-        <translation type="unfinished">PSK</translation>
+        <translation>PSK</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="72"/>
         <source>ieee8021x</source>
         <comment>connman security string</comment>
-        <translation type="unfinished"></translation>
+        <translation>IEEE8021x</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="73"/>
         <source>none</source>
         <comment>connman security string</comment>
-        <translation>ingen</translation>
+        <translation>無</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="74"/>
         <source>wep</source>
         <comment>connman security string</comment>
-        <translation type="unfinished">WEP</translation>
+        <translation>WEP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="75"/>
         <source>wps</source>
         <comment>connman security string</comment>
-        <translation type="unfinished">WPS</translation>
+        <translation>WPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="76"/>
         <source>wps_advertising</source>
         <comment>connman security string</comment>
-        <translation type="unfinished"></translation>
+        <translation>wps_advertising</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="78"/>
         <source>Invalid arguments</source>
         <comment>connman error string</comment>
-        <translation>Ugyldige argumenter</translation>
+        <translation>無效參數</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="79"/>
         <source>Permission denied</source>
         <comment>connman error string</comment>
-        <translation>Tilgang nektet</translation>
+        <translation>擁有權拒絕</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="80"/>
         <source>Passphrase required</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Passord kreves</translation>
+        <translation>密碼片語為必須</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="81"/>
         <source>Not registered</source>
         <comment>connman error string</comment>
-        <translation>Ikke registrert</translation>
+        <translation>尚未註冊</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="82"/>
         <source>Not unique</source>
         <comment>connman error string</comment>
-        <translation>Ikke unikt</translation>
+        <translation>非唯一</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="83"/>
         <source>Not supported</source>
         <comment>connman error string</comment>
-        <translation>Ikke støttet</translation>
+        <translation>尚未支援</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="84"/>
         <source>Not implemented</source>
         <comment>connman error string</comment>
-        <translation>Ikke implementert</translation>
+        <translation>尚未導入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="85"/>
         <source>Not found</source>
         <comment>connman error string</comment>
-        <translation>Ble ikke funnet</translation>
+        <translation>沒有找到</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="86"/>
         <source>No carrier</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Ingen tilbyder</translation>
+        <translation>無承載</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="87"/>
         <source>In progress</source>
         <comment>connman error string</comment>
-        <translation>Underveis</translation>
+        <translation>處理中</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="88"/>
         <source>Already exists</source>
         <comment>connman error string</comment>
-        <translation>Finnes allerede</translation>
+        <translation>已經存在</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="89"/>
         <source>Already enabled</source>
         <comment>connman error string</comment>
-        <translation>Allerede påskrudd</translation>
+        <translation>已經啟用</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="90"/>
         <source>Already disabled</source>
         <comment>connman error string</comment>
-        <translation>Allerede avskrudd</translation>
+        <translation>已經停用</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="91"/>
         <source>Already connected</source>
         <comment>connman error string</comment>
-        <translation>Allerede tilkoblet</translation>
+        <translation>已經連接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="92"/>
         <source>Not connected</source>
         <comment>connman error string</comment>
-        <translation>Ikke tilkoblet</translation>
+        <translation>尚未連接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="93"/>
         <source>Operation aborted</source>
         <comment>connman error string</comment>
-        <translation>Operasjon avbrutt</translation>
+        <translation>操作已經終止</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="94"/>
         <source>Operation timeout</source>
         <comment>connman error string</comment>
-        <translation>Tidsavbrudd for operasjon</translation>
+        <translation>操作逾時</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="95"/>
         <source>Invalid service</source>
         <comment>connman error string</comment>
-        <translation>Ugyldig tjeneste</translation>
+        <translation>無效服務</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="96"/>
         <source>Invalid property</source>
         <comment>connman error string</comment>
-        <translation>Ugyldig egenskap</translation>
+        <translation>無效屬性</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="98"/>
         <source>disabled</source>
         <comment>connman privacy string</comment>
-        <translation>avskrudd</translation>
+        <translation>停用</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="99"/>
         <source>enabled</source>
         <comment>connman privacy string</comment>
-        <translation>påskrudd</translation>
+        <translation>啟用</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="100"/>
         <source>prefered</source>
         <comment>connman privacy string - known misspelling but needed to avoid breaking code</comment>
-        <translation type="unfinished">foretrukket</translation>
+        <translation>偏好選項</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="101"/>
         <source>preferred</source>
         <comment>connman privacy string</comment>
-        <translation>foretrukket</translation>
+        <translation>偏好選項</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="103"/>
         <source>auto</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished">Auto</translation>
+        <translation>自動</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="104"/>
         <source>manual</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished">Manual</translation>
+        <translation>手動</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="106"/>
         <source>dhcp</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished">DHCP</translation>
+        <translation>DHCP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="107"/>
         <source>manual</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished">Manual</translation>
+        <translation>手動</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="108"/>
         <source>off</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished">Off</translation>
+        <translation>關閉</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="109"/>
         <source>fixed</source>
         <comment>connman ipv4 method string</comment>
-        <translation>fikset</translation>
+        <translation>固定</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="110"/>
         <source>address</source>
         <comment>connamn ipv4 method string</comment>
-        <translation>adresse</translation>
+        <translation>位址</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="112"/>
         <source>auto</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished">Auto</translation>
+        <translation>自動</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="113"/>
         <source>manual</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished">Manual</translation>
+        <translation>手動</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="114"/>
         <source>6to4</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>6轉4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="115"/>
         <source>off</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished">Off</translation>
+        <translation>關閉</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="117"/>
         <source>openconnect</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>開放連接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="118"/>
         <source>openvpn</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished">OpenVPN</translation>
+        <translation>OpenVPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="119"/>
         <source>vpnc</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>VPNC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="120"/>
         <source>l2tp</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>l2tp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="121"/>
         <source>pptp</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>pptp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="122"/>
         <source>wireguard</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished">WireGuard</translation>
+        <translation>Wireguard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="124"/>
         <source>true</source>
         <comment>connman mdns setting</comment>
-        <translation type="unfinished"></translation>
+        <translation>真</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="125"/>
         <source>false</source>
         <comment>connman mdns setting</comment>
-        <translation type="unfinished"></translation>
+        <translation>假</translation>
     </message>
     <message>
         <source>auto</source>
@@ -3631,17 +3610,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="14"/>
         <source>VPN Agent Input</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 代理輸入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="22"/>
         <source>Username</source>
-        <translation>Brukernavn</translation>
+        <translation>使用者名稱</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="42"/>
         <source>Password</source>
-        <translation>Passord</translation>
+        <translation>密碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="32"/>
@@ -3656,7 +3635,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="62"/>
         <source>Host</source>
-        <translation>Vert</translation>
+        <translation>主機</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="69"/>
@@ -3666,7 +3645,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="79"/>
         <source>Name</source>
-        <translation>Navn</translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="86"/>
@@ -3681,12 +3660,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="101"/>
         <source>OpenConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>開放連接</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="107"/>
         <source>CA Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>CA 認證。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="114"/>
@@ -3696,7 +3675,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="124"/>
         <source>Client Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>客端認證。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="131"/>
@@ -3706,7 +3685,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="138"/>
         <source>Cookie</source>
-        <translation>Kake</translation>
+        <translation>Cookie</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="145"/>
@@ -3716,7 +3695,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="152"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>群組</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="159"/>
@@ -3726,7 +3705,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="166"/>
         <source>PKCS Client Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>PKCS 客端認證。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="173"/>
@@ -3736,12 +3715,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="180"/>
         <source>PKCS Password</source>
-        <translation>PKCS-passord</translation>
+        <translation>PKCS 密碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="190"/>
         <source>Server Cert.</source>
-        <translation>Tjenersert.</translation>
+        <translation>伺服端認證。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="197"/>
@@ -3751,7 +3730,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="207"/>
         <source>VPN Host</source>
-        <translation>VPN-vert</translation>
+        <translation>VPN 主機</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="214"/>
@@ -3761,7 +3740,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="221"/>
         <source>Second Password</source>
-        <translation type="unfinished"></translation>
+        <translation>第二密碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="228"/>
@@ -3776,17 +3755,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="238"/>
         <source>Use Second Password</source>
-        <translation type="unfinished"></translation>
+        <translation>使用第二密碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="248"/>
         <source>Open VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>開放 VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="254"/>
         <source>Private Key Password</source>
-        <translation type="unfinished"></translation>
+        <translation>私鑰密碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="261"/>
@@ -3796,12 +3775,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="293"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;這是什麼&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="296"/>
         <source>...</source>
-        <translation type="unfinished">…</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="320"/>
@@ -3821,7 +3800,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="333"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avbryt tilkoblingsprosessen&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="336"/>
@@ -3831,12 +3810,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="339"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Avbryt</translation>
+        <translation>取消(&amp;C)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="271"/>
         <source>Save Credentials</source>
-        <translation>Lagre identitetsdetaljer</translation>
+        <translation>儲存憑證</translation>
     </message>
 </context>
 <context>
@@ -3844,12 +3823,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>對話框</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="29"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;VPN Type&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;VPN 類型&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="36"/>
@@ -3859,27 +3838,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="46"/>
         <source>OpenConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="51"/>
         <source>OpenVPN</source>
-        <translation type="unfinished">OpenVPN</translation>
+        <translation>OpenVPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="56"/>
         <source>VPNC</source>
-        <translation type="unfinished"></translation>
+        <translation>VPNC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="61"/>
         <source>L2TP</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="66"/>
         <source>PPTP</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="71"/>
@@ -3889,7 +3868,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="82"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Navn&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;名稱&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="89"/>
@@ -3904,7 +3883,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="106"/>
         <source>VPN Domain Name</source>
-        <translation>VPN-domenenavn</translation>
+        <translation>VPN 網域名稱</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="113"/>
@@ -3914,7 +3893,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="123"/>
         <source>Networks</source>
-        <translation>Nettverk</translation>
+        <translation>網路</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="130"/>
@@ -3924,12 +3903,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="140"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;VPN Server Address&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;VPN 伺服器位址&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="159"/>
         <source>CA Certificate</source>
-        <translation>CA-sertifikat</translation>
+        <translation>CA 認證</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="166"/>
@@ -3944,12 +3923,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="180"/>
         <source>Server Certificate</source>
-        <translation>Tjener-sertifikat</translation>
+        <translation>伺服器認證</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="187"/>
         <source>VPN Host</source>
-        <translation type="unfinished">VPN-vert</translation>
+        <translation>VPN 主機</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="194"/>
@@ -3970,7 +3949,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="215"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;Request &lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt; from server as the MTU of the tunnel.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt;請求 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; font-style:italic; color:#444444; background-color:#ffffff;&quot;&gt;MTU&lt;/span&gt;&lt;span style=&quot; font-family:&apos;verdana&apos;,&apos;helvetica&apos;,&apos;arial&apos;,&apos;sans-serif&apos;; font-size:16px; color:#444444; background-color:#ffffff;&quot;&gt; 來自伺服器作為通道的 MTU。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="242"/>
@@ -3980,13 +3959,13 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="245"/>
         <source>Disable IPv6</source>
-        <translation>Skru av IPv6</translation>
+        <translation>停用 IPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="252"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="255"/>
         <source>Disable DTLS</source>
-        <translation>Skru av DTLS</translation>
+        <translation>停用 DTLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="262"/>
@@ -3996,7 +3975,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="265"/>
         <source>Disable Keep Alive</source>
-        <translation type="unfinished"></translation>
+        <translation>停用 Keep Alive</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="272"/>
@@ -4006,22 +3985,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="275"/>
         <source>Allow Self Signed Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>允許自我簽署認證</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="282"/>
         <source>Read cookie from standard input</source>
-        <translation type="unfinished"></translation>
+        <translation>讀取 cookie 來自標準輸入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="285"/>
         <source>Cookie on stdin</source>
-        <translation type="unfinished"></translation>
+        <translation>Cookie on stdin</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="296"/>
         <source>Authentication Type</source>
-        <translation type="unfinished"></translation>
+        <translation>認證類型</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="303"/>
@@ -4043,32 +4022,32 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1113"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1172"/>
         <source>none specified</source>
-        <translation type="unfinished"></translation>
+        <translation>尚無指定</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="312"/>
         <source>cookie</source>
-        <translation type="unfinished"></translation>
+        <translation>cookie</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="317"/>
         <source>cookie_with_userpass</source>
-        <translation type="unfinished"></translation>
+        <translation>cookie_with_userpass</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="322"/>
         <source>userpass</source>
-        <translation type="unfinished"></translation>
+        <translation>使用者通道</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="327"/>
         <source>publickey</source>
-        <translation type="unfinished"></translation>
+        <translation>公鑰</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="332"/>
         <source>pkcs</source>
-        <translation type="unfinished"></translation>
+        <translation>pkcs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="360"/>
@@ -4078,12 +4057,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="367"/>
         <source>User Private Key</source>
-        <translation type="unfinished"></translation>
+        <translation>使用者私鑰</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="374"/>
         <source>PKCS Client Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>PKCS 客端認證</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="384"/>
@@ -4098,12 +4077,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="398"/>
         <source>User Group</source>
-        <translation type="unfinished"></translation>
+        <translation>使用者群組</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="405"/>
         <source>Client Cerificate</source>
-        <translation type="unfinished"></translation>
+        <translation>客端認證</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="415"/>
@@ -4118,7 +4097,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="433"/>
         <source>Import OPVN File</source>
-        <translation type="unfinished"></translation>
+        <translation>匯入 OPVN 檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="440"/>
@@ -4128,17 +4107,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="443"/>
         <source>Create User/Pass</source>
-        <translation type="unfinished"></translation>
+        <translation>建立使用者/通道</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="467"/>
         <source>User/Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>使用者/密碼 檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="474"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;CA Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;CA 認證&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="481"/>
@@ -4148,17 +4127,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="488"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Signed Certificate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;簽署認證&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="495"/>
         <source>Extra Config</source>
-        <translation type="unfinished"></translation>
+        <translation>額外設定</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="502"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Private Key&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;私鑰&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="509"/>
@@ -4183,7 +4162,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="537"/>
         <source>Certificate Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>認證密碼檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="544"/>
@@ -4198,7 +4177,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="556"/>
         <source>Don&apos;t cache password</source>
-        <translation type="unfinished"></translation>
+        <translation>不要緩存密碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="565"/>
@@ -4208,17 +4187,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="574"/>
         <source>adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>適用性</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="579"/>
         <source>yes</source>
-        <translation type="unfinished"></translation>
+        <translation>是</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="584"/>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>否</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="592"/>
@@ -4228,7 +4207,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="604"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP/UDP port number.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP/UDP 埠號。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="618"/>
@@ -4238,47 +4217,47 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="627"/>
         <source>udp</source>
-        <translation type="unfinished">UDP</translation>
+        <translation>udp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="632"/>
         <source>udp4</source>
-        <translation type="unfinished"></translation>
+        <translation>udp4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="637"/>
         <source>udp6</source>
-        <translation type="unfinished"></translation>
+        <translation>udp6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="642"/>
         <source>tcp-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="647"/>
         <source>tcp4-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp4-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="652"/>
         <source>tcp6-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp6-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="657"/>
         <source>tcp-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="662"/>
         <source>tcp4-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp4-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="667"/>
         <source>tcp6-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp6-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="675"/>
@@ -4289,18 +4268,18 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="684"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1177"/>
         <source>tun</source>
-        <translation type="unfinished"></translation>
+        <translation>tun</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="689"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1182"/>
         <source>tap</source>
-        <translation type="unfinished"></translation>
+        <translation>tap</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="697"/>
         <source>Protocol</source>
-        <translation>Protokoll</translation>
+        <translation>協定</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="704"/>
@@ -4312,13 +4291,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="796"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="978"/>
         <source>server</source>
-        <translation type="unfinished"></translation>
+        <translation>伺服器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="718"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="791"/>
         <source>client</source>
-        <translation>klient</translation>
+        <translation>客端</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="726"/>
@@ -4328,37 +4307,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="733"/>
         <source>Remote Certificate TLS</source>
-        <translation type="unfinished"></translation>
+        <translation>遠端認證 TLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="740"/>
         <source>NS Certificate Type</source>
-        <translation type="unfinished"></translation>
+        <translation>NS 認證類型</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="747"/>
         <source>Fast LZO Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>快速 LZO 壓縮</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="754"/>
         <source>Port</source>
-        <translation>Port</translation>
+        <translation>埠</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="761"/>
         <source>Cipher</source>
-        <translation type="unfinished"></translation>
+        <translation>密碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="768"/>
         <source>Authenticate HMAC</source>
-        <translation type="unfinished"></translation>
+        <translation>驗證 HMAC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="775"/>
         <source>Device Type</source>
-        <translation>Enhetstype</translation>
+        <translation>裝置類型</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="782"/>
@@ -4368,17 +4347,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="804"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set the tunnel MTU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;設定通道 MTU。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="819"/>
         <source>User Password</source>
-        <translation>Brukerpassord</translation>
+        <translation>使用者密碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="826"/>
         <source>Group Password</source>
-        <translation>Gruppepassord</translation>
+        <translation>群組密碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="833"/>
@@ -4388,12 +4367,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="840"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Group User Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;群組使用者名稱&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="847"/>
         <source>User Name</source>
-        <translation type="unfinished"></translation>
+        <translation>使用者名稱</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="854"/>
@@ -4403,7 +4382,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="861"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your group username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;您的群組使用者名稱。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="868"/>
@@ -4413,7 +4392,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="879"/>
         <source>Domain</source>
-        <translation type="unfinished">Domene</translation>
+        <translation>網域</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="886"/>
@@ -4424,17 +4403,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="894"/>
         <source>Application Version</source>
-        <translation type="unfinished"></translation>
+        <translation>應用程式版本</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="901"/>
         <source>(NT-) Domain name for authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>(NT-) 網域名稱 用於認證</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="912"/>
         <source>Diffie-Hellman Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Diffie-Hellman 群組</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="919"/>
@@ -4442,19 +4421,23 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>none selected</source>
+        <translation type="obsolete">None Selected</translation>
+    </message>
+    <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="928"/>
         <source>psk</source>
-        <translation type="unfinished"></translation>
+        <translation>psk</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="933"/>
         <source>cert</source>
-        <translation type="unfinished"></translation>
+        <translation>認證</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="938"/>
         <source>hybrid</source>
-        <translation type="unfinished"></translation>
+        <translation>hybrid</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="946"/>
@@ -4464,31 +4447,31 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="958"/>
         <source>nopfs</source>
-        <translation type="unfinished"></translation>
+        <translation>nopfs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="963"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1045"/>
         <source>dh1</source>
-        <translation type="unfinished"></translation>
+        <translation>dh1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="968"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1050"/>
         <source>dh2</source>
-        <translation type="unfinished"></translation>
+        <translation>dh2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="973"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1055"/>
         <source>dh5</source>
-        <translation type="unfinished"></translation>
+        <translation>dh5</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="986"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1367"/>
         <source>UDP Port</source>
-        <translation type="unfinished"></translation>
+        <translation>UDP 埠</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="993"/>
@@ -4498,7 +4481,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1006"/>
         <source>Local Port</source>
-        <translation>Lokal port</translation>
+        <translation>本地埠</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1013"/>
@@ -4508,22 +4491,22 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1026"/>
         <source>IKE Authentication Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE 認證模式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1033"/>
         <source>Name of the IKE DH Group</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE DH 群組的名稱</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1063"/>
         <source>IKE DH Group</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE DH 群組</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1070"/>
         <source>Vendor</source>
-        <translation type="unfinished"></translation>
+        <translation>廠商</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1077"/>
@@ -4533,17 +4516,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1086"/>
         <source>cisco</source>
-        <translation type="unfinished"></translation>
+        <translation>Cisco</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1091"/>
         <source>netscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>netscreen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1099"/>
         <source>Nat Mode</source>
-        <translation type="unfinished">NAT-modus</translation>
+        <translation>Nat 模式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1106"/>
@@ -4553,27 +4536,27 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1118"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>無</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1123"/>
         <source>natt</source>
-        <translation type="unfinished"></translation>
+        <translation>natt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1128"/>
         <source>force-natt</source>
-        <translation type="unfinished"></translation>
+        <translation>force-natt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1133"/>
         <source>cisco-udp</source>
-        <translation type="unfinished"></translation>
+        <translation>cisco-udp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1141"/>
         <source>DPD Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>DPD 閒置</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1148"/>
@@ -4583,7 +4566,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1161"/>
         <source>Interface Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>介面模式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1168"/>
@@ -4593,27 +4576,27 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1190"/>
         <source>Enables weak single DES encryption</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用微弱單一 DES 加密</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1193"/>
         <source>Single DES</source>
-        <translation type="unfinished"></translation>
+        <translation>單一 DES</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1200"/>
         <source>Enables using no encryption for data traffic (key exchanged must be encrypted)</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用利用無加密用於資料流量(交換密鑰必須加密)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1203"/>
         <source>No Encrypton</source>
-        <translation>Ingen kryptering</translation>
+        <translation>無加密</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1234"/>
         <source>L2TP Options</source>
-        <translation>L2TP-alternativer</translation>
+        <translation>L2TP 選項</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1242"/>
@@ -4624,13 +4607,13 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1249"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1748"/>
         <source>Password:</source>
-        <translation>Passord:</translation>
+        <translation>密碼：</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1256"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1755"/>
         <source>User:</source>
-        <translation>Bruker:</translation>
+        <translation>使用者：</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1263"/>
@@ -4646,7 +4629,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1273"/>
         <source>Authentication File</source>
-        <translation type="unfinished"></translation>
+        <translation>認證檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1280"/>
@@ -4656,22 +4639,22 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1291"/>
         <source>BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1298"/>
         <source>Maximum bandwidth to use.</source>
-        <translation>Maks. båndbredde å bruke</translation>
+        <translation>最大頻寬使用。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1308"/>
         <source>Default Route</source>
-        <translation>Forvalgt rute</translation>
+        <translation>預設路由</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1318"/>
         <source>TX BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>TX BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1325"/>
@@ -4682,7 +4665,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1336"/>
         <source>Listen Address</source>
-        <translation>Lytteadresse</translation>
+        <translation>監聽位址</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1343"/>
@@ -4692,7 +4675,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1350"/>
         <source>RX BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>RX BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1357"/>
@@ -4702,12 +4685,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1374"/>
         <source>Specify which UDP port xl2tpd should use. The default is 1701.</source>
-        <translation type="unfinished"></translation>
+        <translation>指定 UDP 埠， xl2tpd 所應使用。預設為 1701。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1384"/>
         <source>Tunnel RWS</source>
-        <translation type="unfinished"></translation>
+        <translation>通道 RWS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1391"/>
@@ -4722,7 +4705,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1408"/>
         <source>Redial</source>
-        <translation type="unfinished"></translation>
+        <translation>重撥</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1415"/>
@@ -4732,7 +4715,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1418"/>
         <source>Require PAP</source>
-        <translation type="unfinished"></translation>
+        <translation>需要 PAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1425"/>
@@ -4742,7 +4725,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1428"/>
         <source>IPsec Security Association</source>
-        <translation type="unfinished"></translation>
+        <translation>IPsec 安全協會</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1435"/>
@@ -4753,17 +4736,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1439"/>
         <source>Require CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>需要 CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1446"/>
         <source>Require the remote peer to authenticate itself.</source>
-        <translation type="unfinished"></translation>
+        <translation>需要遠端對等驗證本身。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1449"/>
         <source>Require Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>需要馳證</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1456"/>
@@ -4774,7 +4757,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1460"/>
         <source>Use Length Bit</source>
-        <translation type="unfinished"></translation>
+        <translation>使用長度 Bit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1467"/>
@@ -4784,7 +4767,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1470"/>
         <source>Challenge Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>挑戰身分驗證</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1477"/>
@@ -4794,7 +4777,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1480"/>
         <source>Flow Bit</source>
-        <translation type="unfinished"></translation>
+        <translation>流量 Bit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1487"/>
@@ -4804,7 +4787,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1490"/>
         <source>Access Control</source>
-        <translation type="unfinished"></translation>
+        <translation>存取控制</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1497"/>
@@ -4814,7 +4797,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1500"/>
         <source>Exclusive</source>
-        <translation type="unfinished"></translation>
+        <translation>獨有</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1527"/>
@@ -4824,12 +4807,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1537"/>
         <source>Redial Timeout</source>
-        <translation type="unfinished"></translation>
+        <translation>重撥逾時</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1544"/>
         <source>Maximum Redials</source>
-        <translation type="unfinished"></translation>
+        <translation>最大重撥次數</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1567"/>
@@ -4839,12 +4822,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1582"/>
         <source>PPTP Options</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP 選項</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1588"/>
         <source>Disable Address Control Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>停用位址控制壓縮</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1595"/>
@@ -4856,7 +4839,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1598"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1869"/>
         <source>Disable Deflate Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>停用 Deflate 壓縮</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1605"/>
@@ -4868,7 +4851,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1608"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1796"/>
         <source>Disable Van Jacobson Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>停用 Van Jacobson 壓縮</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1615"/>
@@ -4878,7 +4861,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1618"/>
         <source>Disable Protocol Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>停用協定壓縮</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1625"/>
@@ -4890,7 +4873,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1628"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1839"/>
         <source>Disable BSD Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>停用 BSD 壓縮</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1635"/>
@@ -4902,7 +4885,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1638"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1949"/>
         <source>Debug</source>
-        <translation type="unfinished"></translation>
+        <translation>除錯</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1645"/>
@@ -4914,7 +4897,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1648"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1939"/>
         <source>Require MPPE40</source>
-        <translation type="unfinished"></translation>
+        <translation>需要 MPPE40</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1655"/>
@@ -4926,7 +4909,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1658"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1929"/>
         <source>Require MPPE128</source>
-        <translation type="unfinished"></translation>
+        <translation>需要 MPPE128</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1665"/>
@@ -4938,7 +4921,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1668"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1879"/>
         <source>Refuse EAP</source>
-        <translation type="unfinished"></translation>
+        <translation>拒絕 EAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1675"/>
@@ -4950,7 +4933,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1678"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1899"/>
         <source>Refuse PAP</source>
-        <translation type="unfinished"></translation>
+        <translation>拒絕 PAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1685"/>
@@ -4962,7 +4945,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1688"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1849"/>
         <source>Refuse CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>拒絕 CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1695"/>
@@ -4974,7 +4957,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1698"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1786"/>
         <source>Refuse MS CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>拒絕 MS CHAP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1705"/>
@@ -4986,7 +4969,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1708"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1829"/>
         <source>Refuse MS CHAP 2</source>
-        <translation type="unfinished"></translation>
+        <translation>拒絕 MS CHAP 2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1715"/>
@@ -4998,7 +4981,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1718"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1859"/>
         <source>Require MPPE</source>
-        <translation type="unfinished"></translation>
+        <translation>需要 MPPE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1725"/>
@@ -5010,7 +4993,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1728"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1919"/>
         <source>Allow MPPE Stateful Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>允許 MPPE 狀態模式</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1762"/>
@@ -5095,17 +5078,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2049"/>
         <source>Preshared Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Preshared 密鑰</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2059"/>
         <source>Name Servers</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱伺服器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2073"/>
         <source>Local Listen Port</source>
-        <translation type="unfinished"></translation>
+        <translation>本地監聽埠</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2080"/>
@@ -5115,17 +5098,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2090"/>
         <source>Endpoint Port</source>
-        <translation type="unfinished"></translation>
+        <translation>端點埠</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2097"/>
         <source>Endpoint listen port number.</source>
-        <translation type="unfinished"></translation>
+        <translation>端點監聽埠號碼。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2107"/>
         <source>Keep Alive</source>
-        <translation type="unfinished"></translation>
+        <translation>保持在場</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2114"/>
@@ -5140,7 +5123,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="58"/>
         <source>%1 - Select File</source>
-        <translation>%1 — velg fil</translation>
+        <translation>%1 - 選擇檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="105"/>
@@ -5200,7 +5183,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="406"/>
         <source>All Files (*.*)</source>
-        <translation type="unfinished">Alle filer (*.*)</translation>
+        <translation>全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="410"/>
@@ -5209,38 +5192,38 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="425"/>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="430"/>
         <source>Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>認證檔案 (*.ca *.cert *.crt *.pem);;全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="435"/>
         <source>Key Files (*.key *.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>密鑰檔案 (*.key *.ca *.cert *.crt *.pem);;全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="442"/>
         <source>Config files (*.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>設定檔案 (*.conf);;全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="449"/>
         <source>User/Pass Files (*.up)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用者/通行 檔案 (*.up)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="488"/>
         <source>Select the configuration file to import</source>
-        <translation type="unfinished"></translation>
+        <translation>鄙擇設定檔案進行匯入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="490"/>
         <source>OpenVPN Configurations (*.ovpn  *.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN 設定 (*.ovpn  *.conf);全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="503"/>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="599"/>
         <source>Base Name</source>
-        <translation type="unfinished"></translation>
+        <translation>基本名稱</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="504"/>
@@ -5250,7 +5233,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="517"/>
         <source>Keep --auth-user-pass</source>
-        <translation type="unfinished"></translation>
+        <translation>保留 --auth-user-pass</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="518"/>
@@ -5260,57 +5243,57 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="532"/>
         <source>Create User:Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>建立使用者：密碼檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="533"/>
         <source>Do you wish to create a user:password file for this connection?</source>
-        <translation type="unfinished"></translation>
+        <translation>是否要建立 使用者：密碼檔案 用於連接？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="557"/>
         <source>Unable to write conf file &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>無法寫入設定檔案 &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="571"/>
         <source>Unable to read &lt;b&gt;%1&lt;/b&gt; - Aborting the import</source>
-        <translation type="unfinished"></translation>
+        <translation>無法讀取 &lt;b&gt;%1&lt;/b&gt; - 停止匯入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="579"/>
         <source>OpenVPN import is complete.</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN 匯入完成。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="600"/>
         <source>Please enter a name for the user/pass file</source>
-        <translation type="unfinished"></translation>
+        <translation>請輸入名稱 用於使用者/通行檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="608"/>
         <source>User</source>
-        <translation type="unfinished"></translation>
+        <translation>使用者</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="609"/>
         <source>Enter the user name for this connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>輸入使用者名稱 用於此連接。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="616"/>
         <source>Password</source>
-        <translation type="unfinished">Passord</translation>
+        <translation>密碼</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="617"/>
         <source>Enter the password for this connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>輸入密碼 用於此連接。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="641"/>
         <source>Unable to write user:password file &lt;b&gt;%1&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>無法寫入使用者：密碼檔案 &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -5318,12 +5301,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="208"/>
         <source>Global</source>
-        <translation type="unfinished"></translation>
+        <translation>整體</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="214"/>
         <source>OpenConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="237"/>
@@ -5333,22 +5316,22 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="264"/>
         <source>VPNC</source>
-        <translation type="unfinished"></translation>
+        <translation>VPNC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="291"/>
         <source>L2TP</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="343"/>
         <source>PPTP</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="413"/>
         <source>All Files (*.*)</source>
-        <translation>Alle filer (*.*)</translation>
+        <translation>全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="426"/>
@@ -5356,47 +5339,47 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="428"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="429"/>
         <source>Cert Files (*.pem *.ca *.crt *.cert);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>認證檔案 (*.pem *.ca *.crt *.cert);;全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="417"/>
         <source>User:Pass Files (*.up *.txt *.conf);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用者：通行檔案 (*.up *.txt *.conf);;全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="368"/>
         <source>WireGuard</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="420"/>
         <source>CA Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>認證檔案 (*.ca *.cert *.crt *.pem);;全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="421"/>
         <source>Cert Files (*.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>認證檔案 (*.ca *.cert *.crt *.pem);;全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="422"/>
         <source>Key Files (*.key *.ca *.cert *.crt *.pem);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>密鑰檔案 (*.key *.ca *.cert *.crt *.pem);;全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="423"/>
         <source>Config Files (*.ovpn *.conf *.config);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation>設定檔案 (*.ovpn *.conf *.config);;全部檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="458"/>
         <source>VPN server IP address (ex: 1.2.3.4)</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 伺服器 IP 位址 (例： 1.2.3.4)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="460"/>
         <source>Domain Name for the VPN Service</source>
-        <translation type="unfinished"></translation>
+        <translation>網域名稱 用於 VPN 服務</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="463"/>
@@ -5410,17 +5393,17 @@ Networks = entry is optional and may be left blank.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="548"/>
         <source>%1 - Item Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 項目輸入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="566"/>
         <source>%1 - Verify Option</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 驗證選項</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="586"/>
         <source>User defined name for the VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>使用者定義名稱 用於 VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="588"/>
@@ -5431,13 +5414,13 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="602"/>
         <source>%1 - Text Input</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 文字輸入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="673"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="706"/>
         <source> Information</source>
-        <translation type="unfinished"> Info</translation>
+        <translation> 資訊</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="674"/>
@@ -5449,12 +5432,12 @@ Ex: 10.2.0.2/24</source>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="712"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="732"/>
         <source>%1 - Select File</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - 選擇檔案</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="683"/>
         <source>Select a file to load.</source>
-        <translation>Velg en fil å laste inn.</translation>
+        <translation>選擇檔案進行載入。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="707"/>
@@ -5464,7 +5447,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="713"/>
         <source>Select a file to be deleted.</source>
-        <translation type="unfinished">Velg en fil å slette.</translation>
+        <translation>選擇檔案進行刪除。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="733"/>
@@ -5474,46 +5457,42 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="771"/>
         <source>File read completed</source>
-        <translation type="unfinished"></translation>
+        <translation>壋案讀取已經完成</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="783"/>
         <source>File deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>檔案已經刪除</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="785"/>
         <source>Error encountered deleting.</source>
-        <translation type="unfinished"></translation>
+        <translation>刪除時發生錯誤。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="799"/>
         <source>File save failed.</source>
-        <translation type="unfinished">Kunne ikke lagre fil.</translation>
+        <translation>檔案儲存失敗。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="802"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished">%L1 KB skrevet</translation>
+        <translation>%L1 KB 已經寫入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="804"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished">%L1 byte skrevet</translation>
+        <translation>%L1 Bytes 已經寫入</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="816"/>
         <source> Critical</source>
-        <translation type="unfinished"> Kritisk</translation>
+        <translation> 嚴重緊急</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="817"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="obsolete">Passord</translation>
+        <translation>&lt;b&gt;DBus 錯誤名稱：&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;字串：&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;訊息：&lt;/b&gt; %3</translation>
     </message>
 </context>
 <context>
@@ -5521,7 +5500,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="14"/>
         <source>VPN Provisioning Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN 服務開通編輯器</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="23"/>
@@ -5531,12 +5510,12 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="32"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open an existing config file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;開啟現有的設定檔案。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="35"/>
         <source>&amp;Open</source>
-        <translation type="unfinished">&amp;Åpne</translation>
+        <translation>開啟(&amp;O)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="48"/>
@@ -5546,7 +5525,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation type="unfinished">&amp;Lagre</translation>
+        <translation>儲存(&amp;S)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="68"/>
@@ -5556,7 +5535,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Slett</translation>
+        <translation>刪除(&amp;D)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="94"/>
@@ -5566,12 +5545,12 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="97"/>
         <source>&amp;Clear Page</source>
-        <translation type="unfinished">&amp;Tøm side</translation>
+        <translation>清除頁面(&amp;C)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="117"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;這是什麼&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="120"/>
@@ -5586,27 +5565,27 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="146"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished">A&amp;vslutt</translation>
+        <translation>退出(&amp;X)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="166"/>
         <source>Name of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>網路的名稱。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="174"/>
         <source>Description of the network.</source>
-        <translation type="unfinished"></translation>
+        <translation>網路的描述。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="207"/>
         <source>PPTP User Name.</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP 使用者名稱。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="215"/>
         <source>PPTP Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP 密碼。.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="223"/>
@@ -5624,106 +5603,106 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="242"/>
         <source>Debug level.</source>
-        <translation type="unfinished"></translation>
+        <translation>除錯等級。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="250"/>
         <source>Deny EAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>拒絕 EAP 授權？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="258"/>
         <source>Deny PAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>拒絕 PAP 授權？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="266"/>
         <source>Deny CHAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>拒絕 CHAP 授權？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="274"/>
         <source>Deny MSCHAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>拒絕 MSCHAP 授權？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="282"/>
         <source>Deny MSCHAPV2 authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>拒絕 MSCHAPV2 授權？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="290"/>
         <source>Disables BSD compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>停用 BSD 壓縮？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="298"/>
         <source>Disable deflate compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>停用 deflate 壓縮？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="306"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="538"/>
         <source>Require the use of MPPE?</source>
-        <translation type="unfinished"></translation>
+        <translation>需要 MPPE 的使用？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="314"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="546"/>
         <source>Require the use of MPPE 40 bit?</source>
-        <translation type="unfinished"></translation>
+        <translation>需要 MPPE 40 bit 的使用？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="322"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="554"/>
         <source>Require the use of MPPE 128 bit?</source>
-        <translation type="unfinished"></translation>
+        <translation>需要 MPPE 128 bit 的使用？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="330"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="562"/>
         <source>Allow MPPE to use stateful mode?</source>
-        <translation type="unfinished"></translation>
+        <translation>允許 MPPE 使用有狀態模式？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="338"/>
         <source>Disable Van Jacobson compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>停用 Van Jacobson 壓縮？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="346"/>
         <source>L2TP User Name.</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP 使用者名稱。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="354"/>
         <source>L2TP Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP 密碼。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="362"/>
         <source>Maximum bandwidth to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>最大頻寬進行使用。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="370"/>
         <source>Maximum transmit bandwidth to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>最大傳輸頻寬進行使用。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="378"/>
         <source>Maximum receive bandwidth to use.</source>
-        <translation type="unfinished"></translation>
+        <translation>最大接收頻寬進行使用。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="386"/>
         <source>Use length bit?</source>
-        <translation type="unfinished"></translation>
+        <translation>使用長度 bit?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="394"/>
         <source>Use challenge authentication?</source>
-        <translation type="unfinished"></translation>
+        <translation>使用挑戰認證？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="402"/>
@@ -5743,22 +5722,22 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="426"/>
         <source>Use only one control channel?</source>
-        <translation type="unfinished"></translation>
+        <translation>使用僅一個控制通道？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="434"/>
         <source>Redial if disconnected?</source>
-        <translation type="unfinished"></translation>
+        <translation>若是斷線即行重撥？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="442"/>
         <source>Wait n seconds before redial.</source>
-        <translation type="unfinished"></translation>
+        <translation>重撥之前等待 n 秒。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="450"/>
         <source>Give up redial tries after X attempts.</source>
-        <translation type="unfinished"></translation>
+        <translation>在 X 次嘗試後放棄重撥。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="458"/>
@@ -6123,47 +6102,47 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="738"/>
         <source>Protocol type (udp/tcp-client/tcp-server).</source>
-        <translation type="unfinished"></translation>
+        <translation>協定類型 (udp/tcp-client/tcp-server)。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="746"/>
         <source>TCP/UDP port number.</source>
-        <translation type="unfinished"></translation>
+        <translation>TCP/UDP 埠號。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="762"/>
         <source>Get certificate password from console or file?</source>
-        <translation type="unfinished"></translation>
+        <translation>取得認證密碼來自控制台或檔案？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="770"/>
         <source>Don&apos;t cache --askpass or --auth-user-pass values?</source>
-        <translation type="unfinished"></translation>
+        <translation>不要緩存 --askpass 或 --auth-user-pass 值？</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="778"/>
         <source>Encrypt packets with cipher algorithm:</source>
-        <translation type="unfinished"></translation>
+        <translation>加密數據包使用密碼演算法：</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="786"/>
         <source>Authenticate packets using algorithm:</source>
-        <translation type="unfinished"></translation>
+        <translation>身份驗證數據包使用演算法：</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="794"/>
         <source>Use fast LZO compression (yes/no/adaptive).</source>
-        <translation type="unfinished"></translation>
+        <translation>使用快速 LZO 壓縮 (yes/no/adaptive)。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="802"/>
         <source>Require peer certificate signed (client/server).</source>
-        <translation type="unfinished"></translation>
+        <translation>需要對等認證簽署 (client/server)。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="810"/>
         <source>OpenVPN config file that can contain extra options.</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN 設定檔案，可以包含額外選項。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="818"/>
@@ -6221,42 +6200,42 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="82"/>
         <source>Connman System Tray.</source>
-        <translation>Connman-systemkurv.</translation>
+        <translation>Connman 系統匣。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="93"/>
         <source>[Experimental] Enable data counters.</source>
-        <translation>[Eksperimentelt] Skru på datatelling.</translation>
+        <translation>[實驗性] 啟用資料計數器。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="103"/>
         <source>Use an icon theme from your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>使用圖示主題來自您的系統。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="104"/>
         <source>Icon Theme Name</source>
-        <translation type="unfinished"></translation>
+        <translation>圖示主題名稱</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="109"/>
         <source>Scale program artwork for high DPI monitors.</source>
-        <translation type="unfinished"></translation>
+        <translation>縮放程式圖案 用於高 DPI 顯示器。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="110"/>
         <source>Icon Scale1</source>
-        <translation type="unfinished"></translation>
+        <translation>圖示比例1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="115"/>
         <source>Log the connman inputRequest for debugging purposes.</source>
-        <translation type="unfinished"></translation>
+        <translation>記錄 connman inputRequest 用於除錯程式。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="119"/>
         <source>Start the GUI minimized in the system tray.</source>
-        <translation>Start grensesnittet minimert i systemkurven</translation>
+        <translation>啟動 GUI 最小化於系統匣。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="123"/>
@@ -6266,7 +6245,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="127"/>
         <source>Disable VPN support.</source>
-        <translation type="unfinished"></translation>
+        <translation>停用 VPN 支援。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="133"/>
@@ -6277,7 +6256,7 @@ that the peer is no longer connected.</source>
         <location filename="../apps/cmstapp/code/main.cpp" line="134"/>
         <location filename="../apps/cmstapp/code/main.cpp" line="146"/>
         <source>seconds</source>
-        <translation>sekunder</translation>
+        <translation>秒</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="139"/>
@@ -6287,7 +6266,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="140"/>
         <source>KB</source>
-        <translation>kB</translation>
+        <translation>KB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="145"/>
@@ -6307,12 +6286,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="161"/>
         <source>Use XFCE specific code.</source>
-        <translation>Bruk XFCE-spesifikk kode.</translation>
+        <translation>使用 XFCE 指定程式碼。</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="166"/>
         <source>Use MATE DE specific code.</source>
-        <translation type="unfinished">Bruk MATE-spesifikk kode.</translation>
+        <translation>使用 MATE DE 指定程式碼。</translation>
     </message>
 </context>
 <context>
@@ -6320,7 +6299,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="44"/>
         <source> Warning</source>
-        <translation> Advarsel</translation>
+        <translation> 警告</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="45"/>

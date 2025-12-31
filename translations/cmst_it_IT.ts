@@ -6275,7 +6275,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="140"/>
         <source>KB</source>
-        <translation type="unfinished"></translation>
+        <translation>kB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="145"/>

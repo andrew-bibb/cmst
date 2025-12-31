@@ -845,7 +845,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1496"/>
         <source>Counter Update KB</source>
-        <translation>Atualização do Contador em KB</translation>
+        <translation>Atualização do Contador em kB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1452"/>
@@ -855,7 +855,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1413"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the amount of data in KB that must be transmitted before the counters update (default is 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Especifica a quantidade de dados em KB que deve ser transmitida antes da atualização dos contadores (o padrão é 1024 KB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Especifica a quantidade de dados em kB que deve ser transmitida antes da atualização dos contadores (o padrão é 1024 kB).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1442"/>
@@ -1359,7 +1359,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1975"/>
         <source>E&amp;xit</source>
-        <translation>Sair</translation>
+        <translation>&amp;Sair</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1995"/>
@@ -6505,7 +6505,7 @@ está mais ligado.</translation>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="140"/>
         <source>KB</source>
-        <translation>KB</translation>
+        <translation>kB</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="145"/>

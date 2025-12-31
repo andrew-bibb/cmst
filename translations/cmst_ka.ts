@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nb_NO">
+<TS version="2.1" language="ka">
 <context>
     <name>Agent</name>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="14"/>
         <source>Agent Input</source>
-        <translation>Inndata fra agenten</translation>
+        <translation>აგენტის შეყვანა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="45"/>
         <source>Passphrase</source>
-        <translation type="unfinished">Passord</translation>
+        <translation>საკვანძო სიტყვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="64"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If an old passphrase is available it will be shown here for reference.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hvis en gammel passordfrase er tilgjengelig, vises den her som referanse.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="74"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the passphrase here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skriv inn passordet her.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;აკრიფეთ თქვენი საკვანძო ფრაზა აქ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="87"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Check this box to obscure the password characters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Merk av i denne boksen for å skjule passordtegnene.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="90"/>
         <source>&amp;Hide Passphrase</source>
-        <translation type="unfinished">&amp;Skjul passord</translation>
+        <translation>&amp;საკვანძო ფრაზის დამალვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="97"/>
         <source>O&amp;ld Passphrase</source>
-        <translation type="unfinished">G&amp;ammelt passord</translation>
+        <translation>ძვე&amp;ლი საკვანძო ფრაზა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="107"/>
         <source>&amp;Passphrase</source>
-        <translation type="unfinished">&amp;Passord</translation>
+        <translation>საკვანძო ფრა&amp;ზა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="120"/>
         <source>Hidden Network</source>
-        <translation>Skjult nettverk</translation>
+        <translation>დამალული ქსელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="126"/>
         <source>&amp;Name</source>
-        <translation>&amp;Navn</translation>
+        <translation>&amp;სახელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="136"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type the name of the hidden network you wish to connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skriv inn navnet på det skjulte nettverket du ønsker å koble til.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="149"/>
         <source>Service Set Identifier</source>
-        <translation>Tjenestesett-identifikator</translation>
+        <translation>სერვისის იდენტიფიკატორი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="155"/>
@@ -71,92 +71,92 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="175"/>
         <source>Wireless Internet Service Provider roaming (WISPr)</source>
-        <translation>Trådløs internettleverandør roaming (WISPr)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="181"/>
         <source>&amp;Username</source>
-        <translation>&amp;Brukernavn</translation>
+        <translation>&amp;მომხმარებლის სახელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="191"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr-brukernavn.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr-ის მომხმარებლის სახელი.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="201"/>
         <source>Passwor&amp;d</source>
-        <translation>Passor&amp;d</translation>
+        <translation>&amp;პაროლი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="211"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr password.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr-passord.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WISPr-ის პაროლი.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="224"/>
         <source>Extensible Authentication Protocol (EAP)</source>
-        <translation>Utvidbar autentiseringsprotokoll (EAP)</translation>
+        <translation>გაფათოებული ავთენტიკაციის პროტოკოლი (EAP)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="230"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type your Identity for the Extensible Authentication Protocol&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skriv inn identiteten din for Extensible Authentication Protocol&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="240"/>
         <source>&amp;Identity</source>
-        <translation>&amp;Identitet</translation>
+        <translation>&amp;იდენტიფიკაცია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="253"/>
         <source>WiFi Protected Setup (WPS)</source>
-        <translation>Beskyttet Wi-Fi oppsett (WPS)</translation>
+        <translation>WiFi Protected Setup (WPS)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="261"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked use WPS push button authentication.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Når avkrysset, bruk WPS-trykknappautentisering.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="264"/>
         <source>Use Push &amp;Button Authentication</source>
-        <translation>Bruk Push &amp;Button-godkjenning</translation>
+        <translation>ღილაკზე დაჭერით ავთენტიკაციის გამოყენე&amp;ბა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="294"/>
         <source>&amp;WPS Pin</source>
-        <translation>&amp;WPS Pin</translation>
+        <translation>&amp;WPS-ის PIN-კოდი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="310"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter a WPS pin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Angi en WPS-pin-kode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;შეიყვანეთ WPS-ის PIN-კოდი.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="329"/>
         <source>Browser Login Requested</source>
-        <translation>Pålogging i nettleseren forespurt</translation>
+        <translation>მოთხოვნილია ბრაუზერით შესვლა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="338"/>
         <source>Choose or enter a browser:</source>
-        <translation>Velg eller skriv inn en nettleser:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="345"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan is requesting that you open a web browser to complete the login process.&lt;/p&gt;&lt;p&gt;We have scanned your PATH for browsers and any browsers found are shown in the list below. You may select any one browser to use it for the login. If your web browser is not shown in the list you may enter it directly in the&lt;span style=&quot; font-weight:600;&quot;&gt; Choose or enter a browser box&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;To launch the browser click the &lt;span style=&quot; font-weight:600;&quot;&gt;Launch Browser&lt;/span&gt; button. &lt;/p&gt;&lt;p&gt;If you wish to login manually close this dialog, start your web browser and proceed to the URL shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;Login URL&lt;/span&gt; box.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brave Browser Users:&lt;/span&gt; Note that Brave does not seem to accept a URL to start with. After the browser starts you will need to enter the URL manually. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ConnMan ber deg om å åpne en nettleser for å fullføre påloggingsprosessen..&lt;/p&gt;&lt;p&gt;Vi har skannet PATH for nettlesere, og alle nettlesere som ble funnet, vises i listen nedenfor. Du kan velge hvilken som helst nettleser og bruke den til innlogging. Hvis nettleseren din ikke vises i listen, kan du skrive den inn direkte i feltet&lt;span style=&quot; font-weight:600;&quot;&gt; Velg eller skriv inn en nettleserboks&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For å starte nettleseren klikker du på &lt;span style=&quot; font-weight:600;&quot;&gt;Start nettleser&lt;/span&gt; knapp. &lt;/p&gt;&lt;p&gt;Hvis du ønsker å logge inn manuelt, lukker du denne dialogboksen, starter nettleseren og går til nettadressen som vises i &lt;span style=&quot; font-weight:600;&quot;&gt;Logg inn URL&lt;/span&gt; boks.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Modige nettleserbrukere:&lt;/span&gt; Merk at Brave ikke ser ut til å godta en URL til å begynne med. Etter at nettleseren har startet, må du skrive inn URL-adressen manuelt. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="360"/>
         <source>Login URL:</source>
-        <translation>Logg inn URL::</translation>
+        <translation>შესვლის URL:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="367"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman is requesting you continue login with a web browser. This box shows the URL that contains the login page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connman ber deg fortsette påloggingen med en nettleser. Denne boksen viser URL-adressen som inneholder påloggingssiden.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use  the Firefox browser.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -166,52 +166,52 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="379"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to launch the selected browser. The browser will open at the page shown in the Login URL box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bruk denne knappen til å starte den valgte nettleseren. Nettleseren åpnes på siden som vises i påloggings-URL-boksen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="382"/>
         <source>Launch &amp;Browser</source>
-        <translation>Start &amp;Nettleser</translation>
+        <translation>&amp;ბრაუზერის გაშვება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="420"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hva er dette&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;რა არის ეს&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="423"/>
         <source>...</source>
-        <translation>…</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="447"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fortsett tilkoblingsprosessen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;დაკავშირების პროცესის გაგრძელება.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="450"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Accept and use the answers you have provided in this dialog. &lt;/p&gt;&lt;p&gt;This will send your input to the connman daemon to continue the connection process.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Godta og bruk svarene du har gitt i denne dialogen. &lt;/p&gt;&lt;p&gt;Dette vil sende inndataene dine til connman-daemon for å fortsette tilkoblingsprosessen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="453"/>
         <source>O&amp;K</source>
-        <translation>O&amp;K</translation>
+        <translation>&amp;დიახ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="460"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avbryt tilkoblingsprosessen.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;დაკავშირების პროცესის გაუქმება.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the dialog. &lt;/p&gt;&lt;p&gt;This will send a message to the connman daemon that you have cancelled the connection request.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avbryt dialogboksen. &lt;/p&gt;&lt;p&gt;Dette sender en melding til connman-demonen om at du har kansellert tilkoblingsforespørselen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="466"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Avbryt</translation>
+        <translation>&amp;გაუქმება</translation>
     </message>
 </context>
 <context>
@@ -219,12 +219,12 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="298"/>
         <source> Information</source>
-        <translation> Informasjon</translation>
+        <translation> ინფორმაცია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent_dialog.cpp" line="299"/>
         <source>You have requested the %1 browser, but we cannot find a terminal program to open it with.  Currenty we can start %1 using these terminals: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;To continue you need to manually open a terminal and then enter: &quot;%1 %2&quot;</source>
-        <translation>Du har bedt om nettleseren %1, men vi finner ikke noe terminalprogram å åpne den med.  For øyeblikket kan vi starte %1 med disse terminalene: &lt;b&gt;roxterm&lt;/b&gt; and &lt;b&gt;xterm&lt;/b&gt;.&lt;br&gt;&lt;br&gt;For å fortsette må du manuelt åpne en terminal og deretter skrive inn: &quot;%1 %2&quot;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -232,22 +232,22 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="82"/>
         <source>Connman Error</source>
-        <translation>ConnMan-feil</translation>
+        <translation>Connman-ის შეცდომა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation>Connman returnerte følgende feilmelding:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Ønsker du å prøve på nytt?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="131"/>
         <source>Agent Request Failed</source>
-        <translation>Agentforespørsel mislyktes</translation>
+        <translation>აგენტის მოთხოვნა ჩავარდა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="132"/>
         <source>The agent request failed before a reply was returned.</source>
-        <translation>Agentforespørselen mislyktes før et svar ble returnert.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -256,30 +256,30 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="67"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="84"/>
         <source>%L1 Bytes</source>
-        <translation>%L1 Bytes</translation>
+        <translation>%L1 ბაიტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="69"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="86"/>
         <source>%L1 KB</source>
-        <translation>%L1 KB</translation>
+        <translation>%L1 კბ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="71"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="88"/>
         <source>%L1 MB</source>
-        <translation>%L1 MB</translation>
+        <translation>%L1 მბ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="73"/>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="90"/>
         <source>%L1 GB</source>
-        <translation>%L1 GB</translation>
+        <translation>%L1 გბ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="76"/>
         <source>&lt;b&gt;Transmit:&lt;/b&gt;&lt;br&gt;TX Total: %1 (%2),  TX Errors: %3,  TX Dropped: %4</source>
-        <translation>&lt;b&gt;Overføre:&lt;/b&gt;&lt;br&gt;TX Totalt: %1 (%2),  TX-feil: %3,  TX droppet: %4</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="77"/>
@@ -290,50 +290,50 @@
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="97"/>
         <source>%Ln Packet(s)</source>
         <translation>
-            <numerusform>%Ln pakke</numerusform>
-            <numerusform>%Ln pakker</numerusform>
+            <numerusform>%Ln პაკეტი</numerusform>
+            <numerusform>%Ln პაკეტი</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="93"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Received:&lt;/b&gt;&lt;br&gt;RX Total: %1 (%2),  RX Errors: %3,  RX Dropped: %4</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Mottatt:&lt;/b&gt;&lt;br&gt;RX Totalt: %1 (%2),  RX-feil: %3,  RX droppet: %4</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="100"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Connect Time:&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Koble til tid:&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;მიერთების დრო:&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="111"/>
         <source>%n Day(s)</source>
         <translation>
-            <numerusform>%n dag</numerusform>
-            <numerusform>%n dager</numerusform>
+            <numerusform>%n დღე</numerusform>
+            <numerusform>%n დღე</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="118"/>
         <source>%n Hour(s)</source>
         <translation>
-            <numerusform>%n Time</numerusform>
-            <numerusform>%n Timer</numerusform>
+            <numerusform>%n საათი</numerusform>
+            <numerusform>%n საათი</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="125"/>
         <source>%n Minute(s)</source>
         <translation>
-            <numerusform>%n minutt</numerusform>
-            <numerusform>%n minutter</numerusform>
+            <numerusform>%n წუთი</numerusform>
+            <numerusform>%n წუთი</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../apps/cmstapp/code/counter/counter.cpp" line="131"/>
         <source>%n Second(s)</source>
         <translation>
-            <numerusform>%n sekund</numerusform>
-            <numerusform>%n sekunder</numerusform>
+            <numerusform>%n წამი</numerusform>
+            <numerusform>%n წამი</numerusform>
         </translation>
     </message>
 </context>
@@ -342,22 +342,22 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="86"/>
         <source>Connman Error</source>
-        <translation>ConnMan-feil</translation>
+        <translation>Connman-ის შეცდომა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="87"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation>Connman returnerte følgende feilmelding:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Ønsker du å prøve på nytt?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="123"/>
         <source>Agent Request Failed</source>
-        <translation>Agentforespørsel mislyktes</translation>
+        <translation>აგენტის მოთხოვნა ჩავარდა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="124"/>
         <source>The agent request failed before a reply was returned.</source>
-        <translation>Agentforespørselen mislyktes før et svar ble returnert.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -365,27 +365,27 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="20"/>
         <source>Dialog</source>
-        <translation>Dialog</translation>
+        <translation>ფანჯარა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="48"/>
         <source>&amp;Status</source>
-        <translation>&amp;Status</translation>
+        <translation>&amp;სტატუსი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This checkbox controls the global setting for switching all radios on or off. When checked all radios are powered down.&lt;/p&gt;&lt;p&gt;When the system is In offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Denne avmerkingsboksen styrer den globale innstillingen for å slå alle radioer på eller av. Når den er avmerket, slås alle radioer av.&lt;/p&gt;&lt;p&gt;Når systemet er i frakoblet modus, er det mulig å slå på enkelte enheter igjen. Når du forlater frakoblet modus, avgjør de individuelle retningslinjene for hver enhet om radioen slås på igjen eller ikke..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="121"/>
         <source>All Devices &amp;Off</source>
-        <translation>Alle enheter &amp;Av</translation>
+        <translation>ყველა მ&amp;ოწყობილობის გამორთვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="75"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OfflineMode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The offline mode indicates the global setting for switching all radios on or off. Changing offline mode to true results in powering down all devices. When leaving offline mode the individual policy of each device decides to switch the radio back on or not. &lt;/p&gt;&lt;p&gt;During offline mode, it is still possible to switch certain technologies manually back on. For example the limited usage of WiFi or Bluetooth devices might be allowed in some situations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OfflineMode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Frakoblet modus angir den globale innstillingen for å slå alle radioer på eller av. Hvis frakoblet modus endres til true, slås alle enhetene av. Når du forlater frakoblet modus, bestemmer den individuelle policyen for hver enhet om radioen skal slås på igjen eller ikke. &lt;/p&gt;&lt;p&gt;I frakoblet modus er det fortsatt mulig å slå på visse teknologier manuelt. Begrenset bruk av WiFi- eller Bluetooth-enheter kan for eksempel være tillatt i enkelte situasjoner.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="35"/>
@@ -400,34 +400,34 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="78"/>
         <source>Global Properties</source>
-        <translation>Globale eiendommer</translation>
+        <translation>გლობალური თვისებები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="92"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="150"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Den globale innstillingen for å slå alle radioer på eller av. Når frakoblet modus er aktivert, slås alle radioer av..&lt;/p&gt;&lt;p&gt;I frakoblet modus er det mulig å slå på enkelte enheter igjen. Når du forlater frakoblet modus, avgjør de individuelle retningslinjene for hver enhet om radioen slås på igjen eller ikke.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="95"/>
         <source>OfflineMode: Unavailable</source>
-        <translation>FrakobletModus: Ikke tilgjengelig</translation>
+        <translation>გათიშული რეჟიმი: ხელმისაწვდომი არაა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="108"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global connection state of the system.  Possible values are &amp;quot;offline&amp;quot;, &amp;quot;idle&amp;quot;, &amp;quot;ready&amp;quot;, and &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Systemets globale tilkoblingsstatus.  Mulige verdier er  &amp;quot;offline&amp;quot;, &amp;quot;idle&amp;quot;, &amp;quot;ready&amp;quot;, and &amp;quot;online&amp;quot;.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="111"/>
         <source>State: Unavailable</source>
-        <translation>Status: Ikke tilgjengelig</translation>
+        <translation>მდგომარეობა: ხელმიუწვდომელია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="184"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="152"/>
         <source>Technologies</source>
-        <translation>Teknologier</translation>
+        <translation>ტექნოლოგიები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="233"/>
@@ -435,116 +435,116 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="732"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="875"/>
         <source>Name</source>
-        <translation>Navn</translation>
+        <translation>სახელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="238"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="380"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="880"/>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation>ტიპი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="243"/>
         <source>Powered</source>
-        <translation>Drevet</translation>
+        <translation>ჩართულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="248"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="742"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2546"/>
         <source>Connected</source>
-        <translation>Tilkoblet</translation>
+        <translation>მიერთებულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="253"/>
         <source>Tethering</source>
-        <translation>Tjudring</translation>
+        <translation>ტეზერინგი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="271"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="653"/>
         <source>Resc&amp;an</source>
-        <translation>Resc&amp;an</translation>
+        <translation>თავიდან სკ&amp;ანირება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="320"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This box lists all services that connman can connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Denne boksen viser alle tjenester som connman kan koble seg til.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="323"/>
         <source>Services</source>
-        <translation>Tjenester</translation>
+        <translation>სერვისები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="385"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="885"/>
         <source>State</source>
-        <translation>Tilstand</translation>
+        <translation>შტატი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="390"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="895"/>
         <source>Connection</source>
-        <translation>Tilkobling</translation>
+        <translation>კავშირი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="406"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2007"/>
         <source>Move Before</source>
-        <translation>Flytt før</translation>
+        <translation>გადატანა სადამდე</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="419"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2012"/>
         <source>Move After</source>
-        <translation>Flytt etter</translation>
+        <translation>გადატანა რის შემდეგ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="439"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When checked hide the connection name in the Services box.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Når det er merket av, skjules tilkoblingsnavnet i boksen Tjenester.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="442"/>
         <source>&amp;Less</source>
-        <translation>&amp;Mindre</translation>
+        <translation>&amp;ნაკლები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This page will show the details of the service selected in the box at the top. If the selected service is not in the READY or ONLINE state then most of the details will be blank. &lt;/p&gt;&lt;p&gt;You may override service details by using the &lt;span style=&quot; font-weight:600;&quot;&gt;Configuration&lt;/span&gt; button at the bottom right. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Denne siden viser detaljene for tjenesten som er valgt i boksen øverst. Hvis den valgte tjenesten ikke er KLAR eller ONLINE, vil de fleste detaljene være tomme. &lt;/p&gt;&lt;p&gt;Du kan overstyre tjenestedetaljer ved å bruke &lt;span style=&quot; font-weight:600;&quot;&gt;Konfigurasjon&lt;/span&gt; nederst til høyre. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="466"/>
         <source>&amp;Details</source>
-        <translation>&amp;Detaljer</translation>
+        <translation>&amp;დეტალები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="478"/>
         <source>Ser&amp;vice</source>
-        <translation>Tje&amp;neste</translation>
+        <translation>სერ&amp;ვისი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="488"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this Combobox to select the service for which you wish to view the detailed information.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bruk denne kombinasjonsboksen til å velge den tjenesten du ønsker å se detaljert informasjon om.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="585"/>
         <source>Configuration</source>
-        <translation>Konfigurasjon</translation>
+        <translation>კონფიგურაცია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="598"/>
         <source>&amp;Wireless</source>
-        <translation>&amp;Trådløs</translation>
+        <translation>&amp;უსადენო</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="604"/>
         <source>Wireless Services</source>
-        <translation>Trådløstjenester</translation>
+        <translation>უსადენო სერვისები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="610"/>
@@ -555,34 +555,34 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="613"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="782"/>
         <source>Connect</source>
-        <translation>Koble til</translation>
+        <translation>მიერთება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="620"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a wifi service in the table below and press this button to disconnect it. &lt;/p&gt;&lt;p&gt;If there is only one wifi service in the &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; state pressing this button will automatically select that service and disconnect it. &lt;/p&gt;&lt;p&gt;This may also be used to abort a previous connection attempt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Velg en wifi-tjeneste i tabellen nedenfor og trykk på denne knappen for å koble den fra. &lt;/p&gt;&lt;p&gt;Hvis det bare finnes én wifi-tjeneste i &amp;quot;ready&amp;quot; or &amp;quot;online&amp;quot; Hvis du trykker på denne knappen, vil tjenesten automatisk bli valgt og frakoblet. &lt;/p&gt;&lt;p&gt;Dette kan også brukes til å avbryte et tidligere tilkoblingsforsøk.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="623"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="795"/>
         <source>Disconnect</source>
-        <translation>Koble fra</translation>
+        <translation>გათიშვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="633"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="822"/>
         <source>Remove</source>
-        <translation>Fjern</translation>
+        <translation>წაშლა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="666"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This label shows the number of WiFi technologies (devices) that were found, and the number that are powered on. There must be at least one WiFi technology found and powered in order for the box below to show services.&lt;/p&gt;&lt;p&gt;To turn a technology on or off go to the &lt;span style=&quot; font-weight:600;&quot;&gt;Technologies&lt;/span&gt; box in the &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; tab and double click on the text that shows in the &lt;span style=&quot; font-weight:600;&quot;&gt;Powered&lt;/span&gt; column for the technology.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Denne etiketten viser antall WiFi-teknologier (enheter) som ble funnet, og hvor mange som er slått på. Minst én WiFi-teknologi må være funnet og slått på for at boksen nedenfor skal vise tjenester.&lt;/p&gt;&lt;p&gt;Hvis du vil slå en teknologi av eller på, går du til &lt;span style=&quot; font-weight:600;&quot;&gt;Teknologier&lt;/span&gt; boksen i &lt;span style=&quot; font-weight:600;&quot;&gt;Status&lt;/span&gt; fanen og dobbeltklikk på teksten som vises i vinduet &lt;span style=&quot; font-weight:600;&quot;&gt;Drevet&lt;/span&gt; spalte for teknologien.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="669"/>
         <source>Wifi State</source>
-        <translation>Wi-Fi-tilstand</translation>
+        <translation>Wifi-ის მდგომარეობა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1318"/>
@@ -617,7 +617,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1380"/>
         <source>Start Up Options</source>
-        <translation type="unfinished">Oppstartsvalg</translation>
+        <translation>გაშვების მორგება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1438"/>
@@ -634,32 +634,32 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1393"/>
         <source>Counter Update Rate </source>
-        <translation type="unfinished"></translation>
+        <translation>მთვლელების განახლების სიხშირე </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1642"/>
         <source>External Programs</source>
-        <translation>Eksterne programmer</translation>
+        <translation>გარე პროგრამები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1822"/>
         <source>Aw&amp;Oken</source>
-        <translation type="unfinished">&amp;Ikoner</translation>
+        <translation>&amp;მღვიძარე</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1829"/>
         <source>A&amp;rtwork</source>
-        <translation>K&amp;unstverk</translation>
+        <translation>გ&amp;რაფიკული მასალები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2017"/>
         <source>Rescan</source>
-        <translation>Skann på ny</translation>
+        <translation>თავიდან სკანირება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2025"/>
         <source>Offline Mode</source>
-        <translation>Frakoblet modus</translation>
+        <translation>ქსელგარეშე რეჟიმი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="268"/>
@@ -669,22 +669,22 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="737"/>
         <source>Favorite</source>
-        <translation>Favoritt</translation>
+        <translation>რჩეული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="747"/>
         <source>Security</source>
-        <translation>Sikkerhet</translation>
+        <translation>უსაფრთხოება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="752"/>
         <source>Signal Strength</source>
-        <translation>Signalstyrke</translation>
+        <translation>სიგნალის სიძლიერე</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="907"/>
         <source>&amp;Counters</source>
-        <translation>&amp;Telleverk</translation>
+        <translation>მთ&amp;ვლელები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="928"/>
@@ -695,7 +695,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="931"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1706"/>
         <source>Service:</source>
-        <translation>Tjeneste:</translation>
+        <translation>სერვისი:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="974"/>
@@ -705,13 +705,13 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="947"/>
         <source>Home</source>
-        <translation>Hjem</translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="977"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1033"/>
         <source>Counter not available.</source>
-        <translation type="unfinished"></translation>
+        <translation>მთვლელი ხელმისაწვდომი არაა.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1003"/>
@@ -721,12 +721,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1006"/>
         <source>Roaming</source>
-        <translation>Tjudring</translation>
+        <translation>როუმინგი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1053"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Counter Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;მთვლელის მორგება&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1056"/>
@@ -736,12 +736,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1059"/>
         <source>Settings:</source>
-        <translation>Innstillinger:</translation>
+        <translation>მორგება:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1074"/>
         <source>&amp;Preferences</source>
-        <translation>&amp;Innstillinger</translation>
+        <translation>&amp;გამართვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1527"/>
@@ -751,7 +751,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1530"/>
         <source>Enable Counters</source>
-        <translation>Skru på telleverk</translation>
+        <translation>მთვლელების ჩართვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1603"/>
@@ -761,7 +761,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1606"/>
         <source>Disable VPN</source>
-        <translation>Skru av VPN</translation>
+        <translation>VPN-ის გათიშვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1400"/>
@@ -771,7 +771,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1403"/>
         <source>Disable Minimized</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩაკეცილად გამორთვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1103"/>
@@ -781,7 +781,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1106"/>
         <source>Interface</source>
-        <translation>Grensesnitt</translation>
+        <translation>ინტერფეისი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1122"/>
@@ -791,7 +791,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1125"/>
         <source>Enable ToolTips (Interface)</source>
-        <translation>Skru på verktøytips (grensesnitt)</translation>
+        <translation>მინიშნებების ჩართვა (ინტერფეისი)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1135"/>
@@ -801,7 +801,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1138"/>
         <source>Reset Counters</source>
-        <translation>Tilbakestill tellere</translation>
+        <translation>მთვლელების ჩამოყრა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1145"/>
@@ -811,7 +811,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1148"/>
         <source>Advanced Controls</source>
-        <translation>Avanserte kontroller</translation>
+        <translation>დამატებითი მართვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1572"/>
@@ -832,7 +832,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1496"/>
         <source>Counter Update KB</source>
-        <translation type="unfinished"></translation>
+        <translation>მთვლელების განახლება კბ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1452"/>
@@ -847,17 +847,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1442"/>
         <source>Start Minimized</source>
-        <translation>Start minimert</translation>
+        <translation>ჩაკეცილად გაშვება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1506"/>
         <source>Wait Time</source>
-        <translation>Ventetid</translation>
+        <translation>მოლოდინის დრო</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1576"/>
         <source>Disable Tray Icon</source>
-        <translation>Skru av systemkurvsikon</translation>
+        <translation>სისტემის კუთხის ხატულას გამორთვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1112"/>
@@ -867,7 +867,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1115"/>
         <source>Retain State</source>
-        <translation>Behold tilstand</translation>
+        <translation>მდგომარეობის შენარჩუნება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1616"/>
@@ -877,24 +877,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1619"/>
         <source>Use Icon Theme</source>
-        <translation>Bruk ikondrakt</translation>
+        <translation>ხატულას თემის გამოყენება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1540"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the frequency in seconds between counter updates (default is 10 seconds). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>None</source>
-        <translation type="obsolete">Ingen</translation>
-    </message>
-    <message>
-        <source>XFCE</source>
-        <translation type="vanished">XFCE</translation>
-    </message>
-    <message>
-        <source>MATE</source>
-        <translation type="vanished">MATE</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1516"/>
@@ -915,7 +903,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="770"/>
         <source>VPN Services</source>
-        <translation>VPN-tjenere</translation>
+        <translation>VPN-ის სერვისები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="779"/>
@@ -930,12 +918,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="890"/>
         <source>Host</source>
-        <translation>Vert</translation>
+        <translation>ჰოსტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1520"/>
         <source>Fake Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>ცრუ გამჭვირვალობა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1207"/>
@@ -945,12 +933,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
         <source>System Tray</source>
-        <translation>Systemkurv</translation>
+        <translation>სისტემს კუთხე</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1229"/>
         <source>Hide Tray Icon</source>
-        <translation>Skjul systemkurvsikon</translation>
+        <translation>სისტემურ კუთხეში ხატულას დამალვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1249"/>
@@ -960,7 +948,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1252"/>
         <source>Enable System Tray Popups</source>
-        <translation>Skru på oppsprett fra systemkurven</translation>
+        <translation>სისტემურ კუთხეში მხტუნარების ჩართვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1239"/>
@@ -970,22 +958,22 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1242"/>
         <source>System Tray Notifications</source>
-        <translation>Systemkurvvarsler</translation>
+        <translation>გაფრთხილებები სისტემურ კუთხეში</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1271"/>
         <source>Notifications</source>
-        <translation>Varsler</translation>
+        <translation>გაფრთხილებები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1280"/>
         <source>Notification Daemon</source>
-        <translation>Bakgrunnstjeneste for varsling</translation>
+        <translation>გაფრთხილებების დემონი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1293"/>
         <source>Server Status</source>
-        <translation>Tjenerstatus</translation>
+        <translation>სერვერის სტატუსი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="181"/>
@@ -995,7 +983,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="258"/>
         <source>ID:Password</source>
-        <translation>ID:Passord</translation>
+        <translation>ID:პაროლი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="291"/>
@@ -1005,7 +993,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="294"/>
         <source>ID:Pass</source>
-        <translation type="unfinished">ID:Pass</translation>
+        <translation>ID:Pass</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="301"/>
@@ -1015,7 +1003,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="304"/>
         <source>Less</source>
-        <translation>Mindre</translation>
+        <translation>ნაკლები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="403"/>
@@ -1030,7 +1018,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1312"/>
         <source>Program Control</source>
-        <translation>Programkontroll</translation>
+        <translation>პროგრამის მართვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1338"/>
@@ -1040,7 +1028,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1341"/>
         <source>Enable Autostart</source>
-        <translation type="unfinished"></translation>
+        <translation>ავტოგაშვების ჩართვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1328"/>
@@ -1050,7 +1038,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1331"/>
         <source>Retry Failed Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩავარდნილი კავშირის თავიდან ცდა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1166"/>
@@ -1060,7 +1048,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="153"/>
         <source>...</source>
-        <translation type="unfinished">…</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="582"/>
@@ -1075,7 +1063,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="643"/>
         <source>Edit</source>
-        <translation>Rediger</translation>
+        <translation>ჩასწორება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="650"/>
@@ -1090,7 +1078,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="815"/>
         <source>Create</source>
-        <translation>Opprett</translation>
+        <translation>შექმნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="832"/>
@@ -1105,7 +1093,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1179"/>
         <source>Colorize</source>
-        <translation>Fargelegg</translation>
+        <translation>გაფერადება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1216"/>
@@ -1115,7 +1103,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1219"/>
         <source>Hide Tray Icon Unless Needed</source>
-        <translation>Skjul systemkurvsikon med mindre det trengs</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1226"/>
@@ -1130,7 +1118,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1565"/>
         <source>Icon Scale Factor</source>
-        <translation>Ikon-skaleringsfaktor</translation>
+        <translation>ხატულას მასშტაბის კოეფიციენტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1471"/>
@@ -1160,7 +1148,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1664"/>
         <source>Before Connecting</source>
-        <translation>Før tilkobling</translation>
+        <translation>მიერთებამდე</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1680"/>
@@ -1170,7 +1158,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1683"/>
         <source>Execute:</source>
-        <translation>Kjør:</translation>
+        <translation>გაშვება:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1703"/>
@@ -1185,17 +1173,17 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1721"/>
         <source>Modify Service File</source>
-        <translation>Endre tjenestefil</translation>
+        <translation>სერვისის ფაილის შეცვლა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1730"/>
         <source>Service configuration file to be modified by the program.</source>
-        <translation>Tjenesteoppsettsfil som skal endres av programmet.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1733"/>
         <source>FIle: </source>
-        <translation>Fil: </translation>
+        <translation>ფაილი: </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1770"/>
@@ -1209,17 +1197,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1777"/>
         <source>After Connecting</source>
-        <translation>Etter tilkobling</translation>
+        <translation>მიერთების შემდეგ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1797"/>
         <source>&amp;Help</source>
-        <translation>&amp;Hjelp</translation>
+        <translation>&amp;დახმარება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1803"/>
         <source>&amp;About</source>
-        <translation>&amp;Om</translation>
+        <translation>&amp;შესახებ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1809"/>
@@ -1229,7 +1217,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1812"/>
         <source>C&amp;MST</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;MST</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1819"/>
@@ -1244,37 +1232,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1839"/>
         <source>&amp;QT</source>
-        <translation type="unfinished">&amp;Qt</translation>
+        <translation>&amp;QT</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1846"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the program license.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bruk denne knappen for å vise programlisensen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1849"/>
         <source>&amp;License</source>
-        <translation type="unfinished">&amp;Lisens</translation>
+        <translation>&amp;ლიცენზია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1856"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use this button to view the change log of the program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bruk denne knappen for å endre loggføringen for programmet&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1859"/>
         <source>ChangeLo&amp;g</source>
-        <translation>Endringslog&amp;g</translation>
+        <translation>ცვლილებების &amp;ჟურნალი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1897"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Help&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Program help is mainly provided by the &amp;quot;What&apos;s This&amp;quot; button in the lower left corner. Press the button and then click on an item you are interested in. &amp;quot;What&apos;s This&amp;quot; is also available via context menu by right clicking on a button, box or text area.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hjelp&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Programhjelp tilbys i hovedsak av &amp;quot;Hva er dette&amp;quot;-knappen nede til venstre. Trykk på den og deretter et element du er interessert i. &amp;quot;Hva er dette&amp;quot; er også tilgjengelig via bindeleddsmeny ved å høyreklikke en knapp, boks, eller et tekstområde.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1939"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hva er dette&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;რა არის ეს&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1942"/>
@@ -1289,7 +1277,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1955"/>
         <source>Provisioning Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>სამუშაოდ მომზადების რედაქტორი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1962"/>
@@ -1299,7 +1287,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1965"/>
         <source>VPN Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN-ის რედაქტორი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1972"/>
@@ -1309,7 +1297,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1975"/>
         <source>E&amp;xit</source>
-        <translation>A&amp;vslutt</translation>
+        <translation>&amp;გამოსვლა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1995"/>
@@ -1320,12 +1308,12 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1998"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="435"/>
         <source>Mi&amp;nimize</source>
-        <translation>Mi&amp;nimer</translation>
+        <translation>&amp;ჩაკეცვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2030"/>
         <source>IDPass</source>
-        <translation type="unfinished"></translation>
+        <translation>IDPass</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="2033"/>
@@ -1335,37 +1323,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="436"/>
         <source>Ma&amp;ximize</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;აკეცვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="440"/>
         <source>&amp;Exit</source>
-        <translation>&amp;Avslutt</translation>
+        <translation>&amp;გასვლა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="550"/>
         <source>About %1</source>
-        <translation>Om %1</translation>
+        <translation>%1-ის შესახებ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="153"/>
         <source>Service Details</source>
-        <translation>Tjenestedetaljer</translation>
+        <translation>სერვისის დეტალები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="154"/>
         <source>WiFi Connections</source>
-        <translation type="unfinished">Wi-Fi-tilkoblinger</translation>
+        <translation>WiFi კავშირები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="155"/>
         <source>VPN Connections</source>
-        <translation>VPN-tilkoblinger</translation>
+        <translation>VPN კავშირები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="578"/>
         <source>About AwOken</source>
-        <translation>Om AwOken</translation>
+        <translation>AwOken-ის შესახებ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="593"/>
@@ -1375,34 +1363,34 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="608"/>
         <source>License</source>
-        <translation>Lisens</translation>
+        <translation>ლიცენზია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="616"/>
         <source>%1 change log is not available.</source>
-        <translation type="unfinished">%1 endringslogg utilgjengelig.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="618"/>
         <source>ChangeLog</source>
-        <translation type="unfinished">Endringslogg</translation>
+        <translation>ცვლილებების ჟურნალი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="764"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2880"/>
         <source>Cancel</source>
-        <translation>Avbryt</translation>
+        <translation>გაუქმება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="789"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="794"/>
         <source>&lt;b&gt;Service:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;Tjeneste:&lt;/b&gt; %1</translation>
+        <translation>&lt;b&gt;სერვისი:&lt;/b&gt; %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="794"/>
         <source>Unable to determine service</source>
-        <translation>Kunne ikke fastsette tjeneste</translation>
+        <translation>სერვისის განსაზღვრა შეუძლებელია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="826"/>
@@ -1410,48 +1398,48 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="973"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1007"/>
         <source>No Services Selected</source>
-        <translation>Ingen tjenester valgt</translation>
+        <translation>სერვისები არჩეული არაა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="974"/>
         <source>You need to select a Wifi service before pressing the remove button.</source>
-        <translation type="unfinished">Du må velge en Wi-Fi-tjeneste før du trykker «Fjern».</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1111"/>
         <source>Offline Mode Engaged</source>
-        <translation>Frakoblet modus på</translation>
+        <translation>ქსელგარეშე რეჟიმი ჩაირთო</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1116"/>
         <source>Offline Mode Disabled</source>
-        <translation>Frakoblet modus av</translation>
+        <translation>ინტერნეტგარეშე მუშაობის რეჟიმი გაითიშა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1130"/>
         <source>Network Services:</source>
-        <translation>Nettverkstjenester:</translation>
+        <translation>ქსელის სერვისები:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1397"/>
         <source>Service Error: %1</source>
-        <translation>Tjenestefeil: %1</translation>
+        <translation>სერვისის შეცდომა: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1398"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1443"/>
         <source>Object Path: %1</source>
-        <translation>Objektsti: %1</translation>
+        <translation>ობიექტის ბილიკი: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1436"/>
         <source>VPN Engaged</source>
-        <translation>VPN påslått</translation>
+        <translation>VPN ჩართულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1440"/>
         <source>VPN Disengaged</source>
-        <translation>VPN avslått</translation>
+        <translation>VPN გამორთულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1526"/>
@@ -1468,7 +1456,7 @@ p, li { white-space: pre-wrap; }
         <source>Ethernet Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation>Ethernet-tilkobling
+        <translation>Ethernet მიერთება
 </translation>
     </message>
     <message>
@@ -1476,7 +1464,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2462"/>
         <source>Service: %1
 </source>
-        <translation>Tjeneste: %1
+        <translation>სერვისი: %1
 </translation>
     </message>
     <message>
@@ -1484,7 +1472,7 @@ p, li { white-space: pre-wrap; }
         <source>WiFi Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation type="unfinished">Wi-Fi-tilkobling
+        <translation>უსადენო მიერთება
 </translation>
     </message>
     <message>
@@ -1498,14 +1486,14 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2447"/>
         <source>Security: %1
 </source>
-        <translation>Sikkerhet: %1
+        <translation>უსაფრთხოება: %1
 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2448"/>
         <source>Strength: %1%
 </source>
-        <translation>Styrke: %1
+        <translation>სიძლიერე: %1%
 </translation>
     </message>
     <message>
@@ -1513,59 +1501,55 @@ p, li { white-space: pre-wrap; }
         <source>VPN Connection
 </source>
         <comment>icon_tool_tip</comment>
-        <translation>VPN-tilkobling: %1
+        <translation>VPN მიერთება
 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2461"/>
         <source>Type: %1
 </source>
-        <translation>Type: %1
+        <translation>ტიპი: %1
 </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2463"/>
         <source>Host: %1</source>
-        <translation>Vert: %1</translation>
-    </message>
-    <message>
-        <source> Warning</source>
-        <translation type="vanished"> Advarsel</translation>
+        <translation>ჰოსტი: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1756"/>
         <source>&lt;b&gt;Connection:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;Tilkobling:&lt;/b&gt; %1</translation>
+        <translation>&lt;b&gt;კავშირი:&lt;/b&gt; %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="551"/>
         <source>&lt;center&gt;%1 is a program to interface with the Connman daemon and to provide a system tray control.&lt;br&gt;&lt;center&gt;Version &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Release date: %3&lt;center&gt;Copyright c %4&lt;center&gt;by&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Translations:&lt;/b&gt;&lt;center&gt;Jianfeng Zhang (Chinese)&lt;center&gt;sqozz (German)&lt;center&gt;Ilya Shestopalov (Russian)&lt;center&gt;Heimen Stoffels (Dutch)&lt;center&gt; Yaşar Çiv (Turkish)&lt;br&gt;&lt;center&gt;&lt;b&gt;Build Information:&lt;/b&gt;&lt;center&gt;Compiled using QT version %5&lt;center&gt;Connman version %6</source>
-        <translation>&lt;center&gt;%1 er et program for å bruke Connman-bakgrunnstjenesten og for å tilby systemkurvkontroll.&lt;br&gt;&lt;center&gt;Versjon &lt;b&gt;%2&lt;/b&gt;&lt;center&gt;Utgivelsesdato: %3&lt;center&gt;Opphavsrett c %4&lt;center&gt;tilhørende&lt;center&gt;Andrew J. Bibb&lt;center&gt;Vermont, USA&lt;br&gt;&lt;center&gt;&lt;b&gt;Oversettelser:&lt;/b&gt;&lt;center&gt;Allan Nordhøy, (bokmål), Jianfeng Zhang (Kinesisk)&lt;center&gt;sqozz (Tysk)&lt;center&gt;Ilya Shestopalov (Russisk)&lt;center&gt;Heimen Stoffels (Nederlandsk)&lt;center&gt; Yaşar Çiv (Tyrkisk)&lt;br&gt;&lt;center&gt;&lt;b&gt;Bygginfo:&lt;/b&gt;&lt;center&gt;Kompilert med Qt-versjon %5&lt;center&gt;Connman-versjon %6</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="447"/>
         <source>&amp;Colorize</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;გაფერადება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="450"/>
         <source>&amp;Transparency</source>
-        <translation>&amp;Gjennomsiktighet</translation>
+        <translation>&amp;გამჭვირვალობა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="592"/>
         <source>About Other Artwork</source>
-        <translation type="unfinished"></translation>
+        <translation>სხვა ხელოვნების ნიმუშების შესახებ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1008"/>
         <source>You need to select a Wifi service before pressing the edit button.</source>
-        <translation type="unfinished">Du må velge en Wi-Fi-tjeneste før du trykker «Rediger»-knappen.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1060"/>
         <source> Information</source>
-        <translation type="unfinished"> Info</translation>
+        <translation> ინფორმაცია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1061"/>
@@ -1575,12 +1559,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1071"/>
         <source>%1 - Select File</source>
-        <translation>%1 — velg fil</translation>
+        <translation>%1 - აირჩიეთ ფაილი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1072"/>
         <source>Select a file to be deleted.</source>
-        <translation type="unfinished">Velg fil å slette.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1113"/>
@@ -1595,17 +1579,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1133"/>
         <source>The system is online.</source>
-        <translation type="unfinished"></translation>
+        <translation>სისტემა ხაზზეა.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1139"/>
         <source>The system is offline.</source>
-        <translation type="unfinished"></translation>
+        <translation>სისტემა ხაზგარეშეა.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1240"/>
         <source>VPN Kill Switch Engaged</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN Kill Switch ჩართულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1241"/>
@@ -1615,101 +1599,101 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1759"/>
         <source>&lt;br&gt;&lt;b&gt;Service Details:&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;Tjenestedetaljer:&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt;სერვისის დეტალები:&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1761"/>
         <source>Service Type: %1&lt;br&gt;</source>
-        <translation>Tjenestetype: %1&lt;br&gt;</translation>
+        <translation>სერვისის ტიპი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1763"/>
         <source>Service Name: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>სერვისის სახელი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1764"/>
         <source>Service State: %1&lt;br&gt;</source>
-        <translation>Tjenestetilstand: %1&lt;br&gt;</translation>
+        <translation>სერვისის მდგომარეობა: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1765"/>
         <source>Favorite: %1&lt;br&gt;</source>
-        <translation>Favoritt: %1&lt;br&gt;</translation>
+        <translation>რჩეული: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1765"/>
         <source>Yes</source>
         <comment>favorite</comment>
-        <translation>Ja</translation>
+        <translation>კი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1765"/>
         <source>No</source>
         <comment>favorite</comment>
-        <translation>Nei</translation>
+        <translation>არა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1766"/>
         <source>External Configuration File: %1&lt;br&gt;</source>
-        <translation>Ekstern oppsettsfil: %1&lt;br&gt;</translation>
+        <translation>გარე კონფიგურაციის ფაილი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1766"/>
         <source>Yes</source>
         <comment>immutable</comment>
-        <translation>Ja</translation>
+        <translation>კი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1766"/>
         <source>No</source>
         <comment>immutable</comment>
-        <translation>Nei</translation>
+        <translation>არა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1768"/>
         <source>Auto Connect: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>ავტოდაკავშირება: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1768"/>
         <source>On</source>
         <comment>autoconnect</comment>
-        <translation type="unfinished">På</translation>
+        <translation>ჩართული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1768"/>
         <source>No</source>
         <comment>autoconnect</comment>
-        <translation>Nei</translation>
+        <translation>არა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1770"/>
         <source>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished">&lt;br&gt;&lt;b&gt;IPv6&lt;/b&gt;&lt;br&gt; {4&lt;?}</translation>
+        <translation>&lt;br&gt;&lt;b&gt;IPv4&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1772"/>
         <source>IP Address Acquisition: %1&lt;br&gt;</source>
-        <translation>IP-adresseinnhenting: %1&lt;br&gt;</translation>
+        <translation>IP მისამართის მიღება: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1773"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1780"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1815"/>
         <source>IP Address: %1&lt;br&gt;</source>
-        <translation>IP-adresse: %1&lt;br&gt;</translation>
+        <translation>IP მისამართი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1774"/>
         <source>IP Netmask: %1&lt;br&gt;</source>
-        <translation>IP-nettmaske: %1&lt;br&gt;</translation>
+        <translation>IP ქსელის ნიღაბი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1775"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1786"/>
         <source>IP Gateway: %1&lt;br&gt;</source>
-        <translation>IP-portner: %1&lt;br&gt;</translation>
+        <translation>IP ნაგულისხმევი რაუტერი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1777"/>
@@ -1720,42 +1704,42 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1779"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1792"/>
         <source>Address Acquisition: %1&lt;br&gt;</source>
-        <translation>Adresseinnhenting: %1&lt;br&gt;</translation>
+        <translation>მისამართის მიღება: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1783"/>
         <source>Prefix Length: &lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>პრეფიქსის სიგრძე: &lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1785"/>
         <source>Prefix Length: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>პრეფიქსის სიგრძე: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1787"/>
         <source>Privacy: %1&lt;br&gt;</source>
-        <translation>Personvern: %1&lt;br&gt;</translation>
+        <translation>კონფიდენციალობა: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1789"/>
         <source>&lt;br&gt;&lt;b&gt;Proxy&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;Mellomtjener&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt;პროქსი&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1794"/>
         <source>URL: %1&lt;br&gt;</source>
-        <translation>Nettadresse: %1&lt;br&gt;</translation>
+        <translation>URL: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1797"/>
         <source>Servers:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
-        <translation>Tjenere:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
+        <translation>სერვერები:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1798"/>
         <source>Excludes:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>ამოღებულია:&lt;br&gt;&amp;nbsp;&amp;nbsp;%1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1803"/>
@@ -1765,86 +1749,86 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
         <source>Support Enabled: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>მხარდაჭერა ჩართულია: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
         <source>Yes</source>
         <comment>mdns</comment>
-        <translation>Ja</translation>
+        <translation>კი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1804"/>
         <source>No</source>
         <comment>mdns</comment>
-        <translation>Nei</translation>
+        <translation>არა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1813"/>
         <source>&lt;br&gt;&lt;b&gt;Last Address Conflict&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;ბოლო მისამართის კონფლიქტი&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1817"/>
         <source>MAC Address: %1&lt;br&gt;</source>
-        <translation>MAC-adresse: %1&lt;br&gt;</translation>
+        <translation>MAC მისამართი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1818"/>
         <source>Conflict detected on: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>აღმოჩენილია კონფლიქტი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1819"/>
         <source>Resolved: %1&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>გადაჭრილია: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1819"/>
         <source>Yes</source>
         <comment>last_address_conflict</comment>
-        <translation>Ja</translation>
+        <translation>კი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1819"/>
         <source>No</source>
         <comment>last_address_conflict</comment>
-        <translation>Nei</translation>
+        <translation>არა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1828"/>
         <source>&lt;br&gt;&lt;b&gt;Name Servers&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;Navnetjenere&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt;DNS სერვერები&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1831"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Time Servers&lt;/b&gt;&lt;br&gt;  </source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Tidstjenere&lt;/b&gt;&lt;br&gt;  </translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;დროის სერვერები&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1834"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Search Domains&lt;/b&gt;&lt;br&gt;  </source>
-        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Søkedomener&lt;/b&gt;&lt;br&gt;  </translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;ძებნის დომენები&lt;/b&gt;&lt;br&gt;  </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1837"/>
         <source>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;br&gt;&lt;b&gt;Ethernet&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1839"/>
         <source>Connection Method: %1&lt;br&gt;</source>
-        <translation>Tilkoblingsmetode: %1&lt;br&gt;</translation>
+        <translation>კავშირის მეთოდი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1840"/>
         <source>Interface: %1&lt;br&gt;</source>
-        <translation>Grensesnitt: %1&lt;br&gt;</translation>
+        <translation>ინტერფეისი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1841"/>
         <source>Device Address: %1&lt;br&gt;</source>
-        <translation>Enhetsadresse: %1&lt;br&gt;</translation>
+        <translation>მოწყობილობის მისამართი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1842"/>
@@ -1854,105 +1838,105 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1844"/>
         <source>&lt;br&gt;&lt;b&gt;Wireless&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;Trådløs&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt;უსადენო&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1849"/>
         <source>Security: %1&lt;br&gt;</source>
-        <translation>Sikkerhet: %1&lt;br&gt;</translation>
+        <translation>უსაფრთხოება: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1850"/>
         <source>Strength: %1&lt;br&gt;</source>
-        <translation>Styrke: %1&lt;br&gt;</translation>
+        <translation>სიმძლავრე: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1851"/>
         <source>Roaming: %1&lt;br&gt;</source>
-        <translation>Tjudring: %1&lt;br&gt;</translation>
+        <translation>როუმინგი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1851"/>
         <source>Yes</source>
         <comment>roaming</comment>
-        <translation>Ja</translation>
+        <translation>კი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1851"/>
         <source>No</source>
         <comment>roaming</comment>
-        <translation>Nei</translation>
+        <translation>არა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1853"/>
         <source>&lt;br&gt;&lt;b&gt;VPN Provider&lt;/b&gt;&lt;br&gt;</source>
-        <translation>&lt;br&gt;&lt;b&gt;VPN-tilbyder&lt;/b&gt;&lt;br&gt;</translation>
+        <translation>&lt;br&gt;&lt;b&gt;VPN პროვაიდერი&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1855"/>
         <source>Host: %1&lt;br&gt;</source>
-        <translation>Vert: %1&lt;br&gt;</translation>
+        <translation>ჰოსტი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1856"/>
         <source>Domain: %1&lt;br&gt;</source>
-        <translation>Domene: %1&lt;br&gt;</translation>
+        <translation>დომენი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1857"/>
         <source>Name: %1&lt;br&gt;</source>
-        <translation>Navn: %1&lt;br&gt;</translation>
+        <translation>სახელი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1858"/>
         <source>Type: %1&lt;br&gt;</source>
-        <translation>Type: %1&lt;br&gt;</translation>
+        <translation>ტიპი: %1&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1951"/>
         <source>State: </source>
-        <translation>Tilstand: </translation>
+        <translation>მდგომარეობა: </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1957"/>
         <source>Engaged</source>
-        <translation>Påslått</translation>
+        <translation>დანიშნული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1962"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2548"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2621"/>
         <source>Disabled</source>
-        <translation>Avslått</translation>
+        <translation>გამორთული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="1966"/>
         <source>Offline Mode </source>
-        <translation>Frakoblet modus </translation>
+        <translation>ინტერნეტგარეშე რეჟიმი </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2022"/>
         <source>Yes</source>
         <comment>connected</comment>
-        <translation>Ja</translation>
+        <translation>კი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2022"/>
         <source>No</source>
         <comment>connected</comment>
-        <translation>Nei</translation>
+        <translation>არა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2029"/>
         <source>On</source>
         <comment>tethering</comment>
-        <translation>På</translation>
+        <translation>ჩართ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2035"/>
         <source>Off</source>
         <comment>tethering</comment>
-        <translation>Av</translation>
+        <translation>გამორთ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2377"/>
@@ -1963,7 +1947,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2435"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2449"/>
         <source>Interface: %1</source>
-        <translation>Grensesnitt: %1</translation>
+        <translation>ინტერფეისი: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2477"/>
@@ -1981,7 +1965,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2487"/>
         <source>Not Connected</source>
         <comment>icon_tool_tip</comment>
-        <translation>Ikke tilkoblet</translation>
+        <translation>დაკავშირებული არაა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2494"/>
@@ -1991,74 +1975,74 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2495"/>
         <source>Connection status is unknown</source>
-        <translation>Tilkoblingsstatus ukjent</translation>
+        <translation>კავშირის სტატუსი უცნობია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2542"/>
         <source>Type: %1</source>
-        <translation>Type: %1</translation>
+        <translation>ტიპი: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2543"/>
         <source>&lt;br&gt;Powered </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;ჩართულია </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2544"/>
         <source>On</source>
-        <translation>På</translation>
+        <translation>ჩართული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2544"/>
         <source>Off</source>
-        <translation>Av</translation>
+        <translation>გამორთ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2546"/>
         <source>Not Connected</source>
-        <translation>Ikke tilkoblet</translation>
+        <translation>დაკავშირებული არაა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2547"/>
         <source>&lt;br&gt;Tethering </source>
-        <translation>&lt;br&gt;Tjudring </translation>
+        <translation>&lt;br&gt;ტეზერინგი </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2548"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2621"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>ჩართულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2608"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2638"/>
         <source>Connection : %1</source>
-        <translation>Tilkobling: %1</translation>
+        <translation>კავშირი: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2610"/>
         <source>Signal Strength: %1%</source>
-        <translation>Signalstyrke: %1%</translation>
+        <translation>სიგნალის სიძლიერე: %1%</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2612"/>
         <source>Favorite Connection</source>
-        <translation>Favoritt-tilkobling</translation>
+        <translation>რჩეული კავშირი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2612"/>
         <source>Never Connected</source>
-        <translation type="unfinished">Aldri tilkoblet</translation>
+        <translation>არასდროს დაკავშირებული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2619"/>
         <source>&lt;br&gt;Roaming</source>
-        <translation>&lt;br&gt;Tjudring</translation>
+        <translation>&lt;br&gt;როუმინგი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2620"/>
         <source>&lt;br&gt;Autoconnect is </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;ავტომიერთება </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3347"/>
@@ -2074,7 +2058,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3065"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3070"/>
         <source>%1 - Critical Error</source>
-        <translation>%1 — kritisk feil</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3066"/>
@@ -2101,7 +2085,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3080"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3085"/>
         <source>%1 - Warning</source>
-        <translation type="unfinished">%1 — advarsel</translation>
+        <translation>%1 - გაფრთხილება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3076"/>
@@ -2136,7 +2120,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3156"/>
         <source>[Hidden Wifi]</source>
-        <translation type="unfinished">[Skjult Wi-Fi]</translation>
+        <translation>[დამალული Wifi]</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3210"/>
@@ -2156,13 +2140,13 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="3342"/>
         <source>Colorize Icons</source>
-        <translation>Fargelegg ikoner</translation>
+        <translation>ხატულების გაფერადება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2607"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2637"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished">&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="579"/>
@@ -2173,18 +2157,18 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2008"/>
         <source>On</source>
         <comment>powered</comment>
-        <translation>På</translation>
+        <translation>ჩართული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2014"/>
         <source>Off</source>
         <comment>powered</comment>
-        <translation>Av</translation>
+        <translation>გამორთ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2618"/>
         <source>Security: %1</source>
-        <translation>Sikkerhet: %1</translation>
+        <translation>უსაფრთხოება: %1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="606"/>
@@ -2204,12 +2188,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2541"/>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1 Properties&lt;/b&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;center&gt;&lt;b&gt;%1-ის თვისებები&lt;/b&gt;&lt;/center&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2177"/>
         <source>  WiFi Technologies:&lt;br&gt;  %1 Found, %2 Powered</source>
-        <translation type="unfinished">  Wi-Fi-kort:&lt;br&gt;  %1 funnet, %2 påslått</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2217,22 +2201,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="214"/>
         <source>File save failed.</source>
-        <translation type="unfinished">Kunne ikke lagre fil.</translation>
+        <translation>ფაილის შენახვა ჩავარდა.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="217"/>
         <source>%L1 KB written</source>
-        <translation>%L1 KB skrevet</translation>
+        <translation>ჩაწერილია %L1 კბ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="219"/>
         <source>%L1 Bytes written</source>
-        <translation>%L1 byte skrevet</translation>
+        <translation>ჩაწერილია %L1 ბაიტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="232"/>
         <source> Critical</source>
-        <translation type="unfinished"> Kritisk</translation>
+        <translation> კრიტიკული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/gen_conf_ed/gen_conf_ed.cpp" line="233"/>
@@ -2253,27 +2237,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="14"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>თვისების რედაქტორი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="35"/>
         <source>&amp;General</source>
-        <translation>&amp;Generelt</translation>
+        <translation>&amp;ზოგადი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="44"/>
         <source>AutoConnect</source>
-        <translation type="unfinished">Koble til automatisk</translation>
+        <translation>ავტომიერთება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="76"/>
         <source>&amp;Nameservers</source>
-        <translation>&amp;Navnetjenester</translation>
+        <translation>&amp;DNS სერვერები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="152"/>
         <source>&amp;Domains</source>
-        <translation>&amp;Domener</translation>
+        <translation>&amp;დომენები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="187"/>
@@ -2284,25 +2268,25 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="209"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="422"/>
         <source>Address</source>
-        <translation>Adresse</translation>
+        <translation>მისამართი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="230"/>
         <source>Netmask</source>
-        <translation>Nettmaske</translation>
+        <translation>ქსელის ნიღაბი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="240"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="369"/>
         <source>Gateway</source>
-        <translation>Portner</translation>
+        <translation>მარშრუტიზატორი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="268"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="453"/>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="489"/>
         <source>Method</source>
-        <translation>Metode</translation>
+        <translation>მეთოდი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="299"/>
@@ -2312,12 +2296,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="399"/>
         <source>Prefix Length</source>
-        <translation type="unfinished"></translation>
+        <translation>პრეფიქსის სიგრძე</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="355"/>
         <source>Privacy</source>
-        <translation>Personvern</translation>
+        <translation>პირადი ინფორმაცია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="471"/>
@@ -2327,7 +2311,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="474"/>
         <source>&amp;Proxy</source>
-        <translation>&amp;Mellomtjener</translation>
+        <translation>&amp;პროქსი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="518"/>
@@ -2337,12 +2321,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="511"/>
         <source>URL</source>
-        <translation>Nettadresse</translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="114"/>
         <source>&amp;Timeservers</source>
-        <translation>&amp;Tidstjenere</translation>
+        <translation>&amp;დროის სერვერები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="206"/>
@@ -2454,7 +2438,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="542"/>
         <source>Servers</source>
-        <translation>Tjenere</translation>
+        <translation>სერვერები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="619"/>
@@ -2465,7 +2449,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="561"/>
         <source>Excludes</source>
-        <translation type="unfinished"></translation>
+        <translation>ამოიღებს</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="352"/>
@@ -2498,17 +2482,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="607"/>
         <source>&amp;mDNS</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;mDNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="622"/>
         <source>Enable mDNS </source>
-        <translation type="unfinished">Skru på mDNS </translation>
+        <translation>mDNS-ის ჩართვა </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="646"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;რა არის ეს&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="669"/>
@@ -2518,7 +2502,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="672"/>
         <source>Reset Pa&amp;ge</source>
-        <translation>Tilbakestill s&amp;ide</translation>
+        <translation>&amp;გვერდის ჩამოყრა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="679"/>
@@ -2528,7 +2512,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="682"/>
         <source>Reset &amp;All</source>
-        <translation type="unfinished">Tilbakestill &amp;alle</translation>
+        <translation>ყველ&amp;ას ჩამოყრა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="709"/>
@@ -2538,7 +2522,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="712"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>დიახ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="719"/>
@@ -2548,7 +2532,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/peditor/ui/peditor.ui" line="722"/>
         <source>Cancel</source>
-        <translation>Avbryt</translation>
+        <translation>გაუქმება</translation>
     </message>
 </context>
 <context>
@@ -2556,7 +2540,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="14"/>
         <source>Provisioning Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>სამუშაოდ მომზადების რედაქტორი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="23"/>
@@ -2571,7 +2555,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="35"/>
         <source>&amp;Open</source>
-        <translation>&amp;Åpne</translation>
+        <translation>&amp;გახსნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="48"/>
@@ -2581,7 +2565,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation>&amp;Lagre</translation>
+        <translation>&amp;შენახვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="68"/>
@@ -2591,7 +2575,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Slett</translation>
+        <translation>&amp;წაშლა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="94"/>
@@ -2601,12 +2585,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="97"/>
         <source>&amp;Clear Page</source>
-        <translation>&amp;Tøm side</translation>
+        <translation>გვერდის გასუ&amp;ფთავება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="117"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;რა არის ეს&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="120"/>
@@ -2616,63 +2600,63 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="143"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exit the dialog.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;დიალოგიდან გასვლა.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="146"/>
         <source>E&amp;xit</source>
-        <translation>A&amp;vslutt</translation>
+        <translation>&amp;გამოსვლა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="158"/>
         <source>[global]</source>
-        <translation type="unfinished"></translation>
+        <translation>[გლობალური]</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="163"/>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="226"/>
         <source>Name</source>
-        <translation>Navn</translation>
+        <translation>სახელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="168"/>
         <source>Description</source>
-        <translation>Beskrivelse</translation>
+        <translation>აღწერა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="173"/>
         <source>[service_*]</source>
-        <translation>[tjeneste_*]</translation>
+        <translation>[სერვისი_*]</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="181"/>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation>ტიპი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="189"/>
         <source>MAC</source>
-        <translation type="unfinished">MAC</translation>
+        <translation>MAC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="197"/>
         <source>Nameservers</source>
-        <translation>Navnetjenere</translation>
+        <translation>DNS სერვერები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="205"/>
         <source>Timeservers</source>
-        <translation>Tidstjenere</translation>
+        <translation>დროის სერვერები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="213"/>
         <source>SearchDomains</source>
-        <translation type="unfinished">Søkedomener</translation>
+        <translation>საძებნი დომენები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="221"/>
         <source>Domain</source>
-        <translation>Domene</translation>
+        <translation>დომენი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="234"/>
@@ -2687,62 +2671,62 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="250"/>
         <source>CACertFile</source>
-        <translation type="unfinished"></translation>
+        <translation>CACertFile</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="258"/>
         <source>ClientCertFile</source>
-        <translation type="unfinished"></translation>
+        <translation>ClientCertFile</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="266"/>
         <source>PrivateKeyFile</source>
-        <translation type="unfinished"></translation>
+        <translation>PrivateKeyFile</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="271"/>
         <source>PrivateKeyPassphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>PrivateKeyPassphrase</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="279"/>
         <source>PrivateKeyPassphraseType</source>
-        <translation type="unfinished"></translation>
+        <translation>PrivateKeyPassphraseType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="284"/>
         <source>Identity</source>
-        <translation>Identitet</translation>
+        <translation>იდენტიფიკაცია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="292"/>
         <source>Phase2</source>
-        <translation type="unfinished"></translation>
+        <translation>ფაზა2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="297"/>
         <source>Passphrase</source>
-        <translation type="unfinished">Passord</translation>
+        <translation>საკვანძო სიტყვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="305"/>
         <source>Security</source>
-        <translation>Sikkerhet</translation>
+        <translation>უსაფრთხოება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="313"/>
         <source>Hidden</source>
-        <translation>Skjult</translation>
+        <translation>დამალული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="318"/>
         <source>Eduroam (long)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eduroam (გრძელი)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="323"/>
         <source>Eduroam (short)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eduroam (მოკლე)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="328"/>
@@ -2767,7 +2751,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="373"/>
         <source>DeviceName</source>
-        <translation type="unfinished">Enhetsnavn</translation>
+        <translation>მოწყობილობისსახელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="376"/>
@@ -2787,7 +2771,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="389"/>
         <source>AnonymousIdentity</source>
-        <translation type="unfinished"></translation>
+        <translation>ანონიმურიიდენტიფიკატორი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="392"/>
@@ -2797,7 +2781,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="397"/>
         <source>SubjectMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>SubjectMatch</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="400"/>
@@ -2807,7 +2791,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="405"/>
         <source>AltSubjectMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>AltSubjectMatch</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="408"/>
@@ -2817,7 +2801,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="413"/>
         <source>DomainSuffixMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>DomainSuffixMatch</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="416"/>
@@ -2827,7 +2811,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="421"/>
         <source>DomainMatch</source>
-        <translation type="unfinished"></translation>
+        <translation>DomainMatch</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="424"/>
@@ -2855,7 +2839,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/ui/provisioning_editor.ui" line="344"/>
         <source>IPv6.Privacy</source>
-        <translation type="unfinished">IPv6-personvern {6.?}</translation>
+        <translation>IPv6.Privacy</translation>
     </message>
 </context>
 <context>
@@ -2863,22 +2847,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="118"/>
         <source>Global</source>
-        <translation type="unfinished"></translation>
+        <translation>გლობალური</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="124"/>
         <source>Service</source>
-        <translation>Tjeneste</translation>
+        <translation>სერვისი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="144"/>
         <source>WiFi</source>
-        <translation type="unfinished">Wi-Fi</translation>
+        <translation>WiFi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="171"/>
         <source>Templates</source>
-        <translation>Maler</translation>
+        <translation>შაბლონები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="205"/>
@@ -2903,7 +2887,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="237"/>
         <source>MAC address.</source>
-        <translation>MAC-adresse</translation>
+        <translation>MAC მისამართი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="238"/>
@@ -2913,22 +2897,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="239"/>
         <source>List of Nameservers</source>
-        <translation>Liste over navnetjenere</translation>
+        <translation>DNS სერვერების სია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="240"/>
         <source>List of Timeservers</source>
-        <translation>Liste over tidstjenere</translation>
+        <translation>დროის სერვერების სია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="241"/>
         <source>List of DNS Search Domains</source>
-        <translation>Liste over DNS-søkedomener</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="242"/>
         <source>Domain name to be used</source>
-        <translation type="unfinished">Domenenavn å bruke</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="243"/>
@@ -2958,12 +2942,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="282"/>
         <source>Service type.</source>
-        <translation>Tjenestetype.</translation>
+        <translation>სერვისის ტიპი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="283"/>
         <source>EAP type.</source>
-        <translation>EAP-type.</translation>
+        <translation>EAP-ის ტიპი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="284"/>
@@ -2973,27 +2957,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="285"/>
         <source>Network security type.</source>
-        <translation>Nettverkssikkerhetstype.</translation>
+        <translation>ქსელის უსაფრთხოების ტიპი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="286"/>
         <source>Hidden network</source>
-        <translation>Skjult nettverk</translation>
+        <translation>დამალული ქსელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="287"/>
         <source>IPv6 Privacy</source>
-        <translation>IPv6-personvern</translation>
+        <translation>IPv6 პირადი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="288"/>
         <source>IPv4 Settings</source>
-        <translation>IPv4-innstillinger</translation>
+        <translation>IPv4-ის მორგება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="289"/>
         <source>IPv6 Settings</source>
-        <translation>IPv6-innstillinger</translation>
+        <translation>IPv6-ის მორგება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="294"/>
@@ -3008,12 +2992,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="326"/>
         <source>Enter the network name.</source>
-        <translation>Skriv inn nettverksnavnet.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="327"/>
         <source>Enter a description of the network.</source>
-        <translation>Skriv inn en beskrivelse av nettverket.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="328"/>
@@ -3023,12 +3007,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="329"/>
         <source>Identity string for EAP.</source>
-        <translation>Identitetsstreng for EAP.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="331"/>
         <source>RSN/WPA/WPA2 Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>RSN/WPA/WPA2-ის საკვანძო ფრაზა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="332"/>
@@ -3054,7 +3038,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="513"/>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="546"/>
         <source> Information</source>
-        <translation type="unfinished"> Info</translation>
+        <translation> ინფორმაცია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="378"/>
@@ -3064,22 +3048,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="655"/>
         <source> Critical</source>
-        <translation type="unfinished"> Kritisk</translation>
+        <translation> კრიტიკული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="402"/>
         <source>IPv6 Address</source>
-        <translation>IPv6-adresse</translation>
+        <translation>IPv6 მისამართი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="290"/>
         <source>Enable mDNS</source>
-        <translation type="unfinished">Skru på mDNS</translation>
+        <translation>mDNS-ის ჩართვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="330"/>
         <source>Anonymous identity string for EAP.</source>
-        <translation type="unfinished">Anonym identitetsstreng for EAP.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="333"/>
@@ -3136,32 +3120,32 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="611"/>
         <source>File read completed</source>
-        <translation type="unfinished"></translation>
+        <translation>ფაილის წაკითხვა დასრულდა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="623"/>
         <source>File deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>ფაილი წაიშალა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="625"/>
         <source>Error encountered deleting.</source>
-        <translation type="unfinished"></translation>
+        <translation>წაშლისას აღმოჩენილია შეცდომა.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="638"/>
         <source>File save failed.</source>
-        <translation type="unfinished">Kunne ikke lagre fil.</translation>
+        <translation>ფაილის შენახვა ჩავარდა.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="641"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished">%L1 KB skrevet</translation>
+        <translation>ჩაწერილია %L1 კბ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="643"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished">%L1 byte skrevet</translation>
+        <translation>ჩაწერილია %L1 ბაიტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/provisioning/prov_ed.cpp" line="656"/>
@@ -3174,12 +3158,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="14"/>
         <source>Scrollbox</source>
-        <translation>Rullefelt</translation>
+        <translation>გადახვევის პანელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/scrollbox/ui/scrollbox.ui" line="38"/>
         <source>TextLabel</source>
-        <translation type="unfinished">Tekstetikett</translation>
+        <translation>ტექსტური ჭდე</translation>
     </message>
 </context>
 <context>
@@ -3188,427 +3172,427 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="43"/>
         <source>connman system tray</source>
         <comment>Main Window Title</comment>
-        <translation type="unfinished">Connman systemkurv</translation>
+        <translation>connman სისტემურ საათთან</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="44"/>
         <source>cmst</source>
         <comment>Abbreviated Program Name - used for QMessageBox titles</comment>
-        <translation type="unfinished"></translation>
+        <translation>cmst</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="47"/>
         <source>idle</source>
         <comment>connman state string</comment>
-        <translation>ledig</translation>
+        <translation>უქმე</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="48"/>
         <source>association</source>
         <comment>connman state string</comment>
-        <translation>tilknytning</translation>
+        <translation>ასოცირება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="49"/>
         <source>configuration</source>
         <comment>connman state string</comment>
-        <translation>oppsett</translation>
+        <translation>მორგება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="50"/>
         <source>ready</source>
         <comment>connman state string</comment>
-        <translation>klar</translation>
+        <translation>მზადაა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="51"/>
         <source>online</source>
         <comment>connman state string</comment>
-        <translation type="unfinished"></translation>
+        <translation>ონლაინ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="52"/>
         <source>disconnect</source>
         <comment>connman state string</comment>
-        <translation>koble fra</translation>
+        <translation>გათიშვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="53"/>
         <source>failure</source>
         <comment>connman state string</comment>
-        <translation type="unfinished"></translation>
+        <translation>შეცდომა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="54"/>
         <source>offline</source>
         <comment>connman state string</comment>
-        <translation>frakoblet</translation>
+        <translation>გათიშული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="56"/>
         <source>system</source>
         <comment>connman type string</comment>
-        <translation>system</translation>
+        <translation>სისტემა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="57"/>
         <source>ethernet</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ethernet</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="58"/>
         <source>wifi</source>
         <comment>connman type string</comment>
-        <translation type="unfinished">Wi-Fi</translation>
+        <translation>wifi</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="59"/>
         <source>bluetooth</source>
         <comment>connman type string</comment>
-        <translation type="unfinished">Blåtann</translation>
+        <translation>ბლუთუზი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="60"/>
         <source>cellular</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>ფიჭური</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="61"/>
         <source>gps</source>
         <comment>connman type string</comment>
-        <translation type="unfinished">GPS</translation>
+        <translation>gps</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="62"/>
         <source>vpn</source>
         <comment>connman type string</comment>
-        <translation>VPN</translation>
+        <translation>vpn</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="63"/>
         <source>gadget</source>
         <comment>connman type string</comment>
-        <translation type="unfinished"></translation>
+        <translation>გაჯეტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="64"/>
         <source>p2p</source>
         <comment>connman type string</comment>
-        <translation type="unfinished">P2P</translation>
+        <translation>p2p</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="65"/>
         <source>wired</source>
         <comment>connman type string</comment>
-        <translation>trådbunden</translation>
+        <translation>სადენიანი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="67"/>
         <source>direct</source>
         <comment>connman proxy string</comment>
-        <translation>direkte</translation>
+        <translation>პირდაპი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="68"/>
         <source>manual</source>
         <comment>connman proxy string</comment>
-        <translation type="unfinished">Manual</translation>
+        <translation>ხელით</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="69"/>
         <source>auto</source>
         <comment>connman proxy string</comment>
-        <translation type="unfinished">Auto</translation>
+        <translation>ავტომატური</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="71"/>
         <source>psk</source>
         <comment>connman security string</comment>
-        <translation type="unfinished">PSK</translation>
+        <translation>psk</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="72"/>
         <source>ieee8021x</source>
         <comment>connman security string</comment>
-        <translation type="unfinished"></translation>
+        <translation>ieee8021x</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="73"/>
         <source>none</source>
         <comment>connman security string</comment>
-        <translation>ingen</translation>
+        <translation>არცერთი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="74"/>
         <source>wep</source>
         <comment>connman security string</comment>
-        <translation type="unfinished">WEP</translation>
+        <translation>wep</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="75"/>
         <source>wps</source>
         <comment>connman security string</comment>
-        <translation type="unfinished">WPS</translation>
+        <translation>wps</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="76"/>
         <source>wps_advertising</source>
         <comment>connman security string</comment>
-        <translation type="unfinished"></translation>
+        <translation>wps_advertising</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="78"/>
         <source>Invalid arguments</source>
         <comment>connman error string</comment>
-        <translation>Ugyldige argumenter</translation>
+        <translation>არასწორი არგუმენტები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="79"/>
         <source>Permission denied</source>
         <comment>connman error string</comment>
-        <translation>Tilgang nektet</translation>
+        <translation>წვდომა აკრძალულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="80"/>
         <source>Passphrase required</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Passord kreves</translation>
+        <translation>საკვანძო ფრაზა აუცილებელია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="81"/>
         <source>Not registered</source>
         <comment>connman error string</comment>
-        <translation>Ikke registrert</translation>
+        <translation>არაა რეგისტრირებული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="82"/>
         <source>Not unique</source>
         <comment>connman error string</comment>
-        <translation>Ikke unikt</translation>
+        <translation>უნიკალური არაა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="83"/>
         <source>Not supported</source>
         <comment>connman error string</comment>
-        <translation>Ikke støttet</translation>
+        <translation>მხარდაუჭერელია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="84"/>
         <source>Not implemented</source>
         <comment>connman error string</comment>
-        <translation>Ikke implementert</translation>
+        <translation>განხორციელებული არაა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="85"/>
         <source>Not found</source>
         <comment>connman error string</comment>
-        <translation>Ble ikke funnet</translation>
+        <translation>ნაპოვნი არაა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="86"/>
         <source>No carrier</source>
         <comment>connman error string</comment>
-        <translation type="unfinished">Ingen tilbyder</translation>
+        <translation>შეამოწმეთ კავშირი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="87"/>
         <source>In progress</source>
         <comment>connman error string</comment>
-        <translation>Underveis</translation>
+        <translation>პროცესშია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="88"/>
         <source>Already exists</source>
         <comment>connman error string</comment>
-        <translation>Finnes allerede</translation>
+        <translation>უკვე არსებობს</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="89"/>
         <source>Already enabled</source>
         <comment>connman error string</comment>
-        <translation>Allerede påskrudd</translation>
+        <translation>უკვე ჩართულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="90"/>
         <source>Already disabled</source>
         <comment>connman error string</comment>
-        <translation>Allerede avskrudd</translation>
+        <translation>უკვე გამორთულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="91"/>
         <source>Already connected</source>
         <comment>connman error string</comment>
-        <translation>Allerede tilkoblet</translation>
+        <translation>უკვე დაკავშირებულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="92"/>
         <source>Not connected</source>
         <comment>connman error string</comment>
-        <translation>Ikke tilkoblet</translation>
+        <translation>დაკავშირებული არაა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="93"/>
         <source>Operation aborted</source>
         <comment>connman error string</comment>
-        <translation>Operasjon avbrutt</translation>
+        <translation>ოპერაცია გაუქმდა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="94"/>
         <source>Operation timeout</source>
         <comment>connman error string</comment>
-        <translation>Tidsavbrudd for operasjon</translation>
+        <translation>ოპერაციის მოლოდინის დრო ამოიწურა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="95"/>
         <source>Invalid service</source>
         <comment>connman error string</comment>
-        <translation>Ugyldig tjeneste</translation>
+        <translation>არასწორი სერვისი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="96"/>
         <source>Invalid property</source>
         <comment>connman error string</comment>
-        <translation>Ugyldig egenskap</translation>
+        <translation>არასწორი თვისება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="98"/>
         <source>disabled</source>
         <comment>connman privacy string</comment>
-        <translation>avskrudd</translation>
+        <translation>გამორთულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="99"/>
         <source>enabled</source>
         <comment>connman privacy string</comment>
-        <translation>påskrudd</translation>
+        <translation>ჩართულია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="100"/>
         <source>prefered</source>
         <comment>connman privacy string - known misspelling but needed to avoid breaking code</comment>
-        <translation type="unfinished">foretrukket</translation>
+        <translation>prefered</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="101"/>
         <source>preferred</source>
         <comment>connman privacy string</comment>
-        <translation>foretrukket</translation>
+        <translation>რჩეული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="103"/>
         <source>auto</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished">Auto</translation>
+        <translation>ავტომატური</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="104"/>
         <source>manual</source>
         <comment>connman ethernet connection method</comment>
-        <translation type="unfinished">Manual</translation>
+        <translation>ხელით</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="106"/>
         <source>dhcp</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished">DHCP</translation>
+        <translation>dhcp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="107"/>
         <source>manual</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished">Manual</translation>
+        <translation>ხელით</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="108"/>
         <source>off</source>
         <comment>connman ipv4 method string</comment>
-        <translation type="unfinished">Off</translation>
+        <translation>გამორთვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="109"/>
         <source>fixed</source>
         <comment>connman ipv4 method string</comment>
-        <translation>fikset</translation>
+        <translation>ფიქსირებული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="110"/>
         <source>address</source>
         <comment>connamn ipv4 method string</comment>
-        <translation>adresse</translation>
+        <translation>მისამართი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="112"/>
         <source>auto</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished">Auto</translation>
+        <translation>ავტომატური</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="113"/>
         <source>manual</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished">Manual</translation>
+        <translation>ხელით</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="114"/>
         <source>6to4</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished"></translation>
+        <translation>6to4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="115"/>
         <source>off</source>
         <comment>connman ipv6 method string</comment>
-        <translation type="unfinished">Off</translation>
+        <translation>გამორთვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="117"/>
         <source>openconnect</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>openconnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="118"/>
         <source>openvpn</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished">OpenVPN</translation>
+        <translation>openvpn</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="119"/>
         <source>vpnc</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>vpnc</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="120"/>
         <source>l2tp</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>l2tp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="121"/>
         <source>pptp</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished"></translation>
+        <translation>pptp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="122"/>
         <source>wireguard</source>
         <comment>connman vpn connection type</comment>
-        <translation type="unfinished">WireGuard</translation>
+        <translation>wireguard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="124"/>
         <source>true</source>
         <comment>connman mdns setting</comment>
-        <translation type="unfinished"></translation>
+        <translation>სიმართლე</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/trstring/tr_strings.cpp" line="125"/>
         <source>false</source>
         <comment>connman mdns setting</comment>
-        <translation type="unfinished"></translation>
+        <translation>მცდარი</translation>
     </message>
     <message>
         <source>auto</source>
@@ -3631,17 +3615,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="14"/>
         <source>VPN Agent Input</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN აგენტის შეყვანა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="22"/>
         <source>Username</source>
-        <translation>Brukernavn</translation>
+        <translation>მომხმარებლის სახელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="42"/>
         <source>Password</source>
-        <translation>Passord</translation>
+        <translation>პაროლი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="32"/>
@@ -3651,12 +3635,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="52"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Password for authentication.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;პაროლი ავთენტიკაციისთვის.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="62"/>
         <source>Host</source>
-        <translation>Vert</translation>
+        <translation>ჰოსტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="69"/>
@@ -3666,7 +3650,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="79"/>
         <source>Name</source>
-        <translation>Navn</translation>
+        <translation>სახელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="86"/>
@@ -3681,12 +3665,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="101"/>
         <source>OpenConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="107"/>
         <source>CA Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>CA სერტ.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="114"/>
@@ -3696,7 +3680,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="124"/>
         <source>Client Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>კლიენტის სერტ.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="131"/>
@@ -3706,7 +3690,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="138"/>
         <source>Cookie</source>
-        <translation>Kake</translation>
+        <translation>ქუქი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="145"/>
@@ -3716,17 +3700,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="152"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>ჯგუფი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="159"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Authentication login group.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ავთენტიკაციის შესვლის ჯგუფი.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="166"/>
         <source>PKCS Client Cert.</source>
-        <translation type="unfinished"></translation>
+        <translation>PKCS კლიენტის სერტ.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="173"/>
@@ -3736,12 +3720,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="180"/>
         <source>PKCS Password</source>
-        <translation>PKCS-passord</translation>
+        <translation>PKCS პაროლი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="190"/>
         <source>Server Cert.</source>
-        <translation>Tjenersert.</translation>
+        <translation>სერვერის სერტ.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="197"/>
@@ -3751,7 +3735,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="207"/>
         <source>VPN Host</source>
-        <translation>VPN-vert</translation>
+        <translation>VPN ჰოსტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="214"/>
@@ -3761,7 +3745,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="221"/>
         <source>Second Password</source>
-        <translation type="unfinished"></translation>
+        <translation>მეორე პაროლი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="228"/>
@@ -3776,17 +3760,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="238"/>
         <source>Use Second Password</source>
-        <translation type="unfinished"></translation>
+        <translation>მეორე პაროლის გამოყენება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="248"/>
         <source>Open VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN-ის გახსნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="254"/>
         <source>Private Key Password</source>
-        <translation type="unfinished"></translation>
+        <translation>პირადი გასაღების პაროლი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="261"/>
@@ -3796,12 +3780,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="293"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;რა არის ეს&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="296"/>
         <source>...</source>
-        <translation type="unfinished">…</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="320"/>
@@ -3816,12 +3800,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="326"/>
         <source>O&amp;K</source>
-        <translation>O&amp;K</translation>
+        <translation>&amp;დიახ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="333"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the connection process.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Avbryt tilkoblingsprosessen&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="336"/>
@@ -3831,12 +3815,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="339"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Avbryt</translation>
+        <translation>&amp;გაუქმება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/ui/vpnagent.ui" line="271"/>
         <source>Save Credentials</source>
-        <translation>Lagre identitetsdetaljer</translation>
+        <translation>ავტორიზაციის დეტალების შენახვა</translation>
     </message>
 </context>
 <context>
@@ -3844,7 +3828,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>ფანჯარა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="29"/>
@@ -3859,27 +3843,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="46"/>
         <source>OpenConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="51"/>
         <source>OpenVPN</source>
-        <translation type="unfinished">OpenVPN</translation>
+        <translation>OpenVPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="56"/>
         <source>VPNC</source>
-        <translation type="unfinished"></translation>
+        <translation>VPNC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="61"/>
         <source>L2TP</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="66"/>
         <source>PPTP</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="71"/>
@@ -3889,7 +3873,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="82"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Navn&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;სახელი&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="89"/>
@@ -3904,7 +3888,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="106"/>
         <source>VPN Domain Name</source>
-        <translation>VPN-domenenavn</translation>
+        <translation>VPN-ის დომენის სახელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="113"/>
@@ -3914,7 +3898,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="123"/>
         <source>Networks</source>
-        <translation>Nettverk</translation>
+        <translation>ქსელები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="130"/>
@@ -3929,7 +3913,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="159"/>
         <source>CA Certificate</source>
-        <translation>CA-sertifikat</translation>
+        <translation>CA სერტიფიკატი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="166"/>
@@ -3944,12 +3928,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="180"/>
         <source>Server Certificate</source>
-        <translation>Tjener-sertifikat</translation>
+        <translation>სერვერის სერტიფიკატი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="187"/>
         <source>VPN Host</source>
-        <translation type="unfinished">VPN-vert</translation>
+        <translation>VPN ჰოსტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="194"/>
@@ -3980,13 +3964,13 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="245"/>
         <source>Disable IPv6</source>
-        <translation>Skru av IPv6</translation>
+        <translation>IPv6-ის გათიშვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="252"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="255"/>
         <source>Disable DTLS</source>
-        <translation>Skru av DTLS</translation>
+        <translation>DTLS-ის გათიშვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="262"/>
@@ -3996,7 +3980,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="265"/>
         <source>Disable Keep Alive</source>
-        <translation type="unfinished"></translation>
+        <translation>კავშირის შენარჩუნების გათიშვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="272"/>
@@ -4016,12 +4000,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="285"/>
         <source>Cookie on stdin</source>
-        <translation type="unfinished"></translation>
+        <translation>ქუქი stdin-ზე</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="296"/>
         <source>Authentication Type</source>
-        <translation type="unfinished"></translation>
+        <translation>ავთენტიკაციის ტიპი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="303"/>
@@ -4043,32 +4027,32 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1113"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1172"/>
         <source>none specified</source>
-        <translation type="unfinished"></translation>
+        <translation>მითითებული არაა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="312"/>
         <source>cookie</source>
-        <translation type="unfinished"></translation>
+        <translation>ნამცხვარი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="317"/>
         <source>cookie_with_userpass</source>
-        <translation type="unfinished"></translation>
+        <translation>cookie_with_userpass</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="322"/>
         <source>userpass</source>
-        <translation type="unfinished"></translation>
+        <translation>userpass</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="327"/>
         <source>publickey</source>
-        <translation type="unfinished"></translation>
+        <translation>publickey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="332"/>
         <source>pkcs</source>
-        <translation type="unfinished"></translation>
+        <translation>pkcs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="360"/>
@@ -4078,12 +4062,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="367"/>
         <source>User Private Key</source>
-        <translation type="unfinished"></translation>
+        <translation>მომხმარებლის პირადი გასასაღები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="374"/>
         <source>PKCS Client Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>PKCS კლიენტის სერტიფიკატი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="384"/>
@@ -4098,12 +4082,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="398"/>
         <source>User Group</source>
-        <translation type="unfinished"></translation>
+        <translation>მომხმარებლის ჯგუფი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="405"/>
         <source>Client Cerificate</source>
-        <translation type="unfinished"></translation>
+        <translation>კლიენტის სერტიფიკატი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="415"/>
@@ -4118,7 +4102,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="433"/>
         <source>Import OPVN File</source>
-        <translation type="unfinished"></translation>
+        <translation>OVPN ფაილის შემოტანა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="440"/>
@@ -4128,12 +4112,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="443"/>
         <source>Create User/Pass</source>
-        <translation type="unfinished"></translation>
+        <translation>მომხმარებლის/პაროლის შექმნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="467"/>
         <source>User/Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>მომხმარებლის/პაროლის ფაილი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="474"/>
@@ -4153,7 +4137,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="495"/>
         <source>Extra Config</source>
-        <translation type="unfinished"></translation>
+        <translation>დამატებითი კონფიგურაცია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="502"/>
@@ -4183,7 +4167,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="537"/>
         <source>Certificate Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>სერტიფიკატის პაროლის ფაილი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="544"/>
@@ -4198,7 +4182,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="556"/>
         <source>Don&apos;t cache password</source>
-        <translation type="unfinished"></translation>
+        <translation>პაროლი არ დაიკეშება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="565"/>
@@ -4208,17 +4192,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="574"/>
         <source>adaptive</source>
-        <translation type="unfinished"></translation>
+        <translation>შეგუებადი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="579"/>
         <source>yes</source>
-        <translation type="unfinished"></translation>
+        <translation>დიახ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="584"/>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>არა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="592"/>
@@ -4228,7 +4212,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="604"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP/UDP port number.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TCP/UDP პორტის ნომერი.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="618"/>
@@ -4238,47 +4222,47 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="627"/>
         <source>udp</source>
-        <translation type="unfinished">UDP</translation>
+        <translation>udp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="632"/>
         <source>udp4</source>
-        <translation type="unfinished"></translation>
+        <translation>udp4</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="637"/>
         <source>udp6</source>
-        <translation type="unfinished"></translation>
+        <translation>udp6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="642"/>
         <source>tcp-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="647"/>
         <source>tcp4-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp4-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="652"/>
         <source>tcp6-client</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp6-client</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="657"/>
         <source>tcp-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="662"/>
         <source>tcp4-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp4-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="667"/>
         <source>tcp6-server</source>
-        <translation type="unfinished"></translation>
+        <translation>tcp6-server</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="675"/>
@@ -4289,18 +4273,18 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="684"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1177"/>
         <source>tun</source>
-        <translation type="unfinished"></translation>
+        <translation>tun</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="689"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1182"/>
         <source>tap</source>
-        <translation type="unfinished"></translation>
+        <translation>tap</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="697"/>
         <source>Protocol</source>
-        <translation>Protokoll</translation>
+        <translation>ოქმი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="704"/>
@@ -4312,13 +4296,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="796"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="978"/>
         <source>server</source>
-        <translation type="unfinished"></translation>
+        <translation>სერვერი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="718"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="791"/>
         <source>client</source>
-        <translation>klient</translation>
+        <translation>კლიენტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="726"/>
@@ -4328,37 +4312,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="733"/>
         <source>Remote Certificate TLS</source>
-        <translation type="unfinished"></translation>
+        <translation>დაშორებული სერტიფიკატის TLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="740"/>
         <source>NS Certificate Type</source>
-        <translation type="unfinished"></translation>
+        <translation>NS სერტიფიკატის ტიპი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="747"/>
         <source>Fast LZO Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>სწრაფი LZO შეკუმშვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="754"/>
         <source>Port</source>
-        <translation>Port</translation>
+        <translation>პორტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="761"/>
         <source>Cipher</source>
-        <translation type="unfinished"></translation>
+        <translation>შიფრი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="768"/>
         <source>Authenticate HMAC</source>
-        <translation type="unfinished"></translation>
+        <translation>HMAC-ით ავთენტიკაცია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="775"/>
         <source>Device Type</source>
-        <translation>Enhetstype</translation>
+        <translation>მოწყობილობის ტიპი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="782"/>
@@ -4373,12 +4357,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="819"/>
         <source>User Password</source>
-        <translation>Brukerpassord</translation>
+        <translation>მომხმარებლის პაროლი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="826"/>
         <source>Group Password</source>
-        <translation>Gruppepassord</translation>
+        <translation>ჯგუფის პაროლი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="833"/>
@@ -4393,17 +4377,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="847"/>
         <source>User Name</source>
-        <translation type="unfinished"></translation>
+        <translation>მომხმარებლის სახელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="854"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your Xauth username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;თქვენი Xauth მომხმარებლის სახელი.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="861"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Your group username.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;თქვენი ჯგუფის მომხმარებლის სახელი.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="868"/>
@@ -4413,7 +4397,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="879"/>
         <source>Domain</source>
-        <translation type="unfinished">Domene</translation>
+        <translation>დომენი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="886"/>
@@ -4424,7 +4408,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="894"/>
         <source>Application Version</source>
-        <translation type="unfinished"></translation>
+        <translation>აპლიკაციის ვერსია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="901"/>
@@ -4434,7 +4418,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="912"/>
         <source>Diffie-Hellman Group</source>
-        <translation type="unfinished"></translation>
+        <translation>დიფი-ჰელმანის ჯგუფი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="919"/>
@@ -4442,19 +4426,23 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>none selected</source>
+        <translation type="obsolete">None Selected</translation>
+    </message>
+    <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="928"/>
         <source>psk</source>
-        <translation type="unfinished"></translation>
+        <translation>psk</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="933"/>
         <source>cert</source>
-        <translation type="unfinished"></translation>
+        <translation>სერტიფიკატი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="938"/>
         <source>hybrid</source>
-        <translation type="unfinished"></translation>
+        <translation>ჰიბრიდი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="946"/>
@@ -4464,31 +4452,31 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="958"/>
         <source>nopfs</source>
-        <translation type="unfinished"></translation>
+        <translation>nopfs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="963"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1045"/>
         <source>dh1</source>
-        <translation type="unfinished"></translation>
+        <translation>dh1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="968"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1050"/>
         <source>dh2</source>
-        <translation type="unfinished"></translation>
+        <translation>dh2</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="973"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1055"/>
         <source>dh5</source>
-        <translation type="unfinished"></translation>
+        <translation>dh5</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="986"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1367"/>
         <source>UDP Port</source>
-        <translation type="unfinished"></translation>
+        <translation>UDP პორტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="993"/>
@@ -4498,7 +4486,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1006"/>
         <source>Local Port</source>
-        <translation>Lokal port</translation>
+        <translation>ლოკალური პორტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1013"/>
@@ -4508,7 +4496,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1026"/>
         <source>IKE Authentication Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE ავთენტიკაციის რეჟიმი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1033"/>
@@ -4518,12 +4506,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1063"/>
         <source>IKE DH Group</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE DH ჯგუფი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1070"/>
         <source>Vendor</source>
-        <translation type="unfinished"></translation>
+        <translation>მომწოდებელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1077"/>
@@ -4533,17 +4521,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1086"/>
         <source>cisco</source>
-        <translation type="unfinished"></translation>
+        <translation>cisco</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1091"/>
         <source>netscreen</source>
-        <translation type="unfinished"></translation>
+        <translation>netscreen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1099"/>
         <source>Nat Mode</source>
-        <translation type="unfinished">NAT-modus</translation>
+        <translation>NAT-ის რეჟიმი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1106"/>
@@ -4553,27 +4541,27 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1118"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>არცერთი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1123"/>
         <source>natt</source>
-        <translation type="unfinished"></translation>
+        <translation>natt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1128"/>
         <source>force-natt</source>
-        <translation type="unfinished"></translation>
+        <translation>force-natt</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1133"/>
         <source>cisco-udp</source>
-        <translation type="unfinished"></translation>
+        <translation>cisco-udp</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1141"/>
         <source>DPD Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>უქმე DPD</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1148"/>
@@ -4583,7 +4571,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1161"/>
         <source>Interface Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>ინტერფეისის რეჟიმი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1168"/>
@@ -4598,7 +4586,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1193"/>
         <source>Single DES</source>
-        <translation type="unfinished"></translation>
+        <translation>ერთმაგი DES</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1200"/>
@@ -4608,12 +4596,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1203"/>
         <source>No Encrypton</source>
-        <translation>Ingen kryptering</translation>
+        <translation>დაშიფვრის გარეშე</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1234"/>
         <source>L2TP Options</source>
-        <translation>L2TP-alternativer</translation>
+        <translation>L2TP-ის მორგება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1242"/>
@@ -4624,13 +4612,13 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1249"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1748"/>
         <source>Password:</source>
-        <translation>Passord:</translation>
+        <translation>პაროლი:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1256"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1755"/>
         <source>User:</source>
-        <translation>Bruker:</translation>
+        <translation>მომხმარებელი:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1263"/>
@@ -4646,7 +4634,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1273"/>
         <source>Authentication File</source>
-        <translation type="unfinished"></translation>
+        <translation>ავთენტიკაციის ფაილი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1280"/>
@@ -4656,22 +4644,22 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1291"/>
         <source>BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1298"/>
         <source>Maximum bandwidth to use.</source>
-        <translation>Maks. båndbredde å bruke</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1308"/>
         <source>Default Route</source>
-        <translation>Forvalgt rute</translation>
+        <translation>ნაგულისხმები რაუტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1318"/>
         <source>TX BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>TX BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1325"/>
@@ -4682,7 +4670,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1336"/>
         <source>Listen Address</source>
-        <translation>Lytteadresse</translation>
+        <translation>მისამართის მოსმენა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1343"/>
@@ -4692,7 +4680,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1350"/>
         <source>RX BPS</source>
-        <translation type="unfinished"></translation>
+        <translation>RX BPS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1357"/>
@@ -4707,7 +4695,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1384"/>
         <source>Tunnel RWS</source>
-        <translation type="unfinished"></translation>
+        <translation>გვირაბის RWS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1391"/>
@@ -4722,7 +4710,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1408"/>
         <source>Redial</source>
-        <translation type="unfinished"></translation>
+        <translation>გადარეკვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1415"/>
@@ -4732,7 +4720,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1418"/>
         <source>Require PAP</source>
-        <translation type="unfinished"></translation>
+        <translation>PAP-ის მოთხოვნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1425"/>
@@ -4742,7 +4730,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1428"/>
         <source>IPsec Security Association</source>
-        <translation type="unfinished"></translation>
+        <translation>IPsec უსაფრთხოების ასოციაცია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1435"/>
@@ -4753,7 +4741,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1439"/>
         <source>Require CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>CHAP-ის მოთხოვნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1446"/>
@@ -4763,7 +4751,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1449"/>
         <source>Require Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>ავთენტიკაციის მოთხოვნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1456"/>
@@ -4774,7 +4762,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1460"/>
         <source>Use Length Bit</source>
-        <translation type="unfinished"></translation>
+        <translation>სიგრძის ბიტის გამოყენება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1467"/>
@@ -4784,7 +4772,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1470"/>
         <source>Challenge Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>ავთენტიკაციის გამოწვევა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1477"/>
@@ -4794,7 +4782,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1480"/>
         <source>Flow Bit</source>
-        <translation type="unfinished"></translation>
+        <translation>ნაკადის ბიტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1487"/>
@@ -4804,7 +4792,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1490"/>
         <source>Access Control</source>
-        <translation type="unfinished"></translation>
+        <translation>წვდომის კონტროლი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1497"/>
@@ -4814,7 +4802,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1500"/>
         <source>Exclusive</source>
-        <translation type="unfinished"></translation>
+        <translation>ექსკლუზიური</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1527"/>
@@ -4824,12 +4812,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1537"/>
         <source>Redial Timeout</source>
-        <translation type="unfinished"></translation>
+        <translation>გადარეკვის მოლოდინის დრო ამოიწურა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1544"/>
         <source>Maximum Redials</source>
-        <translation type="unfinished"></translation>
+        <translation>მაქს. თავიდან დარეკვები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1567"/>
@@ -4839,7 +4827,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1582"/>
         <source>PPTP Options</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP-ის მორგება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1588"/>
@@ -4856,7 +4844,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1598"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1869"/>
         <source>Disable Deflate Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Deflate-ით შეკუმშვის გამორთვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1605"/>
@@ -4878,7 +4866,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1618"/>
         <source>Disable Protocol Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>პროტოკოლის შეკუმშვის გამორთვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1625"/>
@@ -4890,7 +4878,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1628"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1839"/>
         <source>Disable BSD Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>BSD შეკუმშვის გამორთვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1635"/>
@@ -4902,7 +4890,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1638"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1949"/>
         <source>Debug</source>
-        <translation type="unfinished"></translation>
+        <translation>პროგრამის შეცდომის პოვნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1645"/>
@@ -4914,7 +4902,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1648"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1939"/>
         <source>Require MPPE40</source>
-        <translation type="unfinished"></translation>
+        <translation>MPPE40-ის მოთხოვნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1655"/>
@@ -4926,7 +4914,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1658"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1929"/>
         <source>Require MPPE128</source>
-        <translation type="unfinished"></translation>
+        <translation>MPPE128-ის მოთხოვნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1665"/>
@@ -4938,7 +4926,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1668"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1879"/>
         <source>Refuse EAP</source>
-        <translation type="unfinished"></translation>
+        <translation>EAP-ის უარყოფა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1675"/>
@@ -4950,7 +4938,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1678"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1899"/>
         <source>Refuse PAP</source>
-        <translation type="unfinished"></translation>
+        <translation>PAP-ის უარყოფა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1685"/>
@@ -4962,7 +4950,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1688"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1849"/>
         <source>Refuse CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>CHAP-ის უარყოფა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1695"/>
@@ -4974,7 +4962,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1698"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1786"/>
         <source>Refuse MS CHAP</source>
-        <translation type="unfinished"></translation>
+        <translation>MS CHAP-ის უარყოფა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1705"/>
@@ -4998,7 +4986,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1718"/>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1859"/>
         <source>Require MPPE</source>
-        <translation type="unfinished"></translation>
+        <translation>MPPE-ის მოთხოვნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="1725"/>
@@ -5095,17 +5083,17 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2049"/>
         <source>Preshared Key</source>
-        <translation type="unfinished"></translation>
+        <translation>წინასწარ გაზიარებული გასაღები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2059"/>
         <source>Name Servers</source>
-        <translation type="unfinished"></translation>
+        <translation>DNS სერვერები</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2073"/>
         <source>Local Listen Port</source>
-        <translation type="unfinished"></translation>
+        <translation>ლოკალური პორტი მოსასმენად</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2080"/>
@@ -5115,7 +5103,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2090"/>
         <source>Endpoint Port</source>
-        <translation type="unfinished"></translation>
+        <translation>ბოლოწერტილის პორტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2097"/>
@@ -5125,7 +5113,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2107"/>
         <source>Keep Alive</source>
-        <translation type="unfinished"></translation>
+        <translation>კავშირის შენარჩუნება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/ui/vpn_create.ui" line="2114"/>
@@ -5140,7 +5128,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="58"/>
         <source>%1 - Select File</source>
-        <translation>%1 — velg fil</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="105"/>
@@ -5200,7 +5188,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="406"/>
         <source>All Files (*.*)</source>
-        <translation type="unfinished">Alle filer (*.*)</translation>
+        <translation>ყველა ფაილი (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="410"/>
@@ -5224,7 +5212,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="449"/>
         <source>User/Pass Files (*.up)</source>
-        <translation type="unfinished"></translation>
+        <translation>მომხმარებლის/პაროლის ფაილები (*.up)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="488"/>
@@ -5240,7 +5228,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="503"/>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="599"/>
         <source>Base Name</source>
-        <translation type="unfinished"></translation>
+        <translation>საბაზისო სახელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="504"/>
@@ -5250,7 +5238,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="517"/>
         <source>Keep --auth-user-pass</source>
-        <translation type="unfinished"></translation>
+        <translation>--auth-user-pass-ის შენარჩუნება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="518"/>
@@ -5260,7 +5248,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="532"/>
         <source>Create User:Password File</source>
-        <translation type="unfinished"></translation>
+        <translation>მომხმარებელი:პაროლის ფაილის შექმნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="533"/>
@@ -5290,7 +5278,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="608"/>
         <source>User</source>
-        <translation type="unfinished"></translation>
+        <translation>მომხმარებელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="609"/>
@@ -5300,7 +5288,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="616"/>
         <source>Password</source>
-        <translation type="unfinished">Passord</translation>
+        <translation>პაროლი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="617"/>
@@ -5318,12 +5306,12 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="208"/>
         <source>Global</source>
-        <translation type="unfinished"></translation>
+        <translation>გლობალური</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="214"/>
         <source>OpenConnect</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="237"/>
@@ -5333,22 +5321,22 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="264"/>
         <source>VPNC</source>
-        <translation type="unfinished"></translation>
+        <translation>VPNC</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="291"/>
         <source>L2TP</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="343"/>
         <source>PPTP</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="413"/>
         <source>All Files (*.*)</source>
-        <translation>Alle filer (*.*)</translation>
+        <translation>ყველა ფაილი (*.*)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="426"/>
@@ -5366,7 +5354,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="368"/>
         <source>WireGuard</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="420"/>
@@ -5437,7 +5425,7 @@ Ex: 10.2.0.2/24</source>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="673"/>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="706"/>
         <source> Information</source>
-        <translation type="unfinished"> Info</translation>
+        <translation> ინფორმაცია</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="674"/>
@@ -5454,7 +5442,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="683"/>
         <source>Select a file to load.</source>
-        <translation>Velg en fil å laste inn.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="707"/>
@@ -5464,7 +5452,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="713"/>
         <source>Select a file to be deleted.</source>
-        <translation type="unfinished">Velg en fil å slette.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="733"/>
@@ -5474,46 +5462,42 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="771"/>
         <source>File read completed</source>
-        <translation type="unfinished"></translation>
+        <translation>ფაილის წაკითხვა დასრულდა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="783"/>
         <source>File deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>ფაილი წაიშალა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="785"/>
         <source>Error encountered deleting.</source>
-        <translation type="unfinished"></translation>
+        <translation>წაშლისას აღმოჩენილია შეცდომა.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="799"/>
         <source>File save failed.</source>
-        <translation type="unfinished">Kunne ikke lagre fil.</translation>
+        <translation>ფაილის შენახვა ჩავარდა.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="802"/>
         <source>%L1 KB written</source>
-        <translation type="unfinished">%L1 KB skrevet</translation>
+        <translation>ჩაწერილია %L1 კბ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="804"/>
         <source>%L1 Bytes written</source>
-        <translation type="unfinished">%L1 byte skrevet</translation>
+        <translation>ჩაწერილია %L1 ბაიტი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="816"/>
         <source> Critical</source>
-        <translation type="unfinished"> Kritisk</translation>
+        <translation> კრიტიკული</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/vpn_ed.cpp" line="817"/>
         <source>&lt;b&gt;DBus Error Name:&lt;/b&gt; %1&lt;br&gt;&lt;br&gt;&lt;b&gt;String:&lt;/b&gt; %2&lt;br&gt;&lt;br&gt;&lt;b&gt;Message:&lt;/b&gt; %3</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="obsolete">Passord</translation>
     </message>
 </context>
 <context>
@@ -5521,7 +5505,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="14"/>
         <source>VPN Provisioning Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN-ის პროფილის რედაქტორი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="23"/>
@@ -5536,7 +5520,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="35"/>
         <source>&amp;Open</source>
-        <translation type="unfinished">&amp;Åpne</translation>
+        <translation>&amp;გახსნა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="48"/>
@@ -5546,7 +5530,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="51"/>
         <source>&amp;Save</source>
-        <translation type="unfinished">&amp;Lagre</translation>
+        <translation>&amp;შენახვა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="68"/>
@@ -5556,7 +5540,7 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="71"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Slett</translation>
+        <translation>&amp;წაშლა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="94"/>
@@ -5566,12 +5550,12 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="97"/>
         <source>&amp;Clear Page</source>
-        <translation type="unfinished">&amp;Tøm side</translation>
+        <translation>&amp;გვერდის გასუფთავება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="117"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;What&apos;s This&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;რა არის ეს&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="120"/>
@@ -5581,12 +5565,12 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="143"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exit the dialog.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;დიალოგიდან გასვლა.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="146"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished">A&amp;vslutt</translation>
+        <translation>&amp;გამოსვლა</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="166"/>
@@ -5601,12 +5585,12 @@ Ex: 10.2.0.2/24</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="207"/>
         <source>PPTP User Name.</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP მომხმარებლის სახელი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="215"/>
         <source>PPTP Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>PPTP-ის პაროლი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="223"/>
@@ -5624,42 +5608,42 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="242"/>
         <source>Debug level.</source>
-        <translation type="unfinished"></translation>
+        <translation>გამართვის დონე.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="250"/>
         <source>Deny EAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>უარვყო EAP ავტორიზაცია?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="258"/>
         <source>Deny PAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>უარვყო PAP ავტორიზაცია?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="266"/>
         <source>Deny CHAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>უარვყო CHAP ავტორიზაცია?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="274"/>
         <source>Deny MSCHAP authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>უარვყო MSCHAP ავტორიზაცია?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="282"/>
         <source>Deny MSCHAPV2 authorization?</source>
-        <translation type="unfinished"></translation>
+        <translation>უარვყო MSCHAPV2 ავტორიზაცია?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="290"/>
         <source>Disables BSD compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>გამოვრთო BSD შეკუმშვა?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="298"/>
         <source>Disable deflate compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>გავთიშო deflate შეკუმშვა?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="306"/>
@@ -5693,12 +5677,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="346"/>
         <source>L2TP User Name.</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP მომხმარებლის სახელი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="354"/>
         <source>L2TP Password.</source>
-        <translation type="unfinished"></translation>
+        <translation>L2TP-ის პაროლი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="362"/>
@@ -5718,12 +5702,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="386"/>
         <source>Use length bit?</source>
-        <translation type="unfinished"></translation>
+        <translation>გამოვიყენო სიგრძის ბიტი?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="394"/>
         <source>Use challenge authentication?</source>
-        <translation type="unfinished"></translation>
+        <translation>გამოვიყენო challenge ავთენტიკაცია?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="402"/>
@@ -5748,7 +5732,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="434"/>
         <source>Redial if disconnected?</source>
-        <translation type="unfinished"></translation>
+        <translation>გადავრეკო, თუ გაითიშება?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="442"/>
@@ -5783,7 +5767,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="490"/>
         <source>Authentication file location.</source>
-        <translation type="unfinished"></translation>
+        <translation>ავთენტიკაციის ფაილის მდებარეობა.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="498"/>
@@ -5803,17 +5787,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="522"/>
         <source>Disable protocol compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>გამოვრთო პროტოკოლის შეკუმშვა?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="530"/>
         <source>Disable address/control compression?</source>
-        <translation type="unfinished"></translation>
+        <translation>გამოვრთო მისამართის/კონტროლის შეკუშმვა?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="570"/>
         <source>Your Group username.</source>
-        <translation type="unfinished"></translation>
+        <translation>თქვენი ჯგუფის მომხმარებლის სახელი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="578"/>
@@ -5823,17 +5807,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="586"/>
         <source>Your username.</source>
-        <translation type="unfinished"></translation>
+        <translation>თქვენი მომხმარებლის სახელი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="594"/>
         <source>Your password (cleartext).</source>
-        <translation type="unfinished"></translation>
+        <translation>თქვენი პაროლი (უბრალო ტექსტი).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="602"/>
         <source>IKE authentication mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>IKE ავთენტიკაციის რეჟიმი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="610"/>
@@ -5888,7 +5872,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="698"/>
         <source>Certificate authority file.</source>
-        <translation type="unfinished"></translation>
+        <translation>სერტიფიკატის ფაილი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="706"/>
@@ -5908,17 +5892,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="868"/>
         <source>Provider WireGuard</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard-ის მომწოდებელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="871"/>
         <source>Provider Wire Guard</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard-ის პროვაიდერი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="876"/>
         <source>VPNC.DeviceType</source>
-        <translation type="unfinished"></translation>
+        <translation>VPNC.DeviceType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="879"/>
@@ -5928,17 +5912,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="884"/>
         <source>WireGuard.Address</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.Address</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="887"/>
         <source>Internal IP Address</source>
-        <translation type="unfinished"></translation>
+        <translation>შიდა IP მისამართი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="892"/>
         <source>WireGuard.ListPort</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.ListPort</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="895"/>
@@ -5948,7 +5932,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="900"/>
         <source>WireGuard.DNS</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.DNS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="903"/>
@@ -5958,7 +5942,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="908"/>
         <source>WireGuard.PrivateKey</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.PrivateKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="911"/>
@@ -5968,7 +5952,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="916"/>
         <source>WireGuard.PublicKey</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.PublicKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="919"/>
@@ -5978,7 +5962,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="924"/>
         <source>WireGuard.PresharedKey</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.PresharedKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="927"/>
@@ -5988,17 +5972,17 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="932"/>
         <source>WireGuard.AllowedIPs</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.AllowedIPs</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="935"/>
         <source>See cryptokey routing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cryptokey-ის რაუტინგის ნახვა.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="940"/>
         <source>WireGuard.EndpointPort</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.EndpointPort</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="943"/>
@@ -6008,7 +5992,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="948"/>
         <source>WireGuard.PersistentKeepalive</source>
-        <translation type="unfinished"></translation>
+        <translation>WireGuard.PersistentKeepalive</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="951"/>
@@ -6018,7 +6002,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="956"/>
         <source>OpenVPN.DeviceType</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenVPN.DeviceType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="959"/>
@@ -6028,7 +6012,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="964"/>
         <source>OpenConnect.AllowSelfSignedCert</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.AllowSelfSignedCert</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="967"/>
@@ -6038,7 +6022,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="972"/>
         <source>OpenConnect.AuthType</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.AuthType</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="975"/>
@@ -6048,7 +6032,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="980"/>
         <source>OpenConnect.DisableIPv6</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.DisableIPv6</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="983"/>
@@ -6058,7 +6042,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="988"/>
         <source>OpenConnect.NoDTLS</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.NoDTLS</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="991"/>
@@ -6068,7 +6052,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="996"/>
         <source>OpenConnect.NoHTTPKeepalive</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.NoHTTPKeepalive</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="999"/>
@@ -6078,7 +6062,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1004"/>
         <source>OpenConnect.PKCSClientCert</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.PKCSClientCert</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1007"/>
@@ -6088,7 +6072,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1012"/>
         <source>OpenConnect.Usergroup</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.Usergroup</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1015"/>
@@ -6098,7 +6082,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1020"/>
         <source>OpenConnect.UserPrivateKey</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenConnect.UserPrivateKey</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="1023"/>
@@ -6123,12 +6107,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="738"/>
         <source>Protocol type (udp/tcp-client/tcp-server).</source>
-        <translation type="unfinished"></translation>
+        <translation>პროტოკოლის ტიპი (udp/tcp-client/tcp-server).</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="746"/>
         <source>TCP/UDP port number.</source>
-        <translation type="unfinished"></translation>
+        <translation>TCP/UDP პორტის ნომერი.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_prov_ed/ui/vpn_prov_editor.ui" line="762"/>
@@ -6221,12 +6205,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="82"/>
         <source>Connman System Tray.</source>
-        <translation>Connman-systemkurv.</translation>
+        <translation>Connman სისტემურ კუთხეში.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="93"/>
         <source>[Experimental] Enable data counters.</source>
-        <translation>[Eksperimentelt] Skru på datatelling.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="103"/>
@@ -6236,7 +6220,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="104"/>
         <source>Icon Theme Name</source>
-        <translation type="unfinished"></translation>
+        <translation>ხატულების თემის სახელი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="109"/>
@@ -6246,7 +6230,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="110"/>
         <source>Icon Scale1</source>
-        <translation type="unfinished"></translation>
+        <translation>ხატულას მასშტაბი1</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="115"/>
@@ -6256,7 +6240,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="119"/>
         <source>Start the GUI minimized in the system tray.</source>
-        <translation>Start grensesnittet minimert i systemkurven</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="123"/>
@@ -6266,7 +6250,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="127"/>
         <source>Disable VPN support.</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN-ის მხარდაჭერის გამორთვა.</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="133"/>
@@ -6277,7 +6261,7 @@ that the peer is no longer connected.</source>
         <location filename="../apps/cmstapp/code/main.cpp" line="134"/>
         <location filename="../apps/cmstapp/code/main.cpp" line="146"/>
         <source>seconds</source>
-        <translation>sekunder</translation>
+        <translation>წამი</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="139"/>
@@ -6287,7 +6271,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="140"/>
         <source>KB</source>
-        <translation>kB</translation>
+        <translation>კბ</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="145"/>
@@ -6307,12 +6291,12 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="161"/>
         <source>Use XFCE specific code.</source>
-        <translation>Bruk XFCE-spesifikk kode.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/main.cpp" line="166"/>
         <source>Use MATE DE specific code.</source>
-        <translation type="unfinished">Bruk MATE-spesifikk kode.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6320,7 +6304,7 @@ that the peer is no longer connected.</source>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="44"/>
         <source> Warning</source>
-        <translation> Advarsel</translation>
+        <translation> გაფრთხილება</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/shared/shared.cpp" line="45"/>
