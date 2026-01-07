@@ -130,7 +130,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="294"/>
         <source>&amp;WPS Pin</source>
-        <translation>&amp;WPS Pin</translation>
+        <translation>&amp;WPS-PIN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="310"/>
@@ -401,7 +401,7 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="123"/>
         <source>Agent Request Failed</source>
-        <translation type="unfinished">Agent-Anfrage fehlgeschlagen</translation>
+        <translation>Agentenanfrage fehlgeschlagen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="124"/>
@@ -429,7 +429,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="121"/>
         <source>All Devices &amp;Off</source>
-        <translation>Alle Geräte Aus</translation>
+        <translation>Alle Geräte ausgeschaltet</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="75"/>
@@ -460,7 +460,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="95"/>
         <source>OfflineMode: Unavailable</source>
-        <translation>Offline-Modus: Nicht verfügbar</translation>
+        <translation>Ausgeschalteter Modus (Offline): Nicht verfügbar</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="108"/>
