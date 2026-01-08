@@ -75,7 +75,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="175"/>
         <source>Wireless Internet Service Provider roaming (WISPr)</source>
-        <translation>Roaming von drahtlosen Internetdienstanbietern (WISPr</translation>
+        <translation>Roaming von drahtlosen Internetdienstanbietern (WISPr)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="181"/>
@@ -100,7 +100,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="224"/>
         <source>Extensible Authentication Protocol (EAP)</source>
-        <translation>Extensible Authentication Protocol (EAP)</translation>
+        <translation>Erweiterbares Authentifizierungsprotokoll (EAP)</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="230"/>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="294"/>
         <source>&amp;WPS Pin</source>
-        <translation>&amp;WPS Pin</translation>
+        <translation>&amp;WPS-PIN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="310"/>
@@ -249,7 +249,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="463"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cancel the dialog. &lt;/p&gt;&lt;p&gt;This will send a message to the connman daemon that you have cancelled the connection request.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Abbruch des Dialogs. &lt;/p&gt;&lt;p&gt;Hiermit wird der Connman Dämon über den Abbruch der Verbindungsanfrage informiert.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/ui/agent.ui" line="466"/>
@@ -401,7 +401,7 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="123"/>
         <source>Agent Request Failed</source>
-        <translation type="unfinished">Agent-Anfrage fehlgeschlagen</translation>
+        <translation>Agentenanfrage fehlgeschlagen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="124"/>
@@ -429,7 +429,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="121"/>
         <source>All Devices &amp;Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Geräte ausgeschaltet</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="75"/>
@@ -444,7 +444,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="904"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="944"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="78"/>
@@ -455,12 +455,12 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="92"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="150"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global setting for switching all radios on or off. When offline mode is engaged all radios are powered down.&lt;/p&gt;&lt;p&gt;While in offline mode it is possible to turn individual devices back on. When leaving offline mode the individual policy of each device determines if the radio is turned back on or not.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Die globale Einstellung zum Aktivieren und Deaktivieren sämtlicher Funkmodule. Bei aktivem Offline-Modus werden alle Funkmodule abgeschaltet.&lt;/p&gt;&lt;p&gt;Auch während des Offline-Modus lassen sich einzelne Geräte wieder einschalten. Nach dem Verlassen des Offline-Modus werden die Funkmodule entsprechend ihrer individuellen Konfiguration ein- oder ausgeschaltet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="95"/>
         <source>OfflineMode: Unavailable</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausgeschalteter Modus (Offline): Nicht verfügbar</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="108"/>
@@ -496,24 +496,24 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="243"/>
         <source>Powered</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiviert</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="248"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="742"/>
         <location filename="../apps/cmstapp/code/control_box/controlbox.cpp" line="2546"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbunden</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="253"/>
         <source>Tethering</source>
-        <translation type="unfinished"></translation>
+        <translation>Tethering</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="268"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Force a rescan of all WiFi technologies. This is similar to issuing the command &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; from the command line.&lt;/p&gt;&lt;p&gt;The button will become inactive while the scan is occuring.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Erzwinge erneuten Scan sämtlicher WLAN-Techniken. Ähnlich dem Befehl &lt;span style=&quot; font-weight:600;&quot;&gt;connmanctl scan wifi&lt;/span&gt; in der Befehlszeile.&lt;/p&gt;&lt;p&gt;Während des Scans-Vorgangs wird diese Taste inaktiv.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="271"/>
@@ -524,24 +524,24 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="320"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This box lists all services that connman can connect to.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dieses Kästchen listet alle Dienste auf, mit denen sich connman verbinden kann.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="323"/>
         <source>Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Dienste</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="385"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="885"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>Status</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="390"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="895"/>
         <source>Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbindung</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="406"/>
@@ -563,7 +563,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="442"/>
         <source>&amp;Less</source>
-        <translation type="unfinished"></translation>
+        <translation>Weniger</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="463"/>
@@ -573,12 +573,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="466"/>
         <source>&amp;Details</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Details</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="478"/>
         <source>Ser&amp;vice</source>
-        <translation type="unfinished"></translation>
+        <translation>Dienst</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="488"/>
@@ -588,7 +588,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="585"/>
         <source>Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellung</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="598"/>
@@ -598,7 +598,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="737"/>
         <source>Favorite</source>
-        <translation type="unfinished"></translation>
+        <translation>Favorit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="747"/>
@@ -608,12 +608,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="752"/>
         <source>Signal Strength</source>
-        <translation type="unfinished"></translation>
+        <translation>Signalstärke</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="604"/>
         <source>Wireless Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Drahtlose Dienste</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="610"/>
@@ -624,7 +624,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="613"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="782"/>
         <source>Connect</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbinde</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="620"/>
@@ -635,13 +635,13 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="623"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="795"/>
         <source>Disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Trenne</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="633"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="822"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Entfernen</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="666"/>
@@ -651,12 +651,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="669"/>
         <source>Wifi State</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi Zustand</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="907"/>
         <source>&amp;Counters</source>
-        <translation type="unfinished"></translation>
+        <translation>Zähler</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="928"/>
@@ -667,7 +667,7 @@
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="931"/>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1706"/>
         <source>Service:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dienst:</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="974"/>
@@ -885,12 +885,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1442"/>
         <source>Start Minimized</source>
-        <translation type="unfinished"></translation>
+        <translation>Minimiert starten</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1506"/>
         <source>Wait Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Wartezeit</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1389"/>
@@ -901,7 +901,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1393"/>
         <source>Counter Update Rate </source>
-        <translation type="unfinished"></translation>
+        <translation>Zähler-Aktualisierungsrate </translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1540"/>
@@ -922,12 +922,12 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="764"/>
         <source>&amp;VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="770"/>
         <source>VPN Services</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN Dienste</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="779"/>
@@ -942,7 +942,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="890"/>
         <source>Host</source>
-        <translation type="unfinished"></translation>
+        <translation>Host</translation>
     </message>
     <message>
         <source>Domain</source>
@@ -951,7 +951,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1520"/>
         <source>Fake Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>Scheintransparenz</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1207"/>
@@ -961,7 +961,7 @@
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1210"/>
         <source>System Tray</source>
-        <translation type="unfinished"></translation>
+        <translation>Systemleiste</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/control_box/ui/controlbox.ui" line="1229"/>
