@@ -236,7 +236,7 @@
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="83"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation>Connman вернул следующую ошибку: &lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Вы хотите попробовать снова?</translation>
+        <translation>Connman вернул следующую ошибку: &lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Хотите попробовать снова?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/agent/agent.cpp" line="131"/>
@@ -351,7 +351,7 @@
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="87"/>
         <source>Connman returned the following error:&lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Would you like to retry?</source>
-        <translation>Connman вернул следующую ошибку: &lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Вы хотите попробовать снова?</translation>
+        <translation>Connman вернул следующую ошибку: &lt;b&gt;&lt;center&gt;%1&lt;/b&gt;&lt;br&gt;Хотите попробовать снова?</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_agent/vpnagent.cpp" line="123"/>
@@ -5760,7 +5760,7 @@ Default: Cisco Systems VPN Client 0.5.3:Linux</source>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="518"/>
         <source>The conf file will contain the &lt;b&gt;auth-user-pass&lt;/b&gt; entry which will require prompts sent to stdout and a reply on stdin.  This cannot be handled by Connman nor by CMST.&lt;p&gt;If this entry is removed you will need to create a &quot;user:pass&quot; file in order to have Connman make the VPN connection. In the next step you will be asked if you want to create this file and you will prompted for the user name and password.&lt;p&gt;&lt;b&gt;Do you wish to remove this entry?&lt;/b&gt;</source>
-        <translation>Файл conf будет содержать запись &lt;b&gt;auth-user-pass&lt;/b&gt;, для которой потребуются запросы, отправленные в stdout, и ответ на stdin. Это не может быть обработано ни в Connman, ни в CMST.&lt;p&gt;Если эта запись будет удалена, вам нужно будет создать файл «user:pass», чтобы Connman установил VPN-соединение. На следующем шаге вас спросят, хотите ли вы создать этот файл, и вам будет предложено ввести имя пользователя и пароль.&lt;p&gt;&lt;b&gt;Вы хотите удалить эту запись?&lt;/b&gt;</translation>
+        <translation>Файл conf будет содержать запись &lt;b&gt;auth-user-pass&lt;/b&gt;, для которой потребуются запросы, отправленные в stdout, и ответ на stdin. Это не может быть обработано ни в Connman, ни в CMST.&lt;p&gt;Если эта запись будет удалена, вам нужно будет создать файл «user:pass», чтобы Connman установил VPN-соединение. На следующем шаге вас спросят, хотите ли вы создать этот файл, и вам будет предложено ввести имя пользователя и пароль.&lt;p&gt;&lt;b&gt;Хотите удалить эту запись?&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../apps/cmstapp/code/vpn_create/vpn_create.cpp" line="532"/>
